@@ -1,0 +1,9 @@
+include community-greeter.py
+include gdm-community-greeter.desktop
+include glade/*.glade
+include pixmaps/*.svg
+include pixmaps/lang/*.svg
+include pixmaps/auto/*.svg
+include pixmaps/theme/*.svg
+include po/*.po
+include po/POTFILES.*

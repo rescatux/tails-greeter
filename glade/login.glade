@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk+" version="2.16"/>
+  <!-- interface-naming-policy project-wide -->
+  <object class="GtkWindow" id="login">
+    <property name="width_request">460</property>
+    <property name="height_request">260</property>
+    <property name="title" translatable="yes">Login to Computer</property>
+    <property name="resizable">False</property>
+    <property name="window_position">center-always</property>
+    <property name="skip_taskbar_hint">True</property>
+    <property name="skip_pager_hint">True</property>
+    <property name="urgency_hint">True</property>
+    <property name="decorated">False</property>
+    <property name="deletable">False</property>
+    <signal name="key_press_event" handler="login_cancel"/>
+    <child>
+      <object class="GtkHBox" id="horzpadding">
+        <property name="visible">True</property>
+        <child>
+          <object class="GtkVBox" id="login-info">
+            <property name="visible">True</property>
+            <child>
+              <object class="GtkImage" id="user_image">
+                <property name="width_request">128</property>
+                <property name="height_request">128</property>
+                <property name="visible">True</property>
+                <property name="pixbuf">../pixmaps/auto/logo.svg</property>
+              </object>
+              <packing>
+                <property name="fill">False</property>
+                <property name="padding">10</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkHBox" id="name">
+                <property name="visible">True</property>
+                <child>
+                  <object class="GtkLabel" id="name_label">
+                    <property name="visible">True</property>
+                    <property name="xalign">1</property>
+                    <property name="xpad">10</property>
+                    <property name="label" translatable="yes">&lt;big&gt;&lt;b&gt;Full Name:&lt;/b&gt;&lt;/big&gt;</property>
+                    <property name="use_markup">True</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="padding">4</property>
+                    <property name="position">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="name_entry">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="invisible_char">•</property>
+                    <signal name="changed" handler="login_name_changed"/>
+                    <signal name="activate" handler="login_name_activated"/>
+                  </object>
+                  <packing>
+                    <property name="padding">4</property>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="padding">30</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkHBox" id="pass">
+                <child>
+                  <object class="GtkLabel" id="pass_label">
+                    <property name="visible">True</property>
+                    <property name="xalign">1</property>
+                    <property name="xpad">10</property>
+                    <property name="label" translatable="yes">&lt;big&gt;&lt;b&gt;Passphrase:&lt;/b&gt;&lt;/big&gt;</property>
+                    <property name="use_markup">True</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="padding">4</property>
+                    <property name="position">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="pass_entry">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="visibility">False</property>
+                    <property name="invisible_char">•</property>
+                    <signal name="key_press_event" handler="login_cancel"/>
+                    <signal name="activate" handler="login_pass_activated"/>
+                  </object>
+                  <packing>
+                    <property name="padding">4</property>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="padding">30</property>
+                <property name="position">2</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="padding">20</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkEntryCompletion" id="namesearch">
+    <property name="minimum_key_length">3</property>
+  </object>
+</interface>

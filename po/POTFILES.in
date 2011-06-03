@@ -1,0 +1,8 @@
+community-greeter.py
+glade/login.glade
+glade/register.glade
+glade/language.glade
+GdmGreeter/__init__.py
+GdmGreeter/services.py
+GdmGreeter/login.py
+GdmGreeter/language.py
