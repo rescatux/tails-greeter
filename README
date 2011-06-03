@@ -1,0 +1,8 @@
+Custom GDM greeter for TAILS.
+
+Following major parts are under development:
+
+* dbus client for GDM service
+* code implementing logon greeter
+* code implementing panel
+
