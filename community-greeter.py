@@ -1,5 +1,6 @@
 #!/usr/bin/python
 #
+# Copyright 2011 Max <govnototalitarizm@gmail.com>
 # Copyright 2011 Martin Owens
 #
 # This program is free software: you can redistribute it and/or modify
@@ -16,7 +17,7 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>
 #
 """
-Greeter program for GDM using gtk (nothing else works)
+GDM greeter for TAILS project using gtk
 """
 
 import sys, os
