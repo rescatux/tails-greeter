@@ -1,21 +1,22 @@
 Format-Specification: http://svn.debian.org/wsvn/dep/web/deps/dep5.mdwn?op=file&rev=135
-Name: gdm-community-greeter
-Maintainer: Martin Owens <doctormo@gmail.com>
-Source: https://launchpad.net/~doctormo
+Name: tails-greeter
+Maintainer: Max <govnototalitarizm@gmail.com>
+Source: https://tails.boum.org/todo/TailsGreeter/
 
 Files: *
-Copyright: 2009, 2010, Martin Owens <doctormo@gmail.com>
+Copyright: 2009, 2010, Martin Owens <doctormo@gmail.com>, 2011 Max <govnototalitarizm@gmail.com>
 License: GPL-3+
 
 Files: debian/*
 Copyright: 2009, 2010, Martin Owens <doctormo@gmail.com>
            2010, Nathan Handler <nhandler@ubuntu.com>
            2010, Luke Faraone <luke@faraone.cc>
+           2011, Max <govnototalitarizm@gmail.com>
 License: GPL-3+
 	
 License: GPL-3+
     This program is free software; you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by 
+    it under the terms of the GNU General Public License as published by
     the Free Software Foundation; either version 3, or (at your option)
     any later version.
     On Debian GNU/Linux systems, the complete text of the GNU General
