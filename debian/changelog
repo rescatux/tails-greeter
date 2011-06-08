@@ -1,4 +1,4 @@
-PACKAGE (VERSION) UNRELEASED; urgency=low
+tails-greeter (0.0.1) sid; urgency=low
 
   * Initial release. Forked from gdm-community-greeter.
 
