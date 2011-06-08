@@ -31,7 +31,7 @@ from gtkme import Window, FormWindow
 from GdmGreeter import __appname__, Images
 
 MOFILES = '/usr/share/locale/'
-DOMAIN  = 'gdm-community-greeter'
+DOMAIN  = 'tails-greeter'
 IMAGES = Images('lang')
 
 GDM_MOFILES = '/usr/share/locale-langpack/'

@@ -1,5 +1,5 @@
 include community-greeter.py
-include gdm-community-greeter.desktop
+include tails-greeter.desktop
 include glade/*.glade
 include pixmaps/*.svg
 include pixmaps/lang/*.svg

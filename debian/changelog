@@ -1,23 +1,5 @@
-gdm-community-greeter (0.9.4-0ubuntu1) maverick; urgency=low
+PACKAGE (VERSION) UNRELEASED; urgency=low
 
-  * New upstream release.
+  * Initial release. Forked from gdm-community-greeter.
 
- -- Martin Owens (DoctorMO) <doctormo@gmail.com>  Wed, 25 May 2011 16:38:36 -0400
-
-gdm-community-greeter (0.9.3-0ubuntu4) maverick; urgency=low
-
-  * Fixed translations.
-
- -- Martin Owens (DoctorMO) <doctormo@gmail.com>  Mon, 16 May 2011 19:24:16 -0400
-
-gdm-community-greeter (0.9-0ubuntu2) maverick; urgency=low
-
-  * Fixed deps.
-
- -- Martin Owens (DoctorMO) <doctormo@gmail.com>  Mon, 16 May 2011 18:26:07 -0400
-
-gdm-community-greeter (0.9-0ubuntu1) maverick; urgency=low
-
-  * Inital Release
-
- -- Martin Owens (DoctorMO) <doctormo@gmail.com>  Mon, 16 May 2011 16:25:22 -0400
+ -- Max <govnototalitarizm@gmail.com>  Wed, 08 Jun 2011 19:01:54 +0200

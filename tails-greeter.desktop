@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Application
-Name=GDM Community Greeter
-Exec=/usr/bin/gdm-community-greeter
+Name=GDM Tails Greeter
+Exec=/usr/bin/tails-greeter
 OnlyShowIn=GNOME;
 X-GNOME-Autostart-Phase=Application
 X-GNOME-Autostart-Notify=true

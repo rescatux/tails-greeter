@@ -21,8 +21,8 @@ from distutils.core import setup
 from DistUtilsExtra.command import *
 from fnmatch import fnmatch
 
-__appname__ = 'gdm-community-greeter'
-__version__ = '0.9.4'
+__appname__ = 'tails-greeter'
+__version__ = '0.0.1'
 import os, platform
 
 # remove MANIFEST. distutils doesn't properly update it
@@ -48,13 +48,13 @@ setup(
         version          = __version__,
         description      = 'Shows a community lab loging screen',
         long_description = "Replaces the traditional gdm with a new community cener specialised version.",
-        author           = 'Martin Owens',
-        author_email     = 'doctormo@ubuntu.com',
-        url              = 'https://code.launchpad.net/~doctormo/+junk',
+        author           = 'Max',
+        author_email     = 'govnototalitarizm@gmail.com',
+        url              = 'https://tails.boum.org/todo/TailsGreeter/',
         platforms        = 'linux',
         license          = 'GPLv3',
         packages         = [ 'GdmGreeter' ],
-        scripts          = [ 'gdm-community-greeter' ],
+        scripts          = [ 'tails-greeter' ],
         data_files       = [
             ( SDIR, listfiles( '', '*.py' ) ),
             ( SDIR + 'glade', listfiles( 'glade', '*.glade' ) ),
@@ -62,7 +62,7 @@ setup(
             ( SDIR + 'pixmaps/lang', listfiles( 'pixmaps/lang', '*.*' ) ),
             ( SDIR + 'pixmaps/theme', listfiles( 'pixmaps/theme', '*.*' ) ),
             ( SDIR + 'pixmaps/auto', listfiles( 'pixmaps/auto', '*.*' ) ),
-            ( 'share/gdm/autostart/LoginWindow/', [ 'gdm-community-greeter.desktop' ] ),
+            ( 'share/gdm/autostart/LoginWindow/', [ 'tails-greeter.desktop' ] ),
         ],
         cmdclass={
                    'build'       : build_extra.build_extra,
