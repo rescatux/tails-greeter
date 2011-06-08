@@ -1,0 +1,17 @@
+Source: gdm-community-greeter
+Section: python
+Priority: optional
+Maintainer: Martin Owens <doctormo@gmail.com>
+Build-Depends: debhelper (>= 7), python-support, python
+Build-Depends-Indep: python-distutils-extra
+Standards-Version: 3.8.4
+XS-Python-Version: >= 2.5
+
+Package: gdm-community-greeter
+Section: gnome
+Architecture: all
+Depends: ${python:Depends}, ${misc:Depends}, python-gtkme (>= 1.0),
+          python-dbus, gdm, gir1.0-gtk-2.0, python-pybabel, python-xsdvalidate
+Provides: ${python:Provides}
+Description: Shows a community center greeter
+ For registering users and setting languages.
