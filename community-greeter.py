@@ -125,7 +125,7 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
 
 
 if __name__ == "__main__":
-    sys.stderr.write("Community Center Greeter Started\n")
+    sys.stderr.write("TAILS Greeter Started.\n")
     app = CommunityGreeterApp( )
     Gtk.main()
 
