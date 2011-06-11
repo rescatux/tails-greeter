@@ -11,7 +11,7 @@ Package: tails-greeter
 Section: gnome
 Architecture: all
 Depends: ${python:Depends}, ${misc:Depends}, python-gtkme (>= 1.0),
-          python-dbus, gdm | gdm3, gir1.0-gtk-2.0, python-pybabel, python-xsdvalidate
+          python-dbus, gdm | gdm3, gir1.0-gtk-2.0 | gir1.2-gtk-2.0, python-gobject (>= 2.21.5), python-pybabel, python-xsdvalidate
 Provides: ${python:Provides}
 Conflicts: gdm-community-greeter
 Description: Shows a TAILS greeter
