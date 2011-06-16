@@ -63,7 +63,7 @@ setup(
             ( SDIR + 'pixmaps/lang', listfiles( 'pixmaps/lang', '*.*' ) ),
             ( SDIR + 'pixmaps/theme', listfiles( 'pixmaps/theme', '*.*' ) ),
             ( SDIR + 'pixmaps/auto', listfiles( 'pixmaps/auto', '*.*' ) ),
-            ( 'share/gdm/autostart/LoginWindow/', [ 'tails-greeter.desktop' ] ),
+            ( 'share/gdm/autostart/LoginWindow/', [ 'a-tails-greeter.desktop' ] ),
         ],
         cmdclass={
                    'build'       : build_extra.build_extra,

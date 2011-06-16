@@ -1,7 +1,5 @@
-#!/usr/bin/python
 #
-# Copyright 2011 Max <govnototalitarizm@gmail.com>
-# Copyright 2011 Martin Owens
+# Copyright 2009 Martin Owens
 #
 # This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -17,16 +15,17 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>
 #
 """
-All varialbes relating to the community GDM greeter
+Manages a GtkApp object as well as wrapping several classes.
 """
 
-GLADE_DIR = './glade'
-PIXMAP_DIR = './pixmaps'
-__appname__ = 'community-greeter'
-__version__ = '0.9.4'
+import threading
+import os
+import logging
 
-from gtkme import PixmapManager
+from window import Window, ChildWindow, FormWindow, ThreadedWindow
+from listview import TreeView, IconView
+from pixmap import PixmapManager
+from main import Thread, GtkApp, FakeWidget
 
-class Images(PixmapManager):
-    pixmap_dir = PIXMAP_DIR
+__version__ = '1.0'
 

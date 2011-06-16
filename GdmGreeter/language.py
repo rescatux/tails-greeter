@@ -26,7 +26,11 @@ import babel
 import locale
 import gettext
 
-from gi.repository import Gtk, Gdk, GLib, GObject
+#from gi.repository import Gtk, Gdk, GLib, GObject
+import gtk
+from gtk import gdk
+import glib
+import gobject
 
 from gtkme import Window, FormWindow
 from GdmGreeter import __appname__, Images

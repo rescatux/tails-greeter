@@ -24,7 +24,11 @@ import sys, os
 import logging
 import babel
 
-from gi.repository import Gtk, Gdk, GLib, GObject
+#from gi.repository import Gtk, Gdk, GLib, GObject
+import gtk
+from gtk import gdk
+import glib
+import gobject
 
 from gtkme import GtkApp
 from GdmGreeter.services import GdmGreeter

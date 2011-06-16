@@ -23,7 +23,12 @@ Greeter program for GDM using gtk (nothing else works)
 import sys, os
 import logging
 
-from gi.repository import Gtk, Gdk, GLib, GObject
+#from gi.repository import Gtk, Gdk, GLib, GObject
+import gtk
+from gtk import gdk
+import glib
+import gobject
+
 from GdmGreeter.services import GdmUsers
 from GdmGreeter.language import TranslatableWindow
 from GdmGreeter import Images
