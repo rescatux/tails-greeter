@@ -104,7 +104,7 @@ class RegisterWindow(TranslatableFormWindow):
         """Event for canceling the registration, Esc or Gtk.Button"""
         #if isinstance(widget, Gtk.Button) or (event and \
           #event.key.keyval == Gdk.KEY_Escape):
-        if isinstance(widget, gtk.Button) or (event and event.key.keyval == gtk.keysyms.Escape):
+        if isinstance(widget, gtk.Button) or (event and event.keyval == gtk.keysyms.Escape):
             self.destroy()
 
     def get_data(self):
