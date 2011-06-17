@@ -124,7 +124,7 @@ class LanguageWindow(TranslatableWindow):
         self.images = Images('lang')
         self.buttons = {}
         self.populate()
-        self.window.set_gravity(gdk.Gravity.SOUTH) #self.window.set_gravity(Gdk.Gravity.SOUTH)
+        self.window.set_gravity(gdk.GRAVITY_SOUTH) #self.window.set_gravity(Gdk.Gravity.SOUTH)
 
     def set_position(self, width, height):
         """Set the window's possition in the middle of the screen"""
