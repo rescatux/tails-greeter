@@ -20,21 +20,20 @@
 GDM greeter for TAILS project using gtk
 """
 
-import sys, os
+import sys
 import logging
-import babel
+#import babel
 
 #from gi.repository import Gtk, Gdk, GLib, GObject
 import gtk
 from gtk import gdk
-import glib
-import gobject
+#import glib
+#import gobject
 
 from gtkme import GtkApp
 from GdmGreeter.services import GdmGreeter
-from GdmGreeter.language import (
-    LanguageWindow, TranslatableWindow, Translatable
-)
+#from GdmGreeter.language import ( LanguageWindow, TranslatableWindow, Translatable )
+from GdmGreeter.language import ( LanguageWindow, Translatable )
 from GdmGreeter.login import LoginWindow
 from GdmGreeter.register import RegisterWindow
 from GdmGreeter.user import User
@@ -55,6 +54,7 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
         #self.scr = Gdk.Display.get_default().get_screen(self.display.number)
         self.scr = gdk.display_get_default().get_screen(self.display.number)
         self.lang = None
+        #self.lang = 'en'
         self.login = None
         self.user = None
         self.language = 'en_GB.UTF-8'

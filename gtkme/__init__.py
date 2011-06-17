@@ -22,10 +22,10 @@ import threading
 import os
 import logging
 
-from window import Window, ChildWindow, FormWindow, ThreadedWindow
-from listview import TreeView, IconView
-from pixmap import PixmapManager
-from main import Thread, GtkApp, FakeWidget
+from gtkme.window import Window, ChildWindow, FormWindow, ThreadedWindow
+from gtkme.listview import TreeView, IconView
+from gtkme.pixmap import PixmapManager
+from gtkme.main import Thread, GtkApp, FakeWidget
 
 __version__ = '1.0'
 

@@ -38,12 +38,12 @@ class ParseXML(object):
 
     @property
     def data(self):
-       """Return the parsed data structure."""
-       if not self._data:
-           parser = CustomParser()
-           xml.sax.parse( self._xml, parser )
-           self._data = parser._root
-       return self._data
+        """Return the parsed data structure."""
+        if not self._data:
+            parser = CustomParser()
+            xml.sax.parse( self._xml, parser )
+            self._data = parser._root
+        return self._data
 
     @property
     def definition(self):

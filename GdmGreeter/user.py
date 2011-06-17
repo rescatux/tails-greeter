@@ -20,7 +20,7 @@
 Control the user configuration.
 """
 
-import sys, os
+import os
 import logging
 import json
 

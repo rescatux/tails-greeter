@@ -27,7 +27,7 @@ pygtk.require('2.0')
 #from gi.repository import Gtk, Gdk, GLib, GObject
 import gtk
 from gtk import gdk
-import glib
+#import glib
 import gobject
 
 class Window(object):
@@ -108,7 +108,7 @@ class Window(object):
 
     def destroy(self):
         """Destroy the window"""
-        logging.debug("Destroying Window %s" % self.name)
+        logging.debug("Destroying Window %s", self.name)
         self.window.destroy()
         # We don't need to call self.exit(),
         # handeled by window event.
@@ -134,7 +134,7 @@ class Window(object):
             logging.debug("Exiting the application")
             self.gapp.exit()
         else:
-            logging.debug("Removing Window %s from parent" % self.name)
+            logging.debug("Removing Window %s from parent", self.name)
             self.gapp.remove_window(self)
         # Now finish up what ever is left to do now the window is dead.
         self.dead = True
@@ -285,7 +285,7 @@ class FormWindow(ChildWindow):
             self.done = True
             # Make sure arguments are stored.
             if not isinstance(self.data(), dict):
-                logging.warn("%s data isn't a dictionary." % self.name)
+                logging.warn("%s data isn't a dictionary.", self.name)
             # Now exit the main application.
             self.destroy()
         else:
@@ -293,7 +293,7 @@ class FormWindow(ChildWindow):
         return widget
 
     def is_valid(self, page=-1):
-        "Return true if all data is valid or an array of invalid widget names." 
+        "Return true if all data is valid or an array of invalid widget names."
         # If fields is defined than we expect to do field validation.
         if self.fields:
             if isinstance(self.fields, list):
@@ -326,7 +326,7 @@ class FormWindow(ChildWindow):
         try:
             errors = validator.validate( data )
         except Exception, msg:
-            logging.warn("Couldn't validate page, skipping validation: %s"%msg)
+            logging.warn("Couldn't validate page, skipping validation: %s", msg)
         # Collect the errors and report on what fields failed
         if errors:
             result = []
@@ -384,7 +384,7 @@ class FormWindow(ChildWindow):
             elif isinstance(widget, gtk.CheckButton):
                 result[name] = widget.get_active()
             else:
-                logging.warn("Couldn't find field %s!" % name)
+                logging.warn("Couldn't find field %s!", name)
         return result
 
     def mark_invalid(self, invalids):
@@ -448,7 +448,7 @@ class ThreadedWindow(Window):
         if not self._thread or not self._thread.isAlive() and not self._closed:
             self._thread = Thread(target=method, args=args, kwargs=kwargs)
             self._thread.start()
-            logging.debug("-- Poll Start %s --" % self.name)
+            logging.debug("-- Poll Start %s --", self.name)
             # Show an animation to reflect the polling
             if self._anista:
                 self._anista.show()
@@ -474,7 +474,7 @@ class ThreadedWindow(Window):
             #GObject.timeout_add( 100, self.thread_through )
             gobject.timeout_add( 100, self.thread_through )
         else:
-            logging.debug("-- Poll Quit %s --" % self.name)
+            logging.debug("-- Poll Quit %s --", self.name)
             # Hide the animation by default and exit the thread
             if self._anista:
                 self._anista.hide()
@@ -501,7 +501,7 @@ class ThreadedWindow(Window):
         ret = None
         while self._calls:
             (name, args, kwargs) = self._calls.pop(0)
-            logging.debug("Calling %s" % name)
+            logging.debug("Calling %s", name)
             ret = getattr(self, name)(*args, **kwargs)
         for name in self._unique.keys():
             (name, args, kwargs) = self._unique.pop(name)

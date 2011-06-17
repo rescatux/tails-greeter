@@ -61,12 +61,12 @@ BASE_CLASSES = {
 class Validator(object):
     """Validation object"""
     def __init__(self, definition, debug=False):
-       self._strict = False
-       self._definition = None
-       self._debug = debug
-       if isinstance(definition, str):
-           definition = self._load_file( definition, True )
-       self.setDefinition( definition )
+        self._strict = False
+        self._definition = None
+        self._debug = debug
+        if isinstance(definition, str):
+            definition = self._load_file( definition, True )
+        self.setDefinition( definition )
 
     def validate(self, data):
         """
@@ -141,7 +141,7 @@ class Validator(object):
         # This should be AND or OR and controls the logic flow of the data varify
         if mode not in ('AND', 'OR'):
             raise Exception("Invalid mode '%s', should be AND or OR." % mode)
-  
+
         if not isinstance(definition, list):
             raise Exception("Definition is not in the correct format: expected list (got %s)." % type(definition))
 
@@ -179,11 +179,11 @@ class Validator(object):
 
         # minOccurs checking
         if minOccurs >= 1:
-           if data != None:
-               if minOccurs > len(data):
-                   return INVALID_MIN_OCCURS
-           else:
-               return INVALID_EXIST
+            if data != None:
+                if minOccurs > len(data):
+                    return INVALID_MIN_OCCURS
+            else:
+                return INVALID_EXIST
         elif data == None:
             # No data and it wasn't required
             return NOERROR
@@ -192,7 +192,7 @@ class Validator(object):
         if maxOccurs != 'unbounded':
             if int(maxOccurs) < len(data):
                 return INVALID_MAX_OCCURS
-    
+
         for element in data:
             # Fixed checking
             if fixed != None:
@@ -210,7 +210,7 @@ class Validator(object):
             # Element type checking
             result = self._validate_type( dataType, element, **opts )
             if result:
-               results.append(result)
+                results.append(result)
 
         if len(results) > 0:
             return proped and results[0] or results

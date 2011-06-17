@@ -26,13 +26,13 @@ import babel
 import crypt
 import random
 import string
-import json
-import time
+#import json
+#import time
 
 #from gi.repository import Gtk, Gdk, GLib, GObject
 import gtk
-from gtk import gdk
-import glib
+#from gtk import gdk
+#import glib
 import gobject
 
 from gtkme.listview import text_combobox

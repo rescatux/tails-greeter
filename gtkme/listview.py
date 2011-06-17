@@ -24,7 +24,7 @@ pygtk.require('2.0')
 #from gi.repository import Gtk, Gdk, GObject
 import gtk
 from gtk import gdk
-import glib
+#import glib
 import gobject
 
 def text_combobox(combo, liststore):
@@ -69,7 +69,7 @@ class BaseView(object):
             try:
                 del(self._model[0])
             except IndexError:
-                logging.error("Could not delete item %d" % iter_index)
+                logging.error("Could not delete item %d", iter_index)
                 return
 
     def add(self, target, parent=None):
@@ -83,7 +83,7 @@ class BaseView(object):
             iid = self.get_item_id(item)
             if iid:
                 if iid in self._iids and self.no_dupes:
-                    logging.debug("Ignoring item %s in list, duplicate." % iid)
+                    logging.debug("Ignoring item %s in list, duplicate.", iid)
                     return None
                 self._iids.append(iid)
             result = self._model.append(parent, [item])
@@ -149,7 +149,7 @@ class TreeView(BaseView):
         try:
             return [ self.get_item(item_iter) ]
         except TypeError, msg:
-            logging.debug("Error %s" % msg)
+            logging.debug("Error %s", msg)
 
     def item_selected_signal(self, treeview):
         """Signal for selecting an item"""

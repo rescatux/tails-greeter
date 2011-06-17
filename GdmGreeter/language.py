@@ -20,7 +20,7 @@
 Greeter program for GDM using gtk (nothing else works)
 """
 
-import os
+#import os
 import logging
 import babel
 import locale
@@ -29,8 +29,8 @@ import gettext
 #from gi.repository import Gtk, Gdk, GLib, GObject
 import gtk
 from gtk import gdk
-import glib
-import gobject
+#import glib
+#import gobject
 
 from gtkme import Window, FormWindow
 from GdmGreeter import __appname__, Images
@@ -48,7 +48,7 @@ def get_texts(langs):
     result = {}
     for locale in langs:
         try:
-            result[str(locale)] = gettext.translation(DOMAIN,MOFILES,[str(locale)])
+            result[str(locale)] = gettext.translation(DOMAIN, MOFILES, [str(locale)])
         except IOError:
             pass
     return result
@@ -128,7 +128,7 @@ class LanguageWindow(TranslatableWindow):
 
     def set_position(self, width, height):
         """Set the window's possition in the middle of the screen"""
-        logging.debug("Setting pos: %sx%s resolution\n" % (width, height))
+        logging.debug("Setting pos: %sx%s resolution\n", (width, height))
         self.window.move(width/2, height)
 
     def populate(self):
@@ -152,7 +152,7 @@ class LanguageWindow(TranslatableWindow):
             if button:
                 button.set_sensitive(lid != lang)
             else:
-                logging.warn("Couldn't find a button for language: %s" % lid)
+                logging.warn("Couldn't find a button for language: %s", lid)
 
     def button_clicked(self, widget, lang):
         """Signal event for button clicking, translate entire app"""

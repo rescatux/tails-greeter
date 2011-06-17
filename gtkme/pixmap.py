@@ -24,10 +24,10 @@ import logging
 import pygtk
 pygtk.require('2.0')
 #from gi.repository import Gtk, Gdk, GLib, GdkPixbuf
-import gtk
+#import gtk
 from gtk import gdk
-import glib
-import gobject
+#import glib
+#import gobject
 
 class PixmapManager(object):
     """Manage a set of cached pixmaps"""
@@ -58,11 +58,10 @@ class PixmapManager(object):
                     #self.cache[name] = GdkPixbuf.Pixbuf.new_from_file(pixmap_path)
                     self.cache[name] = gdk.pixbuf_new_from_file(pixmap_path)
                 except RuntimeError, msg:
-                    logging.warn("No pixmap '%s',%s" % (pixmap_path, msg))
+                    logging.warn("No pixmap '%s',%s", (pixmap_path, msg))
             else:
                 self.cache[name] = None
-                logging.warning("Can't find pixmap for %s in %s" % (
-                    name, self.location))
+                logging.warning("Can't find pixmap for %s in %s", (name, self.location))
         if not self.cache.has_key(name) or not self.cache[name]:
             name = self.default_image
         return self.cache.get(name, self.missing_image)

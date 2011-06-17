@@ -28,7 +28,7 @@ pygtk.require('2.0')
 import gtk
 #from gtk import gdk
 import glib
-import gobject
+#import gobject
 
 
 class Thread(threading.Thread):
@@ -100,7 +100,7 @@ class GtkApp(object):
         if self.windows:
             for cls in self.windows:
                 window = cls
-                logging.debug("Adding window %s to GtkApp\n" % window.name )
+                logging.debug("Adding window %s to GtkApp\n", window.name )
                 self._inital[window.name] = window
                 if window.primary:
                     if not self._primary:
@@ -111,7 +111,7 @@ class GtkApp(object):
 
     def load_window(self, name, *args, **kwargs):
         """Load a specific window from our group of windows"""
-        logging.debug("Loading '%s' from %s" % (name, str(self._inital)))
+        logging.debug("Loading '%s' from %s", (name, str(self._inital)))
         if self._inital.has_key(name):
             # Create a new instance of this window
             window = self._inital[name](self, *args, **kwargs)
@@ -125,9 +125,8 @@ class GtkApp(object):
         if self._loaded.has_key(window.wid):
             self._loaded.pop(window.wid)
         else:
-            logging.warn("Tried unload window '%s' on exit, it's already gone."
-                % window.name)
-            logging.debug("Loaded windows: %s" % str(self._loaded))
+            logging.warn("Tried unload window '%s' on exit, it's already gone.", window.name)
+            logging.debug("Loaded windows: %s", str(self._loaded))
         if not self._loaded:
             self.exit()
 
@@ -136,8 +135,7 @@ class GtkApp(object):
 	# if self.main_loop < GLib.main_depth():
 	if self.main_loop < glib.main_depth():
             # Quit Gtk loop if we started one.
-            logging.debug("Quit '%s' Main Loop." % (
-                self._primary and self._primary.name or 'program'))
+            logging.debug("Quit '%s' Main Loop.", (self._primary and self._primary.name or 'program'))
             gtk.main_quit() #Gtk.main_quit()
             # You have to return in order for the loop to exit
             return 0
@@ -159,7 +157,7 @@ class FakeWidget(object):
 
     def fake_method(self, *args, **kwargs):
         """Don't do anything, this is fake"""
-        logging.info("Calling fake method: %s:%s" % (str(args), str(kwargs)))
+        logging.info("Calling fake method: %s:%s", (str(args), str(kwargs)))
         return None
 
     def information(self):

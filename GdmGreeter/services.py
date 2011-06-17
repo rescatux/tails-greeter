@@ -45,9 +45,9 @@ class GdmDbusService(object):
         self.obj = dbus.Interface(self.raw, self.interface)
         # Watch all signals on this interface
         self.connection.add_signal_receiver(self.got_signal,
-            dbus_interface=self.interface, signal_name=None, bus_name=None, path=self.path,
-            sender_keyword="sent", destination_keyword="dest", interface_keyword=None,
-            member_keyword="name", path_keyword=None, message_keyword=None
+            dbus_interface = self.interface, signal_name = None, bus_name = None, path = self.path,
+            sender_keyword = "sent", destination_keyword = "dest", interface_keyword = None,
+            member_keyword = "name", path_keyword = None, message_keyword = None
         )
 
     def got_signal(self, *args, **kwargs):
@@ -79,9 +79,9 @@ class GdmGreeter(GdmDbusService):
         address = kwargs.pop('address', os.environ['GDM_GREETER_DBUS_ADDRESS'])
         try:
             self.connection = dbus.connection.Connection(address)
-            logging.debug("Connected to Greeter-Service on %s\n" % address)
+            logging.debug("Connected to Greeter-Service on %s\n", address)
         except dbus.exceptions.DBusException:
-            logging.error("Failed to connect to Greeter-Service on %s\n" % address)
+            logging.error("Failed to connect to Greeter-Service on %s\n", address)
             raise
         GdmDbusService.__init__(self)
         self.display = GdmDisplay(self.obj.GetDisplayId())
@@ -91,7 +91,7 @@ class GdmGreeter(GdmDbusService):
         if '.' not in lang:
             lang += '.UTF8'
         lang = locale.normalize(lang).replace('UTF8', 'UTF-8')
-        logging.debug("Setting language to %s" % lang )
+        logging.debug("Setting language to %s", lang )
         self.obj.SelectLanguage(locale.normalize(lang))
 
     def Ready(self):
@@ -133,7 +133,7 @@ class GdmDisplay(GdmDbusService):
 
     @property
     def number(self):
-         return self.obj.GetX11DisplayNumber()
+        return self.obj.GetX11DisplayNumber()
 
 
 class GdmUsers(GdmDbusService):
