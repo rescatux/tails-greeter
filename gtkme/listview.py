@@ -184,7 +184,7 @@ class IconView(BaseView):
     def setup(self):
         """Setup the icon view control view"""
         #self._model = Gtk.ListStore(str, GdkPixbuf.Pixbuf, GObject.TYPE_PYOBJECT)
-        self._model = gtk.ListStore(str, GdkPixbuf.Pixbuf, gobject.TYPE_PYOBJECT)
+        self._model = gtk.ListStore(str, gdk.pixbuf, gobject.TYPE_PYOBJECT)
         self._list.set_model(self._model)
         return self._list
 

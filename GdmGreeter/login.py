@@ -74,7 +74,8 @@ class LoginWindow(TranslatableWindow):
         self.widget('user_image').set_from_pixbuf(self.images.get_pixmap(icon))
 
     def cancel(self, widget=None, event=None):
-        if not event or event.key.keyval == Gdk.KEY_Escape:
+        #if not event or event.key.keyval == Gdk.KEY_Escape:
+        if not event or event.key.keyval == gtk.keysyms.Escape:
             self.service.Cancel()
 
     def setup_autocomplete(self):
@@ -84,11 +85,13 @@ class LoginWindow(TranslatableWindow):
                 model.get_value(iter_index, 1))
             renderer.set_property("markup", markup)
 
-        self.userstore = Gtk.TreeStore(GObject.TYPE_STRING)
+        #self.userstore = Gtk.TreeStore(GObject.TYPE_STRING)
+        self.userstore = gtk.TreeStore(gobject.TYPE_STRING)
         self.search.set_model(self.userstore)
         self.search.set_match_func(self.match_user, 0)
         self.widget('name_entry').set_completion(self.search)
-        renderer = Gtk.CellRendererText()
+        #renderer = Gtk.CellRendererText()
+        renderer = gtk.CellRendererText()
         self.search.pack_start(renderer, False)
         self.search.set_text_column(0)
 

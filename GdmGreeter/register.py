@@ -102,8 +102,9 @@ class RegisterWindow(TranslatableFormWindow):
 
     def cancel(self, widget, event=None):
         """Event for canceling the registration, Esc or Gtk.Button"""
-        if isinstance(widget, Gtk.Button) or (event and \
-          event.key.keyval == Gdk.KEY_Escape):
+        #if isinstance(widget, Gtk.Button) or (event and \
+          #event.key.keyval == Gdk.KEY_Escape):
+        if isinstance(widget, gtk.Button) or (event and event.key.keyval == gtk.keysyms.Escape):
             self.destroy()
 
     def get_data(self):
@@ -136,7 +137,8 @@ class RegisterWindow(TranslatableFormWindow):
         """Wait for user to appear..."""
         if self.username not in self.users:
             #sys.stderr.write("Testing: %s not in %s\n" % (self.username, str(self.users)))
-            return GObject.timeout_add( 1000, self.wait_for_new_user )
+            #return GObject.timeout_add( 1000, self.wait_for_new_user )
+            return gobject.timeout_add( 1000, self.wait_for_new_user )
         self.finish_registration()
 
     def finish_registration(self):

@@ -66,7 +66,7 @@ class GtkApp(object):
         self._loaded = {}
         self._inital = {}
         self._primary = None
-#        self.main_loop = GLib.main_depth()
+	# self.main_loop = GLib.main_depth()
 	self.main_loop = glib.main_depth()
         start_loop = kwargs.pop('start_loop', False)
         self.callback = kwargs.pop('callback', None)
@@ -133,7 +133,7 @@ class GtkApp(object):
 
     def exit(self):
         """Exit our gtk application and kill gtk main if we have to"""
-#        if self.main_loop < GLib.main_depth():
+	# if self.main_loop < GLib.main_depth():
 	if self.main_loop < glib.main_depth():
             # Quit Gtk loop if we started one.
             logging.debug("Quit '%s' Main Loop." % (

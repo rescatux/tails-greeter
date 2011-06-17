@@ -68,9 +68,11 @@ class Translatable(object):
     def store_translations(self, widget):
         """Go through all widgets and store the translatable elements"""
         for child in widget.get_children():
-            if isinstance(child, Gtk.Container):
+            #if isinstance(child, Gtk.Container):
+            if isinstance(child, gtk.Container):
                 self.store_translations(child)
-            if isinstance(child, Gtk.Label):
+            #if isinstance(child, Gtk.Label):
+            if isinstance(child, gtk.Label):
                 self.labels.append( (child, child.get_label()) )
             if child.get_has_tooltip():
                 self.tips.append( (child, child.get_tooltip_text()) )
@@ -122,7 +124,7 @@ class LanguageWindow(TranslatableWindow):
         self.images = Images('lang')
         self.buttons = {}
         self.populate()
-        self.window.set_gravity(Gdk.Gravity.SOUTH)
+        self.window.set_gravity(gdk.Gravity.SOUTH) #self.window.set_gravity(Gdk.Gravity.SOUTH)
 
     def set_position(self, width, height):
         """Set the window's possition in the middle of the screen"""
@@ -160,14 +162,19 @@ class LanguageWindow(TranslatableWindow):
 def LanguageButton(locale, signal=None):
     """Returns a gtk button with the correct contents"""
     code = str(locale)
-    button = Gtk.Button()
+    #button = Gtk.Button()
+    button = gtk.Button()
     if signal:
         button.connect('clicked', signal, code)
-    button.set_relief(Gtk.ReliefStyle.NONE)
-    holder = Gtk.VBox()
+    #button.set_relief(Gtk.ReliefStyle.NONE)
+    button.set_relief(gtk.ReliefStyle.NONE)
+    #holder = Gtk.VBox()
+    holder = gtk.VBox()
     button.add(holder)
-    icon = Gtk.Image()
-    label = Gtk.Label()
+    #icon = Gtk.Image()
+    icon = gtk.Image()
+    #label = Gtk.Label()
+    label = gtk.Label()
     holder.pack_start(icon, True, True, 6)
     image = IMAGES.get_pixmap(code)
     if not image:
