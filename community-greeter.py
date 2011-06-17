@@ -52,7 +52,8 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
     def __init__(self, *args, **kwargs):
         GtkApp.__init__(self, *args, **kwargs)
         GdmGreeter.__init__(self)
-        self.scr = Gdk.Display.get_default().get_screen(self.display.number)
+        #self.scr = Gdk.Display.get_default().get_screen(self.display.number)
+        self.scr = gdk.display_get_default().get_screen(self.display.number)
         self.lang = None
         self.login = None
         self.user = None
@@ -125,11 +126,11 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
 
     def FinishProcess(self):
         """We're done, quit gtk app"""
-        Gtk.main_quit()
+        gtk.main_quit() #Gtk.main_quit()
 
 
 if __name__ == "__main__":
     sys.stderr.write("TAILS Greeter Started.\n")
     app = CommunityGreeterApp( )
-    Gtk.main()
+    gtk.main() #Gtk.main()
 

@@ -59,7 +59,8 @@ class Window(object):
         self.callback = callback
 
         # Setup the gtk app connection
-        self.w_tree   = Gtk.Builder()
+        #self.w_tree   = Gtk.Builder()
+        self.w_tree   = gtk.Builder()
         self.widget   = self.w_tree.get_object
         self.w_tree.set_translation_domain(self.gapp.app_name)
         self.w_tree.add_from_file(gapp.ui_file(self.name))
@@ -119,7 +120,8 @@ class Window(object):
 
     def exit(self, widget=None):
         """Called when the window needs to exit."""
-        if not widget or not isinstance(widget, Gtk.Window):
+        #if not widget or not isinstance(widget, Gtk.Window):
+    	if not widget or not isinstance(widget, gtk.Window):
             self.destroy()
         # Clean up any required processes
         self.pre_exit()
@@ -203,7 +205,8 @@ class FormWindow(ChildWindow):
 
     def double_click(self, widget, event):
         """This is the cope with gtk's rotten support for mouse events"""
-        if event.type == Gdk._2BUTTON_PRESS:
+        #if event.type == Gdk._2BUTTON_PRESS:
+        if event.type == gdk._2BUTTON_PRESS:
             return self.apply(widget)
 
     def next_page(self, widget=None):
@@ -349,16 +352,19 @@ class FormWindow(ChildWindow):
         result = {}
         for name, field in fields.iteritems():
             widget = self.widget('field_' + name)
-            if isinstance(widget, Gtk.TextView):
+            #if isinstance(widget, Gtk.TextView):
+            if isinstance(widget, gtk.TextView):
                 buf = widget.get_buffer()
                 start, end = ( buf.get_start_iter(), buf.get_end_iter() )
                 result[name] = buf.get_text( start, end, True )
-            elif isinstance(widget, Gtk.Entry):
+            #elif isinstance(widget, Gtk.Entry):
+            elif isinstance(widget, gtk.Entry):
                 try:
                     result[name] = widget.get_text()
                 except AttributeError:
                     result[name] = ''
-            elif isinstance(widget, Gtk.ComboBox):
+            #elif isinstance(widget, Gtk.ComboBox):
+            elif isinstance(widget, gtk.ComboBox):
                 # To avoid translations messing up the validation, with the
                 # enumeration validation, this returns the index if no enum
                 # is available, but will return the string if it is. Glade
@@ -367,13 +373,15 @@ class FormWindow(ChildWindow):
                 if active >= 0 and field.has_key('enumeration'):
                     active = field['enumeration'][active]
                 result[name] = active
-            elif isinstance(widget, Gtk.RadioButton):
+            #elif isinstance(widget, Gtk.RadioButton):
+            elif isinstance(widget, gtk.RadioButton):
                 group = widget.get_group()
                 if group:
                     for radio in group:
                         if radio.get_active():
                             result[name] = radio.get_label()
-            elif isinstance(widget, Gtk.CheckButton):
+            #elif isinstance(widget, Gtk.CheckButton):
+            elif isinstance(widget, gtk.CheckButton):
                 result[name] = widget.get_active()
             else:
                 logging.warn("Couldn't find field %s!" % name)
@@ -445,7 +453,8 @@ class ThreadedWindow(Window):
             if self._anista:
                 self._anista.show()
             # Kick off a polling service, after a delay
-            GObject.timeout_add( 300, self.thread_through )
+            #GObject.timeout_add( 300, self.thread_through )
+            gobject.timeout_add( 300, self.thread_through )
         else:
             raise Exception("Thread is already running!")
 
@@ -462,7 +471,8 @@ class ThreadedWindow(Window):
                     self._anipos = 1
                 image = self.animated_icons.get_icon(str(self._anipos))
                 self._anista.set_from_pixbuf(image)
-            GObject.timeout_add( 100, self.thread_through )
+            #GObject.timeout_add( 100, self.thread_through )
+            gobject.timeout_add( 100, self.thread_through )
         else:
             logging.debug("-- Poll Quit %s --" % self.name)
             # Hide the animation by default and exit the thread

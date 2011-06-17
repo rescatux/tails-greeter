@@ -32,7 +32,8 @@ def text_combobox(combo, liststore):
     Connects up a combo box to a liststore and gives the first column
     the text column in the display and packs it in.
     """
-    cell = Gtk.CellRendererText()
+    #cell = Gtk.CellRendererText()
+    cell = gtk.CellRendererText()
     combo.set_model(liststore)
     combo.pack_start(cell, True)
     combo.add_attribute(cell, 'text', 0)
@@ -158,7 +159,8 @@ class TreeView(BaseView):
 
     def item_button_clicked(self, treeview, event):
         """Signal for mouse button click"""
-        if event.type == Gdk.EventType.BUTTON_PRESS:
+        #if event.type == Gdk.EventType.BUTTON_PRESS:
+        if event.type == gdk.EventType.BUTTON_PRESS:
             self.item_double_clicked( self.selected_items(treeview)[0] )
 
     def expand_item(self, item):
@@ -167,7 +169,8 @@ class TreeView(BaseView):
 
     def setup(self):
         """Set up an icon view for showing gallery images"""
-        self._model = Gtk.TreeStore(GObject.TYPE_PYOBJECT)
+        #self._model = Gtk.TreeStore(GObject.TYPE_PYOBJECT)
+        self._model = gtk.TreeStore(gobject.TYPE_PYOBJECT)
         self._list.set_model(self._model)
         return self._list
 
@@ -180,7 +183,8 @@ class IconView(BaseView):
 
     def setup(self):
         """Setup the icon view control view"""
-        self._model = Gtk.ListStore(str, GdkPixbuf.Pixbuf, GObject.TYPE_PYOBJECT)
+        #self._model = Gtk.ListStore(str, GdkPixbuf.Pixbuf, GObject.TYPE_PYOBJECT)
+        self._model = gtk.ListStore(str, GdkPixbuf.Pixbuf, gobject.TYPE_PYOBJECT)
         self._list.set_model(self._model)
         return self._list
 

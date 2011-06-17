@@ -75,7 +75,7 @@ class GtkApp(object):
         # Start up a gtk main loop when requested
         if start_loop:
             logging.debug("Starting new GTK Main Loop.")
-            Gtk.main()
+            gtk.main() #Gtk.main()
 
     def ui_file(self, window):
         """Load any given gtk builder file from a standard location."""
@@ -138,7 +138,7 @@ class GtkApp(object):
             # Quit Gtk loop if we started one.
             logging.debug("Quit '%s' Main Loop." % (
                 self._primary and self._primary.name or 'program'))
-            Gtk.main_quit()
+            gtk.main_quit() #Gtk.main_quit()
             # You have to return in order for the loop to exit
             return 0
 
