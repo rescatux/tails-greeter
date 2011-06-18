@@ -193,8 +193,7 @@ class GdmUsers(GdmDbusService):
         for uid in self._uids:
             if self._uids == username:
                 self._uids.pop(uid)
-        logging.warn("User %s:%s '%s' has been removed!" % (
-            str(uid), str(username), str(user['name'])))
+        logging.warn("User %s:%s '%s' has been removed!", (str(uid), str(username), str(user['name'])))
         if self.event_removed:
             self.event_removed(uid)
 
@@ -214,9 +213,9 @@ class GdmUsers(GdmDbusService):
         """Take a single user and load it"""
         (username, name, shell, count, icon) = self.obj.GetUserInfo(uid)
         if username in self._users:
-            logging.warn("Attempted to add user %s twice." % username)
+            logging.warn("Attempted to add user %s twice.", username)
             return self._info[username]
-        logging.debug("User Id Added: %s" % str(uid))
+        logging.debug("User Id Added: %s", str(uid))
         # We actually list and index by username
         self._users.append(str(username))
         self._uids[uid] = str(username)

@@ -25,8 +25,8 @@ import logging
 
 #from gi.repository import Gtk, Gdk, GLib, GObject
 import gtk
-from gtk import gdk
-import glib
+#from gtk import gdk
+#import glib
 import gobject
 
 from GdmGreeter.services import GdmUsers
@@ -121,7 +121,7 @@ class LoginWindow(TranslatableWindow):
 
     def removed_user(self, uid):
         """Event for removing users."""
-        logging.warn("Removing User: '%s'" % uid)
+        logging.warn("Removing User: '%s'", uid)
 
     def name_changed(self, widget):
         """Event handler for username textbox, keypress"""
