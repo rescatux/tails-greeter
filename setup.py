@@ -49,7 +49,7 @@ setup(
         version          = __version__,
         description      = 'Shows a community lab loging screen',
         long_description = "Replaces the traditional gdm with a new community cener specialised version.",
-        author           = 'Max',
+        author           = 'Max S',
         author_email     = 'govnototalitarizm@gmail.com',
         url              = 'https://tails.boum.org/todo/TailsGreeter/',
         platforms        = 'linux',
@@ -64,6 +64,7 @@ setup(
             ( SDIR + 'pixmaps/theme', listfiles( 'pixmaps/theme', '*.*' ) ),
             ( SDIR + 'pixmaps/auto', listfiles( 'pixmaps/auto', '*.*' ) ),
             ( 'share/gdm/autostart/LoginWindow/', [ 'a-tails-greeter.desktop' ] ),
+            ( SDIR, [ 'tails-logging.conf' ] ),
         ],
         cmdclass={
                    'build'       : build_extra.build_extra,
