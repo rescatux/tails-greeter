@@ -21,6 +21,7 @@ GDM greeter for TAILS project using gtk
 """
 
 import logging
+import logging.config
 #from gi.repository import Gtk, Gdk, GLib, GObject
 import gtk
 from gtk import gdk

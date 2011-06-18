@@ -79,9 +79,9 @@ class GdmGreeter(GdmDbusService):
         address = kwargs.pop('address', os.environ['GDM_GREETER_DBUS_ADDRESS'])
         try:
             self.connection = dbus.connection.Connection(address)
-            logging.debug("Connected to Greeter-Service on %s\n", address)
+            logging.debug("Connected to Greeter-Service on %s", address)
         except dbus.exceptions.DBusException:
-            logging.error("Failed to connect to Greeter-Service on %s\n", address)
+            logging.error("Failed to connect to Greeter-Service on %s", address)
             raise
         GdmDbusService.__init__(self)
         self.display = GdmDisplay(self.obj.GetDisplayId())

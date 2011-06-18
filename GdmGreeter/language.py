@@ -128,7 +128,7 @@ class LanguageWindow(TranslatableWindow):
 
     def set_position(self, width, height):
         """Set the window's possition in the middle of the screen"""
-        logging.debug("Setting pos: %sx%s resolution\n", width, height)
+        logging.debug("Setting pos: %sx%s resolution", width, height)
         self.window.move(width/2, height)
 
     def populate(self):
@@ -176,9 +176,11 @@ def LanguageButton(locale, signal=None):
     #label = Gtk.Label()
     label = gtk.Label()
     holder.pack_start(icon, True, True, 6)
+    logging.debug("Loading pixmap for '%s'", code)
     image = IMAGES.get_pixmap(code)
     if not image:
         return None
+    logging.debug("Setting icon from '%s' pixmap")
     icon.set_from_pixbuf(image)
     holder.pack_end(label, False, True, 0)
     label_unicode = "<b>%s</b>" % locale.languages[code] 

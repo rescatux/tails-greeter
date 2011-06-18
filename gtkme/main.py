@@ -100,7 +100,7 @@ class GtkApp(object):
         if self.windows:
             for cls in self.windows:
                 window = cls
-                logging.debug("Adding window %s to GtkApp\n", window.name )
+                logging.debug("Adding window %s to GtkApp", window.name )
                 self._inital[window.name] = window
                 if window.primary:
                     if not self._primary:

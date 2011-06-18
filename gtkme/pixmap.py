@@ -48,9 +48,10 @@ class PixmapManager(object):
         self.get_pixmap(self.default_image)
 
     def get_pixmap(self, name):
-        """Simple method for getting a set of pix pixmaps and caching them."""
+        """Simple method for getting a set of pixmaps and caching them."""
         if not name:
             name = self.default_image
+            logging.debug("no name supplied, fallback to %s", name)
         if not self.cache.has_key(name):
             pixmap_path = self.pixmap_path(name)
             if os.path.exists(pixmap_path):
@@ -58,10 +59,10 @@ class PixmapManager(object):
                     #self.cache[name] = GdkPixbuf.Pixbuf.new_from_file(pixmap_path)
                     self.cache[name] = gdk.pixbuf_new_from_file(pixmap_path)
                 except RuntimeError, msg:
-                    logging.warn("No pixmap '%s',%s", pixmap_path, msg)
+                    logging.warn("Failed to load pixmap file '%s' from %s", pixmap_path, msg)
             else:
                 self.cache[name] = None
-                logging.warning("Can't find pixmap for %s in %s", (name, self.location))
+                logging.warning("No pixmap file '%s' in %s", name, self.location)
         if not self.cache.has_key(name) or not self.cache[name]:
             name = self.default_image
         return self.cache.get(name, self.missing_image)
