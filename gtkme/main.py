@@ -111,7 +111,7 @@ class GtkApp(object):
 
     def load_window(self, name, *args, **kwargs):
         """Load a specific window from our group of windows"""
-        logging.debug("Loading '%s' from %s", (name, str(self._inital)))
+        logging.debug("Loading '%s' from %s", name, str(self._inital))
         if self._inital.has_key(name):
             # Create a new instance of this window
             window = self._inital[name](self, *args, **kwargs)
@@ -135,7 +135,7 @@ class GtkApp(object):
 	# if self.main_loop < GLib.main_depth():
 	if self.main_loop < glib.main_depth():
             # Quit Gtk loop if we started one.
-            logging.debug("Quit '%s' Main Loop.", (self._primary and self._primary.name or 'program'))
+            logging.debug("Quit '%s' Main Loop.", self._primary and self._primary.name or 'program')
             gtk.main_quit() #Gtk.main_quit()
             # You have to return in order for the loop to exit
             return 0
@@ -157,7 +157,7 @@ class FakeWidget(object):
 
     def fake_method(self, *args, **kwargs):
         """Don't do anything, this is fake"""
-        logging.info("Calling fake method: %s:%s", (str(args), str(kwargs)))
+        logging.info("Calling fake method: %s:%s", str(args), str(kwargs))
         return None
 
     def information(self):

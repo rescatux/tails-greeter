@@ -25,6 +25,20 @@ import logging
 import gtk
 from gtk import gdk
 
+def print_log_record_on_error(func):
+    """Wrapper to determine failed logging instance"""
+    def wrap(self, *args, **kwargs):
+        try:
+            return func(self, *args, **kwargs)
+        except:
+            import sys
+            print >>sys.stderr, "Failed log message=%r with args=%r " % (getattr(self, 'msg', '?'), getattr(self, 'args', '?'))
+            raise
+    return wrap
+
+logging.config.fileConfig('tails-logging.conf')
+logging.LogRecord.getMessage = print_log_record_on_error(logging.LogRecord.getMessage)
+
 from gtkme import GtkApp
 from GdmGreeter.services import GdmGreeter
 #from GdmGreeter.language import ( LanguageWindow, TranslatableWindow, Translatable )
@@ -36,18 +50,6 @@ from GdmGreeter import GLADE_DIR, __appname__
 
 # Store users and their settings here
 USER_CONF = '/home/users/%s.conf'
-
-logging.config.fileConfig('tails-logging.conf')
-
-def print_log_record_on_error(func):
-    def wrap(self, *args, **kwargs):
-        try:
-            return func(self, *args, **kwargs)
-        except:
-            import sys
-            print >>sys.stderr, "Unable to create log message msg=%r, args=%r " % (getattr(self, 'msg', '?'), getattr(self, 'args', '?'))
-            raise
-    return wrap
 
 class CommunityGreeterApp(GtkApp, GdmGreeter):
     """Identity Menu for setting up or importing a new identity"""
@@ -72,7 +74,7 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
         """When loading a window, also translate it"""
         window = GtkApp.load_window(self, *args, **kwargs)
         if isinstance(window, Translatable) and self.language:
-            logging.debug("Translating %s to %s", (window.name, self.language))
+            logging.debug("Translating %s to %s", window.name, self.language)
             window.translate_to(self.language)
         return window
 
@@ -81,7 +83,7 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
         self.language = lang
         for window in self._loaded.values():
             if isinstance(window, Translatable):
-                logging.debug("I18n window %s to %s", (window.name, lang))
+                logging.debug("I18n window %s to %s", window.name, lang)
                 window.translate_to(lang)
 
     def Ready(self):

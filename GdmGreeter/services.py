@@ -193,7 +193,7 @@ class GdmUsers(GdmDbusService):
         for uid in self._uids:
             if self._uids == username:
                 self._uids.pop(uid)
-        logging.warn("User %s:%s '%s' has been removed!", (str(uid), str(username), str(user['name'])))
+        logging.warn("User %s:%s '%s' has been removed!", str(uid), str(username), str(user['name']))
         if self.event_removed:
             self.event_removed(uid)
 

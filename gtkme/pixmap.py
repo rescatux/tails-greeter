@@ -58,7 +58,7 @@ class PixmapManager(object):
                     #self.cache[name] = GdkPixbuf.Pixbuf.new_from_file(pixmap_path)
                     self.cache[name] = gdk.pixbuf_new_from_file(pixmap_path)
                 except RuntimeError, msg:
-                    logging.warn("No pixmap '%s',%s", (pixmap_path, msg))
+                    logging.warn("No pixmap '%s',%s", pixmap_path, msg)
             else:
                 self.cache[name] = None
                 logging.warning("Can't find pixmap for %s in %s", (name, self.location))

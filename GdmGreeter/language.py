@@ -128,7 +128,7 @@ class LanguageWindow(TranslatableWindow):
 
     def set_position(self, width, height):
         """Set the window's possition in the middle of the screen"""
-        logging.debug("Setting pos: %sx%s resolution\n", (width, height))
+        logging.debug("Setting pos: %sx%s resolution\n", width, height)
         self.window.move(width/2, height)
 
     def populate(self):
