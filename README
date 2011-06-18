@@ -6,3 +6,5 @@ Following major parts are under development:
 * code implementing logon greeter
 * code implementing panel
 
+Code QA:
+pylint --rcfile=.pylint.d/.pylintrc community-greeter.py

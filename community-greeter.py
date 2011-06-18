@@ -20,15 +20,10 @@
 GDM greeter for TAILS project using gtk
 """
 
-import sys
 import logging
-#import babel
-
 #from gi.repository import Gtk, Gdk, GLib, GObject
 import gtk
 from gtk import gdk
-#import glib
-#import gobject
 
 from gtkme import GtkApp
 from GdmGreeter.services import GdmGreeter
@@ -41,6 +36,8 @@ from GdmGreeter import GLADE_DIR, __appname__
 
 # Store users and their settings here
 USER_CONF = '/home/users/%s.conf'
+
+logging.basicConfig(level=logging.DEBUG, format='%(asctime)-15s %(process)d %(levelname)-8s %(filename)s:%(lineno)d %(funcName)s %(message)s')
 
 class CommunityGreeterApp(GtkApp, GdmGreeter):
     """Identity Menu for setting up or importing a new identity"""
@@ -65,7 +62,7 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
         """When loading a window, also translate it"""
         window = GtkApp.load_window(self, *args, **kwargs)
         if isinstance(window, Translatable) and self.language:
-            logging.debug("Translating %s to %s" % (window.name, self.language))
+            logging.debug("Translating %s to %s", (window.name, self.language))
             window.translate_to(self.language)
         return window
 
@@ -74,7 +71,7 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
         self.language = lang
         for window in self._loaded.values():
             if isinstance(window, Translatable):
-                logging.debug("I18n window %s to %s" % (window.name, lang))
+                logging.debug("I18n window %s to %s", (window.name, lang))
                 window.translate_to(lang)
 
     def Ready(self):
@@ -90,7 +87,7 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
             self.login.show_user('')
         # Tie up the responses, I should do a signal here.
         GdmGreeter.Ready(self)
-        logging.warn("Ready!")
+        logging.warn("server is ready.")
 
     def SelectedUserChanged(self, username):
         """The user has selected the user to login as"""
@@ -126,11 +123,12 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
 
     def FinishProcess(self):
         """We're done, quit gtk app"""
-        gtk.main_quit() #Gtk.main_quit()
+        logging.info("Finished.")
+        gtk.main_quit()
 
 
 if __name__ == "__main__":
-    sys.stderr.write("TAILS Greeter Started.\n")
-    app = CommunityGreeterApp( )
-    gtk.main() #Gtk.main()
+    logging.info("Started.")
+    app = CommunityGreeterApp()
+    gtk.main()
 
