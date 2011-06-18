@@ -37,7 +37,17 @@ from GdmGreeter import GLADE_DIR, __appname__
 # Store users and their settings here
 USER_CONF = '/home/users/%s.conf'
 
-logging.basicConfig(level=logging.DEBUG, format='%(asctime)-15s %(process)d %(levelname)-8s %(filename)s:%(lineno)d %(funcName)s %(message)s')
+logging.config.fileConfig('tails-logging.conf')
+
+def print_log_record_on_error(func):
+    def wrap(self, *args, **kwargs):
+        try:
+            return func(self, *args, **kwargs)
+        except:
+            import sys
+            print >>sys.stderr, "Unable to create log message msg=%r, args=%r " % (getattr(self, 'msg', '?'), getattr(self, 'args', '?'))
+            raise
+    return wrap
 
 class CommunityGreeterApp(GtkApp, GdmGreeter):
     """Identity Menu for setting up or importing a new identity"""
