@@ -36,7 +36,7 @@ import gtk
 import gobject
 
 from gtkme.listview import text_combobox
-from GdmGreeter.language import TranslatableFormWindow
+from GdmGreeter.language import TranslatableFormWindow, LANGS
 from GdmGreeter.user import User
 
 ALPHANUM = string.letters + string.digits

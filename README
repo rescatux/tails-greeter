@@ -8,3 +8,4 @@ Following major parts are under development:
 
 Code QA:
 pylint --rcfile=.pylint.d/.pylintrc community-greeter.py
+pylint --rcfile=.pylint.d/.pylintrc GdmGreeter

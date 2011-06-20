@@ -38,11 +38,12 @@ from GdmGreeter import __appname__, Images
 MOFILES = '/usr/share/locale/'
 DOMAIN  = 'tails-greeter'
 IMAGES = Images('lang')
-
 GDM_MOFILES = '/usr/share/locale-langpack/'
 
-LANGS = [babel.Locale.parse(path.split('/')[-3]) for path in gettext.find(
-    'gdm', GDM_MOFILES, languages=babel.Locale('en').languages.keys(), all=True)]
+#LANGS = [babel.Locale.parse(path.split('/')[-3]) for path in gettext.find(
+#    'gdm', GDM_MOFILES, languages=babel.Locale('en').languages.keys(), all=True)]
+
+LANGS = ['en', 'fr', 'ru']
 
 def get_texts(langs):
     result = {}
