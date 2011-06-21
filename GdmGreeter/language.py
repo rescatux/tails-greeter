@@ -50,6 +50,7 @@ def get_texts(langs):
         try:
             result[str(locale)] = gettext.translation(DOMAIN, MOFILES, [str(locale)])
         except IOError:
+	    logging.error('Failed to get texts for %s locale', locale)
             pass
     return result
 
