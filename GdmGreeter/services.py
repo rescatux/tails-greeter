@@ -20,7 +20,7 @@
 Provides access to gdm services for python greeters (login windows).
 """
 
-import os, sys, time
+import os, time
 import logging
 import locale
 import dbus
@@ -39,7 +39,7 @@ class GdmDbusService(object):
             # The first is access to the object and any interfaces.
             self.raw = self.connection.get_object(self.address, self.path)
         except dbus.exceptions.DBusException:
-            logging.error("Failed to get Dbus object %s" % self.path)
+            logging.error("Failed to get Dbus object %s", self.path)
             raise
         # The second is access to the interface, which is more interesting.
         self.obj = dbus.Interface(self.raw, self.interface)
@@ -193,9 +193,9 @@ class GdmUsers(GdmDbusService):
         for uid in self._uids:
             if self._uids == username:
                 self._uids.pop(uid)
-        logging.warn("User %s:%s '%s' has been removed!", str(uid), str(username), str(user['name']))
-        if self.event_removed:
-            self.event_removed(uid)
+                logging.warn("User %s:%s '%s' has been removed!", str(uid), str(username), str(user['name']))
+                if self.event_removed:
+                    self.event_removed(uid)
 
     def load_users(self):
         """Take all users into our buzom"""

@@ -20,7 +20,7 @@
 Greeter program for GDM using gtk (nothing else works)
 """
 
-import sys, os
+#import sys, os
 import logging
 
 #from gi.repository import Gtk, Gdk, GLib, GObject
@@ -45,6 +45,7 @@ class LoginWindow(TranslatableWindow):
         self.search = self.widget('namesearch')
         self.users = GdmUsers(added=self.added_user, removed=self.removed_user)
         self.images = Images('auto')
+        self.userstore = gtk.TreeStore(gobject.TYPE_STRING)
         self.setup_autocomplete()
         self.users.load_users()
 
@@ -84,9 +85,6 @@ class LoginWindow(TranslatableWindow):
             markup = "%s (%s)" % (model.get_value(iter_index, 0),
                 model.get_value(iter_index, 1))
             renderer.set_property("markup", markup)
-
-        #self.userstore = Gtk.TreeStore(GObject.TYPE_STRING)
-        self.userstore = gtk.TreeStore(gobject.TYPE_STRING)
         self.search.set_model(self.userstore)
         self.search.set_match_func(self.match_user, 0)
         self.widget('name_entry').set_completion(self.search)
@@ -95,10 +93,10 @@ class LoginWindow(TranslatableWindow):
         self.search.pack_start(renderer, False)
         self.search.set_text_column(0)
 
-    def match_user(self, completion, text, iter, column, user=None):
+    def match_user(self, completion, text, _iter, column, user = None):
         """Match a user against what they've typed so far"""
         # Happens after name_changed event below! Take notice.
-        user = user or self.userstore.get_value(iter, column)
+        user = user or self.userstore.get_value(_iter, column)
         if text and user and user.lower().startswith(text.lower()):
             return True
         return False

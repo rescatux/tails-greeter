@@ -20,9 +20,9 @@
 Greeter program for GDM using gtk (nothing else works)
 """
 
-import sys, os
+import sys
 import logging
-import babel
+#import babel
 import crypt
 import random
 import string
@@ -36,7 +36,7 @@ import gtk
 import gobject
 
 from gtkme.listview import text_combobox
-from GdmGreeter.language import TranslatableFormWindow, LANGS
+from GdmGreeter.language import TranslatableFormWindow#, LANGS, LanguageButton
 from GdmGreeter.user import User
 
 ALPHANUM = string.letters + string.digits
@@ -64,6 +64,7 @@ class RegisterWindow(TranslatableFormWindow):
         self.realname = kwargs.pop('real_name')
         self.users = kwargs.pop('users')
         self.user = User( self.username )
+        logging.debug("RegisterWindow ready for translation.")
         # Call the higher power to translate the window
         TranslatableFormWindow.__init__(self, *args, **kwargs)
         # Deal with issues of widgetness
@@ -86,19 +87,19 @@ class RegisterWindow(TranslatableFormWindow):
         self.label.set_label(self.label.get_label() % self.realname)
         self.language = lang
 
-    def update_lang_buttons(self, lang):
-        """Updates the selection of buttons to select the pricise language"""
-        # XXX Deactivated because we can't get at good information about available
-        # Locales, we need a list of territories in a given language to do this.
-        for button in self.buttons:
-            button.destroy()
-        self.buttons = []
-        for code in LANGS:
-            locale = babel.Locale.parse(code)
-            if locale.language == lang:
-                button = LanguageButton(locale, self.set_language)
-                self.languages.pack_start(button, False, False, 0)
-                self.buttons.append(button)
+#    def update_lang_buttons(self, lang):
+#        """Updates the selection of buttons to select the pricise language"""
+#        # XXX Deactivated because we can't get at good information about available
+#        # Locales, we need a list of territories in a given language to do this.
+#        for button in self.buttons:
+#            button.destroy()
+#        self.buttons = []
+#        for code in LANGS:
+#            locale = babel.Locale.parse(code)
+#            if locale.language == lang:
+#                button = LanguageButton(locale, self.set_language)
+#                self.languages.pack_start(button, False, False, 0)
+#                self.buttons.append(button)
 
     def cancel(self, widget, event=None):
         """Event for canceling the registration, Esc or Gtk.Button"""
