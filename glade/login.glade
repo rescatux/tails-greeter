@@ -26,6 +26,7 @@
                 <property name="height_request">128</property>
                 <property name="visible">True</property>
                 <property name="pixbuf">../pixmaps/auto/logo.svg</property>
+                <signal name="button_release_event" handler="login_name_activated"/>
               </object>
               <packing>
                 <property name="fill">False</property>

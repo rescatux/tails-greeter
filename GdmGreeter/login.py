@@ -49,6 +49,12 @@ class LoginWindow(TranslatableWindow):
         self.setup_autocomplete()
         self.users.load_users()
 
+    def username(self, widget=None):
+        """Returns a sanitised name"""
+        widget = widget or self.widget('name_entry')
+        content = widget.get_text().lower().strip()
+        return content
+
     def show_user(self, text):
         """We should ask for the user's name now"""
         self.ask_user_for('name')
@@ -123,7 +129,7 @@ class LoginWindow(TranslatableWindow):
 
     def name_changed(self, widget):
         """Event handler for username textbox, keypress"""
-        content = widget.get_text()
+        content = self.username(widget)
         if len(content) >= self.search.get_minimum_key_length():
             matches = self.generate_matches(content)
             # Take the user from the last match or from an exact match
@@ -148,7 +154,7 @@ class LoginWindow(TranslatableWindow):
 
     def name_activated(self, widget):
         """Event handler for full name textbox, on enter"""
-        name = widget.get_text()
+        name = self.username(widget)
         matches = self.generate_matches(name)
         # Don't do anything if the name is too short.
         if len(name) < self.search.get_minimum_key_length():
@@ -172,5 +178,4 @@ class LoginWindow(TranslatableWindow):
         """Event handler for password textbox, on enter"""
         widget.set_sensitive(False)
         self.service.AnswerQuery(widget.get_text())
-
 
