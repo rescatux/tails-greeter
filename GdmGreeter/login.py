@@ -20,13 +20,9 @@
 Greeter program for GDM using gtk (nothing else works)
 """
 
-#import sys, os
 import logging
 
-#from gi.repository import Gtk, Gdk, GLib, GObject
 import gtk
-#from gtk import gdk
-#import glib
 import gobject
 
 from GdmGreeter.services import GdmUsers
@@ -81,8 +77,7 @@ class LoginWindow(TranslatableWindow):
         self.widget('user_image').set_from_pixbuf(self.images.get_pixmap(icon))
 
     def cancel(self, widget=None, event=None):
-        #if not event or event.key.keyval == Gdk.KEY_Escape:
-        if not event or event.keyval == gtk.keysyms.Escape:
+                if not event or event.keyval == gtk.keysyms.Escape:
             self.service.Cancel()
 
     def setup_autocomplete(self):
@@ -94,7 +89,6 @@ class LoginWindow(TranslatableWindow):
         self.search.set_model(self.userstore)
         self.search.set_match_func(self.match_user, 0)
         self.widget('name_entry').set_completion(self.search)
-        #renderer = Gtk.CellRendererText()
         renderer = gtk.CellRendererText()
         self.search.pack_start(renderer, False)
         self.search.set_text_column(0)

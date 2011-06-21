@@ -22,17 +22,11 @@ Greeter program for GDM using gtk (nothing else works)
 
 import sys
 import logging
-#import babel
 import crypt
 import random
 import string
-#import json
-#import time
 
-#from gi.repository import Gtk, Gdk, GLib, GObject
 import gtk
-#from gtk import gdk
-#import glib
 import gobject
 
 from gtkme.listview import text_combobox
@@ -87,24 +81,8 @@ class RegisterWindow(TranslatableFormWindow):
         self.label.set_label(self.label.get_label() % self.realname)
         self.language = lang
 
-#    def update_lang_buttons(self, lang):
-#        """Updates the selection of buttons to select the pricise language"""
-#        # XXX Deactivated because we can't get at good information about available
-#        # Locales, we need a list of territories in a given language to do this.
-#        for button in self.buttons:
-#            button.destroy()
-#        self.buttons = []
-#        for code in LANGS:
-#            locale = babel.Locale.parse(code)
-#            if locale.language == lang:
-#                button = LanguageButton(locale, self.set_language)
-#                self.languages.pack_start(button, False, False, 0)
-#                self.buttons.append(button)
-
     def cancel(self, widget, event=None):
         """Event for canceling the registration, Esc or Gtk.Button"""
-        #if isinstance(widget, Gtk.Button) or (event and \
-          #event.key.keyval == Gdk.KEY_Escape):
         if isinstance(widget, gtk.Button) or (event and event.keyval == gtk.keysyms.Escape):
             self.destroy()
 
@@ -138,7 +116,6 @@ class RegisterWindow(TranslatableFormWindow):
         """Wait for user to appear..."""
         if self.username not in self.users:
             #sys.stderr.write("Testing: %s not in %s\n" % (self.username, str(self.users)))
-            #return GObject.timeout_add( 1000, self.wait_for_new_user )
             return gobject.timeout_add( 1000, self.wait_for_new_user )
         self.finish_registration()
 
