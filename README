@@ -9,3 +9,13 @@ Following major parts are under development:
 Code QA:
 pylint --rcfile=.pylint.d/.pylintrc community-greeter.py
 pylint --rcfile=.pylint.d/.pylintrc GdmGreeter
+
+Test helper:
+
+#!/bin/sh
+
+rm tails-greeter_0.0.2_all.deb
+aptitude purge tails-greeter
+wget http://dev.machine/tails-greeter_0.0.2_all.deb
+dpkg -i tails-greeter_0.0.2_all.deb
+service gdm3 restart
