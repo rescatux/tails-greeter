@@ -42,7 +42,7 @@ GDM_MOFILES = '/usr/share/locale-langpack/'
 #LANGS = [babel.Locale.parse(path.split('/')[-3]) for path in gettext.find(
 #    'gdm', GDM_MOFILES, languages=babel.Locale('en').languages.keys(), all=True)]
 
-LANGS = [[babel.Locale.parse('en'), [babel.Locale.parse('fr'), [babel.Locale.parse('es')]
+LANGS = [babel.Locale.parse('en'), babel.Locale.parse('fr'), babel.Locale.parse('es')]
 
 def get_texts(langs):
     result = {}
@@ -162,7 +162,7 @@ def LanguageButton(locale, signal=None):
     button = gtk.Button()
     if signal:
         button.connect('clicked', signal, code)
-    button.set_relief(gtk..RELIEF_NONE)
+    button.set_relief(gtk.RELIEF_NONE)
     holder = gtk.VBox()
     button.add(holder)
     icon = gtk.Image()
