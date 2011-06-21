@@ -172,7 +172,7 @@ def LanguageButton(locale, signal=None):
     image = IMAGES.get_pixmap(code)
     if not image:
         return None
-    logging.debug("Setting icon from '%s' pixmap")
+    logging.debug("Setting icon from '%s' pixmap", code)
     icon.set_from_pixbuf(image)
     holder.pack_end(label, False, True, 0)
     label_unicode = "<b>%s</b>" % locale.languages[code] 
