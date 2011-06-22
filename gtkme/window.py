@@ -59,7 +59,6 @@ class Window(object):
         self.callback = callback
 
         # Setup the gtk app connection
-        #self.w_tree   = Gtk.Builder()
         self.w_tree   = gtk.Builder()
         self.widget   = self.w_tree.get_object
         self.w_tree.set_translation_domain(self.gapp.app_name)
