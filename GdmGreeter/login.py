@@ -77,7 +77,7 @@ class LoginWindow(TranslatableWindow):
         self.widget('user_image').set_from_pixbuf(self.images.get_pixmap(icon))
 
     def cancel(self, widget=None, event=None):
-            if not event or event.keyval == gtk.keysyms.Escape:
+        if not event or event.keyval == gtk.keysyms.Escape:
             self.service.Cancel()
 
     def setup_autocomplete(self):
