@@ -112,6 +112,10 @@ class GdmGreeter(GdmDbusService):
         self.obj.StartSessionWhenReady( True )
         self.FinishProcess()
 
+    def BeginAutologin(self, username):
+        """Attempt autologin"""
+        self.obj.BeginAutologin(username)
+
     def FinishProcess(self):
         """Called when we're logging into the client"""
         pass

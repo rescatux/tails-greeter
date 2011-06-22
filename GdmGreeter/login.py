@@ -78,7 +78,7 @@ class LoginWindow(TranslatableWindow):
 
     def cancel(self, widget=None, event=None):
             if not event or event.keyval == gtk.keysyms.Escape:
-        	self.service.Cancel()
+            self.service.Cancel()
 
     def setup_autocomplete(self):
         """Sets up the autocomplete functionality"""
