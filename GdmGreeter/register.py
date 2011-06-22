@@ -109,7 +109,7 @@ class RegisterWindow(TranslatableFormWindow):
         self.widget('pleasewait').show()
         # Wait for the user to be registered, the server deletes or
         # zeros the file when it's complete so we wait for that.
-        sys.stderr.write("Waiting for registrations\n")
+        logging.debug("Waiting for registrations")
         self.wait_for_new_user()
 
     def wait_for_new_user(self):
