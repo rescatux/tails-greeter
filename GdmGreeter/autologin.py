@@ -32,12 +32,13 @@ class AutologinWindow(TranslatableWindow):
     name = 'autologin'
     primary = False
     passw = None
+    user = 'qwe'
 
     def __init__(self, *args, **kwargs):
         self.service = kwargs.pop('service')
         TranslatableWindow.__init__(self, *args, **kwargs)
 
-    def get_pass(self, widget=None):
+    def get_pass(self, widget = None):
         """Returns password"""
         widget = widget or self.widget('entry1')
         content = widget.get_text()
@@ -45,4 +46,5 @@ class AutologinWindow(TranslatableWindow):
 
     def proceed_login(self):
         """Autologin attempt"""
-#BeginAutoLogin
+        logging.debug('BeginAutoLogin attempt')
+        self.service.BeginAutoLogin(user)
