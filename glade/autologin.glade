@@ -37,7 +37,7 @@ Leave this field blank to disable administrator rights.</property>
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
             <property name="use_stock">True</property>
-            <signal name="clicked" handler="get_pass"/>
+            <signal name="clicked" handler="autologin_get_pass"/>
           </object>
           <packing>
             <property name="expand">False</property>
