@@ -48,3 +48,15 @@ class AutologinWindow(TranslatableWindow):
         """Autologin attempt"""
         logging.debug('BeginAutoLogin attempt')
         self.service.BeginAutoLogin(self.user)
+
+    def show_user(self, text):
+        """dummy function"""
+        logging.debug('called to show user %s', text)
+        self.service.AnswerQuery(self.user)
+
+    def show_pass(self, text):
+        """dummy function"""
+        logging.debug('called to show user %s', text)
+        self.service.AnswerQuery(self.user)
+        
+    
