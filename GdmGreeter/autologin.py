@@ -34,8 +34,8 @@ class AutologinWindow(TranslatableWindow):
     auth_password = None
 # FIXME: insecure, alpha-testing only!
 # change to corresponding credentials on your test system
-    logon_password = 'qwe'
-    user = 'qwe'
+    logon_password = 'amnesia'
+    user = 'amnesia'
 
     def __init__(self, *args, **kwargs):
         self.service = kwargs.pop('service')
