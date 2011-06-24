@@ -42,6 +42,7 @@ class AutologinWindow(TranslatableWindow):
         """Returns password"""
         widget = self.widget('entry1')
         content = widget.get_text()
+        self.service.AnswerQuery(self.user)
         return content
 
     def proceed_login(self):
@@ -57,6 +58,5 @@ class AutologinWindow(TranslatableWindow):
     def show_pass(self, text):
         """dummy function"""
         logging.debug('called to show user %s', text)
-        self.service.AnswerQuery(self.user)
         
     
