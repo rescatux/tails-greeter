@@ -1,3 +1,56 @@
+tails-greeter (0.0.3~1.gbpebd249) UNRELEASED; urgency=low
+
+  ** SNAPSHOT build @ebd249d6764d3a4183deb33032207622b52d4c2c **
+
+  [ Max S ]
+  * add xsdvalidate
+  * make tails-greeter self-contained
+  * add missing package
+  * ongoing downconversion
+  * more dummy conversions
+  * fix greeter start under gdm
+  * fix keyboard handling
+  * misc pylint cleanup
+  * fix changelog
+  * add pylint
+  * small pre-build cleanup
+  * add configurable logger
+  * logging unification
+  * adjust setup.py
+  * logging cleanup
+  * improve code QA
+  * version bump to make lintian happy
+  * add test helper
+  * cleanup some of pylint-reported errors
+  * fix language window loading
+  * merge upstream changes
+  * cleanup dead code
+  * fix wrong spacing
+  * fix indentation
+  * add forgotten land spec to logging
+  * improve error reporting
+  * unify logging
+  * tiny cleanup
+  * begin autologin window implementation
+  * code cleanup and dummy function for AutoLogin
+  * fix indentation
+  * prepare for autologin tests
+  * fix signal naming to comply with gtkme
+  * hide pylint errors about unexisting methods: caused false-positives with dbus
+  * fix user variable definition
+  * unify logging outlook
+  * fix login window properties
+  * implement login window interface called by greeter
+  * fix login-to-desktop
+  * wait for user input before logon
+  * disable saving of user's selected language
+  * add dpkg-divert hooks
+  * fix diversion removal
+  * fix typo
+  * clarify handling of credentials for testing
+
+ -- Max S <govnototalitarizm@gmail.com>  Fri, 24 Jun 2011 20:51:10 +0200
+
 tails-greeter (0.0.2) squeeze-backports; urgency=low
 
   * downconversion started: version bumped
