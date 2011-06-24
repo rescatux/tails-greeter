@@ -4,19 +4,28 @@
   <!-- interface-naming-policy project-wide -->
   <object class="GtkWindow" id="autologin">
     <property name="visible">True</property>
+    <property name="can_focus">False</property>
     <property name="resizable">False</property>
-    <property name="modal">True</property>
     <property name="window_position">center-always</property>
+    <property name="skip_taskbar_hint">True</property>
+    <property name="skip_pager_hint">True</property>
+    <property name="urgency_hint">True</property>
+    <property name="decorated">False</property>
+    <property name="deletable">False</property>
     <child>
       <object class="GtkVBox" id="vbox1">
         <property name="visible">True</property>
+        <property name="can_focus">False</property>
         <child>
           <object class="GtkLabel" id="label1">
             <property name="visible">True</property>
+            <property name="can_focus">False</property>
             <property name="label" translatable="yes">Enter here a password that will be asked to grant administrator rights. 
 Leave this field blank to disable administrator rights.</property>
           </object>
           <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
             <property name="position">0</property>
           </packing>
         </child>
@@ -25,8 +34,14 @@ Leave this field blank to disable administrator rights.</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="invisible_char">●</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
           </object>
           <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
             <property name="position">1</property>
           </packing>
         </child>
@@ -36,11 +51,13 @@ Leave this field blank to disable administrator rights.</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
+            <property name="use_action_appearance">False</property>
             <property name="use_stock">True</property>
-            <signal name="clicked" handler="autologin_get_pass"/>
+            <signal name="clicked" handler="autologin_get_pass" swapped="no"/>
           </object>
           <packing>
             <property name="expand">False</property>
+            <property name="fill">True</property>
             <property name="position">2</property>
           </packing>
         </child>
