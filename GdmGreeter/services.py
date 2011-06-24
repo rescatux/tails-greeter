@@ -64,10 +64,10 @@ class GdmDbusService(object):
             if kwargs[key] == None:
                 kwargs.pop(key)
         if kwargs:
-            log( "%s:%s%s %s\n" % (
+            log( "%s:%s%s %s" % (
                 self.interface, name, str(args), str(kwargs)) )
         else:
-            log("%s:%s%s\n" % (self.interface, name, str(args)))
+            log("%s:%s%s" % (self.interface, name, str(args)))
 
 
 class GdmGreeter(GdmDbusService):
