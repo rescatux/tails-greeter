@@ -1,5 +1,5 @@
 #!/bin/sh
 
-if [ -f /usr/share/gdm/autostart/LoginWindow/gdm-simple-greeter.desktop  ]; then
-    dpkg-divert --remove --rename /usr/share/gdm/autostart/LoginWindow/gdm-simple-greeter.desktop
+if [ -f /usr/share/gdm/autostart/LoginWindow/gdm-simple-greeter.disabled  ]; then
+    dpkg-divert --rename --remove/usr/share/gdm/autostart/LoginWindow/gdm-simple-greeter.desktop
 fi
