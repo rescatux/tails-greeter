@@ -31,7 +31,10 @@ class AutologinWindow(TranslatableWindow):
     """Display a pre-login window"""
     name = 'autologin'
     primary = False
-    passw = None
+    auth_password = None
+# FIXME: insecure, alpha-testing only!
+# change to corresponding credentials on your test system
+    logon_password = 'qwe'
     user = 'qwe'
 
     def __init__(self, *args, **kwargs):
@@ -41,9 +44,9 @@ class AutologinWindow(TranslatableWindow):
     def get_pass(self, widget = None):
         """Returns password"""
         widget = self.widget('entry1')
-        content = widget.get_text()
-        self.service.AnswerQuery(self.user)
-        return content
+        auth_password = widget.get_text()
+        self.service.AnswerQuery(self.logon_password)
+        return auth_password
 
     def proceed_login(self):
         """Autologin attempt"""
