@@ -109,8 +109,6 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
 
     def SelectLanguage(self, lang, loaded=False):
         """The user wants to change languages"""
-        if not loaded and self.user:
-            self.user.save(data={ 'language': lang })
         # Translate all windows in the login screen
         self.translate_to(lang)
         # Make sure the session is set correctly.
