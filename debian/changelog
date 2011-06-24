@@ -1,13 +1,10 @@
-tails-greeter (0.0.3~1.gbp7c00b3) UNRELEASED; urgency=low
+tails-greeter (0.0.3~1.gbp12e0a1) UNRELEASED; urgency=low
 
-  ** SNAPSHOT build @7c00b3a9b283e38bc832e8c010cbf97b77e57504 **
+  ** SNAPSHOT build @12e0a1ad6cddc0ca22cd3cc31c8b56824be081b9 **
 
-  [ god ]
-  * UNRELEASED
+  * add conf for proper tagging
 
-  [ Max S ]
-
- -- Max S <govnototalitarizm@gmail.com>  Fri, 24 Jun 2011 22:02:20 +0200
+ -- Max S <govnototalitarizm@gmail.com>  Fri, 24 Jun 2011 22:03:01 +0200
 
 tails-greeter (0.0.3~1.gbp7c00b3) UNRELEASED; urgency=low
 
