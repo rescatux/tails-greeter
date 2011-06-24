@@ -1,3 +1,22 @@
+tails-greeter (0.0.3~1.gbp7c00b3) UNRELEASED; urgency=low
+
+  ** SNAPSHOT build @7c00b3a9b283e38bc832e8c010cbf97b77e57504 **
+
+  [ god ]
+  * UNRELEASED
+
+  [ Max S ]
+
+ -- Max S <govnototalitarizm@gmail.com>  Fri, 24 Jun 2011 22:02:20 +0200
+
+tails-greeter (0.0.3~1.gbp7c00b3) UNRELEASED; urgency=low
+
+  ** SNAPSHOT build @7c00b3a9b283e38bc832e8c010cbf97b77e57504 **
+
+  * test commit to check git-dch behavior
+
+ -- Max S <govnototalitarizm@gmail.com>  Fri, 24 Jun 2011 21:46:52 +0200
+
 tails-greeter (0.0.3~1.gbpd06294) UNRELEASED; urgency=low
 
   ** SNAPSHOT build @d0629433d5e36bccb4fd2c490039dd71bb5660e9 **
