@@ -47,4 +47,4 @@ class AutologinWindow(TranslatableWindow):
     def proceed_login(self):
         """Autologin attempt"""
         logging.debug('BeginAutoLogin attempt')
-        self.service.BeginAutoLogin(user)
+        self.service.BeginAutoLogin(self.user)
