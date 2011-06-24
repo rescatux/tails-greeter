@@ -1,10 +1,10 @@
-tails-greeter (0.0.3~1.gbpebd249) UNRELEASED; urgency=low
+tails-greeter (0.0.3~1.gbpd06294) UNRELEASED; urgency=low
 
-  ** SNAPSHOT build @ebd249d6764d3a4183deb33032207622b52d4c2c **
+  ** SNAPSHOT build @d0629433d5e36bccb4fd2c490039dd71bb5660e9 **
 
   [ Max S ]
   * add xsdvalidate
-  * make tails-greeter self-contained
+  * make tails-greeter self-contained (no non-standard python packages)
   * add missing package
   * ongoing downconversion
   * more dummy conversions
@@ -36,7 +36,7 @@ tails-greeter (0.0.3~1.gbpebd249) UNRELEASED; urgency=low
   * fix indentation
   * prepare for autologin tests
   * fix signal naming to comply with gtkme
-  * hide pylint errors about unexisting methods: caused false-positives with dbus
+  * hide pylint errors about unexisting methods
   * fix user variable definition
   * unify logging outlook
   * fix login window properties
@@ -48,8 +48,9 @@ tails-greeter (0.0.3~1.gbpebd249) UNRELEASED; urgency=low
   * fix diversion removal
   * fix typo
   * clarify handling of credentials for testing
+  * fix most of lintian errors
 
- -- Max S <govnototalitarizm@gmail.com>  Fri, 24 Jun 2011 20:51:10 +0200
+ -- Max S <govnototalitarizm@gmail.com>  Fri, 24 Jun 2011 21:39:10 +0200
 
 tails-greeter (0.0.2) squeeze-backports; urgency=low
 
