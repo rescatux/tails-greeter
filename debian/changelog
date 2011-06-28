@@ -1,3 +1,11 @@
+tails-greeter (0.0.3~1.gbp97e581) UNRELEASED; urgency=low
+
+  ** SNAPSHOT build @97e5819c19a9b1bc30a3fd4c8ea3943ed6638a78 **
+
+  * commit before adding deb to tails repo
+
+ -- Max S <govnototalitarizm@gmail.com>  Sat, 25 Jun 2011 01:10:10 +0200
+
 tails-greeter (0.0.3~1.gbp7dfc79) UNRELEASED; urgency=low
 
   ** SNAPSHOT build @7dfc797983544491dfbee92f65a89d0a5324c05c **
