@@ -102,7 +102,7 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
         GdmGreeter.Ready(self)
         logging.warn("server is ready.")
 
-    def SwitchVisibility(self)
+    def SwitchVisibility(self):
 	"""Switch language and login windows visibility"""
 	self.login.window.show()
 	self.lang.window.hide()
