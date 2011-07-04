@@ -70,6 +70,8 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
         self.language = 'en_GB.UTF-8'
         self.session = None
         self.layout = None
+        self.postponed = False
+        self.postponed_text = None
 
     def load_window(self, *args, **kwargs):
         """When loading a window, also translate it"""
@@ -104,6 +106,8 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
         if not self.login:
             self.login = self.load_window('autologin', service=self.obj)
 	self.lang.window.hide()
+	if self.postponed:
+	    self.login.show_user(self.postponed_text)
 
     def SelectedUserChanged(self, username):
         """The user has selected the user to login as"""
@@ -129,7 +133,11 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
 
     def InfoQuery(self, text):
         """Server wants to ask the user for something"""
-        self.login.show_user(text)
+        if self.login:
+    	    self.login.show_user(text)
+    	else:
+    	    self.postponed = True
+    	    self.postponed_text = text
 
     def SecretInfoQuery(self, text):
         """Server wants to ask for some secrate info"""
