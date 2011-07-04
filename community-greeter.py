@@ -92,9 +92,6 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
         if not self.lang:
             self.lang = self.load_window('language')
             self.lang.set_position(self.scr.get_width(), self.scr.get_height())
-        if not self.login:
-            # Load this after language to give it focus
-            self.login = self.load_window('autologin', service=self.obj)
         else:
             self.login.window.set_sensitive(True)
             self.login.show_user('')
@@ -104,7 +101,8 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
 
     def SwitchVisibility(self):
 	"""Switch language and login windows visibility"""
-	self.login.window.show()
+        if not self.login:
+            self.login = self.load_window('autologin', service=self.obj)
 	self.lang.window.hide()
 
     def SelectedUserChanged(self, username):
