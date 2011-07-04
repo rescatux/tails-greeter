@@ -156,6 +156,7 @@ class LanguageWindow(TranslatableWindow):
     def button_clicked(self, widget, lang):
         """Signal event for button clicking, translate entire app"""
         self.gapp.SelectLanguage(lang)
+        self.gapp.SwitchVisibility()
 
 
 def LanguageButton(locale, signal=None):
