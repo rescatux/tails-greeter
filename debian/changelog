@@ -1,3 +1,22 @@
+tails-greeter (0.0.3~1.gbpf34d00) UNRELEASED; urgency=low
+
+  ** SNAPSHOT build @f34d00e8a6472bdae72dcc42f9c2b0c1cb8e936b **
+
+  * unconditional setup of file diversion
+  * add dummy lang. selection window
+  * change visible widget order to sequential
+  * fix syntax error
+  * change window loading sequence
+  * fix race condition
+  * add dummy combo-box implementation
+  * use gtkme wrapper for combo-box
+  * blank lines cleanup
+  * populate language list from hardcoded array
+  * fix language population
+  * add omitted populate() function to constructor
+
+ -- Max S <govnototalitarizm@gmail.com>  Wed, 06 Jul 2011 02:26:23 +0700
+
 tails-greeter (0.0.3~1.gbp97e581) UNRELEASED; urgency=low
 
   ** SNAPSHOT build @97e5819c19a9b1bc30a3fd4c8ea3943ed6638a78 **
