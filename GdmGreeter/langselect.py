@@ -26,6 +26,7 @@ import babel
 import locale
 import gettext
 
+from gtkme.listview import text_combobox
 from GdmGreeter.services import GdmUsers
 from GdmGreeter.language import TranslatableWindow
 from GdmGreeter.language import TEXTS, LANGS
@@ -37,9 +38,8 @@ class LangselectWindow(TranslatableWindow):
     primary = False
 
     def __init__(self, *args, **kwargs):
-        self.service = kwargs.pop('service')
         TranslatableWindow.__init__(self, *args, **kwargs)
-        self.cbox = gtk.combo_box_new_text()
+	text_combobox(self.widget('combobox1'), self.widget('languages'))
 
     def populate(self):
         """Create all the required entries"""

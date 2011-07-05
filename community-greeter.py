@@ -44,6 +44,7 @@ from gtkme import GtkApp
 from GdmGreeter.services import GdmGreeter
 #from GdmGreeter.language import ( LanguageWindow, TranslatableWindow, Translatable )
 from GdmGreeter.language import ( LanguageWindow, Translatable )
+from GdmGreeter.langselect import LangselectWindow
 from GdmGreeter.autologin import AutologinWindow
 from GdmGreeter.login import LoginWindow
 from GdmGreeter.register import RegisterWindow
@@ -57,7 +58,7 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
     """Identity Menu for setting up or importing a new identity"""
     app_name  = __appname__
     glade_dir = GLADE_DIR
-    windows   = [ AutologinWindow, LanguageWindow ]
+    windows   = [ AutologinWindow, LangselectWindow ]
 
     def __init__(self, *args, **kwargs):
         GtkApp.__init__(self, *args, **kwargs)
@@ -92,8 +93,9 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
     def Ready(self):
         """Sever is ready"""
         if not self.lang:
-            self.lang = self.load_window('language')
-            self.lang.set_position(self.scr.get_width(), self.scr.get_height())
+#            self.lang = self.load_window('language')
+	     self.lang = self.load_window('langselect')
+#            self.lang.set_position(self.scr.get_width(), self.scr.get_height())
         else:
             self.login.window.set_sensitive(True)
             self.login.show_user('')
