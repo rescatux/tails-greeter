@@ -48,7 +48,7 @@ class LangselectWindow(TranslatableWindow):
             locale = babel.Locale.parse(locale.language)
             # Because the territory could repeat the language,
             # Ignore after the first language.
-	    self.cbox.append_text(locale)
+	    self.widget('languages').append(locale)
 	    logging.debug('%s added to the combo-box', locale)
 #            if not self.buttons.has_key(str(locale)):
 #                button = LanguageButton(locale, self.button_clicked)
@@ -67,7 +67,7 @@ class LangselectWindow(TranslatableWindow):
 #            else:
 #                logging.warn("Couldn't find a button for language: %s", lid)
 
-    def button_clicked(self, widget, lang):
+    def button_clicked(self, widget):
         """Signal event for button clicking, translate entire app"""
-        self.gapp.SelectLanguage(lang)
+        self.gapp.SelectLanguage(self.widget('combobox1').get_active())
         self.gapp.SwitchVisibility()

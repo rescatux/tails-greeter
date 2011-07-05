@@ -65,15 +65,6 @@ NOTE: the selection cannot be changed once you press the button.</property>
       <column type="gchararray"/>
     </columns>
     <data>
-      <row>
-        <col id="0" translatable="yes">Not Specified</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">Male</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">Female</col>
-      </row>
     </data>
   </object>
 </interface>
