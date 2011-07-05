@@ -61,5 +61,3 @@ class AutologinWindow(TranslatableWindow):
     def show_pass(self, text):
         """dummy function"""
         logging.debug('called to show user %s', text)
-        
-    
