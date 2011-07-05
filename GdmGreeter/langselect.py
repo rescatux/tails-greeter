@@ -22,9 +22,13 @@ Greeter program for GDM using gtk (nothing else works)
 import logging
 import gtk
 import gobject
+import babel
+import locale
+import gettext
 
 from GdmGreeter.services import GdmUsers
 from GdmGreeter.language import TranslatableWindow
+from GdmGreeter.language import TEXTS, LANGS
 from GdmGreeter import Images
 
 class LangselectWindow(TranslatableWindow):
@@ -35,4 +39,35 @@ class LangselectWindow(TranslatableWindow):
     def __init__(self, *args, **kwargs):
         self.service = kwargs.pop('service')
         TranslatableWindow.__init__(self, *args, **kwargs)
+        self.cbox = gtk.combo_box_new_text()
 
+    def populate(self):
+        """Create all the required entries"""
+        for locale in LANGS:
+            # Our locale needs to be without territory
+            locale = babel.Locale.parse(locale.language)
+            # Because the territory could repeat the language,
+            # Ignore after the first language.
+	    self.cbox.append_text(locale)
+	    logging.debug('%s added to the combo-box', locale)
+#            if not self.buttons.has_key(str(locale)):
+#                button = LanguageButton(locale, self.button_clicked)
+#                if button:
+#                    self.container.pack_start(button, False, False, 0)
+#                    self.buttons[str(locale)] = button
+
+    def translate_to(self, lang):
+        """Press the selected language's button"""
+        lang = self.language(lang)
+        TranslatableWindow.translate_to(self, lang)
+        logging.debug('translating to %s', lang)
+#        for lid, button in self.buttons.iteritems():
+#            if button:
+#                button.set_sensitive(lid != lang)
+#            else:
+#                logging.warn("Couldn't find a button for language: %s", lid)
+
+    def button_clicked(self, widget, lang):
+        """Signal event for button clicking, translate entire app"""
+        self.gapp.SelectLanguage(lang)
+        self.gapp.SwitchVisibility()
