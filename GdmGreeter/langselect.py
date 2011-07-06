@@ -41,6 +41,7 @@ class LangselectWindow(TranslatableWindow):
         TranslatableWindow.__init__(self, *args, **kwargs)
 	text_combobox(self.widget('combobox1'), self.widget('languages'))
 	self.populate()
+	self.widget('combobox1').set_active(0)
 
     def populate(self):
         """Create all the required entries"""
