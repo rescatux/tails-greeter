@@ -65,7 +65,6 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
         GdmGreeter.__init__(self)
         self.scr = gdk.display_get_default().get_screen(self.display.number)
         self.lang = None
-        #self.lang = 'en'
         self.login = None
         self.user = None
         self.language = 'en_GB.UTF-8'
@@ -73,6 +72,8 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
         self.layout = None
         self.postponed = False
         self.postponed_text = None
+        self.ready = False
+        self.translated = False
 
     def load_window(self, *args, **kwargs):
         """When loading a window, also translate it"""
@@ -84,11 +85,13 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
 
     def translate_to(self, lang):
         """Translate all windows to target language"""
-        self.language = lang
+        if not self.translated and self.ready:
+    	    self.language = lang
+    	    self.translated = True
         for window in self._loaded.values():
             if isinstance(window, Translatable):
-                logging.debug("I18n window %s to %s", window.name, lang)
-                window.translate_to(lang)
+                logging.debug("I18n window %s to %s", window.name, self.language)
+                window.translate_to(self.language)
 
     def Ready(self):
         """Sever is ready"""
@@ -101,6 +104,7 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
             self.login.show_user('')
         # Tie up the responses, I should do a signal here.
         GdmGreeter.Ready(self)
+        self.ready = True
         logging.warn("server is ready.")
 
     def SwitchVisibility(self):
