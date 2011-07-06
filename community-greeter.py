@@ -94,8 +94,8 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
         """Sever is ready"""
         if not self.lang:
 #            self.lang = self.load_window('language')
-	     self.lang = self.load_window('langselect')
-#            self.lang.set_position(self.scr.get_width(), self.scr.get_height())
+	    self.lang = self.load_window('langselect')
+            self.lang.set_position(self.scr.get_width(), self.scr.get_height())
         else:
             self.login.window.set_sensitive(True)
             self.login.show_user('')
