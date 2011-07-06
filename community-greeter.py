@@ -111,7 +111,7 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
 	"""Switch language and login windows visibility"""
         if not self.login:
             self.login = self.load_window('autologin', service=self.obj)
-	self.lang.window.hide()
+	self.lang.window.destroy()
 	if self.postponed:
 	    self.login.show_user(self.postponed_text)
 
