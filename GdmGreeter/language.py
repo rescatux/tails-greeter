@@ -26,10 +26,10 @@ import babel
 import locale
 import gettext
 
-
 import gtk
 from gtk import gdk
-
+from subprocess import *
+from string import split
 
 from gtkme import Window, FormWindow
 from GdmGreeter import __appname__, Images
@@ -37,12 +37,11 @@ from GdmGreeter import __appname__, Images
 MOFILES = '/usr/share/locale/'
 DOMAIN  = 'tails-greeter'
 IMAGES = Images('lang')
-GDM_MOFILES = '/usr/share/locale-langpack/'
 
-#LANGS = [babel.Locale.parse(path.split('/')[-3]) for path in gettext.find(
-#    'gdm', GDM_MOFILES, languages=babel.Locale('en').languages.keys(), all=True)]
-
-LANGS = [babel.Locale.parse('en'), babel.Locale.parse('fr'), babel.Locale.parse('ru')]
+p = Popen(["tails-lang-helper.sh"], stdout=PIPE)
+langcodes = split(p.communicate()[0])
+logging.debug('%s languages found: helper returned %s', len(langcodes), p.returncode)
+LANGS = map(lambda x: babel.Locale.parse(x), langcodes)
 
 def get_texts(langs):
     result = {}
