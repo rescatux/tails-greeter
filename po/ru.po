@@ -1,0 +1,36 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: tails-greeter\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-07-06 23:19+0700\n"
+"PO-Revision-Date: 2011-07-06 23:23+0700\n"
+"Last-Translator: Max S <govnototalitarizm@gmail.com>\n"
+"Language-Team:  <govnototalitarizm@gmail.com>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Russian\n"
+"X-Poedit-Country: RUSSIAN FEDERATION\n"
+
+#: ../glade/autologin.glade.h:1
+msgid ""
+"Enter here a password that will be asked to grant administrator rights. \n"
+"Leave this field blank to disable administrator rights."
+msgstr ""
+"Введите пароль, который будет запрошен для предоставления прав администратора. \n"
+"Оставьте поле пустым для отключения прав администратора."
+
+#: ../glade/langselect.glade.h:1
+msgid ""
+"Please select language for TAILS.\n"
+"NOTE: the selection cannot be changed once you press the button."
+msgstr ""
+"Выберите язык для TAILS.\n"
+"ВНИМАНИЕ: невозможно изменить выбор после нажатия кнопки."
+

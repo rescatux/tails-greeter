@@ -1,8 +1,8 @@
 community-greeter.py
-glade/login.glade
-glade/register.glade
-glade/language.glade
+glade/autologin.glade
+glade/langselect.glade
 GdmGreeter/__init__.py
 GdmGreeter/services.py
-GdmGreeter/login.py
+GdmGreeter/autologin.py
+GdmGreeter/langselect.py
 GdmGreeter/language.py
