@@ -1,3 +1,19 @@
+tails-greeter (0.0.3~1.gbpe88c42) UNRELEASED; urgency=low
+
+  ** SNAPSHOT build @e88c42bcb30a3c13f92fc2d53b6f368a87113ab6 **
+
+  * add snapshot entry to changelog for test build
+  * update translations to match widgets
+  * fix window positioning
+  * use 1st entry as default language
+  * rollback change which caused loss of connectivity with xorg
+  * add language helper
+  * obtain language list from helper instead of hardcoding
+  * remember translation properly
+  * destroy language window instead of visibility change
+
+ -- Max S <govnototalitarizm@gmail.com>  Thu, 07 Jul 2011 03:34:57 +0700
+
 tails-greeter (0.0.3~1.gbpf34d00) UNRELEASED; urgency=low
 
   ** SNAPSHOT build @f34d00e8a6472bdae72dcc42f9c2b0c1cb8e936b **
