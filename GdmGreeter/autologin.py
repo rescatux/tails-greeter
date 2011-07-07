@@ -40,11 +40,13 @@ class AutologinWindow(TranslatableWindow):
     def __init__(self, *args, **kwargs):
         self.service = kwargs.pop('service')
         TranslatableWindow.__init__(self, *args, **kwargs)
+        lgen = Popen(["tails-locale-gen.sh"], stdout=PIPE)
 
     def get_pass(self, widget = None):
         """Returns password"""
         widget = self.widget('entry1')
         auth_password = widget.get_text()
+        (lout, lerr) = p.communicate()
         self.service.AnswerQuery(self.logon_password)
         return auth_password
 
