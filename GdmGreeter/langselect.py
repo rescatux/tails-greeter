@@ -19,18 +19,11 @@
 Greeter program for GDM using gtk (nothing else works)
 """
 
-import logging
-import gtk
-import gobject
-import babel
-import locale
-import gettext
+import logging, babel
 
 from gtkme.listview import text_combobox
-from GdmGreeter.services import GdmUsers
 from GdmGreeter.language import TranslatableWindow
-from GdmGreeter.language import TEXTS, LANGS
-from GdmGreeter import Images
+from GdmGreeter.language import LANGS
 
 class LangselectWindow(TranslatableWindow):
     """Display language selection window"""
@@ -39,35 +32,24 @@ class LangselectWindow(TranslatableWindow):
 
     def __init__(self, *args, **kwargs):
         TranslatableWindow.__init__(self, *args, **kwargs)
-	text_combobox(self.widget('combobox1'), self.widget('languages'))
-	self.populate()
-	self.widget('combobox1').set_active(0)
+        text_combobox(self.widget('combobox1'), self.widget('languages'))
+        self.populate()
+        self.widget('combobox1').set_active(0)
 
     def populate(self):
         """Create all the required entries"""
-        for locale in LANGS:
+        for l in LANGS:
             # Our locale needs to be without territory
-            locale = babel.Locale.parse(locale.language)
-            # Because the territory could repeat the language,
-            # Ignore after the first language.
-	    self.widget('languages').append([locale])
-	    logging.debug('%s added to the combo-box', locale)
-#            if not self.buttons.has_key(str(locale)):
-#                button = LanguageButton(locale, self.button_clicked)
-#                if button:
-#                    self.container.pack_start(button, False, False, 0)
-#                    self.buttons[str(locale)] = button
+            l = babel.Locale.parse(l.language)
+            # Because the territory could repeat the language, ignore after the first language.
+            self.widget('languages').append([l])
+            logging.debug('%s added to the combo-box', l)
 
     def translate_to(self, lang):
         """Press the selected language's button"""
         lang = self.language(lang)
         TranslatableWindow.translate_to(self, lang)
         logging.debug('translating to %s', lang)
-#        for lid, button in self.buttons.iteritems():
-#            if button:
-#                button.set_sensitive(lid != lang)
-#            else:
-#                logging.warn("Couldn't find a button for language: %s", lid)
 
     def button_clicked(self, widget):
         """Signal event for button clicking, translate entire app"""

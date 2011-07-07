@@ -20,33 +20,30 @@ Greeter program for GDM using gtk (nothing else works)
 """
 
 import logging
-import gtk
-import gobject
 
-from GdmGreeter.services import GdmUsers
+from subprocess import Popen, PIPE
 from GdmGreeter.language import TranslatableWindow
-from GdmGreeter import Images
 
 class AutologinWindow(TranslatableWindow):
     """Display a pre-login window"""
     name = 'autologin'
     primary = False
     auth_password = None
-# FIXME: insecure, alpha-testing only!
-# change to corresponding credentials on your test system
+    lgen = None
+# default TAILS credentials
     logon_password = 'amnesia'
     user = 'amnesia'
 
     def __init__(self, *args, **kwargs):
         self.service = kwargs.pop('service')
         TranslatableWindow.__init__(self, *args, **kwargs)
-        lgen = Popen(["tails-locale-gen.sh"], stdout=PIPE)
+        self.lgen = Popen(["tails-locale-gen.sh"], stdout=PIPE)
 
     def get_pass(self, widget = None):
         """Returns password"""
         widget = self.widget('entry1')
         auth_password = widget.get_text()
-        (lout, lerr) = p.communicate()
+        (lout, lerr) = self.lgen.communicate()
         self.service.AnswerQuery(self.logon_password)
         return auth_password
 

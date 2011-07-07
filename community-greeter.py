@@ -20,20 +20,19 @@
 GDM greeter for TAILS project using gtk
 """
 
-import logging
-import logging.config
-#from gi.repository import Gtk, Gdk, GLib, GObject
-import gtk
+import logging, logging.config
+import gtk, sys
+
 from gtk import gdk
 
 def print_log_record_on_error(func):
     """Wrapper to determine failed logging instance"""
     def wrap(self, *args, **kwargs):
+        """internal logging wrapper"""
         try:
             return func(self, *args, **kwargs)
         except:
-            import sys
-            print >>sys.stderr, "Failed log message=%r with args=%r " % (getattr(self, 'msg', '?'), getattr(self, 'args', '?'))
+            print >> sys.stderr, "Failed log message=%r with args=%r " % (getattr(self, 'msg', '?'), getattr(self, 'args', '?'))
             raise
     return wrap
 
@@ -42,20 +41,13 @@ logging.LogRecord.getMessage = print_log_record_on_error(logging.LogRecord.getMe
 
 from gtkme import GtkApp
 from GdmGreeter.services import GdmGreeter
-#from GdmGreeter.language import ( LanguageWindow, TranslatableWindow, Translatable )
-from GdmGreeter.language import ( LanguageWindow, Translatable )
+from GdmGreeter.language import Translatable
 from GdmGreeter.langselect import LangselectWindow
 from GdmGreeter.autologin import AutologinWindow
-from GdmGreeter.login import LoginWindow
-from GdmGreeter.register import RegisterWindow
-from GdmGreeter.user import User
 from GdmGreeter import GLADE_DIR, __appname__
 
-# Store users and their settings here
-USER_CONF = '/home/users/%s.conf'
-
 class CommunityGreeterApp(GtkApp, GdmGreeter):
-    """Identity Menu for setting up or importing a new identity"""
+    """Custom greeter instance"""
     app_name  = __appname__
     glade_dir = GLADE_DIR
     windows   = [ AutologinWindow, LangselectWindow ]
@@ -86,8 +78,8 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
     def translate_to(self, lang):
         """Translate all windows to target language"""
         if not self.translated and self.ready:
-    	    self.language = lang
-    	    self.translated = True
+            self.language = lang
+            self.translated = True
         for window in self._loaded.values():
             if isinstance(window, Translatable):
                 logging.debug("I18n window %s to %s", window.name, self.language)
@@ -96,31 +88,26 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
     def Ready(self):
         """Sever is ready"""
         if not self.lang:
-#            self.lang = self.load_window('language')
-	    self.lang = self.load_window('langselect')
-#            self.lang.set_position(self.scr.get_width(), self.scr.get_height())
+            self.lang = self.load_window('langselect')
         else:
             self.login.window.set_sensitive(True)
             self.login.show_user('')
-        # Tie up the responses, I should do a signal here.
         GdmGreeter.Ready(self)
         self.ready = True
         logging.warn("server is ready.")
 
     def SwitchVisibility(self):
-	"""Switch language and login windows visibility"""
+        """Switch language and login windows visibility"""
         if not self.login:
             self.login = self.load_window('autologin', service=self.obj)
-	self.lang.window.destroy()
-	if self.postponed:
-	    self.login.show_user(self.postponed_text)
+        self.lang.window.destroy()
+        if self.postponed:
+            self.login.show_user(self.postponed_text)
 
     def SelectedUserChanged(self, username):
-        """The user has selected the user to login as"""
-        self.user = User(username)
-        self.SelectLanguage(self.user.get('language', 'en'), loaded=True)
+        """legacy user selection change handler"""
 
-    def SelectLanguage(self, lang, loaded=False):
+    def SelectLanguage(self, lang):
         """The user wants to change languages"""
         # Translate all windows in the login screen
         self.translate_to(lang)
@@ -129,21 +116,24 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
             GdmGreeter.SelectLanguage(self, lang)
 
     def DefaultLanguageNameChanged(self, lang):
+        """default language name changed"""
         self.language = lang
 
     def DefaultLayoutNameChanged(self, layout):
+        """default layout name changed"""
         self.layout = str(layout)
 
     def DefaultSessionNameChanged(self, session):
+        """default session name changed"""
         self.session = str(session)
 
     def InfoQuery(self, text):
         """Server wants to ask the user for something"""
         if self.login:
-    	    self.login.show_user(text)
-    	else:
-    	    self.postponed = True
-    	    self.postponed_text = text
+            self.login.show_user(text)
+        else:
+            self.postponed = True
+            self.postponed_text = text
 
     def SecretInfoQuery(self, text):
         """Server wants to ask for some secrate info"""
@@ -153,7 +143,6 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
         """We're done, quit gtk app"""
         logging.info("Finished.")
         gtk.main_quit()
-
 
 if __name__ == "__main__":
     logging.info("Started.")

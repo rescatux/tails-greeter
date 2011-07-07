@@ -23,12 +23,9 @@ Provides access to gdm services for python greeters (login windows).
 import os, time
 import logging
 import locale
-import dbus
-import dbus.bus
-import dbus.exceptions
+import dbus, dbus.bus, dbus.exceptions
 from dbus.mainloop.glib import DBusGMainLoop
-DBusGMainLoop(set_as_default=True)
-from GdmGreeter.user import User
+DBusGMainLoop(set_as_default = True)
 
 PASSWD = '/etc/passwd'
 
@@ -64,13 +61,13 @@ class GdmDbusService(object):
             if kwargs[key] == None:
                 kwargs.pop(key)
         if kwargs:
-            log( "%s:%s%s %s" % (
-                self.interface, name, str(args), str(kwargs)) )
+            log( "%s:%s%s %s" % (self.interface, name, str(args), str(kwargs)) )
         else:
             log("%s:%s%s" % (self.interface, name, str(args)))
 
 
 class GdmGreeter(GdmDbusService):
+    """general greeter class"""
     path = '/org/gnome/DisplayManager/GreeterServer'
     address = 'org.gnome.DisplayManager.GreeterServer'
     interface = 'org.gnome.DisplayManager.GreeterServer'
@@ -133,10 +130,12 @@ class GdmDisplay(GdmDbusService):
 
     @property
     def name(self):
+        """obtain X11 display name"""
         return self.obj.GetX11DisplayName()
 
     @property
     def number(self):
+        """obtain X11 display number"""
         return self.obj.GetX11DisplayNumber()
 
 

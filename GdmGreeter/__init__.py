@@ -28,5 +28,6 @@ __version__ = '0.9.4'
 from gtkme import PixmapManager
 
 class Images(PixmapManager):
+    """pixmap manager instance"""
     pixmap_dir = PIXMAP_DIR
 

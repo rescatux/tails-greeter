@@ -21,7 +21,6 @@ Control the user configuration.
 """
 
 import os
-import logging
 import json
 
 USER_CONFIG = '/home/users/%s.user'
@@ -73,6 +72,7 @@ class User(object):
         return { 'username': self.user }
 
     def get(self, name, default):
+        """get default name"""
         return self.data.get(name, default)
 
     def save(self, data=None):

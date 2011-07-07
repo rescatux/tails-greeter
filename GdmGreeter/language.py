@@ -20,41 +20,33 @@
 Greeter program for GDM using gtk (nothing else works)
 """
 
-#import os
-import logging
-import babel
-import locale
-import gettext
+import logging, babel, gettext, gtk
 
-import gtk
 from gtk import gdk
-from subprocess import *
-from string import split
-
+from subprocess import Popen, PIPE
 from gtkme import Window, FormWindow
-from GdmGreeter import __appname__, Images
+from GdmGreeter import Images
 
 MOFILES = '/usr/share/locale/'
 DOMAIN  = 'tails-greeter'
 IMAGES = Images('lang')
 
 p = Popen(["tails-lang-helper.sh"], stdout=PIPE)
-langcodes = split(p.communicate()[0])
+langcodes = str.split(p.communicate()[0])
 logging.debug('%s languages found: helper returned %s', len(langcodes), p.returncode)
 LANGS = map(lambda x: babel.Locale.parse(x), langcodes)
 
 def get_texts(langs):
+    """obtain texts for a given locale using gettext"""
     result = {}
-    for locale in langs:
+    for loc in langs:
         try:
-            result[str(locale)] = gettext.translation(DOMAIN, MOFILES, [str(locale)])
+            result[str(loc)] = gettext.translation(DOMAIN, MOFILES, [str(loc)])
         except IOError:
-	    logging.error('Failed to get texts for %s locale', locale)
-            pass
+            logging.error('Failed to get texts for %s locale', loc)
     return result
 
 TEXTS = get_texts(LANGS)
-
 
 class Translatable(object):
     """Provides functions for translating the window on the fly"""
@@ -100,15 +92,16 @@ class Translatable(object):
             self.window.present()
 
 class TranslatableWindow(Translatable, Window):
+    """dynamically translatable window"""
     def __init__(self, *args, **kwargs):
         Window.__init__(self, *args, **kwargs)
         Translatable.__init__(self)
 
 class TranslatableFormWindow(Translatable, FormWindow):
+    """dynamically translatable window with form"""
     def __init__(self, *args, **kwargs):
         FormWindow.__init__(self, *args, **kwargs)
         Translatable.__init__(self)
-
 
 class LanguageWindow(TranslatableWindow):
     """A language selection window for display at the bottom"""
@@ -134,8 +127,7 @@ class LanguageWindow(TranslatableWindow):
         for locale in LANGS:
             # Our locale needs to be without territory
             locale = babel.Locale.parse(locale.language)
-            # Because the territory could repeat the language,
-            # Ignore after the first language.
+            # Because the territory could repeat the language, ignore after the first language.
             if not self.buttons.has_key(str(locale)):
                 button = LanguageButton(locale, self.button_clicked)
                 if button:
