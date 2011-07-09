@@ -1,6 +1,6 @@
-tails-greeter (0.0.3~4.gbp5c0923) UNRELEASED; urgency=low
+tails-greeter (0.0.3~5.gbpa0f086) UNRELEASED; urgency=low
 
-  ** SNAPSHOT build @5c09233dfd6df0c6b1f3d1289e73747460962488 **
+  ** SNAPSHOT build @a0f08670e43441a1d1f74691bcc22149b6d2704f **
 
   * update changelog
   * use supported locales instead of configured
@@ -9,8 +9,11 @@ tails-greeter (0.0.3~4.gbp5c0923) UNRELEASED; urgency=low
   * add explicit format description to the package
   * changelog update
   * revert to old language collection until babel issue is sorted out
+  * update changelog
+  * fix forgotten rename
+  * fix binary lintian-override
 
- -- Max S <govnototalitarizm@gmail.com>  Sat, 09 Jul 2011 14:29:56 +0700
+ -- Max S <govnototalitarizm@gmail.com>  Sat, 09 Jul 2011 15:20:38 +0700
 
 tails-greeter (0.0.3~1.gbp916441) UNRELEASED; urgency=low
 
