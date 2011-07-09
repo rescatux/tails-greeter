@@ -10,12 +10,23 @@ Code QA:
 pylint --rcfile=.pylint.d/.pylintrc community-greeter.py
 pylint --rcfile=.pylint.d/.pylintrc GdmGreeter
 
+Disabled reports:
+C0103 (Invalid name) - python's name convention is not universal and conflicts with d-bus
+C0301 (Line too long) - matter of taste
+E1101 (...has no member) - triggered by d-bus methods
+R0201 (Method could be a function) - matter of taste
+R0903 (Too few public methods) - matter of taste
+R0902 (Too many instance attributes) - matter of taste
+R0904 (Too many public methods) - matter of taste
+
+QA target: 9.5
+
 Test helper:
 
 #!/bin/sh
 
-rm tails-greeter_0.0.2_all.deb
-aptitude purge tails-greeter
-wget http://dev.machine/tails-greeter_0.0.2_all.deb
-dpkg -i tails-greeter_0.0.2_all.deb
+rm tails-greeter.deb
+aptitude -y purge tails-greeter
+wget http://dev.machine/tails-greeter.deb
+dpkg -i tails-greeter.deb
 service gdm3 restart
