@@ -1,3 +1,13 @@
+tails-greeter (0.0.3~2.gbp5b925e) UNRELEASED; urgency=low
+
+  ** SNAPSHOT build @5b925e7ba9f803f07cc186de84a72b779fdf3341 **
+
+  * update changelog
+  * use supported locales instead of configured
+  * fix obsolete renaming
+
+ -- Max S <govnototalitarizm@gmail.com>  Sat, 09 Jul 2011 13:30:22 +0700
+
 tails-greeter (0.0.3~1.gbp916441) UNRELEASED; urgency=low
 
   ** SNAPSHOT build @9164416ec1f2f923f1df82f5bb8b601f194a35aa **
