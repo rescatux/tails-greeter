@@ -31,7 +31,7 @@ MOFILES = '/usr/share/locale/'
 DOMAIN  = 'tails-greeter'
 IMAGES = Images('lang')
 
-p = Popen(["tails-lang-helper.sh"], stdout=PIPE)
+p = Popen(["tails-lang-helper"], stdout=PIPE)
 langcodes = str.split(p.communicate()[0])
 logging.debug('%s languages found: helper returned %s', len(langcodes), p.returncode)
 LANGS = map(lambda x: babel.Locale.parse(x), langcodes)

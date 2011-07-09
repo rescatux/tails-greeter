@@ -37,7 +37,7 @@ class AutologinWindow(TranslatableWindow):
     def __init__(self, *args, **kwargs):
         self.service = kwargs.pop('service')
         TranslatableWindow.__init__(self, *args, **kwargs)
-        self.lgen = Popen(["tails-locale-gen.sh"], stdout=PIPE)
+        self.lgen = Popen(["tails-locale-gen"], stdout=PIPE)
         logging.debug('spawned locale generator with %s pid', self.lgen.pid)
 
     def get_pass(self, widget = None):
