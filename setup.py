@@ -66,7 +66,7 @@ setup(
             ( 'share/gdm/autostart/LoginWindow/', [ 'tails-greeter.desktop' ] ),
             ( 'bin/', [ 'tails-lang-helper' ] ),
             ( 'bin/', [ 'tails-locale-gen' ] ),
-            ( 'share/lintian/overrides/', [ 'debian/tails-greeter' ] ),
+            ( 'share/lintian/overrides/', [ 'lintian/tails-greeter' ] ),
             ( SDIR, [ 'tails-logging.conf' ] ),
         ],
         cmdclass={
