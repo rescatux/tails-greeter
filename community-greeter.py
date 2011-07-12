@@ -41,7 +41,7 @@ logging.LogRecord.getMessage = print_log_record_on_error(logging.LogRecord.getMe
 
 from gtkme import GtkApp
 from GdmGreeter.services import GdmGreeter
-from GdmGreeter.language import Translatable
+from GdmGreeter.language import Translatable, LDICT
 from GdmGreeter.langselect import LangselectWindow
 from GdmGreeter.autologin import AutologinWindow
 from GdmGreeter import GLADE_DIR, __appname__
@@ -71,8 +71,13 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
         """When loading a window, also translate it"""
         window = GtkApp.load_window(self, *args, **kwargs)
         if isinstance(window, Translatable) and self.language:
-            logging.debug("Translating %s to %s", window.name, self.language)
-            window.translate_to(self.language)
+            if '_' in self.language:
+                lang = self.language.split('_')[0]
+                logging.debug("Translating %s to %s", window.name, lang)
+                window.translate_to(lang)
+            else:
+                logging.debug("Translating %s to %s", window.name, LDICT[unicode(self.language)])
+                window.translate_to(LDICT[unicode(self.language)])
         return window
 
     def translate_to(self, lang):
@@ -82,8 +87,8 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
             self.translated = True
         for window in self._loaded.values():
             if isinstance(window, Translatable):
-                logging.debug("I18n window %s to %s", window.name, self.language)
-                window.translate_to(self.language)
+                logging.debug("I18n window %s to %s", window.name, LDICT[unicode(self.language)])
+                window.translate_to(LDICT[unicode(self.language)])
 
     def Ready(self):
         """Sever is ready"""

@@ -26,6 +26,7 @@ from gtk import gdk
 from subprocess import Popen, PIPE
 from gtkme import Window, FormWindow
 from GdmGreeter import Images
+from icu import Locale
 
 MOFILES = '/usr/share/locale/'
 DOMAIN  = 'tails-greeter'
@@ -34,19 +35,31 @@ IMAGES = Images('lang')
 p = Popen(["tails-lang-helper"], stdout=PIPE)
 langcodes = str.split(p.communicate()[0])
 logging.debug('%s languages found: helper returned %s', len(langcodes), p.returncode)
-LANGS = map(lambda x: babel.Locale.parse(x), langcodes)
+
+def get_native_langs(lang_list):
+    """assemble dictionary of native language names with language codes"""
+    unique = {}
+    for l in lang_list:
+        lang =  Locale(l).getDisplayLanguage(Locale(l))
+        lcode = l.split('_')[0]
+        if lang not in unique:
+            unique[lang] = lcode
+    return unique
+
+LDICT = get_native_langs(langcodes)
+LANGS = sorted(get_native_langs(langcodes).keys())
 
 def get_texts(langs):
     """obtain texts for a given locale using gettext"""
     result = {}
-    for loc in langs:
+    for k, loc in langs.iteritems():
         try:
             result[str(loc)] = gettext.translation(DOMAIN, MOFILES, [str(loc)])
         except IOError:
             logging.error('Failed to get texts for %s locale', loc)
     return result
 
-TEXTS = get_texts(LANGS)
+TEXTS = get_texts(LDICT)
 
 class Translatable(object):
     """Provides functions for translating the window on the fly"""

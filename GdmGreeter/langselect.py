@@ -19,7 +19,7 @@
 Greeter program for GDM using gtk (nothing else works)
 """
 
-import logging, babel
+import logging
 
 from gtkme.listview import text_combobox
 from GdmGreeter.language import TranslatableWindow
@@ -39,11 +39,7 @@ class LangselectWindow(TranslatableWindow):
     def populate(self):
         """Create all the required entries"""
         for l in LANGS:
-            # Our locale needs to be without territory
-            l = babel.Locale.parse(l.language)
-            # Because the territory could repeat the language, ignore after the first language.
             self.widget('languages').append([l])
-            logging.debug('%s added to the combo-box', l)
 
     def translate_to(self, lang):
         """Press the selected language's button"""
