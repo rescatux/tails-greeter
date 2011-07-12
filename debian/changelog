@@ -1,6 +1,6 @@
-tails-greeter (0.0.3~5.gbpa0f086) UNRELEASED; urgency=low
+tails-greeter (0.0.3~6.gbpa1b424) UNRELEASED; urgency=low
 
-  ** SNAPSHOT build @a0f08670e43441a1d1f74691bcc22149b6d2704f **
+  ** SNAPSHOT build @a1b42449c7bc0e80ac479aca51b6b2246e8bbb8d **
 
   * update changelog
   * use supported locales instead of configured
@@ -12,8 +12,16 @@ tails-greeter (0.0.3~5.gbpa0f086) UNRELEASED; urgency=low
   * update changelog
   * fix forgotten rename
   * fix binary lintian-override
+  * update changelog
+  * apply lintian to binary instead of source
+  * explain pylint and improve test description
+  * merge lintian support from corresponding branch
+  * install lintian override via setup
+  * rollback previous merge
+  * move override file to fix build
+  * use PyICU to handle 'native' language names
 
- -- Max S <govnototalitarizm@gmail.com>  Sat, 09 Jul 2011 15:20:38 +0700
+ -- Max S <govnototalitarizm@gmail.com>  Tue, 12 Jul 2011 18:06:24 +0700
 
 tails-greeter (0.0.3~1.gbp916441) UNRELEASED; urgency=low
 
