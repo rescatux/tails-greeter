@@ -21,7 +21,6 @@ Greeter program for GDM using gtk (nothing else works)
 
 import logging
 
-from subprocess import Popen, PIPE
 from GdmGreeter.language import TranslatableWindow
 
 class AutologinWindow(TranslatableWindow):
@@ -29,7 +28,6 @@ class AutologinWindow(TranslatableWindow):
     name = 'autologin'
     primary = False
     auth_password = None
-    lgen = None
 # default TAILS credentials
     logon_password = 'amnesia'
     user = 'amnesia'
@@ -37,15 +35,11 @@ class AutologinWindow(TranslatableWindow):
     def __init__(self, *args, **kwargs):
         self.service = kwargs.pop('service')
         TranslatableWindow.__init__(self, *args, **kwargs)
-        self.lgen = Popen(["tails-locale-gen"], stdout=PIPE)
-        logging.debug('spawned locale generator with %s pid', self.lgen.pid)
 
     def get_pass(self, widget = None):
         """Returns password"""
         widget = self.widget('entry1')
         auth_password = widget.get_text()
-        (lout, lerr) = self.lgen.communicate()
-        logging.debug('locale generation finished, return code %s', self.lgen.returncode)
         self.service.AnswerQuery(self.logon_password)
         return auth_password
 

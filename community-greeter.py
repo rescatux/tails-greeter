@@ -40,6 +40,7 @@ logging.config.fileConfig('tails-logging.conf')
 logging.LogRecord.getMessage = print_log_record_on_error(logging.LogRecord.getMessage)
 
 from gtkme import GtkApp
+from subprocess import Popen, PIPE
 from GdmGreeter.services import GdmGreeter
 from GdmGreeter.language import Translatable, LDICT
 from GdmGreeter.langselect import LangselectWindow
@@ -50,6 +51,7 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
     """Custom greeter instance"""
     app_name  = __appname__
     glade_dir = GLADE_DIR
+    lgen = None
     windows   = [ AutologinWindow, LangselectWindow ]
 
     def __init__(self, *args, **kwargs):
@@ -104,7 +106,9 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
     def SwitchVisibility(self):
         """Switch language and login windows visibility"""
         if not self.login:
-            self.login = self.load_window('autologin', service=self.obj)
+            self.login = self.load_window('autologin', service = self.obj)
+        self.lgen = Popen(["tails-locale-gen", LDICT[unicode(self.language)]], stdout = PIPE)
+        logging.debug('spawned locale generator with %s pid', self.lgen.pid)
         self.lang.window.destroy()
         if self.postponed:
             self.login.show_user(self.postponed_text)
@@ -146,6 +150,8 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
 
     def FinishProcess(self):
         """We're done, quit gtk app"""
+        (lout, lerr) = self.lgen.communicate()
+        logging.debug('locale generation finished, return code %s', self.lgen.returncode)
         logging.info("Finished.")
         gtk.main_quit()
 
