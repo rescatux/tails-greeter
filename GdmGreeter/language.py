@@ -41,9 +41,8 @@ def get_native_langs(lang_list):
     unique = {}
     for l in lang_list:
         lang =  Locale(l).getDisplayLanguage(Locale(l))
-        lcode = l.split('_')[0]
-        if lang not in unique:
-            unique[lang] = lcode
+        if l not in unique:
+            unique[lang] = l
     return unique
 
 LDICT = get_native_langs(langcodes)
@@ -52,7 +51,8 @@ LANGS = sorted(get_native_langs(langcodes).keys())
 def get_texts(langs):
     """obtain texts for a given locale using gettext"""
     result = {}
-    for k, loc in langs.iteritems():
+    for k, l in langs.iteritems():
+        loc = l.split('_')[0]
         try:
             result[str(loc)] = gettext.translation(DOMAIN, MOFILES, [str(loc)])
         except IOError:
