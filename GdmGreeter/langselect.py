@@ -32,9 +32,9 @@ class LangselectWindow(TranslatableWindow):
 
     def __init__(self, *args, **kwargs):
         TranslatableWindow.__init__(self, *args, **kwargs)
-        text_combobox(self.widget('combobox1'), self.widget('languages'))
+        text_combobox(self.widget('lang_list_combobox'), self.widget('languages'))
         self.populate()
-        self.widget('combobox1').set_active(0)
+        self.widget('lang_list_combobox').set_active(0)
 
     def populate(self):
         """Create all the required entries"""
@@ -49,9 +49,9 @@ class LangselectWindow(TranslatableWindow):
 
     def translate_action(self, widget):
         """Signal event to translate entire app"""
-        self.gapp.SelectLanguage(self.widget('combobox1').get_active_text())
+        self.gapp.SelectLanguage(self.widget('lang_list_combobox').get_active_text())
 
     def button_clicked(self, widget):
         """Signal event to translate entire app"""
-        self.gapp.SelectLanguage(self.widget('combobox1').get_active_text())
+        self.gapp.SelectLanguage(self.widget('lang_list_combobox').get_active_text())
         self.gapp.SwitchVisibility()

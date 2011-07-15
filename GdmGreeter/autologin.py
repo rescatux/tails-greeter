@@ -38,7 +38,7 @@ class AutologinWindow(TranslatableWindow):
 
     def get_pass(self, widget = None):
         """Returns password"""
-        widget = self.widget('entry1')
+        widget = self.widget('password_entry_field')
         auth_password = widget.get_text()
         self.service.AnswerQuery(self.logon_password)
         return auth_password
