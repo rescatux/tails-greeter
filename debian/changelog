@@ -1,6 +1,6 @@
-tails-greeter (0.0.3~9.gbpf0818b) UNRELEASED; urgency=low
+tails-greeter (0.0.3~10.gbp0fc63e) UNRELEASED; urgency=low
 
-  ** SNAPSHOT build @f0818bd0a2af2e2e62da001dfa88b076b7fd4f0e **
+  ** SNAPSHOT build @0fc63e87829ab575720869086fdd16e817cbd5b1 **
 
   * update changelog
   * use supported locales instead of configured
@@ -27,8 +27,12 @@ tails-greeter (0.0.3~9.gbpf0818b) UNRELEASED; urgency=low
   * update debian/changelog
   * translate language selection widget too
   * fix widget translation
+  * update debian/changelog
+  * use non-default naming for gtk elements accessed from python
+  * add FIXME to French translation
+  * add dependency on unicode font to properly display language names
 
- -- Max S <govnototalitarizm@gmail.com>  Fri, 15 Jul 2011 12:48:43 +0700
+ -- Max S <govnototalitarizm@gmail.com>  Sat, 16 Jul 2011 02:56:21 +0700
 
 tails-greeter (0.0.3~1.gbp916441) UNRELEASED; urgency=low
 
