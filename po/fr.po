@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: tails-greeter\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-07-06 23:19+0700\n"
-"PO-Revision-Date: 2011-07-06 23:45+0700\n"
+"PO-Revision-Date: 2011-07-16 02:28+0700\n"
 "Last-Translator: Max S <govnototalitarizm@gmail.com>\n"
 "Language-Team:  <govnototalitarizm@gmail.com>\n"
 "Language: \n"
@@ -19,18 +19,20 @@ msgstr ""
 "X-Poedit-Country: FRANCE\n"
 
 #: ../glade/autologin.glade.h:1
+#, fuzzy
 msgid ""
 "Enter here a password that will be asked to grant administrator rights. \n"
 "Leave this field blank to disable administrator rights."
 msgstr ""
-"Entrez ici le mot de passe qui sera utilise avant la demande des droits d'administrateur. \n"
+"FIXME: Entrez ici le mot de passe qui sera utilise avant la demande des droits d'administrateur. \n"
 "Laissez ce terrain blanc pour la deconexxion des droits d'administrateur."
 
 #: ../glade/langselect.glade.h:1
+#, fuzzy
 msgid ""
 "Please select language for TAILS.\n"
 "NOTE: the selection cannot be changed once you press the button."
 msgstr ""
-"Selectionnez, s'il vous plait, la langue pour TAILS.\n"
+"FIXME: Selectionnez, s'il vous plait, la langue pour TAILS.\n"
 "Attention: Ce choix ne peut pas etre change apres l'abaissement du bouton."
 
