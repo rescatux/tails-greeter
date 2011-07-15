@@ -50,4 +50,8 @@ class LangselectWindow(TranslatableWindow):
     def translate_action(self, widget):
         """Signal event to translate entire app"""
         self.gapp.SelectLanguage(self.widget('combobox1').get_active_text())
+
+    def button_clicked(self, widget):
+        """Signal event to translate entire app"""
+        self.gapp.SelectLanguage(self.widget('combobox1').get_active_text())
         self.gapp.SwitchVisibility()

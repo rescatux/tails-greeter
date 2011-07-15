@@ -1,6 +1,6 @@
-tails-greeter (0.0.3~7.gbp35002b) UNRELEASED; urgency=low
+tails-greeter (0.0.3~8.gbp8aa9c4) UNRELEASED; urgency=low
 
-  ** SNAPSHOT build @35002b7249aa49492de84d0abf5283aee8899337 **
+  ** SNAPSHOT build @8aa9c46e6d0b6fb4f428010c3cfb157efa818f38 **
 
   * update changelog
   * use supported locales instead of configured
@@ -24,8 +24,10 @@ tails-greeter (0.0.3~7.gbp35002b) UNRELEASED; urgency=low
   * store full locale name in dictionary
   * move locale-gen from widget to the greeter
   * add locale generation example
+  * update debian/changelog
+  * translate language selection widget too
 
- -- Max S <govnototalitarizm@gmail.com>  Thu, 14 Jul 2011 15:02:08 +0700
+ -- Max S <govnototalitarizm@gmail.com>  Fri, 15 Jul 2011 12:19:35 +0700
 
 tails-greeter (0.0.3~1.gbp916441) UNRELEASED; urgency=low
 
