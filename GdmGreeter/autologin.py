@@ -21,6 +21,7 @@ Greeter program for GDM using gtk (nothing else works)
 
 import logging
 
+from gtk import gdk
 from GdmGreeter.language import TranslatableWindow
 
 class AutologinWindow(TranslatableWindow):
@@ -42,6 +43,11 @@ class AutologinWindow(TranslatableWindow):
         auth_password = widget.get_text()
         self.service.AnswerQuery(self.logon_password)
         return auth_password
+
+    def key_press_event_cb(self, widget, event=None):
+        """Handle key press"""
+        if (event and event.key.keyval == gdk.KEY_Enter):
+            self.get_pass(self, widget)
 
     def proceed_login(self):
         """Autologin attempt"""

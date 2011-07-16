@@ -12,6 +12,7 @@
     <property name="urgency_hint">True</property>
     <property name="decorated">False</property>
     <property name="deletable">False</property>
+    <signal name="key-press-event" handler="autologin_key_press_event_cb" swapped="no"/>
     <child>
       <object class="GtkVBox" id="vbox1">
         <property name="visible">True</property>
