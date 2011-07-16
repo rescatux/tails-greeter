@@ -1,10 +1,9 @@
-tails-greeter (0.0.3~11.gbp124573) UNRELEASED; urgency=low
+tails-greeter (0.0.3~12.gbp64cdbe) UNRELEASED; urgency=low
 
-  ** SNAPSHOT build @12457308797f22133ceb6c0c47e6a1a562bb1309 **
+  ** SNAPSHOT build @64cdbe17af1e73dacc11c2083a03a272818f90d8 **
 
   * use supported locales instead of configured
   * fix obsolete renaming
-  * update changelog
   * add explicit format description to the package
   * changelog update
   * revert to old language collection until babel issue is sorted out
@@ -26,8 +25,11 @@ tails-greeter (0.0.3~11.gbp124573) UNRELEASED; urgency=low
   * add FIXME to French translation
   * add dependency on unicode font to properly display language names
   * use collator for lang. list sorting
+  * update changelog
+  * handle enter keypress in autologin widget
+  * fix enter handling
 
- -- Max S <govnototalitarizm@gmail.com>  Sat, 16 Jul 2011 10:42:24 +0700
+ -- Max S <govnototalitarizm@gmail.com>  Sat, 16 Jul 2011 15:59:57 +0700
 
 tails-greeter (0.0.3~1.gbp916441) UNRELEASED; urgency=low
 
