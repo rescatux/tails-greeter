@@ -1,4 +1,4 @@
-tails-greeter (0.0.3) unstable; urgency=low
+tails-greeter (0.0.3) squeeze-backports; urgency=low
 
   * version bump
 
