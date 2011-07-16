@@ -26,7 +26,7 @@ from gtk import gdk
 from subprocess import Popen, PIPE
 from gtkme import Window, FormWindow
 from GdmGreeter import Images
-from icu import Locale
+from icu import Locale, Collator
 
 MOFILES = '/usr/share/locale/'
 DOMAIN  = 'tails-greeter'
@@ -46,7 +46,25 @@ def get_native_langs(lang_list):
     return unique
 
 LDICT = get_native_langs(langcodes)
-LANGS = sorted(get_native_langs(langcodes).keys())
+
+try:
+# Note that we always collate with the 'C' locale.  This is far
+# from ideal.  But proper collation always requires a specific
+# language for its collation rules (languages frequently have
+# custom sorting).  This at least gives us common sorting rules,
+# like stripping accents.
+    collator = Collator.createInstance(Locale('C'))
+except:
+    collator = None
+
+def compare_choice(x):
+    if collator:
+        try:
+            return collator.getCollationKey(x).getByteArray()
+        except:
+            return x
+
+LANGS = sorted(get_native_langs(langcodes).keys(), key=compare_choice)
 
 def get_texts(langs):
     """obtain texts for a given locale using gettext"""
