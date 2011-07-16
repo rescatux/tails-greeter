@@ -1,3 +1,17 @@
+tails-greeter (0.0.4~1.gbpbfcf9f) UNRELEASED; urgency=low
+
+  ** SNAPSHOT build @bfcf9fbd4fd7b470a6c43ccde4e1e36d699a790e **
+
+  [ Tails developers ]
+  * Add missing newline.
+  * Fix Lintian override file.
+  * Install Lintian override file into the binary package.
+
+  [ Max S ]
+  * fix debian/changelog version to squeeze-backports
+
+ -- Max S <govnototalitarizm@gmail.com>  Sat, 16 Jul 2011 16:55:19 +0700
+
 tails-greeter (0.0.3) squeeze-backports; urgency=low
 
   * version bump
