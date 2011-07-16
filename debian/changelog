@@ -1,3 +1,9 @@
+tails-greeter (0.0.3) unstable; urgency=low
+
+  * version bump
+
+ -- Max S <govnototalitarizm@gmail.com>  Sat, 16 Jul 2011 16:44:23 +0700
+
 tails-greeter (0.0.3~13.gbpc27086) UNRELEASED; urgency=low
 
   ** SNAPSHOT build @c27086904e9a212f2291d60a71f5f656d5553c07 **
