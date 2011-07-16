@@ -19,7 +19,7 @@
 Greeter program for GDM using gtk (nothing else works)
 """
 
-import logging, babel
+import logging
 
 from gtkme.listview import text_combobox
 from GdmGreeter.language import TranslatableWindow
@@ -32,18 +32,14 @@ class LangselectWindow(TranslatableWindow):
 
     def __init__(self, *args, **kwargs):
         TranslatableWindow.__init__(self, *args, **kwargs)
-        text_combobox(self.widget('combobox1'), self.widget('languages'))
+        text_combobox(self.widget('lang_list_combobox'), self.widget('languages'))
         self.populate()
-        self.widget('combobox1').set_active(0)
+        self.widget('lang_list_combobox').set_active(0)
 
     def populate(self):
         """Create all the required entries"""
         for l in LANGS:
-            # Our locale needs to be without territory
-            l = babel.Locale.parse(l.language)
-            # Because the territory could repeat the language, ignore after the first language.
             self.widget('languages').append([l])
-            logging.debug('%s added to the combo-box', l)
 
     def translate_to(self, lang):
         """Press the selected language's button"""
@@ -51,7 +47,11 @@ class LangselectWindow(TranslatableWindow):
         TranslatableWindow.translate_to(self, lang)
         logging.debug('translating to %s', lang)
 
+    def translate_action(self, widget):
+        """Signal event to translate entire app"""
+        self.gapp.SelectLanguage(self.widget('lang_list_combobox').get_active_text())
+
     def button_clicked(self, widget):
-        """Signal event for button clicking, translate entire app"""
-        self.gapp.SelectLanguage(self.widget('combobox1').get_active_text())
+        """Signal event to translate entire app"""
+        self.gapp.SelectLanguage(self.widget('lang_list_combobox').get_active_text())
         self.gapp.SwitchVisibility()

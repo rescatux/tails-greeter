@@ -26,6 +26,7 @@ from gtk import gdk
 from subprocess import Popen, PIPE
 from gtkme import Window, FormWindow
 from GdmGreeter import Images
+from icu import Locale, Collator
 
 MOFILES = '/usr/share/locale/'
 DOMAIN  = 'tails-greeter'
@@ -34,19 +35,49 @@ IMAGES = Images('lang')
 p = Popen(["tails-lang-helper"], stdout=PIPE)
 langcodes = str.split(p.communicate()[0])
 logging.debug('%s languages found: helper returned %s', len(langcodes), p.returncode)
-LANGS = map(lambda x: babel.Locale.parse(x), langcodes)
+
+def get_native_langs(lang_list):
+    """assemble dictionary of native language names with language codes"""
+    unique = {}
+    for l in lang_list:
+        lang =  Locale(l).getDisplayLanguage(Locale(l))
+        if l not in unique:
+            unique[lang] = l
+    return unique
+
+LDICT = get_native_langs(langcodes)
+
+try:
+# Note that we always collate with the 'C' locale.  This is far
+# from ideal.  But proper collation always requires a specific
+# language for its collation rules (languages frequently have
+# custom sorting).  This at least gives us common sorting rules,
+# like stripping accents.
+    collator = Collator.createInstance(Locale('C'))
+except:
+    collator = None
+
+def compare_choice(x):
+    if collator:
+        try:
+            return collator.getCollationKey(x).getByteArray()
+        except:
+            return x
+
+LANGS = sorted(get_native_langs(langcodes).keys(), key=compare_choice)
 
 def get_texts(langs):
     """obtain texts for a given locale using gettext"""
     result = {}
-    for loc in langs:
+    for k, l in langs.iteritems():
+        loc = l.split('_')[0]
         try:
             result[str(loc)] = gettext.translation(DOMAIN, MOFILES, [str(loc)])
         except IOError:
             logging.error('Failed to get texts for %s locale', loc)
     return result
 
-TEXTS = get_texts(LANGS)
+TEXTS = get_texts(LDICT)
 
 class Translatable(object):
     """Provides functions for translating the window on the fly"""
