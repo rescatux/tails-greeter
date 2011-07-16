@@ -1,18 +1,15 @@
-tails-greeter (0.0.3~10.gbp0fc63e) UNRELEASED; urgency=low
+tails-greeter (0.0.3~11.gbp124573) UNRELEASED; urgency=low
 
-  ** SNAPSHOT build @0fc63e87829ab575720869086fdd16e817cbd5b1 **
+  ** SNAPSHOT build @12457308797f22133ceb6c0c47e6a1a562bb1309 **
 
-  * update changelog
   * use supported locales instead of configured
   * fix obsolete renaming
   * update changelog
   * add explicit format description to the package
   * changelog update
   * revert to old language collection until babel issue is sorted out
-  * update changelog
   * fix forgotten rename
   * fix binary lintian-override
-  * update changelog
   * apply lintian to binary instead of source
   * explain pylint and improve test description
   * merge lintian support from corresponding branch
@@ -20,19 +17,17 @@ tails-greeter (0.0.3~10.gbp0fc63e) UNRELEASED; urgency=low
   * rollback previous merge
   * move override file to fix build
   * use PyICU to handle 'native' language names
-  * update changelog
   * store full locale name in dictionary
   * move locale-gen from widget to the greeter
   * add locale generation example
-  * update debian/changelog
   * translate language selection widget too
   * fix widget translation
-  * update debian/changelog
   * use non-default naming for gtk elements accessed from python
   * add FIXME to French translation
   * add dependency on unicode font to properly display language names
+  * use collator for lang. list sorting
 
- -- Max S <govnototalitarizm@gmail.com>  Sat, 16 Jul 2011 02:56:21 +0700
+ -- Max S <govnototalitarizm@gmail.com>  Sat, 16 Jul 2011 10:42:24 +0700
 
 tails-greeter (0.0.3~1.gbp916441) UNRELEASED; urgency=low
 
