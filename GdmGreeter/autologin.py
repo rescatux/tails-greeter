@@ -46,8 +46,8 @@ class AutologinWindow(TranslatableWindow):
 
     def key_press_event_cb(self, widget, event=None):
         """Handle key press"""
-        if (event and event.key.keyval == gdk.KEY_Enter):
-            self.get_pass(self, widget)
+        if event and event.keyval == gtk.keysyms.Return:
+            self.get_pass(widget)
 
     def proceed_login(self):
         """Autologin attempt"""
