@@ -19,9 +19,8 @@
 Greeter program for GDM using gtk (nothing else works)
 """
 
-import logging
+import logging, gtk
 
-from gtk import gdk
 from GdmGreeter.language import TranslatableWindow
 
 class AutologinWindow(TranslatableWindow):
