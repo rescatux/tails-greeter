@@ -2,17 +2,16 @@ Source: tails-greeter
 Section: python
 Priority: optional
 Maintainer: Max S <govnototalitarizm@gmail.com>
-Build-Depends: debhelper (>= 7), python-support, python
+Build-Depends: debhelper (>= 7), python (>= 2.6.6-3~)
 Build-Depends-Indep: python-distutils-extra
 Standards-Version: 3.9.1
-XS-Python-Version: >= 2.5
+X-Python-Version: >= 2.5
 
 Package: tails-greeter
 Section: gnome
 Architecture: all
 Depends: ${python:Depends}, ${misc:Depends},
           python-dbus, gdm | gdm3, gir1.0-gtk-2.0 | gir1.2-gtk-2.0, python-gobject, python-pybabel, python-pyicu, ttf-unifont
-Provides: ${python:Provides}
 Conflicts: gdm-community-greeter, python-gtkme, python-xsdvalidate
 Description: Shows a TAILS greeter
  For setting languages and other variables.
