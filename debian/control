@@ -13,5 +13,5 @@ Architecture: all
 Depends: ${python:Depends}, ${misc:Depends},
           python-dbus, gdm | gdm3, gir1.0-gtk-2.0 | gir1.2-gtk-2.0, python-gobject, python-pybabel, python-pyicu, ttf-unifont
 Conflicts: gdm-community-greeter, python-gtkme, python-xsdvalidate
-Description: Shows a TAILS greeter
+Description: GDM greeter for Tails
  For setting languages and other variables.
