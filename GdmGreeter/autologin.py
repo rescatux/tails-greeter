@@ -35,6 +35,7 @@ class AutologinWindow(TranslatableWindow):
     def __init__(self, *args, **kwargs):
         self.service = kwargs.pop('service')
         TranslatableWindow.__init__(self, *args, **kwargs)
+	self.widget('password_entry_field').set_visibility(False)
 
     def get_pass(self, widget = None):
         """Returns password"""
