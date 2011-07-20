@@ -1,3 +1,36 @@
+tails-greeter (0.0.4) squeeze-backports; urgency=low
+
+  [ Tails developers ]
+  * Convert packaging to dh_python2.
+  * Bump versionned build dependency on debhelper: overrides feature needs 7.0.50~.
+  * Enhance package short description a bit.
+
+  [ Max S ]
+  * hide password while typing
+  * fix bug which prevented multiple widget translation
+  * fix password visibility issue
+  * add layout widget from ubiquity
+
+ -- Max S <govnototalitarizm@gmail.com>  Wed, 20 Jul 2011 14:29:02 +0700
+
+tails-greeter (0.0.4) unstable; urgency=low
+
+  [ Max S ]
+  * update debian/changelog
+
+  [ Tails developers ]
+  * Convert packaging to dh_python2.
+  * Bump versionned build dependency on debhelper: overrides feature needs 7.0.50~.
+  * Enhance package short description a bit.
+
+  [ Max S ]
+  * hide password while typing
+  * fix bug which prevented multiple widget translation
+  * fix password visibility issue
+  * add layout widget from ubiquity
+
+ -- Max S <govnototalitarizm@gmail.com>  Wed, 20 Jul 2011 14:28:32 +0700
+
 tails-greeter (0.0.4~1.gbpbfcf9f) UNRELEASED; urgency=low
 
   ** SNAPSHOT build @bfcf9fbd4fd7b470a6c43ccde4e1e36d699a790e **
