@@ -44,6 +44,7 @@ from subprocess import Popen, PIPE
 from GdmGreeter.services import GdmGreeter
 from GdmGreeter.language import Translatable, LDICT
 from GdmGreeter.langselect import LangselectWindow
+from GdmGreeter.layout import LayoutWindow
 from GdmGreeter.autologin import AutologinWindow
 from GdmGreeter import GLADE_DIR, __appname__
 

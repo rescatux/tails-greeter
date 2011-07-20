@@ -6,3 +6,4 @@ GdmGreeter/services.py
 GdmGreeter/autologin.py
 GdmGreeter/langselect.py
 GdmGreeter/language.py
+GdmGreeter/layout.py
