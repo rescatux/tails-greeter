@@ -84,13 +84,12 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
 
     def translate_to(self, lang):
         """Translate all windows to target language"""
-        if not self.translated and self.ready:
+        if self.ready:
             self.language = lang
-            self.translated = True
         for window in self._loaded.values():
             if isinstance(window, Translatable):
-                logging.debug("I18n window %s to %s", window.name, LDICT[unicode(self.language)].split('_')[0])
-                window.translate_to(LDICT[unicode(self.language)].split('_')[0])
+                logging.debug("I18n window %s to %s", window.name, LDICT[unicode(lang)].split('_')[0])
+                window.translate_to(LDICT[unicode(lang)].split('_')[0])
 
     def Ready(self):
         """Sever is ready"""
