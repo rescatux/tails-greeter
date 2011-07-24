@@ -58,6 +58,7 @@ except:
     collator = None
 
 def compare_choice(x):
+    """comparison function"""
     if collator:
         try:
             return collator.getCollationKey(x).getByteArray()
