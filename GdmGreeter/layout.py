@@ -22,7 +22,6 @@ Greeter program for GDM using gtk (nothing else works)
 import logging
 
 from GdmGreeter.language import TranslatableWindow
-from GdmGreeter.language import LANGS
 
 class LayoutWindow(TranslatableWindow):
     """Display layout selection window"""
@@ -32,12 +31,7 @@ class LayoutWindow(TranslatableWindow):
     def __init__(self, *args, **kwargs):
         TranslatableWindow.__init__(self, *args, **kwargs)
 
-    def translate_to(self, lang):
-        """Press the selected language's button"""
-        lang = self.language(lang)
-        TranslatableWindow.translate_to(self, lang)
-        logging.debug('translating to %s', lang)
-
     def button_clicked(self, widget):
         """Signal event to move to next widget"""
         logging.debug('layout button clicked')
+        self.gapp.SwitchVisibility()

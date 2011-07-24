@@ -53,7 +53,7 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
     app_name  = __appname__
     glade_dir = GLADE_DIR
     lgen = None
-    windows   = [ AutologinWindow, LangselectWindow ]
+    windows   = [ AutologinWindow, LangselectWindow, LayoutWindow ]
 
     def __init__(self, *args, **kwargs):
         GtkApp.__init__(self, *args, **kwargs)
@@ -65,6 +65,7 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
         self.language = 'en_GB.UTF-8'
         self.session = None
         self.layout = None
+        self.layout_widget = None
         self.postponed = False
         self.postponed_text = None
         self.ready = False
@@ -105,13 +106,19 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
 
     def SwitchVisibility(self):
         """Switch language and login windows visibility"""
-        if not self.login:
+        if not self.layout_widget:
+            logging.debug('loading layout')
+            self.layout_widget = self.load_window('layout')
+            self.lgen = Popen(["tails-locale-gen", LDICT[unicode(self.language)]], stdout = PIPE)
+            logging.debug('spawned locale generator with %s pid', self.lgen.pid)
+            self.lang.window.destroy()
+        elif not self.login:
+            logging.debug('loading login')
             self.login = self.load_window('autologin', service = self.obj)
-        self.lgen = Popen(["tails-locale-gen", LDICT[unicode(self.language)]], stdout = PIPE)
-        logging.debug('spawned locale generator with %s pid', self.lgen.pid)
-        self.lang.window.destroy()
-        if self.postponed:
-            self.login.show_user(self.postponed_text)
+            self.layout_widget.destroy()            
+            if self.login:
+                if self.postponed:
+                    self.login.show_user(self.postponed_text)
 
     def SelectedUserChanged(self, username):
         """legacy user selection change handler"""
