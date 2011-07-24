@@ -1,13 +1,14 @@
-tails-greeter (0.0.5~1.gbp04688f) UNRELEASED; urgency=low
+tails-greeter (0.0.5~2.gbp0ea683) UNRELEASED; urgency=low
 
-  ** SNAPSHOT build @04688f2664e3129bb79c860bd671b88ba1bc035e **
+  ** SNAPSHOT build @0ea68319abccc326957fde4741d7c4124ecf0dc3 **
 
   * add missing gtk window
   * load (dummy) layout widget
   * improve python code QA
   * update Russian translation
+  * remove useless file
 
- -- Max S <govnototalitarizm@gmail.com>  Mon, 25 Jul 2011 02:05:51 +0800
+ -- Max S <govnototalitarizm@gmail.com>  Mon, 25 Jul 2011 02:29:15 +0800
 
 tails-greeter (0.0.4) squeeze-backports; urgency=low
 
