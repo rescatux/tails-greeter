@@ -1,6 +1,7 @@
 community-greeter.py
 glade/autologin.glade
 glade/langselect.glade
+glade/layout.glade
 GdmGreeter/__init__.py
 GdmGreeter/services.py
 GdmGreeter/autologin.py

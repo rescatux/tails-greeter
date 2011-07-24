@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-06 23:19+0700\n"
+"POT-Creation-Date: 2011-07-25 01:58+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,4 +27,28 @@ msgstr ""
 msgid ""
 "Please select language for TAILS.\n"
 "NOTE: the selection cannot be changed once you press the button."
+msgstr ""
+
+#: ../glade/layout.glade.h:1
+msgid "<big><b>Keyboard layout</b></big>"
+msgstr ""
+
+#: ../glade/layout.glade.h:2
+msgid "Choose your own:"
+msgstr ""
+
+#: ../glade/layout.glade.h:3
+msgid "Suggested option:"
+msgstr ""
+
+#: ../glade/layout.glade.h:4
+msgid "Which layout is most similar to your keyboard?"
+msgstr ""
+
+#: ../glade/layout.glade.h:5
+msgid "You can type into this box to test your new keyboard layout."
+msgstr ""
+
+#: ../glade/layout.glade.h:6
+msgid "button"
 msgstr ""

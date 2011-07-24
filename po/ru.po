@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tails-greeter\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-06 23:19+0700\n"
-"PO-Revision-Date: 2011-07-06 23:23+0700\n"
+"POT-Creation-Date: 2011-07-25 01:58+0800\n"
+"PO-Revision-Date: 2011-07-25 02:02+0700\n"
 "Last-Translator: Max S <govnototalitarizm@gmail.com>\n"
 "Language-Team:  <govnototalitarizm@gmail.com>\n"
 "Language: \n"
@@ -33,4 +33,28 @@ msgid ""
 msgstr ""
 "Выберите язык для TAILS.\n"
 "ВНИМАНИЕ: невозможно изменить выбор после нажатия кнопки."
+
+#: ../glade/layout.glade.h:1
+msgid "<big><b>Keyboard layout</b></big>"
+msgstr "<big><b>Раскладка клавиатуры</b></big>"
+
+#: ../glade/layout.glade.h:2
+msgid "Choose your own:"
+msgstr "Выберите самостоятельно:"
+
+#: ../glade/layout.glade.h:3
+msgid "Suggested option:"
+msgstr "Предлагаемые варианты:"
+
+#: ../glade/layout.glade.h:4
+msgid "Which layout is most similar to your keyboard?"
+msgstr "Какая раскладка наиболее близка к Вашей клавиатуре?"
+
+#: ../glade/layout.glade.h:5
+msgid "You can type into this box to test your new keyboard layout."
+msgstr "В этом поле ввода можно опробовать новую раскладку."
+
+#: ../glade/layout.glade.h:6
+msgid "button"
+msgstr "Далее"
 
