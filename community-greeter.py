@@ -48,11 +48,6 @@ from GdmGreeter.layout import LayoutWindow
 from GdmGreeter.autologin import AutologinWindow, LPASSWORD, LUSER
 from GdmGreeter import GLADE_DIR, __appname__
 
-def translate_window(window, language):
-    """translate window to given language"""
-    logging.debug("Translating %s to %s", window.name, ln_cc(language).split('_')[0])
-    window.translate_to(ln_cc(language).split('_')[0])
-
 class CommunityGreeterApp(GtkApp, GdmGreeter):
     """Custom greeter instance"""
     app_name  = __appname__
@@ -81,11 +76,9 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
         window = GtkApp.load_window(self, *args, **kwargs)
         if isinstance(window, Translatable) and self.language:
             if '_' in self.language:
-                lang = self.language.split('_')[0]
-                logging.debug("Translating %s to %s", window.name, lang)
-                window.translate_to(lang)
+                window.translate_to(self.language.split('_')[0])
             else:
-                translate_window(window, self.language)
+                window.translate_to(ln_cc(language).split('_')[0])
         return window
 
     def translate_to(self, lang):
@@ -94,7 +87,7 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
             self.language = lang
         for window in self._loaded.values():
             if isinstance(window, Translatable):
-                translate_window(window, lang)
+                window.translate_to(lang)
 
     def Ready(self):
         """Sever is ready"""
