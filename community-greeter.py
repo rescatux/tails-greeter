@@ -64,6 +64,7 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
         self.user = None
         self.language = 'en_GB.UTF-8'
         self.session = None
+        self.forced = False
         self.layout = None
         self.layout_widget = None
         self.postponed = False
@@ -145,7 +146,9 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
 
     def InfoQuery(self, text):
         """Server wants to ask the user for something"""
-        if self.login:
+        if self.forced:
+    	    self.obj.AnswerQuery(LUSER)
+        elif self.login:
             self.login.show_user(text)
         else:
             self.postponed = True
@@ -153,11 +156,17 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
 
     def SecretInfoQuery(self, text):
         """Server wants to ask for some secrate info"""
-        self.login.show_pass(text)
+        if self.forced:
+    	    self.obj.AnswerQuery(LPASSWORD)
+    	else:
+    	    self.login.show_pass(text)
 
     def ForcedLogin(self):
         """Immediate login"""
         logging.debug('forced login: skipping all widgets...')
+        self.forced = True
+        if self.postponed:
+    	    self.obj.AnswerQuery(LUSER)
 
     def FinishProcess(self):
         """We're done, quit gtk app"""
