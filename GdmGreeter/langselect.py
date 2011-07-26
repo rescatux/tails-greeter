@@ -22,8 +22,7 @@ Greeter program for GDM using gtk (nothing else works)
 import logging
 
 from gtkme.listview import text_combobox
-from GdmGreeter.language import TranslatableWindow
-from GdmGreeter.language import LANGS
+from GdmGreeter.language import TranslatableWindow, LANGS, ln_cc
 
 class LangselectWindow(TranslatableWindow):
     """Display language selection window"""
@@ -49,11 +48,11 @@ class LangselectWindow(TranslatableWindow):
 
     def translate_action(self, widget):
         """Signal event to translate entire app"""
-        self.gapp.SelectLanguage(self.widget('lang_list_combobox').get_active_text())
+        self.gapp.SelectLanguage(ln_cc(self.widget('lang_list_combobox').get_active_text()))
 
     def next_button_clicked(self, widget):
         """Signal event to translate entire app"""
-        self.gapp.SelectLanguage(self.widget('lang_list_combobox').get_active_text())
+        self.translate_action(widget)
         self.gapp.SwitchVisibility()
 
     def skip_button_clicked(self, widget):

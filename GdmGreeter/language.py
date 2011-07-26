@@ -36,6 +36,10 @@ p = Popen(["tails-lang-helper"], stdout=PIPE)
 langcodes = str.split(p.communicate()[0])
 logging.debug('%s languages found: helper returned %s', len(langcodes), p.returncode)
 
+def ln_cc(lang_name):
+    """obtain language code from name, for example: русский -> ru_RU"""
+    return LDICT[unicode(lang_name)]
+
 def get_native_langs(lang_list):
     """assemble dictionary of native language names with language codes"""
     unique = {}
@@ -134,75 +138,4 @@ class TranslatableFormWindow(Translatable, FormWindow):
     def __init__(self, *args, **kwargs):
         FormWindow.__init__(self, *args, **kwargs)
         Translatable.__init__(self)
-
-class LanguageWindow(TranslatableWindow):
-    """A language selection window for display at the bottom"""
-    name = 'language'
-    primary = False
-    retain_focus = False
-
-    def __init__(self, *args, **kwargs):
-        TranslatableWindow.__init__(self, *args, **kwargs)
-        self.container = self.if_widget("buttonbar")
-        self.images = Images('lang')
-        self.buttons = {}
-        self.populate()
-        self.window.set_gravity(gdk.GRAVITY_SOUTH)
-
-    def set_position(self, width, height):
-        """Set the window's possition in the middle of the screen"""
-        logging.debug("Setting pos: %sx%s resolution", width, height)
-        self.window.move(width/2, height)
-
-    def populate(self):
-        """Create all the required entries"""
-        for locale in LANGS:
-            # Our locale needs to be without territory
-            locale = babel.Locale.parse(locale.language)
-            # Because the territory could repeat the language, ignore after the first language.
-            if not self.buttons.has_key(str(locale)):
-                button = LanguageButton(locale, self.button_clicked)
-                if button:
-                    self.container.pack_start(button, False, False, 0)
-                    self.buttons[str(locale)] = button
-
-    def translate_to(self, lang):
-        """Press the selected language's button"""
-        lang = self.language(lang)
-        TranslatableWindow.translate_to(self, lang)
-        for lid, button in self.buttons.iteritems():
-            if button:
-                button.set_sensitive(lid != lang)
-            else:
-                logging.warn("Couldn't find a button for language: %s", lid)
-
-    def button_clicked(self, widget, lang):
-        """Signal event for button clicking, translate entire app"""
-        self.gapp.SelectLanguage(lang)
-        self.gapp.SwitchVisibility()
-
-
-def LanguageButton(locale, signal=None):
-    """Returns a gtk button with the correct contents"""
-    code = str(locale)
-    button = gtk.Button()
-    if signal:
-        button.connect('clicked', signal, code)
-    button.set_relief(gtk.RELIEF_NONE)
-    holder = gtk.VBox()
-    button.add(holder)
-    icon = gtk.Image()
-    label = gtk.Label()
-    holder.pack_start(icon, True, True, 6)
-    logging.debug("Loading pixmap for '%s'", code)
-    image = IMAGES.get_pixmap(code)
-    if not image:
-        return None
-    logging.debug("Setting icon from '%s' pixmap", code)
-    icon.set_from_pixbuf(image)
-    holder.pack_end(label, False, True, 0)
-    label_unicode = "<b>%s</b>" % locale.languages[code] 
-    label.set_markup(label_unicode.encode('UTF-8'))
-    button.show_all()
-    return button
 

@@ -42,11 +42,16 @@ logging.LogRecord.getMessage = print_log_record_on_error(logging.LogRecord.getMe
 from gtkme import GtkApp
 from subprocess import Popen, PIPE
 from GdmGreeter.services import GdmGreeter
-from GdmGreeter.language import Translatable, LDICT
+from GdmGreeter.language import Translatable, ln_cc
 from GdmGreeter.langselect import LangselectWindow
 from GdmGreeter.layout import LayoutWindow
 from GdmGreeter.autologin import AutologinWindow, LPASSWORD, LUSER
 from GdmGreeter import GLADE_DIR, __appname__
+
+def translate_window(window, language):
+    """translate window to given language"""
+    logging.debug("Translating %s to %s", window.name, ln_cc(language).split('_')[0])
+    window.translate_to(ln_cc(language).split('_')[0])
 
 class CommunityGreeterApp(GtkApp, GdmGreeter):
     """Custom greeter instance"""
@@ -80,8 +85,7 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
                 logging.debug("Translating %s to %s", window.name, lang)
                 window.translate_to(lang)
             else:
-                logging.debug("Translating %s to %s", window.name, LDICT[unicode(self.language)].split('_')[0])
-                window.translate_to(LDICT[unicode(self.language)].split('_')[0])
+                translate_window(window, self.language)
         return window
 
     def translate_to(self, lang):
@@ -90,8 +94,7 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
             self.language = lang
         for window in self._loaded.values():
             if isinstance(window, Translatable):
-                logging.debug("I18n window %s to %s", window.name, LDICT[unicode(lang)].split('_')[0])
-                window.translate_to(LDICT[unicode(lang)].split('_')[0])
+                translate_window(window, lang)
 
     def Ready(self):
         """Sever is ready"""
@@ -109,7 +112,7 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
         if not self.layout_widget:
             logging.debug('loading layout')
             self.layout_widget = self.load_window('layout')
-            self.lgen = Popen(["tails-locale-gen", LDICT[unicode(self.language)]], stdout = PIPE)
+            self.lgen = Popen(["tails-locale-gen", ln_cc(self.language)], stdout = PIPE)
             logging.debug('spawned locale generator with %s pid', self.lgen.pid)
             self.lang.window.destroy()
         elif not self.login:
@@ -129,14 +132,17 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
 
     def DefaultLanguageNameChanged(self, lang):
         """default language name changed"""
+        logging.debug('DefaultLanguageNameChanged to %s', lang)
         self.language = lang
 
     def DefaultLayoutNameChanged(self, layout):
         """default layout name changed"""
+        logging.debug('DefaultLayoutNameChanged to %s', layout)
         self.layout = str(layout)
 
     def DefaultSessionNameChanged(self, session):
         """default session name changed"""
+        logging.debug('DefaultSessionNameChanged to %s', session)
         self.session = str(session)
 
     def InfoQuery(self, text):
