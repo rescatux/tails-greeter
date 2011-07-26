@@ -61,7 +61,6 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
         self.scr = gdk.display_get_default().get_screen(self.display.number)
         self.lang = None
         self.login = None
-        self.user = None
         self.language = 'en_GB.UTF-8'
         self.session = None
         self.forced = False
@@ -116,21 +115,17 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
         elif not self.login:
             logging.debug('loading login')
             self.login = self.load_window('autologin', service = self.obj)
-            self.layout_widget.destroy()            
+            self.layout_widget.destroy()
             if self.login:
                 if self.postponed:
                     self.login.show_user(self.postponed_text)
-
-    def SelectedUserChanged(self, username):
-        """legacy user selection change handler"""
 
     def SelectLanguage(self, lang):
         """The user wants to change languages"""
         # Translate all windows in the login screen
         self.translate_to(lang)
-        # Make sure the session is set correctly.
-        if self.user:
-            GdmGreeter.SelectLanguage(self, lang)
+        # Apply chosen language
+        GdmGreeter.SelectLanguage(self, lang)
 
     def DefaultLanguageNameChanged(self, lang):
         """default language name changed"""
