@@ -49,7 +49,7 @@ NOTE: the selection cannot be changed once you press the button.</property>
             <property name="receives_default">True</property>
             <property name="use_action_appearance">False</property>
             <property name="use_stock">True</property>
-            <signal name="clicked" handler="langselect_button_clicked" swapped="no"/>
+            <signal name="clicked" handler="langselect_next_button_clicked" swapped="no"/>
           </object>
           <packing>
             <property name="expand">False</property>
@@ -64,6 +64,7 @@ NOTE: the selection cannot be changed once you press the button.</property>
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
             <property name="use_action_appearance">False</property>
+            <signal name="clicked" handler="langselect_skip_button_clicked" swapped="no"/>
           </object>
           <packing>
             <property name="expand">True</property>

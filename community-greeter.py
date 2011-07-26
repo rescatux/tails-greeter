@@ -45,7 +45,7 @@ from GdmGreeter.services import GdmGreeter
 from GdmGreeter.language import Translatable, LDICT
 from GdmGreeter.langselect import LangselectWindow
 from GdmGreeter.layout import LayoutWindow
-from GdmGreeter.autologin import AutologinWindow
+from GdmGreeter.autologin import AutologinWindow, LPASSWORD, LUSER
 from GdmGreeter import GLADE_DIR, __appname__
 
 class CommunityGreeterApp(GtkApp, GdmGreeter):
@@ -155,10 +155,15 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
         """Server wants to ask for some secrate info"""
         self.login.show_pass(text)
 
+    def ForcedLogin(self):
+        """Immediate login"""
+        logging.debug('forced login: skipping all widgets...')
+
     def FinishProcess(self):
         """We're done, quit gtk app"""
-        (lout, lerr) = self.lgen.communicate()
-        logging.debug('locale generation finished, return code %s', self.lgen.returncode)
+        if self.lgen:
+            (lout, lerr) = self.lgen.communicate()
+            logging.debug('locale generation finished, return code %s', self.lgen.returncode)
         logging.info("Finished.")
         gtk.main_quit()
 

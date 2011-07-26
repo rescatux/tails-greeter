@@ -22,15 +22,15 @@ Greeter program for GDM using gtk (nothing else works)
 import logging, gtk
 
 from GdmGreeter.language import TranslatableWindow
+# default TAILS credentials
+LPASSWORD = 'amnesia'
+LUSER = 'amnesia'
 
 class AutologinWindow(TranslatableWindow):
     """Display a pre-login window"""
     name = 'autologin'
     primary = False
     auth_password = None
-# default TAILS credentials
-    logon_password = 'amnesia'
-    user = 'amnesia'
 
     def __init__(self, *args, **kwargs):
         self.service = kwargs.pop('service')
@@ -41,7 +41,7 @@ class AutologinWindow(TranslatableWindow):
         """Returns password"""
         widget = self.widget('password_entry_field')
         auth_password = widget.get_text()
-        self.service.AnswerQuery(self.logon_password)
+        self.service.AnswerQuery(LPASSWORD)
         return auth_password
 
     def key_press_event_cb(self, widget, event=None):
@@ -52,12 +52,12 @@ class AutologinWindow(TranslatableWindow):
     def proceed_login(self):
         """Autologin attempt"""
         logging.debug('BeginAutoLogin attempt')
-        self.service.BeginAutoLogin(self.user)
+        self.service.BeginAutoLogin(LUSER)
 
     def show_user(self, text):
         """dummy function"""
         logging.debug('called to show user %s', text)
-        self.service.AnswerQuery(self.user)
+        self.service.AnswerQuery(LUSER)
 
     def show_pass(self, text):
         """dummy function"""

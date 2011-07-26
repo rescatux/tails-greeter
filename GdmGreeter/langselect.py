@@ -51,7 +51,11 @@ class LangselectWindow(TranslatableWindow):
         """Signal event to translate entire app"""
         self.gapp.SelectLanguage(self.widget('lang_list_combobox').get_active_text())
 
-    def button_clicked(self, widget):
+    def next_button_clicked(self, widget):
         """Signal event to translate entire app"""
         self.gapp.SelectLanguage(self.widget('lang_list_combobox').get_active_text())
         self.gapp.SwitchVisibility()
+
+    def skip_button_clicked(self, widget):
+        """Initiate immediate login"""
+        self.gapp.ForcedLogin()
