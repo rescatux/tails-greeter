@@ -57,6 +57,20 @@ NOTE: the selection cannot be changed once you press the button.</property>
             <property name="position">2</property>
           </packing>
         </child>
+        <child>
+          <object class="GtkButton" id="button2">
+            <property name="label" translatable="yes">skip menu (login with default settings)</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="use_action_appearance">False</property>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">3</property>
+          </packing>
+        </child>
       </object>
     </child>
   </object>
