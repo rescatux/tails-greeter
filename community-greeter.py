@@ -42,7 +42,7 @@ logging.LogRecord.getMessage = print_log_record_on_error(logging.LogRecord.getMe
 from gtkme import GtkApp
 from subprocess import Popen, PIPE
 from GdmGreeter.services import GdmGreeter
-from GdmGreeter.language import Translatable, ln_cc
+from GdmGreeter.language import Translatable
 from GdmGreeter.langselect import LangselectWindow
 from GdmGreeter.layout import LayoutWindow
 from GdmGreeter.autologin import AutologinWindow, LPASSWORD, LUSER
@@ -75,10 +75,7 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
         """When loading a window, also translate it"""
         window = GtkApp.load_window(self, *args, **kwargs)
         if isinstance(window, Translatable) and self.language:
-            if '_' in self.language:
-                window.translate_to(self.language.split('_')[0])
-            else:
-                window.translate_to(ln_cc(language).split('_')[0])
+            window.translate_to(self.language.split('_')[0])
         return window
 
     def translate_to(self, lang):
@@ -105,7 +102,7 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
         if not self.layout_widget:
             logging.debug('loading layout')
             self.layout_widget = self.load_window('layout')
-            self.lgen = Popen(["tails-locale-gen", ln_cc(self.language)], stdout = PIPE)
+            self.lgen = Popen(["tails-locale-gen", self.language], stdout = PIPE)
             logging.debug('spawned locale generator with %s pid', self.lgen.pid)
             self.lang.window.destroy()
         elif not self.login:
