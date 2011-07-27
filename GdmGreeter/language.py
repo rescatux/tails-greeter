@@ -37,19 +37,21 @@ langcodes = str.split(p.communicate()[0])
 logging.debug('%s languages found: helper returned %s', len(langcodes), p.returncode)
 
 def ln_cc(lang_name):
-    """obtain language code from name, for example: русский -> ru_RU"""
-    return LDICT[unicode(lang_name)]
+    """obtain language code from name, for example: English -> en_US"""
+    return LDICT[unicode(lang_name)][0]
 
 def get_native_langs(lang_list):
     """assemble dictionary of native language names with language codes"""
-    unique = {}
+    langs_dict = {}
     for l in lang_list:
         lang =  Locale(l).getDisplayLanguage(Locale(l))
-        if l not in unique:
-            unique[lang] = l
-    return unique
-
-LDICT = get_native_langs(langcodes)
+        try:
+            langs_dict[lang]
+        except:
+            langs_dict[lang] = []
+        if l not in langs_dict[lang]:
+            langs_dict[lang].append(l)
+    return langs_dict
 
 try:
 # Note that we always collate with the 'C' locale.  This is far
@@ -69,19 +71,19 @@ def compare_choice(x):
         except:
             return x
 
-LANGS = sorted(get_native_langs(langcodes).keys(), key=compare_choice)
-
 def get_texts(langs):
     """obtain texts for a given locale using gettext"""
     result = {}
     for k, l in langs.iteritems():
-        loc = l.split('_')[0]
+        loc = l[0].split('_')[0]
         try:
             result[str(loc)] = gettext.translation(DOMAIN, MOFILES, [str(loc)])
         except IOError:
             logging.error('Failed to get texts for %s locale', loc)
     return result
 
+LDICT = get_native_langs(langcodes)
+LANGS = sorted(LDICT.keys(), key=compare_choice)
 TEXTS = get_texts(LDICT)
 
 class Translatable(object):
