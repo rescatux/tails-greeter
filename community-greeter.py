@@ -138,7 +138,7 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
     def InfoQuery(self, text):
         """Server wants to ask the user for something"""
         if self.forced:
-    	    self.obj.AnswerQuery(LUSER)
+            self.obj.AnswerQuery(LUSER)
         elif self.login:
             self.login.show_user(text)
         else:
@@ -148,9 +148,9 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
     def SecretInfoQuery(self, text):
         """Server wants to ask for some secrate info"""
         if self.forced:
-    	    self.obj.AnswerQuery(LPASSWORD)
-    	else:
-    	    self.login.show_pass(text)
+            self.obj.AnswerQuery(LPASSWORD)
+        else:
+            self.login.show_pass(text)
 
     def ForcedLogin(self):
         """Immediate login"""
@@ -158,13 +158,17 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
         self.forced = True
         self.obj.SelectLanguage('en_US.UTF-8')
         if self.postponed:
-    	    self.obj.AnswerQuery(LUSER)
+            self.obj.AnswerQuery(LUSER)
 
     def FinishProcess(self):
         """We're done, quit gtk app"""
+        envh = Popen(["tails-env-helper", "TAILS_GREETER=TEST"], stdout = PIPE)
+        logging.debug('spawned environment setup with %s pid', envh.pid)
         if self.lgen:
             (lout, lerr) = self.lgen.communicate()
             logging.debug('locale generation finished, return code %s', self.lgen.returncode)
+        (lout, lerr) = envh.communicate()
+        logging.debug('environment setup finished, return code %s', envh.returncode)
         logging.info("Finished.")
         gtk.main_quit()
 
