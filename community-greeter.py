@@ -61,7 +61,7 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
         self.scr = gdk.display_get_default().get_screen(self.display.number)
         self.lang = None
         self.login = None
-        self.language = 'en_GB.UTF-8'
+        self.language = 'en_US.UTF-8'
         self.session = None
         self.forced = False
         self.layout = None
@@ -156,6 +156,7 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
         """Immediate login"""
         logging.debug('forced login: skipping all widgets...')
         self.forced = True
+        self.obj.SelectLanguage('en_US.UTF-8')
         if self.postponed:
     	    self.obj.AnswerQuery(LUSER)
 
