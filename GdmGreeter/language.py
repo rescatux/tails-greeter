@@ -44,7 +44,7 @@ def get_native_langs(lang_list):
     """assemble dictionary of native language names with language codes"""
     langs_dict = {}
     for l in lang_list:
-        lang =  Locale(l).getDisplayLanguage(Locale(l))
+        lang =  Locale(l).getDisplayLanguage(Locale(l)).title()
         try:
             langs_dict[lang]
         except:
