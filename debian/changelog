@@ -1,3 +1,32 @@
+tails-greeter (0.0.5) squeeze-backports; urgency=low
+
+  * add button for immediate login
+  * restructure code to allow immediate login
+  * implement forced login procedure
+  * apply chosen language to session
+  * refactor language support code
+  * simplify window translation code
+  * remove old language conversion code
+  * store all locales for a given language
+  * default to en_US for forced login
+  * add post-login environment setup routine
+  * add env. helper to setup
+  * uppercase 1st letter of language name
+  * add button for immediate login
+  * restructure code to allow immediate login
+  * implement forced login procedure
+  * apply chosen language to session
+  * refactor language support code
+  * simplify window translation code
+  * remove old language conversion code
+  * store all locales for a given language
+  * default to en_US for forced login
+  * add post-login environment setup routine
+  * add env. helper to setup
+  * uppercase 1st letter of language name
+
+ -- Max S <govnototalitarizm@gmail.com>  Fri, 29 Jul 2011 22:08:13 +0800
+
 tails-greeter (0.0.5~2.gbp0ea683) UNRELEASED; urgency=low
 
   ** SNAPSHOT build @0ea68319abccc326957fde4741d7c4124ecf0dc3 **
