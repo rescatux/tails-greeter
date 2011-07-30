@@ -30,7 +30,6 @@ class LayoutWindow(TranslatableWindow):
     primary = False
     configreg = None
     layout = 'us'
-    language = None
     layout_name = None
     language_code = None
 
@@ -42,12 +41,16 @@ class LayoutWindow(TranslatableWindow):
         text_combobox(self.widget('layout_combobox'), self.widget('layouts'))
 
     def populate(self, language):
-        self.language = language
+        self.populated_language = language
         self.layout = ln_cc(self.language).split('_')[1].lower()
         logging.debug('layout set to %s', self.layout)
         for l in ln_list(self.language):
             self.widget('countries').append([l])
         self.widget('country_variant_combobox').set_active(0)
+        self.gen_variants()
+
+    def gen_variants():
+        self.widget('layouts').clear()
         self.configreg.foreach_layout(self.filter_layout)
 
     def populate_layouts(self, c_reg, item):
@@ -56,7 +59,7 @@ class LayoutWindow(TranslatableWindow):
 
     def locale_selected(self, widget):
         self.language_code = self.widget('country_variant_combobox').get_active_text()
-        self.populate(self.language)
+        self.gen_variants()
 
     def filter_layout(self, c_reg, item):
         """Handle particular layout"""
