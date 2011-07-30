@@ -21,30 +21,42 @@ Greeter program for GDM using gtk (nothing else works)
 
 import logging, gtk, xklavier
 
-from GdmGreeter.language import TranslatableWindow
-
-def print_variant(c_reg, item):
-    print ('\t %s (%s)' % (item.get_description(), item.get_name()))
+from gtkme.listview import text_combobox
+from GdmGreeter.language import TranslatableWindow, ln_list, ln_cc
 
 class LayoutWindow(TranslatableWindow):
     """Display layout selection window"""
     name = 'layout'
     primary = False
     configreg = None
-    layout = 'us'    
+    layout = 'us'
+    layout_name = None
 
     def __init__(self, *args, **kwargs):
         TranslatableWindow.__init__(self, *args, **kwargs)
         self.configreg = xklavier.ConfigRegistry(xklavier.Engine(gtk.gdk.display_get_default()))
+        text_combobox(self.widget('country_variant_combobox'), self.widget('countries'))
+        text_combobox(self.widget('layout_combobox'), self.widget('layouts'))
+
+    def populate(self, language):
+        self.layout = ln_cc(language).split('_')[0]
+        logging.debug('layout set to %s', self.layout)
+        for l in ln_list(language):
+            self.widget('countries').append([l])
+        self.widget('country_variant_combobox').set_active(0)
+        self.configreg.load(False)
+        self.configreg.foreach_layout(self.filter_layout)
+
+    def populate_layouts(self, c_reg, item):
+        """Obtain variants for a given layout"""
+        self.widget('layouts').append(['%s (%s)' % (item.get_description(), item.get_name())])
 
     def filter_layout(self, c_reg, item):
+        """Handle particular layout"""
         if item.get_name() == self.layout:
-            print ('\n%s (%s)' % (item.get_description(), item.get_name()))
-            c_reg.foreach_layout_variant(item.get_name(), print_variant)
-
-    def get_variants(self):
-        self.configreg.load(False)
-        return self.configreg.foreach_layout(self.filter_layout)
+            self.layout_name = item.get_description()
+            c_reg.foreach_layout_variant(item.get_name(), populate_layouts)
+            self.widget('layout_combobox').set_active(0)
 
     def button_clicked(self, widget):
         """Signal event to move to next widget"""

@@ -40,6 +40,9 @@ def ln_cc(lang_name):
     """obtain language code from name, for example: English -> en_US"""
     return LDICT[unicode(lang_name)][0]
 
+def ln_list(lang_name):
+    return LDICT[unicode(lang_name)]
+
 def get_native_langs(lang_list):
     """assemble dictionary of native language names with language codes"""
     langs_dict = {}
