@@ -1,3 +1,11 @@
+tails-greeter (0.0.6~1.gbp75be0e) UNRELEASED; urgency=low
+
+  ** SNAPSHOT build @75be0ebd7eb42fe1ec6dccfc1216e5a52dedc7a4 **
+
+  * add layout variant selection stub
+
+ -- Max S <govnototalitarizm@gmail.com>  Sat, 30 Jul 2011 16:05:29 +0800
+
 tails-greeter (0.0.5) squeeze-backports; urgency=low
 
   * add button for immediate login
