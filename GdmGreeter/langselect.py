@@ -28,6 +28,7 @@ class LangselectWindow(TranslatableWindow):
     """Display language selection window"""
     name = 'langselect'
     primary = False
+    language_name = None
 
     def __init__(self, *args, **kwargs):
         TranslatableWindow.__init__(self, *args, **kwargs)
@@ -48,7 +49,8 @@ class LangselectWindow(TranslatableWindow):
 
     def translate_action(self, widget):
         """Signal event to translate entire app"""
-        self.gapp.SelectLanguage(ln_cc(self.widget('lang_list_combobox').get_active_text()))
+        self.language_name = self.widget('lang_list_combobox').get_active_text()
+        self.gapp.SelectLanguage(ln_cc(self.language_name))
 
     def next_button_clicked(self, widget):
         """Signal event to translate entire app"""

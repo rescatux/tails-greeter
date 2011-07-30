@@ -102,10 +102,11 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
         if not self.layout_widget:
             logging.debug('loading layout')
             self.layout_widget = self.load_window('layout')
-            self.lgen = Popen(["tails-locale-gen", self.language], stdout = PIPE)
-            logging.debug('spawned locale generator with %s pid', self.lgen.pid)
+            self.layout_widget.populate(self.lang.language_name)
             self.lang.window.destroy()
         elif not self.login:
+            self.lgen = Popen(["tails-locale-gen", self.layout_widget.language_code], stdout = PIPE)
+            logging.debug('spawned locale generator with %s pid', self.lgen.pid)
             logging.debug('loading login')
             self.login = self.load_window('autologin', service = self.obj)
             self.layout_widget.destroy()

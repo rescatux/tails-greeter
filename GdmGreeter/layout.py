@@ -30,35 +30,44 @@ class LayoutWindow(TranslatableWindow):
     primary = False
     configreg = None
     layout = 'us'
+    language = None
     layout_name = None
+    language_code = None
 
     def __init__(self, *args, **kwargs):
         TranslatableWindow.__init__(self, *args, **kwargs)
         self.configreg = xklavier.ConfigRegistry(xklavier.Engine(gtk.gdk.display_get_default()))
+        self.configreg.load(False)
         text_combobox(self.widget('country_variant_combobox'), self.widget('countries'))
         text_combobox(self.widget('layout_combobox'), self.widget('layouts'))
 
     def populate(self, language):
-        self.layout = ln_cc(language).split('_')[0]
+        self.language = language
+        self.layout = ln_cc(self.language).split('_')[1].lower()
         logging.debug('layout set to %s', self.layout)
-        for l in ln_list(language):
+        for l in ln_list(self.language):
             self.widget('countries').append([l])
         self.widget('country_variant_combobox').set_active(0)
-        self.configreg.load(False)
         self.configreg.foreach_layout(self.filter_layout)
 
     def populate_layouts(self, c_reg, item):
         """Obtain variants for a given layout"""
         self.widget('layouts').append(['%s (%s)' % (item.get_description(), item.get_name())])
 
+    def locale_selected(self, widget):
+        self.language_code = self.widget('country_variant_combobox').get_active_text()
+        self.populate(self.language)
+
     def filter_layout(self, c_reg, item):
         """Handle particular layout"""
         if item.get_name() == self.layout:
             self.layout_name = item.get_description()
-            c_reg.foreach_layout_variant(item.get_name(), populate_layouts)
+            c_reg.foreach_layout_variant(item.get_name(), self.populate_layouts)
             self.widget('layout_combobox').set_active(0)
 
     def button_clicked(self, widget):
         """Signal event to move to next widget"""
         logging.debug('layout button clicked')
+        self.language_code = self.widget('country_variant_combobox').get_active_text()
+        self.gapp.SelectLanguage(self.language_code)
         self.gapp.SwitchVisibility()
