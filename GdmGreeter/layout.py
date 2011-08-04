@@ -32,6 +32,7 @@ class LayoutWindow(TranslatableWindow):
     layout = 'us'
     layout_name = None
     language_code = None
+    populated_language = None
 
     def __init__(self, *args, **kwargs):
         TranslatableWindow.__init__(self, *args, **kwargs)
@@ -41,6 +42,7 @@ class LayoutWindow(TranslatableWindow):
         text_combobox(self.widget('layout_combobox'), self.widget('layouts'))
 
     def populate(self, language):
+        """populate the list with country variants for a given language"""
         self.populated_language = language
         self.layout = ln_cc(self.language).split('_')[1].lower()
         logging.debug('layout set to %s', self.layout)
@@ -49,7 +51,8 @@ class LayoutWindow(TranslatableWindow):
         self.widget('country_variant_combobox').set_active(0)
         self.gen_variants()
 
-    def gen_variants():
+    def gen_variants(self):
+        """function to trigger layout variant selection"""
         self.widget('layouts').clear()
         self.configreg.foreach_layout(self.filter_layout)
 
@@ -58,6 +61,7 @@ class LayoutWindow(TranslatableWindow):
         self.widget('layouts').append(['%s (%s)' % (item.get_description(), item.get_name())])
 
     def locale_selected(self, widget):
+        """handler for combobox selecion event"""
         self.language_code = self.widget('country_variant_combobox').get_active_text()
         self.gen_variants()
 

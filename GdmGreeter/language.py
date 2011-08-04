@@ -20,9 +20,8 @@
 Greeter program for GDM using gtk (nothing else works)
 """
 
-import logging, babel, gettext, gtk
+import logging, gettext, gtk
 
-from gtk import gdk
 from subprocess import Popen, PIPE
 from gtkme import Window, FormWindow
 from GdmGreeter import Images
@@ -41,6 +40,7 @@ def ln_cc(lang_name):
     return LDICT[unicode(lang_name)][0]
 
 def ln_list(lang_name):
+    """obtain list of locales for a given language name, for example: English -> en_US, en_GB"""
     return LDICT[unicode(lang_name)]
 
 def get_native_langs(lang_list):
