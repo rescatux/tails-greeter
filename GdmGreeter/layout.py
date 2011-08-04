@@ -44,9 +44,9 @@ class LayoutWindow(TranslatableWindow):
     def populate(self, language):
         """populate the list with country variants for a given language"""
         self.populated_language = language
-        self.layout = ln_cc(self.language).split('_')[1].lower()
+        self.layout = ln_cc(language).split('_')[1].lower()
         logging.debug('layout set to %s', self.layout)
-        for l in ln_list(self.language):
+        for l in ln_list(language):
             self.widget('countries').append([l])
         self.widget('country_variant_combobox').set_active(0)
         self.gen_variants()
