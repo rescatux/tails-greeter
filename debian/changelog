@@ -1,3 +1,13 @@
+tails-greeter (0.0.6) squeeze-backports; urgency=low
+
+  * use combobox for layout selection for quicker prototyping
+  * fix locale and layout selection
+  * fix combobox enlargement issue
+  * documentation improvement and cleanup
+  * fix layout selection
+
+ -- Max S <govnototalitarizm@gmail.com>  Fri, 05 Aug 2011 01:54:14 +0800
+
 tails-greeter (0.0.6~1.gbp75be0e) UNRELEASED; urgency=low
 
   ** SNAPSHOT build @75be0ebd7eb42fe1ec6dccfc1216e5a52dedc7a4 **
