@@ -1,3 +1,11 @@
+tails-greeter (0.0.7~1.gbp484c1a) UNRELEASED; urgency=low
+
+  ** SNAPSHOT build @484c1aa2fe46a8b654ecbca4b2760ab8dc550907 **
+
+  * remove obsolete dependency
+
+ -- Max S <govnototalitarizm@gmail.com>  Sat, 06 Aug 2011 00:40:05 +0800
+
 tails-greeter (0.0.6) squeeze-backports; urgency=low
 
   * use combobox for layout selection for quicker prototyping
