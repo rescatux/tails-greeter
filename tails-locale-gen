@@ -1,6 +1,0 @@
-#!/bin/sh
-
-# example locale generation: localedef -f UTF-8 -i fi_FI /tmp/
-# fi_FI is supplied as $1
-
-sleep 3

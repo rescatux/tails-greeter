@@ -65,8 +65,6 @@ setup(
             ( SDIR + 'pixmaps/auto', listfiles( 'pixmaps/auto', '*.*' ) ),
             ( 'share/gdm/autostart/LoginWindow/', [ 'tails-greeter.desktop' ] ),
             ( 'bin/', [ 'tails-lang-helper' ] ),
-            ( 'bin/', [ 'tails-env-helper' ] ),
-            ( 'bin/', [ 'tails-locale-gen' ] ),
             ( SDIR, [ 'tails-logging.conf' ] ),
         ],
         cmdclass={

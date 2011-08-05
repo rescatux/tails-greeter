@@ -40,7 +40,6 @@ logging.config.fileConfig('tails-logging.conf')
 logging.LogRecord.getMessage = print_log_record_on_error(logging.LogRecord.getMessage)
 
 from gtkme import GtkApp
-from subprocess import Popen, PIPE
 from GdmGreeter.services import GdmGreeter
 from GdmGreeter.language import Translatable
 from GdmGreeter.langselect import LangselectWindow
@@ -52,7 +51,6 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
     """Custom greeter instance"""
     app_name  = __appname__
     glade_dir = GLADE_DIR
-    lgen = None
     windows   = [ AutologinWindow, LangselectWindow, LayoutWindow ]
 
     def __init__(self, *args, **kwargs):
@@ -62,6 +60,8 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
         self.lang = None
         self.login = None
         self.language = 'en_US.UTF-8'
+        self.locale_path = '/var/lib/gdm3/tails.locale'
+        self.password_path = '/var/lib/gdm3/tails.password'
         self.session = None
         self.forced = False
         self.layout = None
@@ -105,8 +105,9 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
             self.layout_widget.populate(self.lang.language_name)
             self.lang.window.destroy()
         elif not self.login:
-            self.lgen = Popen(["tails-locale-gen", self.layout_widget.language_code], stdout = PIPE)
-            logging.debug('spawned locale generator for %s, pid is %d', self.layout_widget.language_code, self.lgen.pid)
+            with open(self.locale_path, 'w') as f:
+                f.write(self.layout_widget.language_code)
+            logging.debug('locale %s written to %s', self.layout_widget.language_code, self.locale_path)
             logging.debug('loading login')
             self.login = self.load_window('autologin', service = self.obj)
             self.layout_widget.destroy()
@@ -163,13 +164,9 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
 
     def FinishProcess(self):
         """We're done, quit gtk app"""
-        envh = Popen(["tails-env-helper", "TAILS_GREETER=TEST"], stdout = PIPE)
-        logging.debug('spawned environment setup with %s pid', envh.pid)
-        if self.lgen:
-            (lout, lerr) = self.lgen.communicate()
-            logging.debug('locale generation finished, return code %s', self.lgen.returncode)
-        (lout, lerr) = envh.communicate()
-        logging.debug('environment setup finished, return code %s', envh.returncode)
+        with open(self.password_path, 'w') as f:
+            f.write(self.login.auth_password)            
+        logging.debug('password written to %s', self.password_path)
         logging.info("Finished.")
         gtk.main_quit()
 
