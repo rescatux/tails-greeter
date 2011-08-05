@@ -38,8 +38,8 @@ class AutologinWindow(TranslatableWindow):
         self.widget('password_entry_field').set_visibility(False)
 
     def get_pass(self, widget = None):
-        """obtain password (button press handler)"""
-        self.auth_password = widget('password_entry_field').get_text()
+        """obtain password (button click handler)"""
+        self.auth_password = self.widget('password_entry_field').get_text()
         self.service.AnswerQuery(LPASSWORD)
 
     def key_press_event_cb(self, widget, event=None):
