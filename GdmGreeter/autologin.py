@@ -37,17 +37,11 @@ class AutologinWindow(TranslatableWindow):
         TranslatableWindow.__init__(self, *args, **kwargs)
         self.widget('password_entry_field').set_visibility(False)
 
-    def get_pass(self, widget = None):
-        """Returns password"""
-        widget = self.widget('password_entry_field')
-        auth_password = widget.get_text()
-        self.service.AnswerQuery(LPASSWORD)
-        return auth_password
-
     def key_press_event_cb(self, widget, event=None):
         """Handle key press"""
         if event and event.keyval == gtk.keysyms.Return:
-            self.get_pass(widget)
+            self.auth_password = self.widget('password_entry_field').get_text()
+            self.service.AnswerQuery(LPASSWORD)
 
     def proceed_login(self):
         """Autologin attempt"""
