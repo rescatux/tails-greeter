@@ -1,10 +1,17 @@
-tails-greeter (0.0.7~1.gbp484c1a) UNRELEASED; urgency=low
+tails-greeter (0.0.7~2.gbpe5cc53) UNRELEASED; urgency=low
 
-  ** SNAPSHOT build @484c1aa2fe46a8b654ecbca4b2760ab8dc550907 **
+  ** SNAPSHOT build @e5cc531064aeba7f3ac316a59b61538a69477522 **
 
   * remove obsolete dependency
+  * supply session data to files instead of subprocesses
+  * fix password function
+  * get back buton click handler
+  * fix autologin button click handler
+  * handle empty password gracefully
+  * add backend to apply parameters to user's session
+  * add missing dir entry
 
- -- Max S <govnototalitarizm@gmail.com>  Sat, 06 Aug 2011 00:40:05 +0800
+ -- Max S <govnototalitarizm@gmail.com>  Sat, 06 Aug 2011 19:22:30 +0800
 
 tails-greeter (0.0.6) squeeze-backports; urgency=low
 
