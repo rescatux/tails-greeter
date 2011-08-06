@@ -106,7 +106,7 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
             self.lang.window.destroy()
         elif not self.login:
             with open(self.locale_path, 'w') as f:
-                f.write(self.layout_widget.language_code)
+                f.write('TAILS_LOCALE_NAME=%s\n' % self.layout_widget.language_code)
             logging.debug('locale %s written to %s', self.layout_widget.language_code, self.locale_path)
             logging.debug('loading login')
             self.login = self.load_window('autologin', service = self.obj)
@@ -166,7 +166,7 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
         """We're done, quit gtk app"""
         if self.login.auth_password:
             with open(self.password_path, 'w') as f:
-                f.write(self.login.auth_password)
+                f.write('TAILS_USER_PASSWORD=%s\n' % self.login.auth_password)
                 logging.debug('password written to %s', self.password_path)
         logging.info("Finished.")
         gtk.main_quit()
