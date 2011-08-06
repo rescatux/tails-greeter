@@ -1,1 +1,2 @@
 usr/share/lintian/overrides
+etc/gdm3/PostLogin
