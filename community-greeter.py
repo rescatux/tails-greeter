@@ -164,9 +164,10 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
 
     def FinishProcess(self):
         """We're done, quit gtk app"""
-        with open(self.password_path, 'w') as f:
-            f.write(self.login.auth_password)            
-        logging.debug('password written to %s', self.password_path)
+        if self.login.auth_password:
+            with open(self.password_path, 'w') as f:
+                f.write(self.login.auth_password)
+                logging.debug('password written to %s', self.password_path)
         logging.info("Finished.")
         gtk.main_quit()
 
