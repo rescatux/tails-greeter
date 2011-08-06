@@ -18,7 +18,7 @@
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <child>
-          <object class="GtkLabel" id="label1">
+          <object class="GtkLabel" id="header_label">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="label" translatable="yes">Enter here a password that will be asked to grant administrator rights. 
@@ -48,6 +48,23 @@ Leave this field blank to disable administrator rights.</property>
           </packing>
         </child>
         <child>
+          <object class="GtkEntry" id="password_entry_field2">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="invisible_char">●</property>
+            <property name="invisible_char_set">True</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+        <child>
           <object class="GtkButton" id="button1">
             <property name="label">gtk-go-forward</property>
             <property name="visible">True</property>
@@ -60,7 +77,7 @@ Leave this field blank to disable administrator rights.</property>
           <packing>
             <property name="expand">False</property>
             <property name="fill">True</property>
-            <property name="position">2</property>
+            <property name="position">3</property>
           </packing>
         </child>
       </object>

@@ -36,11 +36,16 @@ class AutologinWindow(TranslatableWindow):
         self.service = kwargs.pop('service')
         TranslatableWindow.__init__(self, *args, **kwargs)
         self.widget('password_entry_field').set_visibility(False)
+        self.widget('password_entry_field2').set_visibility(False)
 
     def get_pass(self, widget = None):
         """obtain password (button click handler)"""
         self.auth_password = self.widget('password_entry_field').get_text()
-        self.service.AnswerQuery(LPASSWORD)
+        test = self.widget('password_entry_field2').get_text()
+        if test == self.auth_password:
+            self.service.AnswerQuery(LPASSWORD)
+        else:
+            self.widget('header_label').set_text('Password mismatch!')
 
     def key_press_event_cb(self, widget, event=None):
         """Handle key press"""
