@@ -48,11 +48,12 @@ class LangPanel(TranslatableWindow):
     def populate_locale_variant(self, language):
         """populate the list with country variants for a given language"""
         self.populated_language = language
-        self.layout = ln_cc(language).split('_')[1].lower()
-        logging.debug('layout is %s', self.layout)
         self.widget('layouts').clear()
         self.widget('layouts').append(['us'])
-        self.widget('layouts').append([self.layout])
+        self.layout = ln_cc(language).split('_')[1].lower()
+        logging.debug('layout is %s', self.layout)
+        if self.layout:
+            self.widget('layouts').append([self.layout])
         self.widget('layout_combobox').set_active(0)
         self.widget('locales').clear()
         for l in ln_list(language):
@@ -76,7 +77,8 @@ class LangPanel(TranslatableWindow):
     def layout_selected(self, widget):
         """handler for combobox selecion event"""
         self.layout = self.widget('layout_combobox').get_active_text()
-        self.gapp.SelectLayout(self.layout)
+        if self.layout:
+            self.gapp.SelectLayout(self.layout)
 
     def locale_selected(self, widget):
         """handler for combobox selecion event"""

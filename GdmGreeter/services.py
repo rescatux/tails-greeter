@@ -94,7 +94,10 @@ class GdmGreeter(GdmDbusService):
     def SelectLayout(self, layout):
         """Call into GdmGreeter to change the layout"""
         logging.debug("Setting layout to %s", layout)
-        self.obj.SelectLayout(layout)
+        if layout:
+    	    self.obj.SelectLayout(layout)
+    	else:
+    	    logging.debug("Ignoring %s", layout)
 
     def Ready(self):
         """Called when greeter service is ready"""
