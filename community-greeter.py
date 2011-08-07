@@ -115,6 +115,11 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
         # Apply chosen language
         GdmGreeter.SelectLanguage(self, lang)
 
+    def SelectLayout(self, layout):
+        """The user wants to change layout"""
+        # Apply chosen layout
+        GdmGreeter.SelectLayout(self, layout)
+
     def DefaultLanguageNameChanged(self, lang):
         """default language name changed"""
         logging.debug('DefaultLanguageNameChanged to %s', lang)

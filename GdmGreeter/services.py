@@ -88,8 +88,13 @@ class GdmGreeter(GdmDbusService):
         if '.' not in lang:
             lang += '.UTF8'
         lang = locale.normalize(lang).replace('UTF8', 'UTF-8')
-        logging.debug("Setting language to %s", lang )
+        logging.debug("Setting language to %s", lang)
         self.obj.SelectLanguage(locale.normalize(lang))
+
+    def SelectLayout(self, layout):
+        """Call into GdmGreeter to change the layout"""
+        logging.debug("Setting layout to %s", layout)
+        self.obj.SelectLayout(layout)
 
     def Ready(self):
         """Called when greeter service is ready"""

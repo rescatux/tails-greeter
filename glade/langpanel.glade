@@ -128,6 +128,7 @@
           <object class="GtkComboBox" id="layout_combobox">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
+            <signal name="changed" handler="langpanel_layout_selected" swapped="no"/>
           </object>
           <packing>
             <property name="left_attach">2</property>

@@ -73,6 +73,11 @@ class LangPanel(TranslatableWindow):
         """Obtain variants for a given layout"""
 #        self.widget('layouts').append(['%s (%s)' % (item.get_description(), item.get_name())])
 
+    def layout_selected(self, widget):
+        """handler for combobox selecion event"""
+        self.layout = self.widget('layout_combobox').get_active_text()
+        self.gapp.SelectLayout(self.layout)
+
     def locale_selected(self, widget):
         """handler for combobox selecion event"""
         self.language_code = self.widget('locale_variant_combobox').get_active_text()
