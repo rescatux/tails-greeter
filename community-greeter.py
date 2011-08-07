@@ -42,8 +42,7 @@ logging.LogRecord.getMessage = print_log_record_on_error(logging.LogRecord.getMe
 from gtkme import GtkApp
 from GdmGreeter.services import GdmGreeter
 from GdmGreeter.language import Translatable
-from GdmGreeter.langselect import LangselectWindow
-from GdmGreeter.layout import LayoutWindow
+from GdmGreeter.langpanel import LangPanel
 from GdmGreeter.autologin import AutologinWindow, LPASSWORD, LUSER
 from GdmGreeter import GLADE_DIR, __appname__
 
@@ -51,7 +50,7 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
     """Custom greeter instance"""
     app_name  = __appname__
     glade_dir = GLADE_DIR
-    windows   = [ AutologinWindow, LangselectWindow, LayoutWindow ]
+    windows   = [ AutologinWindow, LangPanel ]
 
     def __init__(self, *args, **kwargs):
         GtkApp.__init__(self, *args, **kwargs)
@@ -65,7 +64,6 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
         self.session = None
         self.forced = False
         self.layout = None
-        self.layout_widget = None
         self.postponed = False
         self.postponed_text = None
         self.ready = False
@@ -89,7 +87,7 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
     def Ready(self):
         """Sever is ready"""
         if not self.lang:
-            self.lang = self.load_window('langselect')
+            self.lang = self.load_window('langpanel')
         else:
             self.login.window.set_sensitive(True)
             self.login.show_user('')
@@ -98,16 +96,11 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
         logging.warn("server is ready.")
 
     def SwitchVisibility(self):
-        """Switch language and login windows visibility"""
-        if not self.layout_widget:
-            logging.debug('loading layout')
-            self.layout_widget = self.load_window('layout')
-            self.layout_widget.populate(self.lang.language_name)
-            self.lang.window.destroy()
-        elif not self.login:
+        """Switch widgets visibility"""
+        if not self.login:
             with open(self.locale_path, 'w') as f:
-                f.write('TAILS_LOCALE_NAME=%s\n' % self.layout_widget.language_code)
-            logging.debug('locale %s written to %s', self.layout_widget.language_code, self.locale_path)
+                f.write('TAILS_LOCALE_NAME=%s\n' % self.lang.language_code)
+            logging.debug('locale %s written to %s', self.lang.language_code, self.locale_path)
             logging.debug('loading login')
             self.login = self.load_window('autologin', service = self.obj)
             self.layout_widget.destroy()
