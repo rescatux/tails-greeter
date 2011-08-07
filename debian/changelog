@@ -1,6 +1,6 @@
-tails-greeter (0.0.7~2.gbpe5cc53) UNRELEASED; urgency=low
+tails-greeter (0.0.7~3.gbp8b5174) UNRELEASED; urgency=low
 
-  ** SNAPSHOT build @e5cc531064aeba7f3ac316a59b61538a69477522 **
+  ** SNAPSHOT build @8b517403723b12084f6af17300d875c4212ae06e **
 
   * remove obsolete dependency
   * supply session data to files instead of subprocesses
@@ -10,8 +10,17 @@ tails-greeter (0.0.7~2.gbpe5cc53) UNRELEASED; urgency=low
   * handle empty password gracefully
   * add backend to apply parameters to user's session
   * add missing dir entry
+  * update PostLogin helper and changelog
+  * add options to ensure non-interactivity
+  * additional check for forced login
+  * use double-entry for password to avoid typos
+  * merge language and layout widgets into panel
+  * add missing parameters
+  * finish migration to panel
+  * add SelectLayout stub
+  * add foolproofing to layout selection
 
- -- Max S <govnototalitarizm@gmail.com>  Sat, 06 Aug 2011 19:22:30 +0800
+ -- Max S <govnototalitarizm@gmail.com>  Mon, 08 Aug 2011 00:34:40 +0800
 
 tails-greeter (0.0.6) squeeze-backports; urgency=low
 
