@@ -103,7 +103,7 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
             logging.debug('locale %s written to %s', self.lang.language_code, self.locale_path)
             logging.debug('loading login')
             self.login = self.load_window('autologin', service = self.obj)
-            self.layout_widget.destroy()
+            self.lang.destroy()
             if self.login:
                 if self.postponed:
                     self.login.show_user(self.postponed_text)

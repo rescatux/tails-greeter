@@ -50,6 +50,11 @@ class LangPanel(TranslatableWindow):
         self.populated_language = language
         self.layout = ln_cc(language).split('_')[1].lower()
         logging.debug('layout is %s', self.layout)
+        self.widget('layouts').clear()
+        self.widget('layouts').append(['us'])
+        self.widget('layouts').append([self.layout])
+        self.widget('layout_combobox').set_active(0)
+        self.widget('locales').clear()
         for l in ln_list(language):
             self.widget('locales').append([l])
         self.widget('locale_variant_combobox').set_active(0)
@@ -57,7 +62,6 @@ class LangPanel(TranslatableWindow):
 
     def gen_variants(self):
         """function to trigger layout variant selection"""
-        self.widget('layouts').clear()
         self.configreg.foreach_layout(self.filter_layout)
 
     def populate(self):
@@ -67,11 +71,11 @@ class LangPanel(TranslatableWindow):
 
     def populate_layouts(self, c_reg, item):
         """Obtain variants for a given layout"""
-        self.widget('layouts').append(['%s (%s)' % (item.get_description(), item.get_name())])
+#        self.widget('layouts').append(['%s (%s)' % (item.get_description(), item.get_name())])
 
     def locale_selected(self, widget):
         """handler for combobox selecion event"""
-        self.language_code = self.widget('country_variant_combobox').get_active_text()
+        self.language_code = self.widget('locale_variant_combobox').get_active_text()
         self.gen_variants()
 
     def filter_layout(self, c_reg, item):
@@ -100,11 +104,6 @@ class LangPanel(TranslatableWindow):
         self.language_name = self.widget('lang_list_combobox').get_active_text()
         self.gapp.SelectLanguage(ln_cc(self.language_name))
         self.populate_locale_variant(self.language_name)
-
-    def next_button_clicked(self, widget):
-        """Signal event to translate entire app"""
-        self.translate_action(widget)
-        self.gapp.SwitchVisibility()
 
     def skip_button_clicked(self, widget):
         """Initiate immediate login"""
