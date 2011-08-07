@@ -55,6 +55,11 @@ class LangPanel(TranslatableWindow):
         self.widget('locale_variant_combobox').set_active(0)
         self.gen_variants()
 
+    def gen_variants(self):
+        """function to trigger layout variant selection"""
+        self.widget('layouts').clear()
+        self.configreg.foreach_layout(self.filter_layout)
+
     def populate(self):
         """Create all the required entries"""
         for l in LANGS:
