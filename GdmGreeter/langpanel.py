@@ -55,9 +55,13 @@ class LangPanel(TranslatableWindow):
         self.widget('layouts').append(['us'])
         self.layout = ln_cc(language).split('_')[1].lower()
         logging.debug('layout is %s', self.layout)
-        if self.layout:
+        if self.layout and self.layout != 'us':
     	    self.widget('layouts').append([self.layout])
     	    logging.debug('added layout %s', self.layout)
+            self.crecord.set_layouts(['us', self.layout])
+            self.crecord.set_options(['grp:alt_shift_toggle'])
+            logging.debug('options set to %s', self.crecord.get_options())
+            self.crecord.activate(xklavier.Engine(gtk.gdk.display_get_default()))
     	else:
     	    logging.debug('ignored layout %s', self.layout)
         self.widget('layout_combobox').set_active(0)
@@ -87,15 +91,6 @@ class LangPanel(TranslatableWindow):
         if self.layout:
     	    logging.debug('setting layout %s', self.layout)
     	    self.gapp.SelectLayout(self.layout)
-    	    if self.layout != 'us':
-    		logging.debug('before layouts:: %s', self.crecord.get_layouts())
-    		self.crecord.set_layouts(['us', self.layout])
-    		logging.debug('layout set to %s', self.layout)
-    		logging.debug('after layouts:: %s', self.crecord.get_layouts())
-		logging.debug('before options:: %s', self.crecord.get_options())
-    		self.crecord.set_options(['grp:alt_shift_toggle'])        
-    		logging.debug('after options:: %s', self.crecord.get_options())
-    	    self.crecord.activate(xklavier.Engine(gtk.gdk.display_get_default()))
 
     def locale_selected(self, widget):
         """handler for combobox selecion event"""
