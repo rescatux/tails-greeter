@@ -31,6 +31,7 @@ class LangPanel(TranslatableWindow):
     language_name = None
     configreg = None
     layout = 'us'
+    crecord = None
     layout_name = None
     language_code = None
     populated_language = None
@@ -39,6 +40,8 @@ class LangPanel(TranslatableWindow):
         TranslatableWindow.__init__(self, *args, **kwargs)
         self.configreg = xklavier.ConfigRegistry(xklavier.Engine(gtk.gdk.display_get_default()))
         self.configreg.load(False)
+        self.crecord = xklavier.ConfigRec()
+        self.crecord.get_from_server(xklavier.Engine(gtk.gdk.display_get_default()))
         text_combobox(self.widget('locale_variant_combobox'), self.widget('locales'))
         text_combobox(self.widget('layout_combobox'), self.widget('layouts'))
         text_combobox(self.widget('lang_list_combobox'), self.widget('languages'))
@@ -53,7 +56,10 @@ class LangPanel(TranslatableWindow):
         self.layout = ln_cc(language).split('_')[1].lower()
         logging.debug('layout is %s', self.layout)
         if self.layout:
-            self.widget('layouts').append([self.layout])
+    	    self.widget('layouts').append([self.layout])
+    	    logging.debug('added layout %s', self.layout)
+    	else:
+    	    logging.debug('ignored layout %s', self.layout)
         self.widget('layout_combobox').set_active(0)
         self.widget('locales').clear()
         for l in ln_list(language):
@@ -77,8 +83,19 @@ class LangPanel(TranslatableWindow):
     def layout_selected(self, widget):
         """handler for combobox selecion event"""
         self.layout = self.widget('layout_combobox').get_active_text()
+        logging.debug('obtained layout %s', self.layout)
         if self.layout:
-            self.gapp.SelectLayout(self.layout)
+    	    logging.debug('setting layout %s', self.layout)
+    	    self.gapp.SelectLayout(self.layout)
+    	    if self.layout != 'us':
+    		logging.debug('before layouts:: %s', self.crecord.get_layouts())
+    		self.crecord.set_layouts(['us', self.layout])
+    		logging.debug('layout set to %s', self.layout)
+    		logging.debug('after layouts:: %s', self.crecord.get_layouts())
+		logging.debug('before options:: %s', self.crecord.get_options())
+    		self.crecord.set_options(['grp:alt_shift_toggle'])        
+    		logging.debug('after options:: %s', self.crecord.get_options())
+    	    self.crecord.activate(xklavier.Engine(gtk.gdk.display_get_default()))
 
     def locale_selected(self, widget):
         """handler for combobox selecion event"""
@@ -95,7 +112,7 @@ class LangPanel(TranslatableWindow):
     def button_clicked(self, widget):
         """Signal event to move to next widget"""
         logging.debug('panel button clicked')
-        self.translate_action(widget)
+        self.translate_action(widget, False)
         self.language_code = self.widget('locale_variant_combobox').get_active_text()
         self.gapp.SelectLanguage(self.language_code)
         self.gapp.SwitchVisibility()
@@ -106,11 +123,12 @@ class LangPanel(TranslatableWindow):
         TranslatableWindow.translate_to(self, lang)
         logging.debug('translating to %s', lang)
 
-    def translate_action(self, widget):
+    def translate_action(self, widget, populate_locales = True):
         """Signal event to translate entire app"""
         self.language_name = self.widget('lang_list_combobox').get_active_text()
         self.gapp.SelectLanguage(ln_cc(self.language_name))
-        self.populate_locale_variant(self.language_name)
+        if populate_locales:
+    	    self.populate_locale_variant(self.language_name)
 
     def skip_button_clicked(self, widget):
         """Initiate immediate login"""
