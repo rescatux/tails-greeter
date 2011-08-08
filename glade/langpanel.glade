@@ -80,7 +80,8 @@
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="xalign">0</property>
-            <property name="label" translatable="yes">You can type into this box to test your new keyboard layout.</property>
+            <property name="label" translatable="yes" comments="&quot;Alt+Shift&quot; should remain untranslated!">You can type into this box to test keyboard layout.
+Switch layouts with Alt+Shift.</property>
             <property name="wrap">True</property>
             <property name="selectable">True</property>
           </object>
