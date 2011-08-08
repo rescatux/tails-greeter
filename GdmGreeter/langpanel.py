@@ -22,6 +22,7 @@ Greeter program for GDM using gtk (nothing else works)
 import logging, gtk, xklavier
 
 from gtkme.listview import text_combobox
+from xklavier import XKLL_TRACK_KEYBOARD_STATE
 from GdmGreeter.language import TranslatableWindow, LANGS, ln_list, ln_cc
 
 class LangPanel(TranslatableWindow):
@@ -31,18 +32,20 @@ class LangPanel(TranslatableWindow):
     language_name = None
     configreg = None
     layout = 'us'
+    selected_layout = 'us'
+    engine = None
     crecord = None
     layout_name = None
     language_code = None
     default_position = 0
-    populated_language = None
 
     def __init__(self, *args, **kwargs):
         TranslatableWindow.__init__(self, *args, **kwargs)
-        self.configreg = xklavier.ConfigRegistry(xklavier.Engine(gtk.gdk.display_get_default()))
+        self.engine = xklavier.Engine(gtk.gdk.display_get_default())
+        self.configreg = xklavier.ConfigRegistry(self.engine)
         self.configreg.load(False)
         self.crecord = xklavier.ConfigRec()
-        self.crecord.get_from_server(xklavier.Engine(gtk.gdk.display_get_default()))
+        self.crecord.get_from_server(self.engine)
         text_combobox(self.widget('locale_variant_combobox'), self.widget('locales'))
         text_combobox(self.widget('layout_combobox'), self.widget('layouts'))
         text_combobox(self.widget('lang_list_combobox'), self.widget('languages'))
@@ -51,7 +54,6 @@ class LangPanel(TranslatableWindow):
 
     def populate_locale_variant(self, language):
         """populate the list with country variants for a given language"""
-        self.populated_language = language
         self.widget('layouts').clear()
         self.widget('layouts').append(['us'])
         self.layout = ln_cc(language).split('_')[1].lower()
@@ -62,7 +64,7 @@ class LangPanel(TranslatableWindow):
             self.crecord.set_layouts(['us', self.layout])
             self.crecord.set_options(['grp:alt_shift_toggle'])
             logging.debug('options set to %s', self.crecord.get_options())
-            self.crecord.activate(xklavier.Engine(gtk.gdk.display_get_default()))
+            self.crecord.activate(self.engine)
         self.widget('layout_combobox').set_active(0)
         self.widget('locales').clear()
         count = 0
@@ -71,13 +73,32 @@ class LangPanel(TranslatableWindow):
             self.widget('locales').append([l])
             if 'en_US' == l:
                 default = count
-            count = count + 1
+            count += 1
         self.widget('locale_variant_combobox').set_active(default)
         self.gen_variants()
 
     def gen_variants(self):
         """function to trigger layout variant selection"""
         self.configreg.foreach_layout(self.filter_layout)
+
+    def get_current_layout(self):
+        """Get currently active keyboard layout"""
+        self.engine.start_listen(XKLL_TRACK_KEYBOARD_STATE)
+        self.engine.lock_group(engine.get_next_group())
+        layout_index = engine.get_current_state()['group']
+        self.engine.stop_listen(XKLL_TRACK_KEYBOARD_STATE)
+        # assume only 2 layouts with 'us' always first one
+        if layout_index:
+            return self.layout
+        else:
+            return 'us'
+
+    def key_event_cb(self, widget, event=None):
+        """Handle key event"""
+        l = self.get_current_layout()
+        if self.selected_layout != l:
+            self.selected_layout = l
+            logging.debug('layout has changed to %s', self.selected_layout)
 
     def populate(self):
         """Create all the required entries"""
@@ -86,7 +107,7 @@ class LangPanel(TranslatableWindow):
             self.widget('languages').append([l])
             if 'English' == l:
                 self.default_position = count
-            count = count + 1
+            count += 1
 
     def populate_layouts(self, c_reg, item):
         """Obtain variants for a given layout"""

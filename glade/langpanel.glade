@@ -10,6 +10,7 @@
     <property name="urgency_hint">True</property>
     <property name="decorated">False</property>
     <property name="deletable">False</property>
+    <signal name="key-release-event" handler="langpanel_key_event_cb" swapped="no"/>
     <child>
       <object class="GtkTable" id="table1">
         <property name="visible">True</property>
@@ -80,8 +81,7 @@
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="xalign">0</property>
-            <property name="label" translatable="yes" comments="&quot;Alt+Shift&quot; should remain untranslated!">You can type into this box to test keyboard layout.
-Switch layouts with Alt+Shift.</property>
+            <property name="label" translatable="yes" comments="&quot;Alt+Shift&quot; should remain untranslated!">You can type into this box to test keyboard layout. Use Alt+Shift to switch layouts.</property>
             <property name="wrap">True</property>
             <property name="selectable">True</property>
           </object>
@@ -103,7 +103,7 @@ Switch layouts with Alt+Shift.</property>
             <property name="can_focus">True</property>
             <property name="xalign">0</property>
             <property name="ypad">6</property>
-            <property name="label" translatable="yes">Select keyboard layout.</property>
+            <property name="label" translatable="yes">Select keyboard layout for the gnome session.</property>
             <property name="selectable">True</property>
           </object>
           <packing>
