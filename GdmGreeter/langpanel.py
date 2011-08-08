@@ -84,8 +84,8 @@ class LangPanel(TranslatableWindow):
     def get_current_layout(self):
         """Get currently active keyboard layout"""
         self.engine.start_listen(XKLL_TRACK_KEYBOARD_STATE)
-        self.engine.lock_group(engine.get_next_group())
-        layout_index = engine.get_current_state()['group']
+        self.engine.lock_group(self.engine.get_next_group())
+        layout_index = self.engine.get_current_state()['group']
         self.engine.stop_listen(XKLL_TRACK_KEYBOARD_STATE)
         # assume only 2 layouts with 'us' always first one
         if layout_index:
@@ -94,11 +94,18 @@ class LangPanel(TranslatableWindow):
             return 'us'
 
     def key_event_cb(self, widget, event=None):
-        """Handle key event"""
-        l = self.get_current_layout()
-        if self.selected_layout != l:
-            self.selected_layout = l
-            logging.debug('layout has changed to %s', self.selected_layout)
+        """Handle key event: Alt+Shift"""
+        if event.state & gtk.gdk.SHIFT_MASK:
+            if event.state & gtk.gdk.MOD1_MASK:
+                if 'us' == self.selected_layout:
+                    self.selected_layout = self.layout
+                else:
+                    self.selected_layout = 'us'
+                logging.debug('layout has changed to %s', self.selected_layout)
+#        l = self.get_current_layout()
+#        if self.selected_layout != l:
+#            self.selected_layout = l
+#            logging.debug('layout has changed to %s', self.selected_layout)
 
     def populate(self):
         """Create all the required entries"""

@@ -10,7 +10,7 @@
     <property name="urgency_hint">True</property>
     <property name="decorated">False</property>
     <property name="deletable">False</property>
-    <signal name="key-release-event" handler="langpanel_key_event_cb" swapped="no"/>
+    <signal name="key-press-event" handler="langpanel_key_event_cb" swapped="no"/>
     <child>
       <object class="GtkTable" id="table1">
         <property name="visible">True</property>
