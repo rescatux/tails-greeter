@@ -1,6 +1,6 @@
-tails-greeter (0.0.7~3.gbp8b5174) UNRELEASED; urgency=low
+tails-greeter (0.0.7~4.gbp3bb483) UNRELEASED; urgency=low
 
-  ** SNAPSHOT build @8b517403723b12084f6af17300d875c4212ae06e **
+  ** SNAPSHOT build @3bb483ae805dc65ffe6474d4f4b5f26d71b38aa2 **
 
   * remove obsolete dependency
   * supply session data to files instead of subprocesses
@@ -19,8 +19,10 @@ tails-greeter (0.0.7~3.gbp8b5174) UNRELEASED; urgency=low
   * finish migration to panel
   * add SelectLayout stub
   * add foolproofing to layout selection
+  * fix layout selection
+  * separate layout selection for the session and for the greeter
 
- -- Max S <govnototalitarizm@gmail.com>  Mon, 08 Aug 2011 00:34:40 +0800
+ -- Max S <govnototalitarizm@gmail.com>  Mon, 08 Aug 2011 17:06:10 +0800
 
 tails-greeter (0.0.6) squeeze-backports; urgency=low
 
