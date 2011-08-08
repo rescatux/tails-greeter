@@ -34,6 +34,7 @@ class LangPanel(TranslatableWindow):
     crecord = None
     layout_name = None
     language_code = None
+    default_position = 0
     populated_language = None
 
     def __init__(self, *args, **kwargs):
@@ -46,7 +47,7 @@ class LangPanel(TranslatableWindow):
         text_combobox(self.widget('layout_combobox'), self.widget('layouts'))
         text_combobox(self.widget('lang_list_combobox'), self.widget('languages'))
         self.populate()
-        self.widget('lang_list_combobox').set_active(0)
+        self.widget('lang_list_combobox').set_active(self.default_position)
 
     def populate_locale_variant(self, language):
         """populate the list with country variants for a given language"""
@@ -64,9 +65,14 @@ class LangPanel(TranslatableWindow):
             self.crecord.activate(xklavier.Engine(gtk.gdk.display_get_default()))
         self.widget('layout_combobox').set_active(0)
         self.widget('locales').clear()
+        count = 0
+        default = 0
         for l in ln_list(language):
             self.widget('locales').append([l])
-        self.widget('locale_variant_combobox').set_active(0)
+            if 'en_US' == l:
+                default = count
+            count = count + 1
+        self.widget('locale_variant_combobox').set_active(default)
         self.gen_variants()
 
     def gen_variants(self):
@@ -75,8 +81,12 @@ class LangPanel(TranslatableWindow):
 
     def populate(self):
         """Create all the required entries"""
+        count = 0
         for l in LANGS:
             self.widget('languages').append([l])
+            if 'English' == l:
+                self.default_position = count
+            count = count + 1
 
     def populate_layouts(self, c_reg, item):
         """Obtain variants for a given layout"""
