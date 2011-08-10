@@ -86,12 +86,16 @@ class LangPanel(TranslatableWindow):
         """Handle key event - check for layout change"""
         if event:
             if event.keyval ==  gtk.keysyms.ISO_Next_Group or event.keyval ==  gtk.keysyms.ISO_Prev_Group:
-                if 'us' == self.selected_layout:
-                    self.selected_layout = self.added_layout
-                else:
-                    self.selected_layout = 'us'
-                logging.debug('layout has changed to %s', self.selected_layout)
-                self.widget('layout_indicator').set_text('Layout: [%s]' % self.selected_layout.Upper())
+                self.change_layout()
+
+    def change_layout(self):
+        """update layout indicator state"""
+        if 'us' == self.selected_layout:
+            self.selected_layout = self.added_layout
+        else:
+            self.selected_layout = 'us'
+        logging.debug('layout has changed to %s', self.selected_layout)
+        self.widget('layout_indicator').set_text('Layout: [%s]' % self.selected_layout.upper())
 
     def populate(self):
         """Create all the required entries"""
