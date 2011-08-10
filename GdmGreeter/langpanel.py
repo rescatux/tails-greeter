@@ -36,6 +36,7 @@ class LangPanel(TranslatableWindow):
     engine = None
     crecord = None
     layout_name = None
+    added_layout = None
     language_code = None
     default_position = 0
 
@@ -56,13 +57,13 @@ class LangPanel(TranslatableWindow):
         """populate the list with country variants for a given language"""
         self.widget('layouts').clear()
         self.widget('layouts').append(['us'])
-        self.layout = ln_cc(language).split('_')[1].lower()
-        logging.debug('layout is %s', self.layout)
-        if self.layout and self.layout != 'us':
-            self.widget('layouts').append([self.layout])
-            logging.debug('added layout %s', self.layout)
-            self.crecord.set_layouts(['us', self.layout])
+        self.added_layout = ln_cc(language).split('_')[1].lower()
+        if self.added_layout and self.added_layout != 'us':
+            self.widget('layouts').append([self.added_layout])
+            logging.debug('added layout %s', self.added_layout)
+            self.crecord.set_layouts(['us', self.added_layout])
             self.crecord.set_options(['grp:alt_shift_toggle'])
+#            self.crecord.set_options(['grp:sclk_toggle'])
             logging.debug('options set to %s', self.crecord.get_options())
             self.crecord.activate(self.engine)
         self.widget('layout_combobox').set_active(0)
@@ -81,31 +82,15 @@ class LangPanel(TranslatableWindow):
         """function to trigger layout variant selection"""
         self.configreg.foreach_layout(self.filter_layout)
 
-    def get_current_layout(self):
-        """Get currently active keyboard layout"""
-        self.engine.start_listen(XKLL_TRACK_KEYBOARD_STATE)
-        self.engine.lock_group(self.engine.get_next_group())
-        layout_index = self.engine.get_current_state()['group']
-        self.engine.stop_listen(XKLL_TRACK_KEYBOARD_STATE)
-        # assume only 2 layouts with 'us' always first one
-        if layout_index:
-            return self.layout
-        else:
-            return 'us'
-
     def key_event_cb(self, widget, event=None):
-        """Handle key event: Alt+Shift"""
-        if event.state & gtk.gdk.SHIFT_MASK:
-            if event.state & gtk.gdk.MOD1_MASK:
+        """Handle key event - check for layout change"""
+        if event:
+            if event.keyval ==  gtk.keysyms.ISO_Next_Group or event.keyval ==  gtk.keysyms.ISO_Prev_Group:
                 if 'us' == self.selected_layout:
-                    self.selected_layout = self.layout
+                    self.selected_layout = self.added_layout
                 else:
                     self.selected_layout = 'us'
                 logging.debug('layout has changed to %s', self.selected_layout)
-#        l = self.get_current_layout()
-#        if self.selected_layout != l:
-#            self.selected_layout = l
-#            logging.debug('layout has changed to %s', self.selected_layout)
 
     def populate(self):
         """Create all the required entries"""
