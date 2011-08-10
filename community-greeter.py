@@ -88,25 +88,14 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
         """Sever is ready"""
         if not self.lang:
             self.lang = self.load_window('langpanel')
+        if not self.login:
+            self.login = self.load_window('autologin', service = self.obj)
         else:
             self.login.window.set_sensitive(True)
             self.login.show_user('')
         GdmGreeter.Ready(self)
         self.ready = True
-        logging.warn("server is ready.")
-
-    def SwitchVisibility(self):
-        """Switch widgets visibility"""
-        if not self.login:
-            with open(self.locale_path, 'w') as f:
-                f.write('TAILS_LOCALE_NAME=%s\n' % self.lang.language_code)
-            logging.debug('locale %s written to %s', self.lang.language_code, self.locale_path)
-            logging.debug('loading login')
-            self.login = self.load_window('autologin', service = self.obj)
-            self.lang.destroy()
-            if self.login:
-                if self.postponed:
-                    self.login.show_user(self.postponed_text)
+        logging.warn("greeter is ready.")
 
     def SelectLanguage(self, lang):
         """The user wants to change languages"""
@@ -167,6 +156,10 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
                 with open(self.password_path, 'w') as f:
                     f.write('TAILS_USER_PASSWORD=%s\n' % self.login.auth_password)
                     logging.debug('password written to %s', self.password_path)
+        if self.lang:
+            if self.lang.language_code:
+                with open(self.locale_path, 'w') as f:
+                    f.write('TAILS_LOCALE_NAME=%s\n' % self.lang.language_code)
         logging.info("Finished.")
         gtk.main_quit()
 

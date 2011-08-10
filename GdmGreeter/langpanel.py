@@ -125,14 +125,6 @@ class LangPanel(TranslatableWindow):
             c_reg.foreach_layout_variant(item.get_name(), self.populate_layouts)
             self.widget('layout_combobox').set_active(0)
 
-    def button_clicked(self, widget):
-        """Signal event to move to next widget"""
-        logging.debug('panel button clicked')
-        self.translate_action(widget, False)
-        self.language_code = self.widget('locale_variant_combobox').get_active_text()
-        self.gapp.SelectLanguage(self.language_code)
-        self.gapp.SwitchVisibility()
-
     def translate_to(self, lang):
         """Press the selected language's button"""
         lang = self.language(lang)
