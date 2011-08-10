@@ -1,6 +1,6 @@
-tails-greeter (0.0.7~4.gbp3bb483) UNRELEASED; urgency=low
+tails-greeter (0.0.7~5.gbped2b66) UNRELEASED; urgency=low
 
-  ** SNAPSHOT build @3bb483ae805dc65ffe6474d4f4b5f26d71b38aa2 **
+  ** SNAPSHOT build @ed2b6682b48f73116e4962d66a61b1ac51b127db **
 
   * remove obsolete dependency
   * supply session data to files instead of subprocesses
@@ -21,8 +21,16 @@ tails-greeter (0.0.7~4.gbp3bb483) UNRELEASED; urgency=low
   * add foolproofing to layout selection
   * fix layout selection
   * separate layout selection for the session and for the greeter
+  * misc cleanups
+  * use en_US by default
+  * add internal layout indicator
+  * use another approach for layout tracking
+  * internal layout indicator fix
+  * load widgets simultaneously
+  * expose internal layout indicator in UI
+  * fix cross-widget layout indication
 
- -- Max S <govnototalitarizm@gmail.com>  Mon, 08 Aug 2011 17:06:10 +0800
+ -- Max S <govnototalitarizm@gmail.com>  Wed, 10 Aug 2011 22:04:42 +0800
 
 tails-greeter (0.0.6) squeeze-backports; urgency=low
 
