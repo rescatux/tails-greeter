@@ -91,6 +91,7 @@ class LangPanel(TranslatableWindow):
                 else:
                     self.selected_layout = 'us'
                 logging.debug('layout has changed to %s', self.selected_layout)
+                self.widget('layout_indicator').set_text('Layout: [%s]' % self.selected_layout.Upper())
 
     def populate(self):
         """Create all the required entries"""
@@ -138,6 +139,3 @@ class LangPanel(TranslatableWindow):
         if populate_locales:
             self.populate_locale_variant(self.language_name)
 
-    def skip_button_clicked(self, widget):
-        """Initiate immediate login"""
-        self.gapp.ForcedLogin()
