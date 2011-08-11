@@ -64,7 +64,7 @@ class LangPanel(TranslatableWindow):
         self.widget('session_layouts').clear()
         self.widget('session_layouts').append(['us'])
         self.added_layout = ln_cc(language).split('_')[1].lower()
-        if self.added_layout and self.added_layout != 'us' and language_iso639:
+        if self.added_layout and self.added_layout != 'us' and :
             self.widget('session_layouts').append([self.added_layout])
             logging.debug('added layout %s', self.added_layout)
             self.crecord.set_layouts(['us', self.added_layout])
@@ -96,14 +96,18 @@ class LangPanel(TranslatableWindow):
 
     def layout_populate_lang(self, config_registry, item, subitem, store):
         layout = item.get_name()
-        if subitem:
-            description = '%s, %s' % (subitem.get_description(), item.get_description())
-            variant = subitem.get_name()
-        else:
-            description = 'Default layout, %s' % item.get_description()
-            variant = ''
-        store.append([description, ('%s(%s)' % (layout, variant))])
-        logging.debug('appending %s: %s(%s)', description, layout, variant)
+        if 'us' != layout:
+            name = '%s (%s)' % (layout, item.get_description())
+            if name not in store: store.append(name)
+#        if subitem:
+#            description = '%s, %s' % (subitem.get_description(), item.get_description())
+#            variant = subitem.get_name()
+#        else:
+#            description = 'Default layout, %s' % item.get_description()
+#            variant = ''
+#        store.append([description, ('%s(%s)' % (layout, variant))])
+#        logging.debug('appending %s: %s(%s)', description, layout, variant)
+
 
     def get_layouts_for_language(self, language):
         """Return list of supported keyboard layouts for a given language"""
