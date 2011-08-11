@@ -22,8 +22,7 @@ Greeter program for GDM using gtk (nothing else works)
 import logging, gtk, xklavier
 
 from gtkme.listview import text_combobox
-from xklavier import XKLL_TRACK_KEYBOARD_STATE
-from GdmGreeter.language import TranslatableWindow, LANGS, ln_list, ln_cc
+from GdmGreeter.language import TranslatableWindow, LANGS, ln_list, ln_cc, iso639
 
 class LangPanel(TranslatableWindow):
     """Display language and layout selection panel"""
@@ -57,9 +56,11 @@ class LangPanel(TranslatableWindow):
     def populate_for_language(self, language):
         """populate the lists with country locales and layouts for a given language"""
         self.widget('layouts').clear()
-        layouts = self.get_layouts_for_language(language)
-        for l in layouts:
-            self.widget('layouts').append([l])
+        language_iso639 = iso639().conv(language)
+        if language_iso639:
+            layouts = self.get_layouts_for_language(language)
+            for l in layouts:
+                self.widget('layouts').append([l])
         self.widget('session_layouts').clear()
         self.widget('session_layouts').append(['us'])
         self.added_layout = ln_cc(language).split('_')[1].lower()
@@ -102,12 +103,14 @@ class LangPanel(TranslatableWindow):
             description = 'Default layout, %s' % item.get_description()
             variant = ''
         store.append([description, ('%s(%s)' % (layout, variant))])
+        logging.debug('appending %s: %s(%s)', description, layout, variant)
 
     def get_layouts_for_language(self, language):
         """Return list of supported keyboard layouts for a given language"""
         layouts = []
         self.configreg.foreach_language_variant(language, self.layout_populate_lang, layouts)
         layouts.sort()
+        logging.debug('got %d layouts for %s', len(layouts), language)
         return layouts
         
     def change_layout(self):
