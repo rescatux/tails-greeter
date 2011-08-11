@@ -47,26 +47,31 @@ class LangPanel(TranslatableWindow):
         self.configreg.load(False)
         self.crecord = xklavier.ConfigRec()
         self.crecord.get_from_server(self.engine)
-        text_combobox(self.widget('locale_variant_combobox'), self.widget('locales'))
-        text_combobox(self.widget('layout_combobox'), self.widget('layouts'))
-        text_combobox(self.widget('lang_list_combobox'), self.widget('languages'))
+        text_combobox(self.widget('locale_variant_cbox'), self.widget('locales'))
+        text_combobox(self.widget('layout_cbox'), self.widget('layouts'))
+        text_combobox(self.widget('session_layouts_cbox'), self.widget('session_layouts'))
+        text_combobox(self.widget('lang_list_cbox'), self.widget('languages'))
         self.populate()
-        self.widget('lang_list_combobox').set_active(self.default_position)
+        self.widget('lang_list_cbox').set_active(self.default_position)
 
-    def populate_locale_variant(self, language):
-        """populate the list with country variants for a given language"""
+    def populate_for_language(self, language):
+        """populate the lists with country locales and layouts for a given language"""
         self.widget('layouts').clear()
-        self.widget('layouts').append(['us'])
+        layouts = self.get_layouts_for_language(language)
+        for l in layouts:
+            self.widget('layouts').append([l])
+        self.widget('session_layouts').clear()
+        self.widget('session_layouts').append(['us'])
         self.added_layout = ln_cc(language).split('_')[1].lower()
         if self.added_layout and self.added_layout != 'us':
-            self.widget('layouts').append([self.added_layout])
+            self.widget('session_layouts').append([self.added_layout])
             logging.debug('added layout %s', self.added_layout)
             self.crecord.set_layouts(['us', self.added_layout])
             self.crecord.set_options(['grp:alt_shift_toggle'])
 #            self.crecord.set_options(['grp:sclk_toggle'])
             logging.debug('options set to %s', self.crecord.get_options())
             self.crecord.activate(self.engine)
-        self.widget('layout_combobox').set_active(0)
+        self.widget('layout_cbox').set_active(0)
         self.widget('locales').clear()
         count = 0
         default = 0
@@ -75,7 +80,7 @@ class LangPanel(TranslatableWindow):
             if 'en_US' == l:
                 default = count
             count += 1
-        self.widget('locale_variant_combobox').set_active(default)
+        self.widget('locale_variant_cbox').set_active(default)
         self.gen_variants()
 
     def gen_variants(self):
@@ -88,6 +93,23 @@ class LangPanel(TranslatableWindow):
             if event.keyval ==  gtk.keysyms.ISO_Next_Group or event.keyval ==  gtk.keysyms.ISO_Prev_Group:
                 self.change_layout()
 
+    def layout_populate_lang(self, config_registry, item, subitem, store):
+        layout = item.get_name()
+        if subitem:
+            description = '%s, %s' % (subitem.get_description(), item.get_description())
+            variant = subitem.get_name()
+        else:
+            description = 'Default layout, %s' % item.get_description()
+            variant = ''
+        store.append([description, ('%s(%s)' % (layout, variant))])
+
+    def get_layouts_for_language(self, language):
+        """Return list of supported keyboard layouts for a given language"""
+        layouts = []
+        self.configreg.foreach_language_variant(language, self.layout_populate_lang, layouts)
+        layouts.sort()
+        return layouts
+        
     def change_layout(self):
         """update layout indicator state"""
         if 'us' == self.selected_layout:
@@ -112,7 +134,7 @@ class LangPanel(TranslatableWindow):
 
     def layout_selected(self, widget):
         """handler for combobox selecion event"""
-        self.layout = self.widget('layout_combobox').get_active_text()
+        self.layout = self.widget('layout_cbox').get_active_text()
         logging.debug('obtained layout %s', self.layout)
         if self.layout:
             logging.debug('setting layout %s', self.layout)
@@ -120,7 +142,7 @@ class LangPanel(TranslatableWindow):
 
     def locale_selected(self, widget):
         """handler for combobox selecion event"""
-        self.language_code = self.widget('locale_variant_combobox').get_active_text()
+        self.language_code = self.widget('locale_variant_cbox').get_active_text()
         self.gen_variants()
 
     def filter_layout(self, c_reg, item):
@@ -128,7 +150,7 @@ class LangPanel(TranslatableWindow):
         if item.get_name() == self.layout:
             self.layout_name = item.get_description()
             c_reg.foreach_layout_variant(item.get_name(), self.populate_layouts)
-            self.widget('layout_combobox').set_active(0)
+            self.widget('layout_cbox').set_active(0)
 
     def translate_to(self, lang):
         """Press the selected language's button"""
@@ -138,8 +160,8 @@ class LangPanel(TranslatableWindow):
 
     def translate_action(self, widget, populate_locales = True):
         """Signal event to translate entire app"""
-        self.language_name = self.widget('lang_list_combobox').get_active_text()
+        self.language_name = self.widget('lang_list_cbox').get_active_text()
         self.gapp.SelectLanguage(ln_cc(self.language_name))
         if populate_locales:
-            self.populate_locale_variant(self.language_name)
+            self.populate_for_language(self.language_name)
 
