@@ -56,15 +56,15 @@ class LangPanel(TranslatableWindow):
     def populate_for_language(self, language):
         """populate the lists with country locales and layouts for a given language"""
         self.widget('layouts').clear()
-        language_iso639 = iso639().conv(language)
+        language_iso639 = iso639().conv(ln_cc(language))
         if language_iso639:
-            layouts = self.get_layouts_for_language(language)
+            layouts = self.get_layouts_for_language(language_iso639)
             for l in layouts:
                 self.widget('layouts').append([l])
         self.widget('session_layouts').clear()
         self.widget('session_layouts').append(['us'])
         self.added_layout = ln_cc(language).split('_')[1].lower()
-        if self.added_layout and self.added_layout != 'us':
+        if self.added_layout and self.added_layout != 'us' and language_iso639:
             self.widget('session_layouts').append([self.added_layout])
             logging.debug('added layout %s', self.added_layout)
             self.crecord.set_layouts(['us', self.added_layout])
