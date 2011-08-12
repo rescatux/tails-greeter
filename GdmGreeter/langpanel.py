@@ -64,7 +64,7 @@ class LangPanel(TranslatableWindow):
         self.widget('session_layouts').clear()
         self.widget('session_layouts').append(['us'])
         self.added_layout = ln_cc(language).split('_')[1].lower()
-        if self.added_layout and self.added_layout != 'us' and :
+        if self.added_layout and self.added_layout != 'us' and language_iso639:
             self.widget('session_layouts').append([self.added_layout])
             logging.debug('added layout %s', self.added_layout)
             self.crecord.set_layouts(['us', self.added_layout])
