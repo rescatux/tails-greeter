@@ -1,3 +1,13 @@
+tails-greeter (0.0.7) squeeze-backports; urgency=low
+
+  * update debian/changelog
+  * refactor layout code
+  * add 2->3 language code convertor
+  * add more checks for layout availability
+  * ignore variants in layout list
+
+ -- Max S <govnototalitarizm@gmail.com>  Fri, 12 Aug 2011 20:06:50 +0800
+
 tails-greeter (0.0.7~5.gbped2b66) UNRELEASED; urgency=low
 
   ** SNAPSHOT build @ed2b6682b48f73116e4962d66a61b1ac51b127db **
