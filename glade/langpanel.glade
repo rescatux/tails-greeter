@@ -18,7 +18,7 @@
         <property name="n_rows">4</property>
         <property name="n_columns">3</property>
         <child>
-          <object class="GtkComboBox" id="locale_variant_cbox">
+          <object class="GtkComboBox" id="locale_cbox">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <signal name="changed" handler="langpanel_locale_selected" swapped="no"/>
@@ -96,7 +96,7 @@
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="xalign">0</property>
-            <property name="label" translatable="yes">Gnome session default layout:</property>
+            <property name="label" translatable="yes">Variant:</property>
           </object>
           <packing>
             <property name="top_attach">3</property>
@@ -104,10 +104,10 @@
           </packing>
         </child>
         <child>
-          <object class="GtkComboBox" id="session_layouts_cbox">
+          <object class="GtkComboBox" id="variant_cbox">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <signal name="changed" handler="langpanel_session_layout_selected" swapped="no"/>
+            <signal name="changed" handler="langpanel_variant_selected" swapped="no"/>
           </object>
           <packing>
             <property name="left_attach">1</property>
@@ -197,7 +197,7 @@
       <column type="gchararray"/>
     </columns>
   </object>
-  <object class="GtkListStore" id="session_layouts">
+  <object class="GtkListStore" id="variants">
     <columns>
       <!-- column-name name -->
       <column type="gchararray"/>

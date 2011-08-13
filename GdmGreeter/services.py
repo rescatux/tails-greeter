@@ -20,11 +20,10 @@
 Provides access to gdm services for python greeters (login windows).
 """
 
-import os, time
-import logging
-import locale
+import os, time, logging, locale
 import dbus, dbus.bus, dbus.exceptions
 from dbus.mainloop.glib import DBusGMainLoop
+
 DBusGMainLoop(set_as_default = True)
 
 PASSWD = '/etc/passwd'
@@ -93,11 +92,9 @@ class GdmGreeter(GdmDbusService):
 
     def SelectLayout(self, layout):
         """Call into GdmGreeter to change the layout"""
-        logging.debug("Setting layout to %s", layout)
-        if layout:
-            self.obj.SelectLayout(layout)
-        else:
-            logging.debug("Ignoring %s", layout)
+        logging.debug("Setting session layout to %s", layout)
+        if layout: self.obj.SelectLayout(layout)
+        else: logging.debug("Ignored %s", layout)
 
     def Ready(self):
         """Called when greeter service is ready"""
