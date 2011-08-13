@@ -141,10 +141,14 @@ class LangPanel(TranslatableWindow):
 
     def layout_selected(self, widget):
         """handler for combobox selecion event"""
-        self.layout = self.widget('layout_cbox').get_active_text()
-        logging.debug('obtained layout %s', self.layout)
+        layout = self.widget('layout_cbox').get_active_text()
+        logging.debug('selected layout %s', layout)
+
+    def session_layout_selected(self, widget):
+        """handler for combobox selecion event"""
+        self.layout = self.widget('session_layouts_cbox').get_active_text()
         if self.layout:
-            logging.debug('setting layout %s', self.layout)
+            logging.debug('setting session layout %s', self.layout)
             self.gapp.SelectLayout(self.layout)
 
     def locale_selected(self, widget):
