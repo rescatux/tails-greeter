@@ -90,51 +90,59 @@ LANGS = sorted(LDICT.keys(), key=compare_choice)
 TEXTS = get_texts(LDICT)
 
 class iso639():
-
+    """Utility class to convert iso639 2-letter into 3-letter language code"""
     test_country = None
     test_name = None
     found = False
     name_check = True
+    lang_check = True
     display = None
     engine = None
     configreg = None
     triplets = []
 
     def __init__(self):
+        """xklavier loader"""
         self.display = gtk.gdk.display_get_default()
-	self.engine = xklavier.Engine(self.display)
+        self.engine = xklavier.Engine(self.display)
         self.configreg = xklavier.ConfigRegistry(self.engine)
-	self.configreg.load(False)
+        self.configreg.load(False)
 
     def process_variant(self, c_reg, item, subitem):
-	if item.get_name() == self.test_country:
-	    self.found = True
+        """internal comparison utility"""
+        if self.lang_check:
+            if item.get_name() == self.test_country: self.found = True
+        else:
+            if item.get_name() == self.test_name: self.found = True
     
     def process_language(self, c_reg, item):
-	c_reg.foreach_language_variant(item.get_name(), self.process_variant)
-	if self.found:
-	    if self.name_check:
-		if self.test_name == item.get_name()[:2]:
-		    self.triplets.append(item.get_name())
-	    else:
-		self.triplets.append(item.get_name())
-	    self.found = False
+        """internal search result processor"""
+        c_reg.foreach_language_variant(item.get_name(), self.process_variant)
+        if self.found:
+            if self.name_check:
+                if self.test_name == item.get_name()[:2]: self.triplets.append(item.get_name())
+            else: self.triplets.append(item.get_name())
+            self.found = False
 
-    def search(self, lang, check = True):
-	self.test_country = lang.split('_')[1].lower()
-	self.test_name = lang.split('_')[0]
-	self.triplets = []
-	self.name_check = check
-	self.configreg.foreach_language(self.process_language)
-	return self.triplets
+    def search(self, lang):
+        """search 2-letter language code"""
+        self.test_country = lang.split('_')[1].lower()
+        self.test_name = lang.split('_')[0]
+        self.triplets = []
+        self.configreg.foreach_language(self.process_language)
+        return self.triplets
 
     def conv(self, bi):
-	res = self.search(bi)
-	if 0 == len(res):
-	    res = self.search(bi, False)
-	if 0 == len(res):
-	    return None
-	return res[0]
+        """conversion via cascade search"""
+        res = self.search(bi)
+        if 0 == len(res):
+            self.name_check = False
+            res = self.search(bi)
+        if 0 == len(res):
+            self.lang_check = False
+            res = self.search(bi)
+        if 0 == len(res): return None
+        return res[0]
 
 class Translatable(object):
     """Provides functions for translating the window on the fly"""

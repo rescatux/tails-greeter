@@ -105,6 +105,7 @@ class LangPanel(TranslatableWindow):
                 self.update_layout_indicator()
 
     def layout_populate_lang(self, config_registry, item, subitem, store):
+        """add layout to the store"""
         layout = item.get_name()
         if 'us' != layout:
             name = '%s (%s)' % (layout, item.get_description())
