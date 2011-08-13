@@ -22,7 +22,7 @@ Greeter program for GDM using gtk (nothing else works)
 import logging, gtk, xklavier
 
 from gtkme.listview import text_combobox
-from GdmGreeter.language import TranslatableWindow, LANGS, ln_list, ln_cc, iso639
+from GdmGreeter.language import TranslatableWindow, LANGS, ln_list, iso639
 
 class LangPanel(TranslatableWindow):
     """Display language and layout selection panel"""
@@ -53,26 +53,33 @@ class LangPanel(TranslatableWindow):
         self.populate()
         self.widget('lang_list_cbox').set_active(self.default_position)
 
-    def populate_for_language(self, language):
-        """populate the lists with country locales and layouts for a given language"""
+    def populate_for_locale(self, locale):
+        """populate the lists for a given locale"""
         self.widget('layouts').clear()
-        language_iso639 = iso639().conv(ln_cc(language))
+        language_iso639 = iso639().conv(locale)
         if language_iso639:
             layouts = self.get_layouts_for_language(language_iso639)
+            count = 0
+            default = 0
             for l in layouts:
                 self.widget('layouts').append([l])
+                if locale.split('_')[1].lower() == l: default = count
+                count += 1
         self.widget('layout_cbox').set_active(0)
+
+    def populate_for_language(self, language):
+        """populate the lists for a given language"""
         self.widget('locales').clear()
         count = 0
         default = 0
         for l in ln_list(language):
             self.widget('locales').append([l])
-            if 'en_US' == l:
-                default = count
+            if 'en_US' == l: default = count
             count += 1
         self.widget('locale_variant_cbox').set_active(default)
 
     def populate_for_layout(self, layout):
+        """populate the lists for a given layout"""
         self.widget('session_layouts').clear()
         self.widget('session_layouts').append(['us'])
         if layout != 'us':
@@ -144,17 +151,11 @@ class LangPanel(TranslatableWindow):
     def locale_selected(self, widget):
         """handler for combobox selecion event"""
         self.language_code = self.widget('locale_variant_cbox').get_active_text()
+        self.gapp.SelectLanguage(self.language_code)
+        self.populate_for_locale(self.language_code)
 
-    def translate_to(self, lang):
-        """Press the selected language's button"""
-        lang = self.language(lang)
-        TranslatableWindow.translate_to(self, lang)
-        logging.debug('translating to %s', lang)
-
-    def translate_action(self, widget, populate_locales = True):
+    def language_selected(self, widget):
         """Signal event to translate entire app"""
         self.language_name = self.widget('lang_list_cbox').get_active_text()
-        self.gapp.SelectLanguage(ln_cc(self.language_name))
-        if populate_locales:
-            self.populate_for_language(self.language_name)
+        self.populate_for_language(self.language_name)
 
