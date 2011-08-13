@@ -61,18 +61,6 @@ class LangPanel(TranslatableWindow):
             layouts = self.get_layouts_for_language(language_iso639)
             for l in layouts:
                 self.widget('layouts').append([l])
-        self.widget('session_layouts').clear()
-        self.widget('session_layouts').append(['us'])
-        self.added_layout = ln_cc(language).split('_')[1].lower()
-        if self.added_layout and self.added_layout != 'us' and language_iso639:
-            self.widget('session_layouts').append([self.added_layout])
-            logging.debug('added layout %s', self.added_layout)
-            self.crecord.set_layouts(['us', self.added_layout])
-            self.crecord.set_options(['grp:alt_shift_toggle'])
-#            self.crecord.set_options(['grp:sclk_toggle'])
-            logging.debug('options set to %s', self.crecord.get_options())
-            self.crecord.activate(self.engine)
-        self.widget('layout_cbox').set_active(0)
         self.widget('locales').clear()
         count = 0
         default = 0
@@ -82,6 +70,20 @@ class LangPanel(TranslatableWindow):
                 default = count
             count += 1
         self.widget('locale_variant_cbox').set_active(default)
+
+    def populate_for_layout(self, layout):
+        self.widget('session_layouts').clear()
+        self.widget('session_layouts').append(['us'])
+        if layout != 'us':
+            self.added_layout = layout
+            self.widget('session_layouts').append([self.added_layout])
+            logging.debug('added layout %s', self.added_layout)
+            self.crecord.set_layouts(['us', self.added_layout])
+            self.crecord.set_options(['grp:alt_shift_toggle'])
+#            self.crecord.set_options(['grp:sclk_toggle'])
+            logging.debug('options set to %s', self.crecord.get_options())
+            self.crecord.activate(self.engine)
+        self.widget('layout_cbox').set_active(0)
         self.gen_variants()
 
     def gen_variants(self):
@@ -143,6 +145,7 @@ class LangPanel(TranslatableWindow):
         """handler for combobox selecion event"""
         layout = self.widget('layout_cbox').get_active_text()
         logging.debug('selected layout %s', layout)
+        self.populate_for_layout(layout.split()[0])
 
     def session_layout_selected(self, widget):
         """handler for combobox selecion event"""
