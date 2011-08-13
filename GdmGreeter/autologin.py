@@ -54,7 +54,7 @@ class AutologinWindow(TranslatableWindow):
                 self.get_pass(widget)
             if event.keyval ==  gtk.keysyms.ISO_Next_Group or event.keyval ==  gtk.keysyms.ISO_Prev_Group:
                 if self.gapp.lang:
-                    self.gapp.lang.change_layout()
+                    self.gapp.lang.update_layout_indicator()
 
     def proceed_login(self):
         """Autologin attempt"""

@@ -63,9 +63,14 @@ class LangPanel(TranslatableWindow):
             default = 0
             for l in layouts:
                 self.widget('layouts').append([l])
-                if locale.split('_')[1].lower() == l: default = count
+                if locale.split('_')[1].lower() == l.split()[0]: default = count
                 count += 1
-        self.widget('layout_cbox').set_active(0)
+            if 'en_US' != locale: self.widget('layout_cbox').set_active(default)
+        else:
+            self.widget('session_layouts').clear()
+            self.crecord.set_layouts(['us'])
+            self.crecord.activate(self.engine)
+            self.gapp.SelectLayout('us')
 
     def populate_for_language(self, language):
         """populate the lists for a given language"""
@@ -151,8 +156,9 @@ class LangPanel(TranslatableWindow):
     def locale_selected(self, widget):
         """handler for combobox selecion event"""
         self.language_code = self.widget('locale_variant_cbox').get_active_text()
-        self.gapp.SelectLanguage(self.language_code)
-        self.populate_for_locale(self.language_code)
+        if self.language_code:
+            self.gapp.SelectLanguage(self.language_code)
+            self.populate_for_locale(self.language_code)
 
     def language_selected(self, widget):
         """Signal event to translate entire app"""
