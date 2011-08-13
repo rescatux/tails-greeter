@@ -1,6 +1,6 @@
-tails-greeter (0.0.8~2.gbpfcff2e) UNRELEASED; urgency=low
+tails-greeter (0.0.8~3.gbp8776b9) UNRELEASED; urgency=low
 
-  ** SNAPSHOT build @fcff2e8acbe65d8e3326ac4ca3a072b16b11e59e **
+  ** SNAPSHOT build @8776b9f3af0e0d8a43c7e9b62ae395178d815a37 **
 
   * fix merge error
   * add cbox handling functions
@@ -9,8 +9,13 @@ tails-greeter (0.0.8~2.gbpfcff2e) UNRELEASED; urgency=low
   * remove obsolete code
   * refactor layout code
   * misc layout fixes
+  * update translation
+  * disable root access if password is not set
+  * fix path in helper script
+  * fix and document iso639 conversion
+  * handle search heuristics failure gracefully
 
- -- Max S <govnototalitarizm@gmail.com>  Sat, 13 Aug 2011 21:04:17 +0800
+ -- Max S <govnototalitarizm@gmail.com>  Sat, 13 Aug 2011 23:21:37 +0800
 
 tails-greeter (0.0.7) squeeze-backports; urgency=low
 
