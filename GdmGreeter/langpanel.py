@@ -163,9 +163,9 @@ class LangPanel(TranslatableWindow):
         if layout:
             self.apply_layout(layout.split()[0])
             logging.debug('selected layout %s', layout)
-            self.layout = layout
-            self.gapp.SelectLayout(layout)
-            variants = self.get_varians_for_layout(layout)
+            self.layout = layout.split()[0]
+            self.gapp.SelectLayout(self.layout)
+            variants = self.get_varians_for_layout(self.layout)
             self.widget('variants').clear()
             self.widget('variants').append(['Default'])
             self.widget('variant_cbox').set_active(0)
