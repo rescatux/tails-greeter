@@ -72,9 +72,8 @@ class LangPanel(TranslatableWindow):
                     use_default = 1
                 if locale.split('_')[0].lower() == l.split()[0]: backup = count
                 count += 1
-            if 'en_US' != locale:
-                if use_default: self.widget('layout_cbox').set_active(default)
-                else: self.widget('layout_cbox').set_active(backup)            
+            if use_default: self.widget('layout_cbox').set_active(default)
+            else: self.widget('layout_cbox').set_active(backup)            
         else:
             self.crecord.set_layouts(['us'])
             self.crecord.activate(self.engine)
