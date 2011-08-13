@@ -1,10 +1,16 @@
-tails-greeter (0.0.8~1.gbpc611b5) UNRELEASED; urgency=low
+tails-greeter (0.0.8~2.gbpfcff2e) UNRELEASED; urgency=low
 
-  ** SNAPSHOT build @c611b5a78b88d6fe872d6c466189970a3a847168 **
+  ** SNAPSHOT build @fcff2e8acbe65d8e3326ac4ca3a072b16b11e59e **
 
   * fix merge error
+  * add cbox handling functions
+  * re-arrange panel widgets
+  * re-arrange layout selection order
+  * remove obsolete code
+  * refactor layout code
+  * misc layout fixes
 
- -- Max S <govnototalitarizm@gmail.com>  Sat, 13 Aug 2011 02:19:51 +0800
+ -- Max S <govnototalitarizm@gmail.com>  Sat, 13 Aug 2011 21:04:17 +0800
 
 tails-greeter (0.0.7) squeeze-backports; urgency=low
 

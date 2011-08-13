@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-08 17:21+0800\n"
+"POT-Creation-Date: 2011-08-13 21:03+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,24 +24,29 @@ msgid ""
 msgstr ""
 
 #: ../glade/langpanel.glade.h:1
-msgid "Choose your locale."
+msgid "Current layout: [US]"
 msgstr ""
 
 #: ../glade/langpanel.glade.h:2
-msgid "Please select language for TAILS."
+msgid "Gnome session default layout:"
 msgstr ""
 
 #: ../glade/langpanel.glade.h:3
-msgid "Select keyboard layout."
+msgid "Language:"
 msgstr ""
 
-#. "Alt+Shift" should remain untranslated!
+#: ../glade/langpanel.glade.h:4
+msgid "Layout:"
+msgstr ""
+
 #: ../glade/langpanel.glade.h:5
-msgid ""
-"You can type into this box to test keyboard layout.\n"
-"Switch layouts with Alt+Shift."
+msgid "Locale:"
+msgstr ""
+
+#: ../glade/langpanel.glade.h:6
+msgid "Type into this text-box to test keyboard layout."
 msgstr ""
 
 #: ../glade/langpanel.glade.h:7
-msgid "button"
+msgid "Use Alt+Shift to switch layouts."
 msgstr ""
