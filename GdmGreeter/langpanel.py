@@ -106,7 +106,7 @@ class LangPanel(TranslatableWindow):
             if event.keyval ==  gtk.keysyms.ISO_Next_Group or event.keyval ==  gtk.keysyms.ISO_Prev_Group:
                 self.update_layout_indicator()
 
-    def layout_populate_lang(self, config_registry, item, subitem, store):
+    def process_language(self, config_registry, item, subitem, store):
         """add layout to the store"""
         layout = item.get_name()
         if 'us' != layout:
@@ -121,10 +121,23 @@ class LangPanel(TranslatableWindow):
 #        store.append([description, ('%s(%s)' % (layout, variant))])
 #        logging.debug('appending %s: %s(%s)', description, layout, variant)
 
+    def process_layout(self, config_registry, item, subitem, store):
+        """add variant to the store"""
+        name = '%s (%s)' % (item.get_name(), item.get_description())
+        if name not in store: store.append(name)
+
+    def get_varians_for_layout(self, layout):
+        """Return list of supported keyboard layout variants for a given layout"""
+        variants = []
+        self.configreg.foreach_layout_variant(layout, self.process_layout, variants)
+        variants.sort()
+        logging.debug('got %d variants for layout %s', len(variants), layout)
+        return variants
+
     def get_layouts_for_language(self, language):
         """Return list of supported keyboard layouts for a given language"""
         layouts = []
-        self.configreg.foreach_language_variant(language, self.layout_populate_lang, layouts)
+        self.configreg.foreach_language_variant(language, self.process_language, layouts)
         layouts.sort()
         logging.debug('got %d layouts for %s', len(layouts), language)
         return layouts
