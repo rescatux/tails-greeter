@@ -15,20 +15,8 @@
       <object class="GtkTable" id="table1">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="n_rows">3</property>
-        <property name="n_columns">4</property>
-        <child>
-          <object class="GtkComboBox" id="lang_list_cbox">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <signal name="changed" handler="langpanel_translate_action" swapped="no"/>
-          </object>
-          <packing>
-            <property name="top_attach">1</property>
-            <property name="bottom_attach">2</property>
-            <property name="x_options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
-          </packing>
-        </child>
+        <property name="n_rows">4</property>
+        <property name="n_columns">3</property>
         <child>
           <object class="GtkComboBox" id="locale_variant_cbox">
             <property name="visible">True</property>
@@ -43,21 +31,100 @@
           </packing>
         </child>
         <child>
-          <object class="GtkEntry" id="keyboard_test_entry">
+          <object class="GtkLabel" id="label1">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="xalign">0</property>
+            <property name="label" translatable="yes">Language:</property>
+          </object>
+          <packing>
+            <property name="x_options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkComboBox" id="lang_list_cbox">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <signal name="changed" handler="langpanel_translate_action" swapped="no"/>
+          </object>
+          <packing>
+            <property name="left_attach">1</property>
+            <property name="right_attach">2</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label3">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="xalign">0</property>
+            <property name="label" translatable="yes">Locale:</property>
+          </object>
+          <packing>
+            <property name="top_attach">1</property>
+            <property name="bottom_attach">2</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="layout_comment_label">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
-            <property name="invisible_char">●</property>
-            <property name="invisible_char_set">True</property>
-            <property name="primary_icon_activatable">False</property>
-            <property name="secondary_icon_activatable">False</property>
-            <property name="primary_icon_sensitive">True</property>
-            <property name="secondary_icon_sensitive">True</property>
+            <property name="xalign">0</property>
+            <property name="ypad">6</property>
+            <property name="label" translatable="yes">Layout:</property>
+            <property name="selectable">True</property>
+          </object>
+          <packing>
+            <property name="top_attach">2</property>
+            <property name="bottom_attach">3</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkComboBox" id="layout_cbox">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <signal name="changed" handler="langpanel_layout_selected" swapped="no"/>
           </object>
           <packing>
             <property name="left_attach">1</property>
             <property name="right_attach">2</property>
             <property name="top_attach">2</property>
             <property name="bottom_attach">3</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label2">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="xalign">0</property>
+            <property name="label" translatable="yes">Gnome session default layout:</property>
+          </object>
+          <packing>
+            <property name="top_attach">3</property>
+            <property name="bottom_attach">4</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkComboBox" id="session_layouts_cbox">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <signal name="changed" handler="langpanel_session_layout_selected" swapped="no"/>
+          </object>
+          <packing>
+            <property name="left_attach">1</property>
+            <property name="right_attach">2</property>
+            <property name="top_attach">3</property>
+            <property name="bottom_attach">4</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="layout_indicator">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Current layout: [US]</property>
+          </object>
+          <packing>
+            <property name="left_attach">2</property>
+            <property name="right_attach">3</property>
           </packing>
         </child>
         <child>
@@ -71,97 +138,29 @@
             <property name="selectable">True</property>
           </object>
           <packing>
-            <property name="top_attach">2</property>
-            <property name="bottom_attach">3</property>
-            <property name="x_options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkLabel" id="label1">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="label" translatable="yes">Please select language for TAILS.</property>
-          </object>
-          <packing>
-            <property name="x_options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkLabel" id="layout_comment_label">
-            <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="xalign">0</property>
-            <property name="ypad">6</property>
-            <property name="label" translatable="yes">Choose layout:</property>
-            <property name="selectable">True</property>
-          </object>
-          <packing>
-            <property name="left_attach">2</property>
-            <property name="right_attach">3</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkLabel" id="language_comment_label">
-            <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="xalign">0</property>
-            <property name="ypad">6</property>
-            <property name="label" translatable="yes">Choose locale:</property>
-            <property name="selectable">True</property>
-          </object>
-          <packing>
-            <property name="left_attach">1</property>
-            <property name="right_attach">2</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkComboBox" id="layout_cbox">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <signal name="changed" handler="langpanel_layout_selected" swapped="no"/>
-          </object>
-          <packing>
             <property name="left_attach">2</property>
             <property name="right_attach">3</property>
             <property name="top_attach">1</property>
             <property name="bottom_attach">2</property>
+            <property name="x_options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
           </packing>
         </child>
         <child>
-          <object class="GtkLabel" id="layout_indicator">
+          <object class="GtkEntry" id="keyboard_test_entry">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="label" translatable="yes">Layout: [US]</property>
+            <property name="can_focus">True</property>
+            <property name="invisible_char">●</property>
+            <property name="invisible_char_set">True</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
           </object>
           <packing>
             <property name="left_attach">2</property>
             <property name="right_attach">3</property>
             <property name="top_attach">2</property>
             <property name="bottom_attach">3</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkComboBox" id="session_layouts_cbox">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <signal name="changed" handler="langpanel_session_layout_selected" swapped="no"/>
-          </object>
-          <packing>
-            <property name="left_attach">3</property>
-            <property name="right_attach">4</property>
-            <property name="top_attach">1</property>
-            <property name="bottom_attach">2</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkLabel" id="label2">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="label" translatable="yes">Select keyboard layout for the gnome session.</property>
-          </object>
-          <packing>
-            <property name="left_attach">3</property>
-            <property name="right_attach">4</property>
           </packing>
         </child>
         <child>
