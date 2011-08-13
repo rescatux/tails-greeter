@@ -61,11 +61,18 @@ class LangPanel(TranslatableWindow):
             layouts = self.get_layouts_for_language(language_iso639)
             count = 0
             default = 0
+            backup = 0
+            use_default = 0
             for l in layouts:
                 self.widget('layouts').append([l])
-                if locale.split('_')[1].lower() == l.split()[0]: default = count
+                if locale.split('_')[1].lower() == l.split()[0]:
+                    default = count
+                    use_default = 1
+                if locale.split('_')[0].lower() == l.split()[0]: backup = count
                 count += 1
-            if 'en_US' != locale: self.widget('layout_cbox').set_active(default)
+            if 'en_US' != locale:
+                if use_default: self.widget('layout_cbox').set_active(default)
+                else: self.widget('layout_cbox').set_active(backup)            
         else:
             self.widget('session_layouts').clear()
             self.crecord.set_layouts(['us'])
