@@ -31,9 +31,11 @@ class LangPanel(TranslatableWindow):
     language_name = None
     configreg = None
     layout = 'us'
+    variant = None
     selected_layout = 'us'
     engine = None
     crecord = None
+    lang3 = None
     layout_name = None
     added_layout = None
     language_code = None
@@ -56,9 +58,9 @@ class LangPanel(TranslatableWindow):
     def populate_for_locale(self, locale):
         """populate the lists for a given locale"""
         self.widget('layouts').clear()
-        language_iso639 = iso639().conv(locale)
-        if language_iso639:
-            layouts = self.get_layouts_for_language(language_iso639)
+        self.lang3 = iso639().conv(locale)
+        if self.lang3:
+            layouts = self.get_layouts_for_language(self.lang3)
             count = 0
             default = 0
             backup = 0
@@ -95,8 +97,8 @@ class LangPanel(TranslatableWindow):
             self.added_layout = layout
             logging.debug('added layout %s', self.added_layout)
             self.crecord.set_layouts(['us', self.added_layout])
-            self.crecord.set_options(['grp:alt_shift_toggle'])
-#            self.crecord.set_options(['grp:sclk_toggle'])
+            self.crecord.set_options(['grp:alt_shift_toggle']) # mustdie way
+#            self.crecord.set_options(['grp:sclk_toggle']) # proper way
             logging.debug('options set to %s', self.crecord.get_options())
             self.crecord.activate(self.engine)
 
@@ -109,19 +111,11 @@ class LangPanel(TranslatableWindow):
     def process_language(self, config_registry, item, subitem, store):
         """add layout to the store"""
         layout = item.get_name()
-        if 'us' != layout:
+        if 'eng' == self.lang3 or 'us' != layout:
             name = '%s (%s)' % (layout, item.get_description())
             if name not in store: store.append(name)
-#        if subitem:
-#            description = '%s, %s' % (subitem.get_description(), item.get_description())
-#            variant = subitem.get_name()
-#        else:
-#            description = 'Default layout, %s' % item.get_description()
-#            variant = ''
-#        store.append([description, ('%s(%s)' % (layout, variant))])
-#        logging.debug('appending %s: %s(%s)', description, layout, variant)
 
-    def process_layout(self, config_registry, item, subitem, store):
+    def process_layout(self, config_registry, item, store):
         """add variant to the store"""
         name = '%s (%s)' % (item.get_name(), item.get_description())
         if name not in store: store.append(name)
@@ -174,6 +168,8 @@ class LangPanel(TranslatableWindow):
 
     def variant_selected(self, widget):
         """handler for combobox selecion event"""
+        variant = self.widget('variant_cbox').get_active_text()
+        if variant: self.variant = variant
 
     def locale_selected(self, widget):
         """handler for combobox selecion event"""
