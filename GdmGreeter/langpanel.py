@@ -137,10 +137,19 @@ class LangPanel(TranslatableWindow):
         
     def update_layout_indicator(self):
         """update layout indicator state"""
-        if 'us' == self.selected_layout: self.selected_layout = self.added_layout
-        else: self.selected_layout = 'us'
-        logging.debug('layout has changed to %s', self.selected_layout)
-        self.widget('layout_indicator').set_text('Current layout: [%s]' % self.selected_layout.upper())
+        self.engine.start_listen(xklavier.XKLL_TRACK_KEYBOARD_STATE)
+        state = self.engine.get_current_state()
+        self.engine.stop_listen(xklavier.XKLL_TRACK_KEYBOARD_STATE)
+        layout = self.crecord.get_layouts()[state['group']].upper()
+        variant = self.crecord.get_variants()[state['group']]
+        if variant:
+            self.widget('layout_indicator').set_text('Current layout: [%s (%s)]' % (layout, variant))
+        else:
+            self.widget('layout_indicator').set_text('Current layout: [%s]' % layout)
+#        if 'us' == self.selected_layout: self.selected_layout = self.added_layout
+#        else: self.selected_layout = 'us'
+#        logging.debug('layout has changed to %s', self.selected_layout)
+#        self.widget('layout_indicator').set_text('Current layout: [%s]' % self.selected_layout.upper())
 
     def populate(self):
         """Create all the required entries"""
@@ -154,9 +163,9 @@ class LangPanel(TranslatableWindow):
         """handler for combobox selecion event"""
         layout = self.widget('layout_cbox').get_active_text()
         if layout:
-            self.apply_layout(layout.split()[0])
-            logging.debug('selected layout %s', layout)
             self.layout = layout.split()[0]
+            self.apply_layout(self.layout)
+            logging.debug('selected layout %s', layout)
             self.gapp.SelectLayout(self.layout)
             variants = self.get_varians_for_layout(self.layout)
             self.widget('variants').clear()
