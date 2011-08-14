@@ -19,8 +19,8 @@
 Greeter program for GDM using gtk (nothing else works)
 """
 
-import logging, gtk
-
+import logging, gtk, gettext
+_ = gettext.gettext
 from GdmGreeter.language import TranslatableWindow
 # default TAILS credentials
 LPASSWORD = 'live'
@@ -45,7 +45,7 @@ class AutologinWindow(TranslatableWindow):
         if test == self.auth_password:
             self.service.AnswerQuery(LPASSWORD)
         else:
-            self.widget('header_label').set_text('Password mismatch!')
+            self.widget('header_label').set_text(_('Password mismatch!'))
 
     def key_press_event_cb(self, widget, event=None):
         """Handle key press"""

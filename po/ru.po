@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tails-greeter\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-13 21:03+0800\n"
-"PO-Revision-Date: 2011-08-14 23:43+0700\n"
+"POT-Creation-Date: 2011-08-14 23:52+0800\n"
+"PO-Revision-Date: 2011-08-14 23:52+0700\n"
 "Last-Translator: Max S <govnototalitarizm@gmail.com>\n"
 "Language-Team:  <govnototalitarizm@gmail.com>\n"
 "Language: \n"
@@ -31,28 +31,45 @@ msgid "Current layout: [US]"
 msgstr "Текущая раскладка: [US]"
 
 #: ../glade/langpanel.glade.h:2
-msgid "Gnome session default layout:"
-msgstr "Раскладка для сессии gnome:"
-
-#: ../glade/langpanel.glade.h:3
 msgid "Language:"
 msgstr "Язык:"
 
-#: ../glade/langpanel.glade.h:4
+#: ../glade/langpanel.glade.h:3
 msgid "Layout:"
 msgstr "Раскладка:"
 
-#: ../glade/langpanel.glade.h:5
+#: ../glade/langpanel.glade.h:4
 msgid "Locale:"
 msgstr "Локаль:"
 
-#: ../glade/langpanel.glade.h:6
+#: ../glade/langpanel.glade.h:5
 msgid "Type into this text-box to test keyboard layout."
 msgstr "В этом поле ввода можно опробовать новую раскладку."
 
-#: ../glade/langpanel.glade.h:7
+#: ../glade/langpanel.glade.h:6
 msgid "Use Alt+Shift to switch layouts."
 msgstr "Используйте Alt+Shift для переключения раскладок."
+
+#: ../glade/langpanel.glade.h:7
+msgid "Variant:"
+msgstr "Вариант:"
+
+#: ../GdmGreeter/autologin.py:48
+msgid "Password mismatch!"
+msgstr "Пароли не совпадают!"
+
+#: ../GdmGreeter/langpanel.py:165
+#, python-format
+msgid "Current layout: [%s (%s)]"
+msgstr "Текущая раскладка: [%s (%s)]"
+
+#: ../GdmGreeter/langpanel.py:168
+#, python-format
+msgid "Current layout: [%s]"
+msgstr "Текущая раскладка: [%s]"
+
+#~ msgid "Gnome session default layout:"
+#~ msgstr "Раскладка для сессии gnome:"
 
 #~ msgid ""
 #~ "Please select language for TAILS.\n"

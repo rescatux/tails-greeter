@@ -19,8 +19,8 @@
 Greeter program for GDM using gtk (nothing else works)
 """
 
-import logging, gtk, xklavier
-
+import logging, gtk, xklavier, gettext
+_ = gettext.gettext
 from gtkme.listview import text_combobox
 from GdmGreeter.language import TranslatableWindow, LANGS, ln_list, iso639
 
@@ -162,10 +162,10 @@ class LangPanel(TranslatableWindow):
             if state['group'] < len(variant):
                 variant = variant[state['group']]
                 if variant:
-                    self.widget('layout_indicator').set_text('Current layout: [%s (%s)]' % (layout, variant))
+                    self.widget('layout_indicator').set_text(_('Current layout: [%s (%s)]') % (layout, variant))
                     shown = True
         if not shown:
-            self.widget('layout_indicator').set_text('Current layout: [%s]' % layout)
+            self.widget('layout_indicator').set_text(_('Current layout: [%s]') % layout)
 
     def populate(self):
         """Create all the required entries"""
