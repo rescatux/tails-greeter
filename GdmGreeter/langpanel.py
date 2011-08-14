@@ -100,6 +100,8 @@ class LangPanel(TranslatableWindow):
 #            self.crecord.set_options(['grp:sclk_toggle']) # proper way
             logging.debug('options set to %s', self.crecord.get_options())
             self.crecord.activate(self.engine)
+        if self.variant and self.variant != 'Default':
+            self.crecord.set_variants(['', self.variant])
 
     def key_event_cb(self, widget, event=None):
         """Handle key event - check for layout change"""
@@ -177,7 +179,9 @@ class LangPanel(TranslatableWindow):
     def variant_selected(self, widget):
         """handler for combobox selecion event"""
         variant = self.widget('variant_cbox').get_active_text()
-        if variant: self.variant = variant
+        if variant:
+            self.variant = variant
+            self.apply_layout(self.layout)
 
     def locale_selected(self, widget):
         """handler for combobox selecion event"""
