@@ -143,15 +143,12 @@ class LangPanel(TranslatableWindow):
         state = self.engine.get_current_state()
         self.engine.stop_listen(xklavier.XKLL_TRACK_KEYBOARD_STATE)
         layout = self.crecord.get_layouts()[state['group']].upper()
-        variant = self.crecord.get_variants()[state['group']]
+        variant = self.crecord.get_variants()
+        if variant: variant = variant[state['group']].split('(')[1][:-1]
         if variant:
             self.widget('layout_indicator').set_text('Current layout: [%s (%s)]' % (layout, variant))
         else:
             self.widget('layout_indicator').set_text('Current layout: [%s]' % layout)
-#        if 'us' == self.selected_layout: self.selected_layout = self.added_layout
-#        else: self.selected_layout = 'us'
-#        logging.debug('layout has changed to %s', self.selected_layout)
-#        self.widget('layout_indicator').set_text('Current layout: [%s]' % self.selected_layout.upper())
 
     def populate(self):
         """Create all the required entries"""
@@ -182,6 +179,7 @@ class LangPanel(TranslatableWindow):
         if variant:
             self.variant = variant
             self.apply_layout(self.layout)
+            self.update_layout_indicator()
 
     def locale_selected(self, widget):
         """handler for combobox selecion event"""
