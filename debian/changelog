@@ -1,6 +1,6 @@
-tails-greeter (0.0.8~3.gbp8776b9) UNRELEASED; urgency=low
+tails-greeter (0.0.8~4.gbp70d39c) UNRELEASED; urgency=low
 
-  ** SNAPSHOT build @8776b9f3af0e0d8a43c7e9b62ae395178d815a37 **
+  ** SNAPSHOT build @70d39c8b37251a8ddf6d91bca84126c3a30ea7ec **
 
   * fix merge error
   * add cbox handling functions
@@ -14,8 +14,20 @@ tails-greeter (0.0.8~3.gbp8776b9) UNRELEASED; urgency=low
   * fix path in helper script
   * fix and document iso639 conversion
   * handle search heuristics failure gracefully
+  * autoselect layout, use combobox for variants
+  * add internal variant processing
+  * populate variants for layout
+  * fix typo
+  * add en_US to layout variant population
+  * remove legacy check
+  * use xklavier for layout indication
+  * consider variant during layout application
+  * adjust layout indicator for variants
+  * fix layout variant application for greeter
+  * add missing bracket
+  * use variant for session layout
 
- -- Max S <govnototalitarizm@gmail.com>  Sat, 13 Aug 2011 23:21:37 +0800
+ -- Max S <govnototalitarizm@gmail.com>  Sun, 14 Aug 2011 20:04:30 +0800
 
 tails-greeter (0.0.7) squeeze-backports; urgency=low
 
