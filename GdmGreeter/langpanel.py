@@ -37,7 +37,6 @@ class LangPanel(TranslatableWindow):
     crecord = None
     lang3 = None
     layout_name = None
-    added_layout = None
     language_code = None
     default_position = 0
 
@@ -92,16 +91,18 @@ class LangPanel(TranslatableWindow):
 
     def apply_layout(self, layout):
         """populate the lists for a given layout"""
-        if layout != 'us':
-            self.added_layout = layout
-            logging.debug('added layout %s', self.added_layout)
-            self.crecord.set_layouts(['us', self.added_layout])
-            self.crecord.set_options(['grp:alt_shift_toggle']) # mustdie way
-#            self.crecord.set_options(['grp:sclk_toggle']) # proper way
-            logging.debug('options set to %s', self.crecord.get_options())
-            self.crecord.activate(self.engine)
-        if self.variant and self.variant != 'Default':
-            self.crecord.set_variants(['', self.variant])
+        variant_list = []
+        layout_list = []
+        if self.variant and self.variant != 'Default': variant_list = ['', self.variant.split()[0]]
+        else: variant_list = ['']
+        self.crecord.set_variants(variant_list)
+        if len(variant_list) > 1 or layout != 'us': layout_list = ['us', layout]
+        else: layout_list = ['us']
+        self.crecord.set_layouts(layout_list)
+        self.crecord.set_options(['grp:alt_shift_toggle']) # mustdie way
+#       self.crecord.set_options(['grp:sclk_toggle']) # proper way
+        self.crecord.activate(self.engine)
+        logging.debug('L:%s V:%s O:%s', self.crecord.get_layouts(), self.crecord.get_variants(), self.crecord.get_options()
 
     def key_event_cb(self, widget, event=None):
         """Handle key event - check for layout change"""
@@ -144,10 +145,14 @@ class LangPanel(TranslatableWindow):
         self.engine.stop_listen(xklavier.XKLL_TRACK_KEYBOARD_STATE)
         layout = self.crecord.get_layouts()[state['group']].upper()
         variant = self.crecord.get_variants()
-        if variant: variant = variant[state['group']].split('(')[1][:-1]
+        shown = False
         if variant:
-            self.widget('layout_indicator').set_text('Current layout: [%s (%s)]' % (layout, variant))
-        else:
+            if state['group'] < len(variant):
+                variant = variant[state['group']]
+                if variant:
+                    self.widget('layout_indicator').set_text('Current layout: [%s (%s)]' % (layout, variant))
+                    shown = True
+        if not shown:
             self.widget('layout_indicator').set_text('Current layout: [%s]' % layout)
 
     def populate(self):
@@ -163,9 +168,11 @@ class LangPanel(TranslatableWindow):
         layout = self.widget('layout_cbox').get_active_text()
         if layout:
             self.layout = layout.split()[0]
+            self.variant = None
             self.apply_layout(self.layout)
             logging.debug('selected layout %s', layout)
             self.gapp.SelectLayout(self.layout)
+            self.apply_layout(self.layout)
             variants = self.get_varians_for_layout(self.layout)
             self.widget('variants').clear()
             self.widget('variants').append(['Default'])
@@ -185,6 +192,7 @@ class LangPanel(TranslatableWindow):
         """handler for combobox selecion event"""
         self.language_code = self.widget('locale_cbox').get_active_text()
         if self.language_code:
+            self.variant = None
             self.gapp.SelectLanguage(self.language_code)
             self.populate_for_locale(self.language_code)
 
