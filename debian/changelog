@@ -1,6 +1,6 @@
-tails-greeter (0.0.8~5.gbpdaa850) UNRELEASED; urgency=low
+tails-greeter (0.0.8~6.gbpc6a32d) UNRELEASED; urgency=low
 
-  ** SNAPSHOT build @daa850467c62f9ca28f214dc23af5e0721e1c4a6 **
+  ** SNAPSHOT build @c6a32d20e09b8ea6fa9eedfa6660dca2d2500942 **
 
   * fix merge error
   * add cbox handling functions
@@ -28,8 +28,9 @@ tails-greeter (0.0.8~5.gbpdaa850) UNRELEASED; urgency=low
   * use variant for session layout
   * add layout enforcement
   * adjust layout autoswitch logic
+  * change default password
 
- -- Max S <govnototalitarizm@gmail.com>  Sun, 14 Aug 2011 22:22:03 +0800
+ -- Max S <govnototalitarizm@gmail.com>  Sun, 14 Aug 2011 22:51:50 +0800
 
 tails-greeter (0.0.7) squeeze-backports; urgency=low
 
