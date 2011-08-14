@@ -23,7 +23,7 @@ import logging, gtk
 
 from GdmGreeter.language import TranslatableWindow
 # default TAILS credentials
-LPASSWORD = 'amnesia'
+LPASSWORD = 'live'
 LUSER = 'amnesia'
 
 class AutologinWindow(TranslatableWindow):
