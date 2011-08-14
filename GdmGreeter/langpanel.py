@@ -102,7 +102,7 @@ class LangPanel(TranslatableWindow):
         self.crecord.set_options(['grp:alt_shift_toggle']) # mustdie way
 #       self.crecord.set_options(['grp:sclk_toggle']) # proper way
         self.crecord.activate(self.engine)
-        logging.debug('L:%s V:%s O:%s', self.crecord.get_layouts(), self.crecord.get_variants(), self.crecord.get_options()
+        logging.debug('L:%s V:%s O:%s', self.crecord.get_layouts(), self.crecord.get_variants(), self.crecord.get_options())
 
     def key_event_cb(self, widget, event=None):
         """Handle key event - check for layout change"""
