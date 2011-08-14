@@ -140,11 +140,10 @@ class LangPanel(TranslatableWindow):
 
     def switch_layout(self):
         """enforce layout"""
-        group = 0
-        if self.variant != 'Default': group = 1
-        self.engine.start_listen(xklavier.XKLL_TRACK_KEYBOARD_STATE)
-        self.engine.lock_group(group)
-        self.engine.stop_listen(xklavier.XKLL_TRACK_KEYBOARD_STATE)
+        if self.variant != 'Default':
+            self.engine.start_listen(xklavier.XKLL_TRACK_KEYBOARD_STATE)
+            self.engine.lock_group(1)
+            self.engine.stop_listen(xklavier.XKLL_TRACK_KEYBOARD_STATE)
         self.update_layout_indicator()
         
     def update_layout_indicator(self):
@@ -156,6 +155,7 @@ class LangPanel(TranslatableWindow):
         if layout:
             if state['group'] < len(layout):
                 layout = layout[state['group']].upper()
+            else: layout = layout[0].upper()
         variant = self.crecord.get_variants()
         shown = False
         if variant:
