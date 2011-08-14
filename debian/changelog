@@ -1,6 +1,6 @@
-tails-greeter (0.0.8~4.gbp70d39c) UNRELEASED; urgency=low
+tails-greeter (0.0.8~5.gbpdaa850) UNRELEASED; urgency=low
 
-  ** SNAPSHOT build @70d39c8b37251a8ddf6d91bca84126c3a30ea7ec **
+  ** SNAPSHOT build @daa850467c62f9ca28f214dc23af5e0721e1c4a6 **
 
   * fix merge error
   * add cbox handling functions
@@ -26,8 +26,10 @@ tails-greeter (0.0.8~4.gbp70d39c) UNRELEASED; urgency=low
   * fix layout variant application for greeter
   * add missing bracket
   * use variant for session layout
+  * add layout enforcement
+  * adjust layout autoswitch logic
 
- -- Max S <govnototalitarizm@gmail.com>  Sun, 14 Aug 2011 20:04:30 +0800
+ -- Max S <govnototalitarizm@gmail.com>  Sun, 14 Aug 2011 22:22:03 +0800
 
 tails-greeter (0.0.7) squeeze-backports; urgency=low
 
