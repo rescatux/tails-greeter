@@ -137,13 +137,25 @@ class LangPanel(TranslatableWindow):
         layouts.sort()
         logging.debug('got %d layouts for %s', len(layouts), language)
         return layouts
+
+    def switch_layout(self):
+        """enforce layout"""
+        group = 0
+        if self.variant != 'Default': group = 1
+        self.engine.start_listen(xklavier.XKLL_TRACK_KEYBOARD_STATE)
+        self.engine.lock_group(group)
+        self.engine.stop_listen(xklavier.XKLL_TRACK_KEYBOARD_STATE)
+        self.update_layout_indicator()
         
     def update_layout_indicator(self):
         """update layout indicator state"""
         self.engine.start_listen(xklavier.XKLL_TRACK_KEYBOARD_STATE)
         state = self.engine.get_current_state()
         self.engine.stop_listen(xklavier.XKLL_TRACK_KEYBOARD_STATE)
-        layout = self.crecord.get_layouts()[state['group']].upper()
+        layout = self.crecord.get_layouts()
+        if layout:
+            if state['group'] < len(layout):
+                layout = layout[state['group']].upper()
         variant = self.crecord.get_variants()
         shown = False
         if variant:
@@ -173,6 +185,7 @@ class LangPanel(TranslatableWindow):
             logging.debug('selected layout %s', layout)
             self.gapp.SelectLayout(self.layout)
             self.apply_layout(self.layout)
+            self.switch_layout()
             variants = self.get_varians_for_layout(self.layout)
             self.widget('variants').clear()
             self.widget('variants').append(['Default'])
@@ -186,7 +199,9 @@ class LangPanel(TranslatableWindow):
         if variant:
             self.variant = variant.split()[0]
             self.apply_layout(self.layout)
-            if self.variant != 'Default': self.gapp.SelectLayout('%s %s' % (self.layout, self.variant))
+            if self.variant != 'Default':
+                self.gapp.SelectLayout('%s %s' % (self.layout, self.variant))
+                self.switch_layout()
             self.update_layout_indicator()
 
     def locale_selected(self, widget):
