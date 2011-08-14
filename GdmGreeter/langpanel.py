@@ -93,7 +93,7 @@ class LangPanel(TranslatableWindow):
         """populate the lists for a given layout"""
         variant_list = []
         layout_list = []
-        if self.variant and self.variant != 'Default': variant_list = ['', self.variant.split()[0]]
+        if self.variant and self.variant != 'Default': variant_list = ['', self.variant]
         else: variant_list = ['']
         self.crecord.set_variants(variant_list)
         if len(variant_list) > 1 or layout != 'us': layout_list = ['us', layout]
@@ -184,8 +184,9 @@ class LangPanel(TranslatableWindow):
         """handler for combobox selecion event"""
         variant = self.widget('variant_cbox').get_active_text()
         if variant:
-            self.variant = variant
+            self.variant = variant.split()[0]
             self.apply_layout(self.layout)
+            if self.variant != 'Default': self.gapp.SelectLayout('%s %s' % (self.layout, self.variant))
             self.update_layout_indicator()
 
     def locale_selected(self, widget):
