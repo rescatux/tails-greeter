@@ -86,6 +86,7 @@ class LangPanel(TranslatableWindow):
         for l in ln_list(language):
             self.widget('locales').append([l])
             if 'en_US' == l: default = count
+            if l.split('_')[0] == l.split('_')[1].lower(): default = count
             count += 1
         self.widget('locale_cbox').set_active(default)
 
