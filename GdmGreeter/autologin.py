@@ -22,7 +22,7 @@ Greeter program for GDM using gtk (nothing else works)
 import logging, gtk, gettext
 _ = gettext.gettext
 from GdmGreeter.language import TranslatableWindow
-# default TAILS credentials
+# default Tails credentials
 LPASSWORD = 'live'
 LUSER = 'amnesia'
 

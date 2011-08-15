@@ -17,7 +17,7 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>
 #
 """
-GDM greeter for TAILS project using gtk
+GDM greeter for Tails project using gtk
 """
 
 import logging, logging.config
