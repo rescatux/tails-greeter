@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tails-greeter\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-06 23:19+0700\n"
-"PO-Revision-Date: 2011-07-16 02:28+0700\n"
+"POT-Creation-Date: 2011-08-14 23:52+0800\n"
+"PO-Revision-Date: 2011-08-15 18:21+0700\n"
 "Last-Translator: Max S <govnototalitarizm@gmail.com>\n"
 "Language-Team:  <govnototalitarizm@gmail.com>\n"
 "Language: \n"
@@ -27,12 +27,52 @@ msgstr ""
 "Entrez le mot de passe qui sera utilisé pour obtenir les droits administrateur. \n"
 "Laissez les champs vides pour les désactiver."
 
-#: ../glade/langselect.glade.h:1
-#, fuzzy
-msgid ""
-"Please select language for TAILS.\n"
-"NOTE: the selection cannot be changed once you press the button."
+#: ../glade/langpanel.glade.h:1
+msgid "Current layout: [US]"
 msgstr ""
-"Selectionnez la langue pour TAILS.\n"
-"Attention: Ce choix ne peut pas être changé une fois confirmé."
 
+#: ../glade/langpanel.glade.h:2
+msgid "Language:"
+msgstr ""
+
+#: ../glade/langpanel.glade.h:3
+msgid "Layout:"
+msgstr ""
+
+#: ../glade/langpanel.glade.h:4
+msgid "Locale:"
+msgstr ""
+
+#: ../glade/langpanel.glade.h:5
+msgid "Type into this text-box to test keyboard layout."
+msgstr ""
+
+#: ../glade/langpanel.glade.h:6
+msgid "Use Alt+Shift to switch layouts."
+msgstr ""
+
+#: ../glade/langpanel.glade.h:7
+msgid "Variant:"
+msgstr ""
+
+#: ../GdmGreeter/autologin.py:48
+msgid "Password mismatch!"
+msgstr ""
+
+#: ../GdmGreeter/langpanel.py:165
+#, python-format
+msgid "Current layout: [%s (%s)]"
+msgstr ""
+
+#: ../GdmGreeter/langpanel.py:168
+#, python-format
+msgid "Current layout: [%s]"
+msgstr ""
+
+#, fuzzy
+#~ msgid ""
+#~ "Please select language for TAILS.\n"
+#~ "NOTE: the selection cannot be changed once you press the button."
+#~ msgstr ""
+#~ "Selectionnez la langue pour TAILS.\n"
+#~ "Attention: Ce choix ne peut pas être changé une fois confirmé."
