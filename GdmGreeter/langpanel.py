@@ -162,10 +162,10 @@ class LangPanel(TranslatableWindow):
             if state['group'] < len(variant):
                 variant = variant[state['group']]
                 if variant:
-                    self.widget('layout_indicator').set_text(_('Current layout: [%s (%s)]') % (layout, variant))
+                    self.widget('layout_indicator').set_text(_('Current layout: %s (%s)') % (layout, variant))
                     shown = True
         if not shown:
-            self.widget('layout_indicator').set_text(_('Current layout: [%s]') % layout)
+            self.widget('layout_indicator').set_text(_('Current layout: %s') % layout)
 
     def populate(self):
         """Create all the required entries"""

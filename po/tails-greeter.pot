@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-14 23:52+0800\n"
+"POT-Creation-Date: 2011-08-15 23:05+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,19 +24,19 @@ msgid ""
 msgstr ""
 
 #: ../glade/langpanel.glade.h:1
-msgid "Current layout: [US]"
+msgid "Current layout: US"
 msgstr ""
 
 #: ../glade/langpanel.glade.h:2
-msgid "Language:"
+msgid "Language"
 msgstr ""
 
 #: ../glade/langpanel.glade.h:3
-msgid "Layout:"
+msgid "Layout"
 msgstr ""
 
 #: ../glade/langpanel.glade.h:4
-msgid "Locale:"
+msgid "Locale"
 msgstr ""
 
 #: ../glade/langpanel.glade.h:5
@@ -48,7 +48,7 @@ msgid "Use Alt+Shift to switch layouts."
 msgstr ""
 
 #: ../glade/langpanel.glade.h:7
-msgid "Variant:"
+msgid "Variant"
 msgstr ""
 
 #: ../GdmGreeter/autologin.py:48
@@ -57,10 +57,10 @@ msgstr ""
 
 #: ../GdmGreeter/langpanel.py:165
 #, python-format
-msgid "Current layout: [%s (%s)]"
+msgid "Current layout: %s (%s)"
 msgstr ""
 
 #: ../GdmGreeter/langpanel.py:168
 #, python-format
-msgid "Current layout: [%s]"
+msgid "Current layout: %s"
 msgstr ""
