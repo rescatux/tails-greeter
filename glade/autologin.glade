@@ -21,7 +21,8 @@
           <object class="GtkLabel" id="header_label">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="label" translatable="yes">Enter here a password that will be asked to grant administrator rights. 
+            <property name="label" translatable="yes">Optionally enter an administration
+password.
 Leave this field blank to disable administrator rights.</property>
           </object>
           <packing>
