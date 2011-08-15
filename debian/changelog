@@ -1,8 +1,5 @@
-tails-greeter (0.0.8~7.gbpd10794) UNRELEASED; urgency=low
+tails-greeter (0.0.8~8.gbpeb81a2) UNRELEASED; urgency=low
 
-  ** SNAPSHOT build @d10794cc4750f84f8fe8f820d0a95308d93ce451 **
-
-  [ Max S ]
   ** SNAPSHOT build @c6a32d20e09b8ea6fa9eedfa6660dca2d2500942 **
 
   * fix merge error
@@ -43,8 +40,9 @@ tails-greeter (0.0.8~7.gbpd10794) UNRELEASED; urgency=low
   * remove : and brackets from ui
   * improve appearance and phrasing
   * add heuristics for locale choice
+  * misc adjustments
 
- -- Max S <govnototalitarizm@gmail.com>  Tue, 16 Aug 2011 00:15:16 +0800
+ -- Max S <govnototalitarizm@gmail.com>  Tue, 16 Aug 2011 00:20:33 +0800
 
 tails-greeter (0.0.7) squeeze-backports; urgency=low
 
