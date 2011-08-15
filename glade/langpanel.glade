@@ -154,7 +154,7 @@
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="invisible_char">●</property>
-            <property name="invisible_char_set">True</property>
+            <property name="width_chars">40</property>
             <property name="primary_icon_activatable">False</property>
             <property name="secondary_icon_activatable">False</property>
             <property name="primary_icon_sensitive">True</property>
@@ -165,6 +165,8 @@
             <property name="right_attach">3</property>
             <property name="top_attach">2</property>
             <property name="bottom_attach">3</property>
+            <property name="x_options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
+            <property name="x_padding">10</property>
           </packing>
         </child>
         <child>
