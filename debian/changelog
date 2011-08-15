@@ -1,5 +1,8 @@
-tails-greeter (0.0.8~6.gbpc6a32d) UNRELEASED; urgency=low
+tails-greeter (0.0.8~7.gbpd10794) UNRELEASED; urgency=low
 
+  ** SNAPSHOT build @d10794cc4750f84f8fe8f820d0a95308d93ce451 **
+
+  [ Max S ]
   ** SNAPSHOT build @c6a32d20e09b8ea6fa9eedfa6660dca2d2500942 **
 
   * fix merge error
@@ -29,8 +32,19 @@ tails-greeter (0.0.8~6.gbpc6a32d) UNRELEASED; urgency=low
   * add layout enforcement
   * adjust layout autoswitch logic
   * change default password
+  * update Russian translation
+  * update French translation
+  * update translation from .pot
 
- -- Max S <govnototalitarizm@gmail.com>  Sun, 14 Aug 2011 22:51:50 +0800
+  [ Tails developers ]
+  * Spelling fixes.
+
+  [ Max S ]
+  * remove : and brackets from ui
+  * improve appearance and phrasing
+  * add heuristics for locale choice
+
+ -- Max S <govnototalitarizm@gmail.com>  Tue, 16 Aug 2011 00:15:16 +0800
 
 tails-greeter (0.0.7) squeeze-backports; urgency=low
 
