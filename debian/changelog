@@ -1,6 +1,6 @@
-tails-greeter (0.0.8~8.gbpeb81a2) UNRELEASED; urgency=low
+tails-greeter (0.0.8~9.gbp8941ba) UNRELEASED; urgency=low
 
-  ** SNAPSHOT build @c6a32d20e09b8ea6fa9eedfa6660dca2d2500942 **
+  ** SNAPSHOT build @8941baa262cc55dddf2d9175f85c65cb59fab303 **
 
   * fix merge error
   * add cbox handling functions
@@ -41,8 +41,16 @@ tails-greeter (0.0.8~8.gbpeb81a2) UNRELEASED; urgency=low
   * improve appearance and phrasing
   * add heuristics for locale choice
   * misc adjustments
+  * update debian/changelog
+  * add sudo\polkit fixes
+  * remove ui hint about alt+shift switching
+  * set proper permission on sudoers file
+  * shrink text entry
+  * remove hardcoded username
+  * show country name for locale
+  * update translations and instructions
 
- -- Max S <govnototalitarizm@gmail.com>  Tue, 16 Aug 2011 00:20:33 +0800
+ -- Max S <govnototalitarizm@gmail.com>  Tue, 16 Aug 2011 15:23:29 +0800
 
 tails-greeter (0.0.7) squeeze-backports; urgency=low
 
