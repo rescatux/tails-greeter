@@ -43,10 +43,19 @@ def ln_list(lang_name):
     """obtain list of locales for a given language name, for example: English -> en_US, en_GB"""
     return LDICT[unicode(lang_name)]
 
+def ln_country(ln_cc):
+    """get country name for locale: en_US -> USA"""
+    return Locale(ln_cc).getDisplayCountry(Locale(ln_cc))
+
+def ln_iso639_tri(ln_cc):
+    """get iso639 3-letter code: en_US -> eng"""
+    return Locale(ln_cc).getISO3Language()
+
 def get_native_langs(lang_list):
     """assemble dictionary of native language names with language codes"""
     langs_dict = {}
     for l in lang_list:
+        # English = Locale(en_GB)...
         lang =  Locale(l).getDisplayLanguage(Locale(l)).title()
         try:
             langs_dict[lang]
@@ -88,61 +97,6 @@ def get_texts(langs):
 LDICT = get_native_langs(langcodes)
 LANGS = sorted(LDICT.keys(), key=compare_choice)
 TEXTS = get_texts(LDICT)
-
-class iso639():
-    """Utility class to convert iso639 2-letter into 3-letter language code"""
-    test_country = None
-    test_name = None
-    found = False
-    name_check = True
-    lang_check = True
-    display = None
-    engine = None
-    configreg = None
-    triplets = []
-
-    def __init__(self):
-        """xklavier loader"""
-        self.display = gtk.gdk.display_get_default()
-        self.engine = xklavier.Engine(self.display)
-        self.configreg = xklavier.ConfigRegistry(self.engine)
-        self.configreg.load(False)
-
-    def process_variant(self, c_reg, item, subitem):
-        """internal comparison utility"""
-        if self.lang_check:
-            if item.get_name() == self.test_country: self.found = True
-        else:
-            if item.get_name() == self.test_name: self.found = True
-    
-    def process_language(self, c_reg, item):
-        """internal search result processor"""
-        c_reg.foreach_language_variant(item.get_name(), self.process_variant)
-        if self.found:
-            if self.name_check:
-                if self.test_name == item.get_name()[:2]: self.triplets.append(item.get_name())
-            else: self.triplets.append(item.get_name())
-            self.found = False
-
-    def search(self, lang):
-        """search 2-letter language code"""
-        self.test_country = lang.split('_')[1].lower()
-        self.test_name = lang.split('_')[0]
-        self.triplets = []
-        self.configreg.foreach_language(self.process_language)
-        return self.triplets
-
-    def conv(self, bi):
-        """conversion via cascade search"""
-        res = self.search(bi)
-        if 0 == len(res):
-            self.name_check = False
-            res = self.search(bi)
-        if 0 == len(res):
-            self.lang_check = False
-            res = self.search(bi)
-        if 0 == len(res): return None
-        return res[0]
 
 class Translatable(object):
     """Provides functions for translating the window on the fly"""

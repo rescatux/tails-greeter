@@ -22,7 +22,7 @@ Greeter program for GDM using gtk (nothing else works)
 import logging, gtk, xklavier, gettext
 _ = gettext.gettext
 from gtkme.listview import text_combobox
-from GdmGreeter.language import TranslatableWindow, LANGS, ln_list, iso639
+from GdmGreeter.language import TranslatableWindow, LANGS, ln_list, ln_country, ln_iso639_tri
 
 class LangPanel(TranslatableWindow):
     """Display language and layout selection panel"""
@@ -57,7 +57,7 @@ class LangPanel(TranslatableWindow):
     def populate_for_locale(self, locale):
         """populate the lists for a given locale"""
         self.widget('layouts').clear()
-        self.lang3 = iso639().conv(locale)
+        self.lang3 = ln_iso639_tri(locale)
         if self.lang3:
             layouts = self.get_layouts_for_language(self.lang3)
             count = 0
@@ -84,7 +84,7 @@ class LangPanel(TranslatableWindow):
         count = 0
         default = 0
         for l in ln_list(language):
-            self.widget('locales').append([l])
+            self.widget('locales').append(['%s (%s)' % (ln_country(l), l)])
             if 'en_US' == l: default = count
             if l.split('_')[0] == l.split('_')[1].lower(): default = count
             count += 1
@@ -208,6 +208,7 @@ class LangPanel(TranslatableWindow):
     def locale_selected(self, widget):
         """handler for combobox selecion event"""
         self.language_code = self.widget('locale_cbox').get_active_text()
+        self.language_code = self.language_code.split(')')[0].split('(')[1]
         if self.language_code:
             self.variant = None
             self.gapp.SelectLanguage(self.language_code)

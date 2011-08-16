@@ -59,7 +59,7 @@
             <property name="can_focus">False</property>
             <property name="xalign">0.10000000149011612</property>
             <property name="xpad">10</property>
-            <property name="label" translatable="yes">Locale</property>
+            <property name="label" translatable="yes">Country (Locale)</property>
           </object>
           <packing>
             <property name="top_attach">1</property>
