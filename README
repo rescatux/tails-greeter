@@ -1,10 +1,9 @@
 Custom GDM greeter for Tails.
 
-Following major parts are under development:
-
-* dbus client for GDM service
-* code implementing logon greeter
-* code implementing panel
+Translation update:
+./setup.py build_i18n
+msgmerge --backup=off -U po/xx.po po/tails-greeter.pot
+rm -rf build
 
 Code QA:
 pylint --rcfile=.pylint.d/.pylintrc community-greeter.py

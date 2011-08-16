@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-15 23:09+0800\n"
+"POT-Creation-Date: 2011-08-16 15:12+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,25 +19,24 @@ msgstr ""
 
 #: ../glade/autologin.glade.h:1
 msgid ""
-"Optionally enter an administration\n"
-"password.\n"
+"Optionally enter an administration password.\n"
 "Leave this field blank to disable administrator rights."
 msgstr ""
 
 #: ../glade/langpanel.glade.h:1
-msgid "Current layout: US"
+msgid "Country (Locale)"
 msgstr ""
 
 #: ../glade/langpanel.glade.h:2
-msgid "Language"
+msgid "Current layout: US"
 msgstr ""
 
 #: ../glade/langpanel.glade.h:3
-msgid "Layout"
+msgid "Language"
 msgstr ""
 
 #: ../glade/langpanel.glade.h:4
-msgid "Locale"
+msgid "Layout"
 msgstr ""
 
 #: ../glade/langpanel.glade.h:5
@@ -45,10 +44,6 @@ msgid "Type into this text-box to test keyboard layout."
 msgstr ""
 
 #: ../glade/langpanel.glade.h:6
-msgid "Use Alt+Shift to switch layouts."
-msgstr ""
-
-#: ../glade/langpanel.glade.h:7
 msgid "Variant"
 msgstr ""
 
@@ -56,12 +51,12 @@ msgstr ""
 msgid "Password mismatch!"
 msgstr ""
 
-#: ../GdmGreeter/langpanel.py:165
+#: ../GdmGreeter/langpanel.py:166
 #, python-format
 msgid "Current layout: %s (%s)"
 msgstr ""
 
-#: ../GdmGreeter/langpanel.py:168
+#: ../GdmGreeter/langpanel.py:169
 #, python-format
 msgid "Current layout: %s"
 msgstr ""
