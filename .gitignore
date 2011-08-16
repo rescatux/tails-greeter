@@ -1,0 +1,5 @@
+/po/*.mo
+/po/*.mo~
+/po/*.po~
+/po/*.pot~
+/build/
