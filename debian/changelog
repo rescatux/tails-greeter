@@ -1,3 +1,10 @@
+tails-greeter (0.0.8) squeeze-backports; urgency=low
+
+  * update debian/changelog
+  * change label to reflect content
+
+ -- Max S <govnototalitarizm@gmail.com>  Thu, 18 Aug 2011 18:28:07 +0700
+
 tails-greeter (0.0.8~10.gbpb9971a) UNRELEASED; urgency=low
 
   ** SNAPSHOT build @b9971a23cc1debbf697b6098fe536429c8f85f38 **
