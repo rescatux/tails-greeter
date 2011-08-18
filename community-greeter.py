@@ -39,6 +39,7 @@ def print_log_record_on_error(func):
 logging.config.fileConfig('tails-logging.conf')
 logging.LogRecord.getMessage = print_log_record_on_error(logging.LogRecord.getMessage)
 
+from pipes import quote
 from gtkme import GtkApp
 from GdmGreeter.services import GdmGreeter
 from GdmGreeter.language import Translatable
@@ -155,7 +156,7 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
             if self.login.auth_password:
                 with open(self.password_path, 'w') as f:
                     os.chmod(self.password_path, 0o600)
-                    f.write('TAILS_USER_PASSWORD=%s\n' % self.login.auth_password)
+                    f.write('TAILS_USER_PASSWORD=%s\n' % quote(self.login.auth_password))
                     logging.debug('password written to %s', self.password_path)
         if self.lang:
             if self.lang.language_code:
