@@ -208,11 +208,12 @@ class LangPanel(TranslatableWindow):
     def locale_selected(self, widget):
         """handler for combobox selecion event"""
         self.language_code = self.widget('locale_cbox').get_active_text()
-        self.language_code = self.language_code.split(')')[0].split('(')[1]
         if self.language_code:
-            self.variant = None
-            self.gapp.SelectLanguage(self.language_code)
-            self.populate_for_locale(self.language_code)
+            self.language_code = self.language_code.split(')')[0].split('(')[1]
+            if self.language_code:
+                self.variant = None
+                self.gapp.SelectLanguage(self.language_code)
+                self.populate_for_locale(self.language_code)
 
     def language_selected(self, widget):
         """Signal event to translate entire app"""
