@@ -1,6 +1,6 @@
-tails-greeter (0.0.8~9.gbp8941ba) UNRELEASED; urgency=low
+tails-greeter (0.0.8~10.gbpb9971a) UNRELEASED; urgency=low
 
-  ** SNAPSHOT build @8941baa262cc55dddf2d9175f85c65cb59fab303 **
+  ** SNAPSHOT build @b9971a23cc1debbf697b6098fe536429c8f85f38 **
 
   * fix merge error
   * add cbox handling functions
@@ -49,8 +49,17 @@ tails-greeter (0.0.8~9.gbp8941ba) UNRELEASED; urgency=low
   * remove hardcoded username
   * show country name for locale
   * update translations and instructions
+  * add .gitignore
+  * fix file permissions
+  * add quoting for user's input
+  * namespace adjustment
+  * add double-check for locale selection
+  * add trivial error reporting
+  * hide actual values of locale and layout from UI
+  * unicode and typo fixes
+  * admit bashism usage
 
- -- Max S <govnototalitarizm@gmail.com>  Tue, 16 Aug 2011 15:23:29 +0800
+ -- Max S <govnototalitarizm@gmail.com>  Thu, 18 Aug 2011 18:11:14 +0700
 
 tails-greeter (0.0.7) squeeze-backports; urgency=low
 
