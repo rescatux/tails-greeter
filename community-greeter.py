@@ -21,7 +21,7 @@ GDM greeter for Tails project using gtk
 """
 
 import logging, logging.config
-import gtk, sys
+import gtk, sys, os
 
 from gtk import gdk
 
@@ -154,11 +154,13 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
         if self.login:
             if self.login.auth_password:
                 with open(self.password_path, 'w') as f:
+                    os.chmod(self.password_path, 0o600)
                     f.write('TAILS_USER_PASSWORD=%s\n' % self.login.auth_password)
                     logging.debug('password written to %s', self.password_path)
         if self.lang:
             if self.lang.language_code:
                 with open(self.locale_path, 'w') as f:
+                    os.chmod(self.locale_path, 0o600)
                     f.write('TAILS_LOCALE_NAME=%s\n' % self.lang.language_code)
         logging.info("Finished.")
         gtk.main_quit()
