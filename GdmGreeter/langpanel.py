@@ -32,13 +32,14 @@ class LangPanel(TranslatableWindow):
     configreg = None
     layout = 'us'
     variant = None
-    selected_layout = 'us'
     engine = None
     crecord = None
     lang3 = None
     layout_name = None
     language_code = None
     default_position = 0
+    locales = {}
+    layouts = {}
 
     def __init__(self, *args, **kwargs):
         TranslatableWindow.__init__(self, *args, **kwargs)
@@ -65,11 +66,13 @@ class LangPanel(TranslatableWindow):
             backup = 0
             use_default = 0
             for l in layouts:
-                self.widget('layouts').append([l])
-                if locale.split('_')[1].lower() == l.split()[0]:
+                layout_name = l.split(')')[0].split('(')[1]
+                self.layouts[layout_name] = l.split()[0]
+                self.widget('layouts').append([layout_name])
+                if locale.split('_')[1].lower() == self.layouts[layout_name]:
                     default = count
                     use_default = 1
-                if locale.split('_')[0].lower() == l.split()[0]: backup = count
+                if locale.split('_')[0].lower() == self.layouts[layout_name]: backup = count
                 count += 1
             if use_default: self.widget('layout_cbox').set_active(default)
             else: self.widget('layout_cbox').set_active(backup)            
@@ -84,7 +87,8 @@ class LangPanel(TranslatableWindow):
         count = 0
         default = 0
         for l in ln_list(language):
-            self.widget('locales').append(['%s (%s)' % (ln_country(l), l)])
+            self.widget('locales').append([ln_country(l)])
+            self.locales[ln_country(l)] = l
             if 'en_US' == l: default = count
             if l.split('_')[0] == l.split('_')[1].lower(): default = count
             count += 1
@@ -178,21 +182,22 @@ class LangPanel(TranslatableWindow):
 
     def layout_selected(self, widget):
         """handler for combobox selecion event"""
-        layout = self.widget('layout_cbox').get_active_text()
-        if layout:
-            self.layout = layout.split()[0]
-            self.variant = None
-            self.apply_layout(self.layout)
-            logging.debug('selected layout %s', layout)
-            self.gapp.SelectLayout(self.layout)
-            self.apply_layout(self.layout)
-            self.switch_layout()
-            variants = self.get_varians_for_layout(self.layout)
-            self.widget('variants').clear()
-            self.widget('variants').append(['Default'])
-            self.widget('variant_cbox').set_active(0)
-            for v in variants:
-                self.widget('variants').append([v])
+        l = self.widget('layout_cbox').get_active_text()
+        if l:
+            self.layout = self.layouts[l]
+            if self.layout:
+                self.variant = None
+                self.apply_layout(self.layout)
+                logging.debug('selected layout %s', l)
+                self.gapp.SelectLayout(self.layout)
+                self.apply_layout(self.layout)
+                self.switch_layout()
+                variants = self.get_varians_for_layout(self.layout)
+                self.widget('variants').clear()
+                self.widget('variants').append(['Default'])
+                self.widget('variant_cbox').set_active(0)
+                for v in variants:
+                    self.widget('variants').append([v])
 
     def variant_selected(self, widget):
         """handler for combobox selecion event"""
@@ -209,7 +214,7 @@ class LangPanel(TranslatableWindow):
         """handler for combobox selecion event"""
         self.language_code = self.widget('locale_cbox').get_active_text()
         if self.language_code:
-            self.language_code = self.language_code.split(')')[0].split('(')[1]
+            self.language_code = self.locales[self.language_code]
             if self.language_code:
                 self.variant = None
                 self.gapp.SelectLanguage(self.language_code)

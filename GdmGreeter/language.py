@@ -20,7 +20,7 @@
 Greeter program for GDM using gtk (nothing else works)
 """
 
-import logging, gettext, gtk, xklavier
+import logging, gettext, gtk
 
 from subprocess import Popen, PIPE
 from gtkme import Window, FormWindow
@@ -43,13 +43,13 @@ def ln_list(lang_name):
     """obtain list of locales for a given language name, for example: English -> en_US, en_GB"""
     return LDICT[unicode(lang_name)]
 
-def ln_country(ln_cc):
+def ln_country(ln_CC):
     """get country name for locale: en_US -> USA"""
-    return Locale(ln_cc).getDisplayCountry(Locale(ln_cc))
+    return Locale(ln_cc).getDisplayCountry(Locale(ln_CC))
 
-def ln_iso639_tri(ln_cc):
+def ln_iso639_tri(ln_CC):
     """get iso639 3-letter code: en_US -> eng"""
-    return Locale(ln_cc).getISO3Language()
+    return Locale(ln_CC).getISO3Language()
 
 def get_native_langs(lang_list):
     """assemble dictionary of native language names with language codes"""
