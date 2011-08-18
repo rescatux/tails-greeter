@@ -45,7 +45,7 @@ def ln_list(lang_name):
 
 def ln_country(ln_CC):
     """get country name for locale: en_US -> USA"""
-    return Locale(ln_cc).getDisplayCountry(Locale(ln_CC))
+    return Locale(ln_CC).getDisplayCountry(Locale(ln_CC))
 
 def ln_iso639_tri(ln_CC):
     """get iso639 3-letter code: en_US -> eng"""

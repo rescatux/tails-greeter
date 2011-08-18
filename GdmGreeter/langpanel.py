@@ -88,7 +88,7 @@ class LangPanel(TranslatableWindow):
         default = 0
         for l in ln_list(language):
             self.widget('locales').append([ln_country(l)])
-            self.locales[ln_country(l)] = l
+            self.locales[unicode(ln_country(l))] = l
             if 'en_US' == l: default = count
             if l.split('_')[0] == l.split('_')[1].lower(): default = count
             count += 1
@@ -214,7 +214,7 @@ class LangPanel(TranslatableWindow):
         """handler for combobox selecion event"""
         self.language_code = self.widget('locale_cbox').get_active_text()
         if self.language_code:
-            self.language_code = self.locales[self.language_code]
+            self.language_code = self.locales[unicode(self.language_code)]
             if self.language_code:
                 self.variant = None
                 self.gapp.SelectLanguage(self.language_code)
@@ -223,5 +223,5 @@ class LangPanel(TranslatableWindow):
     def language_selected(self, widget):
         """Signal event to translate entire app"""
         self.language_name = self.widget('lang_list_cbox').get_active_text()
-        self.populate_for_language(self.language_name)
+        if self.language_name: self.populate_for_language(self.language_name)
 
