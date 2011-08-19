@@ -16,3 +16,5 @@ fi
 
 # Reset the password for default value
 echo "${LIVE_USERNAME}:${TAILS_USER_PASSWORD}" | chpasswd
+
+exit 0
