@@ -9,6 +9,5 @@ DESTDIR = $(CURDIR)/debian/$(PACKAGE)
 override_dh_auto_install:
 	dh_auto_install
 	install -m 0755 $(CURDIR)/set-user-password-and-locale $(DESTDIR)/etc/gdm3/PostLogin/Default
-	install -m 0755 $(CURDIR)/session-cleanup $(DESTDIR)/etc/gdm3/PostSession/Default
 	install -m 0644 $(CURDIR)/debian/$(PACKAGE).lintian-override \
 	                $(DESTDIR)/usr/share/lintian/overrides/$(PACKAGE)
