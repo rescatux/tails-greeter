@@ -1,0 +1,61 @@
+This file explains how to translate tails-greeter.
+
+CONTENTS
+========
+
+- Before you begin
+- Create a new translation
+- Update an existing translation
+- Man page translation
+
+
+CREATING A NEW TRANSLATION
+==========================
+
+1. Generate an uptodate template of translatable strings
+
+In sources root, execute: 
+
+    ./setup.py build_i18n
+
+which will (re)generate the template `po/tails-greeter.pot`
+
+2. Create the translations file for your language
+
+In the `po/` directory, execute:
+
+    msginit --locale=<yourlocale>
+
+For example to create a french translation file:
+
+    msginit --locale=fr_FR
+
+3. Edit the translation file as usually
+
+4. Send the result to Tails developpers to include it in a next release
+
+
+UPDATE AN EXISTING TRANSLATION
+==============================
+
+1. Generate an uptodate template of translatable strings
+
+In sources root, execute:
+
+    ./setup.py build_i18n
+
+which will (re)generate the template `po/tails-greeter.pot`
+
+2. Update the translations file for your language
+
+In the `po/` directory, execute:
+
+    msgmerge --update <yourlocale>.po tails-greeter.pot
+
+For example to update the French translation file:
+
+    msgmerge --update fr.po tails-greeter.pot
+
+3. Edit the translation file as usual
+
+4. Send the result to Tails developpers to include it in a next release

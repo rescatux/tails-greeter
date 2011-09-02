@@ -1,10 +1,5 @@
 Custom GDM greeter for Tails.
 
-Translation update:
-./setup.py build_i18n
-msgmerge --backup=off -U po/xx.po po/tails-greeter.pot
-rm -rf build
-
 Code QA:
 pylint --rcfile=.pylint.d/.pylintrc community-greeter.py
 pylint --rcfile=.pylint.d/.pylintrc GdmGreeter
