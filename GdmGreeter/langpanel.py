@@ -63,7 +63,6 @@ class LangPanel(TranslatableWindow):
         panel = self.widget('langpanel')
         panel.set_gravity(gtk.gdk.GRAVITY_SOUTH_WEST)
         width, height = panel.get_size()
-        panel.set_default_size(gtk.gdk.screen_width(), height)
         panel.move(0, gtk.gdk.screen_height() - height)
 
     def populate_for_locale(self, locale):
