@@ -115,7 +115,7 @@ class LangPanel(TranslatableWindow):
         """Handle key event - check for layout change"""
         if event:
             if event.keyval ==  gtk.keysyms.ISO_Next_Group or event.keyval ==  gtk.keysyms.ISO_Prev_Group:
-                self.update_layout_indicator()
+                pass
 
     def process_language(self, config_registry, item, subitem, store):
         """add layout to the store"""
@@ -151,7 +151,6 @@ class LangPanel(TranslatableWindow):
             self.engine.start_listen(xklavier.XKLL_TRACK_KEYBOARD_STATE)
             self.engine.lock_group(1)
             self.engine.stop_listen(xklavier.XKLL_TRACK_KEYBOARD_STATE)
-        self.update_layout_indicator()
         
     def update_layout_indicator(self):
         """update layout indicator state"""
@@ -209,7 +208,6 @@ class LangPanel(TranslatableWindow):
             if self.variant != 'Default':
                 self.gapp.SelectLayout('%s %s' % (self.layout, self.variant))
                 self.switch_layout()
-            self.update_layout_indicator()
 
     def locale_selected(self, widget):
         """handler for combobox selecion event"""
