@@ -57,6 +57,15 @@ class LangPanel(TranslatableWindow):
         text_combobox(self.widget('lang_list_cbox'), self.widget('languages'))
         self.populate()
         self.widget('lang_list_cbox').set_active(self.default_position)
+        self.set_panel_geometry()
+
+    def set_panel_geometry(self):
+        """Position panel to bottom and use full screen width"""
+        panel = self.widget('langpanel')
+        panel.set_gravity(gtk.gdk.GRAVITY_SOUTH_WEST)
+        width, height = panel.get_size()
+        panel.set_default_size(gtk.gdk.screen_width(), height)
+        panel.move(0, gtk.gdk.screen_height() - height)
 
     def populate_for_locale(self, locale):
         """populate the lists for a given locale"""
