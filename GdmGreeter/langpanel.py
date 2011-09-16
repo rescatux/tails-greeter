@@ -35,9 +35,12 @@ class LangPanel(TranslatableWindow):
     engine = None
     crecord = None
     lang3 = None
+    options = 'grp:alt_shift_toggle' # 'grp:sclk_toggle' would be much more convenient but we default to mustdie switcher in here
     layout_name = None
     language_code = None
     default_position = 0
+    variant_list = None
+    layout_list = None
     locales = {}
     layouts = {}
 
@@ -96,16 +99,15 @@ class LangPanel(TranslatableWindow):
 
     def apply_layout(self, layout):
         """populate the lists for a given layout"""
-        variant_list = []
-        layout_list = []
-        if self.variant and self.variant != 'Default': variant_list = ['', self.variant]
-        else: variant_list = ['']
-        self.crecord.set_variants(variant_list)
-        if len(variant_list) > 1 or layout != 'us': layout_list = ['us', layout]
-        else: layout_list = ['us']
-        self.crecord.set_layouts(layout_list)
-        self.crecord.set_options(['grp:alt_shift_toggle']) # mustdie way
-#       self.crecord.set_options(['grp:sclk_toggle']) # proper way
+        self.variant_list = []
+        self.layout_list = []
+        if self.variant and self.variant != 'Default': self.variant_list = ['', self.variant]
+        else: self.variant_list = ['']
+        if len(variant_list) > 1 or layout != 'us': self.layout_list = ['us', layout]
+        else: self.layout_list = ['us']
+        self.crecord.set_variants(self.variant_list)
+        self.crecord.set_layouts(self.layout_list)
+        self.crecord.set_options([self.options])
         self.crecord.activate(self.engine)
         logging.debug('L:%s V:%s O:%s', self.crecord.get_layouts(), self.crecord.get_variants(), self.crecord.get_options())
 
@@ -190,7 +192,6 @@ class LangPanel(TranslatableWindow):
                 self.apply_layout(self.layout)
                 logging.debug('selected layout %s', l)
                 self.gapp.SelectLayout(self.layout)
-                self.apply_layout(self.layout)
                 self.switch_layout()
                 variants = self.get_varians_for_layout(self.layout)
                 self.widget('variants').clear()

@@ -1,7 +1,5 @@
 #!/bin/sh
 
-#grep _ /usr/share/i18n/SUPPORTED | awk -F _ '{print $1}' | uniq
-#locale -a | grep _ | awk -F _ '{print $1}' | uniq
 # print unique list of language code like en_US (ignoring special variants noted with @)
 grep _ /usr/share/i18n/SUPPORTED | awk -F . '{print $1}' | awk '{print $1}' | grep -v '@' | uniq
 
