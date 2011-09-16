@@ -164,8 +164,8 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
                     os.chmod(self.locale_path, 0o600)
                     f.write('TAILS_LOCALE_NAME=%s\n' % self.lang.language_code)
                     f.write('TAILS_XKBMODEL=%s\n' % 'pc105') # use default value from /etc/default/keyboard
-                    f.write('TAILS_XKBLAYOUT=%s\n' % ''.join(self.lang.layout_list))
-                    f.write('TAILS_XKBVARIANT=%s\n' % ''.join(self.lang.variant_list))
+                    f.write('TAILS_XKBLAYOUT=%s\n' % ','.join(self.lang.layout_list))
+                    f.write('TAILS_XKBVARIANT=%s\n' % ','.join(self.lang.variant_list))
                     f.write('TAILS_XKBOPTIONS=%s\n' % self.lang.options)
         logging.info("Finished.")
         gtk.main_quit()
