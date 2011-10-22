@@ -1,3 +1,27 @@
+tails-greeter (0.0.9~1.gbp497cec) UNRELEASED; urgency=low
+
+  ** SNAPSHOT build @497cec09a1b69a0a4714ad714af8fa4ae4f644f0 **
+
+  [ Max S ]
+  * rename config files
+  * add script to reset password to default value on logout
+  * add diversion for already installed postlogin script
+  * use script autogeneration instead of diversion
+  * password change workaround
+  * fix login workaround
+
+  [ Tails developers ]
+  * Add instructions for translators in README.translators.
+
+  [ Max S ]
+  * cleanup unused glade files
+  * improve l18n handling
+  * Add setup-console procedure
+  * fix typos
+  * add (draft) sed code for console kb setup
+
+ -- Max S <govnototalitarizm@gmail.com>  Sat, 22 Oct 2011 12:39:12 +0800
+
 tails-greeter (0.0.8) squeeze-backports; urgency=low
 
   * update debian/changelog
