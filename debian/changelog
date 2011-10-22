@@ -1,3 +1,12 @@
+tails-greeter (0.0.9) squeeze-backports; urgency=low
+
+  * changelog update
+  * autosetup localized console via profile
+  * fix cosole setup routine
+  * fix codeset during console-setup
+
+ -- Max S <govnototalitarizm@gmail.com>  Sat, 22 Oct 2011 15:53:54 +0800
+
 tails-greeter (0.0.9~1.gbp497cec) UNRELEASED; urgency=low
 
   ** SNAPSHOT build @497cec09a1b69a0a4714ad714af8fa4ae4f644f0 **
