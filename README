@@ -1,5 +1,12 @@
 Custom GDM greeter for Tails.
 
+Security note:
+
+In order to properly localize console tails-greeter-console file installed into /etc/sudoers.d
+This file allows to run setupcon script (without arguments) as root.
+The script is executed with every user login via .profile
+N. B> username ``amnesia'' is hardcoded into it.
+
 Code QA:
 pylint --rcfile=.pylint.d/.pylintrc community-greeter.py
 pylint --rcfile=.pylint.d/.pylintrc GdmGreeter
