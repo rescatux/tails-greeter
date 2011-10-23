@@ -1,7 +1,11 @@
-tails-greeter (0.0.10~1.gbp3ebf75) UNRELEASED; urgency=low
+tails-greeter (0.1.0) squeeze-backports; urgency=low
 
-  ** SNAPSHOT build @3ebf75be02904cc66e9ace8715fefea722f51cc8 **
+  [ Tails developers ]
+  * Ship /etc/sudoers.d directory
 
+  [ Max S ]
+  * Document and improve console localization.
+  * polish documentation and profile update function
   * improve console setup
   * add variable replacement function
   * fix installation

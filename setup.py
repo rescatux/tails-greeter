@@ -23,7 +23,7 @@ from DistUtilsExtra.command import *
 from fnmatch import fnmatch
 
 __appname__ = 'tails-greeter'
-__version__ = '0.0.9'
+__version__ = '0.1.0'
 import os, platform
 
 # remove MANIFEST. distutils doesn't properly update it
