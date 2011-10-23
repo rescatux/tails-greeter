@@ -1,3 +1,14 @@
+tails-greeter (0.0.10~1.gbp3ebf75) UNRELEASED; urgency=low
+
+  ** SNAPSHOT build @3ebf75be02904cc66e9ace8715fefea722f51cc8 **
+
+  * improve console setup
+  * add variable replacement function
+  * fix installation
+  * add missing dependency
+
+ -- Max S <govnototalitarizm@gmail.com>  Sun, 23 Oct 2011 16:02:15 +0800
+
 tails-greeter (0.0.9) squeeze-backports; urgency=low
 
   * changelog update
