@@ -1,3 +1,15 @@
+tails-greeter (0.1.1~1.gbp3128fd) UNRELEASED; urgency=low
+
+  ** SNAPSHOT build @3128fd3d4e8c1aba5a7952b64d00ed65247f6ca1 **
+
+  [ Tails developers ]
+  * Have binary Lintian overrides installed by dh.
+
+  [ Max S ]
+  * Extend sudo-related documentation.
+
+ -- Max S <govnototalitarizm@gmail.com>  Mon, 24 Oct 2011 02:30:02 +0800
+
 tails-greeter (0.1.0) squeeze-backports; urgency=low
 
   [ Tails developers ]
