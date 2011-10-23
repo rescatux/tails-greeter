@@ -1,3 +1,4 @@
 usr/share/lintian/overrides
 etc/gdm3/PostLogin
 etc/gdm3/PostSession
+etc/sudoers.d
