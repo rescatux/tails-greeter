@@ -1,14 +1,16 @@
-tails-greeter (0.1.1~1.gbp3128fd) UNRELEASED; urgency=low
+tails-greeter (0.1.1~2.gbpad6da2) UNRELEASED; urgency=low
 
-  ** SNAPSHOT build @3128fd3d4e8c1aba5a7952b64d00ed65247f6ca1 **
+  ** SNAPSHOT build @ad6da2787d0bef6db3c668f1238aed03d186b5ec **
 
   [ Tails developers ]
   * Have binary Lintian overrides installed by dh.
 
   [ Max S ]
   * Extend sudo-related documentation.
+  * change layout order to default for non-US
+  * fix internal variable set routine
 
- -- Max S <govnototalitarizm@gmail.com>  Mon, 24 Oct 2011 02:30:02 +0800
+ -- Max S <govnototalitarizm@gmail.com>  Mon, 24 Oct 2011 12:24:05 +0800
 
 tails-greeter (0.1.0) squeeze-backports; urgency=low
 
