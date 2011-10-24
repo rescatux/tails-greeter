@@ -103,7 +103,7 @@ class LangPanel(TranslatableWindow):
         self.layout_list = []
         if self.variant and self.variant != 'Default': self.variant_list = ['', self.variant]
         else: self.variant_list = ['']
-        if len(self.variant_list) > 1 or layout != 'us': self.layout_list = ['us', layout]
+        if len(self.variant_list) > 1 or layout != 'us': self.layout_list = [layout, 'us']
         else: self.layout_list = ['us']
         self.crecord.set_variants(self.variant_list)
         self.crecord.set_layouts(self.layout_list)
