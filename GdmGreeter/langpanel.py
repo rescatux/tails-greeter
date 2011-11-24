@@ -53,7 +53,6 @@ class LangPanel(TranslatableWindow):
         self.crecord.get_from_server(self.engine)
         text_combobox(self.widget('locale_cbox'), self.widget('locales'))
         text_combobox(self.widget('layout_cbox'), self.widget('layouts'))
-        text_combobox(self.widget('variant_cbox'), self.widget('variants'))
         text_combobox(self.widget('lang_list_cbox'), self.widget('languages'))
         self.populate()
         self.widget('lang_list_cbox').set_active(self.default_position)
@@ -204,19 +203,13 @@ class LangPanel(TranslatableWindow):
                 variants = self.get_varians_for_layout(self.layout)
                 self.widget('variants').clear()
                 self.widget('variants').append(['Default'])
-                self.widget('variant_cbox').set_active(0)
                 for v in variants:
                     self.widget('variants').append([v])
 
     def variant_selected(self, widget):
         """handler for combobox selecion event"""
-        variant = self.widget('variant_cbox').get_active_text()
         if variant:
-            self.variant = variant.split()[0]
             self.apply_layout(self.layout)
-            if self.variant != 'Default':
-                self.gapp.SelectLayout('%s %s' % (self.layout, self.variant))
-                self.switch_layout()
 
     def locale_selected(self, widget):
         """handler for combobox selecion event"""
