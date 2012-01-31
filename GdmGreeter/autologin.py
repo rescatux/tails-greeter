@@ -19,8 +19,9 @@
 Greeter program for GDM using gtk (nothing else works)
 """
 
-import logging, gtk, gettext
+import logging, gtk, gettext, os
 _ = gettext.gettext
+import GdmGreeter
 from GdmGreeter.language import TranslatableWindow
 # default Tails credentials
 LPASSWORD = 'live'
@@ -32,29 +33,36 @@ class AutologinWindow(TranslatableWindow):
     primary = False
     auth_password = None
 
-    def __init__(self, *args, **kwargs):
-        self.service = kwargs.pop('service')
-        TranslatableWindow.__init__(self, *args, **kwargs)
-        self.widget('password_entry_field').set_visibility(False)
-        self.widget('password_entry_field2').set_visibility(False)
+    def __init__(self, service):
+        self.service = service
+
+        builder = gtk.Builder()
+        builder.set_translation_domain(GdmGreeter.__appname__)
+        builder.add_from_file(os.path.join(GdmGreeter.GLADE_DIR, "autologin.glade"))
+        builder.connect_signals(self)
+        self.entry_password = builder.get_object("password_entry_field")
+        self.entry_password2 = builder.get_object("password_entry_field2")
+        self.label_header = builder.get_object("header_label")
+
+        TranslatableWindow.__init__(self, builder.get_object("autologin"))
+
+        self.entry_password.set_visibility(False)
+        self.entry_password2.set_visibility(False)
 
     def get_pass(self, widget = None):
         """obtain password (button click handler)"""
-        self.auth_password = self.widget('password_entry_field').get_text()
-        test = self.widget('password_entry_field2').get_text()
+        self.auth_password = self.entry_password.get_text()
+        test = self.entry_password2.get_text()
         if test == self.auth_password:
             self.service.AnswerQuery(LPASSWORD)
         else:
-            self.widget('header_label').set_text(_('Password mismatch!'))
+            self.label_header.set_text(_('Password mismatch!'))
 
     def key_press_event_cb(self, widget, event=None):
         """Handle key press"""
         if event:
             if event.keyval == gtk.keysyms.Return:            
                 self.get_pass(widget)
-            if event.keyval ==  gtk.keysyms.ISO_Next_Group or event.keyval ==  gtk.keysyms.ISO_Prev_Group:
-                if self.gapp.lang:
-                    self.gapp.lang.update_layout_indicator()
 
     def proceed_login(self):
         """Autologin attempt"""

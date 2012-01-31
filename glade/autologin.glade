@@ -12,7 +12,7 @@
     <property name="urgency_hint">True</property>
     <property name="decorated">False</property>
     <property name="deletable">False</property>
-    <signal name="key-press-event" handler="autologin_key_press_event_cb" swapped="no"/>
+    <signal name="key-press-event" handler="key_press_event_cb" swapped="no"/>
     <child>
       <object class="GtkVBox" id="vbox1">
         <property name="visible">True</property>
@@ -72,7 +72,7 @@ Leave this field blank to disable administrator rights.</property>
             <property name="receives_default">True</property>
             <property name="use_action_appearance">False</property>
             <property name="use_stock">True</property>
-            <signal name="clicked" handler="autologin_get_pass" swapped="no"/>
+            <signal name="clicked" handler="get_pass" swapped="no"/>
           </object>
           <packing>
             <property name="expand">False</property>
