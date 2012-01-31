@@ -23,7 +23,6 @@ Greeter program for GDM using gtk (nothing else works)
 import logging, gettext, gtk
 
 from subprocess import Popen, PIPE
-from gtkme import Window, FormWindow
 from GdmGreeter import Images
 from icu import Locale, Collator
 
@@ -98,11 +97,13 @@ LDICT = get_native_langs(langcodes)
 LANGS = sorted(LDICT.keys(), key=compare_choice)
 TEXTS = get_texts(LDICT)
 
-class Translatable(object):
-    """Provides functions for translating the window on the fly"""
+class TranslatableWindow(object):
+    """Interface providing functions to translate a window on the fly
+    """
     retain_focus = True
 
-    def __init__(self):
+    def __init__(self, window):
+        self.window = window
         self.labels = []
         self.tips = []
         self.store_translations(self.window)
@@ -140,16 +141,3 @@ class Translatable(object):
             child.set_tooltip_markup(self.gettext(lang, text))
         if self.window.get_sensitive() and self.retain_focus:
             self.window.present()
-
-class TranslatableWindow(Translatable, Window):
-    """dynamically translatable window"""
-    def __init__(self, *args, **kwargs):
-        Window.__init__(self, *args, **kwargs)
-        Translatable.__init__(self)
-
-class TranslatableFormWindow(Translatable, FormWindow):
-    """dynamically translatable window with form"""
-    def __init__(self, *args, **kwargs):
-        FormWindow.__init__(self, *args, **kwargs)
-        Translatable.__init__(self)
-
