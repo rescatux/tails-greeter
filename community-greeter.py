@@ -40,21 +40,18 @@ logging.config.fileConfig('tails-logging.conf')
 logging.LogRecord.getMessage = print_log_record_on_error(logging.LogRecord.getMessage)
 
 from pipes import quote
-from gtkme import GtkApp
 from GdmGreeter.services import GdmGreeter
-from GdmGreeter.language import Translatable
+from GdmGreeter.language import TranslatableWindow
 from GdmGreeter.langpanel import LangPanel
 from GdmGreeter.autologin import AutologinWindow, LPASSWORD, LUSER
 from GdmGreeter import GLADE_DIR, __appname__
 
-class CommunityGreeterApp(GtkApp, GdmGreeter):
+class CommunityGreeterApp(GdmGreeter):
     """Custom greeter instance"""
     app_name  = __appname__
     glade_dir = GLADE_DIR
-    windows   = [ AutologinWindow, LangPanel ]
 
     def __init__(self, *args, **kwargs):
-        GtkApp.__init__(self, *args, **kwargs)
         GdmGreeter.__init__(self)
         self.scr = gdk.display_get_default().get_screen(self.display.number)
         self.lang = None
@@ -69,11 +66,13 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
         self.postponed_text = None
         self.ready = False
         self.translated = False
+        self._loaded_windows = []
 
-    def load_window(self, *args, **kwargs):
+    def load_window(self, window_class, *args, **kwargs):
         """When loading a window, also translate it"""
-        window = GtkApp.load_window(self, *args, **kwargs)
-        if isinstance(window, Translatable) and self.language:
+        window = window_class(*args, **kwargs)
+        self._loaded_windows.append(window)
+        if isinstance(window, TranslatableWindow) and self.language:
             window.translate_to(self.language.split('_')[0])
         return window
 
@@ -81,16 +80,16 @@ class CommunityGreeterApp(GtkApp, GdmGreeter):
         """Translate all windows to target language"""
         if self.ready:
             self.language = lang
-        for window in self._loaded.values():
-            if isinstance(window, Translatable):
+        for window in self._loaded_windows:
+            if isinstance(window, TranslatableWindow):
                 window.translate_to(lang)
 
     def Ready(self):
         """Sever is ready"""
         if not self.lang:
-            self.lang = self.load_window('langpanel')
+            self.lang = self.load_window(LangPanel, backend = self)
         if not self.login:
-            self.login = self.load_window('autologin', service = self.obj)
+            self.login = self.load_window(AutologinWindow, service = self.obj)
         else:
             self.login.window.set_sensitive(True)
             self.login.show_user('')
