@@ -23,12 +23,10 @@ Greeter program for GDM using gtk (nothing else works)
 import logging, gettext, gtk
 
 from subprocess import Popen, PIPE
-from GdmGreeter import Images
 from icu import Locale, Collator
 
 MOFILES = '/usr/share/locale/'
 DOMAIN  = 'tails-greeter'
-IMAGES = Images('lang')
 
 p = Popen(["tails-lang-helper"], stdout=PIPE)
 langcodes = str.split(p.communicate()[0])

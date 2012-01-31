@@ -21,13 +21,6 @@ All varialbes relating to the community GDM greeter
 """
 
 GLADE_DIR = './glade'
-PIXMAP_DIR = './pixmaps'
 __appname__ = 'community-greeter'
 __version__ = '0.9.4'
-
-from gtkme import PixmapManager
-
-class Images(PixmapManager):
-    """pixmap manager instance"""
-    pixmap_dir = PIXMAP_DIR
 
