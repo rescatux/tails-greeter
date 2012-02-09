@@ -227,10 +227,11 @@ class LangPanel(TranslatableWindow):
                 self.backend.SelectLayout(self.layout)
                 self.switch_layout()
                 variants = self.get_varians_for_layout(self.layout)
-                self.cb_variants.get_model().clear()
-                self.cb_variants.get_model().append(['Default'])
-                for v in variants:
-                    self.cb_variants.get_model().append([v])
+                if self.cb_variants:
+                    self.cb_variants.get_model().clear()
+                    self.cb_variants.get_model().append(['Default'])
+                    for v in variants:
+                        self.cb_variants.get_model().append([v])
 
     def variant_selected(self, widget):
         """handler for combobox selecion event"""
