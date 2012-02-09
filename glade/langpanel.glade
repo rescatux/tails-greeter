@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <requires lib="gtk+" version="2.20"/>
+  <object class="GtkListStore" id="languages">
+    <columns>
+      <!-- column-name name -->
+      <column type="gchararray"/>
+    </columns>
+  </object>
+  <object class="GtkListStore" id="layouts">
+    <columns>
+      <!-- column-name name -->
+      <column type="gchararray"/>
+    </columns>
+  </object>
   <object class="GtkWindow" id="langpanel">
     <property name="can_focus">False</property>
     <property name="type_hint">dock</property>
     <child>
-      <object class="GtkBox" id="box1">
+      <object class="GtkHBox" id="box1">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <child>
@@ -26,10 +38,11 @@
           <object class="GtkComboBox" id="lang_list_cbox">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <signal name="changed" handler="langpanel_language_selected" swapped="no"/>
+            <property name="model">languages</property>
+            <signal name="changed" handler="language_selected" swapped="no"/>
           </object>
           <packing>
-            <property name="expand">False</property>
+            <property name="expand">True</property>
             <property name="fill">True</property>
             <property name="position">1</property>
           </packing>
@@ -52,10 +65,11 @@
           <object class="GtkComboBox" id="locale_cbox">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <signal name="changed" handler="langpanel_locale_selected" swapped="no"/>
+            <property name="model">locales</property>
+            <signal name="changed" handler="locale_selected" swapped="no"/>
           </object>
           <packing>
-            <property name="expand">False</property>
+            <property name="expand">True</property>
             <property name="fill">True</property>
             <property name="position">3</property>
           </packing>
@@ -79,10 +93,11 @@
           <object class="GtkComboBox" id="layout_cbox">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <signal name="changed" handler="langpanel_layout_selected" swapped="no"/>
+            <property name="model">layouts</property>
+            <signal name="changed" handler="layout_selected" swapped="no"/>
           </object>
           <packing>
-            <property name="expand">False</property>
+            <property name="expand">True</property>
             <property name="fill">True</property>
             <property name="position">5</property>
           </packing>
@@ -115,18 +130,6 @@
         </child>
       </object>
     </child>
-  </object>
-  <object class="GtkListStore" id="languages">
-    <columns>
-      <!-- column-name name -->
-      <column type="gchararray"/>
-    </columns>
-  </object>
-  <object class="GtkListStore" id="layouts">
-    <columns>
-      <!-- column-name name -->
-      <column type="gchararray"/>
-    </columns>
   </object>
   <object class="GtkListStore" id="locales">
     <columns>

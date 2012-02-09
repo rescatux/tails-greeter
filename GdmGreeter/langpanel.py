@@ -19,10 +19,10 @@
 Greeter program for GDM using gtk (nothing else works)
 """
 
-import logging, gtk, xklavier, gettext
+import logging, gtk, xklavier, gettext, os
 _ = gettext.gettext
-from gtkme.listview import text_combobox
 from GdmGreeter.language import TranslatableWindow, LANGS, ln_list, ln_country, ln_iso639_tri
+import GdmGreeter
 
 class LangPanel(TranslatableWindow):
     """Display language and layout selection panel"""
@@ -44,30 +44,57 @@ class LangPanel(TranslatableWindow):
     locales = {}
     layouts = {}
 
-    def __init__(self, *args, **kwargs):
-        TranslatableWindow.__init__(self, *args, **kwargs)
+    def __init__(self, backend):
+        self.backend = backend
+
+        builder = gtk.Builder()
+        builder.set_translation_domain(GdmGreeter.__appname__)
+        builder.add_from_file(os.path.join(GdmGreeter.GLADE_DIR, "langpanel.glade"))
+        builder.connect_signals(self)
+        self.window = builder.get_object("langpanel")
+
+        cell = gtk.CellRendererText()
+
+        self.cb_languages = builder.get_object("lang_list_cbox")
+        self.cb_languages.pack_start(cell, True)
+        self.cb_languages.add_attribute(cell, 'text', 0)
+
+        self.cb_locales = builder.get_object("locale_cbox")
+        self.cb_locales.pack_start(cell, True)
+        self.cb_locales.add_attribute(cell, 'text', 0)
+
+        self.cb_layouts = builder.get_object("layout_cbox")
+        self.cb_layouts.pack_start(cell, True)
+        self.cb_layouts.add_attribute(cell, 'text', 0)
+
+        self.cb_variants = builder.get_object("variant_cbox'")
+        if self.cb_variants:
+            self.cb_variants.pack_start(cell, True)
+            self.cb_variants.add_attribute(cell, 'text', 0)
+
+
+        TranslatableWindow.__init__(self, self.window)
+
         self.engine = xklavier.Engine(gtk.gdk.display_get_default())
         self.configreg = xklavier.ConfigRegistry(self.engine)
         self.configreg.load(False)
         self.crecord = xklavier.ConfigRec()
         self.crecord.get_from_server(self.engine)
-        text_combobox(self.widget('locale_cbox'), self.widget('locales'))
-        text_combobox(self.widget('layout_cbox'), self.widget('layouts'))
-        text_combobox(self.widget('lang_list_cbox'), self.widget('languages'))
         self.populate()
-        self.widget('lang_list_cbox').set_active(self.default_position)
+        self.cb_languages.set_active(self.default_position)
         self.set_panel_geometry()
 
     def set_panel_geometry(self):
         """Position panel to bottom and use full screen width"""
-        panel = self.widget('langpanel')
+        panel = self.window
         panel.set_gravity(gtk.gdk.GRAVITY_SOUTH_WEST)
         width, height = panel.get_size()
+        panel.set_default_size(gtk.gdk.screen_width(), height)
         panel.move(0, gtk.gdk.screen_height() - height)
 
     def populate_for_locale(self, locale):
         """populate the lists for a given locale"""
-        self.widget('layouts').clear()
+        self.cb_layouts.get_model().clear()
         self.lang3 = ln_iso639_tri(locale)
         if self.lang3:
             layouts = self.get_layouts_for_language(self.lang3)
@@ -78,31 +105,31 @@ class LangPanel(TranslatableWindow):
             for l in layouts:
                 layout_name = l.split(')')[0].split('(')[1]
                 self.layouts[layout_name] = l.split()[0]
-                self.widget('layouts').append([layout_name])
+                self.cb_layouts.get_model().append([layout_name])
                 if locale.split('_')[1].lower() == self.layouts[layout_name]:
                     default = count
                     use_default = 1
                 if locale.split('_')[0].lower() == self.layouts[layout_name]: backup = count
                 count += 1
-            if use_default: self.widget('layout_cbox').set_active(default)
-            else: self.widget('layout_cbox').set_active(backup)            
+            if use_default: self.cb_layouts.set_active(default)
+            else: self.cb_layouts.set_active(backup)
         else:
             self.crecord.set_layouts(['us'])
             self.crecord.activate(self.engine)
-            self.gapp.SelectLayout('us')
+            self.backend.SelectLayout('us')
 
     def populate_for_language(self, language):
         """populate the lists for a given language"""
-        self.widget('locales').clear()
+        self.cb_locales.get_model().clear()
         count = 0
         default = 0
         for l in ln_list(language):
-            self.widget('locales').append([ln_country(l)])
+            self.cb_locales.get_model().append([ln_country(l)])
             self.locales[unicode(ln_country(l))] = l
             if 'en_US' == l: default = count
             if l.split('_')[0] == l.split('_')[1].lower(): default = count
             count += 1
-        self.widget('locale_cbox').set_active(default)
+        self.cb_locales.set_active(default)
 
     def apply_layout(self, layout):
         """populate the lists for a given layout"""
@@ -184,44 +211,45 @@ class LangPanel(TranslatableWindow):
         """Create all the required entries"""
         count = 0
         for l in LANGS:
-            self.widget('languages').append([l])
+            self.cb_languages.get_model().append([l])
             if 'English' == l: self.default_position = count
             count += 1
 
     def layout_selected(self, widget):
         """handler for combobox selecion event"""
-        l = self.widget('layout_cbox').get_active_text()
+        l = self.cb_layouts.get_active_text()
         if l:
             self.layout = self.layouts[l]
             if self.layout:
                 self.variant = None
                 self.apply_layout(self.layout)
                 logging.debug('selected layout %s', l)
-                self.gapp.SelectLayout(self.layout)
+                self.backend.SelectLayout(self.layout)
                 self.switch_layout()
                 variants = self.get_varians_for_layout(self.layout)
-                self.widget('variants').clear()
-                self.widget('variants').append(['Default'])
+                self.cb_variants.get_model().clear()
+                self.cb_variants.get_model().append(['Default'])
                 for v in variants:
-                    self.widget('variants').append([v])
+                    self.cb_variants.get_model().append([v])
 
     def variant_selected(self, widget):
         """handler for combobox selecion event"""
+        variant = self.cb_variants.get_active_text()
         if variant:
             self.apply_layout(self.layout)
 
     def locale_selected(self, widget):
         """handler for combobox selecion event"""
-        self.language_code = self.widget('locale_cbox').get_active_text()
+        self.language_code = self.cb_locales.get_active_text()
         if self.language_code:
             self.language_code = self.locales[unicode(self.language_code)]
             if self.language_code:
                 self.variant = None
-                self.gapp.SelectLanguage(self.language_code)
+                self.backend.SelectLanguage(self.language_code)
                 self.populate_for_locale(self.language_code)
 
     def language_selected(self, widget):
         """Signal event to translate entire app"""
-        self.language_name = self.widget('lang_list_cbox').get_active_text()
+        self.language_name = self.cb_languages.get_active_text()
         if self.language_name: self.populate_for_language(self.language_name)
 
