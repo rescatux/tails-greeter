@@ -21,7 +21,7 @@ Greeter program for GDM using gtk (nothing else works)
 
 import logging, gtk, xklavier, gettext, os
 _ = gettext.gettext
-from GdmGreeter.language import TranslatableWindow, LANGS, ln_list, ln_country, ln_iso639_tri
+from GdmGreeter.language import TranslatableWindow, LANGS, DEFAULT_LANGS, ln_list, ln_country, ln_iso639_tri
 import GdmGreeter
 
 class LangPanel(TranslatableWindow):
@@ -210,10 +210,11 @@ class LangPanel(TranslatableWindow):
     def populate(self):
         """Create all the required entries"""
         count = 0
-        for l in LANGS:
+        for l in DEFAULT_LANGS:
             self.cb_languages.get_model().append([l])
             if 'English' == l: self.default_position = count
             count += 1
+        self.cb_languages.get_model().append([_("Other...")])
 
     def layout_selected(self, widget):
         """handler for combobox selecion event"""
@@ -250,7 +251,45 @@ class LangPanel(TranslatableWindow):
                 self.populate_for_locale(self.language_code)
 
     def language_selected(self, widget):
-        """Signal event to translate entire app"""
-        self.language_name = self.cb_languages.get_active_text()
-        if self.language_name: self.populate_for_language(self.language_name)
+        """handler for language combobox selection event"""
+        selected_language = self.cb_languages.get_active_text()
+        if selected_language == _("Other..."):
+            selected_language = self.show_more_languages()
+        if selected_language:
+            self.language_name = selected_language
+            self.populate_for_language(self.language_name)
+
+
+    def show_more_languages(self):
+        """Show a dialog to allow selecting more languages"""
+
+        builder = gtk.Builder()
+        builder.set_translation_domain(GdmGreeter.__appname__)
+        builder.add_from_file(os.path.join(GdmGreeter.GLADE_DIR, "langdialog.glade"))
+        dialog = builder.get_object("languages_dialog")
+        treeview = builder.get_object("languages_treeview")
+        liststore = builder.get_object("languages_liststore")
+
+        count = 0
+        for l in LANGS:
+            liststore.append([l])
+            if self.language_name == l:
+                self.default_position = count
+            count += 1
+
+        tvcolumn = gtk.TreeViewColumn(_("Language"))
+        treeview.append_column(tvcolumn)
+        cell = gtk.CellRendererText()
+        tvcolumn.pack_start(cell, True)
+        tvcolumn.add_attribute(cell, 'text', 0)
+
+        lang = None
+        if dialog.run():
+            dummy, selected_iter = treeview.get_selection().get_selected()
+            if selected_iter:
+                lang = liststore[selected_iter][0]
+
+        dialog.destroy()
+
+        return lang
 
