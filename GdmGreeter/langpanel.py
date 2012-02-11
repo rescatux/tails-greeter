@@ -27,29 +27,30 @@ import GdmGreeter
 
 class LangPanel(TranslatableWindow):
     """Display language and layout selection panel"""
-    name = 'langpanel'
-    primary = False
-    language_name = None
-    configreg = None
-    layout = 'us'
-    variant = None
-    engine = None
-    crecord = None
-    lang3 = None
-    options = 'grp:alt_shift_toggle' # 'grp:sclk_toggle' would be much more convenient but we default to mustdie switcher in here
-    layout_name = None
-    language_code = None
-    default_position = 0
-    variant_list = None
-    layout_list = None
-    locales = {}
-    layouts = {}
 
     def __init__(self, backend):
-        self.additional_language_displayed = False
-
         self.backend = backend
 
+        # Initialize instance variables
+        self.additional_language_displayed = False
+        self.language_name = None
+        self.layout = 'us'
+        self.variant = None
+        self.lang3 = None
+        self.options = 'grp:alt_shift_toggle' # 'grp:sclk_toggle' would be much more convenient but we default to mustdie switcher in here
+        self.language_code = None
+        self.default_position = 0
+        self.variant_list = None
+        self.layout_list = None
+        self.locales = {}
+        self.layouts = {}
+        self.engine = xklavier.Engine(gtk.gdk.display_get_default())
+        self.configreg = xklavier.ConfigRegistry(self.engine)
+        self.configreg.load(False)
+        self.crecord = xklavier.ConfigRec()
+        self.crecord.get_from_server(self.engine)
+
+        # Build UI
         builder = gtk.Builder()
         builder.set_translation_domain(GdmGreeter.__appname__)
         builder.add_from_file(os.path.join(GdmGreeter.GLADE_DIR, "langpanel.glade"))
@@ -77,11 +78,6 @@ class LangPanel(TranslatableWindow):
 
         TranslatableWindow.__init__(self, self.window)
 
-        self.engine = xklavier.Engine(gtk.gdk.display_get_default())
-        self.configreg = xklavier.ConfigRegistry(self.engine)
-        self.configreg.load(False)
-        self.crecord = xklavier.ConfigRec()
-        self.crecord.get_from_server(self.engine)
         self.populate()
         self.cb_languages.set_active(self.default_position)
         self.set_panel_geometry()
