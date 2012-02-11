@@ -45,6 +45,8 @@ class LangPanel(TranslatableWindow):
     layouts = {}
 
     def __init__(self, backend):
+        self.additional_language_displayed = False
+
         self.backend = backend
 
         builder = gtk.Builder()
@@ -252,12 +254,32 @@ class LangPanel(TranslatableWindow):
 
     def language_selected(self, widget):
         """handler for language combobox selection event"""
-        selected_language = self.cb_languages.get_active_text()
-        if selected_language == _("Other..."):
+        if self.cb_languages.get_active() == \
+                self.cb_languages.get_model().iter_n_children(None) - 1:
             selected_language = self.show_more_languages()
+        else:
+            selected_language = self.cb_languages.get_active_text()
+
         if selected_language:
             self.language_name = selected_language
             self.populate_for_language(self.language_name)
+            if not self.language_name == self.cb_languages.get_active_text():
+                self.update_other_language_entry(self.language_name)
+
+    def update_other_language_entry(self, language=None):
+        if not language:
+            language = _("Other...")
+        last_entry = self.cb_languages.get_model().iter_n_children(None) - 1
+        if not self.additional_language_displayed:
+            self.cb_languages.get_model().insert(last_entry, [language])
+            self.cb_languages.set_active(last_entry)
+            self.additional_language_displayed = True
+        else:
+            self.cb_languages.get_model().set(
+                self.cb_languages.get_model().get_iter(last_entry - 1),
+                0,
+                language)
+            self.cb_languages.set_active(last_entry - 1)
 
 
     def show_more_languages(self):
