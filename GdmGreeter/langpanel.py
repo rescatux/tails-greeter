@@ -69,11 +69,10 @@ class LangPanel(TranslatableWindow):
         self.cb_layouts.pack_start(cell, True)
         self.cb_layouts.add_attribute(cell, 'text', 0)
 
-        self.cb_variants = builder.get_object("variant_cbox'")
+        self.cb_variants = builder.get_object("variant_cbox")
         if self.cb_variants:
             self.cb_variants.pack_start(cell, True)
             self.cb_variants.add_attribute(cell, 'text', 0)
-
 
         TranslatableWindow.__init__(self, self.window)
 
