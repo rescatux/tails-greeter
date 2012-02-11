@@ -55,7 +55,7 @@ setup(
         url              = 'https://tails.boum.org/todo/TailsGreeter/',
         platforms        = 'linux',
         license          = 'GPLv3',
-        packages         = [ 'GdmGreeter', 'xsdvalidate', 'xsdvalidate.parse' ],
+        packages         = [ 'GdmGreeter' ],
         scripts          = [ 'tails-greeter' ],
         data_files       = [
             ( SDIR, listfiles( '', '*.py' ) ),
