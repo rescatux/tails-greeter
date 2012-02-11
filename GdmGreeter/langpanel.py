@@ -236,13 +236,13 @@ class LangPanel(TranslatableWindow):
                         self.cb_variants.get_model().append([v])
 
     def variant_selected(self, widget):
-        """handler for combobox selecion event"""
+        """handler for variant combobox selection event"""
         variant = self.cb_variants.get_active_text()
         if variant:
             self.apply_layout(self.layout)
 
     def locale_selected(self, widget):
-        """handler for combobox selecion event"""
+        """handler for locale combobox selection event"""
         self.language_code = self.cb_locales.get_active_text()
         if self.language_code:
             self.language_code = self.locales[unicode(self.language_code)]
