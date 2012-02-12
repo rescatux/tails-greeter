@@ -1,8 +1,1 @@
-- langpanel: the icon used for the languages is "applications-internet" which
-  displays a globe in default icon theme, but could display something really
-  irrelevant in an other icon theme;
-- langpanel: the languages menu has an horrible scroll effect at opening.
-  That's GTK magic that I don't know how to workaround: when poping up a
-  ComboBox, GTK places the selected entry under the cursor, thus not displaying
-  the whole menu where I want it to be;
-
+cf https://tails.boum.org/todo/TailsGreeter/issues/
