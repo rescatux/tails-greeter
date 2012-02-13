@@ -65,11 +65,6 @@ class OptionsWindow(TranslatableWindow):
             if event.keyval == gtk.keysyms.Return:            
                 self.get_pass(widget)
 
-    def proceed_login(self):
-        """Autologin attempt"""
-        logging.debug('BeginAutoLogin attempt')
-        self.service.BeginAutoLogin(LUSER)
-
     def show_user(self, text):
         """dummy function"""
         logging.debug('show user called with %s', text)
