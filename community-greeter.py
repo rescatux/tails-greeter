@@ -138,6 +138,7 @@ class CommunityGreeterApp(GdmGreeterService):
 
     def InfoQuery(self, text):
         """Server wants to ask the user for something"""
+        # XXX: I think that server actually wants username
         logging.debug("got infoquery: %s", text)
         self.obj.AnswerQuery(GdmGreeter.config.LUSER)
 
