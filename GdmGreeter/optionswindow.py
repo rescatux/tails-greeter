@@ -31,8 +31,8 @@ class OptionsWindow(TranslatableWindow):
     primary = False
     auth_password = None
 
-    def __init__(self, service):
-        self.service = service
+    def __init__(self, greeter):
+        self.greeter = greeter
 
         builder = gtk.Builder()
         builder.set_translation_domain(GdmGreeter.__appname__)
@@ -49,10 +49,10 @@ class OptionsWindow(TranslatableWindow):
 
     def get_pass(self, widget = None):
         """obtain password (button click handler)"""
-        self.auth_password = self.entry_password.get_text()
-        test = self.entry_password2.get_text()
-        if test == self.auth_password:
-            self.service.AnswerQuery(LPASSWORD)
+        auth_password = self.entry_password.get_text()
+        test_password = self.entry_password2.get_text()
+        if test_password == auth_password:
+            self.greeter.login()
         else:
             self.label_header.set_text(_('Password mismatch!'))
 

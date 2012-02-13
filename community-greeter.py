@@ -101,7 +101,7 @@ class CommunityGreeterApp(GdmGreeterService):
         if not self.langpanel:
             self.langpanel = self.load_window(LangPanel, backend = self)
         if not self.optionswindow:
-            self.optionswindow = self.load_window(OptionsWindow, service = self.obj)
+            self.optionswindow = self.load_window(OptionsWindow, self)
         else:
             # XXX
             self.optionswindow.window.set_sensitive(True)
