@@ -1,11 +1,13 @@
 community-greeter.py
 glade/autologin.glade
+glade/persistencewindow.glade
 glade/langpanel.glade
 GdmGreeter/__init__.py
 GdmGreeter/services.py
 GdmGreeter/optionswindow.py
 GdmGreeter/rootaccess.py
 GdmGreeter/persistence.py
+GdmGreeter/persistencewindow.py
 GdmGreeter/langpanel.py
 GdmGreeter/language.py
 
