@@ -55,7 +55,7 @@ class CommunityGreeterApp(GdmGreeterService):
     def __init__(self, *args, **kwargs):
         GdmGreeterService.__init__(self)
         self.scr = gdk.display_get_default().get_screen(self.display.number)
-        self.lang = None
+        self.langpanel = None
         self.optionswindow = None
         self.language = 'en_US.UTF-8'
         self.locale_path = '/var/lib/gdm3/tails.locale'
@@ -87,8 +87,8 @@ class CommunityGreeterApp(GdmGreeterService):
 
     def Ready(self):
         """Sever is ready"""
-        if not self.lang:
-            self.lang = self.load_window(LangPanel, backend = self)
+        if not self.langpanel:
+            self.langpanel = self.load_window(LangPanel, backend = self)
         if not self.optionswindow:
             self.optionswindow = self.load_window(OptionsWindow, service = self.obj)
         else:
@@ -160,15 +160,15 @@ class CommunityGreeterApp(GdmGreeterService):
                     os.chmod(self.password_path, 0o600)
                     f.write('TAILS_USER_PASSWORD=%s\n' % quote(self.optionswindow.auth_password))
                     logging.debug('password written to %s', self.password_path)
-        if self.lang:
-            if self.lang.language_code:
+        if self.langpanel:
+            if self.langpanel.language_code:
                 with open(self.locale_path, 'w') as f:
                     os.chmod(self.locale_path, 0o600)
-                    f.write('TAILS_LOCALE_NAME=%s\n' % self.lang.language_code)
+                    f.write('TAILS_LOCALE_NAME=%s\n' % self.langpanel.language_code)
                     f.write('TAILS_XKBMODEL=%s\n' % 'pc105') # use default value from /etc/default/keyboard
-                    f.write('TAILS_XKBLAYOUT=%s\n' % ','.join(self.lang.layout_list))
-                    f.write('TAILS_XKBVARIANT=%s\n' % ','.join(self.lang.variant_list))
-                    f.write('TAILS_XKBOPTIONS=%s\n' % self.lang.options)
+                    f.write('TAILS_XKBLAYOUT=%s\n' % ','.join(self.langpanel.layout_list))
+                    f.write('TAILS_XKBVARIANT=%s\n' % ','.join(self.langpanel.variant_list))
+                    f.write('TAILS_XKBOPTIONS=%s\n' % self.langpanel.options)
         logging.info("Finished.")
         gtk.main_quit()
 
