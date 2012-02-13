@@ -98,7 +98,6 @@ class CommunityGreeterApp(GdmGreeterService):
         else:
             # XXX
             self.optionswindow.window.set_sensitive(True)
-            self.optionswindow.show_user('')
         GdmGreeterService.Ready(self)
         self.ready = True
         logging.warn("greeter is ready.")
@@ -132,14 +131,8 @@ class CommunityGreeterApp(GdmGreeterService):
 
     def InfoQuery(self, text):
         """Server wants to ask the user for something"""
-        # XXX
-        if self.forced:
-            self.obj.AnswerQuery(LUSER)
-        elif self.optionswindow:
-            self.optionswindow.show_user(text)
-        else:
-            self.postponed = True
-            self.postponed_text = text
+        logging.debug("got infoquery: %s", text)
+        self.obj.AnswerQuery(LUSER)
 
     def SecretInfoQuery(self, text):
         """Server wants to ask for some secret info"""

@@ -64,8 +64,3 @@ class OptionsWindow(TranslatableWindow):
         if event:
             if event.keyval == gtk.keysyms.Return:            
                 self.get_pass(widget)
-
-    def show_user(self, text):
-        """dummy function"""
-        logging.debug('show user called with %s', text)
-        self.service.AnswerQuery(LUSER)
