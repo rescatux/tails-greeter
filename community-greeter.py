@@ -41,19 +41,19 @@ logging.config.fileConfig('tails-logging.conf')
 logging.LogRecord.getMessage = print_log_record_on_error(logging.LogRecord.getMessage)
 
 from pipes import quote
-from GdmGreeter.services import GdmGreeter
+from GdmGreeter.services import GdmGreeterService
 from GdmGreeter.language import TranslatableWindow
 from GdmGreeter.langpanel import LangPanel
 from GdmGreeter.autologin import AutologinWindow, LPASSWORD, LUSER
 from GdmGreeter import GLADE_DIR, __appname__
 
-class CommunityGreeterApp(GdmGreeter):
+class CommunityGreeterApp(GdmGreeterService):
     """Custom greeter instance"""
     app_name  = __appname__
     glade_dir = GLADE_DIR
 
     def __init__(self, *args, **kwargs):
-        GdmGreeter.__init__(self)
+        GdmGreeterService.__init__(self)
         self.scr = gdk.display_get_default().get_screen(self.display.number)
         self.lang = None
         self.login = None
@@ -94,7 +94,7 @@ class CommunityGreeterApp(GdmGreeter):
         else:
             self.login.window.set_sensitive(True)
             self.login.show_user('')
-        GdmGreeter.Ready(self)
+        GdmGreeterService.Ready(self)
         self.ready = True
         logging.warn("greeter is ready.")
 
@@ -103,12 +103,12 @@ class CommunityGreeterApp(GdmGreeter):
         # Translate all windows in the login screen
         self.translate_to(lang)
         # Apply chosen language
-        GdmGreeter.SelectLanguage(self, lang)
+        GdmGreeterService.SelectLanguage(self, lang)
 
     def SelectLayout(self, layout):
         """The user wants to change layout"""
         # Apply chosen layout
-        GdmGreeter.SelectLayout(self, layout)
+        GdmGreeterService.SelectLayout(self, layout)
 
     def DefaultLanguageNameChanged(self, lang):
         """default language name changed"""
