@@ -43,6 +43,7 @@ logging.LogRecord.getMessage = print_log_record_on_error(logging.LogRecord.getMe
 from pipes import quote
 
 import GdmGreeter.config
+import GdmGreeter.rootaccess
 
 from GdmGreeter.services import GdmGreeterService
 from GdmGreeter.language import TranslatableWindow
@@ -65,7 +66,6 @@ class CommunityGreeterApp(GdmGreeterService):
         self.optionswindow = None
         self.language = 'en_US.UTF-8'
         self.locale_path = '/var/lib/gdm3/tails.locale'
-        self.password_path = '/var/lib/gdm3/tails.password'
         self.session = None
         self.forced = False
         self.layout = None
@@ -74,6 +74,7 @@ class CommunityGreeterApp(GdmGreeterService):
         self.ready = False
         self.translated = False
         self._loaded_windows = []
+        self.rootaccess = GdmGreeter.rootaccess.RootAccessSettings()
 
     def load_window(self, window_class, *args, **kwargs):
         """When loading a window, also translate it"""
@@ -162,13 +163,8 @@ class CommunityGreeterApp(GdmGreeterService):
 
     def FinishProcess(self):
         """We're done, quit gtk app"""
-        # XXX
-        if self.optionswindow:
-            if self.optionswindow.auth_password:
-                with open(self.password_path, 'w') as f:
-                    os.chmod(self.password_path, 0o600)
-                    f.write('TAILS_USER_PASSWORD=%s\n' % quote(self.optionswindow.auth_password))
-                    logging.debug('password written to %s', self.password_path)
+        del self.rootaccess
+        # XXX: also use a model
         if self.langpanel:
             if self.langpanel.language_code:
                 with open(self.locale_path, 'w') as f:

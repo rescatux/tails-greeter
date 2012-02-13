@@ -50,6 +50,7 @@ class OptionsWindow(TranslatableWindow):
         test_password = self.entry_password2.get_text()
         if test_password == auth_password:
             self.greeter.login()
+            self.greeter.rootaccess.password = self.entry_password.get_text()
         else:
             self.label_header.set_text(_('Password mismatch!'))
 

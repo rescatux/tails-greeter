@@ -17,12 +17,27 @@
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>
 #
-"""Tails-greeter configuration"""
+"""Root access handeling
 
-# default Tails credentials
-LPASSWORD = 'live'
-LUSER = 'amnesia'
+"""
+import os
+import logging
+import pipes
 
-# file to store tails session sudo password to
-rootpassword_path = '/var/lib/gdm3/tails.password'
+import GdmGreeter.config
+
+class RootAccessSettings(object):
+    """Model storing settings related to root access
+
+    """
+    def __init__(self):
+        # Root password
+        self.password = None
+
+    def __del__(self):
+        if self.password:
+            with open(GdmGreeter.config.rootpassword_path, 'w') as f:
+                os.chmod(GdmGreeter.config.rootpassword_path, 0o600)
+                f.write('TAILS_USER_PASSWORD=%s\n' % pipes.quote(self.password))
+                logging.debug('password written to %s', GdmGreeter.config.rootpassword_path)
 
