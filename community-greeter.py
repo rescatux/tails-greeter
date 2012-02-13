@@ -41,6 +41,7 @@ logging.config.fileConfig('tails-logging.conf')
 logging.LogRecord.getMessage = print_log_record_on_error(logging.LogRecord.getMessage)
 
 from pipes import quote
+
 from GdmGreeter.services import GdmGreeterService
 from GdmGreeter.language import TranslatableWindow
 from GdmGreeter.langpanel import LangPanel
@@ -48,7 +49,9 @@ from GdmGreeter.optionswindow import OptionsWindow, LPASSWORD, LUSER
 from GdmGreeter import GLADE_DIR, __appname__
 
 class CommunityGreeterApp(GdmGreeterService):
-    """Tails greeter main controller"""
+    """Tails greeter main controller
+
+    This class is the greeter dbus service"""
 
     app_name  = __appname__
     glade_dir = GLADE_DIR
@@ -129,6 +132,7 @@ class CommunityGreeterApp(GdmGreeterService):
 
     def InfoQuery(self, text):
         """Server wants to ask the user for something"""
+        # XXX
         if self.forced:
             self.obj.AnswerQuery(LUSER)
         elif self.optionswindow:
@@ -138,7 +142,8 @@ class CommunityGreeterApp(GdmGreeterService):
             self.postponed_text = text
 
     def SecretInfoQuery(self, text):
-        """Server wants to ask for some secrate info"""
+        """Server wants to ask for some secret info"""
+        # XXX
         if self.forced:
             self.obj.AnswerQuery(LPASSWORD)
         else:
@@ -146,6 +151,7 @@ class CommunityGreeterApp(GdmGreeterService):
 
     def ForcedLogin(self):
         """Immediate login"""
+        # XXX
         logging.debug('forced login: skipping all widgets...')
         self.forced = True
         self.obj.SelectLanguage('en_US.UTF-8')
