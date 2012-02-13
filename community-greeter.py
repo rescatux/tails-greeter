@@ -44,10 +44,12 @@ from pipes import quote
 
 import GdmGreeter.config
 import GdmGreeter.rootaccess
+import GdmGreeter.persistence
 
 from GdmGreeter.services import GdmGreeterService
 from GdmGreeter.language import TranslatableWindow
 from GdmGreeter.langpanel import LangPanel
+from GdmGreeter.persistencewindow import PersistenceWindow
 from GdmGreeter.optionswindow import OptionsWindow
 from GdmGreeter import GLADE_DIR, __appname__
 
@@ -63,6 +65,7 @@ class CommunityGreeterApp(GdmGreeterService):
         GdmGreeterService.__init__(self)
         self.scr = gdk.display_get_default().get_screen(self.display.number)
         self.langpanel = None
+        self.persistencewindow = None
         self.optionswindow = None
         self.language = 'en_US.UTF-8'
         self.locale_path = '/var/lib/gdm3/tails.locale'
@@ -75,6 +78,7 @@ class CommunityGreeterApp(GdmGreeterService):
         self.translated = False
         self._loaded_windows = []
         self.rootaccess = GdmGreeter.rootaccess.RootAccessSettings()
+        self.persistence = GdmGreeter.persistence.PersistenceSettings()
 
     def load_window(self, window_class, *args, **kwargs):
         """When loading a window, also translate it"""
@@ -101,6 +105,8 @@ class CommunityGreeterApp(GdmGreeterService):
         """Sever is ready"""
         if not self.langpanel:
             self.langpanel = self.load_window(LangPanel, backend = self)
+        if not self.persistencewindow:
+            self.persistencewindow = self.load_window(PersistenceWindow, self)
         if not self.optionswindow:
             self.optionswindow = self.load_window(OptionsWindow, self)
         else:
