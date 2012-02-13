@@ -91,6 +91,11 @@ class CommunityGreeterApp(GdmGreeterService):
             if isinstance(window, TranslatableWindow):
                 window.translate_to(lang)
 
+    def login(self):
+        """Login GDM to the server"""
+        # XXX: check that we already sent the username?
+        self.obj.AnswerQuery(GdmGreeter.config.LPASSWORD)
+
     def Ready(self):
         """Sever is ready"""
         if not self.langpanel:
