@@ -42,10 +42,12 @@ logging.LogRecord.getMessage = print_log_record_on_error(logging.LogRecord.getMe
 
 from pipes import quote
 
+import GdmGreeter.config
+
 from GdmGreeter.services import GdmGreeterService
 from GdmGreeter.language import TranslatableWindow
 from GdmGreeter.langpanel import LangPanel
-from GdmGreeter.optionswindow import OptionsWindow, LPASSWORD, LUSER
+from GdmGreeter.optionswindow import OptionsWindow
 from GdmGreeter import GLADE_DIR, __appname__
 
 class CommunityGreeterApp(GdmGreeterService):
@@ -132,13 +134,13 @@ class CommunityGreeterApp(GdmGreeterService):
     def InfoQuery(self, text):
         """Server wants to ask the user for something"""
         logging.debug("got infoquery: %s", text)
-        self.obj.AnswerQuery(LUSER)
+        self.obj.AnswerQuery(GdmGreeter.config.LUSER)
 
     def SecretInfoQuery(self, text):
         """Server wants to ask for some secret info"""
         # XXX
         if self.forced:
-            self.obj.AnswerQuery(LPASSWORD)
+            self.obj.AnswerQuery(GdmGreeter.config.LPASSWORD)
         else:
             # XXX
             logging.debug('got SecretInfoQuery: %s', text)
@@ -150,7 +152,7 @@ class CommunityGreeterApp(GdmGreeterService):
         self.forced = True
         self.obj.SelectLanguage('en_US.UTF-8')
         if self.postponed:
-            self.obj.AnswerQuery(LUSER)
+            self.obj.AnswerQuery(GdmGreeter.config.LUSER)
 
     def FinishProcess(self):
         """We're done, quit gtk app"""

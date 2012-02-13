@@ -24,9 +24,6 @@ import logging, gtk, gettext, os
 _ = gettext.gettext
 import GdmGreeter
 from GdmGreeter.language import TranslatableWindow
-# default Tails credentials
-LPASSWORD = 'live'
-LUSER = 'amnesia'
 
 class OptionsWindow(TranslatableWindow):
     """Display a pre-login window"""
