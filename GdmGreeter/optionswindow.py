@@ -28,7 +28,7 @@ from GdmGreeter.language import TranslatableWindow
 LPASSWORD = 'live'
 LUSER = 'amnesia'
 
-class AutologinWindow(TranslatableWindow):
+class OptionsWindow(TranslatableWindow):
     """Display a pre-login window"""
     name = 'autologin'
     primary = False

@@ -3,7 +3,7 @@ glade/autologin.glade
 glade/langpanel.glade
 GdmGreeter/__init__.py
 GdmGreeter/services.py
-GdmGreeter/autologin.py
+GdmGreeter/optionswindow.py
 GdmGreeter/langpanel.py
 GdmGreeter/language.py
 
