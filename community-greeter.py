@@ -44,7 +44,7 @@ from pipes import quote
 from GdmGreeter.services import GdmGreeterService
 from GdmGreeter.language import TranslatableWindow
 from GdmGreeter.langpanel import LangPanel
-from GdmGreeter.autologin import AutologinWindow, LPASSWORD, LUSER
+from GdmGreeter.optionswindow import OptionsWindow, LPASSWORD, LUSER
 from GdmGreeter import GLADE_DIR, __appname__
 
 class CommunityGreeterApp(GdmGreeterService):
@@ -56,7 +56,7 @@ class CommunityGreeterApp(GdmGreeterService):
         GdmGreeterService.__init__(self)
         self.scr = gdk.display_get_default().get_screen(self.display.number)
         self.lang = None
-        self.login = None
+        self.optionswindow = None
         self.language = 'en_US.UTF-8'
         self.locale_path = '/var/lib/gdm3/tails.locale'
         self.password_path = '/var/lib/gdm3/tails.password'
@@ -89,11 +89,12 @@ class CommunityGreeterApp(GdmGreeterService):
         """Sever is ready"""
         if not self.lang:
             self.lang = self.load_window(LangPanel, backend = self)
-        if not self.login:
-            self.login = self.load_window(AutologinWindow, service = self.obj)
+        if not self.optionswindow:
+            self.optionswindow = self.load_window(OptionsWindow, service = self.obj)
         else:
-            self.login.window.set_sensitive(True)
-            self.login.show_user('')
+            # XXX
+            self.optionswindow.window.set_sensitive(True)
+            self.optionswindow.show_user('')
         GdmGreeterService.Ready(self)
         self.ready = True
         logging.warn("greeter is ready.")
@@ -129,8 +130,8 @@ class CommunityGreeterApp(GdmGreeterService):
         """Server wants to ask the user for something"""
         if self.forced:
             self.obj.AnswerQuery(LUSER)
-        elif self.login:
-            self.login.show_user(text)
+        elif self.optionswindow:
+            self.optionswindow.show_user(text)
         else:
             self.postponed = True
             self.postponed_text = text
@@ -140,7 +141,7 @@ class CommunityGreeterApp(GdmGreeterService):
         if self.forced:
             self.obj.AnswerQuery(LPASSWORD)
         else:
-            self.login.show_pass(text)
+            self.optionswindow.show_pass(text)
 
     def ForcedLogin(self):
         """Immediate login"""
@@ -152,11 +153,12 @@ class CommunityGreeterApp(GdmGreeterService):
 
     def FinishProcess(self):
         """We're done, quit gtk app"""
-        if self.login:
-            if self.login.auth_password:
+        # XXX
+        if self.optionswindow:
+            if self.optionswindow.auth_password:
                 with open(self.password_path, 'w') as f:
                     os.chmod(self.password_path, 0o600)
-                    f.write('TAILS_USER_PASSWORD=%s\n' % quote(self.login.auth_password))
+                    f.write('TAILS_USER_PASSWORD=%s\n' % quote(self.optionswindow.auth_password))
                     logging.debug('password written to %s', self.password_path)
         if self.lang:
             if self.lang.language_code:
