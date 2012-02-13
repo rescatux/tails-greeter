@@ -27,9 +27,6 @@ from GdmGreeter.language import TranslatableWindow
 
 class OptionsWindow(TranslatableWindow):
     """Display a pre-login window"""
-    name = 'autologin'
-    primary = False
-    auth_password = None
 
     def __init__(self, greeter):
         self.greeter = greeter
