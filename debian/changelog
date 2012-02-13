@@ -1,16 +1,34 @@
-tails-greeter (0.1.1~2.gbpad6da2) UNRELEASED; urgency=low
+tails-greeter (0.1.1~3.gbp7da38b) UNRELEASED; urgency=low
 
-  ** SNAPSHOT build @ad6da2787d0bef6db3c668f1238aed03d186b5ec **
-
-  [ Tails developers ]
-  * Have binary Lintian overrides installed by dh.
+  ** SNAPSHOT build @7da38b3ab35ef746c9c3b6bea2477338ec97d7ee **
 
   [ Max S ]
   * Extend sudo-related documentation.
   * change layout order to default for non-US
   * fix internal variable set routine
 
- -- Max S <govnototalitarizm@gmail.com>  Mon, 24 Oct 2011 12:24:05 +0800
+  [ Tails developers ]
+  * Have binary Lintian overrides installed by dh.
+  * Remove keyboard variants selection widget.
+  * langpanel: new panel layout using GtkBox
+  * Position and resize langpanel as a bottom panel
+  * Convert from gtkme to plain gtk
+  * Save autologin with glade3
+  * Remove unused pixmaps management
+  * Remove now unused packages (xsdvalidate, gtkme) from tree
+  * Remove layout variant selection from UI
+  * Actually use the selected layout
+  * Langpanel: mimic gdm 2.30
+  * language: put all module init code to the bottom
+  * Add a list of default languages
+  * Only display few language in menu
+  * Always display the selected language
+  * Fix typo
+  * Fix few callback docstring
+  * Update copyright information
+  * Convert class variables to instance variables
+
+ -- intrigeri <intrigeri@debian.org>  Mon, 13 Feb 2012 10:28:18 +0100
 
 tails-greeter (0.1.0) squeeze-backports; urgency=low
 
