@@ -48,7 +48,8 @@ from GdmGreeter.optionswindow import OptionsWindow, LPASSWORD, LUSER
 from GdmGreeter import GLADE_DIR, __appname__
 
 class CommunityGreeterApp(GdmGreeterService):
-    """Custom greeter instance"""
+    """Tails greeter main controller"""
+
     app_name  = __appname__
     glade_dir = GLADE_DIR
 
