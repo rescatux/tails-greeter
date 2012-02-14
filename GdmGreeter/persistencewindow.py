@@ -20,7 +20,6 @@
 import logging, gtk, gettext, os
 _ = gettext.gettext
 import GdmGreeter
-import GdmGreeter.persistence
 from GdmGreeter.language import TranslatableWindow
 
 class PersistenceWindow(TranslatableWindow):
@@ -51,7 +50,7 @@ class PersistenceWindow(TranslatableWindow):
             try:
                 self.greeter.persistence.activate(self.entry_passphrase.get_text())
                 return True
-            except GdmGreeter.persistence.WrongPassphraseError:
+            except GdmGreeter.WrongPassphraseError:
                 self.lbl_main = _("Wrong passphrase. Please try again.")
                 return False
         else:

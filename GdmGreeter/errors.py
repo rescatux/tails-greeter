@@ -1,8 +1,6 @@
 #!/usr/bin/python
 #
 # Copyright 2012 Tails developers <tails@boum.org>
-# Copyright 2011 Max <govnototalitarizm@gmail.com>
-# Copyright 2011 Martin Owens
 #
 # This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -17,24 +15,12 @@
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>
 #
-"""Persistence handeling
+"""Tails-greeter exceptions
 
 """
-import logging
 
-import GdmGreeter
-import GdmGreeter.config
+class TailsGreeterError(Exception):
+    pass
 
-class PersistenceSettings(object):
-    """Model storing settings related to persistence
-
-    """
-    def __init__(self):
-        pass
-
-    def activate(self, password):
-        # XXX: To be implemented
-        # Might throw WrongPassphraseError
-        logging.debug("passphrase: %s", password)
-        pass
-
+class WrongPassphraseError(TailsGreeterError):
+    pass

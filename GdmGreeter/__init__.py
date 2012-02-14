@@ -20,10 +20,9 @@
 """
 All varialbes relating to the community GDM greeter
 """
+import GdmGreeter.errors
 
 GLADE_DIR = './glade'
 __appname__ = 'community-greeter'
 __version__ = '0.9.4'
-
-class TailsGreeterError(Exception):
-    pass
+__all__ = GdmGreeter.errors
