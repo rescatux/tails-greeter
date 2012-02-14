@@ -33,19 +33,20 @@ class OptionsWindow(TranslatableWindow):
 
         builder = gtk.Builder()
         builder.set_translation_domain(GdmGreeter.__appname__)
-        builder.add_from_file(os.path.join(GdmGreeter.GLADE_DIR, "autologin.glade"))
+        builder.add_from_file(os.path.join(GdmGreeter.GLADE_DIR, "optionswindow.glade"))
         builder.connect_signals(self)
-        self.entry_password = builder.get_object("password_entry_field")
-        self.entry_password2 = builder.get_object("password_entry_field2")
-        self.label_header = builder.get_object("header_label")
+        self.entry_password = builder.get_object("password_entry")
+        self.entry_password2 = builder.get_object("password_entry2")
+        self.label_header = builder.get_object("password_label")
 
-        TranslatableWindow.__init__(self, builder.get_object("autologin"))
+        TranslatableWindow.__init__(self, builder.get_object("options_dialog"))
+        self.window.set_visible(False)
 
         self.entry_password.set_visibility(False)
         self.entry_password2.set_visibility(False)
 
-    def get_pass(self, widget = None):
-        """obtain password (button click handler)"""
+    def save_password(self):
+        """obtain, verify and store root access password"""
         auth_password = self.entry_password.get_text()
         test_password = self.entry_password2.get_text()
         if test_password == auth_password:
@@ -54,8 +55,15 @@ class OptionsWindow(TranslatableWindow):
         else:
             self.label_header.set_text(_('Password mismatch!'))
 
+
+    def cb_login_clicked(self, widget, data=None):
+        """Login button click handler"""
+        self.save_password()
+
+
     def key_press_event_cb(self, widget, event=None):
         """Handle key press"""
         if event:
             if event.keyval == gtk.keysyms.Return:            
-                self.get_pass(widget)
+                self.save_password()
+
