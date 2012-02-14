@@ -5,6 +5,7 @@ GdmGreeter/__init__.py
 GdmGreeter/services.py
 GdmGreeter/optionswindow.py
 GdmGreeter/rootaccess.py
+GdmGreeter/persistence.py
 GdmGreeter/langpanel.py
 GdmGreeter/language.py
 

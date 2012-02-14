@@ -17,13 +17,26 @@
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>
 #
-"""
-All varialbes relating to the community GDM greeter
-"""
+"""Persistence handeling
 
-GLADE_DIR = './glade'
-__appname__ = 'community-greeter'
-__version__ = '0.9.4'
+"""
+import logging
 
-class TailsGreeterError(Exception):
+import GdmGreeter
+import GdmGreeter.config
+
+class PersistenceSettings(object):
+    """Model storing settings related to persistence
+
+    """
+    def __init__(self):
+        pass
+
+    def activate(self, password):
+        # XXX: To be implemented
+        # Might throw WrongPassphraseError
+        logging.debug("passphrase: %s", password)
+        pass
+
+class WrongPassphraseError(GdmGreeter.TailsGreeterError):
     pass
