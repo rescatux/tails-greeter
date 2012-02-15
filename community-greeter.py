@@ -147,7 +147,8 @@ class CommunityGreeterApp(GdmGreeterService):
         if self.forced:
             self.obj.AnswerQuery(LPASSWORD)
         else:
-            self.optionswindow.show_pass(text)
+            # XXX
+            logging.debug('got SecretInfoQuery: %s', text)
 
     def ForcedLogin(self):
         """Immediate login"""

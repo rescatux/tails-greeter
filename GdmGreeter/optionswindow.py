@@ -69,7 +69,3 @@ class OptionsWindow(TranslatableWindow):
         """dummy function"""
         logging.debug('show user called with %s', text)
         self.service.AnswerQuery(LUSER)
-
-    def show_pass(self, text):
-        """dummy function"""
-        logging.debug('show pass called with %s', text)
