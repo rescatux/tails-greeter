@@ -287,6 +287,7 @@ class LangPanel(TranslatableWindow):
         dialog = builder.get_object("languages_dialog")
         treeview = builder.get_object("languages_treeview")
         liststore = builder.get_object("languages_liststore")
+        builder.connect_signals(self, dialog)
 
         count = 0
         for l in LANGS:
@@ -311,3 +312,15 @@ class LangPanel(TranslatableWindow):
 
         return lang
 
+    def cb_langdialog_key_press(self, widget, event, data=None):
+        """Handle key press in langdialog"""
+        if event.keyval == gtk.keysyms.Return:
+            if isinstance(data, gtk.Dialog):
+                data.response(True)
+
+    def cb_langdialog_button_press(self, widget, event, data=None):
+        """Handle mouse click in langdialog"""
+        if (event.type == gtk.gdk._2BUTTON_PRESS or
+                event.type == gtk.gdk._3BUTTON_PRESS):
+            if isinstance(data, gtk.Dialog):
+                data.response(True)
