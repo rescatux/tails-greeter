@@ -64,9 +64,6 @@ class CommunityGreeterApp(GdmGreeterService):
     def __init__(self, *args, **kwargs):
         GdmGreeterService.__init__(self)
         self.scr = gdk.display_get_default().get_screen(self.display.number)
-        self.langpanel = None
-        self.persistencewindow = None
-        self.optionswindow = None
         self.language = 'en_US.UTF-8'
         self.locale_path = '/var/lib/gdm3/tails.locale'
         self.session = None
@@ -77,6 +74,9 @@ class CommunityGreeterApp(GdmGreeterService):
         self.ready = False
         self.translated = False
         self._loaded_windows = []
+        self.langpanel = self.load_window(LangPanel, self)
+        self.persistencewindow = self.load_window(PersistenceWindow, self)
+        self.optionswindow = self.load_window(OptionsWindow, self)
         self.rootaccess = GdmGreeter.rootaccess.RootAccessSettings()
         self.persistence = GdmGreeter.persistence.PersistenceSettings()
 
@@ -103,15 +103,8 @@ class CommunityGreeterApp(GdmGreeterService):
 
     def Ready(self):
         """Sever is ready"""
-        if not self.langpanel:
-            self.langpanel = self.load_window(LangPanel, self)
-        if not self.persistencewindow:
-            self.persistencewindow = self.load_window(PersistenceWindow, self)
-        if not self.optionswindow:
-            self.optionswindow = self.load_window(OptionsWindow, self)
-        else:
-            # XXX
-            self.optionswindow.window.set_sensitive(True)
+        self.langpanel.window.show()
+        self.persistencewindow.window.show()
         GdmGreeterService.Ready(self)
         self.ready = True
         logging.warn("greeter is ready.")
