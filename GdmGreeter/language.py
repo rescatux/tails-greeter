@@ -127,7 +127,7 @@ class TranslatableWindow(object):
             child.set_label(self.gettext(lang, text))
         for (child, text) in self.tips:
             child.set_tooltip_markup(self.gettext(lang, text))
-        if self.window.get_sensitive() and self.retain_focus:
+        if self.window.get_sensitive() and self.window.get_visible() and self.retain_focus:
             self.window.present()
 
 MOFILES = '/usr/share/locale/'
