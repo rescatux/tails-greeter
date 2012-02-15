@@ -104,7 +104,7 @@ class CommunityGreeterApp(GdmGreeterService):
     def Ready(self):
         """Sever is ready"""
         if not self.langpanel:
-            self.langpanel = self.load_window(LangPanel, backend = self)
+            self.langpanel = self.load_window(LangPanel, self)
         if not self.persistencewindow:
             self.persistencewindow = self.load_window(PersistenceWindow, self)
         if not self.optionswindow:
