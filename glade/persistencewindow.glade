@@ -86,7 +86,7 @@
             </child>
             <child>
               <object class="GtkCheckButton" id="persistence_checkbutton">
-                <property name="label" translatable="yes">Activate persistence</property>
+                <property name="label" translatable="yes">Use persistence</property>
                 <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
