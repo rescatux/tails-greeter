@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tails-greeter\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-14 23:52+0800\n"
-"PO-Revision-Date: 2011-08-15 18:21+0700\n"
+"POT-Creation-Date: 2012-02-19 14:01+0100\n"
+"PO-Revision-Date: 2012-02-19 14:05+0100\n"
 "Last-Translator: Max S <govnototalitarizm@gmail.com>\n"
 "Language-Team:  <govnototalitarizm@gmail.com>\n"
 "Language: \n"
@@ -18,56 +18,73 @@ msgstr ""
 "X-Poedit-Language: French\n"
 "X-Poedit-Country: FRANCE\n"
 
-#: ../glade/autologin.glade.h:1
-#, fuzzy
+#: ../glade/persistencewindow.glade.h:1
+msgid "Activate persistence"
+msgstr "Activer la persistence"
+
+#: ../glade/persistencewindow.glade.h:2 ../glade/optionswindow.glade.h:2
+msgid "Login"
+msgstr "Connexion"
+
+#: ../glade/persistencewindow.glade.h:3
+msgid "More options"
+msgstr "Plus d'options"
+
+#: ../glade/persistencewindow.glade.h:4
+msgid "Passphrase"
+msgstr "Phrase de passe"
+
+#: ../glade/persistencewindow.glade.h:5
+msgid "Welcome to Tails."
+msgstr "Bienvenue sous Tails."
+
+#: ../glade/optionswindow.glade.h:1
+msgid "Administration password"
+msgstr "Mot de passe d'administration"
+
+#: ../glade/optionswindow.glade.h:3
 msgid ""
-"Enter here a password that will be asked to grant administrator rights. \n"
-"Leave this field blank to disable administrator rights."
-msgstr ""
-"Entrez le mot de passe qui sera utilisé pour obtenir les droits administrateur. \n"
-"Laissez les champs vides pour les désactiver."
+"Optionally enter an administration password. Leave this field blank to "
+"disable administrator rights."
+msgstr "Entrez le mot de passe qui sera utilisé pour obtenir les droits administrateur. Laissez ces champs vides si vous n'avez pas besoin d'effectuer de tâches d'administration."
 
 #: ../glade/langpanel.glade.h:1
-msgid "Current layout: [US]"
+msgid " "
 msgstr ""
 
-#: ../glade/langpanel.glade.h:2
-msgid "Language:"
-msgstr ""
+#: ../glade/langpanel.glade.h:2 ../GdmGreeter/langpanel.py:299
+msgid "Language"
+msgstr "Langue"
 
 #: ../glade/langpanel.glade.h:3
-msgid "Layout:"
+msgid "Layout"
 msgstr ""
 
 #: ../glade/langpanel.glade.h:4
-msgid "Locale:"
+msgid "Locale"
 msgstr ""
 
-#: ../glade/langpanel.glade.h:5
-msgid "Type into this text-box to test keyboard layout."
-msgstr ""
-
-#: ../glade/langpanel.glade.h:6
-msgid "Use Alt+Shift to switch layouts."
-msgstr ""
-
-#: ../glade/langpanel.glade.h:7
-msgid "Variant:"
-msgstr ""
-
-#: ../GdmGreeter/autologin.py:48
+#: ../GdmGreeter/optionswindow.py:56
 msgid "Password mismatch!"
+msgstr "Les mots de passe ne correspondent pas !"
+
+#: ../GdmGreeter/persistencewindow.py:54
+msgid "Wrong passphrase. Please try again."
 msgstr ""
 
-#: ../GdmGreeter/langpanel.py:165
+#: ../GdmGreeter/langpanel.py:203
 #, python-format
-msgid "Current layout: [%s (%s)]"
+msgid "Current layout: %s (%s)"
 msgstr ""
 
-#: ../GdmGreeter/langpanel.py:168
+#: ../GdmGreeter/langpanel.py:206
 #, python-format
-msgid "Current layout: [%s]"
+msgid "Current layout: %s"
 msgstr ""
+
+#: ../GdmGreeter/langpanel.py:215 ../GdmGreeter/langpanel.py:267
+msgid "Other..."
+msgstr "Autre..."
 
 #, fuzzy
 #~ msgid ""
