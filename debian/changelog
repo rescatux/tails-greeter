@@ -1,6 +1,6 @@
-tails-greeter (0.1.1~4.gbp530da4) UNRELEASED; urgency=low
+tails-greeter (0.1.1~5.gbp40e870) UNRELEASED; urgency=low
 
-  ** SNAPSHOT build @530da47b8a5babf5a9fd13dfed98a12f64c6fd40 **
+  ** SNAPSHOT build @40e870e6348866b430618d5aa974c226bab4afb6 **
 
   [ Max S ]
   * Extend sudo-related documentation.
@@ -17,8 +17,9 @@ tails-greeter (0.1.1~4.gbp530da4) UNRELEASED; urgency=low
   * Add dummy window to setup persistence.
   * Convert to Glade 3.8.1 for gtk2.
   * langdialog: exit when double-clicking or pressing Enter
+  * Update POT file, French and Russian translations.
 
- -- intrigeri <intrigeri@debian.org>  Sun, 19 Feb 2012 13:43:55 +0100
+ -- intrigeri <intrigeri@debian.org>  Sun, 19 Feb 2012 14:09:03 +0100
 
 tails-greeter (0.1.0) squeeze-backports; urgency=low
 
