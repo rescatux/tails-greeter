@@ -1,6 +1,6 @@
-tails-greeter (0.1.1~3.gbp7da38b) UNRELEASED; urgency=low
+tails-greeter (0.1.1~4.gbp530da4) UNRELEASED; urgency=low
 
-  ** SNAPSHOT build @7da38b3ab35ef746c9c3b6bea2477338ec97d7ee **
+  ** SNAPSHOT build @530da47b8a5babf5a9fd13dfed98a12f64c6fd40 **
 
   [ Max S ]
   * Extend sudo-related documentation.
@@ -9,26 +9,16 @@ tails-greeter (0.1.1~3.gbp7da38b) UNRELEASED; urgency=low
 
   [ Tails developers ]
   * Have binary Lintian overrides installed by dh.
-  * Remove keyboard variants selection widget.
-  * langpanel: new panel layout using GtkBox
-  * Position and resize langpanel as a bottom panel
+  * langpanel: new panel layout using GtkBox, convert to bottom panel.
   * Convert from gtkme to plain gtk
-  * Save autologin with glade3
-  * Remove unused pixmaps management
-  * Remove now unused packages (xsdvalidate, gtkme) from tree
-  * Remove layout variant selection from UI
-  * Actually use the selected layout
-  * Langpanel: mimic gdm 2.30
-  * language: put all module init code to the bottom
-  * Add a list of default languages
-  * Only display few language in menu
-  * Always display the selected language
-  * Fix typo
-  * Fix few callback docstring
-  * Update copyright information
-  * Convert class variables to instance variables
+  * Actually use the selected keyboard layout.
+  * Only display a few better-supported languages by default.
+  * Some amount of code and documentation cleanup and refactoring.
+  * Add dummy window to setup persistence.
+  * Convert to Glade 3.8.1 for gtk2.
+  * langdialog: exit when double-clicking or pressing Enter
 
- -- intrigeri <intrigeri@debian.org>  Mon, 13 Feb 2012 10:28:18 +0100
+ -- intrigeri <intrigeri@debian.org>  Sun, 19 Feb 2012 13:43:55 +0100
 
 tails-greeter (0.1.0) squeeze-backports; urgency=low
 
