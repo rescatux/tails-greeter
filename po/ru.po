@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tails-greeter\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-14 23:52+0800\n"
-"PO-Revision-Date: 2011-08-14 23:52+0700\n"
+"POT-Creation-Date: 2012-02-17 21:52+0800\n"
+"PO-Revision-Date: 2012-02-17 21:55+0700\n"
 "Last-Translator: Max S <govnototalitarizm@gmail.com>\n"
 "Language-Team:  <govnototalitarizm@gmail.com>\n"
 "Language: \n"
@@ -23,7 +23,7 @@ msgid ""
 "Enter here a password that will be asked to grant administrator rights. \n"
 "Leave this field blank to disable administrator rights."
 msgstr ""
-"Введите пароль, который будет запрошен для предоставления прав администратора. \n"
+"Введите пароль, который будет запрошен для предоставления прав администратора.\n"
 "Оставьте поле пустым для отключения прав администратора."
 
 #: ../glade/langpanel.glade.h:1
@@ -31,39 +31,39 @@ msgid "Current layout: [US]"
 msgstr "Текущая раскладка: [US]"
 
 #: ../glade/langpanel.glade.h:2
-msgid "Language:"
-msgstr "Язык:"
+#: ../glade/gsocpanel.glade.h:3
+msgid "Language"
+msgstr "Язык"
 
 #: ../glade/langpanel.glade.h:3
-msgid "Layout:"
-msgstr "Раскладка:"
+#: ../glade/gsocpanel.glade.h:4
+msgid "Layout"
+msgstr "Раскладка"
 
-#: ../glade/langpanel.glade.h:4
-msgid "Locale:"
-msgstr "Локаль:"
+#: ../glade/gsocpanel.glade.h:2
+msgid "Current layout: US"
+msgstr "Текущая раскладка: US"
 
-#: ../glade/langpanel.glade.h:5
+#: ../glade/gsocpanel.glade.h:5
 msgid "Type into this text-box to test keyboard layout."
 msgstr "В этом поле ввода можно опробовать новую раскладку."
 
-#: ../glade/langpanel.glade.h:6
-msgid "Use Alt+Shift to switch layouts."
-msgstr "Используйте Alt+Shift для переключения раскладок."
-
-#: ../glade/langpanel.glade.h:7
-msgid "Variant:"
-msgstr "Вариант:"
+#: ../glade/gsocpanel.glade.h:6
+msgid "Variant"
+msgstr "Вариант"
 
 #: ../GdmGreeter/autologin.py:48
 msgid "Password mismatch!"
 msgstr "Пароли не совпадают!"
 
-#: ../GdmGreeter/langpanel.py:165
+#: ../GdmGreeter/langpanel.py:179
+#: ../GdmGreeter/gsocpanel.py:172
 #, python-format
 msgid "Current layout: [%s (%s)]"
 msgstr "Текущая раскладка: [%s (%s)]"
 
-#: ../GdmGreeter/langpanel.py:168
+#: ../GdmGreeter/langpanel.py:182
+#: ../GdmGreeter/gsocpanel.py:175
 #, python-format
 msgid "Current layout: [%s]"
 msgstr "Текущая раскладка: [%s]"
