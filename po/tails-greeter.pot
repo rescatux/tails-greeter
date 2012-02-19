@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-16 15:12+0800\n"
+"POT-Creation-Date: 2012-02-19 14:01+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,46 +17,70 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../glade/autologin.glade.h:1
+#: ../glade/persistencewindow.glade.h:1
+msgid "Activate persistence"
+msgstr ""
+
+#: ../glade/persistencewindow.glade.h:2 ../glade/optionswindow.glade.h:2
+msgid "Login"
+msgstr ""
+
+#: ../glade/persistencewindow.glade.h:3
+msgid "More options"
+msgstr ""
+
+#: ../glade/persistencewindow.glade.h:4
+msgid "Passphrase"
+msgstr ""
+
+#: ../glade/persistencewindow.glade.h:5
+msgid "Welcome to Tails."
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:1
+msgid "Administration password"
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:3
 msgid ""
-"Optionally enter an administration password.\n"
-"Leave this field blank to disable administrator rights."
+"Optionally enter an administration password. Leave this field blank to "
+"disable administrator rights."
 msgstr ""
 
 #: ../glade/langpanel.glade.h:1
-msgid "Country (Locale)"
+msgid " "
 msgstr ""
 
-#: ../glade/langpanel.glade.h:2
-msgid "Current layout: US"
-msgstr ""
-
-#: ../glade/langpanel.glade.h:3
+#: ../glade/langpanel.glade.h:2 ../GdmGreeter/langpanel.py:299
 msgid "Language"
 msgstr ""
 
-#: ../glade/langpanel.glade.h:4
+#: ../glade/langpanel.glade.h:3
 msgid "Layout"
 msgstr ""
 
-#: ../glade/langpanel.glade.h:5
-msgid "Type into this text-box to test keyboard layout."
+#: ../glade/langpanel.glade.h:4
+msgid "Locale"
 msgstr ""
 
-#: ../glade/langpanel.glade.h:6
-msgid "Variant"
-msgstr ""
-
-#: ../GdmGreeter/autologin.py:48
+#: ../GdmGreeter/optionswindow.py:56
 msgid "Password mismatch!"
 msgstr ""
 
-#: ../GdmGreeter/langpanel.py:166
+#: ../GdmGreeter/persistencewindow.py:54
+msgid "Wrong passphrase. Please try again."
+msgstr ""
+
+#: ../GdmGreeter/langpanel.py:203
 #, python-format
 msgid "Current layout: %s (%s)"
 msgstr ""
 
-#: ../GdmGreeter/langpanel.py:169
+#: ../GdmGreeter/langpanel.py:206
 #, python-format
 msgid "Current layout: %s"
+msgstr ""
+
+#: ../GdmGreeter/langpanel.py:215 ../GdmGreeter/langpanel.py:267
+msgid "Other..."
 msgstr ""
