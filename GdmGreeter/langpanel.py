@@ -119,7 +119,6 @@ class LangPanel(TranslatableWindow):
     def populate_for_language(self, language):
         """populate the lists for a given language"""
         self.cb_locales.get_model().clear()
-        self.cb_layouts.get_model().clear()
         count = 0
         default = 0
         for l in ln_list(language):
