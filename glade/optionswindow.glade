@@ -80,6 +80,8 @@
                     <property name="can_focus">False</property>
                     <property name="xalign">0</property>
                     <property name="label" translatable="yes">Optionally enter an administration password. Leave this field blank to disable administrator rights.</property>
+                    <property name="wrap">True</property>
+                    <property name="width_chars">72</property>
                   </object>
                   <packing>
                     <property name="expand">True</property>
