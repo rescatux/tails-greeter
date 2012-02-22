@@ -166,12 +166,18 @@ class CommunityGreeterApp(GdmGreeterService):
         # XXX: also use a model
         if self.langpanel:
             if self.langpanel.language_code:
+                # xklavier needs the list in "last item prevails" order.
+                # Other parts of the system, such as setupcon, need the contrary.
+                layout_list = self.langpanel.layout_list[:]
+                layout_list.reverse()
+                variant_list = self.langpanel.variant_list
+                variant_list.reverse()
                 with open(self.locale_path, 'w') as f:
                     os.chmod(self.locale_path, 0o600)
                     f.write('TAILS_LOCALE_NAME=%s\n' % self.langpanel.language_code)
                     f.write('TAILS_XKBMODEL=%s\n' % 'pc105') # use default value from /etc/default/keyboard
-                    f.write('TAILS_XKBLAYOUT=%s\n' % ','.join(self.langpanel.layout_list))
-                    f.write('TAILS_XKBVARIANT=%s\n' % ','.join(self.langpanel.variant_list))
+                    f.write('TAILS_XKBLAYOUT=%s\n' % ','.join(layout_list))
+                    f.write('TAILS_XKBVARIANT=%s\n' % ','.join(variant_list))
                     f.write('TAILS_XKBOPTIONS=%s\n' % self.langpanel.options)
         logging.info("Finished.")
         gtk.main_quit()
