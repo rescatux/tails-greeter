@@ -102,12 +102,13 @@ class LangPanel(TranslatableWindow):
             use_default = 0
             for l in layouts:
                 layout_name = l.split(')')[0].split('(')[1]
-                self.layouts[layout_name] = l.split()[0]
+                layout_code = l.split()[0]
+                self.layouts[layout_name] = layout_code
                 self.cb_layouts.get_model().append([layout_name])
-                if locale.split('_')[1].lower() == self.layouts[layout_name]:
+                if locale.split('_')[1].lower() == layout_code:
                     default = count
                     use_default = 1
-                if locale.split('_')[0].lower() == self.layouts[layout_name]: backup = count
+                if locale.split('_')[0].lower() == layout_code: backup = count
                 count += 1
             if use_default: self.cb_layouts.set_active(default)
             else: self.cb_layouts.set_active(backup)
