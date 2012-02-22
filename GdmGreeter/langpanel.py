@@ -22,7 +22,7 @@ Greeter program for GDM using gtk (nothing else works)
 
 import logging, gtk, xklavier, gettext, os
 _ = gettext.gettext
-from GdmGreeter.language import TranslatableWindow, LANGS, DEFAULT_LANGS, ln_list, ln_country, ln_iso639_tri
+from GdmGreeter.language import TranslatableWindow, LANGS, DEFAULT_LANGS, ln_list, ln_country, ln_country_from_layout, ln_iso639_tri
 import GdmGreeter
 
 class LangPanel(TranslatableWindow):
@@ -104,6 +104,13 @@ class LangPanel(TranslatableWindow):
                 logging.debug('layout: %s ', l)
                 layout_name = l.split(')')[0].split('(')[1]
                 layout_code = l.split()[0]
+                # Unfortunately XklConfigItem's xkl_get_country_name is not part
+                # of the Python bindings, so we have to hack our way through
+                # another way. Moreover, layout codes don't easily map to country
+                # codes: layout code "be" is for Belgium, while country code "be"
+                # is for Бельгія, so we cannot use ICU to get the country code
+                # from the layout code. Hence, just display the English layout
+                # names until we find a better solution.
                 self.layouts[layout_name] = layout_code
                 self.cb_layouts.get_model().append([layout_name])
                 if locale.split('_')[1].lower() == layout_code:
