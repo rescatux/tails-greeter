@@ -1,6 +1,6 @@
-tails-greeter (0.1.1~5.gbp40e870) UNRELEASED; urgency=low
+tails-greeter (0.1.1~6.gbpd3f7ca) UNRELEASED; urgency=low
 
-  ** SNAPSHOT build @40e870e6348866b430618d5aa974c226bab4afb6 **
+  ** SNAPSHOT build @d3f7caef2f848662430c0a3ea008f750bb1145bf **
 
   [ Max S ]
   * Extend sudo-related documentation.
@@ -18,8 +18,13 @@ tails-greeter (0.1.1~5.gbp40e870) UNRELEASED; urgency=low
   * Convert to Glade 3.8.1 for gtk2.
   * langdialog: exit when double-clicking or pressing Enter
   * Update POT file, French and Russian translations.
+  * Don't attempt to add the Live user to the sudo group.
+  * Depend on gconf2, that provides gconftool-2, instead of checking at runtime.
+  * Localize iceweasel search engines at GDM PostLogin time.
+  * Wrap admin password description text.
+  * Also reset layout_cbox when language is selected.
 
- -- intrigeri <intrigeri@debian.org>  Sun, 19 Feb 2012 14:09:03 +0100
+ -- Tails developers <tails@boum.org>  Wed, 22 Feb 2012 13:30:16 +0100
 
 tails-greeter (0.1.0) squeeze-backports; urgency=low
 
