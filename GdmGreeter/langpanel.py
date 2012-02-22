@@ -101,6 +101,7 @@ class LangPanel(TranslatableWindow):
             backup = 0
             use_default = 0
             for l in layouts:
+                logging.debug('layout: %s ', l)
                 layout_name = l.split(')')[0].split('(')[1]
                 layout_code = l.split()[0]
                 self.layouts[layout_name] = layout_code
