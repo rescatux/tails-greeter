@@ -11,7 +11,15 @@ Package: tails-greeter
 Section: gnome
 Architecture: all
 Depends: ${python:Depends}, ${misc:Depends},
-          python-dbus, gdm | gdm3, gir1.0-gtk-2.0 | gir1.2-gtk-2.0, console-setup, sudo, python-gobject, python-pyicu, python-xklavier, ttf-unifont
+ python-dbus,
+ gdm | gdm3,
+ gir1.0-gtk-2.0 | gir1.2-gtk-2.0,
+ console-setup,
+ sudo,
+ python-gobject,
+ python-pyicu,
+ python-xklavier,
+ ttf-unifont
 Conflicts: gdm-community-greeter
 Description: GDM greeter for Tails
  For setting languages and other variables.
