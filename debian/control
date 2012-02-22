@@ -1,7 +1,8 @@
 Source: tails-greeter
 Section: python
 Priority: optional
-Maintainer: Max S <govnototalitarizm@gmail.com>
+Maintainer: Tails developers <tails@boum.org>
+Uploaders: Max S <govnototalitarizm@gmail.com>
 Build-Depends: debhelper (>= 7.0.50~), python (>= 2.6.6-3~)
 Build-Depends-Indep: python-distutils-extra
 Standards-Version: 3.9.1
