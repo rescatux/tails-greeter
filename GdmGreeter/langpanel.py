@@ -22,7 +22,7 @@ Greeter program for GDM using gtk (nothing else works)
 
 import logging, gtk, xklavier, gettext, os
 _ = gettext.gettext
-from GdmGreeter.language import TranslatableWindow, LANGS, DEFAULT_LANGS, ln_list, ln_country, ln_country_from_layout, ln_iso639_tri
+from GdmGreeter.language import TranslatableWindow, LANGS, DEFAULT_LANGS, ln_list, ln_country, ln_iso639_tri
 import GdmGreeter
 
 class LangPanel(TranslatableWindow):
