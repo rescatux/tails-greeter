@@ -33,14 +33,20 @@ class PersistenceWindow(TranslatableWindow):
         builder.add_from_file(os.path.join(GdmGreeter.GLADE_DIR, "persistencewindow.glade"))
         builder.connect_signals(self)
 
+        self.moreoptions = False
+
         # Sets self.window
         TranslatableWindow.__init__(self, builder.get_object("login_dialog"))
         self.lbl_main = builder.get_object("main_label")
-        self.cbx_persistence = builder.get_object("persistence_checkbutton")
+        self.btn_persistence_yes = builder.get_object("persistence_yes_button")
+        self.btn_persistence_no = builder.get_object("persistence_no_button")
         self.lbl_passphrase = builder.get_object("passphrase_label")
         self.entry_passphrase = builder.get_object("passphrase_entry")
-        self.btn_options = builder.get_object("options_button")
+        self.btn_moreoptions_yes = builder.get_object("moreoptions_yes_button")
+        self.btn_moreoptions_no = builder.get_object("moreoptions_no_button")
         self.btn_login = builder.get_object("login_button") 
+        self.img_login = builder.get_object("login_image")
+        self.img_next = builder.get_object("next_image")
 
     def process_persistence(self):
         """Ask the backend to setup persistence and handle errors
@@ -56,17 +62,45 @@ class PersistenceWindow(TranslatableWindow):
         else:
             return True
 
-    def cb_persistence_toggeled(self, widget, data=None):
-        persistence = widget.get_active()
+    def set_persistence_visibility(self, persistence):
         self.lbl_passphrase.set_visible(persistence)
         self.entry_passphrase.set_visible(persistence)
+        self.btn_persistence_yes.set_active(persistence)
+        self.btn_persistence_no.set_active(not persistence)
+
+    def cb_persistence_yes_toggled(self, widget, data=None):
+        persistence = widget.get_active()
+        self.set_persistence_visibility(persistence)
+
+    def cb_persistence_no_toggled(self, widget, data=None):
+        persistence = not widget.get_active()
+        self.set_persistence_visibility(persistence)
+
+    def update_login_button(self, moreoptions):
+        self.moreoptions = moreoptions
+        if moreoptions:
+            self.btn_login.set_label("gtk-go-forward")
+            self.btn_login.set_use_stock(True)
+        else:
+            self.btn_login.set_label(_("Login"))
+            self.btn_login.set_use_stock(False)
+            self.btn_login.set_image(self.img_login)
+
+    def cb_moreoptions_yes_toggled(self, widget, data=None):
+        moreoptions = widget.get_active()
+        self.update_login_button(moreoptions)
+
+    def cb_moreoptions_no_toggled(self, widget, data=None):
+        moreoptions = not widget.get_active()
+        self.update_login_button(moreoptions)
 
     def cb_login_clicked(self, widget, data=None):
         if self.process_persistence():
-            self.greeter.login()
-
-    def cb_options_clicked(self, widget, data=None):
-        if self.process_persistence():
-            self.window.hide()
-            self.greeter.langpanel.window.hide()
-            self.greeter.optionswindow.window.show()
+            # next
+            if self.moreoptions:
+                self.window.hide()
+                self.greeter.langpanel.window.hide()
+                self.greeter.optionswindow.window.show()
+            # login
+            else:
+                self.greeter.login()
