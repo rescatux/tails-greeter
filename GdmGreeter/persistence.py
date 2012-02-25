@@ -32,6 +32,13 @@ class PersistenceSettings(object):
     def __init__(self):
         pass
 
+    def list_containers(self):
+         """Returns a list of persistence containers we might want to unlock."""
+         # /usr/local/sbin/live-persist list TailsData
+         containers = []
+         logging.debug("found containers: %s", containers)
+         return containers
+
     def activate(self, password):
         # XXX: To be implemented
         # Might throw WrongPassphraseError
