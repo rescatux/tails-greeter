@@ -1,6 +1,4 @@
-tails-greeter (0.1.1~7.gbp53bb13) UNRELEASED; urgency=low
-
-  ** SNAPSHOT build @53bb133096ca17567754b3c769f41314c29ae60a **
+tails-greeter (0.2.0) squeeze-backports; urgency=low
 
   [ Max S ]
   * Extend sudo-related documentation.
@@ -25,8 +23,12 @@ tails-greeter (0.1.1~7.gbp53bb13) UNRELEASED; urgency=low
   * Stop running setupcon in .profile.
   * Set chosen LANG into /etc/default/locale.
   * Put chosen layout first in /etc/default/keyboard.
+  * Make maintainer / uploader control fields match reality.
+  * Tidy code.
+  * Add debugging message.
+  * Explain why translating keyboard layout names does not look trivial.
 
- -- Tails developers <tails@boum.org>  Wed, 22 Feb 2012 15:25:44 +0100
+ -- Tails developers <tails@boum.org>  Sat, 25 Feb 2012 16:07:59 +0100
 
 tails-greeter (0.1.0) squeeze-backports; urgency=low
 
