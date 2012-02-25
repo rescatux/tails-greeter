@@ -1,3 +1,4 @@
+
 #!/usr/bin/python
 #
 # Copyright 2012 Tails developers <tails@boum.org>
@@ -170,7 +171,7 @@ class CommunityGreeterApp(GdmGreeterService):
                 # Other parts of the system, such as setupcon, need the contrary.
                 layout_list = self.langpanel.layout_list[:]
                 layout_list.reverse()
-                variant_list = self.langpanel.variant_list
+                variant_list = self.langpanel.variant_list[:]
                 variant_list.reverse()
                 with open(self.locale_path, 'w') as f:
                     os.chmod(self.locale_path, 0o600)
