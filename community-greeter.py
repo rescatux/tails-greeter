@@ -103,7 +103,7 @@ class CommunityGreeterApp(GdmGreeterService):
         self.obj.AnswerQuery(GdmGreeter.config.LPASSWORD)
 
     def Ready(self):
-        """Sever is ready"""
+        """Server is ready"""
         self.langpanel.window.show()
         self.persistencewindow.window.show()
         GdmGreeterService.Ready(self)
