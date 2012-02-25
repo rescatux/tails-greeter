@@ -48,8 +48,8 @@ class PersistenceWindow(TranslatableWindow):
         self.img_login = builder.get_object("login_image")
         self.img_next = builder.get_object("next_image")
 
-    def process_persistence(self):
-        """Ask the backend to setup persistence and handle errors
+    def activate_persistence(self):
+        """Ask the backend to activate persistence and handle errors
 
         Returns: True if everything went fine, False if the user should try again"""
         if self.cbx_persistence.get_active():
@@ -95,7 +95,7 @@ class PersistenceWindow(TranslatableWindow):
         self.update_login_button(moreoptions)
 
     def cb_login_clicked(self, widget, data=None):
-        if self.process_persistence():
+        if self.activate_persistence():
             # next
             if self.moreoptions:
                 self.window.hide()
