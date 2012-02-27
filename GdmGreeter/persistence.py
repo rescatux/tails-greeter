@@ -34,7 +34,7 @@ class PersistenceSettings(object):
 
     def list_containers(self):
          """Returns a list of persistence containers we might want to unlock."""
-         # /usr/local/sbin/live-persist --encryption=luks --media=removable list TailsData
+         # /usr/bin/sudo /usr/local/sbin/live-persist --encryption=luks --media=removable list TailsData
          containers = []
          logging.debug("found containers: %s", containers)
          return containers
@@ -50,6 +50,6 @@ class PersistenceSettings(object):
             options.append('--read-write')
         args.append('activate')
         args.append(volume)
-        # /usr/local/sbin/live-persist activate args
+        # /usr/bin/sudo /usr/local/sbin/live-persist activate args
         pass
 
