@@ -67,7 +67,7 @@ class PersistenceSettings(object):
 
     def unlock_device(self, device, password):
         """Unlock the LUKS persistent device"""
-        cleartext_name = str.rsplit(device, '/', 1) + '_unlocked'
+        cleartext_name = str.rsplit(device, '/', 1)[-1] + '_unlocked'
         cleartext_device = '/dev/mapper/' + cleartext_name
         args = [
             "/usr/bin/sudo", "-n",
