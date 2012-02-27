@@ -62,7 +62,7 @@ class PersistenceSettings(object):
 
     def activate(self, volume, password, readonly):
         # XXX: To be implemented
-        # Might throw WrongPassphraseError
+        # Might throw WrongPassphraseError or some other kind of LivePersistError
         logging.debug("passphrase: %s", password)
         args = []
         if readonly:
