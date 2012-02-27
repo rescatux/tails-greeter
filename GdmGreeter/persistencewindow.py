@@ -64,7 +64,7 @@ class PersistenceWindow(TranslatableWindow):
         """Ask the backend to activate persistence and handle errors
 
         Returns: True if everything went fine, False if the user should try again"""
-        if self.cbx_persistence.get_active():
+        if self.btn_persistence_yes.get_active():
             try:
                 # FIXME: pass curret volume
                 self.greeter.persistence.activate(

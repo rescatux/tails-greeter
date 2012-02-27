@@ -74,12 +74,12 @@ class CommunityGreeterApp(GdmGreeterService):
         self.postponed_text = None
         self.ready = False
         self.translated = False
+        self.persistence = GdmGreeter.persistence.PersistenceSettings()
         self._loaded_windows = []
         self.langpanel = self.load_window(LangPanel, self)
         self.persistencewindow = self.load_window(PersistenceWindow, self)
         self.optionswindow = self.load_window(OptionsWindow, self)
         self.rootaccess = GdmGreeter.rootaccess.RootAccessSettings()
-        self.persistence = GdmGreeter.persistence.PersistenceSettings()
 
     def load_window(self, window_class, *args, **kwargs):
         """When loading a window, also translate it"""
