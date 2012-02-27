@@ -39,27 +39,27 @@ class PersistenceSettings(object):
         pass
 
     def list_containers(self):
-         """Returns a list of persistence containers we might want to unlock."""
-         proc = subprocess.Popen(
-             [
-                 "/usr/bin/sudo", "-n", "/usr/local/sbin/live-persist",
-                 "--encryption=luks", "--media=removable",
-                 "list", "TailsData"
-             ],
-             stdout=subprocess.PIPE,
-             stderr=subprocess.PIPE
-             )
-         out, err = proc.communicate()
-         out = unicode_to_utf8(out)
-         err = unicode_to_utf8(err)
-         if proc.returncode:
-             raise GdmGreeter.errors.LivePersistError(
-                 _("live-persist failed with return code %(returncode)s:\n%(stderr)s")
-                 % { 'returncode': proc.returncode, 'stderr': err }
-                 )
-         containers = str.splitlines(out)
-         logging.debug("found containers: %s", containers)
-         return containers
+        """Returns a list of persistence containers we might want to unlock."""
+        proc = subprocess.Popen(
+            [
+                "/usr/bin/sudo", "-n", "/usr/local/sbin/live-persist",
+                "--encryption=luks", "--media=removable",
+                "list", "TailsData"
+            ],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE
+            )
+        out, err = proc.communicate()
+        out = unicode_to_utf8(out)
+        err = unicode_to_utf8(err)
+        if proc.returncode:
+            raise GdmGreeter.errors.LivePersistError(
+                _("live-persist failed with return code %(returncode)s:\n%(stderr)s")
+                % { 'returncode': proc.returncode, 'stderr': err }
+                )
+        containers = str.splitlines(out)
+        logging.debug("found containers: %s", containers)
+        return containers
 
     def activate(self, volume, password, readonly):
         logging.debug("passphrase: %s", password)
