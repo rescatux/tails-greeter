@@ -57,7 +57,7 @@ class PersistenceSettings(object):
                  _("live-persist failed with return code %(returncode)s:\n%(stderr)s")
                  % { 'returncode': proc.returncode, 'stderr': err }
                  )
-         containers = str.splilinest(out)
+         containers = str.splitlines(out)
          logging.debug("found containers: %s", containers)
          return containers
 
