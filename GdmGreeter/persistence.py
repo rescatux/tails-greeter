@@ -62,16 +62,27 @@ class PersistenceSettings(object):
          return containers
 
     def activate(self, volume, password, readonly):
-        # XXX: To be implemented
-        # Might throw WrongPassphraseError or some other kind of LivePersistError
         logging.debug("passphrase: %s", password)
-        args = []
+        args = [ "/usr/bin/sudo", "-n", "/usr/local/sbin/live-persist" ]
         if readonly:
-            options.append('--read-only')
+            args.append('--read-only')
         else:
-            options.append('--read-write')
+            args.append('--read-write')
         args.append('activate')
         args.append(volume)
-        # /usr/bin/sudo -n /usr/local/sbin/live-persist activate args
-        pass
-
+        proc = subprocess.Popen(
+            args,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE
+            )
+        out, err = proc.communicate()
+        out = unicode_to_utf8(out)
+        err = unicode_to_utf8(err)
+        if proc.returncode:
+            # FIXME: once live-persist can make it clear,
+            # throw WrongPassphraseError when relevant,
+            # some other kind of LivePersistError else.
+            raise GdmGreeter.errors.WrongPassphraseError(
+                _("live-persist failed with return code %(returncode)s:\n%(stdout)s\n%(stderr)s")
+                % { 'returncode': proc.returncode, 'stdout': out, 'stderr': err }
+                )

@@ -69,14 +69,14 @@ class PersistenceWindow(TranslatableWindow):
         Returns: True if everything went fine, False if the user should try again"""
         if self.btn_persistence_yes.get_active():
             try:
-                # FIXME: pass current volume
                 self.greeter.persistence.activate(
                     volume=self.containers[0],
                     password=self.entry_passphrase.get_text(),
                     readonly=False
                     )
                 return True
-            except GdmGreeter.WrongPassphraseError:
+            except GdmGreeter.errors.WrongPassphraseError:
+                # FIXME: use another label widget?
                 self.lbl_main = _("Wrong passphrase. Please try again.")
                 return False
         else:
