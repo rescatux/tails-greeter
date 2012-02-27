@@ -1,3 +1,17 @@
+tails-greeter (0.3.0~1.gbp3037ce) UNRELEASED; urgency=low
+
+  ** SNAPSHOT build @3037ce665611b37f6fc2736c1bfc3671df18d8b7 **
+
+  [ Tails developers ]
+  * Reverse a copy of the variants list, not the original one.
+  * Revamp main dialog UI.
+  * Rename process_persistence to activate_persistence.
+  * Fix typo.
+  * Add dummy implementation of list_containers.
+  * Add placeholder code.
+
+ -- intrigeri <intrigeri@debian.org>  Mon, 27 Feb 2012 15:28:01 +0100
+
 tails-greeter (0.2.0) squeeze-backports; urgency=low
 
   [ Max S ]
