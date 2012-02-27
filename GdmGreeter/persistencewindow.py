@@ -66,7 +66,7 @@ class PersistenceWindow(TranslatableWindow):
         Returns: True if everything went fine, False if the user should try again"""
         if self.btn_persistence_yes.get_active():
             try:
-                # FIXME: pass curret volume
+                # FIXME: pass current volume
                 self.greeter.persistence.activate(
                     volume=self.containers[0],
                     password=self.entry_passphrase.get_text(),
