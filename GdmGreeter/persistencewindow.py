@@ -95,7 +95,6 @@ class PersistenceWindow(TranslatableWindow):
         self.set_persistence_visibility(persistence)
 
     def update_login_button(self, moreoptions):
-        self.moreoptions = moreoptions
         if moreoptions:
             self.btn_login.set_label("gtk-go-forward")
             self.btn_login.set_use_stock(True)
@@ -104,13 +103,21 @@ class PersistenceWindow(TranslatableWindow):
             self.btn_login.set_use_stock(False)
             self.btn_login.set_image(self.img_login)
 
+    def update_moreoptions_buttons(self, moreoptions):
+        self.btn_moreoptions_yes.set_active(moreoptions)
+        self.btn_moreoptions_no.set_active(not moreoptions)
+
     def cb_moreoptions_yes_toggled(self, widget, data=None):
         moreoptions = widget.get_active()
+        self.moreoptions = moreoptions
         self.update_login_button(moreoptions)
+        self.update_moreoptions_buttons(moreoptions)
 
     def cb_moreoptions_no_toggled(self, widget, data=None):
         moreoptions = not widget.get_active()
+        self.moreoptions = moreoptions
         self.update_login_button(moreoptions)
+        self.update_moreoptions_buttons(moreoptions)
 
     def cb_login_clicked(self, widget, data=None):
         if self.activate_persistence():
