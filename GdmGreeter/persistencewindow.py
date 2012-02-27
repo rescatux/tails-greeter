@@ -44,7 +44,7 @@ class PersistenceWindow(TranslatableWindow):
         self.entry_passphrase = builder.get_object("passphrase_entry")
         self.btn_moreoptions_yes = builder.get_object("moreoptions_yes_button")
         self.btn_moreoptions_no = builder.get_object("moreoptions_no_button")
-        self.btn_login = builder.get_object("login_button") 
+        self.btn_login = builder.get_object("login_button")
         self.img_login = builder.get_object("login_image")
         self.img_next = builder.get_object("next_image")
 
