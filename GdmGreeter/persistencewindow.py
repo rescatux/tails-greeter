@@ -53,9 +53,10 @@ class PersistenceWindow(TranslatableWindow):
             { "path": container, "locked": True }
             for container in self.greeter.persistence.list_containers()
             ]
+        if len(self.containers) == 0:
+            self.box_persistence.hide()
 
         # FIXME:
-        # * entirely hide persistence options if no container was found.
         # * support multiple persistent containers:
         #   - display brand, model, partition path and size for each container
         #   - create as many passphrase input fields as needed
