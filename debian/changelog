@@ -1,6 +1,6 @@
-tails-greeter (0.3.0~11.gbpcf041f) UNRELEASED; urgency=low
+tails-greeter (0.3.0~12.gbpb1ac74) UNRELEASED; urgency=low
 
-  ** SNAPSHOT build @cf041fc8f3551ac96a67e8f4897362d0afb37799 **
+  ** SNAPSHOT build @b1ac740a997bdd87d3fa29dfbc4dd2a94bfda725 **
 
   [ Tails developers ]
   * Reverse a copy of the variants list, not the original one.
@@ -16,10 +16,10 @@ tails-greeter (0.3.0~11.gbpcf041f) UNRELEASED; urgency=low
   * Add LivePersistError exception.
   * Use live-persist to gather a list of plausible persistence containers.
   * Entirely hide persistence options if no container was found.
-  * Use live-persist to setup persistence using the entered passphrase.
+  * Unlock LUKS persistent volume and ask live-persist to setup persistence.
   * Don't log passphrases.
 
- -- intrigeri <intrigeri@debian.org>  Mon, 27 Feb 2012 19:18:17 +0100
+ -- intrigeri <intrigeri@debian.org>  Mon, 27 Feb 2012 19:46:23 +0100
 
 tails-greeter (0.2.0) squeeze-backports; urgency=low
 
