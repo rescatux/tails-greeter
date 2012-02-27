@@ -48,6 +48,7 @@ class PersistenceWindow(TranslatableWindow):
         self.img_login = builder.get_object("login_image")
         self.img_next = builder.get_object("next_image")
 
+        # FIXME: list_containers may raise exceptions. Deal with that.
         self.containers = [
             { "path": container, "locked": True }
             for container in self.greeter.persistence.list_containers()
