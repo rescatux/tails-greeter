@@ -1,19 +1,22 @@
-tails-greeter (0.3.0~4.gbp11cb5b) UNRELEASED; urgency=low
+tails-greeter (0.3.0~5.gbp883bb8) UNRELEASED; urgency=low
 
-  ** SNAPSHOT build @11cb5b175482ae82ee8978299918842163aaf3c8 **
+  ** SNAPSHOT build @883bb85051fe4ec830faaa8c4b5ed85f295d1191 **
 
   [ Tails developers ]
   * Reverse a copy of the variants list, not the original one.
   * Revamp main dialog UI.
   * Rename process_persistence to activate_persistence.
-  * Fix typo.
-  * Add dummy implementation of list_containers.
-  * Add placeholder code.
-  * Fix typo.
+  * Fix various typos and bugs.
   * Add source code encoding information where needed.
-  * Make Glade UI compatible with GTK-2 again.
+  * Remove space at EOL.
+  * Move sudoers.d snippets into a dedicated directory.
+  * Grant the Debian-gdm user permissions to run live-persist as root.
+  * Welcome users a bit more warmly.
+  * Add unicode_to_utf8 util function.
+  * Add LivePersistError exception.
+  * Use live-persist to gather a list of plausible persistence containers.
 
- -- intrigeri <intrigeri@debian.org>  Mon, 27 Feb 2012 16:12:25 +0100
+ -- intrigeri <intrigeri@debian.org>  Mon, 27 Feb 2012 18:15:08 +0100
 
 tails-greeter (0.2.0) squeeze-backports; urgency=low
 
