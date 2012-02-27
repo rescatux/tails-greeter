@@ -47,6 +47,7 @@ class PersistenceWindow(TranslatableWindow):
         self.btn_login = builder.get_object("login_button")
         self.img_login = builder.get_object("login_image")
         self.img_next = builder.get_object("next_image")
+        self.box_persistence = builder.get_object("persistence_box")
 
         # FIXME: list_containers may raise exceptions. Deal with that.
         self.containers = [
