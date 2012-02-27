@@ -70,7 +70,7 @@ class PersistenceWindow(TranslatableWindow):
         if self.btn_persistence_yes.get_active():
             try:
                 self.greeter.persistence.activate(
-                    volume=self.containers[0],
+                    volume=self.containers[0]['path'],
                     password=self.entry_passphrase.get_text(),
                     readonly=False
                     )
