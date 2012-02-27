@@ -20,6 +20,7 @@
 """Persistence handling
 
 """
+import dbus
 import logging
 import subprocess
 
@@ -69,15 +70,19 @@ class PersistenceSettings(object):
         """Unlock the LUKS persistent device"""
         bus = dbus.SystemBus()
         dev_obj = bus.get_object("org.freedesktop.UDisks", device)
+        dev = dbus.Interface(dev_obj, "org.freedesktop.UDisks.Device")
         try:
-            cleartext_device = dev_obj.LuksUnlock(password, [], )
+            cleartext_device = dev.LuksUnlock(
+                password,
+                dbus.Array([], signature=dbus.Signature('s'))
+                )
         except dbus.exceptions.DBusException, e:
             if e.get_dbus_name() == 'org.freedesktop.PolicyKit.Error.Failed':
                 raise GdmGreeter.errors.WrongPassphraseError()
             else:
-                raise GdmGreeter.errors.TailsGreeterError(e)
+                raise GdmGreeter.errors.TailsGreeterError(str(e))
         except Exception, e:
-            raise GdmGreeter.errors.TailsGreeterError(e)
+            raise GdmGreeter.errors.TailsGreeterError(str(e))
         return cleartext_device
 
     def setup_persistence(self, cleartext_device, readonly):
