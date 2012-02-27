@@ -48,13 +48,30 @@ class PersistenceWindow(TranslatableWindow):
         self.img_login = builder.get_object("login_image")
         self.img_next = builder.get_object("next_image")
 
+        self.containers = [
+            { "path": container, "locked": True }
+            for container in self.greeter.persistence.list_containers()
+            ]
+
+        # FIXME:
+        # * entirely hide persistence options if no container was found.
+        # * support multiple persistent containers:
+        #   - display brand, model, partition path and size for each container
+        #   - create as many passphrase input fields as needed
+        # * support per-volume read-only option (checkbox or toggle button)
+
     def activate_persistence(self):
         """Ask the backend to activate persistence and handle errors
 
         Returns: True if everything went fine, False if the user should try again"""
         if self.cbx_persistence.get_active():
             try:
-                self.greeter.persistence.activate(self.entry_passphrase.get_text())
+                # FIXME: pass curret volume
+                self.greeter.persistence.activate(
+                    volume=self.containers[0],
+                    password=self.entry_passphrase.get_text(),
+                    readonly=False
+                    )
                 return True
             except GdmGreeter.WrongPassphraseError:
                 self.lbl_main = _("Wrong passphrase. Please try again.")
@@ -67,6 +84,7 @@ class PersistenceWindow(TranslatableWindow):
         self.entry_passphrase.set_visible(persistence)
         self.btn_persistence_yes.set_active(persistence)
         self.btn_persistence_no.set_active(not persistence)
+        # FIXME: first locked container
 
     def cb_persistence_yes_toggled(self, widget, data=None):
         persistence = widget.get_active()
