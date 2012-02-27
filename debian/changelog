@@ -1,6 +1,6 @@
-tails-greeter (0.3.0~13.gbp6ee427) UNRELEASED; urgency=low
+tails-greeter (0.3.0~14.gbp5b454f) UNRELEASED; urgency=low
 
-  ** SNAPSHOT build @6ee427c197b85d536d06c4646444321e1561350a **
+  ** SNAPSHOT build @5b454fdbce8f82eed66351bdc24243387cca07e7 **
 
   [ Tails developers ]
   * Reverse a copy of the variants list, not the original one.
@@ -19,8 +19,9 @@ tails-greeter (0.3.0~13.gbp6ee427) UNRELEASED; urgency=low
   * Unlock LUKS persistent volume and ask live-persist to setup persistence.
   * Don't log passphrases.
   * Grant Debian-gdm the right to run cryptsetup as root.
+  * Actually install all sudoers snippets, and never ever forget one.
 
- -- intrigeri <intrigeri@debian.org>  Mon, 27 Feb 2012 20:44:28 +0100
+ -- intrigeri <intrigeri@debian.org>  Mon, 27 Feb 2012 20:45:52 +0100
 
 tails-greeter (0.2.0) squeeze-backports; urgency=low
 
