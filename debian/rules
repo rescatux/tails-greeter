@@ -10,3 +10,4 @@ override_dh_auto_install:
 	dh_auto_install
 	install -m 0755 $(CURDIR)/set-user-password-and-locale $(DESTDIR)/etc/gdm3/PostLogin/Default
 	install -m 0440 $(CURDIR)/sudoers.d/tails-greeter-console $(DESTDIR)/etc/sudoers.d/tails-greeter-console
+	install -m 0440 $(CURDIR)/sudoers.d/tails-greeter-live-persist $(DESTDIR)/etc/sudoers.d/tails-greeter-live-persist
