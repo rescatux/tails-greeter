@@ -62,7 +62,6 @@ class PersistenceSettings(object):
         return containers
 
     def activate(self, volume, password, readonly):
-        logging.debug("passphrase: %s", password)
         args = [ "/usr/bin/sudo", "-n", "/usr/local/sbin/live-persist" ]
         if readonly:
             args.append('--read-only')
