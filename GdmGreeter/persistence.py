@@ -21,9 +21,14 @@
 
 """
 import logging
+import subprocess
+
+import gettext
+_ = gettext.gettext
 
 import GdmGreeter
 import GdmGreeter.config
+from GdmGreeter.utils import unicode_to_utf8
 
 class PersistenceSettings(object):
     """Model storing settings related to persistence
@@ -34,8 +39,24 @@ class PersistenceSettings(object):
 
     def list_containers(self):
          """Returns a list of persistence containers we might want to unlock."""
-         # /usr/bin/sudo /usr/local/sbin/live-persist --encryption=luks --media=removable list TailsData
-         containers = []
+         proc = subprocess.Popen(
+             [
+                 "/usr/bin/sudo", "/usr/local/sbin/live-persist",
+                 "--encryption=luks", "--media=removable",
+                 "list", "TailsData"
+             ],
+             stdout=subprocess.PIPE,
+             stderr=subprocess.PIPE
+             )
+         out, err = proc.communicate()
+         out = unicode_to_utf8(out)
+         err = unicode_to_utf8(err)
+         if proc.returncode:
+             raise LivePersistError(
+                 _("live-persist failed with return code %(returncode)s:\n%(stderr)s")
+                 % { 'returncode': proc.returncode, 'stderr': err }
+                 )
+         containers = str.splilinest(out)
          logging.debug("found containers: %s", containers)
          return containers
 
