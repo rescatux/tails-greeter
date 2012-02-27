@@ -1,6 +1,6 @@
-tails-greeter (0.3.0~2.gbp9b4b36) UNRELEASED; urgency=low
+tails-greeter (0.3.0~3.gbp1b1e4e) UNRELEASED; urgency=low
 
-  ** SNAPSHOT build @9b4b366a91584dbff1728bfa4b8b71f75ffdced3 **
+  ** SNAPSHOT build @1b1e4ea0b49cce555893415b22888c75830f7f9e **
 
   [ Tails developers ]
   * Reverse a copy of the variants list, not the original one.
@@ -9,10 +9,10 @@ tails-greeter (0.3.0~2.gbp9b4b36) UNRELEASED; urgency=low
   * Fix typo.
   * Add dummy implementation of list_containers.
   * Add placeholder code.
-  * New snapshot.
   * Fix typo.
+  * Add source code encoding information where needed.
 
- -- intrigeri <intrigeri@debian.org>  Mon, 27 Feb 2012 15:30:04 +0100
+ -- intrigeri <intrigeri@debian.org>  Mon, 27 Feb 2012 16:04:50 +0100
 
 tails-greeter (0.2.0) squeeze-backports; urgency=low
 
