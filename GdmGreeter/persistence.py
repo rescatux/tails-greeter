@@ -42,7 +42,7 @@ class PersistenceSettings(object):
          """Returns a list of persistence containers we might want to unlock."""
          proc = subprocess.Popen(
              [
-                 "/usr/bin/sudo", "/usr/local/sbin/live-persist",
+                 "/usr/bin/sudo", "-n", "/usr/local/sbin/live-persist",
                  "--encryption=luks", "--media=removable",
                  "list", "TailsData"
              ],
@@ -72,6 +72,6 @@ class PersistenceSettings(object):
             options.append('--read-write')
         args.append('activate')
         args.append(volume)
-        # /usr/bin/sudo /usr/local/sbin/live-persist activate args
+        # /usr/bin/sudo -n /usr/local/sbin/live-persist activate args
         pass
 
