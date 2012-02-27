@@ -72,6 +72,7 @@
                   <object class="GtkLabel" id="persistence_label">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
+                    <property name="ypad">2</property>
                     <property name="label" translatable="yes">Use persistence?</property>
                     <property name="ellipsize">middle</property>
                   </object>
@@ -195,6 +196,7 @@
                   <object class="GtkLabel" id="moreoptions_label">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
+                    <property name="ypad">2</property>
                     <property name="label" translatable="yes">More options?</property>
                   </object>
                   <packing>
