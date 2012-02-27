@@ -46,7 +46,7 @@ class PersistenceSettings(object):
         args = []
         if readonly:
             options.append('--read-only')
-        else
+        else:
             options.append('--read-write')
         args.append('activate')
         args.append(volume)
