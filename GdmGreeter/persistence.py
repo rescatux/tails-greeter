@@ -63,6 +63,7 @@ class PersistenceSettings(object):
 
     def activate(self, device, password, readonly):
         cleartext_device = self.unlock_device(device, password)
+        logging.debug("unlocked cleartext_device: %s", cleartext_device)
         self.setup_persistence(cleartext_device, readonly)
 
     def unlock_device(self, device, password):
@@ -83,7 +84,13 @@ class PersistenceSettings(object):
         out = unicode_to_utf8(out)
         err = unicode_to_utf8(err)
         if proc.returncode:
-            raise GdmGreeter.errors.WrongPassphraseError()
+            logging.debug("cryptsetup failed with return code %(returncode)s:\n%(stdout)s\n%(stderr)s"
+                % { 'returncode': proc.returncode, 'stdout': out, 'stderr': err })
+            raise GdmGreeter.errors.WrongPassphraseError(
+                _("cryptsetup failed with return code %(returncode)s:\n%(stdout)s\n%(stderr)s")
+                % { 'returncode': proc.returncode, 'stdout': out, 'stderr': err }
+                )
+        logging.debug("crytpsetup success")
         return cleartext_device
 
     def setup_persistence(self, cleartext_device, readonly):
