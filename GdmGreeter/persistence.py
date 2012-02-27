@@ -61,14 +61,33 @@ class PersistenceSettings(object):
         logging.debug("found containers: %s", containers)
         return containers
 
-    def activate(self, volume, password, readonly):
+    def activate(self, device, password, readonly):
+        cleartext_device = self.unlock_device(device, password)
+        self.setup_persistence(cleartext_device, readonly)
+
+    def unlock_device(self, device, password):
+        """Unlock the LUKS persistent device"""
+        bus = dbus.SystemBus()
+        dev_obj = bus.get_object("org.freedesktop.UDisks", device)
+        try:
+            cleartext_device = dev_obj.LuksUnlock(password, [], )
+        except dbus.exceptions.DBusException, e:
+            if e.get_dbus_name() == 'org.freedesktop.PolicyKit.Error.Failed':
+                raise GdmGreeter.errors.WrongPassphraseError()
+            else:
+                raise GdmGreeter.errors.TailsGreeterError(e)
+        except Exception, e:
+            raise GdmGreeter.errors.TailsGreeterError(e)
+        return cleartext_device
+
+    def setup_persistence(self, cleartext_device, readonly):
         args = [ "/usr/bin/sudo", "-n", "/usr/local/sbin/live-persist" ]
         if readonly:
             args.append('--read-only')
         else:
             args.append('--read-write')
         args.append('activate')
-        args.append(volume)
+        args.append(cleartext_device)
         proc = subprocess.Popen(
             args,
             stdout=subprocess.PIPE,
@@ -78,10 +97,7 @@ class PersistenceSettings(object):
         out = unicode_to_utf8(out)
         err = unicode_to_utf8(err)
         if proc.returncode:
-            # FIXME: once live-persist can make it clear,
-            # throw WrongPassphraseError when relevant,
-            # some other kind of LivePersistError else.
-            raise GdmGreeter.errors.WrongPassphraseError(
+            raise GdmGreeter.errors.LivePersistError(
                 _("live-persist failed with return code %(returncode)s:\n%(stdout)s\n%(stderr)s")
                 % { 'returncode': proc.returncode, 'stdout': out, 'stderr': err }
                 )
