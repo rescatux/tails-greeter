@@ -77,7 +77,7 @@ class PersistenceWindow(TranslatableWindow):
                 return True
             except GdmGreeter.errors.WrongPassphraseError:
                 # FIXME: use another label widget?
-                self.lbl_main = _("Wrong passphrase. Please try again.")
+                self.lbl_main.set_label(_("Wrong passphrase. Please try again."))
                 return False
         else:
             return True
