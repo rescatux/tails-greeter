@@ -57,10 +57,10 @@ class PersistenceWindow(TranslatableWindow):
             self.box_persistence.hide()
 
         # FIXME:
+        # * support per-volume read-only option (checkbox or toggle button)
         # * support multiple persistent containers:
         #   - display brand, model, partition path and size for each container
         #   - create as many passphrase input fields as needed
-        # * support per-volume read-only option (checkbox or toggle button)
 
     def activate_persistence(self):
         """Ask the backend to activate persistence and handle errors
