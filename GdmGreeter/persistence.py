@@ -20,7 +20,6 @@
 """Persistence handling
 
 """
-import dbus
 import logging
 import subprocess
 
@@ -68,21 +67,23 @@ class PersistenceSettings(object):
 
     def unlock_device(self, device, password):
         """Unlock the LUKS persistent device"""
-        bus = dbus.SystemBus()
-        dev_obj = bus.get_object("org.freedesktop.UDisks", device)
-        dev = dbus.Interface(dev_obj, "org.freedesktop.UDisks.Device")
-        try:
-            cleartext_device = dev.LuksUnlock(
-                password,
-                dbus.Array([], signature=dbus.Signature('s'))
-                )
-        except dbus.exceptions.DBusException, e:
-            if e.get_dbus_name() == 'org.freedesktop.PolicyKit.Error.Failed':
-                raise GdmGreeter.errors.WrongPassphraseError()
-            else:
-                raise GdmGreeter.errors.TailsGreeterError(str(e))
-        except Exception, e:
-            raise GdmGreeter.errors.TailsGreeterError(str(e))
+        cleartext_name = str.rsplit(device, '/', 1) + '_unlocked'
+        cleartext_device = '/dev/mapper/' + cleartext_name
+        args = [
+            "/usr/bin/sudo", "-n",
+            "/sbin/cryptsetup", "luksOpen",
+            "--tries", "1",
+            device, cleartext_name
+            ]
+        proc = subprocess.Popen(
+            args, stdin=subprocess.PIPE,
+            stdout=subprocess.PIPE, stderr=subprocess.PIPE
+            )
+        out, err = proc.communicate(password + "\n")
+        out = unicode_to_utf8(out)
+        err = unicode_to_utf8(err)
+        if proc.returncode:
+            raise GdmGreeter.errors.WrongPassphraseError()
         return cleartext_device
 
     def setup_persistence(self, cleartext_device, readonly):
