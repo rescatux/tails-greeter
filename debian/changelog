@@ -1,6 +1,6 @@
-tails-greeter (0.3.0~3.gbp1b1e4e) UNRELEASED; urgency=low
+tails-greeter (0.3.0~4.gbp11cb5b) UNRELEASED; urgency=low
 
-  ** SNAPSHOT build @1b1e4ea0b49cce555893415b22888c75830f7f9e **
+  ** SNAPSHOT build @11cb5b175482ae82ee8978299918842163aaf3c8 **
 
   [ Tails developers ]
   * Reverse a copy of the variants list, not the original one.
@@ -11,8 +11,9 @@ tails-greeter (0.3.0~3.gbp1b1e4e) UNRELEASED; urgency=low
   * Add placeholder code.
   * Fix typo.
   * Add source code encoding information where needed.
+  * Make Glade UI compatible with GTK-2 again.
 
- -- intrigeri <intrigeri@debian.org>  Mon, 27 Feb 2012 16:04:50 +0100
+ -- intrigeri <intrigeri@debian.org>  Mon, 27 Feb 2012 16:12:25 +0100
 
 tails-greeter (0.2.0) squeeze-backports; urgency=low
 
