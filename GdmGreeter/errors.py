@@ -22,5 +22,8 @@
 class TailsGreeterError(Exception):
     pass
 
-class WrongPassphraseError(TailsGreeterError):
+class LivePersistError(TailsGreeterError):
+    pass
+
+class WrongPassphraseError(LivePersistError):
     pass
