@@ -28,6 +28,7 @@ _ = gettext.gettext
 
 import GdmGreeter
 import GdmGreeter.config
+import GdmGreeter.errors
 from GdmGreeter.utils import unicode_to_utf8
 
 class PersistenceSettings(object):
@@ -52,7 +53,7 @@ class PersistenceSettings(object):
          out = unicode_to_utf8(out)
          err = unicode_to_utf8(err)
          if proc.returncode:
-             raise GdmGreeter.LivePersistError(
+             raise GdmGreeter.errors.LivePersistError(
                  _("live-persist failed with return code %(returncode)s:\n%(stderr)s")
                  % { 'returncode': proc.returncode, 'stderr': err }
                  )
