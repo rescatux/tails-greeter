@@ -8,5 +8,5 @@ DESTDIR = $(CURDIR)/debian/$(PACKAGE)
 
 override_dh_auto_install:
 	dh_auto_install
-	install -m 0755 $(CURDIR)/set-user-password-and-locale $(DESTDIR)/etc/gdm3/PostLogin/Default
+	install -m 0755 $(CURDIR)/PostLogin.default $(DESTDIR)/etc/gdm3/PostLogin/Default
 	install -m 0440 $(CURDIR)/sudoers.d/* $(DESTDIR)/etc/sudoers.d/
