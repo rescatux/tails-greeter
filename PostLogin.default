@@ -10,6 +10,7 @@
 # * /var/lib/gdm3/tails.locale : $TAILS_LOCALE_NAME, $TAILS_XKBMODEL,
 #   $TAILS_XKBLAYOUT, $TAILS_XKBVARIANT, $TAILS_XKBOPTIONS, $CODESET
 # * /var/lib/gdm3/tails.password : $TAILS_USER_PASSWORD
+# * /var/lib/gdm3/tails.persistence : $TAILS_PERSISTENCE_ENABLED
 
 # For whatever reason, /usr/sbin (needed by at least chpasswd)
 # is not in our PATH
@@ -85,6 +86,15 @@ if [ -r "/usr/share/amnesia/iceweasel/searchplugins/startpage-https-${LANGUAGE}.
       /usr/share/iceweasel/searchplugins/
 fi
 
+
+### Persistence
+
+# Copy persistence configuration to a root-writable, world-readable place,
+# so that software running as LIVE_USERNAME can get it.
+
+[ -r /var/lib/gdm3/tails.persistence ] || log_n_exit "Persistence file not found."
+install -m 0640 -o root -g "$LIVE_USERNAME" \
+   /var/lib/gdm3/tails.persistence /var/lib/live/config/tails.persistence
 
 ### Password
 
