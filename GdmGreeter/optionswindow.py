@@ -62,6 +62,12 @@ class OptionsWindow(TranslatableWindow):
         """Login button click handler"""
         self.save_password()
 
+    def password_entry_key_press_event_cb(self, widget, event=None):
+        """Handle key press on password_entry"""
+        if event:
+            if event.keyval == gtk.keysyms.Return:
+                self.entry_password2.grab_focus()
+
     def key_press_event_cb(self, widget, event=None):
         """Handle key press"""
         if event:
