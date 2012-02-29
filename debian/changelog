@@ -1,6 +1,6 @@
-tails-greeter (0.3.0~21.gbp67206d) UNRELEASED; urgency=low
+tails-greeter (0.3.0~22.gbp7e6ed2) UNRELEASED; urgency=low
 
-  ** SNAPSHOT build @67206d6db4d8934b50e8aaea35565b219ad2aeed **
+  ** SNAPSHOT build @7e6ed22d26445c46e7dd5c7b6691e1eef327305e **
 
   [ Tails developers ]
   * Reverse a copy of the variants list, not the original one.
@@ -34,8 +34,10 @@ tails-greeter (0.3.0~21.gbp67206d) UNRELEASED; urgency=low
   * Sort dependencies in lexical order.
   * Rename variables for clarity's sake.
   * Record persistence status after activating it.
+  * Move focus to passphrase entry when persistence is toggled on.
+  * Move focus to to password confirm when typing Enter in password field.
 
- -- intrigeri <intrigeri@debian.org>  Wed, 29 Feb 2012 16:22:13 +0100
+ -- intrigeri <intrigeri@debian.org>  Wed, 29 Feb 2012 16:39:22 +0100
 
 tails-greeter (0.2.0) squeeze-backports; urgency=low
 
