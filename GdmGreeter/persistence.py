@@ -65,6 +65,9 @@ class PersistenceSettings(object):
         cleartext_device = self.unlock_device(device, password)
         logging.debug("unlocked cleartext_device: %s", cleartext_device)
         self.setup_persistence(cleartext_device, readonly)
+        with open(GdmGreeter.config.persistence_state_file, 'w') as f:
+            os.chmod(GdmGreeter.config.persistence_state_file, 0o600)
+            f.write('TAILS_PERSISTENCE_ENABLED=true\n')
 
     def unlock_device(self, device, password):
         """Unlock the LUKS persistent device"""
