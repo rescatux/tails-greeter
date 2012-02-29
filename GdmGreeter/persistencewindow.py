@@ -90,6 +90,8 @@ class PersistenceWindow(TranslatableWindow):
         self.passphrase_box.set_visible(persistence)
         self.btn_persistence_yes.set_active(persistence)
         self.btn_persistence_no.set_active(not persistence)
+        if persistence:
+            self.entry_passphrase.grab_focus()
 
     def cb_persistence_yes_toggled(self, widget, data=None):
         persistence = widget.get_active()
