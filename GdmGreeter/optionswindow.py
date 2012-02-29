@@ -66,7 +66,7 @@ class OptionsWindow(TranslatableWindow):
         """Handle key press"""
         if event:
             if event.keyval == gtk.keysyms.Return:
-                if self.entry_password.is_focus()
+                if self.entry_password.is_focus():
                     self.entry_password2.grab_focus()
                 else:
                     self.save_password()
