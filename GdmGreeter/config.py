@@ -26,3 +26,5 @@ LUSER = 'amnesia'
 # file to store tails session sudo password to
 rootpassword_output_path = '/var/lib/gdm3/tails.password'
 
+# File where Tails persistence status is saved
+persistence_state_file = '/var/lib/gdm3/tails.persistence'
