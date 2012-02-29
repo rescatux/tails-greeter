@@ -122,7 +122,7 @@ class PersistenceWindow(TranslatableWindow):
         self.update_login_button(moreoptions)
         self.update_moreoptions_buttons(moreoptions)
 
-    def cb_login_clicked(self, widget, data=None):
+    def go(self):
         if self.activate_persistence():
             # next
             if self.moreoptions:
@@ -132,3 +132,6 @@ class PersistenceWindow(TranslatableWindow):
             # login
             else:
                 self.greeter.login()
+
+    def cb_login_clicked(self, widget, data=None):
+        self.go()
