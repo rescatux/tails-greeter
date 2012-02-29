@@ -10,12 +10,12 @@
     <property name="type_hint">dialog</property>
     <property name="decorated">False</property>
     <property name="deletable">False</property>
+    <signal name="key-press-event" handler="key_press_event_cb" swapped="no"/>
     <signal name="delete-event" handler="delete_event_cb" swapped="no"/>
     <child internal-child="vbox">
       <object class="GtkVBox" id="dialog-vbox1">
         <property name="can_focus">False</property>
         <property name="spacing">10</property>
-        <signal name="key-press-event" handler="key_press_event_cb" swapped="no"/>
         <child internal-child="action_area">
           <object class="GtkHButtonBox" id="dialog-action_area1">
             <property name="can_focus">False</property>
