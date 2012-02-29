@@ -194,7 +194,7 @@ Leave this blank for better security unless you need to perform administration o
                       <object class="GtkImage" id="warning_image">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="stock">gtk-missing-image</property>
+                        <property name="stock">gtk-info</property>
                       </object>
                       <packing>
                         <property name="expand">False</property>
