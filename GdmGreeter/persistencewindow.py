@@ -143,7 +143,7 @@ class PersistenceWindow(TranslatableWindow):
     def key_press_event_cb(self, widget, event=None):
         """Handle key press"""
         if event:
-            if event.keyval == gtk.keysyms.Return:
+            if event.keyval in [ gtk.keysyms.Return, gtk.keysyms.KP_Enter ]:
                 self.go()
 
     def delete_event_cb(self, widget, event=None):

@@ -324,7 +324,7 @@ class LangPanel(TranslatableWindow):
 
     def cb_langdialog_key_press(self, widget, event, data=None):
         """Handle key press in langdialog"""
-        if event.keyval == gtk.keysyms.Return:
+        if event.keyval in [ gtk.keysyms.Return, gtk.keysyms.KP_Enter ]:
             if isinstance(data, gtk.Dialog):
                 data.response(True)
 
