@@ -1,6 +1,6 @@
-tails-greeter (0.3.0~14.gbp5b454f) UNRELEASED; urgency=low
+tails-greeter (0.3.0~15.gbp34478c) UNRELEASED; urgency=low
 
-  ** SNAPSHOT build @5b454fdbce8f82eed66351bdc24243387cca07e7 **
+  ** SNAPSHOT build @34478cc09fe985dad81051b630357e3c872d68ed **
 
   [ Tails developers ]
   * Reverse a copy of the variants list, not the original one.
@@ -20,8 +20,9 @@ tails-greeter (0.3.0~14.gbp5b454f) UNRELEASED; urgency=low
   * Don't log passphrases.
   * Grant Debian-gdm the right to run cryptsetup as root.
   * Actually install all sudoers snippets, and never ever forget one.
+  * Make the passphrase entry activate the next/login button.
 
- -- intrigeri <intrigeri@debian.org>  Mon, 27 Feb 2012 20:45:52 +0100
+ -- intrigeri <intrigeri@debian.org>  Wed, 29 Feb 2012 11:32:52 +0100
 
 tails-greeter (0.2.0) squeeze-backports; urgency=low
 
