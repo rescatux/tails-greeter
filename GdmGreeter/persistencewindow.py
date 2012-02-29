@@ -90,7 +90,6 @@ class PersistenceWindow(TranslatableWindow):
         self.entry_passphrase.set_visible(persistence)
         self.btn_persistence_yes.set_active(persistence)
         self.btn_persistence_no.set_active(not persistence)
-        # FIXME: first locked container
 
     def cb_persistence_yes_toggled(self, widget, data=None):
         persistence = widget.get_active()
