@@ -157,6 +157,7 @@
                       <object class="GtkEntry" id="passphrase_entry">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
+                        <property name="visibility">False</property>
                         <property name="invisible_char">●</property>
                         <property name="activates_default">True</property>
                         <property name="invisible_char_set">True</property>
@@ -195,7 +196,6 @@
                 </child>
                 <child>
                   <object class="GtkHBox" id="warning_area">
-                    <property name="sensitive">False</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">6</property>
                     <child>
