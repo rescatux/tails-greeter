@@ -64,6 +64,6 @@ class OptionsWindow(TranslatableWindow):
     def key_press_event_cb(self, widget, event=None):
         """Handle key press"""
         if event:
-            if event.keyval == gtk.keysyms.Return:            
+            if event.keyval == gtk.keysyms.Return:
                 self.save_password()
 
