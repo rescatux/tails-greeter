@@ -135,3 +135,9 @@ class PersistenceWindow(TranslatableWindow):
 
     def cb_login_clicked(self, widget, data=None):
         self.go()
+
+    def key_press_event_cb(self, widget, event=None):
+        """Handle key press"""
+        if event:
+            if event.keyval == gtk.keysyms.Return:
+                self.save_password()
