@@ -1,6 +1,6 @@
-tails-greeter (0.3.0~16.gbpb9d817) UNRELEASED; urgency=low
+tails-greeter (0.3.0~17.gbp0437a4) UNRELEASED; urgency=low
 
-  ** SNAPSHOT build @b9d8170ee927bdc6445a7164e3cb60a2305898c3 **
+  ** SNAPSHOT build @0437a4d1baabbf615f5a619472eb4ef914853014 **
 
   [ Tails developers ]
   * Reverse a copy of the variants list, not the original one.
@@ -25,9 +25,9 @@ tails-greeter (0.3.0~16.gbpb9d817) UNRELEASED; urgency=low
   * Hide/show the whole warning area.
   * Display "wrong persistence passphrase" bellow passphrase entry.
   * Add info image.
-  * Mark our dialogs as non-deletable.
+  * Ignore delete events on our GtkDialog's.
 
- -- intrigeri <intrigeri@debian.org>  Wed, 29 Feb 2012 12:21:46 +0100
+ -- intrigeri <intrigeri@debian.org>  Wed, 29 Feb 2012 12:35:03 +0100
 
 tails-greeter (0.2.0) squeeze-backports; urgency=low
 
