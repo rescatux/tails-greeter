@@ -47,6 +47,7 @@ class PersistenceWindow(TranslatableWindow):
         self.img_login = builder.get_object("login_image")
         self.img_next = builder.get_object("next_image")
         self.box_persistence = builder.get_object("persistence_box")
+        self.readonly_checkbutton = builder.get_object("readonly_checkbutton")
         self.warning_label = builder.get_object("warning_label")
         self.warning_area = builder.get_object("warning_area")
 
@@ -61,7 +62,6 @@ class PersistenceWindow(TranslatableWindow):
             self.box_persistence.hide()
 
         # FIXME:
-        # * support per-volume read-only option (checkbox or toggle button)
         # * support multiple persistent containers:
         #   - display brand, model, partition path and size for each container
         #   - create as many passphrase input fields as needed
@@ -75,7 +75,7 @@ class PersistenceWindow(TranslatableWindow):
                 self.greeter.persistence.activate(
                     device=self.containers[0]['path'],
                     password=self.entry_passphrase.get_text(),
-                    readonly=False
+                    readonly=self.readonly_checkbutton.get_active()
                     )
                 return True
             except GdmGreeter.errors.WrongPassphraseError:
