@@ -1,11 +1,15 @@
 #! /bin/bash
 
-# This script is meant to be run by TailsGreeter
-# It reads /var/lib/gdm3/tails.locale for locale name
-# and /var/lib/gdm3/tails.password for the password which is stored in
-# the $TAILS_USER_PASSWORD variable.
-# It's executed by GDM as root after user's login:
-# ALWAYS: exit with 0 otherwise it'll break logon process completely.
+# This script is run as root by GDM after user's login.
+# It must return exit code 0, otherwise it totally breaks the logon process.
+
+# Input
+# =====
+#
+# * /etc/live/config.d/username : $LIVE_USERNAME
+# * /var/lib/gdm3/tails.locale : $TAILS_LOCALE_NAME, $TAILS_XKBMODEL,
+#   $TAILS_XKBLAYOUT, $TAILS_XKBVARIANT, $TAILS_XKBOPTIONS, $CODESET
+# * /var/lib/gdm3/tails.password : $TAILS_USER_PASSWORD
 
 # For whatever reason, /usr/sbin (needed by at least chpasswd)
 # is not in our PATH
@@ -45,6 +49,9 @@ grep_n_set() {
     fi
 }
 
+
+### Localization
+
 # Import locale name
 . /var/lib/gdm3/tails.locale || log_n_exit "Locale file not found."
 if [ -z "${TAILS_LOCALE_NAME}" ] ; then
@@ -77,6 +84,9 @@ if [ -r "/usr/share/amnesia/iceweasel/searchplugins/startpage-https-${LANGUAGE}.
    cp "/usr/share/amnesia/iceweasel/searchplugins/startpage-https-${LANGUAGE}.xml" \
       /usr/share/iceweasel/searchplugins/
 fi
+
+
+### Password
 
 # Import password for superuser access
 . /var/lib/gdm3/tails.password || log_n_exit "Password file not found."
