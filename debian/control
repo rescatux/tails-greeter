@@ -12,16 +12,16 @@ Package: tails-greeter
 Section: gnome
 Architecture: all
 Depends: ${python:Depends}, ${misc:Depends},
- python-dbus,
- gdm | gdm3,
- gir1.0-gtk-2.0 | gir1.2-gtk-2.0,
  console-setup,
  gconf2,
+ gdm | gdm3,
+ gir1.0-gtk-2.0 | gir1.2-gtk-2.0,
  live-config,
- sudo,
+ python-dbus,
  python-gobject,
  python-pyicu,
  python-xklavier,
+ sudo,
  ttf-unifont
 Conflicts: gdm-community-greeter
 Description: GDM greeter for Tails
