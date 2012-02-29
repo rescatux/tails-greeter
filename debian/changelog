@@ -1,6 +1,6 @@
-tails-greeter (0.3.0~17.gbp0437a4) UNRELEASED; urgency=low
+tails-greeter (0.3.0~18.gbpaead10) UNRELEASED; urgency=low
 
-  ** SNAPSHOT build @0437a4d1baabbf615f5a619472eb4ef914853014 **
+  ** SNAPSHOT build @aead10da3ca30e1f674214555d65af11adc023c1 **
 
   [ Tails developers ]
   * Reverse a copy of the variants list, not the original one.
@@ -26,8 +26,15 @@ tails-greeter (0.3.0~17.gbp0437a4) UNRELEASED; urgency=low
   * Display "wrong persistence passphrase" bellow passphrase entry.
   * Add info image.
   * Ignore delete events on our GtkDialog's.
+  * Support enabling persistence read-only.
+  * Rename set-user-password-and-locale to PostLogin.default.
+  * Clarify and complete script documentation.
+  * At PostLogin time, copy persistence configuration where LIVE_USERNAME can read it.
+  * Sort dependencies in lexical order.
+  * Rename variables for clarity's sake.
+  * Record persistence status after activating it.
 
- -- intrigeri <intrigeri@debian.org>  Wed, 29 Feb 2012 12:35:03 +0100
+ -- intrigeri <intrigeri@debian.org>  Wed, 29 Feb 2012 15:27:54 +0100
 
 tails-greeter (0.2.0) squeeze-backports; urgency=low
 
