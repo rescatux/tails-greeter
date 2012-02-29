@@ -144,3 +144,7 @@ class PersistenceWindow(TranslatableWindow):
         if event:
             if event.keyval == gtk.keysyms.Return:
                 self.save_password()
+
+    def delete_event_cb(self, widget, event=None):
+        """Ignore delete event (Esc)"""
+        return True

@@ -16,6 +16,7 @@
     <property name="decorated">False</property>
     <property name="deletable">False</property>
     <signal name="key-press-event" handler="key_press_event_cb" swapped="no"/>
+    <signal name="delete-event" handler="delete_event_cb" swapped="no"/>
     <child internal-child="vbox">
       <object class="GtkVBox" id="dialog-vbox2">
         <property name="can_focus">False</property>
