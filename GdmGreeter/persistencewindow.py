@@ -86,8 +86,8 @@ class PersistenceWindow(TranslatableWindow):
             return True
 
     def set_persistence_visibility(self, persistence):
-        self.lbl_passphrase.set_visible(persistence)
-        self.entry_passphrase.set_visible(persistence)
+        self.passphrase_box.set_visible(persistence)
+        self.warning_area.set_visible(persistence)
         self.btn_persistence_yes.set_active(persistence)
         self.btn_persistence_no.set_active(not persistence)
 
