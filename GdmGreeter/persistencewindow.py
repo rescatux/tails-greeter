@@ -37,7 +37,6 @@ class PersistenceWindow(TranslatableWindow):
 
         # Sets self.window
         TranslatableWindow.__init__(self, builder.get_object("login_dialog"))
-        self.lbl_main = builder.get_object("main_label")
         self.btn_persistence_yes = builder.get_object("persistence_yes_button")
         self.btn_persistence_no = builder.get_object("persistence_no_button")
         self.lbl_passphrase = builder.get_object("passphrase_label")
@@ -48,6 +47,10 @@ class PersistenceWindow(TranslatableWindow):
         self.img_login = builder.get_object("login_image")
         self.img_next = builder.get_object("next_image")
         self.box_persistence = builder.get_object("persistence_box")
+        self.warning_label = builder.get_object("warning_label")
+        self.warning_area = builder.get_object("warning_area")
+
+        self.warning_area.hide()
 
         # FIXME: list_containers may raise exceptions. Deal with that.
         self.containers = [
@@ -76,8 +79,8 @@ class PersistenceWindow(TranslatableWindow):
                     )
                 return True
             except GdmGreeter.errors.WrongPassphraseError:
-                # FIXME: use another label widget?
-                self.lbl_main.set_label(_("Wrong passphrase. Please try again."))
+                self.warning_label.set_markup(_('<i>Wrong passphrase. Please try again.</i>'))
+                self.warning_area.show()
                 return False
         else:
             return True
