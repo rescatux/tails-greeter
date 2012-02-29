@@ -51,6 +51,7 @@ class PersistenceWindow(TranslatableWindow):
         self.warning_label = builder.get_object("warning_label")
         self.warning_area = builder.get_object("warning_area")
         self.warning_image = builder.get_object("warning_area")
+        self.spinner = builder.get_object("spinner")
 
         self.warning_area.hide()
 
@@ -128,7 +129,18 @@ class PersistenceWindow(TranslatableWindow):
         self.update_login_button(moreoptions)
         self.update_moreoptions_buttons(moreoptions)
 
+    def working(self, working=True):
+        # FIXME: set_sensitive more widgets?
+        self.btn_login.set_sensitive(not working)
+        if working:
+            self.spinner.start()
+            self.spinner.show()
+        else:
+            self.spinner.stop()
+            self.spinner.hide()
+
     def go(self):
+        self.working(True)
         if self.activate_persistence():
             # next
             if self.moreoptions:
@@ -138,6 +150,8 @@ class PersistenceWindow(TranslatableWindow):
             # login
             else:
                 self.greeter.login()
+        else:
+            self.working(False)
 
     def cb_login_clicked(self, widget, data=None):
         self.go()
