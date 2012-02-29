@@ -157,7 +157,6 @@
                         <property name="visibility">False</property>
                         <property name="invisible_char">●</property>
                         <property name="activates_default">True</property>
-                        <property name="overwrite_mode">True</property>
                         <property name="invisible_char_set">True</property>
                         <property name="primary_icon_activatable">False</property>
                         <property name="secondary_icon_activatable">False</property>
