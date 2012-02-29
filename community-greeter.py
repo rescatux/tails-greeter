@@ -1,4 +1,3 @@
-
 #!/usr/bin/python
 #
 # Copyright 2012 Tails developers <tails@boum.org>

@@ -29,7 +29,8 @@ tails-greeter (0.3.0~20.gbpabd98b) UNRELEASED; urgency=low
   * Support enabling persistence read-only.
   * Rename set-user-password-and-locale to PostLogin.default.
   * Clarify and complete script documentation.
-  * At PostLogin time, copy persistence configuration where LIVE_USERNAME can read it.
+  * At PostLogin time, copy persistence configuration where LIVE_USERNAME
+    can read it.
   * Sort dependencies in lexical order.
   * Rename variables for clarity's sake.
   * Record persistence status after activating it.
