@@ -1,6 +1,6 @@
-tails-greeter (0.3.0~20.gbpabd98b) UNRELEASED; urgency=low
+tails-greeter (0.3.0~21.gbp67206d) UNRELEASED; urgency=low
 
-  ** SNAPSHOT build @abd98b57fee7cb8b99069e46659d018ddd5396ee **
+  ** SNAPSHOT build @67206d6db4d8934b50e8aaea35565b219ad2aeed **
 
   [ Tails developers ]
   * Reverse a copy of the variants list, not the original one.
@@ -35,7 +35,7 @@ tails-greeter (0.3.0~20.gbpabd98b) UNRELEASED; urgency=low
   * Rename variables for clarity's sake.
   * Record persistence status after activating it.
 
- -- intrigeri <intrigeri@debian.org>  Wed, 29 Feb 2012 16:12:45 +0100
+ -- intrigeri <intrigeri@debian.org>  Wed, 29 Feb 2012 16:22:13 +0100
 
 tails-greeter (0.2.0) squeeze-backports; urgency=low
 
