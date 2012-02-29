@@ -53,7 +53,6 @@ class PersistenceWindow(TranslatableWindow):
         self.warning_image = builder.get_object("warning_area")
 
         self.warning_area.hide()
-        self.warning_image.hide()
 
         # FIXME: list_containers may raise exceptions. Deal with that.
         self.containers = [
@@ -82,14 +81,13 @@ class PersistenceWindow(TranslatableWindow):
                 return True
             except GdmGreeter.errors.WrongPassphraseError:
                 self.warning_label.set_markup(_('<i>Wrong passphrase. Please try again.</i>'))
-                self.warning_area.show()
+                self.warning_area.show_all()
                 return False
         else:
             return True
 
     def set_persistence_visibility(self, persistence):
         self.passphrase_box.set_visible(persistence)
-        self.warning_area.set_visible(persistence)
         self.btn_persistence_yes.set_active(persistence)
         self.btn_persistence_no.set_active(not persistence)
 
