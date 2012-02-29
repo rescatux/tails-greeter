@@ -39,7 +39,7 @@ class PersistenceWindow(TranslatableWindow):
         TranslatableWindow.__init__(self, builder.get_object("login_dialog"))
         self.btn_persistence_yes = builder.get_object("persistence_yes_button")
         self.btn_persistence_no = builder.get_object("persistence_no_button")
-        self.lbl_passphrase = builder.get_object("passphrase_label")
+        self.passphrase_box = builder.get_object("passphrase_box")
         self.entry_passphrase = builder.get_object("passphrase_entry")
         self.btn_moreoptions_yes = builder.get_object("moreoptions_yes_button")
         self.btn_moreoptions_no = builder.get_object("moreoptions_no_button")
