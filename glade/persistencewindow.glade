@@ -142,7 +142,7 @@
                     <child>
                       <object class="GtkLabel" id="passphrase_label">
                         <property name="can_focus">False</property>
-                        <property name="label" translatable="yes">Passphrase</property>
+                        <property name="label" translatable="yes">Passphrase:</property>
                       </object>
                       <packing>
                         <property name="expand">False</property>
