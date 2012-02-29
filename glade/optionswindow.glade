@@ -186,7 +186,7 @@ Leave this blank for better security unless you need to perform administration o
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkHBox" id="warning_box">
+                  <object class="GtkHBox" id="warning_area">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">6</property>
