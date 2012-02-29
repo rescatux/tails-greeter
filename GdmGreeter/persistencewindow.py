@@ -88,6 +88,8 @@ class PersistenceWindow(TranslatableWindow):
 
     def set_persistence_visibility(self, persistence):
         self.passphrase_box.set_visible(persistence)
+        if not persistence:
+            self.warning_area.hide()
         self.btn_persistence_yes.set_active(persistence)
         self.btn_persistence_no.set_active(not persistence)
         if persistence:
