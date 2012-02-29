@@ -143,7 +143,7 @@ class PersistenceWindow(TranslatableWindow):
         """Handle key press"""
         if event:
             if event.keyval == gtk.keysyms.Return:
-                self.save_password()
+                self.go()
 
     def delete_event_cb(self, widget, event=None):
         """Ignore delete event (Esc)"""
