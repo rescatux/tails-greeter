@@ -38,12 +38,12 @@ class OptionsWindow(TranslatableWindow):
         self.entry_password = builder.get_object("password_entry")
         self.entry_password2 = builder.get_object("password_entry2")
         self.warning_label = builder.get_object("warning_label")
-        self.warning_image = builder.get_object("warning_image")
-        self.warning_image.hide()
+        self.warning_area = builder.get_object("warning_area")
 
         TranslatableWindow.__init__(self, builder.get_object("options_dialog"))
         self.window.set_visible(False)
 
+        self.warning_area.hide()
         self.entry_password.set_visibility(False)
         self.entry_password2.set_visibility(False)
 
@@ -56,7 +56,7 @@ class OptionsWindow(TranslatableWindow):
             self.greeter.rootaccess.password = self.entry_password.get_text()
         else:
             self.warning_label.set_markup(_('<i>Passwords do not match</i>'))
-            self.warning_image.show()
+            self.warning_area.show()
 
     def cb_login_clicked(self, widget, data=None):
         """Login button click handler"""
