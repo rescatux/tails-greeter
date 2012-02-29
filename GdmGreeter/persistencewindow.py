@@ -50,8 +50,10 @@ class PersistenceWindow(TranslatableWindow):
         self.readonly_checkbutton = builder.get_object("readonly_checkbutton")
         self.warning_label = builder.get_object("warning_label")
         self.warning_area = builder.get_object("warning_area")
+        self.warning_image = builder.get_object("warning_area")
 
         self.warning_area.hide()
+        self.warning_image.hide()
 
         # FIXME: list_containers may raise exceptions. Deal with that.
         self.containers = [
