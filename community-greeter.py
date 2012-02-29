@@ -66,7 +66,7 @@ class CommunityGreeterApp(GdmGreeterService):
         GdmGreeterService.__init__(self)
         self.scr = gdk.display_get_default().get_screen(self.display.number)
         self.language = 'en_US.UTF-8'
-        self.locale_path = '/var/lib/gdm3/tails.locale'
+        self.locale_output_path = '/var/lib/gdm3/tails.locale'
         self.session = None
         self.forced = False
         self.layout = None
@@ -173,8 +173,8 @@ class CommunityGreeterApp(GdmGreeterService):
                 layout_list.reverse()
                 variant_list = self.langpanel.variant_list[:]
                 variant_list.reverse()
-                with open(self.locale_path, 'w') as f:
-                    os.chmod(self.locale_path, 0o600)
+                with open(self.locale_output_path, 'w') as f:
+                    os.chmod(self.locale_output_path, 0o600)
                     f.write('TAILS_LOCALE_NAME=%s\n' % self.langpanel.language_code)
                     f.write('TAILS_XKBMODEL=%s\n' % 'pc105') # use default value from /etc/default/keyboard
                     f.write('TAILS_XKBLAYOUT=%s\n' % ','.join(layout_list))

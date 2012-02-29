@@ -24,5 +24,5 @@ LPASSWORD = 'live'
 LUSER = 'amnesia'
 
 # file to store tails session sudo password to
-rootpassword_path = '/var/lib/gdm3/tails.password'
+rootpassword_output_path = '/var/lib/gdm3/tails.password'
 

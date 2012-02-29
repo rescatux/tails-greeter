@@ -36,8 +36,9 @@ class RootAccessSettings(object):
 
     def __del__(self):
         if self.password:
-            with open(GdmGreeter.config.rootpassword_path, 'w') as f:
-                os.chmod(GdmGreeter.config.rootpassword_path, 0o600)
+            with open(GdmGreeter.config.rootpassword_output_path, 'w') as f:
+                os.chmod(GdmGreeter.config.rootpassword_output_path, 0o600)
                 f.write('TAILS_USER_PASSWORD=%s\n' % pipes.quote(self.password))
-                logging.debug('password written to %s', GdmGreeter.config.rootpassword_path)
+                logging.debug('password written to %s',
+                              GdmGreeter.config.rootpassword_output_path)
 
