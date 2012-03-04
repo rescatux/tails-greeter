@@ -26,6 +26,39 @@ _ = gettext.gettext
 from GdmGreeter.language import TranslatableWindow, LANGS, DEFAULT_LANGS, ln_list, ln_country, ln_iso639_tri, ln_iso639_2_T_to_B
 import GdmGreeter
 
+class LangDialog(TranslatableWindow):
+    """Language selection dialog"""
+
+    def __init__(self):
+        builder = gtk.Builder()
+        builder.set_translation_domain(GdmGreeter.__appname__)
+        builder.add_from_file(os.path.join(GdmGreeter.GLADE_DIR, "langdialog.glade"))
+        self.dialog = builder.get_object("languages_dialog")
+        self.treeview = builder.get_object("languages_treeview")
+        self.liststore = builder.get_object("languages_liststore")
+        builder.connect_signals(self, self.dialog)
+
+        tvcolumn = gtk.TreeViewColumn(_("Language"))
+        self.treeview.append_column(tvcolumn)
+        cell = gtk.CellRendererText()
+        tvcolumn.pack_start(cell, True)
+        tvcolumn.add_attribute(cell, 'text', 0)
+
+        TranslatableWindow.__init__(self, self.dialog)
+
+    def cb_langdialog_key_press(self, widget, event, data=None):
+        """Handle key press in langdialog"""
+        if event.keyval in [ gtk.keysyms.Return, gtk.keysyms.KP_Enter ]:
+            if isinstance(data, gtk.Dialog):
+                data.response(True)
+
+    def cb_langdialog_button_press(self, widget, event, data=None):
+        """Handle mouse click in langdialog"""
+        if (event.type == gtk.gdk._2BUTTON_PRESS or
+                event.type == gtk.gdk._3BUTTON_PRESS):
+            if isinstance(data, gtk.Dialog):
+                data.response(True)
+
 class LangPanel(TranslatableWindow):
     """Display language and layout selection panel"""
 
@@ -302,46 +335,22 @@ class LangPanel(TranslatableWindow):
     def show_more_languages(self):
         """Show a dialog to allow selecting more languages"""
 
-        builder = gtk.Builder()
-        builder.set_translation_domain(GdmGreeter.__appname__)
-        builder.add_from_file(os.path.join(GdmGreeter.GLADE_DIR, "langdialog.glade"))
-        dialog = builder.get_object("languages_dialog")
-        treeview = builder.get_object("languages_treeview")
-        liststore = builder.get_object("languages_liststore")
-        builder.connect_signals(self, dialog)
+        langdialog = LangDialog()
 
         count = 0
         for l in LANGS:
-            liststore.append([l])
+            langdialog.liststore.append([l])
+            # XXX
             if self.language_name == l:
                 self.default_position = count
             count += 1
 
-        tvcolumn = gtk.TreeViewColumn(_("Language"))
-        treeview.append_column(tvcolumn)
-        cell = gtk.CellRendererText()
-        tvcolumn.pack_start(cell, True)
-        tvcolumn.add_attribute(cell, 'text', 0)
-
         lang = None
-        if dialog.run():
-            dummy, selected_iter = treeview.get_selection().get_selected()
+        if langdialog.dialog.run():
+            dummy, selected_iter = langdialog.treeview.get_selection().get_selected()
             if selected_iter:
-                lang = liststore[selected_iter][0]
+                lang = langdialog.liststore[selected_iter][0]
 
-        dialog.destroy()
+        langdialog.dialog.destroy()
 
         return lang
-
-    def cb_langdialog_key_press(self, widget, event, data=None):
-        """Handle key press in langdialog"""
-        if event.keyval in [ gtk.keysyms.Return, gtk.keysyms.KP_Enter ]:
-            if isinstance(data, gtk.Dialog):
-                data.response(True)
-
-    def cb_langdialog_button_press(self, widget, event, data=None):
-        """Handle mouse click in langdialog"""
-        if (event.type == gtk.gdk._2BUTTON_PRESS or
-                event.type == gtk.gdk._3BUTTON_PRESS):
-            if isinstance(data, gtk.Dialog):
-                data.response(True)
