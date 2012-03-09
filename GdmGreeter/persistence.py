@@ -44,6 +44,7 @@ class PersistenceSettings(object):
         proc = subprocess.Popen(
             [
                 "/usr/bin/sudo", "-n", "/usr/local/sbin/live-persist",
+                "--log-file=/var/log/live-persist",
                 "--encryption=luks", "--media=removable",
                 "list", "TailsData"
             ],
@@ -105,6 +106,7 @@ class PersistenceSettings(object):
             args.append('--read-only')
         else:
             args.append('--read-write')
+        args.append('--log-file=/var/log/live-persist')
         args.append('activate')
         args.append(cleartext_device)
         proc = subprocess.Popen(
