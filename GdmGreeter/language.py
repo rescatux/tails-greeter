@@ -89,6 +89,20 @@ def get_texts(langs):
             logging.error('Failed to get texts for %s locale', loc)
     return result
 
+MOFILES = '/usr/share/locale/'
+DOMAIN  = 'tails-greeter'
+
+p = Popen(["tails-lang-helper"], stdout=PIPE)
+langcodes = str.split(p.communicate()[0])
+logging.debug('%s languages found: helper returned %s', len(langcodes), p.returncode)
+
+LDICT = get_native_langs(langcodes)
+LANGS = sorted(LDICT.keys(), key=compare_choice)
+DEFAULT_LANGS = get_native_langs(
+        ["ar_EG", "zh_CN", "en_US", "fa_IR", "fr_FR",
+         "de_DE", "it", "pt", "ru", "es", "vi_VN"])
+TEXTS = get_texts(LDICT)
+
 class TranslatableWindow(object):
     """Interface providing functions to translate a window on the fly
     """
@@ -133,17 +147,3 @@ class TranslatableWindow(object):
             child.set_tooltip_markup(self.gettext(lang, text))
         if self.window.get_sensitive() and self.window.get_visible() and self.retain_focus:
             self.window.present()
-
-MOFILES = '/usr/share/locale/'
-DOMAIN  = 'tails-greeter'
-
-p = Popen(["tails-lang-helper"], stdout=PIPE)
-langcodes = str.split(p.communicate()[0])
-logging.debug('%s languages found: helper returned %s', len(langcodes), p.returncode)
-
-LDICT = get_native_langs(langcodes)
-LANGS = sorted(LDICT.keys(), key=compare_choice)
-DEFAULT_LANGS = get_native_langs(
-        ["ar_EG", "zh_CN", "en_US", "fa_IR", "fr_FR",
-         "de_DE", "it", "pt", "ru", "es", "vi_VN"])
-TEXTS = get_texts(LDICT)
