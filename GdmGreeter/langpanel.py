@@ -21,9 +21,9 @@
 
 """
 
-import logging, gtk, xklavier, gettext, os
+import logging, gtk, gettext, os
 _ = gettext.gettext
-from GdmGreeter.language import TranslatableWindow, LANGS, DEFAULT_LANGS, ln_list, ln_country, ln_iso639_tri, ln_iso639_2_T_to_B
+from GdmGreeter.language import TranslatableWindow
 import GdmGreeter
 
 class LangDialog(TranslatableWindow):
@@ -62,27 +62,12 @@ class LangDialog(TranslatableWindow):
 class LangPanel(TranslatableWindow):
     """Display language and layout selection panel"""
 
-    def __init__(self, backend):
-        self.backend = backend
+    def __init__(self, greeter):
+        self.greeter = greeter
 
-        # Initialize instance variables
+        # XXX: initialize instance variables
         self.additional_language_displayed = False
-        self.language_name = None
-        self.layout = 'us'
-        self.variant = None
-        self.lang3 = None
-        self.options = 'grp:alt_shift_toggle' # 'grp:sclk_toggle' would be much more convenient but we default to mustdie switcher in here
-        self.language_code = None
         self.default_position = 0
-        self.variant_list = None
-        self.layout_list = None
-        self.locales = {}
-        self.layouts = {}
-        self.engine = xklavier.Engine(gtk.gdk.display_get_default())
-        self.configreg = xklavier.ConfigRegistry(self.engine)
-        self.configreg.load(False)
-        self.crecord = xklavier.ConfigRec()
-        self.crecord.get_from_server(self.engine)
 
         # Build UI
         builder = gtk.Builder()
@@ -112,7 +97,7 @@ class LangPanel(TranslatableWindow):
 
         TranslatableWindow.__init__(self, self.window)
 
-        self.populate()
+        self.populate_languages()
         self.cb_languages.set_active(self.default_position)
         self.set_panel_geometry()
 
@@ -124,183 +109,60 @@ class LangPanel(TranslatableWindow):
         panel.set_default_size(gtk.gdk.screen_width(), height)
         panel.move(0, gtk.gdk.screen_height() - height)
 
-    def populate_for_locale(self, locale):
-        """populate the lists for a given locale"""
-        self.cb_layouts.get_model().clear()
-        self.lang3 = ln_iso639_tri(locale)
-        if self.lang3:
-            layouts = self.get_layouts_for_language(self.lang3)
-            count = 0
-            default = 0
-            backup = 0
-            use_default = 0
-            for l in layouts:
-                logging.debug('layout: %s ', l)
-                layout_name = l.split(')')[0].split('(')[1]
-                layout_code = l.split()[0]
-                # Unfortunately XklConfigItem's xkl_get_country_name is not part
-                # of the Python bindings, so we have to hack our way through
-                # another way. Moreover, layout codes don't easily map to country
-                # codes: layout code "be" is for Belgium, while country code "be"
-                # is for Бельгія, so we cannot use ICU to get the country code
-                # from the layout code. Hence, just display the English layout
-                # names until we find a better solution.
-                self.layouts[layout_name] = layout_code
-                self.cb_layouts.get_model().append([layout_name])
-                if locale.split('_')[1].lower() == layout_code:
-                    default = count
-                    use_default = 1
-                if locale.split('_')[0].lower() == layout_code: backup = count
-                count += 1
-            if use_default: self.cb_layouts.set_active(default)
-            else: self.cb_layouts.set_active(backup)
-        else:
-            self.crecord.set_layouts(['us'])
-            self.crecord.activate(self.engine)
-            self.backend.SelectLayout('us')
+    # Populate lists
 
-    def populate_for_language(self, language):
+    def populate_languages(self):
+        """Create all the required entries"""
+        count = 0
+        for l in self.greeter.languagesettings.get_default_languages():
+            self.cb_languages.get_model().append([l])
+            if l == self.greeter.languagesettings.get_language():
+                self.default_position = count
+            count += 1
+        self.cb_languages.get_model().append([_("Other...")])
+
+    def populate_locales(self):
         """populate the lists for a given language"""
         self.cb_locales.get_model().clear()
         count = 0
-        default = 0
-        for l in ln_list(language):
-            self.cb_locales.get_model().append([ln_country(l)])
-            self.locales[unicode(ln_country(l))] = l
-            if 'en_US' == l: default = count
-            if l.split('_')[0] == l.split('_')[1].lower(): default = count
+        for l in self.greeter.languagesettings.get_default_locales():
+            self.cb_locales.get_model().append([l])
+            if l == self.greeter.languagesettings.get_locale():
+                self.cb_locales.set_active(count)
             count += 1
-        self.cb_locales.set_active(default)
 
-    def apply_layout(self, layout):
-        """populate the lists for a given layout"""
-        self.variant_list = []
-        self.layout_list = []
-        if self.variant and self.variant != 'Default': self.variant_list = ['', self.variant]
-        else: self.variant_list = ['']
-        if len(self.variant_list) > 1 or layout != 'us': self.layout_list = ['us', layout]
-        else: self.layout_list = ['us']
-        self.crecord.set_variants(self.variant_list)
-        self.crecord.set_layouts(self.layout_list)
-        self.crecord.set_options([self.options])
-        self.crecord.activate(self.engine)
-        logging.debug('L:%s V:%s O:%s', self.crecord.get_layouts(), self.crecord.get_variants(), self.crecord.get_options())
+    def populate_layouts(self, locale):
+        """populate the lists for a given locale"""
+        self.cb_layouts.get_model().clear()
+        count = 0
+        for l in self.greeter.languagesettings.get_default_layouts():
+            self.cb_layouts.get_model().append([l])
+            if l == self.greeter.languagesettings.get_layout():
+                 self.cb_layouts.set_active(count)
+            count += 1
+        #XXX select default locale!
+
+    # Callbacks
 
     def key_event_cb(self, widget, event=None):
         """Handle key event - check for layout change"""
         if event:
-            if event.keyval ==  gtk.keysyms.ISO_Next_Group or event.keyval ==  gtk.keysyms.ISO_Prev_Group:
+            if (event.keyval == gtk.keysyms.ISO_Next_Group or
+                event.keyval ==  gtk.keysyms.ISO_Prev_Group):
                 pass
-
-    def process_language(self, config_registry, item, subitem, store):
-        """add layout to the store"""
-        layout = item.get_name()
-        if 'eng' == self.lang3 or 'us' != layout:
-            name = '%s (%s)' % (layout, item.get_description())
-            if name not in store: store.append(name)
-
-    def process_layout(self, config_registry, item, store):
-        """add variant to the store"""
-        name = '%s (%s)' % (item.get_name(), item.get_description())
-        if name not in store: store.append(name)
-
-    def get_varians_for_layout(self, layout):
-        """Return list of supported keyboard layout variants for a given layout"""
-        variants = []
-        self.configreg.foreach_layout_variant(layout, self.process_layout, variants)
-        variants.sort()
-        logging.debug('got %d variants for layout %s', len(variants), layout)
-        return variants
-
-    def get_layouts_for_language(self, language):
-        """Return list of supported keyboard layouts for a given language"""
-        t_code = language
-        layouts = []
-        self.configreg.foreach_language_variant(t_code,
-                                                self.process_language,
-                                                layouts)
-        if len(layouts) == 0:
-            b_code = ln_iso639_2_T_to_B(t_code)
-            logging.debug(
-                'got no layout for ISO-639-2/T code %s, trying with ISO-639-2/B code %s',
-                t_code, b_code)
-            self.configreg.foreach_language_variant(b_code,
-                                                    self.process_language,
-                                                    layouts)
-        layouts.sort()
-        logging.debug('got %d layouts for %s', len(layouts), language)
-        return layouts
-
-    def switch_layout(self):
-        """enforce layout"""
-        if self.variant != 'Default':
-            self.engine.start_listen(xklavier.XKLL_TRACK_KEYBOARD_STATE)
-            self.engine.lock_group(1)
-            self.engine.stop_listen(xklavier.XKLL_TRACK_KEYBOARD_STATE)
-        
-    def update_layout_indicator(self):
-        """update layout indicator state"""
-        self.engine.start_listen(xklavier.XKLL_TRACK_KEYBOARD_STATE)
-        state = self.engine.get_current_state()
-        self.engine.stop_listen(xklavier.XKLL_TRACK_KEYBOARD_STATE)
-        layout = self.crecord.get_layouts()
-        if layout:
-            if state['group'] < len(layout):
-                layout = layout[state['group']].upper()
-            else: layout = layout[0].upper()
-        variant = self.crecord.get_variants()
-        shown = False
-        if variant:
-            if state['group'] < len(variant):
-                variant = variant[state['group']]
-                if variant:
-                    self.widget('layout_indicator').set_text(_('Current layout: %s (%s)') % (layout, variant))
-                    shown = True
-        if not shown:
-            self.widget('layout_indicator').set_text(_('Current layout: %s') % layout)
-
-    def populate(self):
-        """Create all the required entries"""
-        count = 0
-        for l in DEFAULT_LANGS:
-            self.cb_languages.get_model().append([l])
-            if 'English' == l: self.default_position = count
-            count += 1
-        self.cb_languages.get_model().append([_("Other...")])
 
     def layout_selected(self, widget):
         """handler for combobox selecion event"""
         l = self.cb_layouts.get_active_text()
         if l:
-            self.layout = self.layouts[l]
-            if self.layout:
-                self.variant = None
-                self.apply_layout(self.layout)
-                logging.debug('selected layout %s', l)
-                self.backend.SelectLayout(self.layout)
-                self.switch_layout()
-                variants = self.get_varians_for_layout(self.layout)
-                if self.cb_variants:
-                    self.cb_variants.get_model().clear()
-                    self.cb_variants.get_model().append(['Default'])
-                    for v in variants:
-                        self.cb_variants.get_model().append([v])
-
-    def variant_selected(self, widget):
-        """handler for variant combobox selection event"""
-        variant = self.cb_variants.get_active_text()
-        if variant:
-            self.apply_layout(self.layout)
+            self.greeter.languagesettings.set_layout(l)
 
     def locale_selected(self, widget):
         """handler for locale combobox selection event"""
-        self.language_code = self.cb_locales.get_active_text()
-        if self.language_code:
-            self.language_code = self.locales[unicode(self.language_code)]
-            if self.language_code:
-                self.variant = None
-                self.backend.SelectLanguage(self.language_code)
-                self.populate_for_locale(self.language_code)
+        l = self.cb_locales.get_active_text()
+        if l:
+            self.greeter.languagesettings.set_locale(l)
+            self.populate_layouts(self.greeter.languagesettings.get_language())
 
     def language_selected(self, widget):
         """handler for language combobox selection event"""
@@ -311,10 +173,12 @@ class LangPanel(TranslatableWindow):
             selected_language = self.cb_languages.get_active_text()
 
         if selected_language:
-            self.language_name = selected_language
-            self.populate_for_language(self.language_name)
-            if not self.language_name == self.cb_languages.get_active_text():
-                self.update_other_language_entry(self.language_name)
+            self.greeter.languagesettings.set_language(selected_language)
+            self.populate_locales()
+            if not selected_language == self.cb_languages.get_active_text():
+                self.update_other_language_entry(selected_language)
+
+    # "Other..." dialog handeling
 
     def update_other_language_entry(self, language=None):
         if not language:
@@ -331,17 +195,16 @@ class LangPanel(TranslatableWindow):
                 language)
             self.cb_languages.set_active(last_entry - 1)
 
-
     def show_more_languages(self):
         """Show a dialog to allow selecting more languages"""
 
         langdialog = LangDialog()
 
         count = 0
-        for l in LANGS:
+        for l in self.greeter.languagesettings.get_languages():
             langdialog.liststore.append([l])
             # XXX
-            if self.language_name == l:
+            if self.greeter.languagesettings.get_language() == l:
                 self.default_position = count
             count += 1
 
