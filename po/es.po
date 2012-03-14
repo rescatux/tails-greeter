@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tails-greeter\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-16 15:12+0800\n"
+"POT-Creation-Date: 2012-03-14 14:45+0100\n"
 "PO-Revision-Date: 2011-04-22 17:42+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Spanish <es@li.org>\n"
@@ -18,46 +18,108 @@ msgstr ""
 "X-Launchpad-Export-Date: 2011-05-03 06:15+0000\n"
 "X-Generator: Launchpad (build 12758)\n"
 
-#: ../glade/autologin.glade.h:1
+#: ../glade/persistencewindow.glade.h:1 ../glade/optionswindow.glade.h:1
+#: ../GdmGreeter/persistencewindow.py:112
+msgid "Login"
+msgstr ""
+
+#: ../glade/persistencewindow.glade.h:2 ../glade/optionswindow.glade.h:2
+msgid "Welcome to Tails"
+msgstr ""
+
+#: ../glade/persistencewindow.glade.h:3
+msgid "Use persistence?"
+msgstr ""
+
+#: ../glade/persistencewindow.glade.h:4
+msgid "Passphrase:"
+msgstr ""
+
+#: ../glade/persistencewindow.glade.h:5
+msgid "Read-Only?"
+msgstr ""
+
+#: ../glade/persistencewindow.glade.h:6 ../glade/optionswindow.glade.h:8
+#: ../glade/langpanel.glade.h:1
+msgid " "
+msgstr ""
+
+#: ../glade/persistencewindow.glade.h:7
+msgid "More options?"
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:3
+msgid "Administration password"
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:4
 msgid ""
 "Optionally enter an administration password.\n"
-"Leave this field blank to disable administrator rights."
+"Leave this blank for better security unless you need to perform "
+"administration operations."
 msgstr ""
 
-#: ../glade/langpanel.glade.h:1
-msgid "Country (Locale)"
+#: ../glade/optionswindow.glade.h:6
+msgid "Password:"
 msgstr ""
 
-#: ../glade/langpanel.glade.h:2
-msgid "Current layout: US"
+#: ../glade/optionswindow.glade.h:7
+msgid "Verify Password:"
+msgstr ""
+
+#: ../glade/langpanel.glade.h:2 ../GdmGreeter/langpanel.py:309
+msgid "Language"
 msgstr ""
 
 #: ../glade/langpanel.glade.h:3
-msgid "Language"
+msgid "Locale"
 msgstr ""
 
 #: ../glade/langpanel.glade.h:4
 msgid "Layout"
 msgstr ""
 
-#: ../glade/langpanel.glade.h:5
-msgid "Type into this text-box to test keyboard layout."
+#: ../GdmGreeter/optionswindow.py:58
+msgid "<i>Passwords do not match</i>"
 msgstr ""
 
-#: ../glade/langpanel.glade.h:6
-msgid "Variant"
+#: ../GdmGreeter/persistence.py:59
+#, python-format
+msgid ""
+"live-persist failed with return code %(returncode)s:\n"
+"%(stderr)s"
 msgstr ""
 
-#: ../GdmGreeter/autologin.py:48
-msgid "Password mismatch!"
+#: ../GdmGreeter/persistence.py:97
+#, python-format
+msgid ""
+"cryptsetup failed with return code %(returncode)s:\n"
+"%(stdout)s\n"
+"%(stderr)s"
 msgstr ""
 
-#: ../GdmGreeter/langpanel.py:166
+#: ../GdmGreeter/persistence.py:122
+#, python-format
+msgid ""
+"live-persist failed with return code %(returncode)s:\n"
+"%(stdout)s\n"
+"%(stderr)s"
+msgstr ""
+
+#: ../GdmGreeter/persistencewindow.py:84
+msgid "<i>Wrong passphrase. Please try again.</i>"
+msgstr ""
+
+#: ../GdmGreeter/langpanel.py:213
 #, python-format
 msgid "Current layout: %s (%s)"
 msgstr ""
 
-#: ../GdmGreeter/langpanel.py:169
+#: ../GdmGreeter/langpanel.py:216
 #, python-format
 msgid "Current layout: %s"
+msgstr ""
+
+#: ../GdmGreeter/langpanel.py:225 ../GdmGreeter/langpanel.py:277
+msgid "Other..."
 msgstr ""

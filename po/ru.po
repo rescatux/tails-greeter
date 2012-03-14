@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tails-greeter\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-02-17 21:52+0800\n"
+"POT-Creation-Date: 2012-03-14 14:45+0100\n"
 "PO-Revision-Date: 2012-02-17 21:55+0700\n"
 "Last-Translator: Max S <govnototalitarizm@gmail.com>\n"
 "Language-Team:  <govnototalitarizm@gmail.com>\n"
@@ -18,55 +18,134 @@ msgstr ""
 "X-Poedit-Language: Russian\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 
-#: ../glade/autologin.glade.h:1
-msgid ""
-"Enter here a password that will be asked to grant administrator rights. \n"
-"Leave this field blank to disable administrator rights."
+#: ../glade/persistencewindow.glade.h:1 ../glade/optionswindow.glade.h:1
+#: ../GdmGreeter/persistencewindow.py:112
+msgid "Login"
 msgstr ""
-"Введите пароль, который будет запрошен для предоставления прав администратора.\n"
-"Оставьте поле пустым для отключения прав администратора."
 
+#: ../glade/persistencewindow.glade.h:2 ../glade/optionswindow.glade.h:2
+msgid "Welcome to Tails"
+msgstr ""
+
+#: ../glade/persistencewindow.glade.h:3
+msgid "Use persistence?"
+msgstr ""
+
+#: ../glade/persistencewindow.glade.h:4
+msgid "Passphrase:"
+msgstr ""
+
+#: ../glade/persistencewindow.glade.h:5
+msgid "Read-Only?"
+msgstr ""
+
+#: ../glade/persistencewindow.glade.h:6 ../glade/optionswindow.glade.h:8
 #: ../glade/langpanel.glade.h:1
-msgid "Current layout: [US]"
-msgstr "Текущая раскладка: [US]"
+msgid " "
+msgstr ""
 
-#: ../glade/langpanel.glade.h:2
-#: ../glade/gsocpanel.glade.h:3
+#: ../glade/persistencewindow.glade.h:7
+msgid "More options?"
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:3
+msgid "Administration password"
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:4
+msgid ""
+"Optionally enter an administration password.\n"
+"Leave this blank for better security unless you need to perform "
+"administration operations."
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:6
+msgid "Password:"
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:7
+msgid "Verify Password:"
+msgstr ""
+
+#: ../glade/langpanel.glade.h:2 ../GdmGreeter/langpanel.py:309
 msgid "Language"
 msgstr "Язык"
 
 #: ../glade/langpanel.glade.h:3
-#: ../glade/gsocpanel.glade.h:4
+msgid "Locale"
+msgstr ""
+
+#: ../glade/langpanel.glade.h:4
 msgid "Layout"
 msgstr "Раскладка"
 
-#: ../glade/gsocpanel.glade.h:2
-msgid "Current layout: US"
-msgstr "Текущая раскладка: US"
+#: ../GdmGreeter/optionswindow.py:58
+msgid "<i>Passwords do not match</i>"
+msgstr ""
 
-#: ../glade/gsocpanel.glade.h:5
-msgid "Type into this text-box to test keyboard layout."
-msgstr "В этом поле ввода можно опробовать новую раскладку."
-
-#: ../glade/gsocpanel.glade.h:6
-msgid "Variant"
-msgstr "Вариант"
-
-#: ../GdmGreeter/autologin.py:48
-msgid "Password mismatch!"
-msgstr "Пароли не совпадают!"
-
-#: ../GdmGreeter/langpanel.py:179
-#: ../GdmGreeter/gsocpanel.py:172
+#: ../GdmGreeter/persistence.py:59
 #, python-format
-msgid "Current layout: [%s (%s)]"
+msgid ""
+"live-persist failed with return code %(returncode)s:\n"
+"%(stderr)s"
+msgstr ""
+
+#: ../GdmGreeter/persistence.py:97
+#, python-format
+msgid ""
+"cryptsetup failed with return code %(returncode)s:\n"
+"%(stdout)s\n"
+"%(stderr)s"
+msgstr ""
+
+#: ../GdmGreeter/persistence.py:122
+#, python-format
+msgid ""
+"live-persist failed with return code %(returncode)s:\n"
+"%(stdout)s\n"
+"%(stderr)s"
+msgstr ""
+
+#: ../GdmGreeter/persistencewindow.py:84
+msgid "<i>Wrong passphrase. Please try again.</i>"
+msgstr ""
+
+#: ../GdmGreeter/langpanel.py:213
+#, fuzzy, python-format
+msgid "Current layout: %s (%s)"
 msgstr "Текущая раскладка: [%s (%s)]"
 
-#: ../GdmGreeter/langpanel.py:182
-#: ../GdmGreeter/gsocpanel.py:175
-#, python-format
-msgid "Current layout: [%s]"
+#: ../GdmGreeter/langpanel.py:216
+#, fuzzy, python-format
+msgid "Current layout: %s"
 msgstr "Текущая раскладка: [%s]"
+
+#: ../GdmGreeter/langpanel.py:225 ../GdmGreeter/langpanel.py:277
+msgid "Other..."
+msgstr ""
+
+#~ msgid ""
+#~ "Enter here a password that will be asked to grant administrator rights. \n"
+#~ "Leave this field blank to disable administrator rights."
+#~ msgstr ""
+#~ "Введите пароль, который будет запрошен для предоставления прав "
+#~ "администратора.\n"
+#~ "Оставьте поле пустым для отключения прав администратора."
+
+#~ msgid "Current layout: [US]"
+#~ msgstr "Текущая раскладка: [US]"
+
+#~ msgid "Current layout: US"
+#~ msgstr "Текущая раскладка: US"
+
+#~ msgid "Type into this text-box to test keyboard layout."
+#~ msgstr "В этом поле ввода можно опробовать новую раскладку."
+
+#~ msgid "Variant"
+#~ msgstr "Вариант"
+
+#~ msgid "Password mismatch!"
+#~ msgstr "Пароли не совпадают!"
 
 #~ msgid "Gnome session default layout:"
 #~ msgstr "Раскладка для сессии gnome:"
