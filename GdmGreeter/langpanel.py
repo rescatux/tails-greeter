@@ -125,21 +125,25 @@ class LangPanel(TranslatableWindow):
         """populate the lists for a given language"""
         self.cb_locales.get_model().clear()
         count = 0
+        default_position = 0
         for l in self.greeter.languagesettings.get_default_locales():
             self.cb_locales.get_model().append([l])
             if l == self.greeter.languagesettings.get_locale():
-                self.cb_locales.set_active(count)
+                default_position = count
             count += 1
+        self.cb_locales.set_active(default_position)
 
     def populate_layouts(self, locale):
         """populate the lists for a given locale"""
         self.cb_layouts.get_model().clear()
         count = 0
+        default_position = 0
         for l in self.greeter.languagesettings.get_default_layouts():
             self.cb_layouts.get_model().append([l])
             if l == self.greeter.languagesettings.get_layout():
-                 self.cb_layouts.set_active(count)
+                default_position = count
             count += 1
+        self.cb_layouts.set_active(default_position)
         #XXX select default locale!
 
     # Callbacks
