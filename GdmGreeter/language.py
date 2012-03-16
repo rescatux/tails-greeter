@@ -235,13 +235,6 @@ class LanguageSettings(object):
 
     #locale = property(get_locale, set_locale)
 
-    def process_language(self, config_registry, item, subitem, store):
-        """add layout to the store"""
-        layout = item.get_name()
-        #if 'eng' == self.lang3 or 'us' != layout:
-        name = '%s (%s)' % (layout, item.get_description())
-        if name not in store: store.append(name)
-
     def populate_for_locale(self, locale):
         """XXX: populate the lists for a given locale
         
@@ -296,6 +289,14 @@ class LanguageSettings(object):
         """Return list of supported keyboard layouts for a given language"""
         t_code = language
         layouts = []
+
+        def process_language(config_registry, item, subitem, store):
+            """add layout to the store"""
+            layout = item.get_name()
+            #if 'eng' == self.lang3 or 'us' != layout:
+            name = '%s (%s)' % (layout, item.get_description())
+            if name not in store: store.append(name)
+
         self.configreg.foreach_language_variant(t_code, layouts)
         if len(layouts) == 0:
             b_code = ln_iso639_2_T_to_B(t_code)
@@ -303,6 +304,8 @@ class LanguageSettings(object):
                 'got no layout for ISO-639-2/T code %s, trying with ISO-639-2/B code %s',
                 t_code, b_code)
             self.configreg.foreach_language_variant(b_code, layouts)
+
+        self.configreg.foreach_language_variant(language, process_language, layouts)
         layouts.sort()
         logging.debug('got %d layouts for %s', len(layouts), language)
         return layouts
