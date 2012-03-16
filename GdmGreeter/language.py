@@ -196,7 +196,13 @@ class LanguageSettings(object):
 
     def set_language(self, language):
         self.language = language
-        for l in ln_list(language):
+        self.set_locales()
+
+    def set_locales(self):
+        """Set locales for current language
+        
+        """
+        for l in ln_list(self.language):
             self.locales[unicode(ln_country(l))] = l
             if l == 'en_US' or l.split('_')[0] == l.split('_')[1].lower():
                 self.set_locale(ln_country(l))
