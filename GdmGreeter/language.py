@@ -231,21 +231,22 @@ class LanguageSettings(object):
         return self.locale
 
     def set_locale(self, locale):
-        if locale:
-            language_code = self.locales[unicode(locale)]
-            if language_code:
-                self.variant = None
-                self.greeter.SelectLanguage(language_code)
-                self.populate_for_locale(language_code)
+        assert locale
         self.locale = locale
+        language_code = self.locales[unicode(locale)]
+        if language_code:
+            self.variant = None
+            self.greeter.SelectLanguage(language_code)
+            self.set_layouts()
 
     #locale = property(get_locale, set_locale)
 
-    def populate_for_locale(self, locale):
-        """XXX: populate the lists for a given locale
+    def set_layouts(self):
+        """Set default layouts for current locale
         
         + select default, to split"""
 
+        locale = self.locales[unicode(self.locale)]
         lang3 = ln_iso639_tri(locale)
         if lang3:
             self.default_layouts.clear()
