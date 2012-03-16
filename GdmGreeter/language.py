@@ -245,8 +245,8 @@ class LanguageSettings(object):
         
         XXX: also select and apply default, to split"""
 
-        locale = self.locales[unicode(self.locale)]
-        lang3 = ln_iso639_tri(locale)
+        lang_code = self.locales[unicode(self.locale)]
+        lang3 = ln_iso639_tri(lang_code)
         if lang3:
             self.default_layouts.clear()
             layouts = self.get_layouts_for_language(lang3)
@@ -263,9 +263,9 @@ class LanguageSettings(object):
                     # from the layout code. Hence, just display the English layout
                     # names until we find a better solution.
                     self.default_layouts[layout_name] = layout_code
-                    if locale.split('_')[1].lower() == layout_code:
+                    if lang_code.split('_')[1].lower() == layout_code:
                         default = layout_code
-                    if locale.split('_')[0].lower() == layout_code:
+                    if lang_code.split('_')[0].lower() == layout_code:
                         backup = layout_code
                 if default:
                     logging.debug('setting layout to %s' % default) 
