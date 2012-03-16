@@ -310,10 +310,11 @@ class LanguageSettings(object):
         logging.debug('got %d layouts for %s', len(layouts), language)
         return layouts
 
-    def apply_layout(self, layout):
+    def apply_layout(self):
         """populate the lists for a given layout"""
         self.variant_list = []
         self.layout_list = []
+        layout = self.layout
         if self.variant and self.variant != 'Default': self.variant_list = ['', self.variant]
         else: self.variant_list = ['']
         if len(self.variant_list) > 1 or layout != 'us': self.layout_list = ['us', layout]
@@ -336,7 +337,7 @@ class LanguageSettings(object):
         self.layout = self.default_layouts[layout]
         if self.layout:
             self.variant = None
-            self.apply_layout(self.layout)
+            self.apply_layout()
             self.greeter.SelectLayout(self.layout)
             self.switch_layout()
         #self._layout = layout
