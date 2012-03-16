@@ -278,7 +278,7 @@ class LanguageSettings(object):
                 self.layout = backup
             self.variant = None
         else:
-            self.layout = 'us'
+            self.default_layouts['USA'] = 'us'
         self.apply_layout()
 
     # Layouts
