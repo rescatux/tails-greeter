@@ -244,7 +244,7 @@ class LanguageSettings(object):
     def set_layouts(self):
         """Set default layouts for current locale
         
-        + select default, to split"""
+        XXX: also select and apply default, to split"""
 
         locale = self.locales[unicode(self.locale)]
         lang3 = ln_iso639_tri(locale)
