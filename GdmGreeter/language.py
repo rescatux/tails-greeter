@@ -269,16 +269,10 @@ class LanguageSettings(object):
                 self.layout = default
             else:
                 self.layout = backup
-            # XXX: factorize to apply_layout
             self.variant = None
-            self.apply_layout(self.layout)
-            self.greeter.SelectLayout(self.layout)
-            self.switch_layout()
         else:
             self.layout = 'us'
-            self.crecord.set_layouts(['us'])
-            self.crecord.activate(self.engine)
-            self.greeter.SelectLayout('us')
+        self.apply_layout()
 
     # Layouts
 
