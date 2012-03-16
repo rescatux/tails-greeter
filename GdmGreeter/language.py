@@ -250,34 +250,34 @@ class LanguageSettings(object):
         if lang3:
             self.default_layouts.clear()
             layouts = self.get_layouts_for_language(lang3)
-            count = 0
-            default = 0
-            backup = 0
-            use_default = 0
-            for l in layouts:
-                layout_name = l.split(')')[0].split('(')[1]
-                layout_code = l.split()[0]
-                # Unfortunately XklConfigItem's xkl_get_country_name is not part
-                # of the Python bindings, so we have to hack our way through
-                # another way. Moreover, layout codes don't easily map to country
-                # codes: layout code "be" is for Belgium, while country code "be"
-                # is for Бельгія, so we cannot use ICU to get the country code
-                # from the layout code. Hence, just display the English layout
-                # names until we find a better solution.
-                self.default_layouts[layout_name] = layout_code
-                if locale.split('_')[1].lower() == layout_code:
-                    default = layout_code
-                    use_default = 1
-                if locale.split('_')[0].lower() == layout_code:
-                    backup = layout_code
-                count += 1
-            if use_default:
-                self.layout = default
-            else:
-                self.layout = backup
-            self.variant = None
+            if layouts:
+                default = False
+                backup = False
+                for (layout_code, layout_name) in layouts:
+                    logging.debug("layout_name=%s, layout_code=%s" % (layout_name, layout_code))
+                    # Unfortunately XklConfigItem's xkl_get_country_name is not part
+                    # of the Python bindings, so we have to hack our way through
+                    # another way. Moreover, layout codes don't easily map to country
+                    # codes: layout code "be" is for Belgium, while country code "be"
+                    # is for Бельгія, so we cannot use ICU to get the country code
+                    # from the layout code. Hence, just display the English layout
+                    # names until we find a better solution.
+                    self.default_layouts[layout_name] = layout_code
+                    if locale.split('_')[1].lower() == layout_code:
+                        default = layout_code
+                    if locale.split('_')[0].lower() == layout_code:
+                        backup = layout_code
+                if default:
+                    logging.debug('setting layout to %s' % default) 
+                    self.layout = default
+                elif backup:
+                    logging.debug('setting layout to %s' % backup) 
+                    self.layout = backup
+                self.variant = None
         else:
+            logging.debug("using default")
             self.default_layouts['USA'] = 'us'
+            self.layout = 'us'
         self.apply_layout()
 
     # Layouts
@@ -294,8 +294,8 @@ class LanguageSettings(object):
             """add layout to the store"""
             layout = item.get_name()
             #if 'eng' == self.lang3 or 'us' != layout:
-            name = '%s (%s)' % (layout, item.get_description())
-            if name not in store: store.append(name)
+            descriptor = (layout, item.get_description())
+            if descriptor not in store: store.append(descriptor)
 
         self.configreg.foreach_language_variant(t_code, layouts)
         if len(layouts) == 0:
