@@ -221,7 +221,6 @@ class LanguageSettings(object):
             default_locales.append(ln_country(l))
             # XXX
             #self.locales[unicode(ln_country(l))] = l
-
         return default_locales
 
     def get_default_locales(self):
