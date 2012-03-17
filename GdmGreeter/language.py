@@ -246,10 +246,13 @@ class LanguageSettings(object):
         XXX: also select and apply default, to split"""
 
         lang_code = self.locales[unicode(self.locale)]
+        logging.debug('lang_code=%s' % lang_code)
         lang3 = ln_iso639_tri(lang_code)
+        logging.debug('lang3=%s' % lang3)
         if lang3:
             self.default_layouts.clear()
             layouts = self.get_layouts_for_language(lang3)
+            logging.debug('layouts=%s' % layouts)
             if layouts:
                 default = False
                 backup = False
@@ -315,6 +318,7 @@ class LanguageSettings(object):
         self.variant_list = []
         self.layout_list = []
         layout = self.layout
+        logging.debug("layout=%s" % layout)
         if self.variant and self.variant != 'Default': self.variant_list = ['', self.variant]
         else: self.variant_list = ['']
         if len(self.variant_list) > 1 or layout != 'us': self.layout_list = ['us', layout]
@@ -331,6 +335,8 @@ class LanguageSettings(object):
     def get_layout(self):
         # Reverse lookup
         revdict = dict((v,k) for k,v in self.default_layouts.items())
+        logging.debug("self.layout = %s" % self.layout) 
+        logging.debug("getting %s" % revdict[self.layout]) 
         return revdict[self.layout]
 
     def set_layout(self, layout):
@@ -340,6 +346,8 @@ class LanguageSettings(object):
             self.apply_layout()
             self.greeter.SelectLayout(self.layout)
             self.switch_layout()
+        logging.debug("setting %s" % layout) 
+        logging.debug("self.layout = %s" % self.layout) 
         #self._layout = layout
 
     #layout = property(get_layout, set_layout)
