@@ -75,7 +75,7 @@ class CommunityGreeterApp(GdmGreeterService):
         self.translated = False
         self.persistence = GdmGreeter.persistence.PersistenceSettings()
         self._loaded_windows = []
-        self.languagesettings = GdmGreeter.language.LanguageSettings(self)
+        self.localisationsettings = GdmGreeter.language.LocalisationSettings(self)
         self.langpanel = self.load_window(LangPanel, self)
         self.persistencewindow = self.load_window(PersistenceWindow, self)
         self.optionswindow = self.load_window(OptionsWindow, self)

@@ -4,7 +4,9 @@
   <!-- interface-naming-policy toplevel-contextual -->
   <object class="GtkListStore" id="languages_liststore">
     <columns>
-      <!-- column-name language -->
+      <!-- column-name id -->
+      <column type="gchararray"/>
+      <!-- column-name name -->
       <column type="gchararray"/>
     </columns>
   </object>

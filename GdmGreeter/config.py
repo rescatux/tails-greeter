@@ -23,6 +23,10 @@
 LPASSWORD = 'live'
 LUSER = 'amnesia'
 
+# locales to display in main menu
+default_locales = ["ar_EG", "zh_CN", "en_US", "fa_IR", "fr_FR",
+                  "de_DE", "it", "pt", "ru", "es", "vi_VN"]
+
 # file to store tails session sudo password to
 rootpassword_output_path = '/var/lib/gdm3/tails.password'
 

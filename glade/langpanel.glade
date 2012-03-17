@@ -4,12 +4,16 @@
   <!-- interface-naming-policy toplevel-contextual -->
   <object class="GtkListStore" id="languages">
     <columns>
+      <!-- column-name id -->
+      <column type="gchararray"/>
       <!-- column-name name -->
       <column type="gchararray"/>
     </columns>
   </object>
   <object class="GtkListStore" id="layouts">
     <columns>
+      <!-- column-name id -->
+      <column type="gchararray"/>
       <!-- column-name name -->
       <column type="gchararray"/>
     </columns>
@@ -129,12 +133,16 @@
   </object>
   <object class="GtkListStore" id="locales">
     <columns>
+      <!-- column-name id -->
+      <column type="gchararray"/>
       <!-- column-name name -->
       <column type="gchararray"/>
     </columns>
   </object>
   <object class="GtkListStore" id="variants">
     <columns>
+      <!-- column-name id -->
+      <column type="gchararray"/>
       <!-- column-name name -->
       <column type="gchararray"/>
     </columns>
