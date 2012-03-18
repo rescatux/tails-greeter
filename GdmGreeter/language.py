@@ -393,10 +393,7 @@ class LocalisationSettings(object):
     def get_layouts_with_names(self):
         return layouts_with_names(self.get_layouts(), self.get_locale())
 
-    def get_default_layouts(self):
-        """Return list of supported keyboard layouts for current language
-        
-        """
+    def layouts_for_language(self, lang):
         layouts = []
         t_code = ln_iso639_tri(self._language)
 
@@ -418,6 +415,16 @@ class LocalisationSettings(object):
                                                         layouts)
 
         logging.debug('got %d layouts for %s', len(layouts), self._language)
+        return layouts
+
+    def get_default_layouts(self):
+        """Return list of supported keyboard layouts for current language
+        
+        """
+
+        layouts = self.layouts_for_language(self._language)
+        if not layouts:
+            layouts = self.layouts_for_language(country_from_locale(self._locale).lower())
         if not layouts:
             layouts = ['us']
         return layouts
