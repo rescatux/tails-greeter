@@ -145,7 +145,7 @@ class LangPanel(TranslatableWindow):
             if l[0] == self.greeter.localisationsettings.get_layout():
                 default_position = count
             count += 1
-        self.cb_layouts.get_model().append(['', _("Other...")])
+        self.cb_layouts.get_model().append(['+', _("Other...")])
         self.cb_layouts.set_active(default_position)
         #XXX select default locale!
 
@@ -161,8 +161,8 @@ class LangPanel(TranslatableWindow):
     def layout_selected(self, widget):
         """handler for combobox selecion event"""
         selected_layout = None
-        if self.cb_layouts.get_active() == \
-                self.cb_layouts.get_model().iter_n_children(None) - 1:
+        i = self.cb_layouts.get_active_iter()
+        if i and  self.cb_layouts.get_model().get(i, 0)[0] == '+':
             selected_layout = self.show_more_layouts()
         else:
             i = self.cb_layouts.get_active_iter()
