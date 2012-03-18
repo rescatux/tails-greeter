@@ -1,28 +1,31 @@
 Source: tails-greeter
-Section: python
-Priority: optional
 Maintainer: Tails developers <tails@boum.org>
 Uploaders: Max S <govnototalitarizm@gmail.com>
-Build-Depends: debhelper (>= 7.0.50~), python (>= 2.6.6-3~)
+Section: python
+Priority: optional
+Build-Depends: debhelper (>= 7.0.50~),
+               python (>= 2.6.6-3~)
 Build-Depends-Indep: python-distutils-extra
 Standards-Version: 3.9.1
 X-Python-Version: >= 2.5
 
 Package: tails-greeter
-Section: gnome
 Architecture: all
-Depends: ${python:Depends}, ${misc:Depends},
- console-setup,
- gconf2,
- gdm | gdm3,
- gir1.0-gtk-2.0 | gir1.2-gtk-2.0,
- live-config,
- python-dbus,
- python-gobject,
- python-pyicu,
- python-xklavier,
- sudo,
- ttf-unifont
+Section: gnome
+Depends: ${python:Depends},
+         ${misc:Depends},
+         console-setup,
+         gconf2,
+         gdm | gdm3,
+         gir1.0-gtk-2.0 | gir1.2-gtk-2.0,
+         live-config,
+         python-dbus,
+         python-gobject,
+         python-pyicu,
+         python-xklavier,
+         sudo,
+         ttf-unifont
 Conflicts: gdm-community-greeter
 Description: GDM greeter for Tails
  For setting languages and other variables.
+
