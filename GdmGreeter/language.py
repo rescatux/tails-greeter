@@ -308,11 +308,17 @@ class LocalisationSettings(object):
         """
         return languages_from_locales(self._system_locales_list)
 
+    def get_languages_with_names(self):
+        return languages_with_names(self.get_languages(), self.get_locale())
+
     def get_default_languages(self):
         """Return a list of default languages codes
 
         """
         return languages_from_locales(GdmGreeter.config.default_locales)
+
+    def get_default_languages_with_names(self):
+        return languages_with_names(self.get_default_languages(), self.get_locale())
 
     def get_language(self):
         """Return current language code
@@ -340,6 +346,9 @@ class LocalisationSettings(object):
         lang = self._language
         if lang in self._system_locales_dict:
             return self._system_locales_dict[lang]
+
+    def get_default_locales_with_names(self):
+        return locales_with_names(self.get_default_locales(), self.get_locale())
 
     def get_locale(self):
         return self._locale
@@ -378,6 +387,9 @@ class LocalisationSettings(object):
         layouts.sort()
         return layouts
 
+    def get_layouts_with_names(self):
+        return layouts_with_names(self.get_layouts(), self.get_locale())
+
     def get_default_layouts(self):
         """Return list of supported keyboard layouts for current language
         
@@ -404,6 +416,9 @@ class LocalisationSettings(object):
         layouts.sort()
         logging.debug('got %d layouts for %s', len(layouts), self._language)
         return layouts
+
+    def get_default_layouts_with_names(self):
+        return layouts_with_names(self.get_default_layouts(), self.get_locale())
 
     def get_layout(self):
         return self._layout
