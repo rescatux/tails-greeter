@@ -68,6 +68,7 @@ class LangPanel(TranslatableWindow):
 
         # XXX: initialize instance variables
         self.additional_language_displayed = False
+        self.additional_layout_displayed = False
         self.default_position = 0
 
         # Build UI
@@ -144,6 +145,7 @@ class LangPanel(TranslatableWindow):
             if l[0] == self.greeter.localisationsettings.get_layout():
                 default_position = count
             count += 1
+        self.cb_layouts.get_model().append(['', _("Other...")])
         self.cb_layouts.set_active(default_position)
         #XXX select default locale!
 
@@ -158,11 +160,62 @@ class LangPanel(TranslatableWindow):
 
     def layout_selected(self, widget):
         """handler for combobox selecion event"""
-        i = self.cb_layouts.get_active_iter()
-        if i:
-            l = self.cb_layouts.get_model().get(i, 0)[0]
-            if l:
-                self.greeter.localisationsettings.set_layout(l)
+        selected_layout = None
+        if self.cb_layouts.get_active() == \
+                self.cb_layouts.get_model().iter_n_children(None) - 1:
+            selected_layout = self.show_more_layouts()
+        else:
+            i = self.cb_layouts.get_active_iter()
+            if i:
+                selected_layout = self.cb_layouts.get_model().get(i, 0)[0]
+
+        if selected_layout:
+            self.greeter.localisationsettings.set_layout(selected_layout)
+            i = self.cb_layouts.get_active_iter()
+            if i and not selected_layout == self.cb_layouts.get_model().get(i, 0)[0]:
+                self.update_other_layout_entry(selected_layout)
+
+    # "Other..." layouts dialog handeling
+
+    def update_other_layout_entry(self, layout=None):
+        if not layout:
+            layout = _("Other...")
+        last_entry = self.cb_layouts.get_model().iter_n_children(None) - 1
+        if not self.additional_layout_displayed:
+            self.cb_layouts.get_model().insert(
+                last_entry,
+                [layout, language.layout_name(layout)])
+            self.cb_layouts.set_active(last_entry)
+            self.additional_layout_displayed = True
+        else:
+            self.cb_layouts.get_model().set(
+                self.cb_layouts.get_model().get_iter(last_entry - 1),
+                0, layout,
+                1, language.layout_name(layout))
+            self.cb_layouts.set_active(last_entry - 1)
+
+    def show_more_layouts(self):
+        """Show a dialog to allow selecting more layouts"""
+
+        dialog = LangDialog()
+
+        count = 0
+        for l in self.greeter.localisationsettings.get_layouts_with_names():
+            dialog.liststore.append(l)
+            # XXX
+            if self.greeter.localisationsettings.get_layout() == l[0]:
+                self.default_position = count
+            count += 1
+
+        layout = None
+        if dialog.dialog.run():
+            dummy, selected_iter = dialog.treeview.get_selection().get_selected()
+            if selected_iter:
+                layout = dialog.liststore[selected_iter][0]
+
+        dialog.dialog.destroy()
+
+        return layout
 
     def locale_selected(self, widget):
         """handler for locale combobox selection event"""
