@@ -147,7 +147,6 @@ class LangPanel(TranslatableWindow):
             count += 1
         self.cb_layouts.get_model().append(['+', _("Other...")])
         self.cb_layouts.set_active(default_position)
-        #XXX select default locale!
 
     # Callbacks
 
