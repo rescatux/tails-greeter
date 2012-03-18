@@ -186,11 +186,11 @@ class LangPanel(TranslatableWindow):
         if selected_language:
             self.greeter.localisationsettings.set_language(selected_language)
             self.populate_locales()
-            if not selected_language == self.cb_languages.get_model().get(
-                    self.cb_languages.get_active_iter(), 0)[0]:
+            i = self.cb_languages.get_active_iter()
+            if i and not selected_language == self.cb_languages.get_model().get(i, 0)[0]:
                 self.update_other_language_entry(selected_language)
 
-    # "Other..." dialog handeling
+    # "Other..." language dialog handeling
 
     def update_other_language_entry(self, lang=None):
         if not lang:
@@ -205,8 +205,8 @@ class LangPanel(TranslatableWindow):
         else:
             self.cb_languages.get_model().set(
                 self.cb_languages.get_model().get_iter(last_entry - 1),
-                0,
-                language)
+                0, lang,
+                1, language.language_name(lang))
             self.cb_languages.set_active(last_entry - 1)
 
     def show_more_languages(self):
@@ -215,10 +215,10 @@ class LangPanel(TranslatableWindow):
         langdialog = LangDialog()
 
         count = 0
-        for l in self.greeter.localisationsettings.get_languages():
-            langdialog.liststore.append([l, language.language_name(l)])
+        for l in self.greeter.localisationsettings.get_languages_with_names():
+            langdialog.liststore.append(l)
             # XXX
-            if self.greeter.localisationsettings.get_language() == l:
+            if self.greeter.localisationsettings.get_language() == l[0]:
                 self.default_position = count
             count += 1
 
