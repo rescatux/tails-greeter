@@ -246,9 +246,7 @@ class LangPanel(TranslatableWindow):
 
     # "Other..." language dialog handeling
 
-    def update_other_language_entry(self, lang=None):
-        if not lang:
-            lang = _("Other...")
+    def update_other_language_entry(self, lang):
         last_entry = self.cb_languages.get_model().iter_n_children(None) - 1
         if not self.additional_language_displayed:
             self.cb_languages.get_model().insert(
