@@ -121,7 +121,7 @@ class LangPanel(TranslatableWindow):
             if l[0] == self.greeter.localisationsettings.get_language():
                 self.default_position = count
             count += 1
-        self.cb_languages.get_model().append(['', _("Other...")])
+        self.cb_languages.get_model().append(['+', _("Other...")])
 
     def populate_locales(self):
         """populate the lists for a given language"""
@@ -228,12 +228,13 @@ class LangPanel(TranslatableWindow):
 
     def language_selected(self, widget):
         """handler for language combobox selection event"""
-        if self.cb_languages.get_active() == \
-                self.cb_languages.get_model().iter_n_children(None) - 1:
-            selected_language = self.show_more_languages()
-        else:
-            i = self.cb_languages.get_active_iter()
-            if i:
+
+        selected_language = None
+        i = self.cb_languages.get_active_iter()
+        if i:
+            if self.cb_languages.get_model().get(i, 0)[0] == '+':
+                selected_language = self.show_more_languages()
+            else:
                 selected_language = self.cb_languages.get_model().get(i, 0)[0]
 
         if selected_language:
