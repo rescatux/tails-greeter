@@ -363,13 +363,19 @@ class LocalisationSettings(object):
         select first locale.
         """
         default_locale = None
-        for locale in self.get_default_locales():
-            if ((locale == 'en_US')
-                or (language_from_locale(locale).lower() ==
-                    country_from_locale(locale).lower())):
-                default_locale = locale
-        if not default_locale:
-            default_locale = self.get_default_locales()[0]
+        default_locales = self.get_default_locales()
+        logging.debug("default_locales = %s" % default_locales)
+        if default_locales: 
+            for locale in default_locales:
+                if ((locale == 'en_US')
+                    or (language_from_locale(locale).lower() ==
+                        country_from_locale(locale).lower())):
+                    default_locale = locale
+            if not default_locale:
+                default_locale = default_locales[0]
+        else:
+            default_locale = 'en_US'
+        logging.debug("setting default locale to %s" % default_locale)
         self.set_locale(default_locale)
 
     def __apply_locale(self):
