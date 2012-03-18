@@ -229,7 +229,42 @@ def country_name(locale_code):
 def layout_name(layout_code):
     if layout_code in _system_layouts_dict:
         return _system_layouts_dict[layout_code]
-     
+
+def sort_by_name(list, locale='C'):
+    try:
+        # Note that we always collate with the 'C' locale.  This is far
+        # from ideal.  But proper collation always requires a specific
+        # language for its collation rules (languages frequently have
+        # custom sorting).  This at least gives us common sorting rules,
+        # like stripping accents.
+        collator = Collator.createInstance(Locale(locale))
+    except:
+        collator = None
+    def compare_choice(elt):
+        """comparison function"""
+        if collator:
+            try:
+                return collator.getCollationKey(elt[1]).getByteArray()
+            except: # Specify exception
+                return elt[1]
+    list.sort(key=compare_choice)
+    return list
+
+def languages_with_names(languages, locale='C'):
+    languages_with_names = [(l, language_name(l)) for l in languages]
+    sort_by_name(languages_with_names, locale)
+    return languages_with_names
+ 
+def locales_with_names(locales, locale='C'):
+    locales_with_names = [(l, country_name(l)) for l in locales]
+    sort_by_name(locales_with_names, locale)
+    return locales_with_names
+
+def layouts_with_names(layouts, locale='C'):
+    layouts_with_names = [(l, layout_name(l)) for l in layouts]
+    sort_by_name(layouts_with_names, locale)
+    return layouts_with_names
+
 class LocalisationSettings(object):
     """Model storing settings related to language and keyboard
 
