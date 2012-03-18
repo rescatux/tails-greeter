@@ -115,9 +115,9 @@ class LangPanel(TranslatableWindow):
     def populate_languages(self):
         """Create all the required entries"""
         count = 0
-        for l in self.greeter.localisationsettings.get_default_languages():
-            self.cb_languages.get_model().append([l, language.language_name(l)])
-            if l == self.greeter.localisationsettings.get_language():
+        for l in self.greeter.localisationsettings.get_default_languages_with_names():
+            self.cb_languages.get_model().append(l)
+            if l[0] == self.greeter.localisationsettings.get_language():
                 self.default_position = count
             count += 1
         self.cb_languages.get_model().append(['', _("Other...")])
@@ -127,9 +127,9 @@ class LangPanel(TranslatableWindow):
         self.cb_locales.get_model().clear()
         count = 0
         default_position = 0
-        for l in self.greeter.localisationsettings.get_default_locales():
-            self.cb_locales.get_model().append([l, language.country_name(l)])
-            if l == self.greeter.localisationsettings.get_locale():
+        for l in self.greeter.localisationsettings.get_default_locales_with_names():
+            self.cb_locales.get_model().append(l)
+            if l[0] == self.greeter.localisationsettings.get_locale():
                 default_position = count
             count += 1
         self.cb_locales.set_active(default_position)
@@ -139,9 +139,9 @@ class LangPanel(TranslatableWindow):
         self.cb_layouts.get_model().clear()
         count = 0
         default_position = 0
-        for l in self.greeter.localisationsettings.get_default_layouts():
-            self.cb_layouts.get_model().append([l, language.layout_name(l)])
-            if l == self.greeter.localisationsettings.get_layout():
+        for l in self.greeter.localisationsettings.get_default_layouts_with_names():
+            self.cb_layouts.get_model().append(l)
+            if l[0] == self.greeter.localisationsettings.get_layout():
                 default_position = count
             count += 1
         self.cb_layouts.set_active(default_position)
