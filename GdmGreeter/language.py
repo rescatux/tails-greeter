@@ -33,19 +33,27 @@ import GdmGreeter.config
 
 
 def ln_cc(lang_name):
-    """obtain language code from name, for example: English -> en_US"""
+    """obtain language code from name
+    
+    for example: English -> en_US"""
     return LDICT[unicode(lang_name)][0]
 
 def ln_list(lang_name):
-    """obtain list of locales for a given language name, for example: English -> en_US, en_GB"""
+    """obtain list of locales for a given language name
+    
+    for example: English -> en_US, en_GB"""
     return LDICT[unicode(lang_name)]
 
 def ln_country(ln_CC):
-    """get country name for locale: en_US -> USA"""
+    """get country name for locale
+    
+    example: en_US -> USA"""
     return Locale(ln_CC).getDisplayCountry(Locale(ln_CC))
 
 def ln_iso639_tri(ln_CC):
-    """get iso639 3-letter code: en_US -> eng"""
+    """get iso639 3-letter code
+    
+    example: en_US -> eng"""
     return Locale(ln_CC).getISO3Language()
 
 def ln_iso639_2_T_to_B(ln_CC):
