@@ -412,6 +412,8 @@ class LocalisationSettings(object):
                                                         layouts)
 
         logging.debug('got %d layouts for %s', len(layouts), self._language)
+        if not layouts:
+            layouts = ['us']
         return layouts
 
     def get_default_layouts_with_names(self):
