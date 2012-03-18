@@ -205,7 +205,6 @@ def languages_from_locales(locales):
         language_code = language_from_locale(l)
         if not language_code in language_codes:
             language_codes.append(language_code)
-    language_codes.sort()
     return language_codes
 
 def country_from_locale(locale):
@@ -217,7 +216,6 @@ def countries_from_locales(locales):
         country_code = country_from_locale(l)
         if not country_code in country_codes:
             country_codes.append(country_code)
-    country_codes.sort()
     return country_codes
 
 def language_name(language_code):
@@ -384,7 +382,6 @@ class LocalisationSettings(object):
 
         """
         layouts = _system_layouts_dict.keys()
-        layouts.sort()
         return layouts
 
     def get_layouts_with_names(self):
@@ -413,7 +410,7 @@ class LocalisationSettings(object):
             self._xkl_registry.foreach_language_variant(b_code,
                                                         process_language,
                                                         layouts)
-        layouts.sort()
+
         logging.debug('got %d layouts for %s', len(layouts), self._language)
         return layouts
 
