@@ -77,27 +77,29 @@ class PersistenceSettings(object):
         """Unlock the LUKS persistent device"""
         cleartext_name = str.rsplit(device, '/', 1)[-1] + '_unlocked'
         cleartext_device = '/dev/mapper/' + cleartext_name
-        args = [
-            "/usr/bin/sudo", "-n",
-            "/sbin/cryptsetup", "luksOpen",
-            "--tries", "1",
-            device, cleartext_name
-            ]
-        proc = subprocess.Popen(
-            args, stdin=subprocess.PIPE,
-            stdout=subprocess.PIPE, stderr=subprocess.PIPE
-            )
-        out, err = proc.communicate(password + "\n")
-        out = unicode_to_utf8(out)
-        err = unicode_to_utf8(err)
-        if proc.returncode:
-            logging.debug("cryptsetup failed with return code %(returncode)s:\n%(stdout)s\n%(stderr)s"
-                % { 'returncode': proc.returncode, 'stdout': out, 'stderr': err })
-            raise GdmGreeter.errors.WrongPassphraseError(
-                _("cryptsetup failed with return code %(returncode)s:\n%(stdout)s\n%(stderr)s")
-                % { 'returncode': proc.returncode, 'stdout': out, 'stderr': err }
+        if not os.path.exists(cleartext_device):
+            args = [
+                "/usr/bin/sudo", "-n",
+                "/sbin/cryptsetup", "luksOpen",
+                "--tries", "1",
+                device, cleartext_name
+                ]
+            proc = subprocess.Popen(
+                args, stdin=subprocess.PIPE,
+                stdout=subprocess.PIPE, stderr=subprocess.PIPE
                 )
-        logging.debug("crytpsetup success")
+            out, err = proc.communicate(password + "\n")
+            out = unicode_to_utf8(out)
+            err = unicode_to_utf8(err)
+            if proc.returncode:
+                logging.debug(
+                    "cryptsetup failed with return code %(returncode)s:\n%(stdout)s\n%(stderr)s"
+                    % { 'returncode': proc.returncode, 'stdout': out, 'stderr': err })
+                raise GdmGreeter.errors.WrongPassphraseError(
+                    _("cryptsetup failed with return code %(returncode)s:\n%(stdout)s\n%(stderr)s")
+                    % { 'returncode': proc.returncode, 'stdout': out, 'stderr': err }
+                    )
+            logging.debug("crytpsetup success")
         return cleartext_device
 
     def setup_persistence(self, cleartext_device, readonly):
