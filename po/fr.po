@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tails-greeter\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-14 14:45+0100\n"
+"POT-Creation-Date: 2012-03-19 09:00+0100\n"
 "PO-Revision-Date: 2012-03-16 11:46+0100\n"
 "Last-Translator: \n"
 "Language-Team:  <govnototalitarizm@gmail.com>\n"
@@ -18,14 +18,12 @@ msgstr ""
 "X-Poedit-Language: French\n"
 "X-Poedit-Country: FRANCE\n"
 
-#: ../glade/persistencewindow.glade.h:1
-#: ../glade/optionswindow.glade.h:1
-#: ../GdmGreeter/persistencewindow.py:112
+#: ../glade/persistencewindow.glade.h:1 ../glade/optionswindow.glade.h:1
+#: ../GdmGreeter/persistencewindow.py:113
 msgid "Login"
 msgstr "Connexion"
 
-#: ../glade/persistencewindow.glade.h:2
-#: ../glade/optionswindow.glade.h:2
+#: ../glade/persistencewindow.glade.h:2 ../glade/optionswindow.glade.h:2
 msgid "Welcome to Tails"
 msgstr "Bienvenue dans Tails"
 
@@ -41,8 +39,7 @@ msgstr "Phrase de passe :"
 msgid "Read-Only?"
 msgstr "Lecture-Seule ?"
 
-#: ../glade/persistencewindow.glade.h:6
-#: ../glade/optionswindow.glade.h:8
+#: ../glade/persistencewindow.glade.h:6 ../glade/optionswindow.glade.h:8
 #: ../glade/langpanel.glade.h:1
 msgid " "
 msgstr " "
@@ -58,10 +55,13 @@ msgstr "Mot de passe d'administration"
 #: ../glade/optionswindow.glade.h:4
 msgid ""
 "Optionally enter an administration password.\n"
-"Leave this blank for better security unless you need to perform administration operations."
+"Leave this blank for better security unless you need to perform "
+"administration operations."
 msgstr ""
-"Vous pouvez entrer le mot de passe qui sera utilisé pour obtenir les droits administrateur.\n"
-"Laissez ces champs vides pour plus de sécurité, sauf si vous aurez besoin d'effectuer des opérations d'administration."
+"Vous pouvez entrer le mot de passe qui sera utilisé pour obtenir les droits "
+"administrateur.\n"
+"Laissez ces champs vides pour plus de sécurité, sauf si vous aurez besoin "
+"d'effectuer des opérations d'administration."
 
 #: ../glade/optionswindow.glade.h:6
 msgid "Password:"
@@ -71,8 +71,7 @@ msgstr "Mot de passe :"
 msgid "Verify Password:"
 msgstr "Vérification du mot de passe :"
 
-#: ../glade/langpanel.glade.h:2
-#: ../GdmGreeter/langpanel.py:309
+#: ../glade/langpanel.glade.h:2 ../GdmGreeter/langpanel.py:42
 msgid "Language"
 msgstr "Langue"
 
@@ -97,7 +96,7 @@ msgstr ""
 "échec de live-persist avec ce code de retour %(returncode)s:\n"
 "%(stderr)s"
 
-#: ../GdmGreeter/persistence.py:97
+#: ../GdmGreeter/persistence.py:99
 #, fuzzy, python-format
 msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
@@ -108,7 +107,7 @@ msgstr ""
 "%(stdout)s\n"
 "%(stderr)s"
 
-#: ../GdmGreeter/persistence.py:122
+#: ../GdmGreeter/persistence.py:124
 #, fuzzy, python-format
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
@@ -119,24 +118,20 @@ msgstr ""
 "%(stdout)s\n"
 "%(stderr)s"
 
-#: ../GdmGreeter/persistencewindow.py:84
+#: ../GdmGreeter/persistencewindow.py:85
 msgid "<i>Wrong passphrase. Please try again.</i>"
 msgstr "<i>Mauvaise phrase de passe. Essayez de nouveau.</i>"
 
-#: ../GdmGreeter/langpanel.py:213
-#, python-format
-msgid "Current layout: %s (%s)"
-msgstr "Agencement actuel: %s (%s)"
-
-#: ../GdmGreeter/langpanel.py:216
-#, python-format
-msgid "Current layout: %s"
-msgstr "Agencement actuel: %s"
-
-#: ../GdmGreeter/langpanel.py:225
-#: ../GdmGreeter/langpanel.py:277
+#: ../GdmGreeter/langpanel.py:124 ../GdmGreeter/langpanel.py:148
+#: ../GdmGreeter/langpanel.py:181
 msgid "Other..."
 msgstr "Autre..."
+
+#~ msgid "Current layout: %s (%s)"
+#~ msgstr "Agencement actuel: %s (%s)"
+
+#~ msgid "Current layout: %s"
+#~ msgstr "Agencement actuel: %s"
 
 #~ msgid "Password mismatch!"
 #~ msgstr "Les mots de passe ne correspondent pas !"
@@ -148,4 +143,3 @@ msgstr "Autre..."
 #~ msgstr ""
 #~ "Selectionnez la langue pour TAILS.\n"
 #~ "Attention: Ce choix ne peut pas être changé une fois confirmé."
-

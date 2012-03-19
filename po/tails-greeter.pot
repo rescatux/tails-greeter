@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-14 14:45+0100\n"
+"POT-Creation-Date: 2012-03-19 09:00+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../glade/persistencewindow.glade.h:1 ../glade/optionswindow.glade.h:1
-#: ../GdmGreeter/persistencewindow.py:112
+#: ../GdmGreeter/persistencewindow.py:113
 msgid "Login"
 msgstr ""
 
@@ -66,7 +66,7 @@ msgstr ""
 msgid "Verify Password:"
 msgstr ""
 
-#: ../glade/langpanel.glade.h:2 ../GdmGreeter/langpanel.py:309
+#: ../glade/langpanel.glade.h:2 ../GdmGreeter/langpanel.py:42
 msgid "Language"
 msgstr ""
 
@@ -89,7 +89,7 @@ msgid ""
 "%(stderr)s"
 msgstr ""
 
-#: ../GdmGreeter/persistence.py:97
+#: ../GdmGreeter/persistence.py:99
 #, python-format
 msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
@@ -97,7 +97,7 @@ msgid ""
 "%(stderr)s"
 msgstr ""
 
-#: ../GdmGreeter/persistence.py:122
+#: ../GdmGreeter/persistence.py:124
 #, python-format
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
@@ -105,20 +105,11 @@ msgid ""
 "%(stderr)s"
 msgstr ""
 
-#: ../GdmGreeter/persistencewindow.py:84
+#: ../GdmGreeter/persistencewindow.py:85
 msgid "<i>Wrong passphrase. Please try again.</i>"
 msgstr ""
 
-#: ../GdmGreeter/langpanel.py:213
-#, python-format
-msgid "Current layout: %s (%s)"
-msgstr ""
-
-#: ../GdmGreeter/langpanel.py:216
-#, python-format
-msgid "Current layout: %s"
-msgstr ""
-
-#: ../GdmGreeter/langpanel.py:225 ../GdmGreeter/langpanel.py:277
+#: ../GdmGreeter/langpanel.py:124 ../GdmGreeter/langpanel.py:148
+#: ../GdmGreeter/langpanel.py:181
 msgid "Other..."
 msgstr ""
