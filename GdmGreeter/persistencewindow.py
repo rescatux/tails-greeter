@@ -36,7 +36,8 @@ class PersistenceWindow(TranslatableWindow):
         self.moreoptions = False
 
         # Sets self.window
-        TranslatableWindow.__init__(self, builder.get_object("login_dialog"))
+        self.login_dialog = builder.get_object("login_dialog")
+        TranslatableWindow.__init__(self, self.login_dialog)
         self.btn_persistence_yes = builder.get_object("persistence_yes_button")
         self.btn_persistence_no = builder.get_object("persistence_no_button")
         self.passphrase_box = builder.get_object("passphrase_box")
@@ -129,9 +130,17 @@ class PersistenceWindow(TranslatableWindow):
         self.update_login_button(moreoptions)
         self.update_moreoptions_buttons(moreoptions)
 
+    def toggle_watch_cursor(self, on=True):
+        if on:
+            self.login_dialog.window.set_cursor(gtk.gdk.Cursor(gtk.gdk.WATCH))
+        else:
+            self.login_dialog.window.set_cursor(None)
+        gtk.gdk.flush()
+
     def working(self, working=True):
         # FIXME: set_sensitive more widgets?
         self.btn_login.set_sensitive(not working)
+        self.toggle_watch_cursor(working)
         # if working:
         #     self.spinner.start()
         #     self.spinner.show()
@@ -141,7 +150,9 @@ class PersistenceWindow(TranslatableWindow):
 
     def go(self):
         self.working(True)
-        if self.activate_persistence():
+        success = self.activate_persistence()
+        self.working(False)
+        if success:
             # next
             if self.moreoptions:
                 self.window.hide()
@@ -150,8 +161,6 @@ class PersistenceWindow(TranslatableWindow):
             # login
             else:
                 self.greeter.login()
-        else:
-            self.working(False)
 
     def cb_login_clicked(self, widget, data=None):
         self.go()
