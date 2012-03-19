@@ -22,7 +22,7 @@
 Greeter program for GDM using gtk (nothing else works)
 """
 
-import logging, gettext, gtk, pycountry
+import logging, gettext, gtk, pycountry, os
 import xklavier
 import icu
 
@@ -282,6 +282,8 @@ class LocalisationSettings(object):
         self._language = 'en'
         self._locale = 'en_US'
         self._layout = 'us'
+        self._variant = ''
+        self._options = 'grp:alt_shift_toggle'
 
     def __fill_locales_dict(self, locales):
         """assemble dictionary of language codes to corresponding locales list
@@ -297,6 +299,14 @@ class LocalisationSettings(object):
                 locales_dict[lang].append(locale)
         return locales_dict
 
+    def __del__(self):
+        with open(GdmGreeter.config.locale_output_path, 'w') as f:
+            os.chmod(GdmGreeter.config.locale_output_path, 0o600)
+            f.write('TAILS_LOCALE_NAME=%s\n' % self._locale)
+            f.write('TAILS_XKBMODEL=%s\n' % 'pc105') # use default value from /etc/default/keyboard
+            f.write('TAILS_XKBLAYOUT=%s\n' % self._layout)
+            f.write('TAILS_XKBVARIANT=%s\n' % self._variant)
+            f.write('TAILS_XKBOPTIONS=%s\n' % self._options)
 
     # LANGUAGES
 
@@ -470,7 +480,7 @@ class LocalisationSettings(object):
         self._xkl_record.set_variants([''])
         # 'grp:sclk_toggle' would be much more convenient but we default to
         # mustdie switcher in here
-        self._xkl_record.set_options(['grp:alt_shift_toggle'])
+        self._xkl_record.set_options([self._options])
         self._xkl_record.activate(self._xkl_engine)
 
         logging.debug("layout=%s" % layout)
