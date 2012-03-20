@@ -1,3 +1,14 @@
+tails-greeter (0.5) squeeze-backports; urgency=low
+
+  * Unmerge feature/refactor_languages branch. It introduces a cricital,
+    and hard to track, bug.
+  * grep_n_set: logics bugfix, robustness improvements.
+  * Don't localize search engine at PostLogin time.
+    This is now done at build time, thanks to FF11.
+  * Reword help text.
+
+ -- Tails developers <tails@boum.org>  Tue, 20 Mar 2012 19:20:32 +0100
+
 tails-greeter (0.4) squeeze-backports; urgency=low
 
   * Language and keyboad layout code: big refactoring, cleanup and
