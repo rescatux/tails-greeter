@@ -78,18 +78,6 @@ grep_n_set "XKBOPTIONS" ${KBDSET} ${TAILS_XKBOPTIONS}
 force_set "CODESET" ${CONSET} ${CODSET}
 grep_n_set "LANG"       ${LOCALE_CFG} "${TAILS_LOCALE_NAME}.UTF-8"
 
-# Localize iceweasel search engines
-LANGUAGE="`echo ${TAILS_LOCALE_NAME} | head -c 2`"
-if [ -r "/usr/share/amnesia/iceweasel/searchplugins/scroogle-ssl-${LANGUAGE}.xml" ]; then
-   cp "/usr/share/amnesia/iceweasel/searchplugins/scroogle-ssl-${LANGUAGE}.xml" \
-      /usr/share/iceweasel/searchplugins/
-fi
-if [ -r "/usr/share/amnesia/iceweasel/searchplugins/startpage-https-${LANGUAGE}.xml" ]; then
-   cp "/usr/share/amnesia/iceweasel/searchplugins/startpage-https-${LANGUAGE}.xml" \
-      /usr/share/iceweasel/searchplugins/
-fi
-
-
 ### Persistence
 
 # Copy persistence configuration to a root-writable, world-readable place,
