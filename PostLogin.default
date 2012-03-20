@@ -30,22 +30,23 @@ log_n_exit() {
 
 # enforce value $3 for variable $1 in file $2
 force_set() {
-    sed -i -e "s|^$1=.*$|$1=\"$3\"|" $2
+    sed -i -e "s|^$1=.*$|$1=\"$3\"|" "$2"
 }
 
 # check if variable $1 is in file $2, if not - add with value $3 to file $2
 # $4 enforce adding $3 only (without $1= prefix)
 grep_n_set() {
-    FCHK=`grep $1 $2`
-    if [ $4 ] ; then
-        if [ ! $FCHK ] ; then
-	    echo $3 >> $2
+    FCHK=yes
+    grep -qs "$1" "$2" || FCHK=no
+    if [ "$4" ] ; then
+        if [ "$FCHK" eq 'no' ] ; then
+	    echo "$3" >> "$2"
 	fi
     else
-	if [ ! $FCHK ] ; then
-	    force_set $1 $2 $3
+	if [ "$FCHK" eq 'no' ] ; then
+	    echo "$1=$3" >> "$2"
 	else
-	    echo "$1=$3" >> $2
+	    force_set "$1" "$2" "$3"
 	fi
     fi
 }
