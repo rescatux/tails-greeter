@@ -23,7 +23,7 @@ Greeter program for GDM using gtk (nothing else works)
 
 import logging, gtk, xklavier, gettext, os
 _ = gettext.gettext
-from GdmGreeter.language import TranslatableWindow, LANGS, DEFAULT_LANGS, ln_list, ln_country, ln_iso639_tri
+from GdmGreeter.language import TranslatableWindow, LANGS, DEFAULT_LANGS, ln_list, ln_country, ln_iso639_tri, ln_iso639_2_T_to_B
 import GdmGreeter
 
 class LangPanel(TranslatableWindow):
@@ -181,8 +181,19 @@ class LangPanel(TranslatableWindow):
 
     def get_layouts_for_language(self, language):
         """Return list of supported keyboard layouts for a given language"""
+        t_code = language
         layouts = []
-        self.configreg.foreach_language_variant(language, self.process_language, layouts)
+        self.configreg.foreach_language_variant(t_code,
+                                                self.process_language,
+                                                layouts)
+        if len(layouts) == 0:
+            b_code = ln_iso639_2_T_to_B(t_code)
+            logging.debug(
+                'got no layout for ISO-639-2/T code %s, trying with ISO-639-2/B code %s',
+                t_code, b_code)
+            self.configreg.foreach_language_variant(b_code,
+                                                    self.process_language,
+                                                    layouts)
         layouts.sort()
         logging.debug('got %d layouts for %s', len(layouts), language)
         return layouts
