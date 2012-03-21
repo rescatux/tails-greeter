@@ -1,3 +1,13 @@
+tails-greeter (0.6) squeeze-backports; urgency=low
+
+  * Clearer pairs of toggle buttons.
+  * Fix the "no layout for certain languages" bug:
+    add a function to convert from ISO-639-2/T to 639-2/B,
+    and try passing 639-2/B language code to xklavier if 639-2/T fails.
+  * UI display fix: slightly wider window by default.
+
+ -- Tails developers <tails@boum.org>  Wed, 21 Mar 2012 19:21:44 +0100
+
 tails-greeter (0.5) squeeze-backports; urgency=low
 
   * Unmerge feature/refactor_languages branch. It introduces a cricital,
