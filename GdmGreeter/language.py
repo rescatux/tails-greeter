@@ -21,7 +21,7 @@
 Greeter program for GDM using gtk (nothing else works)
 """
 
-import logging, gettext, gtk
+import logging, gettext, gtk, pycountry
 
 from subprocess import Popen, PIPE
 from icu import Locale, Collator
@@ -41,6 +41,10 @@ def ln_country(ln_CC):
 def ln_iso639_tri(ln_CC):
     """get iso639 3-letter code: en_US -> eng"""
     return Locale(ln_CC).getISO3Language()
+
+def ln_iso639_2_T_to_B(ln_CC):
+    """Convert a ISO-639-2/T code (e.g. deu for German) to a 639-2/B one (e.g. ger for German)"""
+    return pycountry.languages.get(terminology=ln_CC).bibliographic
 
 def get_native_langs(lang_list):
     """assemble dictionary of native language names with language codes"""
