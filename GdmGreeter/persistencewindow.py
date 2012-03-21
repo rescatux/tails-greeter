@@ -53,6 +53,10 @@ class PersistenceWindow(TranslatableWindow):
         self.warning_area = builder.get_object("warning_area")
         self.warning_image = builder.get_object("warning_area")
         # self.spinner = builder.get_object("spinner")
+        self.checked_img_moreoptions_yes = builder.get_object("moreoptions_yes_checked_img")
+        self.checked_img_moreoptions_no  = builder.get_object("moreoptions_no_checked_img")
+        self.checked_img_persistence_yes = builder.get_object("persistence_yes_checked_img")
+        self.checked_img_persistence_no  = builder.get_object("persistence_no_checked_img")
 
         self.warning_area.hide()
 
@@ -95,6 +99,12 @@ class PersistenceWindow(TranslatableWindow):
         self.btn_persistence_yes.set_active(persistence)
         self.btn_persistence_no.set_active(not persistence)
         if persistence:
+            self.checked_img_persistence_yes.show()
+            self.checked_img_persistence_no.hide()
+        else:
+            self.checked_img_persistence_yes.hide()
+            self.checked_img_persistence_no.show()
+        if persistence:
             self.entry_passphrase.grab_focus()
 
     def cb_persistence_yes_toggled(self, widget, data=None):
@@ -117,6 +127,12 @@ class PersistenceWindow(TranslatableWindow):
     def update_moreoptions_buttons(self, moreoptions):
         self.btn_moreoptions_yes.set_active(moreoptions)
         self.btn_moreoptions_no.set_active(not moreoptions)
+        if moreoptions:
+            self.checked_img_moreoptions_yes.show()
+            self.checked_img_moreoptions_no.hide()
+        else:
+            self.checked_img_moreoptions_yes.hide()
+            self.checked_img_moreoptions_no.show()
 
     def cb_moreoptions_yes_toggled(self, widget, data=None):
         moreoptions = widget.get_active()
