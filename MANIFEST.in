@@ -1,6 +1,7 @@
 include community-greeter.py
 include tails-greeter.desktop
 include tails-logging.conf
+include no-password-lecture.txt
 include glade/*.glade
 include pixmaps/*.svg
 include pixmaps/lang/*.svg

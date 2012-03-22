@@ -18,6 +18,7 @@ export PATH="/usr/sbin:${PATH}"
 LIVE_PASSWORD=live
 POLKIT=/etc/polkit-1/localauthority.conf.d/52-tails-greeter.conf
 SUDOERS=/etc/sudoers.d/tails-greeter
+NO_PASSWORD_LECTURE=/etc/sudoers.d/tails-greeter-no-password-lecture
 KBDSET=/etc/default/keyboard
 CONSET=/etc/default/console-setup
 LOCALE_CFG=/etc/default/locale
@@ -97,7 +98,7 @@ fi
 ### Password
 
 # Import password for superuser access
-. /var/lib/gdm3/tails.password || log_n_exit "Password file not found."
+. /var/lib/gdm3/tails.password
 
 # Remove password file
 rm --interactive=never -f /var/lib/gdm3/tails.password
@@ -106,6 +107,10 @@ rm --interactive=never -f /var/lib/gdm3/tails.password
 if [ -z "${TAILS_USER_PASSWORD}" ] ; then
     rm -f "${POLKIT}" "${SUDOERS}"
     deluser "${LIVE_USERNAME}" sudo
+    echo "Defaults:amnesia lecture=always" > "${NO_PASSWORD_LECTURE}"
+    echo "Defaults:amnesia lecture_file=/usr/share/tails-greeter/no-password-lecture.txt" >> "${NO_PASSWORD_LECTURE}"
+    echo "Defaults:amnesia badpass_message=\"The administration password is disabled.\"" >> "${NO_PASSWORD_LECTURE}"
+    chmod 0440 "${NO_PASSWORD_LECTURE}"
     log_n_exit "Password variable not found."
 fi
 

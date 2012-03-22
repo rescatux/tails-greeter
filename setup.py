@@ -66,7 +66,7 @@ setup(
             ( SDIR + 'pixmaps/auto', listfiles( 'pixmaps/auto', '*.*' ) ),
             ( 'share/gdm/autostart/LoginWindow/', [ 'tails-greeter.desktop' ] ),
             ( 'bin/', [ 'tails-lang-helper' ] ),
-            ( SDIR, [ 'tails-logging.conf' ] ),
+            ( SDIR, [ 'tails-logging.conf', 'no-password-lecture.txt' ] ),
         ],
         cmdclass={
                    'build'       : build_extra.build_extra,
