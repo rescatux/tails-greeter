@@ -61,6 +61,10 @@ if [ -z "${LIVE_USERNAME}" ] ; then
 fi
 
 
+### (re-)start services that need to wait for post-login time
+service network-manager restart
+
+
 ### Localization
 
 # Import locale name
