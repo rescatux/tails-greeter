@@ -36,13 +36,13 @@ def ln_cc(lang_name):
     """obtain language code from name
     
     for example: English -> en_US"""
-    return LDICT[unicode(lang_name)][0]
+    return _languages_dict[unicode(lang_name)][0]
 
 def ln_list(lang_name):
     """obtain list of locales for a given language name
     
     for example: English -> en_US, en_GB"""
-    return LDICT[unicode(lang_name)]
+    return _languages_dict[unicode(lang_name)]
 
 def ln_country(ln_CC):
     """get country name for locale
@@ -475,7 +475,8 @@ p = Popen(["tails-lang-helper"], stdout=PIPE)
 langcodes = str.split(p.communicate()[0])
 logging.debug('%s languages found: helper returned %s', len(langcodes), p.returncode)
 
-LDICT = get_native_langs(langcodes)
 TEXTS = get_texts(LDICT)
+# dictionnary of native language: language code
+_languages_dict = get_native_langs(langcodes)
 
 _system_layouts_dict = __fill_layouts_dict()
