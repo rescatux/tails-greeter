@@ -394,7 +394,7 @@ class LocalisationSettings(object):
                 'got no layout for ISO-639-2/T code %s, trying with ISO-639-2/B code %s',
                 t_code, b_code)
             self._xkl_registry.foreach_language_variant(b_code,
-                                                        process_language,
+                                                        language_iter,
                                                         layouts)
 
         logging.debug('got %d layouts for %s', len(layouts), self._language)
