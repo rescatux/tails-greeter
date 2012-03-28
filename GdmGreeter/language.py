@@ -194,6 +194,7 @@ class TranslatableWindow(object):
         self.labels = []
         self.tips = []
         self.store_translations(self.window)
+        self.__texts = get_texts(_languages_dict)
 
     def store_translations(self, widget):
         """Go through all widgets and store the translatable elements"""
@@ -221,7 +222,7 @@ class TranslatableWindow(object):
 
     def translate_to(self, lang):
         """Loop through everything and translate on the fly"""
-        lang = TEXTS.get(self.language(lang), None)
+        lang = self.__texts.get(self.language(lang), None)
         for (child, text) in self.labels:
             child.set_label(self.gettext(lang, text))
         for (child, text) in self.tips:
@@ -475,7 +476,6 @@ p = Popen(["tails-lang-helper"], stdout=PIPE)
 langcodes = str.split(p.communicate()[0])
 logging.debug('%s languages found: helper returned %s', len(langcodes), p.returncode)
 
-TEXTS = get_texts(LDICT)
 # dictionnary of native language: language code
 _languages_dict = get_native_langs(langcodes)
 
