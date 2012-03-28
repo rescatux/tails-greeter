@@ -111,10 +111,6 @@ langcodes = str.split(p.communicate()[0])
 logging.debug('%s languages found: helper returned %s', len(langcodes), p.returncode)
 
 LDICT = get_native_langs(langcodes)
-LANGS = sorted(LDICT.keys(), key=compare_choice)
-DEFAULT_LANGS = get_native_langs(
-        ["ar_EG", "zh_CN", "en_US", "fa_IR", "fr_FR",
-         "de_DE", "it", "pt", "ru", "es", "vi_VN"])
 TEXTS = get_texts(LDICT)
 
 class TranslatableWindow(object):
