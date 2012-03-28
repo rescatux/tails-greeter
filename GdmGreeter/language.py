@@ -74,24 +74,6 @@ def get_native_langs(lang_list):
             langs_dict[lang].append(l)
     return langs_dict
 
-try:
-# Note that we always collate with the 'C' locale.  This is far
-# from ideal.  But proper collation always requires a specific
-# language for its collation rules (languages frequently have
-# custom sorting).  This at least gives us common sorting rules,
-# like stripping accents.
-    collator = Collator.createInstance(Locale('C'))
-except:
-    collator = None
-
-def compare_choice(x):
-    """comparison function"""
-    if collator:
-        try:
-            return collator.getCollationKey(x).getByteArray()
-        except: # Specify exception
-            return x
-
 def get_texts(langs):
     """obtain texts for a given locale using gettext"""
     result = {}
