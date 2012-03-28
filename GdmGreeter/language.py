@@ -300,6 +300,7 @@ class LocalisationSettings(object):
         return locales_dict
 
     def __del__(self):
+        self._greeter.SelectLayout(self._layout)
         with open(GdmGreeter.config.locale_output_path, 'w') as f:
             os.chmod(GdmGreeter.config.locale_output_path, 0o600)
             f.write('TAILS_LOCALE_NAME=%s\n' % self._locale)
