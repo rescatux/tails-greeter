@@ -118,9 +118,15 @@ def __fill_layouts_dict():
     return layouts_dict
 
 def language_from_locale(locale):
+    """Obtain the language code from a locale code
+
+    example: fr_FR -> fr"""
     return locale.split('_')[0]
 
 def languages_from_locales(locales):
+    """Obtain a language code list from a locale code list
+
+    example: [fr_FR, en_GB] -> [fr, en]"""
     language_codes = []
     for l in locales:
         language_code = language_from_locale(l)
@@ -129,9 +135,15 @@ def languages_from_locales(locales):
     return language_codes
 
 def country_from_locale(locale):
+    """Obtain the country code from a locale code
+
+    example: fr_FR -> FR"""
     return locale.split('_')[1]
 
 def countries_from_locales(locales):
+    """Obtain a country code list from a locale code list
+
+    example: [fr_FR, en_GB] -> [FR, GB]"""
     country_codes = []
     for l in locales:
         country_code = country_from_locale(l)
@@ -473,7 +485,7 @@ class LocalisationSettings(object):
                        self._xkl_record.get_variants(),
                        self._xkl_record.get_options())
 
-# Module initialisation
+# MODULE INITIALISATION
 
 # List of system locale codes
 langcodes = __get_langcodes()
@@ -481,4 +493,5 @@ langcodes = __get_langcodes()
 # dictionnary of native language: language code
 _languages_dict = get_native_langs(langcodes)
 
+# dictionnary of layout codes: layout name
 _system_layouts_dict = __fill_layouts_dict()
