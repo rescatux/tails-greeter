@@ -16,8 +16,8 @@
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>
 #
-"""
-Greeter program for GDM using gtk (nothing else works)
+"""Second screen
+
 """
 
 import logging, gtk, gettext, os
