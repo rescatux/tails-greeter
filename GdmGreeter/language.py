@@ -85,16 +85,6 @@ def get_texts(langs):
             logging.error('Failed to get texts for %s locale', loc)
     return result
 
-MOFILES = '/usr/share/locale/'
-DOMAIN  = 'tails-greeter'
-
-p = Popen(["tails-lang-helper"], stdout=PIPE)
-langcodes = str.split(p.communicate()[0])
-logging.debug('%s languages found: helper returned %s', len(langcodes), p.returncode)
-
-LDICT = get_native_langs(langcodes)
-TEXTS = get_texts(LDICT)
-
 class TranslatableWindow(object):
     """Interface providing functions to translate a window on the fly
     """
@@ -171,8 +161,6 @@ def __fill_layouts_dict():
 
     _xkl_registry.foreach_layout(layout_iter, layouts_dict)
     return layouts_dict
-
-_system_layouts_dict = __fill_layouts_dict()
 
 def language_from_locale(locale):
     return locale.split('_')[0]
@@ -477,3 +465,17 @@ class LocalisationSettings(object):
                        self._xkl_record.get_layouts(),
                        self._xkl_record.get_variants(),
                        self._xkl_record.get_options())
+
+# Module initialisation
+
+MOFILES = '/usr/share/locale/'
+DOMAIN  = 'tails-greeter'
+
+p = Popen(["tails-lang-helper"], stdout=PIPE)
+langcodes = str.split(p.communicate()[0])
+logging.debug('%s languages found: helper returned %s', len(langcodes), p.returncode)
+
+LDICT = get_native_langs(langcodes)
+TEXTS = get_texts(LDICT)
+
+_system_layouts_dict = __fill_layouts_dict()
