@@ -80,7 +80,7 @@ def get_texts(langs):
     for k, l in langs.iteritems():
         loc = l[0].split('_')[0]
         try:
-            result[str(loc)] = gettext.translation(DOMAIN, MOFILES, [str(loc)])
+            result[str(loc)] = gettext.translation(GdmGreeter.__appname__, GdmGreeter.config.locales_path, [str(loc)])
         except IOError:
             logging.error('Failed to get texts for %s locale', loc)
     return result
@@ -468,9 +468,6 @@ class LocalisationSettings(object):
                        self._xkl_record.get_options())
 
 # Module initialisation
-
-MOFILES = '/usr/share/locale/'
-DOMAIN  = 'tails-greeter'
 
 p = Popen(["tails-lang-helper"], stdout=PIPE)
 langcodes = str.split(p.communicate()[0])
