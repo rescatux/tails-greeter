@@ -85,51 +85,6 @@ def get_texts(langs):
             logging.error('Failed to get texts for %s locale', loc)
     return result
 
-class TranslatableWindow(object):
-    """Interface providing functions to translate a window on the fly
-    """
-    retain_focus = True
-
-    def __init__(self, window):
-        self.window = window
-        self.labels = []
-        self.tips = []
-        self.store_translations(self.window)
-
-    def store_translations(self, widget):
-        """Go through all widgets and store the translatable elements"""
-        for child in widget.get_children():
-            if isinstance(child, gtk.Container):
-                self.store_translations(child)
-            if isinstance(child, gtk.Label):
-                self.labels.append( (child, child.get_label()) )
-            if child.get_has_tooltip():
-                self.tips.append( (child, child.get_tooltip_text()) )
-
-    def language(self, lang):
-        """Return normalised language for use in this process"""
-        if '_' in lang:
-            lang = lang.split('_')[0]
-        if '.' in lang:
-            lang = lang.split('.')[0]
-        return lang.lower()
-
-    def gettext(self, lang, text):
-        """Return a translated string or string"""
-        if lang:
-            text = lang.gettext(text)
-        return text
-
-    def translate_to(self, lang):
-        """Loop through everything and translate on the fly"""
-        lang = TEXTS.get(self.language(lang), None)
-        for (child, text) in self.labels:
-            child.set_label(self.gettext(lang, text))
-        for (child, text) in self.tips:
-            child.set_tooltip_markup(self.gettext(lang, text))
-        if self.window.get_sensitive() and self.window.get_visible() and self.retain_focus:
-            self.window.present()
-
 def __fill_layouts_dict():
     """assemble dictionary of layout codes to corresponding layout name
     
@@ -228,6 +183,51 @@ def layouts_with_names(layouts, locale='C'):
     layouts_with_names = [(l, layout_name(l)) for l in layouts]
     sort_by_name(layouts_with_names, locale)
     return layouts_with_names
+
+class TranslatableWindow(object):
+    """Interface providing functions to translate a window on the fly
+    """
+    retain_focus = True
+
+    def __init__(self, window):
+        self.window = window
+        self.labels = []
+        self.tips = []
+        self.store_translations(self.window)
+
+    def store_translations(self, widget):
+        """Go through all widgets and store the translatable elements"""
+        for child in widget.get_children():
+            if isinstance(child, gtk.Container):
+                self.store_translations(child)
+            if isinstance(child, gtk.Label):
+                self.labels.append( (child, child.get_label()) )
+            if child.get_has_tooltip():
+                self.tips.append( (child, child.get_tooltip_text()) )
+
+    def language(self, lang):
+        """Return normalised language for use in this process"""
+        if '_' in lang:
+            lang = lang.split('_')[0]
+        if '.' in lang:
+            lang = lang.split('.')[0]
+        return lang.lower()
+
+    def gettext(self, lang, text):
+        """Return a translated string or string"""
+        if lang:
+            text = lang.gettext(text)
+        return text
+
+    def translate_to(self, lang):
+        """Loop through everything and translate on the fly"""
+        lang = TEXTS.get(self.language(lang), None)
+        for (child, text) in self.labels:
+            child.set_label(self.gettext(lang, text))
+        for (child, text) in self.tips:
+            child.set_tooltip_markup(self.gettext(lang, text))
+        if self.window.get_sensitive() and self.window.get_visible() and self.retain_focus:
+            self.window.present()
 
 class LocalisationSettings(object):
     """Model storing settings related to language and keyboard
