@@ -184,6 +184,12 @@ def layouts_with_names(layouts, locale='C'):
     sort_by_name(layouts_with_names, locale)
     return layouts_with_names
 
+def __get_langcodes():
+    p = Popen(["tails-lang-helper"], stdout=PIPE)
+    langcodes = str.split(p.communicate()[0])
+    logging.debug('%s languages found: helper returned %s', len(langcodes), p.returncode)
+    return langcodes
+
 class TranslatableWindow(object):
     """Interface providing functions to translate a window on the fly
     """
@@ -469,9 +475,8 @@ class LocalisationSettings(object):
 
 # Module initialisation
 
-p = Popen(["tails-lang-helper"], stdout=PIPE)
-langcodes = str.split(p.communicate()[0])
-logging.debug('%s languages found: helper returned %s', len(langcodes), p.returncode)
+# List of system locale codes
+langcodes = __get_langcodes()
 
 # dictionnary of native language: language code
 _languages_dict = get_native_langs(langcodes)
