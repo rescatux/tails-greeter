@@ -301,12 +301,18 @@ class LocalisationSettings(object):
 
     def __del__(self):
         self._greeter.SelectLayout(self._layout)
+        if self._layout != 'us':
+            layouts = '%s,us' % self._layout
+            variants = '%s,' % self._variant
+        else:
+            layout = self._layout
+            variant = self._variant
         with open(GdmGreeter.config.locale_output_path, 'w') as f:
             os.chmod(GdmGreeter.config.locale_output_path, 0o600)
             f.write('TAILS_LOCALE_NAME=%s\n' % self._locale)
             f.write('TAILS_XKBMODEL=%s\n' % 'pc105') # use default value from /etc/default/keyboard
-            f.write('TAILS_XKBLAYOUT=%s\n' % self._layout)
-            f.write('TAILS_XKBVARIANT=%s\n' % self._variant)
+            f.write('TAILS_XKBLAYOUT=%s\n' % layouts)
+            f.write('TAILS_XKBVARIANT=%s\n' % variants)
             f.write('TAILS_XKBOPTIONS=%s\n' % self._options)
 
     # LANGUAGES
@@ -473,18 +479,22 @@ class LocalisationSettings(object):
         self.set_layout(default_layout)            
 
     def __apply_layout(self):
-        self.variant_list = []
-        self.layout_list = []
-        layout = self._layout
+        logging.debug("layout=%s" % self._layout)
 
-        self._xkl_record.set_layouts([layout])
-        self._xkl_record.set_variants([''])
+        if self._layout != 'us':
+            layout_list = ['us', self._layout]
+            variant_list = ['', self._variant]
+        else:
+            layout_list = [self._layout]
+            variant_list = [self._variant]
+
+        self._xkl_record.set_layouts(layout_list)
+        self._xkl_record.set_variants(variant_list)
         # 'grp:sclk_toggle' would be much more convenient but we default to
         # mustdie switcher in here
         self._xkl_record.set_options([self._options])
         self._xkl_record.activate(self._xkl_engine)
 
-        logging.debug("layout=%s" % layout)
         logging.debug('L:%s V:%s O:%s',
                        self._xkl_record.get_layouts(),
                        self._xkl_record.get_variants(),
