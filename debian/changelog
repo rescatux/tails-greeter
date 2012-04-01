@@ -1,3 +1,9 @@
+tails-greeter (0.6.99~lang) squeeze-backports; urgency=low
+
+  * Test features/refactor_languages
+
+ -- Tails developers <tails@boum.org>  Sun, 01 Apr 2012 16:11:24 +0100
+
 tails-greeter (0.6.1) squeeze-backports; urgency=low
 
   * Fix discrepancies between checked images "sensitive" state.
