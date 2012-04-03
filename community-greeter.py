@@ -90,10 +90,12 @@ class CommunityGreeterApp(GdmGreeterService):
 
     def translate_to(self, lang):
         """Translate all windows to target language"""
+        logging.debug("translating to %s" % lang)
         if self.ready:
             self.language = lang
         for window in self._loaded_windows:
             if isinstance(window, TranslatableWindow):
+                logging.debug("translating %s to %s" % (window, lang))
                 window.translate_to(lang)
 
     def login(self):
