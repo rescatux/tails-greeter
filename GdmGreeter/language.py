@@ -479,6 +479,10 @@ class LocalisationSettings(object):
         # mustdie switcher in here
         self._xkl_record.set_options([self._options])
         self._xkl_record.activate(self._xkl_engine)
+        # try to 'enforce layout'
+        self._xkl_engine.start_listen(xklavier.XKLL_TRACK_KEYBOARD_STATE)
+        self._xkl_engine.lock_group(1)
+        self._xkl_engine.stop_listen(xklavier.XKLL_TRACK_KEYBOARD_STATE)
 
         logging.debug('L:%s V:%s O:%s',
                        self._xkl_record.get_layouts(),
