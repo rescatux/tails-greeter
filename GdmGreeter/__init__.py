@@ -23,6 +23,6 @@
 import GdmGreeter.errors
 
 GLADE_DIR = './glade'
-__appname__ = 'community-greeter'
+__appname__ = 'tails-greeter'
 __version__ = '0.9.4'
 __all__ = GdmGreeter.errors
