@@ -358,8 +358,8 @@ class LocalisationSettings(object):
         return self._locale
 
     def set_locale(self, locale):
-        self.__apply_locale()
         self._locale = locale
+        self.__apply_locale()
         self.__set_default_layout()
 
     def __set_default_locale(self):
