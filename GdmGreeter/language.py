@@ -270,6 +270,10 @@ class LocalisationSettings(object):
         self._variant = ''
         self._options = 'grp:alt_shift_toggle'
 
+        self.set_language('en')
+        self.set_locale('en_US')
+        self.set_layout('us')
+
     def __fill_locales_dict(self, locales):
         """assemble dictionary of language codes to corresponding locales list
         
