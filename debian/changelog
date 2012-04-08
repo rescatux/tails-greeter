@@ -1,3 +1,14 @@
+tails-greeter (0.6.2) squeeze-backports; urgency=low
+
+  * Briefly document modules.
+  * Fix password label alignement.
+  * Add a custom lecture when password is disabled.
+  * Update scripts that source /etc/live/config.d/*
+    to match the new filenames in there.
+  * Fix typos.
+
+ -- Tails developers <tails@boum.org>  Sun, 08 Apr 2012 19:27:35 +0200
+
 tails-greeter (0.6.1) squeeze-backports; urgency=low
 
   * Fix discrepancies between checked images "sensitive" state.
