@@ -6,7 +6,7 @@
 # Input
 # =====
 #
-# * /etc/live/config.d/username : $LIVE_USERNAME
+# * /etc/live/config.d/username.conf : $LIVE_USERNAME
 # * /var/lib/gdm3/tails.locale : $TAILS_LOCALE_NAME, $TAILS_XKBMODEL,
 #   $TAILS_XKBLAYOUT, $TAILS_XKBVARIANT, $TAILS_XKBOPTIONS, $CODESET
 # * /var/lib/gdm3/tails.password : $TAILS_USER_PASSWORD
@@ -56,7 +56,7 @@ grep_n_set() {
 ### Gather general configuration
 
 # Import the name of the live user
-. /etc/live/config.d/username || log_n_exit "Username file not found."
+. /etc/live/config.d/username.conf || log_n_exit "Username file not found."
 if [ -z "${LIVE_USERNAME}" ] ; then
     log_n_exit "Username variable not found."
 fi

@@ -9,7 +9,7 @@ log_and_exit()
 }
 
 # Import the name of the live user
-. /etc/live/config.d/username || log_and_exit "Username file not found."
+. /etc/live/config.d/username.conf || log_and_exit "Username file not found."
 if [ -z "${LIVE_USERNAME}" ] ; then
     log_and_exit "Username variable not found."
 fi
