@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-19 09:00+0100\n"
+"POT-Creation-Date: 2012-04-13 16:41+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../glade/persistencewindow.glade.h:1 ../glade/optionswindow.glade.h:1
-#: ../GdmGreeter/persistencewindow.py:113
+#: ../GdmGreeter/persistencewindow.py:127
 msgid "Login"
 msgstr ""
 
@@ -31,19 +31,27 @@ msgid "Use persistence?"
 msgstr ""
 
 #: ../glade/persistencewindow.glade.h:4
-msgid "Passphrase:"
+msgid "Yes"
 msgstr ""
 
 #: ../glade/persistencewindow.glade.h:5
+msgid "No"
+msgstr ""
+
+#: ../glade/persistencewindow.glade.h:6
+msgid "Passphrase:"
+msgstr ""
+
+#: ../glade/persistencewindow.glade.h:7
 msgid "Read-Only?"
 msgstr ""
 
-#: ../glade/persistencewindow.glade.h:6 ../glade/optionswindow.glade.h:8
+#: ../glade/persistencewindow.glade.h:8 ../glade/optionswindow.glade.h:8
 #: ../glade/langpanel.glade.h:1
 msgid " "
 msgstr ""
 
-#: ../glade/persistencewindow.glade.h:7
+#: ../glade/persistencewindow.glade.h:9
 msgid "More options?"
 msgstr ""
 
@@ -53,9 +61,9 @@ msgstr ""
 
 #: ../glade/optionswindow.glade.h:4
 msgid ""
-"Optionally enter an administration password.\n"
-"Leave this blank for better security unless you need to perform "
-"administration operations."
+"Enter an administration password in case you need to perform administration "
+"tasks.\n"
+"Otherwise it will be disabled for better security."
 msgstr ""
 
 #: ../glade/optionswindow.glade.h:6
@@ -66,7 +74,7 @@ msgstr ""
 msgid "Verify Password:"
 msgstr ""
 
-#: ../glade/langpanel.glade.h:2 ../GdmGreeter/langpanel.py:42
+#: ../glade/langpanel.glade.h:2 ../GdmGreeter/langpanel.py:320
 msgid "Language"
 msgstr ""
 
@@ -105,11 +113,20 @@ msgid ""
 "%(stderr)s"
 msgstr ""
 
-#: ../GdmGreeter/persistencewindow.py:85
+#: ../GdmGreeter/persistencewindow.py:93
 msgid "<i>Wrong passphrase. Please try again.</i>"
 msgstr ""
 
-#: ../GdmGreeter/langpanel.py:124 ../GdmGreeter/langpanel.py:148
-#: ../GdmGreeter/langpanel.py:181
+#: ../GdmGreeter/langpanel.py:224
+#, python-format
+msgid "Current layout: %s (%s)"
+msgstr ""
+
+#: ../GdmGreeter/langpanel.py:227
+#, python-format
+msgid "Current layout: %s"
+msgstr ""
+
+#: ../GdmGreeter/langpanel.py:236 ../GdmGreeter/langpanel.py:288
 msgid "Other..."
 msgstr ""

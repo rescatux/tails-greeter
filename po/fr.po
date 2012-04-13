@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tails-greeter\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-19 09:00+0100\n"
-"PO-Revision-Date: 2012-04-13 16:39+0200\n"
+"POT-Creation-Date: 2012-04-13 16:41+0200\n"
+"PO-Revision-Date: 2012-04-13 16:43+0200\n"
 "Last-Translator: \n"
 "Language-Team:  <govnototalitarizm@gmail.com>\n"
 "Language: \n"
@@ -19,7 +19,7 @@ msgstr ""
 "X-Poedit-Country: FRANCE\n"
 
 #: ../glade/persistencewindow.glade.h:1 ../glade/optionswindow.glade.h:1
-#: ../GdmGreeter/persistencewindow.py:113
+#: ../GdmGreeter/persistencewindow.py:127
 msgid "Login"
 msgstr "Connexion"
 
@@ -32,19 +32,27 @@ msgid "Use persistence?"
 msgstr "Activer la persistence ?"
 
 #: ../glade/persistencewindow.glade.h:4
+msgid "Yes"
+msgstr "Oui"
+
+#: ../glade/persistencewindow.glade.h:5
+msgid "No"
+msgstr "Non"
+
+#: ../glade/persistencewindow.glade.h:6
 msgid "Passphrase:"
 msgstr "Phrase de passe :"
 
-#: ../glade/persistencewindow.glade.h:5
+#: ../glade/persistencewindow.glade.h:7
 msgid "Read-Only?"
 msgstr "Lecture-Seule ?"
 
-#: ../glade/persistencewindow.glade.h:6 ../glade/optionswindow.glade.h:8
+#: ../glade/persistencewindow.glade.h:8 ../glade/optionswindow.glade.h:8
 #: ../glade/langpanel.glade.h:1
 msgid " "
 msgstr " "
 
-#: ../glade/persistencewindow.glade.h:7
+#: ../glade/persistencewindow.glade.h:9
 msgid "More options?"
 msgstr "Plus d'options ?"
 
@@ -54,14 +62,13 @@ msgstr "Mot de passe d'administration"
 
 #: ../glade/optionswindow.glade.h:4
 msgid ""
-"Optionally enter an administration password.\n"
-"Leave this blank for better security unless you need to perform "
-"administration operations."
+"Enter an administration password in case you need to perform administration "
+"tasks.\n"
+"Otherwise it will be disabled for better security."
 msgstr ""
-"Vous pouvez entrer le mot de passe qui sera utilisé pour obtenir les droits "
-"administrateur.\n"
-"Laissez ces champs vides pour plus de sécurité, sauf si vous aurez besoin "
-"d'effectuer des opérations d'administration."
+"Entrez un mot de passe d'administration si vous avez besoin d'effectuer des\n"
+"tâches d'administration.\n"
+"Sinon, il sera désactivé pour une meilleure sécurité."
 
 #: ../glade/optionswindow.glade.h:6
 msgid "Password:"
@@ -71,7 +78,7 @@ msgstr "Mot de passe :"
 msgid "Verify Password:"
 msgstr "Vérification du mot de passe :"
 
-#: ../glade/langpanel.glade.h:2 ../GdmGreeter/langpanel.py:42
+#: ../glade/langpanel.glade.h:2 ../GdmGreeter/langpanel.py:320
 msgid "Language"
 msgstr "Langue"
 
@@ -118,28 +125,20 @@ msgstr ""
 "%(stdout)s\n"
 "%(stderr)s"
 
-#: ../GdmGreeter/persistencewindow.py:85
+#: ../GdmGreeter/persistencewindow.py:93
 msgid "<i>Wrong passphrase. Please try again.</i>"
 msgstr "<i>Mauvaise phrase de passe. Essayez de nouveau.</i>"
 
-#: ../GdmGreeter/langpanel.py:124 ../GdmGreeter/langpanel.py:148
-#: ../GdmGreeter/langpanel.py:181
+#: ../GdmGreeter/langpanel.py:224
+#, python-format
+msgid "Current layout: %s (%s)"
+msgstr "Agencement actuel: %s (%s)"
+
+#: ../GdmGreeter/langpanel.py:227
+#, python-format
+msgid "Current layout: %s"
+msgstr "Agencement actuel: %s"
+
+#: ../GdmGreeter/langpanel.py:236 ../GdmGreeter/langpanel.py:288
 msgid "Other..."
 msgstr "Autre..."
-
-#~ msgid "Current layout: %s (%s)"
-#~ msgstr "Agencement actuel: %s (%s)"
-
-#~ msgid "Current layout: %s"
-#~ msgstr "Agencement actuel: %s"
-
-#~ msgid "Password mismatch!"
-#~ msgstr "Les mots de passe ne correspondent pas !"
-
-#, fuzzy
-#~ msgid ""
-#~ "Please select language for TAILS.\n"
-#~ "NOTE: the selection cannot be changed once you press the button."
-#~ msgstr ""
-#~ "Selectionnez la langue pour TAILS.\n"
-#~ "Attention: Ce choix ne peut pas être changé une fois confirmé."
