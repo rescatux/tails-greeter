@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: tails-greeter\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-03-19 09:00+0100\n"
-"PO-Revision-Date: 2012-03-16 11:46+0100\n"
+"PO-Revision-Date: 2012-04-13 16:39+0200\n"
 "Last-Translator: \n"
 "Language-Team:  <govnototalitarizm@gmail.com>\n"
 "Language: \n"
@@ -88,33 +88,33 @@ msgid "<i>Passwords do not match</i>"
 msgstr "<i>Les mots de passe ne concordent pas</i>"
 
 #: ../GdmGreeter/persistence.py:59
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
 msgstr ""
-"échec de live-persist avec ce code de retour %(returncode)s:\n"
+"échec de live-persist avec le code de retour %(returncode)s :\n"
 "%(stderr)s"
 
 #: ../GdmGreeter/persistence.py:99
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
 msgstr ""
-"échec de cryptsetup avec ce code de retour %(returncode)s:\n"
+"échec de cryptsetup avec le code de retour %(returncode)s :\n"
 "%(stdout)s\n"
 "%(stderr)s"
 
 #: ../GdmGreeter/persistence.py:124
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
 msgstr ""
-"échec de live-persist avec ce code de retour %(returncode)s:\n"
+"échec de live-persist avec le code de retour %(returncode)s :\n"
 "%(stdout)s\n"
 "%(stderr)s"
 
