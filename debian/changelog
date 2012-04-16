@@ -1,3 +1,9 @@
+tails-greeter (0.6.3) squeeze-backports; urgency=low
+
+  * PO, POT and translation updates.
+
+ -- Tails developers <tails@boum.org>  Mon, 16 Apr 2012 17:41:47 +0200
+
 tails-greeter (0.6.2) squeeze-backports; urgency=low
 
   * Briefly document modules.
