@@ -1,3 +1,14 @@
+tails-greeter (0.7~1.gbp0da158) UNRELEASED; urgency=low
+
+  ** SNAPSHOT build @0da15831332ea1fe56dddfe867a7c0d5a23abf4d **
+  
+  * Merge feature/refactor_languages:
+    - Move localization model code to language.py.
+    - Support selecting a keyboard layout independantly from
+      the chosen locale.
+
+ -- Tails developers <tails@boum.org>  Sun, 29 Apr 2012 19:49:41 +0200
+
 tails-greeter (0.6.3) squeeze-backports; urgency=low
 
   * PO, POT and translation updates.
