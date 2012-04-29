@@ -65,7 +65,6 @@ class CommunityGreeterApp(GdmGreeterService):
         GdmGreeterService.__init__(self)
         self.scr = gdk.display_get_default().get_screen(self.display.number)
         self.language = 'en_US.UTF-8'
-        self.locale_output_path = '/var/lib/gdm3/tails.locale'
         self.session = None
         self.forced = False
         self.layout = None
@@ -75,6 +74,7 @@ class CommunityGreeterApp(GdmGreeterService):
         self.translated = False
         self.persistence = GdmGreeter.persistence.PersistenceSettings()
         self._loaded_windows = []
+        self.localisationsettings = GdmGreeter.language.LocalisationSettings(self)
         self.langpanel = self.load_window(LangPanel, self)
         self.persistencewindow = self.load_window(PersistenceWindow, self)
         self.optionswindow = self.load_window(OptionsWindow, self)
@@ -90,10 +90,12 @@ class CommunityGreeterApp(GdmGreeterService):
 
     def translate_to(self, lang):
         """Translate all windows to target language"""
+        logging.debug("translating to %s" % lang)
         if self.ready:
             self.language = lang
         for window in self._loaded_windows:
             if isinstance(window, TranslatableWindow):
+                logging.debug("translating %s to %s" % (window, lang))
                 window.translate_to(lang)
 
     def login(self):
@@ -163,22 +165,7 @@ class CommunityGreeterApp(GdmGreeterService):
     def FinishProcess(self):
         """We're done, quit gtk app"""
         del self.rootaccess
-        # XXX: also use a model
-        if self.langpanel:
-            if self.langpanel.language_code:
-                # xklavier needs the list in "last item prevails" order.
-                # Other parts of the system, such as setupcon, need the contrary.
-                layout_list = self.langpanel.layout_list[:]
-                layout_list.reverse()
-                variant_list = self.langpanel.variant_list[:]
-                variant_list.reverse()
-                with open(self.locale_output_path, 'w') as f:
-                    os.chmod(self.locale_output_path, 0o600)
-                    f.write('TAILS_LOCALE_NAME=%s\n' % self.langpanel.language_code)
-                    f.write('TAILS_XKBMODEL=%s\n' % 'pc105') # use default value from /etc/default/keyboard
-                    f.write('TAILS_XKBLAYOUT=%s\n' % ','.join(layout_list))
-                    f.write('TAILS_XKBVARIANT=%s\n' % ','.join(variant_list))
-                    f.write('TAILS_XKBOPTIONS=%s\n' % self.langpanel.options)
+        del self.localisationsettings
         logging.info("Finished.")
         gtk.main_quit()
 
