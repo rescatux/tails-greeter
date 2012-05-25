@@ -39,6 +39,7 @@ class OptionsWindow(TranslatableWindow):
         self.entry_password2 = builder.get_object("password_entry2")
         self.warning_label = builder.get_object("warning_label")
         self.warning_area = builder.get_object("warning_area")
+        self.camouflage_checkbox = builder.get_object("camouflage_checkbox")
 
         TranslatableWindow.__init__(self, builder.get_object("options_dialog"))
         self.window.set_visible(False)
@@ -47,20 +48,37 @@ class OptionsWindow(TranslatableWindow):
         self.entry_password.set_visibility(False)
         self.entry_password2.set_visibility(False)
 
-    def save_password(self):
-        """obtain, verify and store root access password"""
+    def set_password(self):
+        """Set root access password"""
+        password = self.entry_password.get_text()
+        if password:
+            self.greeter.rootaccess.password = password
+
+    def set_camouflage(self):
+        """Set camouflage theme"""
+        if self.camouflage_checkbox.get_active():
+            self.greeter.camouflage.os = 'winxp'
+
+    def validate_options(self):
+        """Validate the selected options"""
         auth_password = self.entry_password.get_text()
         test_password = self.entry_password2.get_text()
-        if test_password == auth_password:
-            self.greeter.login()
-            self.greeter.rootaccess.password = self.entry_password.get_text()
-        else:
+        passwords_match = test_password == auth_password
+        if not passwords_match:
             self.warning_label.set_markup(_('<i>Passwords do not match</i>'))
             self.warning_area.show()
+        return passwords_match
+
+    def set_options_and_login(self):
+        """Activate the selected options if they are valid"""
+        if self.validate_options():
+            self.greeter.login()
+            self.set_password()
+            self.set_camouflage()
 
     def cb_login_clicked(self, widget, data=None):
         """Login button click handler"""
-        self.save_password()
+        self.set_options_and_login()
 
     def key_press_event_cb(self, widget, event=None):
         """Handle key press"""
@@ -69,7 +87,7 @@ class OptionsWindow(TranslatableWindow):
                 if self.entry_password.is_focus():
                     self.entry_password2.grab_focus()
                 else:
-                    self.save_password()
+                    self.set_options_and_login()
 
     def delete_event_cb(self, widget, event=None):
         """Ignore delete event (Esc)"""

@@ -44,6 +44,7 @@ from pipes import quote
 
 import GdmGreeter.config
 import GdmGreeter.rootaccess
+import GdmGreeter.camouflage
 import GdmGreeter.persistence
 
 from GdmGreeter.services import GdmGreeterService
@@ -79,6 +80,7 @@ class CommunityGreeterApp(GdmGreeterService):
         self.persistencewindow = self.load_window(PersistenceWindow, self)
         self.optionswindow = self.load_window(OptionsWindow, self)
         self.rootaccess = GdmGreeter.rootaccess.RootAccessSettings()
+        self.camouflage = GdmGreeter.camouflage.CamouflageSettings()
 
     def load_window(self, window_class, *args, **kwargs):
         """When loading a window, also translate it"""
@@ -164,6 +166,7 @@ class CommunityGreeterApp(GdmGreeterService):
 
     def FinishProcess(self):
         """We're done, quit gtk app"""
+        del self.camouflage
         del self.rootaccess
         del self.localisationsettings
         logging.info("Finished.")

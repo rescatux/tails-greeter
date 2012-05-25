@@ -11,6 +11,7 @@
 #   $TAILS_XKBLAYOUT, $TAILS_XKBVARIANT, $TAILS_XKBOPTIONS, $CODESET
 # * /var/lib/gdm3/tails.password : $TAILS_USER_PASSWORD
 # * /var/lib/gdm3/tails.persistence : $TAILS_PERSISTENCE_ENABLED
+# * /var/lib/gdm3/tails.camouflage : $TAILS_CAMOUFLAGE_OS
 
 # For whatever reason, /usr/sbin (needed by at least chpasswd)
 # is not in our PATH
@@ -65,6 +66,17 @@ fi
 ### (re-)start services that need to wait for post-login time
 service network-manager restart
 
+### Camouflage
+
+CAMOUFLAGE_SETTINGS="/var/lib/gdm3/tails.camouflage"
+if [ -r "${CAMOUFLAGE_SETTINGS}" ] ; then
+    . "${CAMOUFLAGE_SETTINGS}"
+    case "${TAILS_CAMOUFLAGE_OS}" in
+	winxp)
+	    /usr/bin/activate-winxp-theme
+	    ;;
+    esac
+fi
 
 ### Localization
 

@@ -6,6 +6,7 @@ GdmGreeter/__init__.py
 GdmGreeter/services.py
 GdmGreeter/optionswindow.py
 GdmGreeter/rootaccess.py
+GdmGreeter/camouflage.py
 GdmGreeter/persistence.py
 GdmGreeter/persistencewindow.py
 GdmGreeter/optionswindow.py
