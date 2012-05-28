@@ -1,13 +1,14 @@
-tails-greeter (0.7~1.gbp0da158) UNRELEASED; urgency=low
+tails-greeter (0.7~2.gbpd0c421) UNRELEASED; urgency=low
 
-  ** SNAPSHOT build @0da15831332ea1fe56dddfe867a7c0d5a23abf4d **
-  
+  ** SNAPSHOT build @d0c42195c839c804461157dc89ab475ebed0c94a **
+
   * Merge feature/refactor_languages:
     - Move localization model code to language.py.
     - Support selecting a keyboard layout independantly from
       the chosen locale.
+  * Add a checkbox for enabling Windows XP camouflage.
 
- -- Tails developers <tails@boum.org>  Sun, 29 Apr 2012 19:49:41 +0200
+ -- Tails developers <tails@boum.org>  Mon, 28 May 2012 12:00:00 +0000
 
 tails-greeter (0.6.3) squeeze-backports; urgency=low
 
