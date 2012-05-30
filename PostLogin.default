@@ -73,7 +73,7 @@ if [ -r "${CAMOUFLAGE_SETTINGS}" ] ; then
     . "${CAMOUFLAGE_SETTINGS}"
     case "${TAILS_CAMOUFLAGE_OS}" in
 	winxp)
-	    /usr/bin/activate-winxp-theme
+	    /usr/local/bin/tails-activate-winxp-theme
 	    ;;
     esac
 fi
