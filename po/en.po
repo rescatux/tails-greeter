@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tails-greeter\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-13 16:41+0200\n"
+"POT-Creation-Date: 2012-06-01 15:10+0200\n"
 "PO-Revision-Date: 2011-04-22 17:42+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: English <en@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "X-Generator: Launchpad (build 12758)\n"
 
 #: ../glade/persistencewindow.glade.h:1 ../glade/optionswindow.glade.h:1
-#: ../GdmGreeter/persistencewindow.py:127
+#: ../GdmGreeter/persistencewindow.py:128
 msgid "Login"
 msgstr ""
 
@@ -73,7 +73,21 @@ msgstr ""
 msgid "Verify Password:"
 msgstr ""
 
-#: ../glade/langpanel.glade.h:2 ../GdmGreeter/langpanel.py:320
+#: ../glade/optionswindow.glade.h:9
+msgid "Windows Camouflage"
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:10
+msgid ""
+"This option makes Tails look more like Microsoft Windows XP. This may be "
+"useful in public places in order to avoid attracting suspicion."
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:11
+msgid "Activate Microsoft Windows XP Camouflage"
+msgstr ""
+
+#: ../glade/langpanel.glade.h:2 ../GdmGreeter/langpanel.py:42
 msgid "Language"
 msgstr ""
 
@@ -85,7 +99,7 @@ msgstr ""
 msgid "Layout"
 msgstr ""
 
-#: ../GdmGreeter/optionswindow.py:58
+#: ../GdmGreeter/optionswindow.py:68
 msgid "<i>Passwords do not match</i>"
 msgstr ""
 
@@ -112,20 +126,11 @@ msgid ""
 "%(stderr)s"
 msgstr ""
 
-#: ../GdmGreeter/persistencewindow.py:93
+#: ../GdmGreeter/persistencewindow.py:94
 msgid "<i>Wrong passphrase. Please try again.</i>"
 msgstr ""
 
-#: ../GdmGreeter/langpanel.py:224
-#, python-format
-msgid "Current layout: %s (%s)"
-msgstr ""
-
-#: ../GdmGreeter/langpanel.py:227
-#, python-format
-msgid "Current layout: %s"
-msgstr ""
-
-#: ../GdmGreeter/langpanel.py:236 ../GdmGreeter/langpanel.py:288
+#: ../GdmGreeter/langpanel.py:124 ../GdmGreeter/langpanel.py:148
+#: ../GdmGreeter/langpanel.py:181
 msgid "Other..."
 msgstr ""
