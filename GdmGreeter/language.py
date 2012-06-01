@@ -109,12 +109,20 @@ def __fill_layouts_dict():
 
     layouts_dict = {}
 
-    def layout_iter(registry, item, layouts):
-        layout_code = item.get_name()
-        if layout_code not in layouts:
-            layouts_dict[layout_code] = item.get_description()
+    def variant_iter(registry, variant, layout):
+        code = '%s/%s' % (layout.get_name(), variant.get_name())
+        description = '%s - %s' % (layout.get_description(), variant.get_description())
+        if code not in layouts_dict:
+            layouts_dict[code] = description
 
-    _xkl_registry.foreach_layout(layout_iter, layouts_dict)
+    def layout_iter(registry, layout, _):
+        code = layout.get_name()
+        description = layout.get_description()
+        if code not in layouts_dict:
+            layouts_dict[code] = description
+	_xkl_registry.foreach_layout_variant(code, variant_iter, layout)
+
+    _xkl_registry.foreach_layout(layout_iter, None)
     return layouts_dict
 
 def language_from_locale(locale):
@@ -442,7 +450,13 @@ class LocalisationSettings(object):
         return self._layout
 
     def set_layout(self, layout):
+        try:
+            layout, variant = layout.split('/')
+        except ValueError:
+            layout = layout
+            variant = ''
         self._layout = layout
+        self._variant = variant
         self.__apply_layout()
 
     def __set_default_layout(self):
