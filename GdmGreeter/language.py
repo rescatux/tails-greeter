@@ -296,7 +296,7 @@ class LocalisationSettings(object):
                 locales_dict[lang].append(locale)
         return locales_dict
 
-    def __del__(self):
+    def __apply_layout_to_upcoming_session(self):
         self._greeter.SelectLayout(self._layout)
         if self._layout != 'us':
             layout = '%s,us' % self._layout
@@ -457,7 +457,8 @@ class LocalisationSettings(object):
             variant = ''
         self._layout = layout
         self._variant = variant
-        self.__apply_layout()
+        self.__apply_layout_to_current_screen()
+        self.__apply_layout_to_upcoming_session()
 
     def __set_default_layout(self):
         default_layout = False
@@ -481,7 +482,7 @@ class LocalisationSettings(object):
                 default_layout = 'us'
         self.set_layout(default_layout)            
 
-    def __apply_layout(self):
+    def __apply_layout_to_current_screen(self):
         logging.debug("layout=%s" % self._layout)
 
         if self._layout != 'us':

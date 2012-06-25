@@ -33,12 +33,25 @@ class RootAccessSettings(object):
     def __init__(self):
         # Root password
         self.password = None
+        # XXX: this should read the content of the setting file
 
-    def __del__(self):
-        if self.password:
+    @property
+    def password(self):
+        return self._password
+
+    @password.setter
+    def password(self, password):
+        self._password = password
+        if password:
             with open(GdmGreeter.config.rootpassword_output_path, 'w') as f:
                 os.chmod(GdmGreeter.config.rootpassword_output_path, 0o600)
                 f.write('TAILS_USER_PASSWORD=%s\n' % pipes.quote(self.password))
                 logging.debug('password written to %s',
                               GdmGreeter.config.rootpassword_output_path)
-
+        else:
+            try:
+                os.unlink(GdmGreeter.config.rootpassword_output_path)
+                logging.debug('removed %s', GdmGreeter.config.rootpassword_output_path)
+            except OSError:
+                # configuration file does not exist
+                pass

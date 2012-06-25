@@ -31,12 +31,26 @@ class CamouflageSettings(object):
     def __init__(self):
         # Which OS to impersonate
         self.os = None
+        # XXX: this should read the content of the setting file
 
-    def __del__(self):
+    @property
+    def os(self):
+        return self._os
+
+    @os.setter
+    def os(self, new_os):
         camouflage_settings_file = GdmGreeter.config.camouflage_settings
-        if self.os:
+        self._os = new_os
+        if new_os:
             with open(camouflage_settings_file, 'w') as f:
                 os.chmod(camouflage_settings_file, 0o600)
                 f.write('TAILS_CAMOUFLAGE_OS=%s\n' % pipes.quote(self.os))
                 logging.debug('camouflage setting written to %s',
                               camouflage_settings_file)
+        else:
+            try:
+                os.unlink(camouflage_settings_file)
+                logging.debug('removed %s', camouflage_settings_file)
+            except OSError:
+                # configuration file does not exist
+                pass
