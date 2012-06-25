@@ -299,8 +299,8 @@ class LocalisationSettings(object):
     def __del__(self):
         self._greeter.SelectLayout(self._layout)
         if self._layout != 'us':
-            layouts = '%s,us' % self._layout
-            variants = '%s,' % self._variant
+            layout = '%s,us' % self._layout
+            variant = '%s,' % self._variant
         else:
             layout = self._layout
             variant = self._variant
@@ -308,8 +308,8 @@ class LocalisationSettings(object):
             os.chmod(GdmGreeter.config.locale_output_path, 0o600)
             f.write('TAILS_LOCALE_NAME=%s\n' % self._locale)
             f.write('TAILS_XKBMODEL=%s\n' % 'pc105') # use default value from /etc/default/keyboard
-            f.write('TAILS_XKBLAYOUT=%s\n' % layouts)
-            f.write('TAILS_XKBVARIANT=%s\n' % variants)
+            f.write('TAILS_XKBLAYOUT=%s\n' % layout)
+            f.write('TAILS_XKBVARIANT=%s\n' % variant)
             f.write('TAILS_XKBOPTIONS=%s\n' % self._options)
 
     # LANGUAGES
