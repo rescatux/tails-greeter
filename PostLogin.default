@@ -40,19 +40,18 @@ force_set() {
 grep_n_set() {
     FCHK=yes
     grep -qs "$1" "$2" || FCHK=no
-    if [ "$4" ] ; then
-        if [ "$FCHK" eq 'no' ] ; then
+    if [ -n "$4" ] ; then
+        if [ "$FCHK" = "no" ] ; then
 	    echo "$3" >> "$2"
 	fi
     else
-	if [ "$FCHK" eq 'no' ] ; then
+	if [ "$FCHK" = "no" ] ; then
 	    echo "$1=$3" >> "$2"
 	else
 	    force_set "$1" "$2" "$3"
 	fi
     fi
 }
-
 
 ### Gather general configuration
 
