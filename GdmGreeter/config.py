@@ -23,6 +23,9 @@
 LPASSWORD = 'live'
 LUSER = 'amnesia'
 
+# file where supported language codes (such as en_US) are saved at Tails build time
+language_codes_path = '/usr/share/tails-greeter/language_codes'
+
 # locales path
 locales_path = '/usr/share/locale/'
 

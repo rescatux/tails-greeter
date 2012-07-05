@@ -205,9 +205,9 @@ def layouts_with_names(layouts, locale='C'):
     return layouts_with_names
 
 def __get_langcodes():
-    p = Popen(["tails-lang-helper"], stdout=PIPE)
-    langcodes = str.split(p.communicate()[0])
-    logging.debug('%s languages found: helper returned %s', len(langcodes), p.returncode)
+    with open(GdmGreeter.config.language_codes_path, 'r') as f:
+        langcodes = [ line.rstrip('\n') for line in f.readlines() ]
+    logging.debug('%s languages found', len(langcodes))
     return langcodes
 
 class TranslatableWindow(object):
