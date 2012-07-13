@@ -1,3 +1,15 @@
+tails-greeter (0.7.2) squeeze-backports; urgency=low
+
+  * Use correct test operators.
+  * Generate language codes of available locales at package build time.
+  * Read list of language codes from where we have saved it
+    at package build time.
+  * Drop tails-lang-helper, not used anymore.
+  * Do not compile locales at login time anymore.
+    Tails now ships locales-all.
+
+ -- Tails developers <tails@boum.org>  Fri, 13 Jul 2012 13:51:34 -0600
+
 tails-greeter (0.7.1) squeeze-backports; urgency=low
 
   * Fix variable names in LocalisationSettings.__del__.
