@@ -85,8 +85,6 @@ if [ -z "${TAILS_LOCALE_NAME}" ] ; then
     log_n_exit "Locale variable not found."
 fi
 
-localedef -c --quiet -f UTF-8 -i "${TAILS_LOCALE_NAME}" "${TAILS_LOCALE_NAME}".UTF-8
-
 # Localize console
 grep_n_set "XKBMODEL" ${KBDSET} ${TAILS_XKBMODEL}
 grep_n_set "XKBLAYOUT" ${KBDSET} ${TAILS_XKBLAYOUT}
