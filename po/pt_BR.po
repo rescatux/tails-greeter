@@ -1,0 +1,194 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: tails-greeter\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-06-01 15:10+0200\n"
+"PO-Revision-Date: 2012-08-10 18:43-0300\n"
+"Last-Translator: Tails Developers <amnesia@boum.org>\n"
+"Language-Team:  <govnototalitarizm@gmail.com>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Russian\n"
+"X-Poedit-Country: RUSSIAN FEDERATION\n"
+
+#: ../glade/persistencewindow.glade.h:1
+#: ../glade/optionswindow.glade.h:1
+#: ../GdmGreeter/persistencewindow.py:128
+msgid "Login"
+msgstr "Login"
+
+#: ../glade/persistencewindow.glade.h:2
+#: ../glade/optionswindow.glade.h:2
+msgid "Welcome to Tails"
+msgstr "Bem vindo/a ao Tails"
+
+#: ../glade/persistencewindow.glade.h:3
+msgid "Use persistence?"
+msgstr "Usar persistência?"
+
+#: ../glade/persistencewindow.glade.h:4
+msgid "Yes"
+msgstr "Sim"
+
+#: ../glade/persistencewindow.glade.h:5
+msgid "No"
+msgstr "Não"
+
+#: ../glade/persistencewindow.glade.h:6
+msgid "Passphrase:"
+msgstr "Senha:"
+
+#: ../glade/persistencewindow.glade.h:7
+msgid "Read-Only?"
+msgstr "Somente-Leitura?"
+
+#: ../glade/persistencewindow.glade.h:8
+#: ../glade/optionswindow.glade.h:8
+#: ../glade/langpanel.glade.h:1
+msgid " "
+msgstr ""
+
+#: ../glade/persistencewindow.glade.h:9
+msgid "More options?"
+msgstr "Mais opções?"
+
+#: ../glade/optionswindow.glade.h:3
+msgid "Administration password"
+msgstr "Senha de administração"
+
+#: ../glade/optionswindow.glade.h:4
+msgid ""
+"Enter an administration password in case you need to perform administration tasks.\n"
+"Otherwise it will be disabled for better security."
+msgstr ""
+"Preencha uma senha de administração para o caso de precisar realizar tarefas administrativas.\n"
+"Caso você não preencha, a senha de administração será desabilitada para melhor segurança."
+
+#: ../glade/optionswindow.glade.h:6
+msgid "Password:"
+msgstr "Senha:"
+
+#: ../glade/optionswindow.glade.h:7
+msgid "Verify Password:"
+msgstr "Verifique a senha:"
+
+#: ../glade/optionswindow.glade.h:9
+msgid "Windows Camouflage"
+msgstr "Camuflagem Windows"
+
+#: ../glade/optionswindow.glade.h:10
+msgid "This option makes Tails look more like Microsoft Windows XP. This may be useful in public places in order to avoid attracting suspicion."
+msgstr "Esta opção torna o Tails mais parecido visualmente com o Microsoft Windows XP. Isto pode ser útil em locais públicos para evitar a atração de suspeitas."
+
+#: ../glade/optionswindow.glade.h:11
+msgid "Activate Microsoft Windows XP Camouflage"
+msgstr "Ativar a Camuflagem Windows XP."
+
+#: ../glade/langpanel.glade.h:2
+#: ../GdmGreeter/langpanel.py:42
+msgid "Language"
+msgstr "Idioma"
+
+#: ../glade/langpanel.glade.h:3
+msgid "Locale"
+msgstr "Locale"
+
+#: ../glade/langpanel.glade.h:4
+msgid "Layout"
+msgstr "Layout"
+
+#: ../GdmGreeter/optionswindow.py:68
+msgid "<i>Passwords do not match</i>"
+msgstr "<i>As senhas não correspondem</i>"
+
+#: ../GdmGreeter/persistence.py:59
+#, python-format
+msgid ""
+"live-persist failed with return code %(returncode)s:\n"
+"%(stderr)s"
+msgstr ""
+"O live-persist falhou com código de retorno %(returncode)s:\n"
+"%(stderr)s"
+
+#: ../GdmGreeter/persistence.py:99
+#, python-format
+msgid ""
+"cryptsetup failed with return code %(returncode)s:\n"
+"%(stdout)s\n"
+"%(stderr)s"
+msgstr ""
+"O cryptsetup falhou com código de retorno %(returncode)s:\n"
+"%(stdout)s\n"
+"%(stderr)s"
+
+#: ../GdmGreeter/persistence.py:124
+#, python-format
+msgid ""
+"live-persist failed with return code %(returncode)s:\n"
+"%(stdout)s\n"
+"%(stderr)s"
+msgstr ""
+"O live-persist falhou com código de retorno %(returncode)s:\n"
+"%(stdout)s\n"
+"%(stderr)s"
+
+#: ../GdmGreeter/persistencewindow.py:94
+msgid "<i>Wrong passphrase. Please try again.</i>"
+msgstr "<i>Senha incorreta. Por favor tente novamente</i>"
+
+#: ../GdmGreeter/langpanel.py:124
+#: ../GdmGreeter/langpanel.py:148
+#: ../GdmGreeter/langpanel.py:181
+msgid "Other..."
+msgstr "Outro..."
+
+#, fuzzy
+#~ msgid "Current layout: %s (%s)"
+#~ msgstr "Текущая раскладка: [%s (%s)]"
+
+#, fuzzy
+#~ msgid "Current layout: %s"
+#~ msgstr "Текущая раскладка: [%s]"
+#~ msgid ""
+#~ "Enter here a password that will be asked to grant administrator rights. \n"
+#~ "Leave this field blank to disable administrator rights."
+#~ msgstr ""
+#~ "Введите пароль, который будет запрошен для предоставления прав "
+#~ "администратора.\n"
+#~ "Оставьте поле пустым для отключения прав администратора."
+#~ msgid "Current layout: [US]"
+#~ msgstr "Текущая раскладка: [US]"
+#~ msgid "Current layout: US"
+#~ msgstr "Текущая раскладка: US"
+#~ msgid "Type into this text-box to test keyboard layout."
+#~ msgstr "В этом поле ввода можно опробовать новую раскладку."
+#~ msgid "Variant"
+#~ msgstr "Вариант"
+#~ msgid "Password mismatch!"
+#~ msgstr "Пароли не совпадают!"
+#~ msgid "Gnome session default layout:"
+#~ msgstr "Раскладка для сессии gnome:"
+#~ msgid ""
+#~ "Please select language for TAILS.\n"
+#~ "NOTE: the selection cannot be changed once you press the button."
+#~ msgstr ""
+#~ "Выберите язык для TAILS.\n"
+#~ "ВНИМАНИЕ: невозможно изменить выбор после нажатия кнопки."
+#~ msgid "<big><b>Keyboard layout</b></big>"
+#~ msgstr "<big><b>Раскладка клавиатуры</b></big>"
+#~ msgid "Choose your own:"
+#~ msgstr "Выберите самостоятельно:"
+#~ msgid "Suggested option:"
+#~ msgstr "Предлагаемые варианты:"
+#~ msgid "Which layout is most similar to your keyboard?"
+#~ msgstr "Какая раскладка наиболее близка к Вашей клавиатуре?"
+#~ msgid "button"
+#~ msgstr "Далее"
+
