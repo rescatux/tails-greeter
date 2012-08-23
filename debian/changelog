@@ -1,3 +1,11 @@
+tails-greeter (0.7.3) squeeze-backports; urgency=low
+
+  * Import pt_BR translation.
+  * Let langpanel usable during option selection stage
+  * Print less debugging messages by default
+
+ -- Tails developers <tails@boum.org>  Thu, 23 Aug 2012 20:10:44 +0200
+
 tails-greeter (0.7.2) squeeze-backports; urgency=low
 
   * Use correct test operators.
