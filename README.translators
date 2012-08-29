@@ -9,6 +9,12 @@ CONTENTS
 - Man page translation
 
 
+INSTALL DEPENDENCIES
+====================
+
+    sudo apt-get install python-distutils-extra
+
+
 CREATING A NEW TRANSLATION
 ==========================
 
