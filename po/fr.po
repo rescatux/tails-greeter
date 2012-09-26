@@ -80,17 +80,19 @@ msgstr "Vérification du mot de passe :"
 
 #: ../glade/optionswindow.glade.h:9
 msgid "Windows Camouflage"
-msgstr ""
+msgstr "Windows Camouflage"
 
 #: ../glade/optionswindow.glade.h:10
 msgid ""
 "This option makes Tails look more like Microsoft Windows XP. This may be "
 "useful in public places in order to avoid attracting suspicion."
 msgstr ""
+"Cette option donne à Tails les apparences de Microsoft Windows XP."
+"Cela peut être utile afin de ne pas attirer l'attention dans un lieu public."
 
 #: ../glade/optionswindow.glade.h:11
 msgid "Activate Microsoft Windows XP Camouflage"
-msgstr ""
+msgstr "Activer le camouflage Microsoft Windows XP"
 
 #: ../glade/langpanel.glade.h:2 ../GdmGreeter/langpanel.py:42
 msgid "Language"
