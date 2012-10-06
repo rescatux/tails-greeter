@@ -20,6 +20,8 @@ CREATING A NEW TRANSLATION
 
 1. Generate an uptodate template of translatable strings
 
+This requires the installation of python-distutils-extra.
+
 In sources root, execute: 
 
     ./setup.py build_i18n
@@ -45,6 +47,8 @@ UPDATE AN EXISTING TRANSLATION
 ==============================
 
 1. Generate an uptodate template of translatable strings
+
+This requires the installation of python-distutils-extra.
 
 In sources root, execute:
 
