@@ -1,0 +1,137 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+#   <viktor.varga@gmail.com>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: The Tor Project\n"
+"Report-Msgid-Bugs-To: https://trac.torproject.org/projects/tor\n"
+"POT-Creation-Date: 2012-06-01 15:10+0200\n"
+"PO-Revision-Date: 2012-10-07 17:05+0000\n"
+"Last-Translator: vargaviktor <viktor.varga@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: hu\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../glade/persistencewindow.glade.h:1 ../glade/optionswindow.glade.h:1
+#: ../GdmGreeter/persistencewindow.py:128
+msgid "Login"
+msgstr "Belépés"
+
+#: ../glade/persistencewindow.glade.h:2 ../glade/optionswindow.glade.h:2
+msgid "Welcome to Tails"
+msgstr "Köszönjük a Trails-ben"
+
+#: ../glade/persistencewindow.glade.h:3
+msgid "Use persistence?"
+msgstr "Perzisztencia használata?"
+
+#: ../glade/persistencewindow.glade.h:4
+msgid "Yes"
+msgstr "Igen"
+
+#: ../glade/persistencewindow.glade.h:5
+msgid "No"
+msgstr "Nem"
+
+#: ../glade/persistencewindow.glade.h:6
+msgid "Passphrase:"
+msgstr "Jelszó:"
+
+#: ../glade/persistencewindow.glade.h:7
+msgid "Read-Only?"
+msgstr "Csak olvasható?"
+
+#: ../glade/persistencewindow.glade.h:8 ../glade/optionswindow.glade.h:8
+#: ../glade/langpanel.glade.h:1
+msgid " "
+msgstr " "
+
+#: ../glade/persistencewindow.glade.h:9
+msgid "More options?"
+msgstr "További beállítások?"
+
+#: ../glade/optionswindow.glade.h:3
+msgid "Administration password"
+msgstr "Adminisztrátori jelszó"
+
+#: ../glade/optionswindow.glade.h:4
+msgid ""
+"Enter an administration password in case you need to perform administration tasks.\n"
+"Otherwise it will be disabled for better security."
+msgstr "Adjon meg egy adminisztrátori jelszót az adminisztrációs feladatokhoz.\n\nEgyébként kikapcsolt, a magasabb biztonság érdekében."
+
+#: ../glade/optionswindow.glade.h:6
+msgid "Password:"
+msgstr "Jelszó:"
+
+#: ../glade/optionswindow.glade.h:7
+msgid "Verify Password:"
+msgstr "Jelszó ellenőrzése:"
+
+#: ../glade/optionswindow.glade.h:9
+msgid "Windows Camouflage"
+msgstr "Windows álcázás"
+
+#: ../glade/optionswindow.glade.h:10
+msgid ""
+"This option makes Tails look more like Microsoft Windows XP. This may be "
+"useful in public places in order to avoid attracting suspicion."
+msgstr "Ez az opció  a Tails-t a Microsoft Windows XP-hez hasonlóvá teszi. Ez fontos lehet publikus helyeken, ahol figyelmet kelthetünk fel."
+
+#: ../glade/optionswindow.glade.h:11
+msgid "Activate Microsoft Windows XP Camouflage"
+msgstr "Microsoft Windows XP álcázás bekapcsolása"
+
+#: ../glade/langpanel.glade.h:2 ../GdmGreeter/langpanel.py:42
+msgid "Language"
+msgstr "Nyelv"
+
+#: ../glade/langpanel.glade.h:3
+msgid "Locale"
+msgstr "Lokáció"
+
+#: ../glade/langpanel.glade.h:4
+msgid "Layout"
+msgstr "Kiosztás"
+
+#: ../GdmGreeter/optionswindow.py:68
+msgid "<i>Passwords do not match</i>"
+msgstr "<i>A jelszavak nem egyeznek</i>"
+
+#: ../GdmGreeter/persistence.py:59
+#, python-format
+msgid ""
+"live-persist failed with return code %(returncode)s:\n"
+"%(stderr)s"
+msgstr "live-persist sikertelen a következő visszatérési kóddal: %(returncode)s:\n%(stderr)s"
+
+#: ../GdmGreeter/persistence.py:99
+#, python-format
+msgid ""
+"cryptsetup failed with return code %(returncode)s:\n"
+"%(stdout)s\n"
+"%(stderr)s"
+msgstr "cryptsetup sikertelen a következő visszatérési kóddal:  %(returncode)s:\n%(stdout)s\n%(stderr)s"
+
+#: ../GdmGreeter/persistence.py:124
+#, python-format
+msgid ""
+"live-persist failed with return code %(returncode)s:\n"
+"%(stdout)s\n"
+"%(stderr)s"
+msgstr "live-persist sikertelen a következő visszatérési kóddal:  %(returncode)s:\n%(stdout)s\n%(stderr)s"
+
+#: ../GdmGreeter/persistencewindow.py:94
+msgid "<i>Wrong passphrase. Please try again.</i>"
+msgstr "<i>Hibás jelszó. Próbálja meg újra.</i>"
+
+#: ../GdmGreeter/langpanel.py:124 ../GdmGreeter/langpanel.py:148
+#: ../GdmGreeter/langpanel.py:181
+msgid "Other..."
+msgstr "Egyéb..."
