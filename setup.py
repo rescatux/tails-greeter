@@ -24,7 +24,7 @@ from DistUtilsExtra.command import *
 from fnmatch import fnmatch
 
 __appname__ = 'tails-greeter'
-__version__ = '0.2.0'
+__version__ = '0.7.3'
 import os, platform
 
 # remove MANIFEST. distutils doesn't properly update it
@@ -65,7 +65,6 @@ setup(
             ( SDIR + 'pixmaps/theme', listfiles( 'pixmaps/theme', '*.*' ) ),
             ( SDIR + 'pixmaps/auto', listfiles( 'pixmaps/auto', '*.*' ) ),
             ( 'share/gdm/autostart/LoginWindow/', [ 'tails-greeter.desktop' ] ),
-            ( 'bin/', [ 'tails-lang-helper' ] ),
             ( SDIR, [ 'tails-logging.conf', 'no-password-lecture.txt' ] ),
         ],
         cmdclass={

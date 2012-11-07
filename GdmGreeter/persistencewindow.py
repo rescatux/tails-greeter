@@ -177,7 +177,6 @@ class PersistenceWindow(TranslatableWindow):
             # next
             if self.moreoptions:
                 self.window.hide()
-                self.greeter.langpanel.window.hide()
                 self.greeter.optionswindow.window.show()
             # login
             else:

@@ -166,9 +166,6 @@ class CommunityGreeterApp(GdmGreeterService):
 
     def FinishProcess(self):
         """We're done, quit gtk app"""
-        del self.camouflage
-        del self.rootaccess
-        del self.localisationsettings
         logging.info("Finished.")
         gtk.main_quit()
 

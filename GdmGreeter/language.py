@@ -205,9 +205,9 @@ def layouts_with_names(layouts, locale='C'):
     return layouts_with_names
 
 def __get_langcodes():
-    p = Popen(["tails-lang-helper"], stdout=PIPE)
-    langcodes = str.split(p.communicate()[0])
-    logging.debug('%s languages found: helper returned %s', len(langcodes), p.returncode)
+    with open(GdmGreeter.config.language_codes_path, 'r') as f:
+        langcodes = [ line.rstrip('\n') for line in f.readlines() ]
+    logging.debug('%s languages found', len(langcodes))
     return langcodes
 
 class TranslatableWindow(object):
@@ -296,11 +296,11 @@ class LocalisationSettings(object):
                 locales_dict[lang].append(locale)
         return locales_dict
 
-    def __del__(self):
+    def __apply_layout_to_upcoming_session(self):
         self._greeter.SelectLayout(self._layout)
         if self._layout != 'us':
-            layouts = '%s,us' % self._layout
-            variants = '%s,' % self._variant
+            layout = '%s,us' % self._layout
+            variant = '%s,' % self._variant
         else:
             layout = self._layout
             variant = self._variant
@@ -308,8 +308,8 @@ class LocalisationSettings(object):
             os.chmod(GdmGreeter.config.locale_output_path, 0o600)
             f.write('TAILS_LOCALE_NAME=%s\n' % self._locale)
             f.write('TAILS_XKBMODEL=%s\n' % 'pc105') # use default value from /etc/default/keyboard
-            f.write('TAILS_XKBLAYOUT=%s\n' % layouts)
-            f.write('TAILS_XKBVARIANT=%s\n' % variants)
+            f.write('TAILS_XKBLAYOUT=%s\n' % layout)
+            f.write('TAILS_XKBVARIANT=%s\n' % variant)
             f.write('TAILS_XKBOPTIONS=%s\n' % self._options)
 
     # LANGUAGES
@@ -457,7 +457,8 @@ class LocalisationSettings(object):
             variant = ''
         self._layout = layout
         self._variant = variant
-        self.__apply_layout()
+        self.__apply_layout_to_current_screen()
+        self.__apply_layout_to_upcoming_session()
 
     def __set_default_layout(self):
         default_layout = False
@@ -481,7 +482,7 @@ class LocalisationSettings(object):
                 default_layout = 'us'
         self.set_layout(default_layout)            
 
-    def __apply_layout(self):
+    def __apply_layout_to_current_screen(self):
         logging.debug("layout=%s" % self._layout)
 
         if self._layout != 'us':
