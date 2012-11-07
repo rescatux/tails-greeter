@@ -3,62 +3,63 @@
 # This file is distributed under the same license as the tails-greeter package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2011.
 #
+# Translators:
+# Richard E. van der Luit <nippur@fedoraproject.org>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: tails-greeter\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-06-01 15:10+0200\n"
-"PO-Revision-Date: 2011-04-22 14:41+0000\n"
-"Last-Translator: Marten de Vries <Unknown>\n"
-"Language-Team: Dutch <nl@li.org>\n"
+"PO-Revision-Date: 2012-10-10 13:58+0000\n"
+"Last-Translator: Richard E. van der Luit <nippur@fedoraproject.org>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2011-05-03 06:15+0000\n"
-"X-Generator: Launchpad (build 12758)\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../glade/persistencewindow.glade.h:1 ../glade/optionswindow.glade.h:1
 #: ../GdmGreeter/persistencewindow.py:128
 msgid "Login"
-msgstr ""
+msgstr "Login"
 
 #: ../glade/persistencewindow.glade.h:2 ../glade/optionswindow.glade.h:2
 msgid "Welcome to Tails"
-msgstr ""
+msgstr "Welkom bij Tails"
 
 #: ../glade/persistencewindow.glade.h:3
 msgid "Use persistence?"
-msgstr ""
+msgstr "Persistentie gebruiken?"
 
 #: ../glade/persistencewindow.glade.h:4
 msgid "Yes"
-msgstr ""
+msgstr "Ja"
 
 #: ../glade/persistencewindow.glade.h:5
 msgid "No"
-msgstr ""
+msgstr "Nee"
 
 #: ../glade/persistencewindow.glade.h:6
 msgid "Passphrase:"
-msgstr ""
+msgstr "Wachtzin:"
 
 #: ../glade/persistencewindow.glade.h:7
 msgid "Read-Only?"
-msgstr ""
+msgstr "Read-Only?"
 
 #: ../glade/persistencewindow.glade.h:8 ../glade/optionswindow.glade.h:8
 #: ../glade/langpanel.glade.h:1
 msgid " "
-msgstr ""
+msgstr " "
 
 #: ../glade/persistencewindow.glade.h:9
 msgid "More options?"
-msgstr ""
+msgstr "Meer opties?"
 
 #: ../glade/optionswindow.glade.h:3
 msgid "Administration password"
-msgstr ""
+msgstr "Beheerderswachtwoord"
 
 #: ../glade/optionswindow.glade.h:4
 msgid ""
@@ -66,44 +67,49 @@ msgid ""
 "tasks.\n"
 "Otherwise it will be disabled for better security."
 msgstr ""
+"Voer een beheerderswachtwoord in wanneer je beheerstaken moet kunnen "
+"uitvoeren.\n"
+"Niets ingevuld zal beheer worden uitgeschakeld voor betere veiligheid."
 
 #: ../glade/optionswindow.glade.h:6
 msgid "Password:"
-msgstr ""
+msgstr "Wachtwoord:"
 
 #: ../glade/optionswindow.glade.h:7
 msgid "Verify Password:"
-msgstr ""
+msgstr "Wachtwoord verifiëren:"
 
 #: ../glade/optionswindow.glade.h:9
 msgid "Windows Camouflage"
-msgstr ""
+msgstr "Windows Camouflage"
 
 #: ../glade/optionswindow.glade.h:10
 msgid ""
 "This option makes Tails look more like Microsoft Windows XP. This may be "
 "useful in public places in order to avoid attracting suspicion."
 msgstr ""
+"Deze optie zorgt ervoor dat Tails meer op Microsoft Windows XP lijkt. Dit "
+"kan handig zijn om op openbare plekken geen verdenking te wekken. "
 
 #: ../glade/optionswindow.glade.h:11
 msgid "Activate Microsoft Windows XP Camouflage"
-msgstr ""
+msgstr "Activeer Microsoft Windows XP Camouflage"
 
 #: ../glade/langpanel.glade.h:2 ../GdmGreeter/langpanel.py:42
 msgid "Language"
-msgstr ""
+msgstr "Taal"
 
 #: ../glade/langpanel.glade.h:3
 msgid "Locale"
-msgstr ""
+msgstr "Locale"
 
 #: ../glade/langpanel.glade.h:4
 msgid "Layout"
-msgstr ""
+msgstr "Layout"
 
 #: ../GdmGreeter/optionswindow.py:68
 msgid "<i>Passwords do not match</i>"
-msgstr ""
+msgstr "<i>Wachtwoorden zijn niet gelijk</i>"
 
 #: ../GdmGreeter/persistence.py:59
 #, python-format
@@ -111,6 +117,8 @@ msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
 msgstr ""
+"live-persist lukte niet, return code %(returncode)s:\n"
+"%(stderr)s"
 
 #: ../GdmGreeter/persistence.py:99
 #, python-format
@@ -119,6 +127,9 @@ msgid ""
 "%(stdout)s\n"
 "%(stderr)s"
 msgstr ""
+"cryptsetup lukte niet, return code %(returncode)s:\n"
+"%(stdout)s\n"
+"%(stderr)s"
 
 #: ../GdmGreeter/persistence.py:124
 #, python-format
@@ -127,27 +138,15 @@ msgid ""
 "%(stdout)s\n"
 "%(stderr)s"
 msgstr ""
+"live-persist lukte niet, return code %(returncode)s:\n"
+"%(stdout)s\n"
+"%(stderr)s"
 
 #: ../GdmGreeter/persistencewindow.py:94
 msgid "<i>Wrong passphrase. Please try again.</i>"
-msgstr ""
+msgstr "<i>Verkeerd wachtwoord. Probeer opnieuw.</i>"
 
 #: ../GdmGreeter/langpanel.py:124 ../GdmGreeter/langpanel.py:148
 #: ../GdmGreeter/langpanel.py:181
 msgid "Other..."
-msgstr ""
-
-#~ msgid "<big><b>Full Name:</b></big>"
-#~ msgstr "<big><b>Volledige naam:</b></big>"
-
-#~ msgid "<big><b>Passphrase:</b></big>"
-#~ msgstr "<big><b>Wachtwoord:</b></big>"
-
-#~ msgid "Create Artwork"
-#~ msgstr "Maak Artwork"
-
-#~ msgid "Do Homework and Study"
-#~ msgstr "Maak huiswerk en studeer"
-
-#~ msgid "Do job Searching"
-#~ msgstr "Zoek werk"
+msgstr "Anders..."
