@@ -1,3 +1,20 @@
+tails-greeter (0.7.4) UNRELEASED; urgency=low
+
+  * Document dependencies for translation work.
+  * Hack dependencies
+  * Import Arabic translation
+  * [fr] Traduction de l'option Windows Camouflage
+  * Add requirement: python-distutils-extra
+  * Import Hebrew translation from Transifex.
+  * Import Basque translation from Transifex.
+  * Import Hungarian translation from Transifex.
+  * Import Italian translation from Transifex.
+  * Import Chinese translation from Transifex.
+  * Import updated complete translations from Transifex.
+  * Add Arabic translations.
+
+ -- Tails developers <tails@boum.org>  Wed, 07 Nov 2012 12:34:56 +0000
+
 tails-greeter (0.7.3) squeeze-backports; urgency=low
 
   * Import pt_BR translation.
