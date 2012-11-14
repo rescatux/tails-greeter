@@ -1,3 +1,11 @@
+tails-greeter (0.7.5) devel; urgency=low
+
+  * Farsi language updates.
+  * Arabic language updates.
+  * Russian language updates.
+
+ -- Tails developers <tails@boum.org>  Wed, 14 Nov 2012 15:46:23 +0100
+
 tails-greeter (0.7.4) UNRELEASED; urgency=low
 
   * Document dependencies for translation work.
