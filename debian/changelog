@@ -1,3 +1,10 @@
+tails-greeter (0.7.6) testing; urgency=low
+
+  * Update Chinese translation.
+  * Import Bulgarian translation.
+
+ -- Tails developers <tails@boum.org>  Sun, 25 Nov 2012 12:10:56 +0100
+
 tails-greeter (0.7.5) devel; urgency=low
 
   * Farsi language updates.
