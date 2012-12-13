@@ -1,24 +1,29 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+#   <i@ddark008.ru>, 2012.
 msgid ""
 msgstr ""
-"Project-Id-Version: ru.po\n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version: The Tor Project\n"
+"Report-Msgid-Bugs-To: https://trac.torproject.org/projects/tor\n"
 "POT-Creation-Date: 2012-06-01 15:10+0200\n"
-"PO-Revision-Date: \n"
-"Last-Translator: Eric <esmallberg@ndi.org>\n"
-"Language-Team: NDI <esmallberg@ndi.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2012-12-02 21:41+0000\n"
+"Last-Translator: ddark008 <i@ddark008.ru>\n"
+"Language-Team: Russian (http://www.transifex.com/projects/p/torproject/language/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: ../glade/persistencewindow.glade.h:1
-#: ../glade/optionswindow.glade.h:1
+#: ../glade/persistencewindow.glade.h:1 ../glade/optionswindow.glade.h:1
 #: ../GdmGreeter/persistencewindow.py:128
 msgid "Login"
 msgstr "Вход"
 
-#: ../glade/persistencewindow.glade.h:2
-#: ../glade/optionswindow.glade.h:2
+#: ../glade/persistencewindow.glade.h:2 ../glade/optionswindow.glade.h:2
 msgid "Welcome to Tails"
 msgstr "Добро пожаловать в Tails"
 
@@ -42,8 +47,7 @@ msgstr "Пароль"
 msgid "Read-Only?"
 msgstr "Только для чтения?"
 
-#: ../glade/persistencewindow.glade.h:8
-#: ../glade/optionswindow.glade.h:8
+#: ../glade/persistencewindow.glade.h:8 ../glade/optionswindow.glade.h:8
 #: ../glade/langpanel.glade.h:1
 msgid " "
 msgstr " "
@@ -60,9 +64,7 @@ msgstr "Пароль администратора"
 msgid ""
 "Enter an administration password in case you need to perform administration tasks.\n"
 "Otherwise it will be disabled for better security."
-msgstr ""
-"Введите пароль администратора для выполнения администрирования. \n"
-" В противном случае администрирование будет отключено в целях безопасности."
+msgstr "Введите пароль администратора для выполнения администрирования. \n В противном случае администрирование будет отключено в целях безопасности."
 
 #: ../glade/optionswindow.glade.h:6
 msgid "Password:"
@@ -74,18 +76,19 @@ msgstr "Повторный ввод пароля:"
 
 #: ../glade/optionswindow.glade.h:9
 msgid "Windows Camouflage"
-msgstr "Камуфляж под Windows"
+msgstr "Маскировка под Windows"
 
 #: ../glade/optionswindow.glade.h:10
-msgid "This option makes Tails look more like Microsoft Windows XP. This may be useful in public places in order to avoid attracting suspicion."
-msgstr "Благодаря этой опции Tails выглядит более похожей на Microsoft Windows XP. Это может быть полезным при использовании в публичных местах во избежание подозрений."
+msgid ""
+"This option makes Tails look more like Microsoft Windows XP. This may be "
+"useful in public places in order to avoid attracting suspicion."
+msgstr "Благодаря этой опции, Tails выглядит похожим на Microsoft Windows XP. Это может быть полезным при использовании в публичных местах для маскировки."
 
 #: ../glade/optionswindow.glade.h:11
 msgid "Activate Microsoft Windows XP Camouflage"
-msgstr "Активировать камуфляж под Microsoft Windows XP"
+msgstr "Активировать маскировку под Microsoft Windows XP"
 
-#: ../glade/langpanel.glade.h:2
-#: ../GdmGreeter/langpanel.py:42
+#: ../glade/langpanel.glade.h:2 ../GdmGreeter/langpanel.py:42
 msgid "Language"
 msgstr "Язык"
 
@@ -106,9 +109,7 @@ msgstr "<i>Пароли не совпадают</i>"
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
-msgstr ""
-"live-persist не сработал, код ошибки %(returncode)s:\n"
-" %(stderr)s"
+msgstr "live-persist не сработал, код ошибки %(returncode)s:\n %(stderr)s"
 
 #: ../GdmGreeter/persistence.py:99
 #, python-format
@@ -116,10 +117,7 @@ msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr ""
-"cryptsetup не сработал, код ошибки %(returncode)s:\n"
-" %(stdout)s\n"
-" %(stderr)s"
+msgstr "cryptsetup не сработал, код ошибки %(returncode)s:\n %(stdout)s\n %(stderr)s"
 
 #: ../GdmGreeter/persistence.py:124
 #, python-format
@@ -127,18 +125,13 @@ msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr ""
-"live-persist не сработал, код ошибки %(returncode)s:\n"
-" %(stdout)s\n"
-" %(stderr)s"
+msgstr "live-persist не сработал, код ошибки %(returncode)s:\n %(stdout)s\n %(stderr)s"
 
 #: ../GdmGreeter/persistencewindow.py:94
 msgid "<i>Wrong passphrase. Please try again.</i>"
 msgstr "<i>Неправильный пароль. Попробуйте снова.</i>"
 
-#: ../GdmGreeter/langpanel.py:124
-#: ../GdmGreeter/langpanel.py:148
+#: ../GdmGreeter/langpanel.py:124 ../GdmGreeter/langpanel.py:148
 #: ../GdmGreeter/langpanel.py:181
 msgid "Other..."
 msgstr "Другое..."
-
