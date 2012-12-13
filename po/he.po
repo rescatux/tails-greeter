@@ -1,0 +1,139 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+#   <aharonoosh1@gmail.com>, 2012.
+#   <yaelgogol@gmail.com>, 2012.
+# יעקב פייקין <jacobpa9@gmail.com>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: The Tor Project\n"
+"Report-Msgid-Bugs-To: https://trac.torproject.org/projects/tor\n"
+"POT-Creation-Date: 2012-06-01 15:10+0200\n"
+"PO-Revision-Date: 2012-11-29 22:17+0000\n"
+"Last-Translator: blackbird <yaelgogol@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: he\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../glade/persistencewindow.glade.h:1 ../glade/optionswindow.glade.h:1
+#: ../GdmGreeter/persistencewindow.py:128
+msgid "Login"
+msgstr "חיבור למערכת"
+
+#: ../glade/persistencewindow.glade.h:2 ../glade/optionswindow.glade.h:2
+msgid "Welcome to Tails"
+msgstr "ברוכים הבאים ל-Tails"
+
+#: ../glade/persistencewindow.glade.h:3
+msgid "Use persistence?"
+msgstr "השתמש בעקשנות?"
+
+#: ../glade/persistencewindow.glade.h:4
+msgid "Yes"
+msgstr "כן"
+
+#: ../glade/persistencewindow.glade.h:5
+msgid "No"
+msgstr "לא"
+
+#: ../glade/persistencewindow.glade.h:6
+msgid "Passphrase:"
+msgstr "סיסמה"
+
+#: ../glade/persistencewindow.glade.h:7
+msgid "Read-Only?"
+msgstr "לקריאה בלבד?"
+
+#: ../glade/persistencewindow.glade.h:8 ../glade/optionswindow.glade.h:8
+#: ../glade/langpanel.glade.h:1
+msgid " "
+msgstr "`"
+
+#: ../glade/persistencewindow.glade.h:9
+msgid "More options?"
+msgstr "יותר אפשרויות?"
+
+#: ../glade/optionswindow.glade.h:3
+msgid "Administration password"
+msgstr "סיסמת מנהל"
+
+#: ../glade/optionswindow.glade.h:4
+msgid ""
+"Enter an administration password in case you need to perform administration tasks.\n"
+"Otherwise it will be disabled for better security."
+msgstr "הזן את סיסמא של ממשל במקרה שאתם צריכים לבצע משימות ניהול.\n אחרת זה יהיה מושבת לאבטחה טובה יותר."
+
+#: ../glade/optionswindow.glade.h:6
+msgid "Password:"
+msgstr "סיסמה:"
+
+#: ../glade/optionswindow.glade.h:7
+msgid "Verify Password:"
+msgstr "אימות סיסמה:"
+
+#: ../glade/optionswindow.glade.h:9
+msgid "Windows Camouflage"
+msgstr "הסוואה של Windows"
+
+#: ../glade/optionswindow.glade.h:10
+msgid ""
+"This option makes Tails look more like Microsoft Windows XP. This may be "
+"useful in public places in order to avoid attracting suspicion."
+msgstr "אפשרות זו הופכת זנבות נראים יותר כמו Microsoft Windows XP. זה עשוי להיות שימושי במקומות ציבוריים, כדי להימנע מלמשוך חשד."
+
+#: ../glade/optionswindow.glade.h:11
+msgid "Activate Microsoft Windows XP Camouflage"
+msgstr "הסוואת Microsoft Windows XP מופעלת"
+
+#: ../glade/langpanel.glade.h:2 ../GdmGreeter/langpanel.py:42
+msgid "Language"
+msgstr "שפה"
+
+#: ../glade/langpanel.glade.h:3
+msgid "Locale"
+msgstr "מקומי"
+
+#: ../glade/langpanel.glade.h:4
+msgid "Layout"
+msgstr "מקומי"
+
+#: ../GdmGreeter/optionswindow.py:68
+msgid "<i>Passwords do not match</i>"
+msgstr "<i>סיסמאות אינו תואמות</i>"
+
+#: ../GdmGreeter/persistence.py:59
+#, python-format
+msgid ""
+"live-persist failed with return code %(returncode)s:\n"
+"%(stderr)s"
+msgstr "הפעלה חיה עקבית נכשלה עם השגיאה:   %(returncode)s:⏎ %(stderr)s"
+
+#: ../GdmGreeter/persistence.py:99
+#, python-format
+msgid ""
+"cryptsetup failed with return code %(returncode)s:\n"
+"%(stdout)s\n"
+"%(stderr)s"
+msgstr "cryptsetup נכשל עם הודעת השגיאה: %(returncode)s:⏎ %(stdout)s⏎ %(stderr)s"
+
+#: ../GdmGreeter/persistence.py:124
+#, python-format
+msgid ""
+"live-persist failed with return code %(returncode)s:\n"
+"%(stdout)s\n"
+"%(stderr)s"
+msgstr "הפעלה חיה עקבית נכשלה עם השגיאה: %(returncode)s:⏎ %(stdout)s⏎ %(stderr)s"
+
+#: ../GdmGreeter/persistencewindow.py:94
+msgid "<i>Wrong passphrase. Please try again.</i>"
+msgstr "<i>סיסמה שגוייה. אנא נסה שוב</i>"
+
+#: ../GdmGreeter/langpanel.py:124 ../GdmGreeter/langpanel.py:148
+#: ../GdmGreeter/langpanel.py:181
+msgid "Other..."
+msgstr "אחר"
