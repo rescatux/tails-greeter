@@ -1,3 +1,11 @@
+tails-greeter (0.7.7) devel; urgency=low
+
+  * Import new translations (Hebrew and Latvian) from Transifex.
+  * Update Russian translation from Transifex.
+  * Add gbp debian-branch configuration.
+
+ -- Tails developers <tails@boum.org>  Thu, 13 Dec 2012 09:58:45 +0100
+
 tails-greeter (0.7.6) testing; urgency=low
 
   * Update Chinese translation.
