@@ -82,7 +82,7 @@ def get_texts(langs):
         try:
             result[str(loc)] = gettext.translation(GdmGreeter.__appname__, GdmGreeter.config.locales_path, [str(loc)])
         except IOError:
-            logging.error('Failed to get texts for %s locale', loc)
+            logging.debug('Failed to get texts for %s locale', loc)
     return result
 
 def __fill_layouts_dict():
