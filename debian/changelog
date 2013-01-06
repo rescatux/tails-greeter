@@ -1,3 +1,9 @@
+tails-greeter (0.7.7+wheezy2) unstable; urgency=low
+
+  * Bump Python dependencies for Wheezy.
+
+ -- Tails developers <tails@boum.org>  Mon, 07 Jan 2013 00:14:46 +0100
+
 tails-greeter (0.7.7+wheezy1) unstable; urgency=low
 
   * Rebuild for Wheezy.
