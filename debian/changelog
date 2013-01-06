@@ -1,3 +1,9 @@
+tails-greeter (0.7.7+wheezy1) unstable; urgency=low
+
+  * Rebuild for Wheezy.
+
+ -- Tails developers <tails@boum.org>  Sun, 06 Jan 2013 23:42:52 +0100
+
 tails-greeter (0.7.7) devel; urgency=low
 
   * Import new translations (Hebrew and Latvian) from Transifex.
