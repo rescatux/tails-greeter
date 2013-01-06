@@ -13,7 +13,7 @@ X-Python-Version: >= 2.5
 Package: tails-greeter
 Architecture: all
 Section: gnome
-Depends: python2.6 | python2.5, python (>= 2.6.6-3+squeeze3~), python (<< 2.7),
+Depends: python2.7, python (>= 2.6.6-3+squeeze3~), python (<< 2.8),
          ${misc:Depends},
          console-setup,
          gconf2,
