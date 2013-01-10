@@ -1,3 +1,12 @@
+tails-greeter (0.7.8) devel; urgency=low
+
+  * Downgrade logging message to debug level.
+  * Add German translation.
+  * Update Portuguese (Brasil) translation.
+  * Update Russian translation.
+
+ -- Tails developers <tails@boum.org>  Thu, 10 Jan 2013 11:23:26 +0100
+
 tails-greeter (0.7.7+wheezy2) unstable; urgency=low
 
   * Bump Python dependencies for Wheezy.

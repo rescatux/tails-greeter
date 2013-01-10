@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: https://trac.torproject.org/projects/tor\n"
 "POT-Creation-Date: 2012-06-01 15:10+0200\n"
-"PO-Revision-Date: 2012-12-02 21:41+0000\n"
+"PO-Revision-Date: 2012-12-18 15:00+0000\n"
 "Last-Translator: ddark008 <i@ddark008.ru>\n"
 "Language-Team: Russian (http://www.transifex.com/projects/p/torproject/language/ru/)\n"
 "MIME-Version: 1.0\n"
@@ -41,7 +41,7 @@ msgstr "Нет"
 
 #: ../glade/persistencewindow.glade.h:6
 msgid "Passphrase:"
-msgstr "Пароль"
+msgstr "Пароль:"
 
 #: ../glade/persistencewindow.glade.h:7
 msgid "Read-Only?"
