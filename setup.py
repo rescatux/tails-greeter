@@ -64,7 +64,7 @@ setup(
             ( SDIR + 'pixmaps/lang', listfiles( 'pixmaps/lang', '*.*' ) ),
             ( SDIR + 'pixmaps/theme', listfiles( 'pixmaps/theme', '*.*' ) ),
             ( SDIR + 'pixmaps/auto', listfiles( 'pixmaps/auto', '*.*' ) ),
-            ( 'share/gdm/autostart/LoginWindow/', [ 'tails-greeter.desktop' ] ),
+            ( 'share/gdm/greeter/applications/', [ 'gdm-simple-greeter.desktop' ] ),
             ( SDIR, [ 'tails-logging.conf', 'no-password-lecture.txt' ] ),
         ],
         cmdclass={
