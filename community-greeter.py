@@ -123,7 +123,8 @@ class CommunityGreeterApp(GdmGreeterService):
     def SelectLayout(self, layout):
         """The user wants to change layout"""
         # Apply chosen layout
-        GdmGreeterService.SelectLayout(self, layout)
+        #GdmGreeterService.SelectLayout(self, layout)
+        pass
 
     def DefaultLanguageNameChanged(self, lang):
         """default language name changed"""
