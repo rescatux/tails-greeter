@@ -1,22 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
+# Translators:
+#   <matsa@riseup.net>, 2013.
 msgid ""
 msgstr ""
-"Project-Id-Version: tails-greeter\n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version: The Tor Project\n"
+"Report-Msgid-Bugs-To: https://trac.torproject.org/projects/tor\n"
 "POT-Creation-Date: 2012-06-01 15:10+0200\n"
-"PO-Revision-Date: 2012-04-13 16:43+0200\n"
-"Last-Translator: \n"
-"Language-Team:  <govnototalitarizm@gmail.com>\n"
-"Language: \n"
+"PO-Revision-Date: 2013-01-12 12:29+0000\n"
+"Last-Translator: matsa <matsa@riseup.net>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Language: French\n"
-"X-Poedit-Country: FRANCE\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: ../glade/persistencewindow.glade.h:1 ../glade/optionswindow.glade.h:1
 #: ../GdmGreeter/persistencewindow.py:128
@@ -29,7 +29,7 @@ msgstr "Bienvenue dans Tails"
 
 #: ../glade/persistencewindow.glade.h:3
 msgid "Use persistence?"
-msgstr "Activer la persistence ?"
+msgstr "Activer la persistance ?"
 
 #: ../glade/persistencewindow.glade.h:4
 msgid "Yes"
@@ -62,13 +62,9 @@ msgstr "Mot de passe d'administration"
 
 #: ../glade/optionswindow.glade.h:4
 msgid ""
-"Enter an administration password in case you need to perform administration "
-"tasks.\n"
+"Enter an administration password in case you need to perform administration tasks.\n"
 "Otherwise it will be disabled for better security."
-msgstr ""
-"Entrez un mot de passe d'administration si vous avez besoin d'effectuer des\n"
-"tâches d'administration.\n"
-"Sinon, il sera désactivé pour une meilleure sécurité."
+msgstr "Entrez un mot de passe d'administration si vous avez besoin d'effectuer des\ntâches d'administration.\nSinon, il sera désactivé pour une meilleure sécurité."
 
 #: ../glade/optionswindow.glade.h:6
 msgid "Password:"
@@ -86,9 +82,7 @@ msgstr "Windows Camouflage"
 msgid ""
 "This option makes Tails look more like Microsoft Windows XP. This may be "
 "useful in public places in order to avoid attracting suspicion."
-msgstr ""
-"Cette option donne à Tails les apparences de Microsoft Windows XP."
-"Cela peut être utile afin de ne pas attirer l'attention dans un lieu public."
+msgstr "Cette option donne à Tails les apparences de Microsoft Windows XP.Cela peut être utile afin de ne pas attirer l'attention dans un lieu public."
 
 #: ../glade/optionswindow.glade.h:11
 msgid "Activate Microsoft Windows XP Camouflage"
@@ -115,9 +109,7 @@ msgstr "<i>Les mots de passe ne concordent pas</i>"
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
-msgstr ""
-"échec de live-persist avec le code de retour %(returncode)s :\n"
-"%(stderr)s"
+msgstr "échec de live-persist avec le code de retour %(returncode)s :\n%(stderr)s"
 
 #: ../GdmGreeter/persistence.py:99
 #, python-format
@@ -125,10 +117,7 @@ msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr ""
-"échec de cryptsetup avec le code de retour %(returncode)s :\n"
-"%(stdout)s\n"
-"%(stderr)s"
+msgstr "échec de cryptsetup avec le code de retour %(returncode)s :\n%(stdout)s\n%(stderr)s"
 
 #: ../GdmGreeter/persistence.py:124
 #, python-format
@@ -136,10 +125,7 @@ msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr ""
-"échec de live-persist avec le code de retour %(returncode)s :\n"
-"%(stdout)s\n"
-"%(stderr)s"
+msgstr "échec de live-persist avec le code de retour %(returncode)s :\n%(stdout)s\n%(stderr)s"
 
 #: ../GdmGreeter/persistencewindow.py:94
 msgid "<i>Wrong passphrase. Please try again.</i>"
@@ -149,9 +135,3 @@ msgstr "<i>Mauvaise phrase de passe. Essayez de nouveau.</i>"
 #: ../GdmGreeter/langpanel.py:181
 msgid "Other..."
 msgstr "Autre..."
-
-#~ msgid "Current layout: %s (%s)"
-#~ msgstr "Agencement actuel: %s (%s)"
-
-#~ msgid "Current layout: %s"
-#~ msgstr "Agencement actuel: %s"

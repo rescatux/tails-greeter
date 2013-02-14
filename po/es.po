@@ -1,23 +1,21 @@
-# Spanish translation for tails-greeter
-# Copyright (c) 2011 Rosetta Contributors and Canonical Ltd 2011
-# This file is distributed under the same license as the tails-greeter package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2011.
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
 # Translators:
-#   <strelnic@gmail.com>, 2012.
+#   <strelnic@gmail.com>, 2012-2013.
 msgid ""
 msgstr ""
-"Project-Id-Version: tails-greeter\n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version: The Tor Project\n"
+"Report-Msgid-Bugs-To: https://trac.torproject.org/projects/tor\n"
 "POT-Creation-Date: 2012-06-01 15:10+0200\n"
-"PO-Revision-Date: 2012-11-01 19:48+0000\n"
+"PO-Revision-Date: 2013-01-15 22:43+0000\n"
 "Last-Translator: strel <strelnic@gmail.com>\n"
-"Language-Team: Spanish (http://www.transifex.com/projects/p/torproject/"
-"language/es/)\n"
-"Language: es\n"
+"Language-Team: Spanish (http://www.transifex.com/projects/p/torproject/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../glade/persistencewindow.glade.h:1 ../glade/optionswindow.glade.h:1
@@ -64,13 +62,9 @@ msgstr "Palabra clave de administración"
 
 #: ../glade/optionswindow.glade.h:4
 msgid ""
-"Enter an administration password in case you need to perform administration "
-"tasks.\n"
+"Enter an administration password in case you need to perform administration tasks.\n"
 "Otherwise it will be disabled for better security."
-msgstr ""
-"Introduzca la clave de administración en caso de que necesite realizar "
-"tareas de administración. \n"
-"De otro modo será deshabilitado para más seguridad."
+msgstr "Introduzca la palabra clave de administración en caso de que necesite realizar tareas de administración. \nDe otro modo será deshabilitado para mayor seguridad."
 
 #: ../glade/optionswindow.glade.h:6
 msgid "Password:"
@@ -78,7 +72,7 @@ msgstr "Palabra clave: "
 
 #: ../glade/optionswindow.glade.h:7
 msgid "Verify Password:"
-msgstr "Verificar Palabra Clave: "
+msgstr "Verificar palabra clave: "
 
 #: ../glade/optionswindow.glade.h:9
 msgid "Windows Camouflage"
@@ -88,13 +82,11 @@ msgstr "Camuflaje de Windows"
 msgid ""
 "This option makes Tails look more like Microsoft Windows XP. This may be "
 "useful in public places in order to avoid attracting suspicion."
-msgstr ""
-"Esta opción hace que Tails se parezca más a Microsoft Windows XP. Esto puede "
-"ser útil en lugares públicos para evitar atraer sospechas."
+msgstr "Esta opción hace que Tails se parezca más a Microsoft Windows XP. Esto puede ser útil en lugares públicos para evitar atraer sospechas."
 
 #: ../glade/optionswindow.glade.h:11
 msgid "Activate Microsoft Windows XP Camouflage"
-msgstr "Activar Camuflaje de Microsoft Windows XP"
+msgstr "Activar camuflaje de Microsoft Windows XP"
 
 #: ../glade/langpanel.glade.h:2 ../GdmGreeter/langpanel.py:42
 msgid "Language"
@@ -102,7 +94,7 @@ msgstr "Idioma"
 
 #: ../glade/langpanel.glade.h:3
 msgid "Locale"
-msgstr "Localización"
+msgstr "Regionalización"
 
 #: ../glade/langpanel.glade.h:4
 msgid "Layout"
@@ -117,9 +109,7 @@ msgstr "<i>Las palabras clave no concuerdan</i>"
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
-msgstr ""
-"live-persist falló devolviendo el código %(returncode)s: \n"
-"%(stderr)s"
+msgstr "live-persist falló devolviendo el código %(returncode)s: \n%(stderr)s"
 
 #: ../GdmGreeter/persistence.py:99
 #, python-format
@@ -127,10 +117,7 @@ msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr ""
-"cryptsetup falló devolviendo el código %(returncode)s: \n"
-"%(stdout)s \n"
-"%(stderr)s"
+msgstr "cryptsetup falló devolviendo el código %(returncode)s: \n%(stdout)s \n%(stderr)s"
 
 #: ../GdmGreeter/persistence.py:124
 #, python-format
@@ -138,14 +125,11 @@ msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr ""
-"live-persist falló devolviendo el código %(returncode)s: \n"
-"%(stdout)s \n"
-"%(stderr)s"
+msgstr "live-persist falló devolviendo el código %(returncode)s: \n%(stdout)s \n%(stderr)s"
 
 #: ../GdmGreeter/persistencewindow.py:94
 msgid "<i>Wrong passphrase. Please try again.</i>"
-msgstr "<i>Frase clave incorrecta. Por favor, intenteló de nuevo.</i>"
+msgstr "<i>Frase clave incorrecta. Por favor, inténtelo de nuevo.</i>"
 
 #: ../GdmGreeter/langpanel.py:124 ../GdmGreeter/langpanel.py:148
 #: ../GdmGreeter/langpanel.py:181
