@@ -1,3 +1,10 @@
+tails-greeter (0.7.9) testing; urgency=low
+
+  * Updated Spanish and French translations from Transifex.
+  * Import new Polish translation from Transifex.
+
+ -- Tails developers <tails@boum.org>  Thu, 14 Feb 2013 17:32:10 +0100
+
 tails-greeter (0.7.8) devel; urgency=low
 
   * Downgrade logging message to debug level.
