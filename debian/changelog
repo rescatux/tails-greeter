@@ -1,3 +1,10 @@
+tails-greeter (0.7.10) stable; urgency=low
+
+  * Update translations: Farsi, Chinese, French.
+  * New translations: Finnish, Norwegian Bokmål, Galician.
+
+ -- Tails developers <tails@boum.org>  Wed, 03 Apr 2013 10:27:04 +0200
+
 tails-greeter (0.7.9) testing; urgency=low
 
   * Updated Spanish and French translations from Transifex.
