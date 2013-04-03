@@ -1,34 +1,39 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+#  <hamahangi@posteo.eu>, 2013.
 msgid ""
 msgstr ""
-"Project-Id-Version: ru.po\n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version: The Tor Project\n"
+"Report-Msgid-Bugs-To: https://trac.torproject.org/projects/tor\n"
 "POT-Creation-Date: 2012-06-01 15:10+0200\n"
-"PO-Revision-Date: \n"
-"Last-Translator: Eric S <esmallberg@ndi.org>\n"
-"Language-Team: NDI <esmallberg@ndi.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2013-02-27 14:19+0000\n"
+"Last-Translator: zendegi <hamahangi@posteo.eu>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: fa\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../glade/persistencewindow.glade.h:1
-#: ../glade/optionswindow.glade.h:1
+#: ../glade/persistencewindow.glade.h:1 ../glade/optionswindow.glade.h:1
 #: ../GdmGreeter/persistencewindow.py:128
 msgid "Login"
-msgstr "ورود به سیستم"
+msgstr "ثبت ورود"
 
-#: ../glade/persistencewindow.glade.h:2
-#: ../glade/optionswindow.glade.h:2
+#: ../glade/persistencewindow.glade.h:2 ../glade/optionswindow.glade.h:2
 msgid "Welcome to Tails"
-msgstr "به Tails خوش آمدید"
+msgstr "به «تيلز» خوش آمديد"
 
 #: ../glade/persistencewindow.glade.h:3
 msgid "Use persistence?"
-msgstr "آیا از یک حافظه دائم استفاده می‌کنید؟"
+msgstr "تداوم داده‌ها بكار بردن؟"
 
 #: ../glade/persistencewindow.glade.h:4
 msgid "Yes"
-msgstr "بله"
+msgstr "بلى"
 
 #: ../glade/persistencewindow.glade.h:5
 msgid "No"
@@ -36,79 +41,75 @@ msgstr "نه"
 
 #: ../glade/persistencewindow.glade.h:6
 msgid "Passphrase:"
-msgstr "عبارت عبور:"
+msgstr "عبارت عبور"
 
 #: ../glade/persistencewindow.glade.h:7
 msgid "Read-Only?"
-msgstr "فقط برای خواندن؟"
+msgstr "فقط خواندنى؟"
 
-#: ../glade/persistencewindow.glade.h:8
-#: ../glade/optionswindow.glade.h:8
+#: ../glade/persistencewindow.glade.h:8 ../glade/optionswindow.glade.h:8
 #: ../glade/langpanel.glade.h:1
 msgid " "
 msgstr " "
 
 #: ../glade/persistencewindow.glade.h:9
 msgid "More options?"
-msgstr "گزینه‌های بیشتر؟"
+msgstr "گزینه‌های بیشتری؟"
 
 #: ../glade/optionswindow.glade.h:3
 msgid "Administration password"
-msgstr "کلمه عبور مدیریت"
+msgstr "رمز عبور مديريت"
 
 #: ../glade/optionswindow.glade.h:4
 msgid ""
 "Enter an administration password in case you need to perform administration tasks.\n"
 "Otherwise it will be disabled for better security."
-msgstr ""
-"در موردی که نیاز به اجرای وظایف مدیریتی دارید، یک کلمه عبور وارد کنید. \n"
-" در غیر این‌ صورت، به منظور امنیت بیشتر، غیرفعال خواهد شد."
+msgstr "لطفاً رمز عبور مديريتى واردكنيد، در صورتى كه لازم‌است كارهاى مديريت انجام بدهيد.\nوگرنه، اين گزينه براى امنيت بيشتر غيرفعال مى‌شود."
 
 #: ../glade/optionswindow.glade.h:6
 msgid "Password:"
-msgstr "کلمه عبور:"
+msgstr "رمز عبور"
 
 #: ../glade/optionswindow.glade.h:7
 msgid "Verify Password:"
-msgstr "تایید کلمه عبور:"
+msgstr "تاييد  رمز عبور"
 
 #: ../glade/optionswindow.glade.h:9
 msgid "Windows Camouflage"
-msgstr "پنهان کردن ویندوز"
+msgstr "پوشش ویندوز"
 
 #: ../glade/optionswindow.glade.h:10
-msgid "This option makes Tails look more like Microsoft Windows XP. This may be useful in public places in order to avoid attracting suspicion."
-msgstr "این گزینه باعث شباهت بیشتر Tails به Microsoft Windows XP می‌شود. این مساله به جلوگیری از مورد سوءظن قرار گرفتن در مکان‌های عمومی، کمک خواهد کرد."
+msgid ""
+"This option makes Tails look more like Microsoft Windows XP. This may be "
+"useful in public places in order to avoid attracting suspicion."
+msgstr "این گزینه کار می‌کند که تیلزرا بيشتر شابه مایکروسافت ویندوز اکس پی به نظر برسد. این گزینه شاید در محلات عامه به دردتان بخورد براى اين كه از ظن ديگران طفره‌رويد."
 
 #: ../glade/optionswindow.glade.h:11
 msgid "Activate Microsoft Windows XP Camouflage"
-msgstr "سیستم پنهان‌سازی Microsoft Windows XP را فعال کنید."
+msgstr "پوشش مايكروسافت ويندوز اكس پى فعال‌كردن"
 
-#: ../glade/langpanel.glade.h:2
-#: ../GdmGreeter/langpanel.py:42
+#: ../glade/langpanel.glade.h:2 ../GdmGreeter/langpanel.py:42
 msgid "Language"
 msgstr "زبان"
 
 #: ../glade/langpanel.glade.h:3
 msgid "Locale"
-msgstr "مکان"
+msgstr "محل"
 
 #: ../glade/langpanel.glade.h:4
 msgid "Layout"
-msgstr "صفحه‌بندی"
+msgstr "صفحه‌بندى"
 
 #: ../GdmGreeter/optionswindow.py:68
 msgid "<i>Passwords do not match</i>"
-msgstr "کلمات عبور با هم یکی نیستند"
+msgstr "<i>رمزهاى عبور با هم مطابقت ندارند</i>"
 
 #: ../GdmGreeter/persistence.py:59
 #, python-format
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
-msgstr ""
-"عدم موفقیت live-persist با کد بازگشت  %(returncode)s:\n"
-" %(stderr)s"
+msgstr "live-persist ناموفق با كد %(returncode)s:\n%(stderr)s"
 
 #: ../GdmGreeter/persistence.py:99
 #, python-format
@@ -116,10 +117,7 @@ msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr ""
-"عدم موفقیت cryptsetup با کد بازگشت  %(returncode)s:\n"
-" %(stdout)s\n"
-" %(stderr)s"
+msgstr "«cryptsetup» ناموفق با كد %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
 #: ../GdmGreeter/persistence.py:124
 #, python-format
@@ -127,17 +125,13 @@ msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr ""
-"عدم موفقیت live-persist با کد بازگشت  %(returncode)s:\n"
-" %(stdout)s\n"
-" %(stderr)s"
+msgstr "«live-persist» ناموفق با كد %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
 #: ../GdmGreeter/persistencewindow.py:94
 msgid "<i>Wrong passphrase. Please try again.</i>"
-msgstr "<i>عبارت عبور اشتباه است. لطفا دوباره سعی کنید.</i>"
+msgstr "<i>عبارت عبور درست نیست. لطفاً دوباره سعی‌کنید.</i>"
 
-#: ../GdmGreeter/langpanel.py:124
-#: ../GdmGreeter/langpanel.py:148
+#: ../GdmGreeter/langpanel.py:124 ../GdmGreeter/langpanel.py:148
 #: ../GdmGreeter/langpanel.py:181
 msgid "Other..."
 msgstr "دیگر..."
