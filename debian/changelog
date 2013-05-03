@@ -1,3 +1,10 @@
+tails-greeter (0.7.12) devel; urgency=low
+
+  * New translation: Serbian.
+  * Update translations for many languages.
+
+ -- Tails developers <tails@boum.org>  Fri, 03 May 2013 14:58:25 +0200
+
 tails-greeter (0.7.11) stable; urgency=low
 
   * New translation: Swedish.
