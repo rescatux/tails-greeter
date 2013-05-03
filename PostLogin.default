@@ -105,7 +105,7 @@ fi
 
 # Install persistent packages
 if [ -x /usr/local/sbin/tails-additional-software ] ; then
-	/usr/local/sbin/tails-additional-software install
+    /usr/local/sbin/tails-additional-software install
 fi
 
 ### Password
