@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Mikko Harhanen <gitti@mikkoharhanen.fi>, 2013.
+# mikkoharhanen <gitti@mikkoharhanen.fi>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: https://trac.torproject.org/projects/tor\n"
 "POT-Creation-Date: 2012-06-01 15:10+0200\n"
-"PO-Revision-Date: 2013-03-27 13:41+0000\n"
-"Last-Translator: mikkoharhanen <gitti@mikkoharhanen.fi>\n"
+"PO-Revision-Date: 2013-04-29 08:26+0000\n"
+"Last-Translator: runasand <runa.sandvik@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -54,17 +54,17 @@ msgstr " "
 
 #: ../glade/persistencewindow.glade.h:9
 msgid "More options?"
-msgstr "Lisää "
+msgstr "Enemmän asetuksia?"
 
 #: ../glade/optionswindow.glade.h:3
 msgid "Administration password"
-msgstr "Hallinnan salasana"
+msgstr "Ylläpidon salasana"
 
 #: ../glade/optionswindow.glade.h:4
 msgid ""
 "Enter an administration password in case you need to perform administration tasks.\n"
 "Otherwise it will be disabled for better security."
-msgstr "Valitse salasana siltä varalta, että joudut tekemään hallinnointiin liittyviä tehtäviä.\nTurvallisuussyistä hallinnointi estetään ilman salasanaa."
+msgstr "Valitse ylläpidon salasana siltä varalta, että joudut tekemään ylläpidollisia toimenpiteitä.\nMuutoin ylläpito estetään turvallisuussyistä."
 
 #: ../glade/optionswindow.glade.h:6
 msgid "Password:"
@@ -109,7 +109,7 @@ msgstr "<i>Salasanat eivät täsmää</i>"
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
-msgstr "live-persist keskeytyi: %(returncode)s:\n%(stderr)s"
+msgstr "live-persist epäonnistui paluuarvolla: %(returncode)s:\n%(stderr)s"
 
 #: ../GdmGreeter/persistence.py:99
 #, python-format
@@ -117,7 +117,7 @@ msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "cryptsetup keskeytyi: %(returncode)s:\n%(stdout)s\n%(stderr)s"
+msgstr "cryptsetup epäonnistui paluuarvolla: %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
 #: ../GdmGreeter/persistence.py:124
 #, python-format
@@ -125,7 +125,7 @@ msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "live-persist keskeytyi: %(returncode)s:\n%(stdout)s\n%(stderr)s"
+msgstr "live-persist epäonnistui paluuarvolla: %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
 #: ../GdmGreeter/persistencewindow.py:94
 msgid "<i>Wrong passphrase. Please try again.</i>"

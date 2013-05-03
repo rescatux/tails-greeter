@@ -1,22 +1,21 @@
-# Dutch translation for tails-greeter
-# Copyright (c) 2011 Rosetta Contributors and Canonical Ltd 2011
-# This file is distributed under the same license as the tails-greeter package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2011.
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
 # Translators:
-# Richard E. van der Luit <nippur@fedoraproject.org>, 2012.
+# Richard E. van der Luit <nippur@fedoraproject.org>, 2012
 msgid ""
 msgstr ""
-"Project-Id-Version: tails-greeter\n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version: The Tor Project\n"
+"Report-Msgid-Bugs-To: https://trac.torproject.org/projects/tor\n"
 "POT-Creation-Date: 2012-06-01 15:10+0200\n"
-"PO-Revision-Date: 2012-10-10 13:58+0000\n"
-"Last-Translator: Richard E. van der Luit <nippur@fedoraproject.org>\n"
+"PO-Revision-Date: 2013-04-29 08:26+0000\n"
+"Last-Translator: runasand <runa.sandvik@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../glade/persistencewindow.glade.h:1 ../glade/optionswindow.glade.h:1
@@ -63,13 +62,9 @@ msgstr "Beheerderswachtwoord"
 
 #: ../glade/optionswindow.glade.h:4
 msgid ""
-"Enter an administration password in case you need to perform administration "
-"tasks.\n"
+"Enter an administration password in case you need to perform administration tasks.\n"
 "Otherwise it will be disabled for better security."
-msgstr ""
-"Voer een beheerderswachtwoord in wanneer je beheerstaken moet kunnen "
-"uitvoeren.\n"
-"Niets ingevuld zal beheer worden uitgeschakeld voor betere veiligheid."
+msgstr "Voer een beheerderswachtwoord in wanneer je beheerstaken moet kunnen uitvoeren.\nNiets ingevuld zal beheer worden uitgeschakeld voor betere veiligheid."
 
 #: ../glade/optionswindow.glade.h:6
 msgid "Password:"
@@ -87,9 +82,7 @@ msgstr "Windows Camouflage"
 msgid ""
 "This option makes Tails look more like Microsoft Windows XP. This may be "
 "useful in public places in order to avoid attracting suspicion."
-msgstr ""
-"Deze optie zorgt ervoor dat Tails meer op Microsoft Windows XP lijkt. Dit "
-"kan handig zijn om op openbare plekken geen verdenking te wekken. "
+msgstr "Deze optie zorgt ervoor dat Tails meer op Microsoft Windows XP lijkt. Dit kan handig zijn om op openbare plekken geen verdenking te wekken. "
 
 #: ../glade/optionswindow.glade.h:11
 msgid "Activate Microsoft Windows XP Camouflage"
@@ -116,9 +109,7 @@ msgstr "<i>Wachtwoorden zijn niet gelijk</i>"
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
-msgstr ""
-"live-persist lukte niet, return code %(returncode)s:\n"
-"%(stderr)s"
+msgstr "live-persist lukte niet, return code %(returncode)s:\n%(stderr)s"
 
 #: ../GdmGreeter/persistence.py:99
 #, python-format
@@ -126,10 +117,7 @@ msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr ""
-"cryptsetup lukte niet, return code %(returncode)s:\n"
-"%(stdout)s\n"
-"%(stderr)s"
+msgstr "cryptsetup lukte niet, return code %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
 #: ../GdmGreeter/persistence.py:124
 #, python-format
@@ -137,10 +125,7 @@ msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr ""
-"live-persist lukte niet, return code %(returncode)s:\n"
-"%(stdout)s\n"
-"%(stderr)s"
+msgstr "live-persist lukte niet, return code %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
 #: ../GdmGreeter/persistencewindow.py:94
 msgid "<i>Wrong passphrase. Please try again.</i>"

@@ -3,7 +3,8 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# bogdrozd <bog.d@gazeta.pl>, 2013
+# jelenko <svrsavamutebe@gmail.com>, 2013
+# milos123 <milos@pcvideoigre.rs>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
@@ -15,101 +16,101 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pl\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: sr\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: ../glade/persistencewindow.glade.h:1 ../glade/optionswindow.glade.h:1
 #: ../GdmGreeter/persistencewindow.py:128
 msgid "Login"
-msgstr "Login"
+msgstr "Uloguj se"
 
 #: ../glade/persistencewindow.glade.h:2 ../glade/optionswindow.glade.h:2
 msgid "Welcome to Tails"
-msgstr "Witamy w Tails"
+msgstr "Dobrodošli u Tails"
 
 #: ../glade/persistencewindow.glade.h:3
 msgid "Use persistence?"
-msgstr "Zapisywać dane?"
+msgstr "Koristi upornost?"
 
 #: ../glade/persistencewindow.glade.h:4
 msgid "Yes"
-msgstr "Tak"
+msgstr "Da"
 
 #: ../glade/persistencewindow.glade.h:5
 msgid "No"
-msgstr "Nie"
+msgstr "NE"
 
 #: ../glade/persistencewindow.glade.h:6
 msgid "Passphrase:"
-msgstr "Hasło:"
+msgstr "Lozinka:"
 
 #: ../glade/persistencewindow.glade.h:7
 msgid "Read-Only?"
-msgstr "Tylko do odczytu?"
+msgstr "Samo-iščitavanje?"
 
 #: ../glade/persistencewindow.glade.h:8 ../glade/optionswindow.glade.h:8
 #: ../glade/langpanel.glade.h:1
 msgid " "
-msgstr " "
+msgstr "."
 
 #: ../glade/persistencewindow.glade.h:9
 msgid "More options?"
-msgstr "Więcej opcji?"
+msgstr "Još opcija?"
 
 #: ../glade/optionswindow.glade.h:3
 msgid "Administration password"
-msgstr "Hasło administracyjne"
+msgstr "Administrativna lozinka"
 
 #: ../glade/optionswindow.glade.h:4
 msgid ""
 "Enter an administration password in case you need to perform administration tasks.\n"
 "Otherwise it will be disabled for better security."
-msgstr "Wprowadź hasło administracyjne, jeśli trzeba będzie wykonywać zadania administracyjne.\nW innym przypadku zostanie ono wyłączone dla większego bezpieczeństwa."
+msgstr "Unesite administrativnu lozinku u slučaju da želite da vršite administratorske zadatke.\nUnače će oni biti onemogućeni radi bolje bezbednosti."
 
 #: ../glade/optionswindow.glade.h:6
 msgid "Password:"
-msgstr "Hasło:"
+msgstr "Lozinka:"
 
 #: ../glade/optionswindow.glade.h:7
 msgid "Verify Password:"
-msgstr "Powtórz Hasło:"
+msgstr "Potvrdi lozinku:"
 
 #: ../glade/optionswindow.glade.h:9
 msgid "Windows Camouflage"
-msgstr "Kamuflaż Windows"
+msgstr "Windows kamuflaža"
 
 #: ../glade/optionswindow.glade.h:10
 msgid ""
 "This option makes Tails look more like Microsoft Windows XP. This may be "
 "useful in public places in order to avoid attracting suspicion."
-msgstr "Ta opcja sprawia, że Tails wygląda bardziej jak Microsoft Windows XP. To może być przydatne w miejscach publicznych, aby nie wzbudzać podejrzeń."
+msgstr "Ova opcija Tails čini sličniji Microsoft Windows XP-u. Ovo može biti korisno na javnim mestima da bi se izbeglo privlačenje pažnje."
 
 #: ../glade/optionswindow.glade.h:11
 msgid "Activate Microsoft Windows XP Camouflage"
-msgstr "Włącz Kamuflaż Microsoft Windows XP"
+msgstr "Aktiviraj Microsoft Windows XP kamuflažu"
 
 #: ../glade/langpanel.glade.h:2 ../GdmGreeter/langpanel.py:42
 msgid "Language"
-msgstr "Język"
+msgstr "Jezik"
 
 #: ../glade/langpanel.glade.h:3
 msgid "Locale"
-msgstr "Ustawienia językowe"
+msgstr "Lokal"
 
 #: ../glade/langpanel.glade.h:4
 msgid "Layout"
-msgstr "Wygląd"
+msgstr "Postava"
 
 #: ../GdmGreeter/optionswindow.py:68
 msgid "<i>Passwords do not match</i>"
-msgstr "<i>Hasła nie pasują</i>"
+msgstr "Lozinke se ne podudaraju"
 
 #: ../GdmGreeter/persistence.py:59
 #, python-format
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
-msgstr "live-persist zakończył się błędem z kodem %(returncode)s:\n%(stderr)s"
+msgstr "live-persist neuspeo sa povratnim kodom %(returncode)s:⏎\n%(stderr)s"
 
 #: ../GdmGreeter/persistence.py:99
 #, python-format
@@ -117,7 +118,7 @@ msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "cryptsetup zakończył się błędem z kodem %(returncode)s:\n%(stdout)s\n%(stderr)s"
+msgstr "cryptsetup neuspeo sa povratnim kodom %(returncode)s:⏎\n%(stdout)s⏎\n%(stderr)s"
 
 #: ../GdmGreeter/persistence.py:124
 #, python-format
@@ -125,13 +126,13 @@ msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "live-persist zakończył się błędem z kodem %(returncode)s:\n%(stdout)s\n%(stderr)s"
+msgstr "live-persist neuspeo sa povratnim kodom %(returncode)s:⏎\n%(stdout)s⏎\n%(stderr)s"
 
 #: ../GdmGreeter/persistencewindow.py:94
 msgid "<i>Wrong passphrase. Please try again.</i>"
-msgstr "<i>Złe hasło. Proszę spróbować ponownie.</i>"
+msgstr "Pogrešna lozinka. Molimo pokušajte ponovo."
 
 #: ../GdmGreeter/langpanel.py:124 ../GdmGreeter/langpanel.py:148
 #: ../GdmGreeter/langpanel.py:181
 msgid "Other..."
-msgstr "Inne..."
+msgstr "Ostalo..."
