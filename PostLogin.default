@@ -106,6 +106,8 @@ fi
 # Install persistent packages
 if [ -x /usr/local/sbin/tails-additional-software ] ; then
     /usr/local/sbin/tails-additional-software install
+else
+   log_n_exit "'/usr/local/sbin/tails-additional-software' does not exist or is not executable."
 fi
 
 ### Password
