@@ -20,8 +20,7 @@
 
 """
 
-import logging, gtk, gettext, os
-_ = gettext.gettext
+import logging, gtk, os
 import GdmGreeter
 from GdmGreeter.language import TranslatableWindow
 
@@ -65,7 +64,6 @@ class OptionsWindow(TranslatableWindow):
         test_password = self.entry_password2.get_text()
         passwords_match = test_password == auth_password
         if not passwords_match:
-            self.warning_label.set_markup(_('<i>Passwords do not match</i>'))
             self.warning_area.show()
         return passwords_match
 

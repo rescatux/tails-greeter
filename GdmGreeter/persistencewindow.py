@@ -91,7 +91,6 @@ class PersistenceWindow(TranslatableWindow):
                 return True
             except GdmGreeter.errors.WrongPassphraseError:
                 self.entry_passphrase.set_text('')
-                self.warning_label.set_markup(_('<i>Wrong passphrase. Please try again.</i>'))
                 self.warning_area.show_all()
                 return False
         else:
