@@ -21,8 +21,7 @@
 
 """
 
-import logging, gtk, gettext, os
-_ = gettext.gettext
+import logging, gtk, os
 import GdmGreeter
 from GdmGreeter.language import TranslatableWindow
 
@@ -49,8 +48,7 @@ class PersistenceWindow(TranslatableWindow):
         self.btn_moreoptions_yes = builder.get_object("moreoptions_yes_button")
         self.btn_moreoptions_no = builder.get_object("moreoptions_no_button")
         self.btn_login = builder.get_object("login_button")
-        self.img_login = builder.get_object("login_image")
-        self.img_next = builder.get_object("next_image")
+        self.btn_next = builder.get_object("next_button")
         self.box_persistence = builder.get_object("persistence_box")
         self.readonly_checkbutton = builder.get_object("readonly_checkbutton")
         self.warning_label = builder.get_object("warning_label")
@@ -121,12 +119,11 @@ class PersistenceWindow(TranslatableWindow):
 
     def update_login_button(self, moreoptions):
         if moreoptions:
-            self.btn_login.set_label("gtk-go-forward")
-            self.btn_login.set_use_stock(True)
+            self.btn_login.hide()
+            self.btn_next.show()
         else:
-            self.btn_login.set_label(_("Login"))
-            self.btn_login.set_use_stock(False)
-            self.btn_login.set_image(self.img_login)
+            self.btn_login.show()
+            self.btn_next.hide()
 
     def update_moreoptions_buttons(self, moreoptions):
         self.btn_moreoptions_yes.set_active(moreoptions)
@@ -182,6 +179,9 @@ class PersistenceWindow(TranslatableWindow):
                 self.greeter.login()
 
     def cb_login_clicked(self, widget, data=None):
+        self.go()
+
+    def cb_next_clicked(self, widget, data=None):
         self.go()
 
     def key_press_event_cb(self, widget, event=None):
