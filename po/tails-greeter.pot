@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-01 15:10+0200\n"
+"POT-Creation-Date: 2013-05-06 11:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,21 +17,20 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../glade/persistencewindow.glade.h:1 ../glade/optionswindow.glade.h:1
-#: ../GdmGreeter/persistencewindow.py:128
+#: ../glade/persistencewindow.glade.h:1
+msgid "<i>Wrong passphrase. Please try again.</i>"
+msgstr ""
+
+#: ../glade/persistencewindow.glade.h:2
+msgid "Forward"
+msgstr ""
+
+#: ../glade/persistencewindow.glade.h:3 ../glade/optionswindow.glade.h:6
 msgid "Login"
 msgstr ""
 
-#: ../glade/persistencewindow.glade.h:2 ../glade/optionswindow.glade.h:2
-msgid "Welcome to Tails"
-msgstr ""
-
-#: ../glade/persistencewindow.glade.h:3
-msgid "Use persistence?"
-msgstr ""
-
 #: ../glade/persistencewindow.glade.h:4
-msgid "Yes"
+msgid "More options?"
 msgstr ""
 
 #: ../glade/persistencewindow.glade.h:5
@@ -46,13 +45,24 @@ msgstr ""
 msgid "Read-Only?"
 msgstr ""
 
-#: ../glade/persistencewindow.glade.h:8 ../glade/optionswindow.glade.h:8
-#: ../glade/langpanel.glade.h:1
-msgid " "
+#: ../glade/persistencewindow.glade.h:8
+msgid "Use persistence?"
 msgstr ""
 
-#: ../glade/persistencewindow.glade.h:9
-msgid "More options?"
+#: ../glade/persistencewindow.glade.h:9 ../glade/optionswindow.glade.h:10
+msgid "Welcome to Tails"
+msgstr ""
+
+#: ../glade/persistencewindow.glade.h:10
+msgid "Yes"
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:1
+msgid "<i>Passwords do not match</i>"
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:2
+msgid "Activate Microsoft Windows XP Camouflage"
 msgstr ""
 
 #: ../glade/optionswindow.glade.h:3
@@ -66,26 +76,26 @@ msgid ""
 "Otherwise it will be disabled for better security."
 msgstr ""
 
-#: ../glade/optionswindow.glade.h:6
+#: ../glade/optionswindow.glade.h:7
 msgid "Password:"
 msgstr ""
 
-#: ../glade/optionswindow.glade.h:7
-msgid "Verify Password:"
-msgstr ""
-
-#: ../glade/optionswindow.glade.h:9
-msgid "Windows Camouflage"
-msgstr ""
-
-#: ../glade/optionswindow.glade.h:10
+#: ../glade/optionswindow.glade.h:8
 msgid ""
 "This option makes Tails look more like Microsoft Windows XP. This may be "
 "useful in public places in order to avoid attracting suspicion."
 msgstr ""
 
+#: ../glade/optionswindow.glade.h:9
+msgid "Verify Password:"
+msgstr ""
+
 #: ../glade/optionswindow.glade.h:11
-msgid "Activate Microsoft Windows XP Camouflage"
+msgid "Windows Camouflage"
+msgstr ""
+
+#: ../glade/langpanel.glade.h:1
+msgid " "
 msgstr ""
 
 #: ../glade/langpanel.glade.h:2 ../GdmGreeter/langpanel.py:42
@@ -93,15 +103,11 @@ msgid "Language"
 msgstr ""
 
 #: ../glade/langpanel.glade.h:3
-msgid "Locale"
-msgstr ""
-
-#: ../glade/langpanel.glade.h:4
 msgid "Layout"
 msgstr ""
 
-#: ../GdmGreeter/optionswindow.py:68
-msgid "<i>Passwords do not match</i>"
+#: ../glade/langpanel.glade.h:4
+msgid "Locale"
 msgstr ""
 
 #: ../GdmGreeter/persistence.py:59
@@ -125,10 +131,6 @@ msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr ""
-
-#: ../GdmGreeter/persistencewindow.py:94
-msgid "<i>Wrong passphrase. Please try again.</i>"
 msgstr ""
 
 #: ../GdmGreeter/langpanel.py:124 ../GdmGreeter/langpanel.py:148
