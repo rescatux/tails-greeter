@@ -1,3 +1,16 @@
+tails-greeter (0.7.14~1.gbpf00882) UNRELEASED; urgency=low
+
+  ** SNAPSHOT build @f0088265f3126cd0d84715942f72845b8e4f6db4 **
+
+  * Fix so translations is applied on password mismatch messages
+  * Separate forward and login buttons and make them translatable
+  * Update tails-greeter.pot to pick up "Forward"
+    Many thanks to winterfairy@riseup.net for this patch and the two
+    previous ones!
+  * Update POT and PO files.
+
+ -- Tails developers <tails@boum.org>  Sun, 12 May 2013 19:38:11 +0200
+
 tails-greeter (0.7.13) devel; urgency=low
 
   * Install persistent packages at login time.
