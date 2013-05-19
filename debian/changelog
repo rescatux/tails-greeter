@@ -1,9 +1,4 @@
-tails-greeter (0.7.14~2.gbpf5117e) UNRELEASED; urgency=low
-
-  ** SNAPSHOT build @f5117e3dddba8fde52dbf2d8101203b50e2bb605 **
-
-  [ Tails developers ]
-  ** SNAPSHOT build @f0088265f3126cd0d84715942f72845b8e4f6db4 **
+tails-greeter (0.7.14) devel; urgency=low
 
   * Fix so translations is applied on password mismatch messages
   * Separate forward and login buttons and make them translatable
@@ -12,8 +7,9 @@ tails-greeter (0.7.14~2.gbpf5117e) UNRELEASED; urgency=low
     previous ones!
   * Update POT and PO files.
   * Update French translation.
+  * Fix link to documentation when no sudo password is set.
 
- -- Tails developers <tails@boum.org>  Sun, 12 May 2013 19:38:11 +0200
+ -- Tails developers <tails@boum.org>  Sun, 19 May 2013 19:38:11 +0200
 
 tails-greeter (0.7.13) devel; urgency=low
 
