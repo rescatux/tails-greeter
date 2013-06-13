@@ -1,3 +1,9 @@
+tails-greeter (0.7.15) devel; urgency=low
+
+  * Update translations from Transifex.
+
+ -- Tails developers <tails@boum.org>  Thu, 13 Jun 2013 16:15:42 +0200
+
 tails-greeter (0.7.14) devel; urgency=low
 
   * Fix so translations is applied on password mismatch messages
