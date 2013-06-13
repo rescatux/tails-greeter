@@ -8,51 +8,53 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: https://trac.torproject.org/projects/tor\n"
-"POT-Creation-Date: 2012-06-01 15:10+0200\n"
-"PO-Revision-Date: 2013-04-29 08:26+0000\n"
+"POT-Creation-Date: 2013-05-12 19:29+0200\n"
+"PO-Revision-Date: 2013-05-22 12:45+0000\n"
 "Last-Translator: runasand <runa.sandvik@gmail.com>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language-Team: Polish (http://www.transifex.com/projects/p/torproject/language/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: pl\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: ../glade/persistencewindow.glade.h:1 ../glade/optionswindow.glade.h:1
-#: ../GdmGreeter/persistencewindow.py:128
+#: ../glade/persistencewindow.glade.h:1
+msgid "Forward"
+msgstr "W przód"
+
+#: ../glade/persistencewindow.glade.h:2 ../glade/optionswindow.glade.h:1
 msgid "Login"
 msgstr "Login"
 
-#: ../glade/persistencewindow.glade.h:2 ../glade/optionswindow.glade.h:2
+#: ../glade/persistencewindow.glade.h:3 ../glade/optionswindow.glade.h:2
 msgid "Welcome to Tails"
 msgstr "Witamy w Tails"
 
-#: ../glade/persistencewindow.glade.h:3
+#: ../glade/persistencewindow.glade.h:4
 msgid "Use persistence?"
 msgstr "Zapisywać dane?"
 
-#: ../glade/persistencewindow.glade.h:4
+#: ../glade/persistencewindow.glade.h:5
 msgid "Yes"
 msgstr "Tak"
 
-#: ../glade/persistencewindow.glade.h:5
+#: ../glade/persistencewindow.glade.h:6
 msgid "No"
 msgstr "Nie"
 
-#: ../glade/persistencewindow.glade.h:6
+#: ../glade/persistencewindow.glade.h:7
 msgid "Passphrase:"
 msgstr "Hasło:"
 
-#: ../glade/persistencewindow.glade.h:7
+#: ../glade/persistencewindow.glade.h:8
 msgid "Read-Only?"
 msgstr "Tylko do odczytu?"
 
-#: ../glade/persistencewindow.glade.h:8 ../glade/optionswindow.glade.h:8
-#: ../glade/langpanel.glade.h:1
-msgid " "
-msgstr " "
-
 #: ../glade/persistencewindow.glade.h:9
+msgid "<i>Wrong passphrase. Please try again.</i>"
+msgstr "<i>Złe hasło. Proszę spróbować ponownie.</i>"
+
+#: ../glade/persistencewindow.glade.h:10
 msgid "More options?"
 msgstr "Więcej opcji?"
 
@@ -74,6 +76,10 @@ msgstr "Hasło:"
 msgid "Verify Password:"
 msgstr "Powtórz Hasło:"
 
+#: ../glade/optionswindow.glade.h:8
+msgid "<i>Passwords do not match</i>"
+msgstr "<i>Hasła nie pasują</i>"
+
 #: ../glade/optionswindow.glade.h:9
 msgid "Windows Camouflage"
 msgstr "Kamuflaż Windows"
@@ -88,6 +94,10 @@ msgstr "Ta opcja sprawia, że Tails wygląda bardziej jak Microsoft Windows XP. 
 msgid "Activate Microsoft Windows XP Camouflage"
 msgstr "Włącz Kamuflaż Microsoft Windows XP"
 
+#: ../glade/langpanel.glade.h:1
+msgid " "
+msgstr " "
+
 #: ../glade/langpanel.glade.h:2 ../GdmGreeter/langpanel.py:42
 msgid "Language"
 msgstr "Język"
@@ -99,10 +109,6 @@ msgstr "Ustawienia językowe"
 #: ../glade/langpanel.glade.h:4
 msgid "Layout"
 msgstr "Wygląd"
-
-#: ../GdmGreeter/optionswindow.py:68
-msgid "<i>Passwords do not match</i>"
-msgstr "<i>Hasła nie pasują</i>"
 
 #: ../GdmGreeter/persistence.py:59
 #, python-format
@@ -126,10 +132,6 @@ msgid ""
 "%(stdout)s\n"
 "%(stderr)s"
 msgstr "live-persist zakończył się błędem z kodem %(returncode)s:\n%(stdout)s\n%(stderr)s"
-
-#: ../GdmGreeter/persistencewindow.py:94
-msgid "<i>Wrong passphrase. Please try again.</i>"
-msgstr "<i>Złe hasło. Proszę spróbować ponownie.</i>"
 
 #: ../GdmGreeter/langpanel.py:124 ../GdmGreeter/langpanel.py:148
 #: ../GdmGreeter/langpanel.py:181
