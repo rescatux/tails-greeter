@@ -22,8 +22,8 @@
 
 """
 
-import logging, gettext, gtk, pycountry, os
-import xklavier
+from gi.repository import Gdk, GdkX11, Gtk, Xkl
+import logging, gettext, pycountry, os
 import icu
 
 from subprocess import Popen, PIPE
@@ -95,29 +95,29 @@ def __fill_layouts_dict():
     to query xklavier with the following code, but it fails because
     `Xkl.ConfigItem.set_name` doesn't exist in python bindings:
     
-        _xkl_engine = xklavier.Engine(gtk.gdk.display_get_default())
-        _xkl_registry = xklavier.ConfigRegistry(_xkl_engine)
+        _xkl_engine = Xkl.Engine.get_instance(GdkX11.x11_get_default_xdisplay())
+        _xkl_registry = Xkl.ConfigRegistry.get_instance(_xkl_engine)
         _xkl_registry.load(False)
-        layout_config_item = xklavier.ConfigItem()
+        layout_config_item = Xkl.ConfigItem()
         layout_config_item.set_name(layout_code)
         if _xkl_registry.find_layout(layout_config_item):
-        return layout_config_item.get_description()
+        return layout_config_item.description
     """
-    _xkl_engine = xklavier.Engine(gtk.gdk.display_get_default())
-    _xkl_registry = xklavier.ConfigRegistry(_xkl_engine)
+    _xkl_engine = Xkl.Engine.get_instance(GdkX11.x11_get_default_xdisplay())
+    _xkl_registry = Xkl.ConfigRegistry.get_instance(_xkl_engine)
     _xkl_registry.load(False)
 
     layouts_dict = {}
 
     def variant_iter(registry, variant, layout):
-        code = '%s/%s' % (layout.get_name(), variant.get_name())
-        description = '%s - %s' % (layout.get_description(), variant.get_description())
+        code = '%s/%s' % (layout.name, variant.name)
+        description = '%s - %s' % (layout.description, variant.description)
         if code not in layouts_dict:
             layouts_dict[code] = description
 
     def layout_iter(registry, layout, _):
-        code = layout.get_name()
-        description = layout.get_description()
+        code = layout.name
+        description = layout.description
         if code not in layouts_dict:
             layouts_dict[code] = description
 	_xkl_registry.foreach_layout_variant(code, variant_iter, layout)
@@ -225,9 +225,9 @@ class TranslatableWindow(object):
     def store_translations(self, widget):
         """Go through all widgets and store the translatable elements"""
         for child in widget.get_children():
-            if isinstance(child, gtk.Container):
+            if isinstance(child, Gtk.Container):
                 self.store_translations(child)
-            if isinstance(child, gtk.Label):
+            if isinstance(child, Gtk.Label):
                 self.labels.append( (child, child.get_label()) )
             if child.get_has_tooltip():
                 self.tips.append( (child, child.get_tooltip_text()) )
@@ -263,10 +263,10 @@ class LocalisationSettings(object):
     def __init__(self, greeter):
         self._greeter = greeter
 
-        self._xkl_engine = xklavier.Engine(gtk.gdk.display_get_default())
-        self._xkl_registry = xklavier.ConfigRegistry(self._xkl_engine)
+        self._xkl_engine = Xkl.Engine.get_instance(GdkX11.x11_get_default_xdisplay())
+        self._xkl_registry = Xkl.ConfigRegistry.get_instance(self._xkl_engine)
         self._xkl_registry.load(False)
-        self._xkl_record = xklavier.ConfigRec()
+        self._xkl_record = Xkl.ConfigRec()
         self._xkl_record.get_from_server(self._xkl_engine)
 
         self._system_locales_list = langcodes
@@ -412,9 +412,9 @@ class LocalisationSettings(object):
         t_code = ln_iso639_tri(self._language)
 
         def language_iter(config_registry, item, subitem, store):
-            layout_code = item.get_name()
+            layout_code = item.name
             if layout_code not in layouts:
-                layouts.append(item.get_name())
+                layouts.append(item.name)
 
         self._xkl_registry.foreach_language_variant(t_code,
                                                     language_iter,
@@ -499,14 +499,14 @@ class LocalisationSettings(object):
         self._xkl_record.set_options([self._options])
         self._xkl_record.activate(self._xkl_engine)
         # try to 'enforce layout'
-        self._xkl_engine.start_listen(xklavier.XKLL_TRACK_KEYBOARD_STATE)
+        self._xkl_engine.start_listen(Xkl.EngineListenModes.TRACK_KEYBOARD_STATE)
         self._xkl_engine.lock_group(1)
-        self._xkl_engine.stop_listen(xklavier.XKLL_TRACK_KEYBOARD_STATE)
+        self._xkl_engine.stop_listen(Xkl.EngineListenModes.TRACK_KEYBOARD_STATE)
 
         logging.debug('L:%s V:%s O:%s',
-                       self._xkl_record.get_layouts(),
-                       self._xkl_record.get_variants(),
-                       self._xkl_record.get_options())
+                       self._xkl_record.layouts,
+                       self._xkl_record.variants,
+                       self._xkl_record.options)
 
 # MODULE INITIALISATION
 

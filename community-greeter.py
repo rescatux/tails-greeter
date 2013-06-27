@@ -22,9 +22,10 @@ GDM greeter for Tails project using gtk
 """
 
 import logging, logging.config
-import gtk, sys, os
+from gi.repository import Gtk
+import sys, os
 
-from gtk import gdk
+from gi.repository import Gdk
 
 def print_log_record_on_error(func):
     """Wrapper to determine failed logging instance"""
@@ -64,7 +65,7 @@ class CommunityGreeterApp(GdmGreeterService):
 
     def __init__(self, *args, **kwargs):
         GdmGreeterService.__init__(self)
-        self.scr = gdk.display_get_default().get_screen(self.display.number)
+        self.scr = Gdk.Display.get_default().get_screen(self.display.number)
         self.language = 'en_US.UTF-8'
         self.session = None
         self.forced = False
@@ -168,10 +169,10 @@ class CommunityGreeterApp(GdmGreeterService):
     def FinishProcess(self):
         """We're done, quit gtk app"""
         logging.info("Finished.")
-        gtk.main_quit()
+        Gtk.main_quit()
 
 if __name__ == "__main__":
     logging.info("Started.")
     app = CommunityGreeterApp()
-    gtk.main()
+    Gtk.main()
 

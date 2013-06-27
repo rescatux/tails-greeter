@@ -20,7 +20,8 @@
 
 """
 
-import logging, gtk, os
+from gi.repository import Gdk, Gtk
+import logging, os
 import GdmGreeter
 from GdmGreeter.language import TranslatableWindow
 
@@ -30,7 +31,7 @@ class OptionsWindow(TranslatableWindow):
     def __init__(self, greeter):
         self.greeter = greeter
 
-        builder = gtk.Builder()
+        builder = Gtk.Builder()
         builder.set_translation_domain(GdmGreeter.__appname__)
         builder.add_from_file(os.path.join(GdmGreeter.GLADE_DIR, "optionswindow.glade"))
         builder.connect_signals(self)
@@ -81,7 +82,7 @@ class OptionsWindow(TranslatableWindow):
     def key_press_event_cb(self, widget, event=None):
         """Handle key press"""
         if event:
-            if event.keyval in [ gtk.keysyms.Return, gtk.keysyms.KP_Enter ]:
+            if event.keyval in [ Gdk.KEY_Return, Gdk.KEY_KP_Enter ]:
                 if self.entry_password.is_focus():
                     self.entry_password2.grab_focus()
                 else:

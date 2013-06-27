@@ -21,7 +21,8 @@
 
 """
 
-import logging, gtk, gettext, os
+from gi.repository import Gdk, Gtk
+import logging, gettext, os
 _ = gettext.gettext
 from GdmGreeter.language import TranslatableWindow
 import GdmGreeter
@@ -31,7 +32,7 @@ class LangDialog(TranslatableWindow):
     """Language selection dialog"""
 
     def __init__(self):
-        builder = gtk.Builder()
+        builder = Gtk.Builder()
         builder.set_translation_domain(GdmGreeter.__appname__)
         builder.add_from_file(os.path.join(GdmGreeter.GLADE_DIR, "langdialog.glade"))
         self.dialog = builder.get_object("languages_dialog")
@@ -39,9 +40,9 @@ class LangDialog(TranslatableWindow):
         self.liststore = builder.get_object("languages_liststore")
         builder.connect_signals(self, self.dialog)
 
-        tvcolumn = gtk.TreeViewColumn(_("Language"))
+        tvcolumn = Gtk.TreeViewColumn(_("Language"))
         self.treeview.append_column(tvcolumn)
-        cell = gtk.CellRendererText()
+        cell = Gtk.CellRendererText()
         tvcolumn.pack_start(cell, True)
         tvcolumn.add_attribute(cell, 'text', 1)
 
@@ -49,15 +50,15 @@ class LangDialog(TranslatableWindow):
 
     def cb_langdialog_key_press(self, widget, event, data=None):
         """Handle key press in langdialog"""
-        if event.keyval in [ gtk.keysyms.Return, gtk.keysyms.KP_Enter ]:
-            if isinstance(data, gtk.Dialog):
+        if event.keyval in [ Gdk.KEY_Return, Gdk.KEY_KP_Enter ]:
+            if isinstance(data, Gtk.Dialog):
                 data.response(True)
 
     def cb_langdialog_button_press(self, widget, event, data=None):
         """Handle mouse click in langdialog"""
-        if (event.type == gtk.gdk._2BUTTON_PRESS or
-                event.type == gtk.gdk._3BUTTON_PRESS):
-            if isinstance(data, gtk.Dialog):
+        if (event.type == Gdk._2BUTTON_PRESS or
+                event.type == Gdk._3BUTTON_PRESS):
+            if isinstance(data, Gtk.Dialog):
                 data.response(True)
 
 class LangPanel(TranslatableWindow):
@@ -72,13 +73,13 @@ class LangPanel(TranslatableWindow):
         self.default_position = 0
 
         # Build UI
-        builder = gtk.Builder()
+        builder = Gtk.Builder()
         builder.set_translation_domain(GdmGreeter.__appname__)
         builder.add_from_file(os.path.join(GdmGreeter.GLADE_DIR, "langpanel.glade"))
         builder.connect_signals(self)
         self.window = builder.get_object("langpanel")
 
-        cell = gtk.CellRendererText()
+        cell = Gtk.CellRendererText()
 
         self.cb_languages = builder.get_object("lang_list_cbox")
         self.cb_languages.pack_start(cell, True)
@@ -106,10 +107,10 @@ class LangPanel(TranslatableWindow):
     def set_panel_geometry(self):
         """Position panel to bottom and use full screen width"""
         panel = self.window
-        panel.set_gravity(gtk.gdk.GRAVITY_SOUTH_WEST)
+        panel.set_gravity(Gdk.Gravity.SOUTH_WEST)
         width, height = panel.get_size()
-        panel.set_default_size(gtk.gdk.screen_width(), height)
-        panel.move(0, gtk.gdk.screen_height() - height)
+        panel.set_default_size(Gdk.Screen.width(), height)
+        panel.move(0, Gdk.Screen.height() - height)
 
     # Populate lists
 
@@ -153,8 +154,8 @@ class LangPanel(TranslatableWindow):
     def key_event_cb(self, widget, event=None):
         """Handle key event - check for layout change"""
         if event:
-            if (event.keyval == gtk.keysyms.ISO_Next_Group or
-                event.keyval ==  gtk.keysyms.ISO_Prev_Group):
+            if (event.keyval == Gdk.KEY_ISO_Next_Group or
+                event.keyval ==  Gdk.KEY_ISO_Prev_Group):
                 pass
 
     def layout_selected(self, widget):

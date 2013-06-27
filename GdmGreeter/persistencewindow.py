@@ -21,7 +21,8 @@
 
 """
 
-import logging, gtk, os
+from gi.repository import Gdk, Gtk
+import logging, os
 import GdmGreeter
 from GdmGreeter.language import TranslatableWindow
 
@@ -31,7 +32,7 @@ class PersistenceWindow(TranslatableWindow):
     def __init__(self, greeter):
         self.greeter = greeter
 
-        builder = gtk.Builder()
+        builder = Gtk.Builder()
         builder.set_translation_domain(GdmGreeter.__appname__)
         builder.add_from_file(os.path.join(GdmGreeter.GLADE_DIR, "persistencewindow.glade"))
         builder.connect_signals(self)
@@ -149,10 +150,10 @@ class PersistenceWindow(TranslatableWindow):
 
     def toggle_watch_cursor(self, on=True):
         if on:
-            self.login_dialog.window.set_cursor(gtk.gdk.Cursor(gtk.gdk.WATCH))
+            self.window.get_window().set_cursor(Gdk.Cursor.new(Gdk.CursorType.WATCH))
         else:
-            self.login_dialog.window.set_cursor(None)
-        gtk.gdk.flush()
+            self.window.get_window().set_cursor(None)
+        Gdk.flush()
 
     def working(self, working=True):
         # FIXME: set_sensitive more widgets?
@@ -187,7 +188,7 @@ class PersistenceWindow(TranslatableWindow):
     def key_press_event_cb(self, widget, event=None):
         """Handle key press"""
         if event:
-            if event.keyval in [ gtk.keysyms.Return, gtk.keysyms.KP_Enter ]:
+            if event.keyval in [ Gdk.KEY_Return, Gdk.KEY_KP_Enter ]:
                 self.go()
 
     def delete_event_cb(self, widget, event=None):
