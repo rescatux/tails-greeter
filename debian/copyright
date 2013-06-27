@@ -1,7 +1,7 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: tails-greeter
 Upstream-Contact: Tails developers <tails@boum.org>
-Source: https://tails.boum.org/todo/TailsGreeter/
+Source: https://git-tails.immerda.ch/greeter
 
 Files: *
 Copyright: 2012-2013 Tails developers <tails@boum.org>
