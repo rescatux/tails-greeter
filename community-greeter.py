@@ -25,8 +25,6 @@ import logging, logging.config
 from gi.repository import Gtk
 import sys, os
 
-from gi.repository import Gdk
-
 def print_log_record_on_error(func):
     """Wrapper to determine failed logging instance"""
     def wrap(self, *args, **kwargs):
@@ -65,7 +63,6 @@ class CommunityGreeterApp(GdmGreeterService):
 
     def __init__(self, *args, **kwargs):
         GdmGreeterService.__init__(self)
-        self.scr = Gdk.Display.get_default().get_screen(self.display.number)
         self.language = 'en_US.UTF-8'
         self.session = None
         self.forced = False
