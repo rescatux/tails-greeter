@@ -3,121 +3,120 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# aharonoosh <aharonoosh1@gmail.com>, 2012
-# blackbird <yaelgogol@gmail.com>, 2012
-# יעקב פייקין <jacobpa9@gmail.com>, 2012
+# WinterFairy <winterfairy@riseup.net>, 2013
+# WinterFairy <winterfairy@riseup.net>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: https://trac.torproject.org/projects/tor\n"
 "POT-Creation-Date: 2013-05-12 19:29+0200\n"
 "PO-Revision-Date: 2013-05-22 12:45+0000\n"
-"Last-Translator: runasand <runa.sandvik@gmail.com>\n"
-"Language-Team: Hebrew (http://www.transifex.com/projects/p/torproject/language/he/)\n"
+"Last-Translator: WinterFairy <winterfairy@riseup.net>\n"
+"Language-Team: Swedish (http://www.transifex.com/projects/p/torproject/language/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: he\n"
+"Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../glade/persistencewindow.glade.h:1
 msgid "Forward"
-msgstr "קדימה"
+msgstr "Framåt"
 
 #: ../glade/persistencewindow.glade.h:2 ../glade/optionswindow.glade.h:1
 msgid "Login"
-msgstr "חיבור למערכת"
+msgstr "Logga in"
 
 #: ../glade/persistencewindow.glade.h:3 ../glade/optionswindow.glade.h:2
 msgid "Welcome to Tails"
-msgstr "ברוכים הבאים ל-Tails"
+msgstr "Välkommen till Tails"
 
 #: ../glade/persistencewindow.glade.h:4
 msgid "Use persistence?"
-msgstr "השתמש בעקשנות?"
+msgstr "Använd bestående lagring?"
 
 #: ../glade/persistencewindow.glade.h:5
 msgid "Yes"
-msgstr "כן"
+msgstr "Ja"
 
 #: ../glade/persistencewindow.glade.h:6
 msgid "No"
-msgstr "לא"
+msgstr "Nej"
 
 #: ../glade/persistencewindow.glade.h:7
 msgid "Passphrase:"
-msgstr "סיסמה"
+msgstr "Lösenord:"
 
 #: ../glade/persistencewindow.glade.h:8
 msgid "Read-Only?"
-msgstr "לקריאה בלבד?"
+msgstr "Skrivskyddad?"
 
 #: ../glade/persistencewindow.glade.h:9
 msgid "<i>Wrong passphrase. Please try again.</i>"
-msgstr "<i>סיסמה שגוייה. אנא נסה שוב</i>"
+msgstr "<i>Fel lösenord. Försök igen.</i>"
 
 #: ../glade/persistencewindow.glade.h:10
 msgid "More options?"
-msgstr "יותר אפשרויות?"
+msgstr "Fler alternativ?"
 
 #: ../glade/optionswindow.glade.h:3
 msgid "Administration password"
-msgstr "סיסמת מנהל"
+msgstr "Administratörslösenord"
 
 #: ../glade/optionswindow.glade.h:4
 msgid ""
 "Enter an administration password in case you need to perform administration tasks.\n"
 "Otherwise it will be disabled for better security."
-msgstr "הזן את סיסמא של ממשל במקרה שאתם צריכים לבצע משימות ניהול.\n אחרת זה יהיה מושבת לאבטחה טובה יותר."
+msgstr "Ange ett administratörslösenord ifall du behöver utföra administrativa uppgifter.\nI annat fall kommer administratörsåtkomst inaktiveras."
 
 #: ../glade/optionswindow.glade.h:6
 msgid "Password:"
-msgstr "סיסמה:"
+msgstr "Lösenord:"
 
 #: ../glade/optionswindow.glade.h:7
 msgid "Verify Password:"
-msgstr "אימות סיסמה:"
+msgstr "Upprepa lösenord:"
 
 #: ../glade/optionswindow.glade.h:8
 msgid "<i>Passwords do not match</i>"
-msgstr "<i>סיסמאות אינו תואמות</i>"
+msgstr "<i>Lösenorden skiljer sig åt</i>"
 
 #: ../glade/optionswindow.glade.h:9
 msgid "Windows Camouflage"
-msgstr "הסוואה של Windows"
+msgstr "Windows kamouflage"
 
 #: ../glade/optionswindow.glade.h:10
 msgid ""
 "This option makes Tails look more like Microsoft Windows XP. This may be "
 "useful in public places in order to avoid attracting suspicion."
-msgstr "אפשרות זו הופכת זנבות נראים יותר כמו Microsoft Windows XP. זה עשוי להיות שימושי במקומות ציבוריים, כדי להימנע מלמשוך חשד."
+msgstr "Detta alternativ får Tails att likna Microsoft Windows XP. Detta kan användas för att smälta in bättre vid användning på publika platser."
 
 #: ../glade/optionswindow.glade.h:11
 msgid "Activate Microsoft Windows XP Camouflage"
-msgstr "הסוואת Microsoft Windows XP מופעלת"
+msgstr "Aktivera Microsoft Windows XP kamouflage"
 
 #: ../glade/langpanel.glade.h:1
 msgid " "
-msgstr "`"
+msgstr " "
 
 #: ../glade/langpanel.glade.h:2 ../GdmGreeter/langpanel.py:42
 msgid "Language"
-msgstr "שפה"
+msgstr "Språk"
 
 #: ../glade/langpanel.glade.h:3
 msgid "Locale"
-msgstr "מקומי"
+msgstr "Land"
 
 #: ../glade/langpanel.glade.h:4
 msgid "Layout"
-msgstr "מקומי"
+msgstr "Tangentbordslayout"
 
 #: ../GdmGreeter/persistence.py:59
 #, python-format
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
-msgstr "הפעלה חיה עקבית נכשלה עם השגיאה:   %(returncode)s:⏎ %(stderr)s"
+msgstr "live-persist misslyckades med felkod %(returncode)s:\n%(stderr)s"
 
 #: ../GdmGreeter/persistence.py:99
 #, python-format
@@ -125,7 +124,7 @@ msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "cryptsetup נכשל עם הודעת השגיאה: %(returncode)s:⏎ %(stdout)s⏎ %(stderr)s"
+msgstr "cryptsetup misslyckades med felkod %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
 #: ../GdmGreeter/persistence.py:124
 #, python-format
@@ -133,9 +132,9 @@ msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "הפעלה חיה עקבית נכשלה עם השגיאה: %(returncode)s:⏎ %(stdout)s⏎ %(stderr)s"
+msgstr "live-persist misslyckades med felkod %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
 #: ../GdmGreeter/langpanel.py:124 ../GdmGreeter/langpanel.py:148
 #: ../GdmGreeter/langpanel.py:181
 msgid "Other..."
-msgstr "אחר"
+msgstr "Annat..."

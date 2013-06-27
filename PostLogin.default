@@ -103,6 +103,12 @@ if [ -r /var/lib/gdm3/tails.persistence ] ; then
       /var/lib/gdm3/tails.persistence /var/lib/live/config/tails.persistence
 fi
 
+# Install persistent packages
+if [ -x /usr/local/sbin/tails-additional-software ] ; then
+    /usr/local/sbin/tails-additional-software install
+else
+   log_n_exit "'/usr/local/sbin/tails-additional-software' does not exist or is not executable."
+fi
 
 ### Password
 

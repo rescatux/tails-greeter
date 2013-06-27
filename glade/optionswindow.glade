@@ -209,7 +209,8 @@ Otherwise it will be disabled for better security.</property>
                         <property name="xalign">0</property>
                         <property name="xpad">10</property>
                         <property name="ypad">10</property>
-                        <property name="label" translatable="yes"> </property>
+                        <property name="label" translatable="yes">&lt;i&gt;Passwords do not match&lt;/i&gt;</property>
+                        <property name="use_markup">True</property>
                       </object>
                       <packing>
                         <property name="expand">True</property>

@@ -1,8 +1,56 @@
-tails-greeter (0.7.8+wheezy1) unstable; urgency=low
+tails-greeter (0.7.15) devel; urgency=low
 
-  * Rebuild for Debian Wheezy.
+  * Update translations from Transifex.
 
- -- Tails developers <tails@boum.org>  Thu, 10 Jan 2013 12:00:28 +0100
+ -- Tails developers <tails@boum.org>  Thu, 13 Jun 2013 16:15:42 +0200
+
+tails-greeter (0.7.14) devel; urgency=low
+
+  * Fix so translations is applied on password mismatch messages
+  * Separate forward and login buttons and make them translatable
+  * Update tails-greeter.pot to pick up "Forward"
+    Many thanks to winterfairy@riseup.net for this patch and the two
+    previous ones!
+  * Update POT and PO files.
+  * Update French translation.
+  * Fix link to documentation when no sudo password is set.
+
+ -- Tails developers <tails@boum.org>  Sun, 19 May 2013 19:38:11 +0200
+
+tails-greeter (0.7.13) devel; urgency=low
+
+  * Install persistent packages at login time.
+  * Make indentation consistent.
+  * Fail hard if needed program cannot be found.
+
+ -- Tails developers <tails@boum.org>  Fri, 03 May 2013 15:20:17 +0200
+
+tails-greeter (0.7.12) devel; urgency=low
+
+  * New translation: Serbian.
+  * Update translations for many languages.
+
+ -- Tails developers <tails@boum.org>  Fri, 03 May 2013 14:58:25 +0200
+
+tails-greeter (0.7.11) stable; urgency=low
+
+  * New translation: Swedish.
+
+ -- Tails developers <tails@boum.org>  Sat, 06 Apr 2013 14:17:55 +0200
+
+tails-greeter (0.7.10) stable; urgency=low
+
+  * Update translations: Farsi, Chinese, French.
+  * New translations: Finnish, Norwegian Bokmål, Galician.
+
+ -- Tails developers <tails@boum.org>  Wed, 03 Apr 2013 10:27:04 +0200
+
+tails-greeter (0.7.9) testing; urgency=low
+
+  * Updated Spanish and French translations from Transifex.
+  * Import new Polish translation from Transifex.
+
+ -- Tails developers <tails@boum.org>  Thu, 14 Feb 2013 17:32:10 +0100
 
 tails-greeter (0.7.8) devel; urgency=low
 
