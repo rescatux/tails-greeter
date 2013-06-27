@@ -1,6 +1,5 @@
 Source: tails-greeter
 Maintainer: Tails developers <tails@boum.org>
-Uploaders: Max S <govnototalitarizm@gmail.com>
 Section: python
 Priority: optional
 Build-Depends: debhelper (>= 7.0.50~),
