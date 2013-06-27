@@ -4,7 +4,7 @@ Uploaders: Max S <govnototalitarizm@gmail.com>
 Section: python
 Priority: optional
 Build-Depends: debhelper (>= 7.0.50~),
-               python (>= 2.6.6-3~),
+               python,
                locales
 Build-Depends-Indep: python-distutils-extra
 Standards-Version: 3.9.3
@@ -13,7 +13,7 @@ X-Python-Version: >= 2.5
 Package: tails-greeter
 Architecture: all
 Section: gnome
-Depends: python2.7, python (>= 2.6.6-3+squeeze3~), python (<< 2.8),
+Depends: python2.7, python (<< 2.8),
          ${misc:Depends},
          console-setup,
          gconf2,
