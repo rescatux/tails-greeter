@@ -4,14 +4,17 @@ Upstream-Contact: Tails developers <tails@boum.org>
 Source: https://tails.boum.org/todo/TailsGreeter/
 
 Files: *
-Copyright: 2009, 2010, Martin Owens <doctormo@gmail.com>, 2011 Max <govnototalitarizm@gmail.com>
+Copyright: 2012-2013 Tails developers <tails@boum.org>
+           2011 Max <govnototalitarizm@gmail.com>
+           2009, 2010, Martin Owens <doctormo@gmail.com>
 License: GPL-3+
 
 Files: debian/*
-Copyright: 2009, 2010, Martin Owens <doctormo@gmail.com>
+Copyright: 2012-2013 Tails developers <tails@boum.org>
+           2011, Max <govnototalitarizm@gmail.com>
            2010, Nathan Handler <nhandler@ubuntu.com>
            2010, Luke Faraone <luke@faraone.cc>
-           2011, Max <govnototalitarizm@gmail.com>
+           2009, 2010, Martin Owens <doctormo@gmail.com>
 License: GPL-3+
 
 License: GPL-3+

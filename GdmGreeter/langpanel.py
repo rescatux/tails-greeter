@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 #
-# Copyright 2012 Tails developers <tails@boum.org>
+# Copyright 2012-2013 Tails developers <tails@boum.org>
 # Copyright 2011 Max <govnototalitarizm@gmail.com>
 #
 # This program is free software: you can redistribute it and/or modify
