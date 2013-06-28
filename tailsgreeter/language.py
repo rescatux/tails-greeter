@@ -494,13 +494,13 @@ class LocalisationSettings(object):
         backup_layout = False
         default_layouts = self.get_default_layouts()
         for layout_code in default_layouts:
-            logging.debug("layout_code=%s, ln=%s, CC=%s" % 
-                (layout_code,
-                 language_from_locale(self._locale).lower(),
-                 country_from_locale(self._locale).lower()))
-            if language_from_locale(self._locale).lower() == layout_code:
+            ln=language_from_locale(self._locale).lower()
+            country=country_from_locale(self._locale).lower()
+            logging.debug("layout_code='%s', ln='%s', CC='%s'", layout_code, ln, country)
+            if ln == layout_code:
+                logging.debug("Default layout is %s", layout_code)
                 default_layout = layout_code
-            elif country_from_locale(self._locale).lower() == layout_code:
+            elif country == layout_code:
                 backup_layout = layout_code
         if not default_layout:
             logging.debug("No default layout")
