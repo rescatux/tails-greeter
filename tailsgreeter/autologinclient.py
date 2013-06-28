@@ -30,6 +30,8 @@ class AutologinClient (object):
     USER_NAME = tailsgreeter.config.LUSER
 
     def __init__(self):
+        self.client_is_ready = False
+
         self.__greeter_client = GdmGreeter.Client()
         self.__greeter_client.open_connection()
 
@@ -57,7 +59,7 @@ class AutologinClient (object):
 
     def __on_ready(self, client, service_name):
         logging.debug("Received ready")
-        pass #XXX
+        self.client_is_ready = True
 
     def __on_session_opened(self, client, service_name):
         logging.debug("Received session opened")
@@ -98,6 +100,8 @@ class AutologinClient (object):
         raise NotImplementedError
 
     def do_login(self):
-        # XXX: noop unless ready
-        GLib.idle_add(lambda: self.__greeter_client.call_begin_auto_login(AutologinClient.USER_NAME))
-        # self.__dialog.destroy() #XXX: remove
+        if self.client_is_ready:
+            GLib.idle_add(lambda: self.__greeter_client.call_begin_auto_login(AutologinClient.USER_NAME))
+        else:
+            logging.info("Called do_login while not ready yet")
+            pass
