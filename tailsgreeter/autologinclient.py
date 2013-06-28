@@ -19,7 +19,6 @@ Manage GDM autologin: thin layer on top of libgdmgreeter.
 
 import logging
 
-# XXX: rename our stuff, not upstream's
 from gi.repository import GdmGreeter
 # from gi.repository import Gtk
 from gi.repository import GLib
@@ -102,9 +101,3 @@ class AutologinClient (object):
         # XXX: noop unless ready
         GLib.idle_add(lambda: self.__greeter_client.call_begin_auto_login(AutologinClient.USER_NAME))
         # self.__dialog.destroy() #XXX: remove
-
-# if __name__ == "__main__":
-#     logging.info("Started.")
-#     autologinclient = AutologinClient()
-#     autologinclient.do_login()
-#     Gtk.main()
