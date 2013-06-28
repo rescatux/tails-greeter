@@ -415,7 +415,7 @@ class LocalisationSettings(object):
             GLib.idle_add(lambda:
                 self.__act_user.set_language(lang))
         else:
-            raise RuntimeError("AccountsManager not ready")
+            logging.warning("AccountsManager not ready")
 
     # LAYOUTS
 
