@@ -103,8 +103,7 @@ class CommunityGreeterApp():
 
     def login(self):
         """Login GDM to the server"""
-        # XXX: check that we already sent the username?
-        self.gdmclient.do_login()
+        self.gdmclient.do_login(tailsgreeter.config.LUSER)
 
     def server_ready(self):
         """Server is ready"""

@@ -27,7 +27,6 @@ import tailsgreeter.config
 class GdmClient (object):
     
     AUTOLOGIN_SERVICE_NAME = 'gdm3-autologin'
-    USER_NAME = tailsgreeter.config.LUSER
 
     def __init__(self, server_ready_cb=None, session_opened_cb=None):
         self.server_ready = False
@@ -98,8 +97,8 @@ class GdmClient (object):
         logging.debug("Received conversation stopped")
         raise NotImplementedError
 
-    def do_login(self):
+    def do_login(self, user_name):
         if self.server_ready:
-            GLib.idle_add(lambda: self.__greeter_client.call_begin_auto_login(GdmClient.USER_NAME))
+            GLib.idle_add(lambda: self.__greeter_client.call_begin_auto_login(user_name))
         else:
             raise tailsgreeter.errors.GdmServerNotReady
