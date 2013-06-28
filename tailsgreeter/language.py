@@ -30,6 +30,7 @@ import locale
 import pycountry
 import icu
 
+from gi.repository import GLib
 from gi.repository import Gdk
 from gi.repository import GdkX11
 from gi.repository import Gtk
@@ -268,6 +269,7 @@ class LocalisationSettings(object):
     """
     def __init__(self, greeter):
         self._greeter = greeter
+        self.__act_user = None
 
         self._xkl_engine = Xkl.Engine.get_instance(GdkX11.x11_get_default_xdisplay())
         self._xkl_registry = Xkl.ConfigRegistry.get_instance(self._xkl_engine)
@@ -284,6 +286,19 @@ class LocalisationSettings(object):
         self._variant = ''
         self._options = 'grp:alt_shift_toggle'
 
+        actusermanager = AccountsService.UserManager.get_default()
+        actusermanager.connect("notify::is-loaded",  self.__on_user_manager_loaded)
+
+
+    def __on_user_manager_loaded(self, manager, pspec, data=None):
+        logging.debug("Recieved AccountsManager signal is-loaded")
+        act_user = manager.get_user(tailsgreeter.config.LUSER)
+        if not act_user.is_loaded():
+            raise RuntimeError("User manager for %s not loaded" % tailsgreeter.config.LUSER)
+        self.__act_user = act_user
+
+        # XXX: where to do that?
+        logging.debug("Setting language, locale and layout")
         self.set_language('en')
         self.set_locale('en_US')
         self.set_layout('us')
@@ -398,7 +413,14 @@ class LocalisationSettings(object):
         self.set_locale(default_locale)
 
     def __apply_locale(self):
-        self._greeter.SelectLanguage(self._locale)
+        lang = locale.normalize(self._locale).replace('UTF8', 'UTF-8')
+        logging.debug("Setting language to %s", lang)
+
+        if self.__act_user:
+            GLib.idle_add(lambda:
+                self.__act_user.set_language(locale.normalize(lang)))
+        else:
+            raise RuntimeError("AccountsManager not ready")
 
     # LAYOUTS
 
