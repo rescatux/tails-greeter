@@ -48,6 +48,7 @@ class GdmClient (object):
         self.__greeter_client.connect('authentication-failed', self.__on_authentication_failed)
         self.__greeter_client.connect('conversation-stopped', self.__on_conversation_stopped)
 
+        # XXX: wait for the server to be ready?
         self.__greeter_client.call_start_conversation(GdmClient.AUTOLOGIN_SERVICE_NAME)
 
         # XXX: to activate the main loop or something like that
