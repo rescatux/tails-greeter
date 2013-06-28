@@ -416,7 +416,7 @@ class LocalisationSettings(object):
         lang = locale.normalize(
             self._locale + "." + locale.getpreferredencoding(self._locale)
         )
-        logging.debug("Setting language to %s", lang)
+        logging.debug("Setting session language to %s", lang)
 
         if self.__act_user:
             GLib.idle_add(lambda:
