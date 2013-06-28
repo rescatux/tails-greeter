@@ -25,6 +25,7 @@ from gi.repository import GLib
 import tailsgreeter.config
 
 class GdmClient (object):
+    """Greeter client class"""
     
     AUTOLOGIN_SERVICE_NAME = 'gdm3-autologin'
 
@@ -98,7 +99,9 @@ class GdmClient (object):
         raise NotImplementedError
 
     def do_login(self, user_name):
-        if self.server_ready:
-            GLib.idle_add(lambda: self.__greeter_client.call_begin_auto_login(user_name))
-        else:
+        """Login using autologin"""
+        if not self.server_ready:
             raise tailsgreeter.errors.GdmServerNotReady
+
+        GLib.idle_add(
+            lambda: self.__greeter_client.call_begin_auto_login(user_name))
