@@ -501,6 +501,7 @@ class LocalisationSettings(object):
                 logging.debug("Default layout is %s", layout_code)
                 default_layout = layout_code
             elif country == layout_code:
+                logging.debug("Backup layout is %s", layout_code)
                 backup_layout = layout_code
         if not default_layout:
             logging.debug("No default layout")
