@@ -29,7 +29,7 @@ import icu
 from subprocess import Popen, PIPE
 from icu import Locale, Collator
 
-import GdmGreeter.config
+import tailsgreeter.config
 
 
 def ln_cc(lang_name):
@@ -80,7 +80,7 @@ def get_texts(langs):
     for k, l in langs.iteritems():
         loc = l[0].split('_')[0]
         try:
-            result[str(loc)] = gettext.translation(GdmGreeter.__appname__, GdmGreeter.config.locales_path, [str(loc)])
+            result[str(loc)] = gettext.translation(tailsgreeter.__appname__, tailsgreeter.config.locales_path, [str(loc)])
         except IOError:
             logging.debug('Failed to get texts for %s locale', loc)
     return result
@@ -205,7 +205,7 @@ def layouts_with_names(layouts, locale='C'):
     return layouts_with_names
 
 def __get_langcodes():
-    with open(GdmGreeter.config.language_codes_path, 'r') as f:
+    with open(tailsgreeter.config.language_codes_path, 'r') as f:
         langcodes = [ line.rstrip('\n') for line in f.readlines() ]
     logging.debug('%s languages found', len(langcodes))
     return langcodes
@@ -304,8 +304,8 @@ class LocalisationSettings(object):
         else:
             layout = self._layout
             variant = self._variant
-        with open(GdmGreeter.config.locale_output_path, 'w') as f:
-            os.chmod(GdmGreeter.config.locale_output_path, 0o600)
+        with open(tailsgreeter.config.locale_output_path, 'w') as f:
+            os.chmod(tailsgreeter.config.locale_output_path, 0o600)
             f.write('TAILS_LOCALE_NAME=%s\n' % self._locale)
             f.write('TAILS_XKBMODEL=%s\n' % 'pc105') # use default value from /etc/default/keyboard
             f.write('TAILS_XKBLAYOUT=%s\n' % layout)
@@ -327,7 +327,7 @@ class LocalisationSettings(object):
         """Return a list of default languages codes
 
         """
-        return languages_from_locales(GdmGreeter.config.default_locales)
+        return languages_from_locales(tailsgreeter.config.default_locales)
 
     def get_default_languages_with_names(self):
         return languages_with_names(self.get_default_languages(), self.get_locale())

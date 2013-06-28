@@ -24,17 +24,17 @@
 from gi.repository import Gdk, Gtk
 import logging, gettext, os
 _ = gettext.gettext
-from GdmGreeter.language import TranslatableWindow
-import GdmGreeter
-import GdmGreeter.language as language
+from tailsgreeter.language import TranslatableWindow
+import tailsgreeter
+import tailsgreeter.language as language
 
 class LangDialog(TranslatableWindow):
     """Language selection dialog"""
 
     def __init__(self):
         builder = Gtk.Builder()
-        builder.set_translation_domain(GdmGreeter.__appname__)
-        builder.add_from_file(os.path.join(GdmGreeter.GLADE_DIR, "langdialog.glade"))
+        builder.set_translation_domain(tailsgreeter.__appname__)
+        builder.add_from_file(os.path.join(tailsgreeter.GLADE_DIR, "langdialog.glade"))
         self.dialog = builder.get_object("languages_dialog")
         self.treeview = builder.get_object("languages_treeview")
         self.liststore = builder.get_object("languages_liststore")
@@ -74,8 +74,8 @@ class LangPanel(TranslatableWindow):
 
         # Build UI
         builder = Gtk.Builder()
-        builder.set_translation_domain(GdmGreeter.__appname__)
-        builder.add_from_file(os.path.join(GdmGreeter.GLADE_DIR, "langpanel.glade"))
+        builder.set_translation_domain(tailsgreeter.__appname__)
+        builder.add_from_file(os.path.join(tailsgreeter.GLADE_DIR, "langpanel.glade"))
         builder.connect_signals(self)
         self.window = builder.get_object("langpanel")
 

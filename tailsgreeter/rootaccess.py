@@ -24,7 +24,7 @@ import os
 import logging
 import pipes
 
-import GdmGreeter.config
+import tailsgreeter.config
 
 class RootAccessSettings(object):
     """Model storing settings related to root access
@@ -43,15 +43,15 @@ class RootAccessSettings(object):
     def password(self, password):
         self._password = password
         if password:
-            with open(GdmGreeter.config.rootpassword_output_path, 'w') as f:
-                os.chmod(GdmGreeter.config.rootpassword_output_path, 0o600)
+            with open(tailsgreeter.config.rootpassword_output_path, 'w') as f:
+                os.chmod(tailsgreeter.config.rootpassword_output_path, 0o600)
                 f.write('TAILS_USER_PASSWORD=%s\n' % pipes.quote(self.password))
                 logging.debug('password written to %s',
-                              GdmGreeter.config.rootpassword_output_path)
+                              tailsgreeter.config.rootpassword_output_path)
         else:
             try:
-                os.unlink(GdmGreeter.config.rootpassword_output_path)
-                logging.debug('removed %s', GdmGreeter.config.rootpassword_output_path)
+                os.unlink(tailsgreeter.config.rootpassword_output_path)
+                logging.debug('removed %s', tailsgreeter.config.rootpassword_output_path)
             except OSError:
                 # configuration file does not exist
                 pass

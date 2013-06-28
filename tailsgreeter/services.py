@@ -66,7 +66,7 @@ class GdmDbusService(object):
             log("%s:%s%s" % (self.interface, name, str(args)))
 
 
-class GdmGreeterService(GdmDbusService):
+class TailsGreeterService(GdmDbusService):
     """general greeter class"""
     path = '/org/gnome/DisplayManager/GreeterServer'
     address = 'org.gnome.DisplayManager.GreeterServer'

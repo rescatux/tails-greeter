@@ -27,10 +27,10 @@ import subprocess
 import gettext
 _ = gettext.gettext
 
-import GdmGreeter
-import GdmGreeter.config
-import GdmGreeter.errors
-from GdmGreeter.utils import unicode_to_utf8
+import tailsgreeter
+import tailsgreeter.config
+import tailsgreeter.errors
+from tailsgreeter.utils import unicode_to_utf8
 
 class PersistenceSettings(object):
     """Model storing settings related to persistence
@@ -55,7 +55,7 @@ class PersistenceSettings(object):
         out = unicode_to_utf8(out)
         err = unicode_to_utf8(err)
         if proc.returncode:
-            raise GdmGreeter.errors.LivePersistError(
+            raise tailsgreeter.errors.LivePersistError(
                 _("live-persist failed with return code %(returncode)s:\n%(stderr)s")
                 % { 'returncode': proc.returncode, 'stderr': err }
                 )
@@ -67,8 +67,8 @@ class PersistenceSettings(object):
         cleartext_device = self.unlock_device(device, password)
         logging.debug("unlocked cleartext_device: %s", cleartext_device)
         self.setup_persistence(cleartext_device, readonly)
-        with open(GdmGreeter.config.persistence_state_file, 'w') as f:
-            os.chmod(GdmGreeter.config.persistence_state_file, 0o600)
+        with open(tailsgreeter.config.persistence_state_file, 'w') as f:
+            os.chmod(tailsgreeter.config.persistence_state_file, 0o600)
             f.write('TAILS_PERSISTENCE_ENABLED=true\n')
             if readonly:
                 f.write('TAILS_PERSISTENCE_READONLY=true\n')
@@ -95,7 +95,7 @@ class PersistenceSettings(object):
                 logging.debug(
                     "cryptsetup failed with return code %(returncode)s:\n%(stdout)s\n%(stderr)s"
                     % { 'returncode': proc.returncode, 'stdout': out, 'stderr': err })
-                raise GdmGreeter.errors.WrongPassphraseError(
+                raise tailsgreeter.errors.WrongPassphraseError(
                     _("cryptsetup failed with return code %(returncode)s:\n%(stdout)s\n%(stderr)s")
                     % { 'returncode': proc.returncode, 'stdout': out, 'stderr': err }
                     )
@@ -120,7 +120,7 @@ class PersistenceSettings(object):
         out = unicode_to_utf8(out)
         err = unicode_to_utf8(err)
         if proc.returncode:
-            raise GdmGreeter.errors.LivePersistError(
+            raise tailsgreeter.errors.LivePersistError(
                 _("live-persist failed with return code %(returncode)s:\n%(stdout)s\n%(stderr)s")
                 % { 'returncode': proc.returncode, 'stdout': out, 'stderr': err }
                 )

@@ -20,9 +20,9 @@
 """Tails-greeter
 
 """
-import GdmGreeter.errors
+import tailsgreeter.errors
 
 GLADE_DIR = './glade'
 __appname__ = 'tails-greeter'
 __version__ = '0.9.4'
-__all__ = GdmGreeter.errors
+__all__ = tailsgreeter.errors

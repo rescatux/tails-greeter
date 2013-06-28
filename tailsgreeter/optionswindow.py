@@ -22,8 +22,8 @@
 
 from gi.repository import Gdk, Gtk
 import logging, os
-import GdmGreeter
-from GdmGreeter.language import TranslatableWindow
+import tailsgreeter
+from tailsgreeter.language import TranslatableWindow
 
 class OptionsWindow(TranslatableWindow):
     """Display a pre-login window"""
@@ -32,8 +32,8 @@ class OptionsWindow(TranslatableWindow):
         self.greeter = greeter
 
         builder = Gtk.Builder()
-        builder.set_translation_domain(GdmGreeter.__appname__)
-        builder.add_from_file(os.path.join(GdmGreeter.GLADE_DIR, "optionswindow.glade"))
+        builder.set_translation_domain(tailsgreeter.__appname__)
+        builder.add_from_file(os.path.join(tailsgreeter.GLADE_DIR, "optionswindow.glade"))
         builder.connect_signals(self)
         self.entry_password = builder.get_object("password_entry")
         self.entry_password2 = builder.get_object("password_entry2")

@@ -14,7 +14,7 @@ N. B> username ``amnesia'' is hardcoded into it.
 
 Code QA:
 pylint --rcfile=.pylint.d/.pylintrc community-greeter.py
-pylint --rcfile=.pylint.d/.pylintrc GdmGreeter
+pylint --rcfile=.pylint.d/.pylintrc tailsgreeter
 
 Disabled reports:
 C0103 (Invalid name) - python's name convention is not universal and conflicts with d-bus

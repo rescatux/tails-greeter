@@ -23,8 +23,8 @@
 
 from gi.repository import Gdk, Gtk
 import logging, os
-import GdmGreeter
-from GdmGreeter.language import TranslatableWindow
+import tailsgreeter
+from tailsgreeter.language import TranslatableWindow
 
 class PersistenceWindow(TranslatableWindow):
     """First greeter screen"""
@@ -33,8 +33,8 @@ class PersistenceWindow(TranslatableWindow):
         self.greeter = greeter
 
         builder = Gtk.Builder()
-        builder.set_translation_domain(GdmGreeter.__appname__)
-        builder.add_from_file(os.path.join(GdmGreeter.GLADE_DIR, "persistencewindow.glade"))
+        builder.set_translation_domain(tailsgreeter.__appname__)
+        builder.add_from_file(os.path.join(tailsgreeter.GLADE_DIR, "persistencewindow.glade"))
         builder.connect_signals(self)
 
         self.moreoptions = False
@@ -88,7 +88,7 @@ class PersistenceWindow(TranslatableWindow):
                     readonly=self.readonly_checkbutton.get_active()
                     )
                 return True
-            except GdmGreeter.errors.WrongPassphraseError:
+            except tailsgreeter.errors.WrongPassphraseError:
                 self.entry_passphrase.set_text('')
                 self.warning_area.show_all()
                 return False

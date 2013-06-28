@@ -22,7 +22,7 @@ import os
 import logging
 import pipes
 
-import GdmGreeter.config
+import tailsgreeter.config
 
 class CamouflageSettings(object):
     """Model storing settings related to camouflage
@@ -39,7 +39,7 @@ class CamouflageSettings(object):
 
     @os.setter
     def os(self, new_os):
-        camouflage_settings_file = GdmGreeter.config.camouflage_settings
+        camouflage_settings_file = tailsgreeter.config.camouflage_settings
         self._os = new_os
         if new_os:
             with open(camouflage_settings_file, 'w') as f:

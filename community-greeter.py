@@ -41,19 +41,19 @@ logging.LogRecord.getMessage = print_log_record_on_error(logging.LogRecord.getMe
 
 from pipes import quote
 
-import GdmGreeter.config
-import GdmGreeter.rootaccess
-import GdmGreeter.camouflage
-import GdmGreeter.persistence
+import tailsgreeter.config
+import tailsgreeter.rootaccess
+import tailsgreeter.camouflage
+import tailsgreeter.persistence
 
-from GdmGreeter.services import GdmGreeterService
-from GdmGreeter.language import TranslatableWindow
-from GdmGreeter.langpanel import LangPanel
-from GdmGreeter.persistencewindow import PersistenceWindow
-from GdmGreeter.optionswindow import OptionsWindow
-from GdmGreeter import GLADE_DIR, __appname__
+from tailsgreeter.services import TailsGreeterService
+from tailsgreeter.language import TranslatableWindow
+from tailsgreeter.langpanel import LangPanel
+from tailsgreeter.persistencewindow import PersistenceWindow
+from tailsgreeter.optionswindow import OptionsWindow
+from tailsgreeter import GLADE_DIR, __appname__
 
-class CommunityGreeterApp(GdmGreeterService):
+class CommunityGreeterApp(TailsGreeterService):
     """Tails greeter main controller
 
     This class is the greeter dbus service"""
@@ -62,7 +62,7 @@ class CommunityGreeterApp(GdmGreeterService):
     glade_dir = GLADE_DIR
 
     def __init__(self, *args, **kwargs):
-        GdmGreeterService.__init__(self)
+        TailsGreeterService.__init__(self)
         self.language = 'en_US.UTF-8'
         self.session = None
         self.forced = False
@@ -71,14 +71,15 @@ class CommunityGreeterApp(GdmGreeterService):
         self.postponed_text = None
         self.ready = False
         self.translated = False
-        self.persistence = GdmGreeter.persistence.PersistenceSettings()
+        self.persistence = tailsgreeter.persistence.PersistenceSettings()
         self._loaded_windows = []
-        self.localisationsettings = GdmGreeter.language.LocalisationSettings(self)
+        self.localisationsettings = tailsgreeter.language.LocalisationSettings(self)
         self.langpanel = self.load_window(LangPanel, self)
         self.persistencewindow = self.load_window(PersistenceWindow, self)
         self.optionswindow = self.load_window(OptionsWindow, self)
-        self.rootaccess = GdmGreeter.rootaccess.RootAccessSettings()
-        self.camouflage = GdmGreeter.camouflage.CamouflageSettings()
+        self.rootaccess = tailsgreeter.rootaccess.RootAccessSettings()
+        self.camouflage = tailsgreeter.camouflage.CamouflageSettings()
+        self.autologinclient = tailsgreeter.autologinclient.AutologinClient()
 
     def load_window(self, window_class, *args, **kwargs):
         """When loading a window, also translate it"""
@@ -107,7 +108,7 @@ class CommunityGreeterApp(GdmGreeterService):
         """Server is ready"""
         self.langpanel.window.show()
         self.persistencewindow.window.show()
-        GdmGreeterService.Ready(self)
+        TailsGreeterService.Ready(self)
         self.ready = True
         logging.warn("greeter is ready.")
 
@@ -143,13 +144,13 @@ class CommunityGreeterApp(GdmGreeterService):
         """Server wants to ask the user for something"""
         # XXX: I think that server actually wants username
         logging.debug("got infoquery: %s", text)
-        self.obj.AnswerQuery(GdmGreeter.config.LUSER)
+        self.obj.AnswerQuery(tailsgreeter.config.LUSER)
 
     def SecretInfoQuery(self, text):
         """Server wants to ask for some secret info"""
         # XXX
         if self.forced:
-            self.obj.AnswerQuery(GdmGreeter.config.LPASSWORD)
+            self.obj.AnswerQuery(tailsgreeter.config.LPASSWORD)
         else:
             # XXX
             logging.debug('got SecretInfoQuery: %s', text)
@@ -161,7 +162,7 @@ class CommunityGreeterApp(GdmGreeterService):
         self.forced = True
         self.obj.SelectLanguage('en_US.UTF-8')
         if self.postponed:
-            self.obj.AnswerQuery(GdmGreeter.config.LUSER)
+            self.obj.AnswerQuery(tailsgreeter.config.LUSER)
 
     def FinishProcess(self):
         """We're done, quit gtk app"""
