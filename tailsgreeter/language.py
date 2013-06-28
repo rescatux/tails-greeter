@@ -296,12 +296,6 @@ class LocalisationSettings(object):
             raise RuntimeError("User manager for %s not loaded" % tailsgreeter.config.LUSER)
         self.__act_user = act_user
 
-        # XXX: where to do that?
-        logging.debug("Setting language, locale and layout")
-        self.set_language('en')
-        self.set_locale('en_US')
-        self.set_layout('us')
-
     def __fill_locales_dict(self, locales):
         """assemble dictionary of language codes to corresponding locales list
         
