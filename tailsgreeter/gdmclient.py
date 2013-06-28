@@ -105,5 +105,4 @@ class GdmClient (object):
         if self.server_ready:
             GLib.idle_add(lambda: self.__greeter_client.call_begin_auto_login(GdmClient.USER_NAME))
         else:
-            logging.info("Called do_login while not ready yet")
-            pass
+            raise tailsgreeter.errors.GdmServerNotReady
