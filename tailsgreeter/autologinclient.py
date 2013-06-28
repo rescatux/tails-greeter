@@ -29,8 +29,9 @@ class AutologinClient (object):
     AUTOLOGIN_SERVICE_NAME = 'gdm3-autologin'
     USER_NAME = tailsgreeter.config.LUSER
 
-    def __init__(self):
-        self.client_is_ready = False
+    def __init__(self, server_ready_cb):
+        self.server_ready = False
+        self.server_ready_cb = server_ready_cb
 
         self.__greeter_client = GdmGreeter.Client()
         self.__greeter_client.open_connection()
@@ -59,7 +60,8 @@ class AutologinClient (object):
 
     def __on_ready(self, client, service_name):
         logging.debug("Received ready")
-        self.client_is_ready = True
+        self.server_ready = True
+        self.server_ready_cb()
 
     def __on_session_opened(self, client, service_name):
         logging.debug("Received session opened")
@@ -100,7 +102,7 @@ class AutologinClient (object):
         raise NotImplementedError
 
     def do_login(self):
-        if self.client_is_ready:
+        if self.server_ready:
             GLib.idle_add(lambda: self.__greeter_client.call_begin_auto_login(AutologinClient.USER_NAME))
         else:
             logging.info("Called do_login while not ready yet")

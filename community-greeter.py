@@ -54,7 +54,7 @@ from tailsgreeter.persistencewindow import PersistenceWindow
 from tailsgreeter.optionswindow import OptionsWindow
 from tailsgreeter import GLADE_DIR, __appname__
 
-class CommunityGreeterApp(TailsGreeterService):
+class CommunityGreeterApp():
     """Tails greeter main controller
 
     This class is the greeter dbus service"""
@@ -63,7 +63,6 @@ class CommunityGreeterApp(TailsGreeterService):
     glade_dir = GLADE_DIR
 
     def __init__(self, *args, **kwargs):
-        TailsGreeterService.__init__(self)
         self.language = 'en_US.UTF-8'
         self.session = None
         self.forced = False
@@ -80,7 +79,9 @@ class CommunityGreeterApp(TailsGreeterService):
         self.optionswindow = self.load_window(OptionsWindow, self)
         self.rootaccess = tailsgreeter.rootaccess.RootAccessSettings()
         self.camouflage = tailsgreeter.camouflage.CamouflageSettings()
-        # self.autologinclient = tailsgreeter.autologinclient.AutologinClient()
+        self.autologinclient = tailsgreeter.autologinclient.AutologinClient(
+            server_ready_cb = lambda: self.server_ready()
+        )
 
     def load_window(self, window_class, *args, **kwargs):
         """When loading a window, also translate it"""
@@ -105,11 +106,11 @@ class CommunityGreeterApp(TailsGreeterService):
         # XXX: check that we already sent the username?
         self.autologinclient.do_login()
 
-    def Ready(self):
+    def server_ready(self):
         """Server is ready"""
+        logging.debug("Entering server_ready")
         self.langpanel.window.show()
         self.persistencewindow.window.show()
-        TailsGreeterService.Ready(self)
         self.ready = True
         logging.warn("greeter is ready.")
 
@@ -173,6 +174,5 @@ class CommunityGreeterApp(TailsGreeterService):
 if __name__ == "__main__":
     logging.info("Started.")
     app = CommunityGreeterApp()
-    app.Ready()
     Gtk.main()
 
