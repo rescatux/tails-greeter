@@ -71,6 +71,9 @@ class CommunityGreeterApp():
         self.postponed_text = None
         self.ready = False
         self.translated = False
+        self.gdmclient = tailsgreeter.gdmclient.GdmClient(
+            server_ready_cb=self.server_ready
+        )
         self.persistence = tailsgreeter.persistence.PersistenceSettings()
         self._loaded_windows = []
         self.localisationsettings = tailsgreeter.language.LocalisationSettings(self)
@@ -79,9 +82,6 @@ class CommunityGreeterApp():
         self.optionswindow = self.load_window(OptionsWindow, self)
         self.rootaccess = tailsgreeter.rootaccess.RootAccessSettings()
         self.camouflage = tailsgreeter.camouflage.CamouflageSettings()
-        self.gdmclient = tailsgreeter.gdmclient.GdmClient(
-            server_ready_cb = lambda: self.server_ready()
-        )
 
     def load_window(self, window_class, *args, **kwargs):
         """When loading a window, also translate it"""
