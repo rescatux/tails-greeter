@@ -72,7 +72,8 @@ class CommunityGreeterApp():
         self.ready = False
         self.translated = False
         self.gdmclient = tailsgreeter.gdmclient.GdmClient(
-            server_ready_cb=self.server_ready
+            server_ready_cb=self.server_ready,
+            session_opened_cb = self.FinishProcess
         )
         self.persistence = tailsgreeter.persistence.PersistenceSettings()
         self._loaded_windows = []
