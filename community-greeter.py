@@ -128,40 +128,6 @@ class CommunityGreeterApp():
         # logging.debug("Setting language to %s", lang)
         # user.set_language(locale.normalize(lang))
 
-    def DefaultLanguageNameChanged(self, lang):
-        """default language name changed"""
-        logging.debug('DefaultLanguageNameChanged to %s', lang)
-        self.language = lang
-
-    def DefaultSessionNameChanged(self, session):
-        """default session name changed"""
-        logging.debug('DefaultSessionNameChanged to %s', session)
-        self.session = str(session)
-
-    def InfoQuery(self, text):
-        """Server wants to ask the user for something"""
-        # XXX: I think that server actually wants username
-        logging.debug("got infoquery: %s", text)
-        self.obj.AnswerQuery(tailsgreeter.config.LUSER)
-
-    def SecretInfoQuery(self, text):
-        """Server wants to ask for some secret info"""
-        # XXX
-        if self.forced:
-            self.obj.AnswerQuery(tailsgreeter.config.LPASSWORD)
-        else:
-            # XXX
-            logging.debug('got SecretInfoQuery: %s', text)
-
-    def ForcedLogin(self):
-        """Immediate login"""
-        # XXX
-        logging.debug('forced login: skipping all widgets...')
-        self.forced = True
-        self.obj.SelectLanguage('en_US.UTF-8')
-        if self.postponed:
-            self.obj.AnswerQuery(tailsgreeter.config.LUSER)
-
     def FinishProcess(self):
         """We're done, quit gtk app"""
         logging.info("Finished.")
