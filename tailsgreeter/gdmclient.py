@@ -20,8 +20,8 @@ Thin layer on top of libgdmgreeter.
 import logging
 
 from gi.repository import GdmGreeter
-# from gi.repository import Gtk
 from gi.repository import GLib
+
 import tailsgreeter.config
 
 class GdmClient (object):
@@ -51,14 +51,6 @@ class GdmClient (object):
 
         # XXX: wait for the server to be ready?
         self.__greeter_client.call_start_conversation(GdmClient.AUTOLOGIN_SERVICE_NAME)
-
-        # XXX: to activate the main loop or something like that
-        # self.__dialog = Gtk.MessageDialog(None,
-        #                            Gtk.DialogFlags.DESTROY_WITH_PARENT,
-        #                            Gtk.MessageType.INFO,
-        #                            Gtk.ButtonsType.OK,
-        #                            "Click to start autologin")
-        # self.__dialog.run()
 
     def __on_ready(self, client, service_name):
         logging.debug("Received ready")
