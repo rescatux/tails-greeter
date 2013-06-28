@@ -267,8 +267,7 @@ class LocalisationSettings(object):
     """Model storing settings related to language and keyboard
 
     """
-    def __init__(self, greeter):
-        self._greeter = greeter
+    def __init__(self):
         self.__act_user = None
 
         self._xkl_engine = Xkl.Engine.get_instance(GdkX11.x11_get_default_xdisplay())

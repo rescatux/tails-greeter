@@ -75,7 +75,7 @@ class CommunityGreeterApp():
         )
         self.persistence = tailsgreeter.persistence.PersistenceSettings()
         self._loaded_windows = []
-        self.localisationsettings = tailsgreeter.language.LocalisationSettings(self)
+        self.localisationsettings = tailsgreeter.language.LocalisationSettings()
         self.langpanel = self.load_window(LangPanel, self)
         self.persistencewindow = self.load_window(PersistenceWindow, self)
         self.optionswindow = self.load_window(OptionsWindow, self)
