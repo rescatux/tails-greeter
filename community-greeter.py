@@ -67,21 +67,29 @@ class CommunityGreeterApp():
         self.forced = False
         self.postponed = False
         self.postponed_text = None
+        self._usermanager_ready = False
+        self._gdmserver_ready = False
         self.ready = False
         self.translated = False
+        self._loaded_windows = []
+        
+        # Load models
         self.gdmclient = tailsgreeter.gdmclient.GdmClient(
             server_ready_cb=self.server_ready,
             session_opened_cb = self.close_app
         )
         self.persistence = tailsgreeter.persistence.PersistenceSettings()
-        self._loaded_windows = []
-        self.localisationsettings = tailsgreeter.language.LocalisationSettings()
-        self.langpanel = self.load_window(LangPanel, self)
-        self.persistencewindow = self.load_window(PersistenceWindow, self)
-        self.optionswindow = self.load_window(OptionsWindow, self)
+        self.localisationsettings = tailsgreeter.language.LocalisationSettings(
+            usermanager_loaded_cb = self.usermanager_loaded
+        )
         self.rootaccess = tailsgreeter.rootaccess.RootAccessSettings()
         self.camouflage = tailsgreeter.camouflage.CamouflageSettings()
 
+        # Load views
+        self.langpanel = self.load_window(LangPanel, self)
+        self.persistencewindow = self.load_window(PersistenceWindow, self)
+        self.optionswindow = self.load_window(OptionsWindow, self)
+        
     def load_window(self, window_class, *args, **kwargs):
         """When loading a window, also translate it"""
         window = window_class(*args, **kwargs)
@@ -107,11 +115,27 @@ class CommunityGreeterApp():
     def server_ready(self):
         """Server is ready"""
         logging.debug("Entering server_ready")
+        self._gdmserver_ready = True
         self.localisationsettings.set_layout('us')
-        self.langpanel.window.show()
-        self.persistencewindow.window.show()
-        self.ready = True
-        logging.warn("greeter is ready.")
+        self.maybe_show_ui()
+
+    def usermanager_loaded(self):
+        """UserManager is ready"""
+        logging.debug("Entering usermanager_loaded")
+        self._usermanager_ready = True
+        self.localisationsettings.set_locale('en_US')
+        self.maybe_show_ui()
+
+    def maybe_show_ui(self):
+        """Show UI if server and usermanager are both ready"""
+        logging.debug("Entering maybe_show_ui")
+        if self._gdmserver_ready and self._usermanager_ready:
+            self.ready = True
+            logging.info("tails-greeter is ready.")
+            self.langpanel.window.show()
+            self.persistencewindow.window.show()
+        else:
+            logging.debug("Something is not ready; not showing UI yet")
 
     def close_app(self):
         """We're done, quit gtk app"""
