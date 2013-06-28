@@ -138,12 +138,15 @@ class LangPanel(TranslatableWindow):
 
     def populate_layouts(self):
         """populate the lists for current locale"""
+        logging.debug("Entering populate_layouts")
         self.cb_layouts.get_model().clear()
         count = 0
         default_position = 0
         for l in self.greeter.localisationsettings.get_default_layouts_with_names():
+            logging.debug("Considering layout %s", l[0])
             self.cb_layouts.get_model().append(l)
             if l[0] == self.greeter.localisationsettings.get_layout():
+                logging.debug("Layout %s is the default one", l[0])
                 default_position = count
             count += 1
         self.cb_layouts.get_model().append(['+', _("Other...")])

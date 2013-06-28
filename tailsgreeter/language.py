@@ -503,12 +503,16 @@ class LocalisationSettings(object):
             elif country_from_locale(self._locale).lower() == layout_code:
                 backup_layout = layout_code
         if not default_layout:
+            logging.debug("No default layout")
             if backup_layout:
+                logging.debug("Using backup layout")
                 default_layout = backup_layout
             elif len(default_layouts) > 0:
                 default_layout = self.get_default_layouts()[0]
+                logging.debug("Using %s as default layout", default_layout)
             else:
                 default_layout = 'us'
+                logging.debug("Using us as default layout")
         self.set_layout(default_layout)            
 
     def __apply_layout_to_current_screen(self):
