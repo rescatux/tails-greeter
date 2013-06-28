@@ -14,7 +14,7 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>
 #
 """
-Manage GDM autologin: thin layer on top of libgdmgreeter.
+Thin layer on top of libgdmgreeter.
 """
 
 import logging
@@ -24,7 +24,7 @@ from gi.repository import GdmGreeter
 from gi.repository import GLib
 import tailsgreeter.config
 
-class AutologinClient (object):
+class GdmClient (object):
     
     AUTOLOGIN_SERVICE_NAME = 'gdm3-autologin'
     USER_NAME = tailsgreeter.config.LUSER
@@ -48,7 +48,7 @@ class AutologinClient (object):
         self.__greeter_client.connect('authentication-failed', self.__on_authentication_failed)
         self.__greeter_client.connect('conversation-stopped', self.__on_conversation_stopped)
 
-        self.__greeter_client.call_start_conversation(AutologinClient.AUTOLOGIN_SERVICE_NAME)
+        self.__greeter_client.call_start_conversation(GdmClient.AUTOLOGIN_SERVICE_NAME)
 
         # XXX: to activate the main loop or something like that
         # self.__dialog = Gtk.MessageDialog(None,
@@ -103,7 +103,7 @@ class AutologinClient (object):
 
     def do_login(self):
         if self.server_ready:
-            GLib.idle_add(lambda: self.__greeter_client.call_begin_auto_login(AutologinClient.USER_NAME))
+            GLib.idle_add(lambda: self.__greeter_client.call_begin_auto_login(GdmClient.USER_NAME))
         else:
             logging.info("Called do_login while not ready yet")
             pass

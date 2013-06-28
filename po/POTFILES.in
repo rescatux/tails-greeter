@@ -2,14 +2,14 @@ community-greeter.py
 glade/persistencewindow.glade
 glade/optionswindow.glade
 glade/langpanel.glade
-GdmGreeter/__init__.py
-GdmGreeter/services.py
-GdmGreeter/optionswindow.py
-GdmGreeter/rootaccess.py
-GdmGreeter/camouflage.py
-GdmGreeter/persistence.py
-GdmGreeter/persistencewindow.py
-GdmGreeter/optionswindow.py
-GdmGreeter/langpanel.py
-GdmGreeter/language.py
+tailsgreeter/__init__.py
+tailsgreeter/services.py
+tailsgreeter/optionswindow.py
+tailsgreeter/rootaccess.py
+tailsgreeter/camouflage.py
+tailsgreeter/persistence.py
+tailsgreeter/persistencewindow.py
+tailsgreeter/optionswindow.py
+tailsgreeter/langpanel.py
+tailsgreeter/language.py
 

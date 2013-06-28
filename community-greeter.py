@@ -24,7 +24,7 @@ GDM greeter for Tails project using gtk
 import logging, logging.config
 from gi.repository import Gtk
 import sys, os
-import tailsgreeter.autologinclient
+import tailsgreeter.gdmclient
 
 def print_log_record_on_error(func):
     """Wrapper to determine failed logging instance"""
@@ -79,7 +79,7 @@ class CommunityGreeterApp():
         self.optionswindow = self.load_window(OptionsWindow, self)
         self.rootaccess = tailsgreeter.rootaccess.RootAccessSettings()
         self.camouflage = tailsgreeter.camouflage.CamouflageSettings()
-        self.autologinclient = tailsgreeter.autologinclient.AutologinClient(
+        self.gdmclient = tailsgreeter.gdmclient.GdmClient(
             server_ready_cb = lambda: self.server_ready()
         )
 
@@ -104,7 +104,7 @@ class CommunityGreeterApp():
     def login(self):
         """Login GDM to the server"""
         # XXX: check that we already sent the username?
-        self.autologinclient.do_login()
+        self.gdmclient.do_login()
 
     def server_ready(self):
         """Server is ready"""
