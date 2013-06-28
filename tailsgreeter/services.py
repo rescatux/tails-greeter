@@ -80,8 +80,7 @@ class TailsGreeterService(GdmDbusService):
         except dbus.exceptions.DBusException:
             logging.error("Failed to connect to Greeter-Service on %s", address)
             raise
-        GdmDbusService.__init__(self)
-        self.display = GdmDisplay(self.obj.GetDisplayId())
+        # GdmDbusService.__init__(self)
 
     def SelectLanguage(self, lang):
         """Call into GdmGreeter to change the language"""
@@ -100,7 +99,7 @@ class TailsGreeterService(GdmDbusService):
     def Ready(self):
         """Called when greeter service is ready"""
         logging.debug("GdmServer is Ready")
-        self.obj.BeginVerification()
+        # self.obj.BeginVerification()
 
     def InfoQuery(self, text):
         """Server wants to ask the user for something (username normally)"""

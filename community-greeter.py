@@ -24,6 +24,7 @@ GDM greeter for Tails project using gtk
 import logging, logging.config
 from gi.repository import Gtk
 import sys, os
+import tailsgreeter.autologinclient
 
 def print_log_record_on_error(func):
     """Wrapper to determine failed logging instance"""
@@ -79,7 +80,7 @@ class CommunityGreeterApp(TailsGreeterService):
         self.optionswindow = self.load_window(OptionsWindow, self)
         self.rootaccess = tailsgreeter.rootaccess.RootAccessSettings()
         self.camouflage = tailsgreeter.camouflage.CamouflageSettings()
-        self.autologinclient = tailsgreeter.autologinclient.AutologinClient()
+        # self.autologinclient = tailsgreeter.autologinclient.AutologinClient()
 
     def load_window(self, window_class, *args, **kwargs):
         """When loading a window, also translate it"""
@@ -102,7 +103,7 @@ class CommunityGreeterApp(TailsGreeterService):
     def login(self):
         """Login GDM to the server"""
         # XXX: check that we already sent the username?
-        self.obj.AnswerQuery(GdmGreeter.config.LPASSWORD)
+        self.autologinclient.do_login()
 
     def Ready(self):
         """Server is ready"""
@@ -117,12 +118,12 @@ class CommunityGreeterApp(TailsGreeterService):
         # Translate all windows in the login screen
         self.translate_to(lang)
         # Apply chosen language
-        GdmGreeterService.SelectLanguage(self, lang)
+        # TailsGreeterService.SelectLanguage(self, lang)
 
     def SelectLayout(self, layout):
         """The user wants to change layout"""
         # Apply chosen layout
-        #GdmGreeterService.SelectLayout(self, layout)
+        #TailsGreeterService.SelectLayout(self, layout)
         pass
 
     def DefaultLanguageNameChanged(self, lang):
@@ -172,5 +173,6 @@ class CommunityGreeterApp(TailsGreeterService):
 if __name__ == "__main__":
     logging.info("Started.")
     app = CommunityGreeterApp()
+    app.Ready()
     Gtk.main()
 
