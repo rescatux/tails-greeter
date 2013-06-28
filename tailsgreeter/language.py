@@ -22,15 +22,21 @@
 
 """
 
-from gi.repository import Gdk, GdkX11, Gtk, Xkl
-import logging, gettext, pycountry, os
+import logging
+import gettext
+import os
+import locale
+
+import pycountry
 import icu
 
-from subprocess import Popen, PIPE
-from icu import Locale, Collator
+from gi.repository import Gdk
+from gi.repository import GdkX11
+from gi.repository import Gtk
+from gi.repository import Xkl
+from gi.repository import AccountsService
 
 import tailsgreeter.config
-
 
 def ln_cc(lang_name):
     """obtain language code from name
@@ -48,13 +54,13 @@ def ln_country(ln_CC):
     """get country name for locale
     
     example: en_US -> USA"""
-    return Locale(ln_CC).getDisplayCountry(Locale(ln_CC))
+    return icu.Locale(ln_CC).getDisplayCountry(icu.Locale(ln_CC))
 
 def ln_iso639_tri(ln_CC):
     """get iso639 3-letter code
     
     example: en_US -> eng"""
-    return Locale(ln_CC).getISO3Language()
+    return icu.Locale(ln_CC).getISO3Language()
 
 def ln_iso639_2_T_to_B(ln_CC):
     """Convert a ISO-639-2/T code (e.g. deu for German) to a 639-2/B one (e.g. ger for German)"""
@@ -65,7 +71,7 @@ def get_native_langs(lang_list):
     langs_dict = {}
     for l in lang_list:
         # English = Locale(en_GB)...
-        lang =  Locale(l).getDisplayLanguage(Locale(l)).title()
+        lang =  icu.Locale(l).getDisplayLanguage(icu.Locale(l)).title()
         try:
             langs_dict[lang]
         except: #XXX specify exception
@@ -160,10 +166,10 @@ def countries_from_locales(locales):
     return country_codes
 
 def language_name(language_code):
-    return icu.Locale(language_code).getDisplayLanguage(Locale(language_code)).title()
+    return icu.Locale(language_code).getDisplayLanguage(icu.Locale(language_code)).title()
 
 def country_name(locale_code):
-    return icu.Locale(locale_code).getDisplayCountry(Locale(locale_code))
+    return icu.Locale(locale_code).getDisplayCountry(icu.Locale(locale_code))
 
 def layout_name(layout_code):
     if layout_code in _system_layouts_dict:
@@ -176,7 +182,7 @@ def sort_by_name(list, locale='C'):
         # language for its collation rules (languages frequently have
         # custom sorting).  This at least gives us common sorting rules,
         # like stripping accents.
-        collator = Collator.createInstance(Locale(locale))
+        collator = icu.Collator.createInstance(icu.Locale(locale))
     except:
         collator = None
     def compare_choice(elt):
@@ -288,7 +294,7 @@ class LocalisationSettings(object):
         example {en: [en_US, en_GB], ...}"""
         locales_dict = {}
         for locale in locales:
-            # English = Locale(en_GB)...
+            # English = icu.Locale(en_GB)...
             lang = language_from_locale(locale)
             if lang not in locales_dict:
                 locales_dict[lang] = []
