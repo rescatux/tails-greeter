@@ -71,7 +71,7 @@ class CommunityGreeterApp():
         self.translated = False
         self.gdmclient = tailsgreeter.gdmclient.GdmClient(
             server_ready_cb=self.server_ready,
-            session_opened_cb = self.FinishProcess
+            session_opened_cb = self.close_app
         )
         self.persistence = tailsgreeter.persistence.PersistenceSettings()
         self._loaded_windows = []
@@ -113,22 +113,7 @@ class CommunityGreeterApp():
         self.ready = True
         logging.warn("greeter is ready.")
 
-    def SelectLanguage(self, lang):
-        """The user wants to change languages"""
-        # Translate all windows in the login screen
-        logging.debug("Translating interface to %s" % lang)
-        self.translate_to(lang)
-        # XXX: Apply chosen language for the session to be started
-        # from gi.repository import AccountsService
-        # import locale
-        # import tailsgreeter.config
-        # usermanager = AccountsService.UserManager()
-        # user = usermanager.get_user(tailsgreeter.config.LUSER)
-        # lang = locale.normalize(lang).replace('UTF8', 'UTF-8')
-        # logging.debug("Setting language to %s", lang)
-        # user.set_language(locale.normalize(lang))
-
-    def FinishProcess(self):
+    def close_app(self):
         """We're done, quit gtk app"""
         logging.info("Finished.")
         Gtk.main_quit()
