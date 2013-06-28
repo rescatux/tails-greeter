@@ -29,6 +29,32 @@ class AutologinClient (object):
     AUTOLOGIN_SERVICE_NAME = 'gdm3-autologin'
     USER_NAME = tailsgreeter.config.LUSER
 
+    def __init__(self):
+        self.__greeter_client = GdmGreeter.Client()
+        self.__greeter_client.open_connection()
+
+        self.__greeter_client.connect('ready', self.__on_ready)
+        self.__greeter_client.connect('reset', self.__on_reset)
+        self.__greeter_client.connect('default-session-changed', self.__on_default_session_changed)
+        self.__greeter_client.connect('info', self.__on_info)
+        self.__greeter_client.connect('problem', self.__on_problem)
+        self.__greeter_client.connect('info-query', self.__on_info_query)
+        self.__greeter_client.connect('secret-info-query', self.__on_secret_info_query)
+        self.__greeter_client.connect('session-opened', self.__on_session_opened)
+        self.__greeter_client.connect('timed-login-requested', self.__on_timed_login_requested)
+        self.__greeter_client.connect('authentication-failed', self.__on_authentication_failed)
+        self.__greeter_client.connect('conversation-stopped', self.__on_conversation_stopped)
+
+        self.__greeter_client.call_start_conversation(AutologinClient.AUTOLOGIN_SERVICE_NAME)
+
+        # XXX: to activate the main loop or something like that
+        # self.__dialog = Gtk.MessageDialog(None,
+        #                            Gtk.DialogFlags.DESTROY_WITH_PARENT,
+        #                            Gtk.MessageType.INFO,
+        #                            Gtk.ButtonsType.OK,
+        #                            "Click to start autologin")
+        # self.__dialog.run()
+
     def __on_ready(self, client, service_name):
         logging.debug("Received ready")
         pass #XXX
@@ -70,32 +96,6 @@ class AutologinClient (object):
     def __on_conversation_stopped(self, client, service_name):
         logging.debug("Received conversation stopped")
         raise NotImplementedError
-
-    def __init__(self):
-        self.__greeter_client = GdmGreeter.Client()
-        self.__greeter_client.open_connection()
-
-        self.__greeter_client.connect('ready', self.__on_ready)
-        self.__greeter_client.connect('reset', self.__on_reset)
-        self.__greeter_client.connect('default-session-changed', self.__on_default_session_changed)
-        self.__greeter_client.connect('info', self.__on_info)
-        self.__greeter_client.connect('problem', self.__on_problem)
-        self.__greeter_client.connect('info-query', self.__on_info_query)
-        self.__greeter_client.connect('secret-info-query', self.__on_secret_info_query)
-        self.__greeter_client.connect('session-opened', self.__on_session_opened)
-        self.__greeter_client.connect('timed-login-requested', self.__on_timed_login_requested)
-        self.__greeter_client.connect('authentication-failed', self.__on_authentication_failed)
-        self.__greeter_client.connect('conversation-stopped', self.__on_conversation_stopped)
-
-        self.__greeter_client.call_start_conversation(AutologinClient.AUTOLOGIN_SERVICE_NAME)
-
-        # XXX: to activate the main loop or something like that
-        # self.__dialog = Gtk.MessageDialog(None,
-        #                            Gtk.DialogFlags.DESTROY_WITH_PARENT,
-        #                            Gtk.MessageType.INFO,
-        #                            Gtk.ButtonsType.OK,
-        #                            "Click to start autologin")
-        # self.__dialog.run()
 
     def do_login(self):
         # XXX: noop unless ready
