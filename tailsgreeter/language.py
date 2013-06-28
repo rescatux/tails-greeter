@@ -409,12 +409,14 @@ class LocalisationSettings(object):
         self.set_locale(default_locale)
 
     def __apply_locale(self):
-        lang = locale.normalize(self._locale).replace('UTF8', 'UTF-8')
-        logging.debug("Setting language to %s", lang)
+        lang = locale.normalize(
+            self._locale + "." + locale.getpreferredencoding(self._locale)
+        )
+        logging.debug("Setting session language to %s", lang)
 
         if self.__act_user:
             GLib.idle_add(lambda:
-                self.__act_user.set_language(locale.normalize(lang)))
+                self.__act_user.set_language(lang))
         else:
             logging.warning("AccountsManager not ready")
 
