@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
-  <requires lib="gtk+" version="2.20"/>
-  <!-- interface-naming-policy toplevel-contextual -->
+  <!-- interface-requires gtk+ 3.0 -->
+  <object class="GtkImage" id="login_image">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="stock">gtk-apply</property>
+  </object>
   <object class="GtkDialog" id="login_dialog">
     <property name="can_focus">False</property>
     <property name="border_width">5</property>
@@ -13,16 +17,17 @@
     <signal name="key-press-event" handler="key_press_event_cb" swapped="no"/>
     <signal name="delete-event" handler="delete_event_cb" swapped="no"/>
     <child internal-child="vbox">
-      <object class="GtkVBox" id="dialog-vbox1">
+      <object class="GtkBox" id="dialog-vbox1">
         <property name="can_focus">False</property>
         <property name="spacing">10</property>
         <child internal-child="action_area">
-          <object class="GtkHButtonBox" id="dialog-action_area1">
+          <object class="GtkButtonBox" id="dialog-action_area1">
             <property name="can_focus">False</property>
             <property name="layout_style">end</property>
             <child>
               <object class="GtkButton" id="next_button">
                 <property name="label" translatable="yes">Forward</property>
+                <property name="use_action_appearance">False</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
                 <property name="use_action_appearance">False</property>
@@ -38,6 +43,7 @@
             <child>
               <object class="GtkButton" id="login_button">
                 <property name="label" translatable="yes">Login</property>
+                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -114,6 +120,7 @@
                     <property name="homogeneous">True</property>
                     <child>
                       <object class="GtkToggleButton" id="persistence_yes_button">
+                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="receives_default">True</property>
@@ -171,6 +178,7 @@
                     </child>
                     <child>
                       <object class="GtkToggleButton" id="persistence_no_button">
+                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="receives_default">True</property>
@@ -261,8 +269,6 @@
                         <property name="invisible_char_set">True</property>
                         <property name="primary_icon_activatable">False</property>
                         <property name="secondary_icon_activatable">False</property>
-                        <property name="primary_icon_sensitive">True</property>
-                        <property name="secondary_icon_sensitive">True</property>
                       </object>
                       <packing>
                         <property name="expand">True</property>
@@ -273,10 +279,12 @@
                     <child>
                       <object class="GtkCheckButton" id="readonly_checkbutton">
                         <property name="label" translatable="yes">Read-Only?</property>
+                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="receives_default">False</property>
                         <property name="use_action_appearance">False</property>
+                        <property name="xalign">0.5</property>
                         <property name="draw_indicator">True</property>
                       </object>
                       <packing>
@@ -382,6 +390,7 @@
                     <property name="homogeneous">True</property>
                     <child>
                       <object class="GtkToggleButton" id="moreoptions_yes_button">
+                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="receives_default">True</property>
@@ -439,6 +448,7 @@
                     </child>
                     <child>
                       <object class="GtkToggleButton" id="moreoptions_no_button">
+                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="receives_default">True</property>
@@ -520,13 +530,9 @@
       </object>
     </child>
     <action-widgets>
+      <action-widget response="0">next_button</action-widget>
       <action-widget response="0">login_button</action-widget>
     </action-widgets>
-  </object>
-  <object class="GtkImage" id="login_image">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="stock">gtk-apply</property>
   </object>
   <object class="GtkImage" id="next_image">
     <property name="visible">True</property>
