@@ -47,7 +47,6 @@ import tailsgreeter.rootaccess
 import tailsgreeter.camouflage
 import tailsgreeter.persistence
 
-from tailsgreeter.services import TailsGreeterService
 from tailsgreeter.language import TranslatableWindow
 from tailsgreeter.langpanel import LangPanel
 from tailsgreeter.persistencewindow import PersistenceWindow
@@ -66,7 +65,6 @@ class CommunityGreeterApp():
         self.language = 'en_US.UTF-8'
         self.session = None
         self.forced = False
-        self.layout = None
         self.postponed = False
         self.postponed_text = None
         self.ready = False
@@ -129,21 +127,10 @@ class CommunityGreeterApp():
         # logging.debug("Setting language to %s", lang)
         # user.set_language(locale.normalize(lang))
 
-    def SelectLayout(self, layout):
-        """The user wants to change layout"""
-        # Apply chosen layout
-        #TailsGreeterService.SelectLayout(self, layout)
-        pass
-
     def DefaultLanguageNameChanged(self, lang):
         """default language name changed"""
         logging.debug('DefaultLanguageNameChanged to %s', lang)
         self.language = lang
-
-    def DefaultLayoutNameChanged(self, layout):
-        """default layout name changed"""
-        logging.debug('DefaultLayoutNameChanged to %s', layout)
-        self.layout = str(layout)
 
     def DefaultSessionNameChanged(self, session):
         """default session name changed"""

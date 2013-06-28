@@ -297,7 +297,6 @@ class LocalisationSettings(object):
         return locales_dict
 
     def __apply_layout_to_upcoming_session(self):
-        self._greeter.SelectLayout(self._layout)
         if self._layout != 'us':
             layout = '%s,us' % self._layout
             variant = '%s,' % self._variant
