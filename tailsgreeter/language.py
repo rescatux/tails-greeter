@@ -267,7 +267,9 @@ class LocalisationSettings(object):
     """Model storing settings related to language and keyboard
 
     """
-    def __init__(self):
+    def __init__(self, usermanager_loaded_cb=None):
+        self._usermanager_loaded_cb = usermanager_loaded_cb
+
         self.__act_user = None
 
         self._xkl_engine = Xkl.Engine.get_instance(GdkX11.x11_get_default_xdisplay())
@@ -286,15 +288,16 @@ class LocalisationSettings(object):
         self._options = 'grp:alt_shift_toggle'
 
         actusermanager = AccountsService.UserManager.get_default()
-        actusermanager.connect("notify::is-loaded",  self.__on_user_manager_loaded)
+        actusermanager.connect("notify::is-loaded",  self.__on_usermanager_loaded)
 
-
-    def __on_user_manager_loaded(self, manager, pspec, data=None):
-        logging.debug("Received AccountsManager signal is-loaded")
+    def __on_usermanager_loaded(self, manager, pspec, data=None):
+        logging.debug("Recieved AccountsManager signal is-loaded")
         act_user = manager.get_user(tailsgreeter.config.LUSER)
         if not act_user.is_loaded():
             raise RuntimeError("User manager for %s not loaded" % tailsgreeter.config.LUSER)
         self.__act_user = act_user
+        if self._usermanager_loaded_cb:
+            self._usermanager_loaded_cb()
 
     def __fill_locales_dict(self, locales):
         """assemble dictionary of language codes to corresponding locales list
@@ -406,14 +409,12 @@ class LocalisationSettings(object):
         self.set_locale(default_locale)
 
     def __apply_locale(self):
-        lang = locale.normalize(
-            self._locale + "." + locale.getpreferredencoding(self._locale)
-        )
-        logging.debug("Setting session language to %s", lang)
+        lang = locale.normalize(self._locale).replace('UTF8', 'UTF-8')
+        logging.debug("Setting language to %s", lang)
 
         if self.__act_user:
             GLib.idle_add(lambda:
-                self.__act_user.set_language(lang))
+                self.__act_user.set_language(locale.normalize(lang)))
         else:
             logging.warning("AccountsManager not ready")
 
