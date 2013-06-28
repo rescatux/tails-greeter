@@ -291,7 +291,7 @@ class LocalisationSettings(object):
         actusermanager.connect("notify::is-loaded",  self.__on_usermanager_loaded)
 
     def __on_usermanager_loaded(self, manager, pspec, data=None):
-        logging.debug("Recieved AccountsManager signal is-loaded")
+        logging.debug("Received AccountsManager signal is-loaded")
         act_user = manager.get_user(tailsgreeter.config.LUSER)
         if not act_user.is_loaded():
             raise RuntimeError("User manager for %s not loaded" % tailsgreeter.config.LUSER)
