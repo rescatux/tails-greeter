@@ -29,7 +29,7 @@ class GdmClient (object):
     AUTOLOGIN_SERVICE_NAME = 'gdm3-autologin'
     USER_NAME = tailsgreeter.config.LUSER
 
-    def __init__(self, server_ready_cb):
+    def __init__(self, server_ready_cb=None):
         self.server_ready = False
         self.server_ready_cb = server_ready_cb
 
@@ -62,7 +62,8 @@ class GdmClient (object):
     def __on_ready(self, client, service_name):
         logging.debug("Received ready")
         self.server_ready = True
-        self.server_ready_cb()
+        if self.server_ready_cb:
+            self.server_ready_cb()
 
     def __on_session_opened(self, client, service_name):
         logging.debug("Received session opened")
