@@ -1,2 +1,2 @@
 usr/lib/gdm/GdmGreeter-1.0.typelib usr/lib/girepository-1.0/GdmGreeter-1.0.typelib
-usr/lib/libgdmgreeter.so.1 usr/lib/gdm/libgdmgreeter.so.1
+usr/lib/gdm/libgdmgreeter.so.1 usr/lib/libgdmgreeter.so.1
