@@ -107,6 +107,7 @@ class CommunityGreeterApp():
     def server_ready(self):
         """Server is ready"""
         logging.debug("Entering server_ready")
+        self.localisationsettings.set_layout('us')
         self.langpanel.window.show()
         self.persistencewindow.window.show()
         self.ready = True
