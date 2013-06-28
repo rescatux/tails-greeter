@@ -117,9 +117,17 @@ class CommunityGreeterApp():
     def SelectLanguage(self, lang):
         """The user wants to change languages"""
         # Translate all windows in the login screen
+        logging.debug("Translating interface to %s" % lang)
         self.translate_to(lang)
-        # Apply chosen language
-        # TailsGreeterService.SelectLanguage(self, lang)
+        # XXX: Apply chosen language for the session to be started
+        # from gi.repository import AccountsService
+        # import locale
+        # import tailsgreeter.config
+        # usermanager = AccountsService.UserManager()
+        # user = usermanager.get_user(tailsgreeter.config.LUSER)
+        # lang = locale.normalize(lang).replace('UTF8', 'UTF-8')
+        # logging.debug("Setting language to %s", lang)
+        # user.set_language(locale.normalize(lang))
 
     def SelectLayout(self, layout):
         """The user wants to change layout"""
