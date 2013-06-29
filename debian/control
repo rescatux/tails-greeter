@@ -30,5 +30,7 @@ Depends: python2.7, python (<< 2.8),
          ttf-unifont
 Conflicts: gdm-community-greeter
 Description: GDM greeter for Tails
- For setting languages and other variables.
+ Tails Greeter is the set of dialogs that allows to define Tails
+ startup options, such as language, keyboard layout, administration
+ password and persistence.
 
