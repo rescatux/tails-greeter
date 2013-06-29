@@ -1,6 +1,6 @@
-tails-greeter (0.7.15+wheezy2~3.gbp0f8e50) UNRELEASED; urgency=low
+tails-greeter (0.7.15+wheezy2~4.gbp796bea) UNRELEASED; urgency=low
 
-  ** SNAPSHOT build @0f8e50dd190ebc75e974715d043d22fce021166d **
+  ** SNAPSHOT build @796bea75b950b822fa4fae2a7407c72c76259662 **
 
   * Convert from PyGTK 2 to PyGI GTK 3, update *.glade accordingly.
   * Migrate from the old D-Bus GDM interface to libgdmgreeter.
