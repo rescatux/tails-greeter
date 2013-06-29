@@ -33,4 +33,3 @@ Description: GDM greeter for Tails
  Tails Greeter is the set of dialogs that allows to define Tails
  startup options, such as language, keyboard layout, administration
  password and persistence.
-
