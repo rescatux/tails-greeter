@@ -17,3 +17,6 @@ override_dh_auto_install:
 	   /usr/share/i18n/SUPPORTED     \
 	   | uniq                        \
 	   > $(DESTDIR)/usr/share/tails-greeter/language_codes
+
+override_dh_builddeb:
+	dh_builddeb -- -Zbzip2
