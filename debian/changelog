@@ -1,10 +1,27 @@
-tails-greeter (0.7.15+wheezy2~1.gbpd5d280) UNRELEASED; urgency=low
+tails-greeter (0.7.15+wheezy2~2.gbp72ddba) UNRELEASED; urgency=low
 
-  ** SNAPSHOT build @d5d280044dcbe45a017036f80337012f9cc40a6e **
+  ** SNAPSHOT build @72ddba94608446ada7ce7a572c6a8334550fdfd8 **
 
-  * Convert from PyGTK 2 to PyGI GTK 3.
+  * Convert from PyGTK 2 to PyGI GTK 3, update *.glade accordingly.
+  * Migrate from the old D-Bus GDM interface to libgdmgreeter.
+  * Set session language with AccountsService.
   * Enable GdmGreeter GObject introspection data.
   * Symlink libgdmgreeter.so.1 to a place where the system loader can find it.
+  * Make indentation consistent.
+  * Drop versioning on dependencies that are in Squeeze anyway.
+  * Drop gir1.0-gtk-3.0 alternative dependency: it never made its way in Debian.
+  * Drop gdm alternative dependency: we don't support Ubuntu.
+  * Drop obsolete Uploader control field.
+  * Fix typos.
+  * Bump copyright years.
+  * Update upstream source location.
+  * Drop quite some dead code.
+  * Rename GdmGreeter package to tailsgreeter to solve name clash.
+  * Close greeter after login.
+  * Write imports according to current best practices.
+  * Grant Debian-gdm the right to manage user settings.
+  * Forcibly use preferred encoding for chosen language.
+  * Drop useless mutual dependency.
 
  -- Tails developers <tails@boum.org>  Thu, 27 Jun 2013 19:33:17 +0200
 
