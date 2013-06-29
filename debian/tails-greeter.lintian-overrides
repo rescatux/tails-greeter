@@ -1,4 +1,2 @@
-# we do 'foreign' file diversion on purpose
-tails-greeter: diversion-for-unknown-file
 # internal-only binaries does not really require man page
 tails-greeter: binary-without-manpage
