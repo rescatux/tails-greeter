@@ -1,6 +1,6 @@
-tails-greeter (0.7.15+wheezy2~4.gbp796bea) UNRELEASED; urgency=low
+tails-greeter (0.7.15+wheezy2~5.gbpacd668) UNRELEASED; urgency=low
 
-  ** SNAPSHOT build @796bea75b950b822fa4fae2a7407c72c76259662 **
+  ** SNAPSHOT build @acd6685108668a6ae0dacb49702329520180557e **
 
   * Convert from PyGTK 2 to PyGI GTK 3, update *.glade accordingly.
   * Migrate from the old D-Bus GDM interface to libgdmgreeter.
@@ -23,6 +23,8 @@ tails-greeter (0.7.15+wheezy2~4.gbp796bea) UNRELEASED; urgency=low
   * Forcibly use preferred encoding for chosen language.
   * Drop useless mutual dependency.
   * Update POTFILES.in.
+  * Divert gdm-simple-greeter.desktop in preinst+postrm,
+    not in postinst+prerm.
 
  -- Tails developers <tails@boum.org>  Thu, 27 Jun 2013 19:33:17 +0200
 
