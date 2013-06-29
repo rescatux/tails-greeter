@@ -3,10 +3,10 @@ glade/persistencewindow.glade
 glade/optionswindow.glade
 glade/langpanel.glade
 tailsgreeter/__init__.py
-tailsgreeter/services.py
 tailsgreeter/optionswindow.py
 tailsgreeter/rootaccess.py
 tailsgreeter/camouflage.py
+tailsgreeter/gdmclient.py
 tailsgreeter/persistence.py
 tailsgreeter/persistencewindow.py
 tailsgreeter/optionswindow.py
