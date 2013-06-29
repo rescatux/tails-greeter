@@ -1,6 +1,6 @@
-tails-greeter (0.7.15+wheezy2~7.gbpa45534) UNRELEASED; urgency=low
+tails-greeter (0.7.15+wheezy2~8.gbp081ea5) UNRELEASED; urgency=low
 
-  ** SNAPSHOT build @a455340f82be9f2d0290e7c7eec17f61afcb4b12 **
+  ** SNAPSHOT build @081ea5734e816babe046a880e2d19c80cb485978 **
 
   * Convert from PyGTK 2 to PyGI GTK 3, update *.glade accordingly.
   * Migrate from the old D-Bus GDM interface to libgdmgreeter.
@@ -34,6 +34,7 @@ tails-greeter (0.7.15+wheezy2~7.gbpa45534) UNRELEASED; urgency=low
   * Drop empty line.
   * Bump X-Python-Version to >= 2.7.
   * Fix diversion handling by following Debian Policy examples more closely.
+  * Have dpkg-source use bzip2 with greatest compression level.
 
  -- Tails developers <tails@boum.org>  Thu, 27 Jun 2013 19:33:17 +0200
 
