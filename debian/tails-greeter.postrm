@@ -4,7 +4,8 @@ set -e
 
 if [ remove = "$1" -o abort-install = "$1" -o disappear = "$1" ] && \
    [ -f /usr/share/gdm/autostart/LoginWindow/gdm-simple-greeter.disabled ]; then
-    dpkg-divert --package tails-greeter --rename --remove /usr/share/gdm/autostart/LoginWindow/gdm-simple-greeter.desktop
+    dpkg-divert --package tails-greeter --rename \
+       --remove /usr/share/gdm/autostart/LoginWindow/gdm-simple-greeter.desktop
 fi
 
 # dh_installdeb will replace this with shell code automatically
