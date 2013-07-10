@@ -39,6 +39,14 @@ from gi.repository import AccountsService
 
 import tailsgreeter.config
 
+def xkl_strip(string):
+    """Clean strings returned by Xkl
+
+    Strings returned by Xkl are fixed length and contains null chars.
+    The part we want is the beginning, before the 1st null char.
+    This method cleans up this kind of strings."""
+    return string.split("\x00", 1)[0]
+
 def ln_cc(lang_name):
     """obtain language code from name
     
@@ -117,14 +125,16 @@ def __fill_layouts_dict():
     layouts_dict = {}
 
     def variant_iter(registry, variant, layout):
-        code = '%s/%s' % (layout.name, variant.name)
-        description = '%s - %s' % (layout.description, variant.description)
+        code = '%s/%s' % (xkl_strip(layout.name),
+                          xkl_strip(variant.name))
+        description = '%s - %s' % (xkl_strip(layout.description),
+                                   xkl_strip(variant.description))
         if code not in layouts_dict:
             layouts_dict[code] = description
 
     def layout_iter(registry, layout, _):
-        code = layout.name
-        description = layout.description
+        code = xkl_strip(layout.name)
+        description = xkl_strip(layout.description)
         if code not in layouts_dict:
             layouts_dict[code] = description
 	_xkl_registry.foreach_layout_variant(code, variant_iter, layout)
@@ -435,13 +445,17 @@ class LocalisationSettings(object):
         return layouts_with_names(self.get_layouts(), self.get_locale())
 
     def layouts_for_language(self, lang):
+        """Return the list of available layouts for given language
+
+        Query XKL and return layouts for a given language.
+        """
         layouts = []
         t_code = ln_iso639_tri(self._language)
 
         def language_iter(config_registry, item, subitem, store):
-            layout_code = item.name
+            layout_code = xkl_strip(item.name)
             if layout_code not in layouts:
-                layouts.append(item.name)
+                layouts.append(layout_code)
 
         self._xkl_registry.foreach_language_variant(t_code,
                                                     language_iter,
