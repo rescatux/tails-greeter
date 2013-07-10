@@ -89,12 +89,16 @@ class CommunityGreeterApp():
         self.langpanel = self.load_window(LangPanel, self)
         self.persistencewindow = self.load_window(PersistenceWindow, self)
         self.optionswindow = self.load_window(OptionsWindow, self)
+
+	logging.debug("loaded windows: %s" % self._loaded_windows)
         
     def load_window(self, window_class, *args, **kwargs):
         """When loading a window, also translate it"""
+        logging.debug("loading window %s" % window_class)
         window = window_class(*args, **kwargs)
         self._loaded_windows.append(window)
         if isinstance(window, TranslatableWindow) and self.language:
+            logging.debug("found translatable window")
             window.translate_to(self.language.split('_')[0])
         return window
 
