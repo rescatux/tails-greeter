@@ -1,4 +1,4 @@
 #!/bin/bash
 cd /usr/share/tails-greeter/
-export LANG=C
+export LANG="en_US.UTF-8"
 /usr/bin/python ./tails-greeter.py
