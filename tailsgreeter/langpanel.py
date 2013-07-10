@@ -38,7 +38,7 @@ class LangDialog(TranslatableWindow):
         self.dialog = builder.get_object("languages_dialog")
         self.treeview = builder.get_object("languages_treeview")
         self.liststore = builder.get_object("languages_liststore")
-        builder.connect_signals(self, self.dialog)
+        builder.connect_signals(self.dialog)
 
         tvcolumn = Gtk.TreeViewColumn(_("Language"))
         self.treeview.append_column(tvcolumn)
