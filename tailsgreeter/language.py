@@ -267,8 +267,9 @@ class LocalisationSettings(object):
     """Model storing settings related to language and keyboard
 
     """
-    def __init__(self, usermanager_loaded_cb=None):
+    def __init__(self, usermanager_loaded_cb=None, locale_selected_cb=None):
         self._usermanager_loaded_cb = usermanager_loaded_cb
+        self._locale_selected_cb = locale_selected_cb
 
         self.__act_user = None
 
@@ -385,6 +386,8 @@ class LocalisationSettings(object):
         self._locale = locale
         self.__apply_locale()
         self.__set_default_layout()
+        if self._locale_selected_cb:
+            self._locale_selected_cb(locale)
 
     def __set_default_locale(self):
         """Set default locale for current language
