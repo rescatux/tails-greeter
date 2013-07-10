@@ -290,7 +290,7 @@ class LocalisationSettings(object):
         self._xkl_record = Xkl.ConfigRec()
         self._xkl_record.get_from_server(self._xkl_engine)
 
-        self._system_locales_list = langcodes
+        self._system_locales_list = _langcodes
         self._system_locales_dict = self.__fill_locales_dict(self._system_locales_list)
 
         self._language = 'en'
@@ -564,10 +564,10 @@ class LocalisationSettings(object):
 # MODULE INITIALISATION
 
 # List of system locale codes
-langcodes = __get_langcodes()
+_langcodes = __get_langcodes()
 
 # dictionnary of native language: language code
-_languages_dict = get_native_langs(langcodes)
+_languages_dict = get_native_langs(_langcodes)
 
 # dictionnary of layout codes: layout name
 _system_layouts_dict = __fill_layouts_dict()
