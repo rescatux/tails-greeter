@@ -80,7 +80,8 @@ class CommunityGreeterApp():
         )
         self.persistence = tailsgreeter.persistence.PersistenceSettings()
         self.localisationsettings = tailsgreeter.language.LocalisationSettings(
-            usermanager_loaded_cb = self.usermanager_loaded
+            usermanager_loaded_cb = self.usermanager_loaded,
+            locale_selected_cb = self.locale_selected
         )
         self.rootaccess = tailsgreeter.rootaccess.RootAccessSettings()
         self.camouflage = tailsgreeter.camouflage.CamouflageSettings()
@@ -129,6 +130,9 @@ class CommunityGreeterApp():
         self._usermanager_ready = True
         self.localisationsettings.set_locale('en_US')
         self.maybe_show_ui()
+
+    def locale_selected(self, locale):
+        self.translate_to(locale)
 
     def maybe_show_ui(self):
         """Show UI if server and usermanager are both ready"""
