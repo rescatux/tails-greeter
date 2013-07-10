@@ -103,20 +103,6 @@ def get_texts(langs):
 def __fill_layouts_dict():
     """assemble dictionary of layout codes to corresponding layout name
     
-    We need this dictionnary to get the 'description' (human readeable name)
-    of the layout.
-    
-    Instead of storing correspondance in this dictionnary, we should be able
-    to query xklavier with the following code, but it fails because
-    `Xkl.ConfigItem.set_name` doesn't exist in python bindings:
-    
-        _xkl_engine = Xkl.Engine.get_instance(GdkX11.x11_get_default_xdisplay())
-        _xkl_registry = Xkl.ConfigRegistry.get_instance(_xkl_engine)
-        _xkl_registry.load(False)
-        layout_config_item = Xkl.ConfigItem()
-        layout_config_item.set_name(layout_code)
-        if _xkl_registry.find_layout(layout_config_item):
-        return layout_config_item.description
     """
     _xkl_engine = Xkl.Engine.get_instance(GdkX11.x11_get_default_xdisplay())
     _xkl_registry = Xkl.ConfigRegistry.get_instance(_xkl_engine)
