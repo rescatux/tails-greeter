@@ -52,6 +52,9 @@ class GdmClient (object):
         # XXX: wait for the server to be ready?
         self.__greeter_client.call_start_conversation(GdmClient.AUTOLOGIN_SERVICE_NAME)
 
+    def __del__(self):
+        self.__greeter_client.call_disconnect()
+
     def __on_ready(self, client, service_name):
         logging.debug("Received ready")
         self.server_ready = True

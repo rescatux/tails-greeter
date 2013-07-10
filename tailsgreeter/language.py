@@ -282,6 +282,7 @@ class LocalisationSettings(object):
         self._locale_selected_cb = locale_selected_cb
 
         self.__act_user = None
+        self.__actusermanager_loadedid = None
 
         self._xkl_engine = Xkl.Engine.get_instance(GdkX11.x11_get_default_xdisplay())
         self._xkl_registry = Xkl.ConfigRegistry.get_instance(self._xkl_engine)
@@ -299,7 +300,12 @@ class LocalisationSettings(object):
         self._options = 'grp:alt_shift_toggle'
 
         actusermanager = AccountsService.UserManager.get_default()
-        actusermanager.connect("notify::is-loaded",  self.__on_usermanager_loaded)
+        self.__actusermanager_loadedid = actusermanager.connect(
+            "notify::is-loaded",  self.__on_usermanager_loaded)
+
+    def __del__(self):
+        if self.__actusermanager_loadedid:
+            self.__actusermanager.disconnect(self.__actusermanager_loadedid)
 
     def __on_usermanager_loaded(self, manager, pspec, data=None):
         logging.debug("Received AccountsManager signal is-loaded")
