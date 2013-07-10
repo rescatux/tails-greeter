@@ -1,4 +1,4 @@
 #!/bin/bash
 cd /usr/share/tails-greeter/
 export LANG=C
-/usr/bin/python ./community-greeter.py
+/usr/bin/python ./tails-greeter.py
