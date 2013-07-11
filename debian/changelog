@@ -1,6 +1,6 @@
-tails-greeter (0.7.15+wheezy2~9.gbp44e431) UNRELEASED; urgency=low
+tails-greeter (0.7.15+wheezy2~10.gbp9fbf99) UNRELEASED; urgency=low
 
-  ** SNAPSHOT build @44e431eecf7aad3b4c281633187ca79c9b6dfaad **
+  ** SNAPSHOT build @9fbf9975a7909e9eb00bec2338ed799e032e4c48 **
 
   * Convert from PyGTK 2 to PyGI GTK 3, update *.glade accordingly.
   * Migrate from the old D-Bus GDM interface to libgdmgreeter.
@@ -35,6 +35,19 @@ tails-greeter (0.7.15+wheezy2~9.gbp44e431) UNRELEASED; urgency=low
   * Bump X-Python-Version to >= 2.7.
   * Fix diversion handling by following Debian Policy examples more closely.
   * Compress source and binary packages with bzip2.
+  * Add translatable window debugging info
+  * languagesettings: add callback when language is selected
+  * Translate windows when a new language is selected
+  * Always start the greeter in english
+  * Rename community-greeter.py to tails-greeter.py
+  * Improve coding style
+  * Set an UTF-8 encoded default locale
+  * Clarify set_locale method
+  * Fix call to connect_signal with wrong args number
+  * Canonicalize layout names returned by XKL
+  * Hopefully disconnect from DBus services before quitting
+  * Protect langcodes global variable
+  * Remove outdated comment
 
  -- Tails developers <tails@boum.org>  Thu, 27 Jun 2013 19:33:17 +0200
 
