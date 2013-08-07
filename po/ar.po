@@ -6,15 +6,15 @@
 # kraim <7kraim@gmail.com>, 2013
 # alshara3 <hsn.ali91@gmail.com>, 2013
 # Mohammed ALDOUB <voulnet@gmail.com>, 2013
-# Sherief <sheriefalaa.w@gmail.com>, 2013
+# Sherief Alaa <sheriefalaa.w@gmail.com>, 2013
 # Tails_developers <tails@boum.org>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: https://trac.torproject.org/projects/tor\n"
 "POT-Creation-Date: 2013-05-12 19:29+0200\n"
-"PO-Revision-Date: 2013-05-13 21:11+0000\n"
-"Last-Translator: Sherief <sheriefalaa.w@gmail.com>\n"
+"PO-Revision-Date: 2013-06-20 18:10+0000\n"
+"Last-Translator: Sherief Alaa <sheriefalaa.w@gmail.com>\n"
 "Language-Team: Arabic (http://www.transifex.com/projects/p/torproject/language/ar/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"

@@ -3,40 +3,37 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Bobbymoto, 2013
-# Cooligan <ppt23@lkj.hopto.org>, 2012
-# Sacro <Scion@T-Online.de>, 2012
-# djcrackhome <wallcityserver@gmail.com>, 2012
-# Wasilis <inactive+Wasilis@transifex.com>, 2013
+# mort3n <nalholm@yahoo.dk>, 2013
+# torebjornson <tore.bjornson@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: https://trac.torproject.org/projects/tor\n"
 "POT-Creation-Date: 2013-05-12 19:29+0200\n"
-"PO-Revision-Date: 2013-07-26 21:50+0000\n"
-"Last-Translator: Bobbymoto\n"
-"Language-Team: German (http://www.transifex.com/projects/p/torproject/language/de/)\n"
+"PO-Revision-Date: 2013-07-19 19:10+0000\n"
+"Last-Translator: mort3n <nalholm@yahoo.dk>\n"
+"Language-Team: Danish (http://www.transifex.com/projects/p/torproject/language/da/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: de\n"
+"Language: da\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../glade/persistencewindow.glade.h:1
 msgid "Forward"
-msgstr "Vorwärts"
+msgstr "Frem"
 
 #: ../glade/persistencewindow.glade.h:2 ../glade/optionswindow.glade.h:1
 msgid "Login"
-msgstr "Login"
+msgstr "Log in"
 
 #: ../glade/persistencewindow.glade.h:3 ../glade/optionswindow.glade.h:2
 msgid "Welcome to Tails"
-msgstr "Willkommen zu Tails"
+msgstr "Velkommen til Tails"
 
 #: ../glade/persistencewindow.glade.h:4
 msgid "Use persistence?"
-msgstr "Persistenz benutzen?"
+msgstr "Brug vedholdenhed?"
 
 #: ../glade/persistencewindow.glade.h:5
 msgid "Yes"
@@ -44,59 +41,59 @@ msgstr "Ja"
 
 #: ../glade/persistencewindow.glade.h:6
 msgid "No"
-msgstr "Nein"
+msgstr "Nej"
 
 #: ../glade/persistencewindow.glade.h:7
 msgid "Passphrase:"
-msgstr "Passphrase:"
+msgstr "Kodeord:"
 
 #: ../glade/persistencewindow.glade.h:8
 msgid "Read-Only?"
-msgstr "Schreibgeschützt?"
+msgstr "Skrivebeskyttet?"
 
 #: ../glade/persistencewindow.glade.h:9
 msgid "<i>Wrong passphrase. Please try again.</i>"
-msgstr "<i>Flasche Passphrase. Bitte erneut versuchen.</i>"
+msgstr "<i>Forkert kodeord. Forsøg venligst igen.</i>"
 
 #: ../glade/persistencewindow.glade.h:10
 msgid "More options?"
-msgstr "Weitere Optionen?"
+msgstr "Flere muligheder?"
 
 #: ../glade/optionswindow.glade.h:3
 msgid "Administration password"
-msgstr "Administrator-Passwort"
+msgstr "Administrations kodeord"
 
 #: ../glade/optionswindow.glade.h:4
 msgid ""
 "Enter an administration password in case you need to perform administration tasks.\n"
 "Otherwise it will be disabled for better security."
-msgstr "Geben Sie ein Administrator-Passwort ein, falls Sie administrative Aufgaben durchführen müssen.\nAndernfalls wird diese Funktion für eine bessere Sicherheit deaktiviert."
+msgstr "Indtast et administrations kodeord, hvis De har behov for at udføre administrative opgaver.\nAlternativt vil det blive deaktiveret for at optimere sikkerheden."
 
 #: ../glade/optionswindow.glade.h:6
 msgid "Password:"
-msgstr "Passwort:"
+msgstr "Kodeord:"
 
 #: ../glade/optionswindow.glade.h:7
 msgid "Verify Password:"
-msgstr "Passwort erneut eingeben:"
+msgstr "Bekræft kodeord:"
 
 #: ../glade/optionswindow.glade.h:8
 msgid "<i>Passwords do not match</i>"
-msgstr "<i>Passwörter stimmen nicht überein</i>"
+msgstr "<i>Kodeord passer ikke</i>"
 
 #: ../glade/optionswindow.glade.h:9
 msgid "Windows Camouflage"
-msgstr "Windows Tarnung"
+msgstr "Windows Camouflage"
 
 #: ../glade/optionswindow.glade.h:10
 msgid ""
 "This option makes Tails look more like Microsoft Windows XP. This may be "
 "useful in public places in order to avoid attracting suspicion."
-msgstr "Diese Option lässt Tails wie Microsoft Windows XP aussehen. Dies kann in der Öffentlichkeit hilfreich sein, um keine Aufmerksamkeit auf sich zu ziehen."
+msgstr "Denne indstilling lader Tails ligne Microsoft Windows XP. Dette kan være brugbart ved offentlige lokationer for at minimere mistanke."
 
 #: ../glade/optionswindow.glade.h:11
 msgid "Activate Microsoft Windows XP Camouflage"
-msgstr "Microsoft Windows XP Tarnung aktivieren"
+msgstr "Aktivér Microsoft Windows XP Camouflage"
 
 #: ../glade/langpanel.glade.h:1
 msgid " "
@@ -104,11 +101,11 @@ msgstr " "
 
 #: ../glade/langpanel.glade.h:2 ../GdmGreeter/langpanel.py:42
 msgid "Language"
-msgstr "Sprache"
+msgstr "Sprog"
 
 #: ../glade/langpanel.glade.h:3
 msgid "Locale"
-msgstr "Locale"
+msgstr "Lokal"
 
 #: ../glade/langpanel.glade.h:4
 msgid "Layout"
@@ -119,7 +116,7 @@ msgstr "Layout"
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
-msgstr "Live-Persist ist mit folgendem code fehlgeschlagen %(returncode)s:\n%(stderr)s"
+msgstr "live persist fejlede med return code %(returncode)s:\n%(stderr)s"
 
 #: ../GdmGreeter/persistence.py:99
 #, python-format
@@ -127,7 +124,7 @@ msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "cryptsetup fehlgeschlagen mit Antwort Code %(returncode)s:\n %(stdout)s\n %(stderr)s"
+msgstr "cryptsetup fejlede med return code %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
 #: ../GdmGreeter/persistence.py:124
 #, python-format
@@ -135,9 +132,9 @@ msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "Live-Persist ist mit folgendem code fehlgeschlagen %(returncode)s:\n%(stdout)s\n%(stderr)s"
+msgstr "live-persist fejlede med return code %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
 #: ../GdmGreeter/langpanel.py:124 ../GdmGreeter/langpanel.py:148
 #: ../GdmGreeter/langpanel.py:181
 msgid "Other..."
-msgstr "Andere..."
+msgstr "Anden..."
