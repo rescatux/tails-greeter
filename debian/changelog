@@ -1,3 +1,9 @@
+tails-greeter (0.7.16) testing; urgency=low
+
+  * Import translations from Transifex.
+
+ -- Tails developers <tails@boum.org>  Wed, 07 Aug 2013 16:15:41 +0200
+
 tails-greeter (0.7.15) devel; urgency=low
 
   * Update translations from Transifex.
