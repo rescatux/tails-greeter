@@ -1,3 +1,11 @@
+tails-greeter (0.7.17~1.gbp603ac9) devel; urgency=low
+
+  ** SNAPSHOT build @603ac9f837086fd51578c3715f280f755b06ccc4 **
+
+  * Set consistent path for persistent storage.
+
+ -- Tails developers <amnesia@boum.org>  Mon, 19 Aug 2013 12:40:20 +0200
+
 tails-greeter (0.7.16) testing; urgency=low
 
   * Import translations from Transifex.
