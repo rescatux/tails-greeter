@@ -44,3 +44,6 @@ persistence_state_file = '/var/lib/gdm3/tails.persistence'
 
 # Stores which operating system camouflage to activate, if any
 camouflage_settings = '/var/lib/gdm3/tails.camouflage'
+
+# Stores settings related to physical security
+physical_security_settings = '/var/lib/gdm3/tails.physical_security'

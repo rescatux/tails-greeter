@@ -39,6 +39,8 @@ class OptionsWindow(TranslatableWindow):
         self.warning_label = builder.get_object("warning_label")
         self.warning_area = builder.get_object("warning_area")
         self.camouflage_checkbox = builder.get_object("camouflage_checkbox")
+        self.macspoof_checkbox = builder.get_object("macspoof_checkbox")
+        self.macspoof_checkbox.set_active(True)
 
         TranslatableWindow.__init__(self, builder.get_object("options_dialog"))
         self.window.set_visible(False)
@@ -58,6 +60,10 @@ class OptionsWindow(TranslatableWindow):
         if self.camouflage_checkbox.get_active():
             self.greeter.camouflage.os = 'winxp'
 
+    def set_macspoof(self):
+        """Set macspoof status"""
+        self.greeter.physical_security.macspoof = self.macspoof_checkbox.get_active()
+
     def validate_options(self):
         """Validate the selected options"""
         auth_password = self.entry_password.get_text()
@@ -73,6 +79,7 @@ class OptionsWindow(TranslatableWindow):
             self.greeter.login()
             self.set_password()
             self.set_camouflage()
+            self.set_macspoof()
 
     def cb_login_clicked(self, widget, data=None):
         """Login button click handler"""

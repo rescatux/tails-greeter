@@ -8,6 +8,7 @@ GdmGreeter/optionswindow.py
 GdmGreeter/rootaccess.py
 GdmGreeter/camouflage.py
 GdmGreeter/persistence.py
+GdmGreeter/physicalsecurity.py
 GdmGreeter/persistencewindow.py
 GdmGreeter/optionswindow.py
 GdmGreeter/langpanel.py
