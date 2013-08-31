@@ -1,3 +1,12 @@
+tails-greeter (0.7.17~1.gbp819d3b) UNRELEASED; urgency=low
+
+  ** SNAPSHOT build @819d3b2c54d6323f32ac3571e47513e136ee5374 **
+
+  [ Tails developers ]
+  * Add a checkbox controlling MAC spoofing.
+
+ -- Tails developers <tails@boum.org>  Sat, 31 Aug 2013 12:55:07 +0200
+
 tails-greeter (0.7.16) testing; urgency=low
 
   * Import translations from Transifex.
