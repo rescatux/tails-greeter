@@ -1,3 +1,16 @@
+tails-greeter (0.7.17) stable; urgency=low
+
+  [ Andres Gomez Ramirez <andres.gomez@cern.ch> ]
+  * Display a warning icon on greeter admin password mismatch
+  * Display a warning icon on persistence unlocking failure
+    (Closes: Tails#5332)
+
+  [ intrigeri ]
+  * New translations for Indonesian, Slovak, Chinese (Taiwan).
+    Update translations for German and Polish.
+
+ -- Tails developers <tails@boum.org>  Mon, 09 Sep 2013 10:34:51 +0200
+
 tails-greeter (0.7.16) testing; urgency=low
 
   * Import translations from Transifex.
