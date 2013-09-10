@@ -1,3 +1,56 @@
+tails-greeter (0.7.17+wheezy2~1.gbp484bbf) feature-wheezy; urgency=low
+
+  ** SNAPSHOT build @484bbf46c6c96a089fe2785ce7822852f0c538e0 **
+
+  * Convert from PyGTK 2 to PyGI GTK 3, update *.glade accordingly.
+  * Migrate from the old D-Bus GDM interface to libgdmgreeter.
+  * Set session language with AccountsService.
+  * Enable GdmGreeter GObject introspection data.
+  * Symlink libgdmgreeter.so.1 to a place where the system loader can find it.
+  * Make indentation consistent.
+  * Drop versioning on dependencies that are in Squeeze anyway.
+  * Drop gir1.0-gtk-3.0 alternative dependency: it never made its way in Debian.
+  * Drop gdm alternative dependency: we don't support Ubuntu.
+  * Drop obsolete Uploader control field.
+  * Fix typos.
+  * Bump copyright years.
+  * Update upstream source location.
+  * Drop quite some dead code.
+  * Rename GdmGreeter package to tailsgreeter to solve name clash.
+  * Close greeter after login.
+  * Write imports according to current best practices.
+  * Grant Debian-gdm the right to manage user settings.
+  * Forcibly use preferred encoding for chosen language.
+  * Drop useless mutual dependency.
+  * Update POTFILES.in.
+  * Divert gdm-simple-greeter.desktop in preinst+postrm,
+    not in postinst+prerm.
+  * Guard the diversion removal in postrm with some context checks
+    suggested by Debian Policy.
+  * Wrap long lines.
+  * Drop unused diversion-for-unknown-file Lintian override.
+  * Move to debhelper compat level 9.
+  * Write more complete long package description.
+  * Drop empty line.
+  * Bump X-Python-Version to >= 2.7.
+  * Fix diversion handling by following Debian Policy examples more closely.
+  * Compress source and binary packages with bzip2.
+  * Add translatable window debugging info
+  * languagesettings: add callback when language is selected
+  * Translate windows when a new language is selected
+  * Always start the greeter in english
+  * Rename community-greeter.py to tails-greeter.py
+  * Improve coding style
+  * Set an UTF-8 encoded default locale
+  * Clarify set_locale method
+  * Fix call to connect_signal with wrong args number
+  * Canonicalize layout names returned by XKL
+  * Hopefully disconnect from DBus services before quitting
+  * Protect langcodes global variable
+  * Remove outdated comment
+
+ -- Tails developers <tails@boum.org>  Tue, 10 Sep 2013 10:59:35 +0200
+
 tails-greeter (0.7.17) stable; urgency=low
 
   [ Andres Gomez Ramirez <andres.gomez@cern.ch> ]
