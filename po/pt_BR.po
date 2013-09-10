@@ -3,59 +3,63 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-#   <alkaidw@gmail.com>, 2012.
-#   <geronimo.bruno@gmail.com>, 2012.
-#   <luis_zik13@hotmail.com>, 2012.
-#   <rafaelmartinsrm@gmail.com>, 2012.
+# alkaid <alkaidw@gmail.com>, 2012
+# Communia <ameaneantie@riseup.net>, 2013
+# bruuh <bruuh@outlook.com>, 2012
+# Killer <luis_zik13@hotmail.com>, 2012
+# NICEcookie <rafaelmartinsrm@gmail.com>, 2012
+# Samuel Facchinello <samuelfac@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: https://trac.torproject.org/projects/tor\n"
-"POT-Creation-Date: 2012-06-01 15:10+0200\n"
-"PO-Revision-Date: 2012-12-30 04:22+0000\n"
-"Last-Translator: alkaid <alkaidw@gmail.com>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2013-05-12 19:29+0200\n"
+"PO-Revision-Date: 2013-06-19 18:00+0000\n"
+"Last-Translator: Samuel Facchinello <samuelfac@gmail.com>\n"
+"Language-Team: Portuguese (Brazil) (http://www.transifex.com/projects/p/torproject/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: pt_BR\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: ../glade/persistencewindow.glade.h:1 ../glade/optionswindow.glade.h:1
-#: ../GdmGreeter/persistencewindow.py:128
+#: ../glade/persistencewindow.glade.h:1
+msgid "Forward"
+msgstr "Adiante"
+
+#: ../glade/persistencewindow.glade.h:2 ../glade/optionswindow.glade.h:1
 msgid "Login"
 msgstr "Login"
 
-#: ../glade/persistencewindow.glade.h:2 ../glade/optionswindow.glade.h:2
+#: ../glade/persistencewindow.glade.h:3 ../glade/optionswindow.glade.h:2
 msgid "Welcome to Tails"
 msgstr "Bem-vindo ao Tails"
 
-#: ../glade/persistencewindow.glade.h:3
+#: ../glade/persistencewindow.glade.h:4
 msgid "Use persistence?"
 msgstr "Usar persistência?"
 
-#: ../glade/persistencewindow.glade.h:4
+#: ../glade/persistencewindow.glade.h:5
 msgid "Yes"
 msgstr "Sim"
 
-#: ../glade/persistencewindow.glade.h:5
+#: ../glade/persistencewindow.glade.h:6
 msgid "No"
 msgstr "Não"
 
-#: ../glade/persistencewindow.glade.h:6
+#: ../glade/persistencewindow.glade.h:7
 msgid "Passphrase:"
 msgstr "Senha:"
 
-#: ../glade/persistencewindow.glade.h:7
+#: ../glade/persistencewindow.glade.h:8
 msgid "Read-Only?"
 msgstr "Somente leitura?"
 
-#: ../glade/persistencewindow.glade.h:8 ../glade/optionswindow.glade.h:8
-#: ../glade/langpanel.glade.h:1
-msgid " "
-msgstr " "
-
 #: ../glade/persistencewindow.glade.h:9
+msgid "<i>Wrong passphrase. Please try again.</i>"
+msgstr "<i>Senha incorreta. Por favor,tente novamente.</i>"
+
+#: ../glade/persistencewindow.glade.h:10
 msgid "More options?"
 msgstr "Mais opções?"
 
@@ -67,7 +71,7 @@ msgstr "Senha do administrador"
 msgid ""
 "Enter an administration password in case you need to perform administration tasks.\n"
 "Otherwise it will be disabled for better security."
-msgstr "Crie uma senha do administrador caso você precise realizar tarefas administrativas.\nCaso contrário essa função será desabilitada por segurança."
+msgstr "Crie uma senha do administrador caso você precise realizar tarefas administrativas.\nCaso contrário, para maior segurança, essa função será desabilitada ."
 
 #: ../glade/optionswindow.glade.h:6
 msgid "Password:"
@@ -75,7 +79,11 @@ msgstr "Senha:"
 
 #: ../glade/optionswindow.glade.h:7
 msgid "Verify Password:"
-msgstr "Verificar Senha:"
+msgstr "Verifique a senha:"
+
+#: ../glade/optionswindow.glade.h:8
+msgid "<i>Passwords do not match</i>"
+msgstr "<i>As senhas não correspondem</i>"
 
 #: ../glade/optionswindow.glade.h:9
 msgid "Windows Camouflage"
@@ -91,9 +99,13 @@ msgstr "Essa opção deixa o Tails mais parecido com o Microsoft Windows XP. Iss
 msgid "Activate Microsoft Windows XP Camouflage"
 msgstr "Ativar Camuflagem Microsoft Windows XP"
 
+#: ../glade/langpanel.glade.h:1
+msgid " "
+msgstr " "
+
 #: ../glade/langpanel.glade.h:2 ../GdmGreeter/langpanel.py:42
 msgid "Language"
-msgstr "Linguagem"
+msgstr "Idioma"
 
 #: ../glade/langpanel.glade.h:3
 msgid "Locale"
@@ -102,10 +114,6 @@ msgstr "Local"
 #: ../glade/langpanel.glade.h:4
 msgid "Layout"
 msgstr "Layout"
-
-#: ../GdmGreeter/optionswindow.py:68
-msgid "<i>Passwords do not match</i>"
-msgstr "<i>As senhas não conferem</i>"
 
 #: ../GdmGreeter/persistence.py:59
 #, python-format
@@ -129,10 +137,6 @@ msgid ""
 "%(stdout)s\n"
 "%(stderr)s"
 msgstr "live-persist falhou com código de retorno %(returncode)s:\n%(stdout)s\n%(stderr)s"
-
-#: ../GdmGreeter/persistencewindow.py:94
-msgid "<i>Wrong passphrase. Please try again.</i>"
-msgstr "<i>Senha incorreta. Tente novamente.</i>"
 
 #: ../GdmGreeter/langpanel.py:124 ../GdmGreeter/langpanel.py:148
 #: ../GdmGreeter/langpanel.py:181

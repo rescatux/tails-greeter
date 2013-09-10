@@ -3,102 +3,97 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Bobbymoto, 2013
-# mo <moritz@torservers.net>, 2013
-# Cooligan <ppt23@lkj.hopto.org>, 2012
-# Sacro <Scion@T-Online.de>, 2012
-# Victor1975 <VKerley75@gmail.com>, 2013
-# djcrackhome <wallcityserver@gmail.com>, 2012
-# Wasilis <inactive+Wasilis@transifex.com>, 2013
+# bact' ☂ <arthit@gmail.com>, 2013
+# yodpong <yodpongj@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: https://trac.torproject.org/projects/tor\n"
 "POT-Creation-Date: 2013-05-12 19:29+0200\n"
-"PO-Revision-Date: 2013-09-09 02:20+0000\n"
-"Last-Translator: Victor1975 <VKerley75@gmail.com>\n"
-"Language-Team: German (http://www.transifex.com/projects/p/torproject/language/de/)\n"
+"PO-Revision-Date: 2013-07-29 11:20+0000\n"
+"Last-Translator: bact' ☂ <arthit@gmail.com>\n"
+"Language-Team: Thai (http://www.transifex.com/projects/p/torproject/language/th/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: de\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: th\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../glade/persistencewindow.glade.h:1
 msgid "Forward"
-msgstr "Vorwärts"
+msgstr "ต่อไป"
 
 #: ../glade/persistencewindow.glade.h:2 ../glade/optionswindow.glade.h:1
 msgid "Login"
-msgstr "Login"
+msgstr "เข้าระบบ"
 
 #: ../glade/persistencewindow.glade.h:3 ../glade/optionswindow.glade.h:2
 msgid "Welcome to Tails"
-msgstr "Willkommen zu Tails"
+msgstr "ยินดีต้อนรับสู่ Tails"
 
 #: ../glade/persistencewindow.glade.h:4
 msgid "Use persistence?"
-msgstr "Persistenz benutzen?"
+msgstr "จำการใช้งาน?"
 
 #: ../glade/persistencewindow.glade.h:5
 msgid "Yes"
-msgstr "Ja"
+msgstr "ใช่"
 
 #: ../glade/persistencewindow.glade.h:6
 msgid "No"
-msgstr "Nein"
+msgstr "ไม่ใช่"
 
 #: ../glade/persistencewindow.glade.h:7
 msgid "Passphrase:"
-msgstr "Passwort:"
+msgstr "Passphrase:"
 
 #: ../glade/persistencewindow.glade.h:8
 msgid "Read-Only?"
-msgstr "Schreibgeschützt?"
+msgstr "อ่านอย่างเดียวเท่านั้น?"
 
 #: ../glade/persistencewindow.glade.h:9
 msgid "<i>Wrong passphrase. Please try again.</i>"
-msgstr "<i>Falsche Passphrase. Bitte erneut versuchen.</i>"
+msgstr "<i>วลีผ่านผิด ลองอีกครั้ง</i>"
 
 #: ../glade/persistencewindow.glade.h:10
 msgid "More options?"
-msgstr "Weitere Optionen?"
+msgstr "ตัวเลือกเพิ่มเติม?"
 
 #: ../glade/optionswindow.glade.h:3
 msgid "Administration password"
-msgstr "Administrator-Passwort"
+msgstr "รหัสผ่านเพื่อการดูแลระบบ"
 
 #: ../glade/optionswindow.glade.h:4
 msgid ""
 "Enter an administration password in case you need to perform administration tasks.\n"
 "Otherwise it will be disabled for better security."
-msgstr "Geben Sie ein Administrator-Passwort ein, falls Sie administrative Aufgaben durchführen müssen.\nAndernfalls wird diese Funktion für eine bessere Sicherheit deaktiviert."
+msgstr "ใช้รหัสผ่านเพื่อการดูแลระบบในกรณีที่คุณต้องการทำงานดูแลระบบ ในกรณีอื่นมันจะถูกปิดใช้เพื่อให้ปลอดภัยมากขึ้น"
 
 #: ../glade/optionswindow.glade.h:6
 msgid "Password:"
-msgstr "Passwort:"
+msgstr "รหัสผ่าน:"
 
 #: ../glade/optionswindow.glade.h:7
 msgid "Verify Password:"
-msgstr "Passwort erneut eingeben:"
+msgstr "ยืนยันรหัสผ่าน:"
 
 #: ../glade/optionswindow.glade.h:8
 msgid "<i>Passwords do not match</i>"
-msgstr "<i>Passwörter stimmen nicht überein</i>"
+msgstr "<i>รหัสผ่านไม่ตรงกัน</i>"
 
 #: ../glade/optionswindow.glade.h:9
 msgid "Windows Camouflage"
-msgstr "Windows Tarnung"
+msgstr "พรางตัวเป็นวินโดวส์"
 
 #: ../glade/optionswindow.glade.h:10
 msgid ""
 "This option makes Tails look more like Microsoft Windows XP. This may be "
 "useful in public places in order to avoid attracting suspicion."
-msgstr "Diese Option lässt Tails wie Microsoft Windows XP aussehen. Dies kann in der Öffentlichkeit hilfreich sein, um keine Aufmerksamkeit auf sich zu ziehen."
+msgstr "ตัวเลือกนี้จะทำให้ Tails ดูเหมือนกับไมโครซอฟท์วินโดวส์เอ็กซ์พีมากขึ้น สิ่งนี้อาจจะมีประโยชน์เมื่อใช้ในสถานที่สาธารณะ เพื่อหลีกเลี่ยงการเป็นจุดสนใจ"
 
 #: ../glade/optionswindow.glade.h:11
 msgid "Activate Microsoft Windows XP Camouflage"
-msgstr "Aktiviere Microsoft Windows XP Tarnung"
+msgstr "เปิดใช้การพรางตัวเป็นไมโครซอฟท์วินโดวส์เอ็กซ์พี"
 
 #: ../glade/langpanel.glade.h:1
 msgid " "
@@ -106,22 +101,22 @@ msgstr " "
 
 #: ../glade/langpanel.glade.h:2 ../GdmGreeter/langpanel.py:42
 msgid "Language"
-msgstr "Sprache"
+msgstr "ภาษา"
 
 #: ../glade/langpanel.glade.h:3
 msgid "Locale"
-msgstr "Ort"
+msgstr "โลแคล"
 
 #: ../glade/langpanel.glade.h:4
 msgid "Layout"
-msgstr "Layout "
+msgstr "โครงแบบ"
 
 #: ../GdmGreeter/persistence.py:59
 #, python-format
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
-msgstr "Live-Persist ist mit folgendem code fehlgeschlagen %(returncode)s:\n%(stderr)s"
+msgstr "live-persist ล้มเหลวด้วยรหัสตอบกลับ %(returncode)s:\n%(stderr)s"
 
 #: ../GdmGreeter/persistence.py:99
 #, python-format
@@ -129,7 +124,7 @@ msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "cryptsetup t ist mit folgendem code fehlgeschlagen %(returncode)s:\n%(stdout)s\n%(stderr)s"
+msgstr "cryptsetup ล้มเหลวด้วยรหัสตอบกลับ %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
 #: ../GdmGreeter/persistence.py:124
 #, python-format
@@ -137,9 +132,9 @@ msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "Live-Persist ist mit folgendem code fehlgeschlagen %(returncode)s:\n%(stdout)s\n%(stderr)s"
+msgstr "live-persist ล้มเหลวด้วยรหัสตอบกลับ %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
 #: ../GdmGreeter/langpanel.py:124 ../GdmGreeter/langpanel.py:148
 #: ../GdmGreeter/langpanel.py:181
 msgid "Other..."
-msgstr "Andere..."
+msgstr "อื่นๆ..."
