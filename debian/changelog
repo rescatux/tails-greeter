@@ -1,10 +1,15 @@
-tails-greeter (0.7.17~1.gbp603ac9) devel; urgency=low
+tails-greeter (0.7.17) stable; urgency=low
 
-  ** SNAPSHOT build @603ac9f837086fd51578c3715f280f755b06ccc4 **
+  [ Andres Gomez Ramirez <andres.gomez@cern.ch> ]
+  * Display a warning icon on greeter admin password mismatch
+  * Display a warning icon on persistence unlocking failure
+    (Closes: Tails#5332)
 
-  * Set consistent path for persistent storage.
+  [ intrigeri ]
+  * New translations for Indonesian, Slovak, Chinese (Taiwan).
+    Update translations for German and Polish.
 
- -- Tails developers <amnesia@boum.org>  Mon, 19 Aug 2013 12:40:20 +0200
+ -- Tails developers <tails@boum.org>  Mon, 09 Sep 2013 10:34:51 +0200
 
 tails-greeter (0.7.16) testing; urgency=low
 
