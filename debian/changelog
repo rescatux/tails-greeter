@@ -1,3 +1,11 @@
+tails-greeter (0.7.17+consistent.persistence.path~1.gbp42acf4) feature-consistent-peristence-path; urgency=low
+
+  ** SNAPSHOT build @42acf43c912bb2029f2592fcb90288b89b2f2e1e **
+
+  * Set consistent path for persistent storage.
+
+ -- Tails developers <amnesia@boum.org>  Sat, 21 Sep 2013 11:46:44 +0200
+
 tails-greeter (0.7.17) stable; urgency=low
 
   [ Andres Gomez Ramirez <andres.gomez@cern.ch> ]
