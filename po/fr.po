@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-05-12 19:29+0200\n"
-"PO-Revision-Date: 2013-05-14 00:20+0000\n"
+"PO-Revision-Date: 2013-10-15 16:00-0000\n"
 "Last-Translator: Onizuka\n"
 "Language-Team: French (http://www.transifex.com/projects/p/torproject/"
 "language/fr/)\n"
@@ -19,10 +19,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 1.5.4\n"
 
 #: ../glade/persistencewindow.glade.h:1
 msgid "Forward"
-msgstr "Avancer"
+msgstr "Suivant"
 
 #: ../glade/persistencewindow.glade.h:2 ../glade/optionswindow.glade.h:1
 msgid "Login"
