@@ -110,6 +110,11 @@ else
    log_n_exit "'/usr/local/sbin/tails-additional-software' does not exist or is not executable."
 fi
 
+# Reload CUPS configuration to take persistent printers into account if necessary
+if grep -qs '^/etc/cups\s\+' /live/persistence/*_unlocked/live-persistence.conf ; then
+    service cups force-reload
+fi
+
 ### Password
 
 # Import password for superuser access
