@@ -30,5 +30,8 @@ Depends: python2.6 | python2.5, python (>= 2.6.6-3+squeeze3~), python (<< 2.7),
          ttf-unifont
 Conflicts: gdm-community-greeter
 Description: GDM greeter for Tails
- For setting languages and other variables.
-
+ Tails Greeter allows users to choose their preferred language, locale
+ settings and keyboard layout. It also allows them to:
+   * enable the persistence feature of Tails;
+   * set an administration password;
+   * enable the Windows Camouflage mode.
