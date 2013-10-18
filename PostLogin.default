@@ -96,10 +96,11 @@ grep_n_set "LANG"       ${LOCALE_CFG} "${TAILS_LOCALE_NAME}.UTF-8"
 ### Persistence
 
 # Copy persistence configuration to a root-writable, world-readable place,
-# so that software running as LIVE_USERNAME can get it.
+# so that software running as LIVE_USERNAME or tails-persistence-setup can
+# get it.
 
 if [ -r /var/lib/gdm3/tails.persistence ] ; then
-   install -m 0640 -o root -g "$LIVE_USERNAME" \
+   install -m 0644 -o root -g root \
       /var/lib/gdm3/tails.persistence /var/lib/live/config/tails.persistence
 fi
 
