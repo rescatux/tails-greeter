@@ -1,13 +1,6 @@
-tails-greeter (0.7.18) devel; urgency=low
+tails-greeter (0.7.18+wheezy1~1.gbp12f57a) feature-wheezy; urgency=low
 
-  * Write more complete package description.
-  * Import updated and new translations from Transifex and translation teams.
-
- -- Tails developers <tails@boum.org>  Thu, 17 Oct 2013 13:28:51 +0200
-
-tails-greeter (0.7.17+wheezy2~1.gbp484bbf) feature-wheezy; urgency=low
-
-  ** SNAPSHOT build @484bbf46c6c96a089fe2785ce7822852f0c538e0 **
+  ** SNAPSHOT build @12f57a1c13a08780ffe38b217c4c840a732158a7 **
 
   * Convert from PyGTK 2 to PyGI GTK 3, update *.glade accordingly.
   * Migrate from the old D-Bus GDM interface to libgdmgreeter.
@@ -56,7 +49,14 @@ tails-greeter (0.7.17+wheezy2~1.gbp484bbf) feature-wheezy; urgency=low
   * Protect langcodes global variable
   * Remove outdated comment
 
- -- Tails developers <tails@boum.org>  Tue, 10 Sep 2013 10:59:35 +0200
+ -- Tails developers <tails@boum.org>  Sat, 19 Oct 2013 21:51:26 +0200
+
+tails-greeter (0.7.18) devel; urgency=low
+
+  * Write more complete package description.
+  * Import updated and new translations from Transifex and translation teams.
+
+ -- Tails developers <tails@boum.org>  Thu, 17 Oct 2013 13:28:51 +0200
 
 tails-greeter (0.7.17) stable; urgency=low
 
