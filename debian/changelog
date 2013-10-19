@@ -1,3 +1,10 @@
+tails-greeter (0.7.18) devel; urgency=low
+
+  * Write more complete package description.
+  * Import updated and new translations from Transifex and translation teams.
+
+ -- Tails developers <tails@boum.org>  Thu, 17 Oct 2013 13:28:51 +0200
+
 tails-greeter (0.7.17+wheezy2~1.gbp484bbf) feature-wheezy; urgency=low
 
   ** SNAPSHOT build @484bbf46c6c96a089fe2785ce7822852f0c538e0 **
