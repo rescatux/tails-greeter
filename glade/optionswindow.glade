@@ -294,7 +294,7 @@ Otherwise it will be disabled for better security.</property>
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="xalign">0</property>
-                    <property name="label" translatable="yes">MAC spoofing</property>
+                    <property name="label" translatable="yes">Spoof all MAC addresses</property>
                     <attributes>
                       <attribute name="weight" value="semibold"/>
                       <attribute name="size" value="11000"/>
@@ -311,7 +311,7 @@ Otherwise it will be disabled for better security.</property>
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="xalign">0</property>
-                    <property name="label" translatable="yes">This option will spoof all your network interfaces MAC addresses. You should only disable this if you are using a public computer, or experience network connection issues.</property>
+                    <property name="label" translatable="yes">This option hides the serial number of your network cards to the local networks. This can help you hide your geographical location.</property>
                     <property name="wrap">True</property>
                     <property name="width_chars">72</property>
                   </object>
@@ -319,6 +319,21 @@ Otherwise it will be disabled for better security.</property>
                     <property name="expand">True</property>
                     <property name="fill">True</property>
                     <property name="position">1</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="macspoof_warning">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="xalign">0</property>
+                    <property name="label" translatable="yes">It is generally safer to spoof MAC addresses, but it might also raise suspicion or cause network connection problems. See the documentation.</property>
+                    <property name="wrap">True</property>
+                    <property name="width_chars">72</property>
+                  </object>
+                  <packing>
+                    <property name="expand">True</property>
+                    <property name="fill">True</property>
+                    <property name="position">2</property>
                   </packing>
                 </child>
                 <child>
