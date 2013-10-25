@@ -1,3 +1,15 @@
+tails-greeter (0.7.20~1.gbp5bfa46) UNRELEASED; urgency=low
+
+  ** SNAPSHOT build @5bfa46e32dc7ad8ea611c233766ea39768493db2 **
+
+  [ Tails developers ]
+  * Add a checkbox controlling MAC spoofing.
+  * Start network blocking detector when spoofing MAC.
+  * Rephrase MAC spoofing help for added clarity.
+  * Unblock network after login.
+
+ -- Tails developers <amnesia@boum.org>  Fri, 25 Oct 2013 23:51:51 +0200
+
 tails-greeter (0.7.19) devel; urgency=low
 
   * Set consistent path for persistent storage.
