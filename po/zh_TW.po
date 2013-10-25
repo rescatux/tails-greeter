@@ -3,96 +3,97 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# bogdrozd <bog.d@gazeta.pl>, 2013
+# chinrur <chinrur@gmail.com>, 2013
+# wongyinho981 <wongyinho981@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: https://trac.torproject.org/projects/tor\n"
 "POT-Creation-Date: 2013-05-12 19:29+0200\n"
-"PO-Revision-Date: 2013-08-28 09:02+0000\n"
-"Last-Translator: yodaa <slayer123312@gmail.com>\n"
-"Language-Team: Polish (http://www.transifex.com/projects/p/torproject/language/pl/)\n"
+"PO-Revision-Date: 2013-08-27 23:50+0000\n"
+"Last-Translator: chinrur <chinrur@gmail.com>\n"
+"Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/torproject/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pl\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: zh_TW\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../glade/persistencewindow.glade.h:1
 msgid "Forward"
-msgstr "W przód"
+msgstr "往後"
 
 #: ../glade/persistencewindow.glade.h:2 ../glade/optionswindow.glade.h:1
 msgid "Login"
-msgstr "Login"
+msgstr "登入"
 
 #: ../glade/persistencewindow.glade.h:3 ../glade/optionswindow.glade.h:2
 msgid "Welcome to Tails"
-msgstr "Witamy w Tails"
+msgstr "歡迎來到 Tails"
 
 #: ../glade/persistencewindow.glade.h:4
 msgid "Use persistence?"
-msgstr "Zapisywać dane?"
+msgstr "使用持久性？"
 
 #: ../glade/persistencewindow.glade.h:5
 msgid "Yes"
-msgstr "Tak"
+msgstr "確定"
 
 #: ../glade/persistencewindow.glade.h:6
 msgid "No"
-msgstr "Nie"
+msgstr "取消"
 
 #: ../glade/persistencewindow.glade.h:7
 msgid "Passphrase:"
-msgstr "Hasło:"
+msgstr "密碼："
 
 #: ../glade/persistencewindow.glade.h:8
 msgid "Read-Only?"
-msgstr "Tylko do odczytu?"
+msgstr "唯獨？"
 
 #: ../glade/persistencewindow.glade.h:9
 msgid "<i>Wrong passphrase. Please try again.</i>"
-msgstr "<i>Złe hasło. Proszę spróbować ponownie.</i>"
+msgstr "密碼錯誤，請重試。"
 
 #: ../glade/persistencewindow.glade.h:10
 msgid "More options?"
-msgstr "Więcej opcji?"
+msgstr "更多選項？"
 
 #: ../glade/optionswindow.glade.h:3
 msgid "Administration password"
-msgstr "Hasło administracyjne"
+msgstr "系統管理員密碼"
 
 #: ../glade/optionswindow.glade.h:4
 msgid ""
 "Enter an administration password in case you need to perform administration tasks.\n"
 "Otherwise it will be disabled for better security."
-msgstr "Wprowadź hasło administracyjne, jeśli trzeba będzie wykonywać zadania administracyjne.\nW innym przypadku zostanie ono wyłączone dla większego bezpieczeństwa."
+msgstr "進行管理工作時請輸入系統管理員密碼。\n否則會因安全理由而被禁用。"
 
 #: ../glade/optionswindow.glade.h:6
 msgid "Password:"
-msgstr "Hasło:"
+msgstr "密碼："
 
 #: ../glade/optionswindow.glade.h:7
 msgid "Verify Password:"
-msgstr "Powtórz Hasło:"
+msgstr "確認密碼："
 
 #: ../glade/optionswindow.glade.h:8
 msgid "<i>Passwords do not match</i>"
-msgstr "<i>Hasła nie pasują</i>"
+msgstr "<i>密碼不符合</i>"
 
 #: ../glade/optionswindow.glade.h:9
 msgid "Windows Camouflage"
-msgstr "Kamuflaż Windows"
+msgstr "偽裝成Windows"
 
 #: ../glade/optionswindow.glade.h:10
 msgid ""
 "This option makes Tails look more like Microsoft Windows XP. This may be "
 "useful in public places in order to avoid attracting suspicion."
-msgstr "Ta opcja sprawia, że Tails wygląda bardziej jak Microsoft Windows XP. To może być przydatne w miejscach publicznych, aby nie wzbudzać podejrzeń."
+msgstr "這選項令Tails更像Microsoft Windows XP，可以避免在公開埸合引起懷疑。"
 
 #: ../glade/optionswindow.glade.h:11
 msgid "Activate Microsoft Windows XP Camouflage"
-msgstr "Włącz Kamuflaż Microsoft Windows XP"
+msgstr "開啟Microsoft Windows XP偽裝"
 
 #: ../glade/langpanel.glade.h:1
 msgid " "
@@ -100,22 +101,22 @@ msgstr " "
 
 #: ../glade/langpanel.glade.h:2 ../GdmGreeter/langpanel.py:42
 msgid "Language"
-msgstr "Język"
+msgstr "語言"
 
 #: ../glade/langpanel.glade.h:3
 msgid "Locale"
-msgstr "Ustawienia językowe"
+msgstr "地區"
 
 #: ../glade/langpanel.glade.h:4
 msgid "Layout"
-msgstr "Wygląd"
+msgstr "顯示"
 
 #: ../GdmGreeter/persistence.py:59
 #, python-format
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
-msgstr "live-persist zakończył się błędem z kodem %(returncode)s:\n%(stderr)s"
+msgstr "live-persist 失敗並傳回錯誤代碼 %(returncode)s:\n%(stderr)s"
 
 #: ../GdmGreeter/persistence.py:99
 #, python-format
@@ -123,7 +124,7 @@ msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "cryptsetup zakończył się błędem z kodem %(returncode)s:\n%(stdout)s\n%(stderr)s"
+msgstr "設定密碼失敗，代碼 %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
 #: ../GdmGreeter/persistence.py:124
 #, python-format
@@ -131,9 +132,9 @@ msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "live-persist zakończył się błędem z kodem %(returncode)s:\n%(stdout)s\n%(stderr)s"
+msgstr "live-persist 失敗並傳回錯誤代碼 %(returncode)s:⏎\n%(stdout)s⏎\n%(stderr)s"
 
 #: ../GdmGreeter/langpanel.py:124 ../GdmGreeter/langpanel.py:148
 #: ../GdmGreeter/langpanel.py:181
 msgid "Other..."
-msgstr "Inne..."
+msgstr "其他..."
