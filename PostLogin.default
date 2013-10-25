@@ -75,20 +75,23 @@ if [ -r "${CAMOUFLAGE_SETTINGS}" ] ; then
 fi
 
 ### Physical security
-
+# It's important we "export" this setting before unblocking the
+# network; doing so will make the user-set MAC spoofing option apply
+# (via the custom udev rule) when loading the modules for the
+# previously blocked network devices.
 PHYSICAL_SECURITY_SETTINGS="/var/lib/gdm3/tails.physical_security"
 if [ -r "${PHYSICAL_SECURITY_SETTINGS}" ] ; then
    install -m 0640 -o root -g "$LIVE_USERNAME" \
       "${PHYSICAL_SECURITY_SETTINGS}" /var/lib/live/config/tails.physical_security
+   sync
    . "${PHYSICAL_SECURITY_SETTINGS}"
    if [ "${TAILS_MACSPOOF_ENABLED}" = true ]; then
       /usr/local/sbin/tails-blocked-network-detector &
    fi
 fi
-/usr/local/sbin/tails-spoof-mac all
+/usr/local/sbin/tails-unblock-network
 
 ### (re-)start services that need to wait for post-login time
-# Let's make sure this happens after MAC spoofing
 service network-manager restart
 
 ### Localization
