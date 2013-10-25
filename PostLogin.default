@@ -80,6 +80,10 @@ PHYSICAL_SECURITY_SETTINGS="/var/lib/gdm3/tails.physical_security"
 if [ -r "${PHYSICAL_SECURITY_SETTINGS}" ] ; then
    install -m 0640 -o root -g "$LIVE_USERNAME" \
       "${PHYSICAL_SECURITY_SETTINGS}" /var/lib/live/config/tails.physical_security
+   . "${PHYSICAL_SECURITY_SETTINGS}"
+   if [ "${TAILS_MACSPOOF_ENABLED}" = true ]; then
+      /usr/local/sbin/tails-blocked-network-detector &
+   fi
 fi
 /usr/local/sbin/tails-spoof-mac all
 
