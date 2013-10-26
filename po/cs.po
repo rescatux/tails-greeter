@@ -3,32 +3,29 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# kraim <7kraim@gmail.com>, 2013
-# alshara3 <hsn.ali91@gmail.com>, 2013
-# alshara3 <hsn.ali91@gmail.com>, 2013
-# Mohammed ALDOUB <voulnet@gmail.com>, 2013
-# Sherief Alaa <sheriefalaa.w@gmail.com>, 2013
+# FHRFHRFHRFHR <fhr@fhrnet.eu>, 2013
+# Radog <bensch.radek@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: https://trac.torproject.org/projects/tor\n"
 "POT-Creation-Date: 2013-09-29 14:53+0200\n"
-"PO-Revision-Date: 2013-10-22 06:40+0000\n"
-"Last-Translator: Mohammed ALDOUB <voulnet@gmail.com>\n"
-"Language-Team: Arabic (http://www.transifex.com/projects/p/torproject/language/ar/)\n"
+"PO-Revision-Date: 2013-10-26 14:30+0000\n"
+"Last-Translator: Radog <bensch.radek@gmail.com>\n"
+"Language-Team: Czech (http://www.transifex.com/projects/p/torproject/language/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ar\n"
-"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"Language: cs\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: ../lib/Tails/Persistence/Configuration/Presets.pm:48
 msgid "Personal Data"
-msgstr "البيانات الشخصية"
+msgstr "Osobní data"
 
 #: ../lib/Tails/Persistence/Configuration/Presets.pm:50
 msgid "Keep files stored in the `Persistent' directory"
-msgstr "ابقي علي الملفات في الدليل الدائم"
+msgstr "Ukládejte data ve složce `Persistent'"
 
 #: ../lib/Tails/Persistence/Configuration/Presets.pm:58
 msgid "GnuPG"
@@ -36,15 +33,15 @@ msgstr "GnuPG"
 
 #: ../lib/Tails/Persistence/Configuration/Presets.pm:60
 msgid "GnuPG keyrings and configuration"
-msgstr "تكوين و مفاتيح GnuPG"
+msgstr "GnuPG klíčenka a konfigurace"
 
 #: ../lib/Tails/Persistence/Configuration/Presets.pm:68
 msgid "SSH Client"
-msgstr "عميل SSH"
+msgstr "SSH Client"
 
 #: ../lib/Tails/Persistence/Configuration/Presets.pm:70
 msgid "SSH keys, configuration and known hosts"
-msgstr "مفاتيح، و تكوين، و المستضيفين المعروفين لـSSH"
+msgstr "SSH klíče, konfigurace a známé počítače"
 
 #: ../lib/Tails/Persistence/Configuration/Presets.pm:78
 msgid "Pidgin"
@@ -52,7 +49,7 @@ msgstr "Pidgin"
 
 #: ../lib/Tails/Persistence/Configuration/Presets.pm:80
 msgid "Pidgin profiles and OTR keyring"
-msgstr "الحسابات الشخصية  في Pidgin و OTR keyring"
+msgstr "Pidgin profily a OTR klíčenka"
 
 #: ../lib/Tails/Persistence/Configuration/Presets.pm:88
 msgid "Claws Mail"
@@ -60,55 +57,55 @@ msgstr "Claws Mail"
 
 #: ../lib/Tails/Persistence/Configuration/Presets.pm:90
 msgid "Claws Mail profiles and locally stored email"
-msgstr "الحسابات الشخصية و البريد المخزن محلياً لـClaws Mail"
+msgstr "Claws Mail profily a místní uložené emaily"
 
 #: ../lib/Tails/Persistence/Configuration/Presets.pm:98
 msgid "GNOME Keyring"
-msgstr "GNOME Keyring"
+msgstr "GNOME klíčenka"
 
 #: ../lib/Tails/Persistence/Configuration/Presets.pm:100
 msgid "Secrets stored by GNOME Keyring"
-msgstr "الاسرار المخزنة بـGNOME Keyring"
+msgstr "Uložená tajemství GNOME klíčenkou"
 
 #: ../lib/Tails/Persistence/Configuration/Presets.pm:108
 msgid "Network Connections"
-msgstr "اتصالات الشبكة"
+msgstr "Síťová připojení"
 
 #: ../lib/Tails/Persistence/Configuration/Presets.pm:110
 msgid "Configuration of network devices and connections"
-msgstr "تكوين أجهزة الشّبكة و الاتصالات"
+msgstr "Konfigurace síťových zařízení a připojení"
 
 #: ../lib/Tails/Persistence/Configuration/Presets.pm:118
 msgid "Browser bookmarks"
-msgstr "المواقع المخزنة بالمتصفح"
+msgstr "Záložky"
 
 #: ../lib/Tails/Persistence/Configuration/Presets.pm:120
 msgid "Bookmarks saved in Iceweasel browser"
-msgstr "المواقع المخزنة بمتصفح Iceweasel"
+msgstr "Záložky uloženy v prohlížeči Iceweasel"
 
 #: ../lib/Tails/Persistence/Configuration/Presets.pm:128
 msgid "Printers"
-msgstr "  الطابعات"
+msgstr "Tiskárny"
 
 #: ../lib/Tails/Persistence/Configuration/Presets.pm:130
 msgid "Printers configuration"
-msgstr "إعدادات الطابعات"
+msgstr "Nastavení tiskáren"
 
 #: ../lib/Tails/Persistence/Configuration/Presets.pm:138
 msgid "APT Packages"
-msgstr "حزم APT"
+msgstr "Balíčky APT"
 
 #: ../lib/Tails/Persistence/Configuration/Presets.pm:140
 msgid "Packages downloaded by APT"
-msgstr "حزم محملة من قبل APT"
+msgstr "Balíčky stažené pomocí APT"
 
 #: ../lib/Tails/Persistence/Configuration/Presets.pm:148
 msgid "APT Lists"
-msgstr "قوائم APT"
+msgstr "Seznamy APT"
 
 #: ../lib/Tails/Persistence/Configuration/Presets.pm:150
 msgid "Lists downloaded by APT"
-msgstr "قوائم محملة من قبل APT"
+msgstr "Seznamy stažené pomocí APT"
 
 #: ../lib/Tails/Persistence/Configuration/Presets.pm:158
 msgid "Dotfiles"
@@ -117,92 +114,92 @@ msgstr "Dotfiles"
 #: ../lib/Tails/Persistence/Configuration/Presets.pm:160
 msgid ""
 "Symlink into $HOME every file or directory found in the `dotfiles' directory"
-msgstr "Symlink into $HOME every file or directory found in the `dotfiles' directory"
+msgstr "Symbolický odkaz do $ HOME nalezne každý soubor nebo adresář v `dotfiles\" adresáři"
 
 #: ../lib/Tails/Persistence/Setup.pm:257
 msgid ""
 "The device Tails is running from cannot be found. Maybe you used the `toram'"
 " option?"
-msgstr "الجهاز الذي يعمل تيلز من عليه غير موجود. ربما استخدمت خيار toram ؟"
+msgstr "Nelze nalézt zařízení, na kterém běží Tails. Možná jste použili volbu `toram' ?"
 
 #: ../lib/Tails/Persistence/Setup.pm:276
 msgid "Setup Tails persistent volume"
-msgstr "اعداد قرص دائم لتيلز"
+msgstr "Nastavení trvalého oddílu pro Tails"
 
 #: ../lib/Tails/Persistence/Setup.pm:420
 #, perl-format
 msgid "Device %s already has a persistent volume."
-msgstr "جهاز %s به قرص دائم اصلاً"
+msgstr "Zařízení %s už má trvalý oddíl."
 
 #: ../lib/Tails/Persistence/Setup.pm:428
 #, perl-format
 msgid "Device %s has not enough unallocated space."
-msgstr "جهاز %s لا يوجد به مساحة فارغة كافية."
+msgstr "Zařízení %s nemá dostatek nealokovaného místa."
 
 #: ../lib/Tails/Persistence/Setup.pm:436 ../lib/Tails/Persistence/Setup.pm:450
 #, perl-format
 msgid "Device %s has no persistent volume."
-msgstr "جهاز %s لا يوجد به قرص دائم."
+msgstr "Zařízení %s nemá trvalý oddíl."
 
 #: ../lib/Tails/Persistence/Setup.pm:442
 msgid ""
 "Cannot delete the persistent volume while in use. You should restart Tails "
 "without persistence."
-msgstr "لا يمكن إلغاء القرص الدائم اثناء الاستخدام. يجب عليك اعدة تشغيل تايلز دون دوام."
+msgstr "Nelze smazat trvalý oddíl, zatímco je používán. Musíte restartovat Tails bez používání trvalého oddílu."
 
 #: ../lib/Tails/Persistence/Setup.pm:461
 msgid "Persistence volume is not unlocked."
-msgstr "القرص الدائم مقفل."
+msgstr "Trvalý oddíl není odemčen."
 
 #: ../lib/Tails/Persistence/Setup.pm:466
 msgid "Persistence volume is not mounted."
-msgstr "القرص الدائم غير مثبت."
+msgstr "Trvalý oddíl není připojen."
 
 #: ../lib/Tails/Persistence/Setup.pm:471
 msgid "Persistence volume is not readable. Permissions or ownership problems?"
-msgstr "القرص الدائم غير قابل للقراءة. مشاكل في الصلاحيات او الملكية؟"
+msgstr "Trvalý oddíl není čitelný. Problém s povolením nebo s vlastnictvím?"
 
 #: ../lib/Tails/Persistence/Setup.pm:476
 msgid "Persistence volume is not writable. Maybe it was mounted read-only?"
-msgstr "غير قادر علي الكتابة علي القرص الدائم. ربما تم تثبيته للقراءة فقط؟"
+msgstr "Trvalý oddíl nejde přepsat. Nebyl připojen pouze pro čtení?"
 
 #: ../lib/Tails/Persistence/Setup.pm:485
 #, perl-format
 msgid "Tails is running from non-USB device %s."
-msgstr "تايلز يعمل من جهاز غير USB %s "
+msgstr "Tails je spuštěn na jiném zařízení než USB %s."
 
 #: ../lib/Tails/Persistence/Setup.pm:491
 #, perl-format
 msgid "Device %s is optical."
-msgstr "جهاز %s غير ضوئي"
+msgstr "Zařízení %s je optické."
 
 #: ../lib/Tails/Persistence/Setup.pm:498
 #, perl-format
 msgid "Device %s was not created using Tails USB installer."
-msgstr "جهاز %s لم يتم إنشائه باستخدام مثبت تايلز الخاص بالـUSB"
+msgstr "Zařízení %s nebylo vytvořeno pomocí Tails USB instalátorem."
 
 #: ../lib/Tails/Persistence/Setup.pm:532
 msgid "Error"
-msgstr "خطأ"
+msgstr "Chyba"
 
 #: ../lib/Tails/Persistence/Setup.pm:839
 msgid "Persistence wizard - Finished"
-msgstr "مساعد التثبيت الدائم - انتهاء"
+msgstr "Průvodce tvorby trvalého oddílu dokončil svou činnost."
 
 #: ../lib/Tails/Persistence/Setup.pm:842
 msgid ""
 "Any changes you have made will only take effect after restarting Tails.\n"
 "\n"
 "You may now close this application."
-msgstr "اي تغييرات قمت بها لن تُفعل إلا بعد إعادة تشغيل تيلز.\n\nيمكنك اغلاق هذا التطبيق الان."
+msgstr "Všechny změny budou mít efekt až po restartu Tails.\n\nNyní můžete zavřít aplikaci."
 
 #: ../lib/Tails/Persistence/Step/Bootstrap.pm:54
 msgid "Persistence wizard - Persistent volume creation"
-msgstr "مساعد القرص الدائم - إنشاء القرص الدائم"
+msgstr "Průvodce tvorbou trvalého oddílu - Tvorba trvalého oddílu"
 
 #: ../lib/Tails/Persistence/Step/Bootstrap.pm:57
 msgid "Choose a passphrase to protect the persistent volume"
-msgstr "اختر عبارة مرور لحمايه القرص الدائم"
+msgstr "Vyberte heslo na ochranu trvalého oddílu"
 
 #. TRANSLATORS: size, device vendor, device model
 #: ../lib/Tails/Persistence/Step/Bootstrap.pm:61
@@ -210,11 +207,11 @@ msgstr "اختر عبارة مرور لحمايه القرص الدائم"
 msgid ""
 "A %s persistent volume will be created on the <b>%s %s</b> device. Data on "
 "this volume will be stored in an encrypted form protected by a passphrase."
-msgstr "سيتم إنشاء %s قرص دائم على جهاز <b>%s %s</b> . البيانات على هذا القرص سيتم تشفيرها و حمايتها بعبارة مرور. "
+msgstr "%s trvalý oddíl bude vytvořen na <b>%s %s</b> zařízení. Data v oddílu budou uložena v šifrované podobě a chráněná heslem."
 
 #: ../lib/Tails/Persistence/Step/Bootstrap.pm:66
 msgid "Create"
-msgstr "إنشاء"
+msgstr "Vytvořit"
 
 #: ../lib/Tails/Persistence/Step/Bootstrap.pm:110
 msgid ""
@@ -222,53 +219,53 @@ msgid ""
 "understood. Tails can't help you if you use it wrong! See <a "
 "href='file:///usr/share/doc/tails/website/doc/first_steps/persistence.en.html'>Tails"
 " documentation about persistence</a> to learn more."
-msgstr "<b>احترس!</b> استخدام التثبيت الدائم له عواقب يجب ان تفهمها. تيلز لن يساعدك اذا استخدمته بطريقة خاطئة! اقرأ <a href='file:///usr/share/doc/tails/website/doc/first_steps/persistence.en.html'> تفاصيل التثبيت الدائم لتيلز</a> لفهم المزيد."
+msgstr "<b>Pozor!</b> Užívání trvalého oddílu a následků s tímto spjatých je důležité dobře pochopit. Tails Vám nepomůže pokud ho používáte špatným způsobem! viz <a href='file:///usr/share/doc/tails/website/doc/first_steps/persistence.en.html'>Dokumentace o trvalém oddílu v Tails</a> Vám vysvětlí více."
 
 #: ../lib/Tails/Persistence/Step/Bootstrap.pm:144
 msgid "Passphrase:"
-msgstr "عبارة مرور"
+msgstr "Heslo:"
 
 #: ../lib/Tails/Persistence/Step/Bootstrap.pm:154
 msgid "Verify Passphrase:"
-msgstr "أعد عبارة مرور"
+msgstr "Potvrďte heslo:"
 
 #: ../lib/Tails/Persistence/Step/Bootstrap.pm:167
 #: ../lib/Tails/Persistence/Step/Bootstrap.pm:231
 msgid "Passphrase can't be empty"
-msgstr "لا يجوز ترك عبارة مرور فارغة"
+msgstr "Heslo nesmí být prázdné"
 
 #: ../lib/Tails/Persistence/Step/Bootstrap.pm:222
 msgid "Passphrases do not match"
-msgstr "عبارات المرور غير متطابقين"
+msgstr "Hesla se neshodují"
 
 #: ../lib/Tails/Persistence/Step/Bootstrap.pm:262
 #: ../lib/Tails/Persistence/Step/Configure.pm:123
 msgid "Failed"
-msgstr "فشل"
+msgstr "Selhani"
 
 #: ../lib/Tails/Persistence/Step/Bootstrap.pm:271
 msgid "Mounting Tails persistence partition."
-msgstr "جاري تركيب القرص الدائم الخاص بتيلز."
+msgstr "Připojování trvalého oddílu Tails."
 
 #: ../lib/Tails/Persistence/Step/Bootstrap.pm:274
 msgid "The Tails persistence partition will be mounted."
-msgstr "سيتم تركيب القرص الدائم الخاص بتيلز."
+msgstr "Trvalý oddíl Tails bude připojen."
 
 #: ../lib/Tails/Persistence/Step/Bootstrap.pm:296
 msgid "Creating..."
-msgstr "جاري الإنشاء..."
+msgstr "Vytváření..."
 
 #: ../lib/Tails/Persistence/Step/Bootstrap.pm:299
 msgid "Creating the persistent volume..."
-msgstr "جاري إنشاء القرص الدائم..."
+msgstr "Vytváření trvalého oddílu."
 
 #: ../lib/Tails/Persistence/Step/Configure.pm:55
 msgid "Persistence wizard - Persistent volume configuration"
-msgstr "مساعد القرص الدائم - تكوين القرص الدائم"
+msgstr "Průvodce tvorby trvalého oddílu - Konfigurace trvalého oddílu"
 
 #: ../lib/Tails/Persistence/Step/Configure.pm:58
 msgid "Specify the files that will be saved in the persistent volume"
-msgstr "حدد الملفات التي سيتم حفظها بالقرص الدائم"
+msgstr "Specifikujte soubory, které budou uloženy na trvalém oddílu."
 
 #. TRANSLATORS: partition, size, device vendor, device model
 #: ../lib/Tails/Persistence/Step/Configure.pm:62
@@ -276,42 +273,42 @@ msgstr "حدد الملفات التي سيتم حفظها بالقرص الدا
 msgid ""
 "The selected files will be stored in the encrypted partition %s (%s), on the"
 " <b>%s %s</b> device."
-msgstr "الملفات المختارة سيتم حفظها بالقرص المشفر  %s (%s), على جهاز <b>%s %s</b> ."
+msgstr "Vybrané soubory budou uloženy v šifrovaném oddílu %s (%s), na <b>%s %s</b> zařízení"
 
 #: ../lib/Tails/Persistence/Step/Configure.pm:68
 msgid "Save"
-msgstr "حفظ"
+msgstr "Uložit"
 
 #: ../lib/Tails/Persistence/Step/Configure.pm:137
 msgid "Saving..."
-msgstr "جاري الحفظ..."
+msgstr "Ukládání..."
 
 #: ../lib/Tails/Persistence/Step/Configure.pm:140
 msgid "Saving persistence configuration..."
-msgstr "جاري حفظ تكوين القرص الدائم..."
+msgstr "Ukládání konfigurace trvalého oddílu..."
 
 #: ../lib/Tails/Persistence/Step/Delete.pm:40
 msgid "Persistence wizard - Persistent volume deletion"
-msgstr "مساعد القرص الدائم - إلغاء القرص الدائم "
+msgstr "Průvodce tvorby trvalého oddílu - Odstranění trvalého oddílu"
 
 #: ../lib/Tails/Persistence/Step/Delete.pm:43
 msgid "Your persistent data will be deleted."
-msgstr "بياناتك الدائمة سوف يتم إلغائها."
+msgstr "Vaše trvalá data budou smazana."
 
 #: ../lib/Tails/Persistence/Step/Delete.pm:47
 #, perl-format
 msgid ""
 "The persistent volume %s (%s), on the <b>%s %s</b> device, will be deleted."
-msgstr "القرص الدائم  %s (%s), على جهاز  <b>%s %s</b> , سيتم مسحه."
+msgstr "Trvalý oddíl %s (%s), na <b>%s %s</b> zařízení bude smazán."
 
 #: ../lib/Tails/Persistence/Step/Delete.pm:53
 msgid "Delete"
-msgstr "إلغاء"
+msgstr "Smazat"
 
 #: ../lib/Tails/Persistence/Step/Delete.pm:91
 msgid "Deleting..."
-msgstr "جاري الإلغاء..."
+msgstr "Mazání..."
 
 #: ../lib/Tails/Persistence/Step/Delete.pm:94
 msgid "Deleting the persistent volume..."
-msgstr "جاري إلغاء القرص الدائم..."
+msgstr "Mazání trvalého oddílu..."
