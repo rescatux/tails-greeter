@@ -1,3 +1,15 @@
+tails-greeter (0.7.21~1.gbpabf313) experimental; urgency=low
+
+  ** SNAPSHOT build @abf3133653528290effa1a30d9c958395525fdfa **
+
+  [ Tails developers ]
+  * Add a checkbox controlling MAC spoofing.
+  * Start network blocking detector when spoofing MAC.
+  * Rephrase MAC spoofing help for added clarity.
+  * Unblock network after login.
+
+ -- Tails developers <amnesia@boum.org>  Sun, 27 Oct 2013 16:24:15 +0100
+
 tails-greeter (0.7.20) devel; urgency=low
 
   * Import translations from Transifex.
