@@ -75,7 +75,7 @@ class PersistenceSettings(object):
 
     def unlock_device(self, device, password):
         """Unlock the LUKS persistent device"""
-        cleartext_name = str.rsplit(device, '/', 1)[-1] + '_unlocked'
+        cleartext_name = 'TailsData_unlocked'
         cleartext_device = '/dev/mapper/' + cleartext_name
         if not os.path.exists(cleartext_device):
             args = [

@@ -1,3 +1,17 @@
+tails-greeter (0.7.20) devel; urgency=low
+
+  * Import translations from Transifex.
+
+ -- Tails developers <tails@boum.org>  Sat, 26 Oct 2013 23:19:47 +0200
+
+tails-greeter (0.7.19) devel; urgency=low
+
+  * Set consistent path for persistent storage.
+  * Reload CUPS configuration after persistence activation.
+  * Make /var/lib/live/config/tails.persistence world-readable (Closes: #6374).
+
+ -- Tails developers <tails@boum.org>  Tue, 22 Oct 2013 12:09:29 +0200
+
 tails-greeter (0.7.18+wheezy1~1.gbp12f57a) feature-wheezy; urgency=low
 
   ** SNAPSHOT build @12f57a1c13a08780ffe38b217c4c840a732158a7 **
