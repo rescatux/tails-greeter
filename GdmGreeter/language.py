@@ -18,7 +18,7 @@
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>
 #
-"""Localistaion handeling
+"""Localization handling
 
 """
 
@@ -65,7 +65,7 @@ def get_native_langs(lang_list):
     langs_dict = {}
     for l in lang_list:
         # English = Locale(en_GB)...
-        lang =  Locale(l).getDisplayLanguage(Locale(l)).title()
+        lang = Locale(l).getDisplayLanguage(Locale(l)).title()
         try:
             langs_dict[lang]
         except: #XXX specify exception
@@ -513,8 +513,8 @@ class LocalisationSettings(object):
 # List of system locale codes
 langcodes = __get_langcodes()
 
-# dictionnary of native language: language code
+# dictionary of native languages: language code
 _languages_dict = get_native_langs(langcodes)
 
-# dictionnary of layout codes: layout name
+# dictionary of layout codes: layout name
 _system_layouts_dict = __fill_layouts_dict()
