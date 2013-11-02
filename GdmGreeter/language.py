@@ -205,10 +205,12 @@ def layouts_with_names(layouts, locale='C'):
     return layouts_with_names
 
 def __get_langcodes():
+    with open(GdmGreeter.config.default_langcodes_path, 'r') as f:
+        defcodes = [ line.rstrip('\n') for line in f.readlines() ]
     with open(GdmGreeter.config.language_codes_path, 'r') as f:
         langcodes = [ line.rstrip('\n') for line in f.readlines() ]
     logging.debug('%s languages found', len(langcodes))
-    return langcodes
+    return defcodes + langcodes
 
 class TranslatableWindow(object):
     """Interface providing functions to translate a window on the fly
