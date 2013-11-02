@@ -74,17 +74,6 @@ def get_native_langs(lang_list):
             langs_dict[lang].append(l)
     return langs_dict
 
-def get_texts(langs):
-    """obtain texts for a given locale using gettext"""
-    result = {}
-    for k, l in langs.iteritems():
-        loc = l[0].split('_')[0]
-        try:
-            result[str(loc)] = gettext.translation(GdmGreeter.__appname__, GdmGreeter.config.locales_path, [str(loc)])
-        except IOError:
-            logging.debug('Failed to get texts for %s locale', loc)
-    return result
-
 def __fill_layouts_dict():
     """assemble dictionary of layout codes to corresponding layout name
     
@@ -222,7 +211,6 @@ class TranslatableWindow(object):
         self.labels = []
         self.tips = []
         self.store_translations(self.window)
-        self.__texts = get_texts(_languages_dict)
 
     def store_translations(self, widget):
         """Go through all widgets and store the translatable elements"""
@@ -234,14 +222,6 @@ class TranslatableWindow(object):
             if child.get_has_tooltip():
                 self.tips.append( (child, child.get_tooltip_text()) )
 
-    def language(self, lang):
-        """Return normalised language for use in this process"""
-        if '_' in lang:
-            lang = lang.split('_')[0]
-        if '.' in lang:
-            lang = lang.split('.')[0]
-        return lang.lower()
-
     def gettext(self, lang, text):
         """Return a translated string or string"""
         if lang:
@@ -250,7 +230,11 @@ class TranslatableWindow(object):
 
     def translate_to(self, lang):
         """Loop through everything and translate on the fly"""
-        lang = self.__texts.get(self.language(lang), None)
+        try:
+            lang = gettext.translation(GdmGreeter.__appname__, GdmGreeter.config.locales_path, [str(lang)])
+        except IOError:
+            lang = None
+
         for (child, text) in self.labels:
             child.set_label(self.gettext(lang, text))
         for (child, text) in self.tips:
