@@ -449,9 +449,9 @@ class LocalisationSettings(object):
                 (layout_code,
                  language_from_locale(self._locale).lower(),
                  country_from_locale(self._locale).lower()))
-            if language_from_locale(self._locale).lower() == layout_code:
+            if country_from_locale(self._locale).lower() == layout_code:
                 default_layout = layout_code
-            elif country_from_locale(self._locale).lower() == layout_code:
+            elif language_from_locale(self._locale).lower() == layout_code:
                 backup_layout = layout_code
         if not default_layout:
             if backup_layout:
