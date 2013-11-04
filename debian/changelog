@@ -1,3 +1,11 @@
+tails-greeter (0.7.21+wheezy1~1.gbp186f59) feature-wheezy; urgency=low
+
+  ** SNAPSHOT build @186f59fc61ad9ad4afaf6c2f2501fda6aad5a348 **
+
+  * Rebuild for Debian Wheezy.
+
+ -- Tails developers <tails@boum.org>  Mon, 04 Nov 2013 15:10:00 +0100
+
 tails-greeter (0.7.21) experimental; urgency=low
 
   [WinterFairy]
