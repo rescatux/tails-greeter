@@ -1,3 +1,18 @@
+tails-greeter (0.7.21) experimental; urgency=low
+
+  [WinterFairy]
+  * Language and syntax fixes
+  * Added new file "default_langcodes"
+  * Install default_langcodes, and make use of it.
+  * Sort the default_langcodes file, and really only list one country
+    per language.
+  * Remove old incorrect way of inferring default country.
+  * Take country code into consideration when translating the window
+    (Closes: Tails#5469).
+  * Prefer keyboard layout for selected country.
+
+ -- Tails developers <tails@boum.org>  Mon, 04 Nov 2013 12:58:39 +0100
+
 tails-greeter (0.7.20) devel; urgency=low
 
   * Import translations from Transifex.
