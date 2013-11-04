@@ -26,6 +26,9 @@ LUSER = 'amnesia'
 # file where supported language codes (such as en_US) are saved at Tails build time
 language_codes_path = '/usr/share/tails-greeter/language_codes'
 
+# file where default language code for languages are saved at Tails build time
+default_langcodes_path = '/usr/share/tails-greeter/default_langcodes'
+
 # locales path
 locales_path = '/usr/share/locale/'
 
