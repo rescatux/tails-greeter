@@ -80,7 +80,7 @@ def get_native_langs(lang_list):
     langs_dict = {}
     for l in lang_list:
         # English = Locale(en_GB)...
-        lang =  icu.Locale(l).getDisplayLanguage(icu.Locale(l)).title()
+        lang = icu.Locale(l).getDisplayLanguage(icu.Locale(l)).title()
         try:
             langs_dict[lang]
         except: #XXX specify exception
@@ -88,17 +88,6 @@ def get_native_langs(lang_list):
         if l not in langs_dict[lang]:
             langs_dict[lang].append(l)
     return langs_dict
-
-def get_texts(langs):
-    """obtain texts for a given locale using gettext"""
-    result = {}
-    for k, l in langs.iteritems():
-        loc = l[0].split('_')[0]
-        try:
-            result[str(loc)] = gettext.translation(tailsgreeter.__appname__, tailsgreeter.config.locales_path, [str(loc)])
-        except IOError:
-            logging.debug('Failed to get texts for %s locale', loc)
-    return result
 
 def __fill_layouts_dict():
     """assemble dictionary of layout codes to corresponding layout name
@@ -208,10 +197,12 @@ def layouts_with_names(layouts, locale='C'):
     return layouts_with_names
 
 def __get_langcodes():
+    with open(tailsgreeter.config.default_langcodes_path, 'r') as f:
+        defcodes = [ line.rstrip('\n') for line in f.readlines() ]
     with open(tailsgreeter.config.language_codes_path, 'r') as f:
         langcodes = [ line.rstrip('\n') for line in f.readlines() ]
     logging.debug('%s languages found', len(langcodes))
-    return langcodes
+    return defcodes + langcodes
 
 class TranslatableWindow(object):
     """Interface providing functions to translate a window on the fly
@@ -223,7 +214,6 @@ class TranslatableWindow(object):
         self.labels = []
         self.tips = []
         self.store_translations(self.window)
-        self.__texts = get_texts(_languages_dict)
 
     def store_translations(self, widget):
         """Go through all widgets and store the translatable elements"""
@@ -235,14 +225,6 @@ class TranslatableWindow(object):
             if child.get_has_tooltip():
                 self.tips.append( (child, child.get_tooltip_text()) )
 
-    def language(self, lang):
-        """Return normalised language for use in this process"""
-        if '_' in lang:
-            lang = lang.split('_')[0]
-        if '.' in lang:
-            lang = lang.split('.')[0]
-        return lang.lower()
-
     def gettext(self, lang, text):
         """Return a translated string or string"""
         if lang:
@@ -251,7 +233,11 @@ class TranslatableWindow(object):
 
     def translate_to(self, lang):
         """Loop through everything and translate on the fly"""
-        lang = self.__texts.get(self.language(lang), None)
+        try:
+            lang = gettext.translation(GdmGreeter.__appname__, GdmGreeter.config.locales_path, [str(lang)])
+        except IOError:
+            lang = None
+
         for (child, text) in self.labels:
             child.set_label(self.gettext(lang, text))
         for (child, text) in self.tips:
@@ -400,14 +386,8 @@ class LocalisationSettings(object):
         default_locale = None
         default_locales = self.get_default_locales()
         logging.debug("default_locales = %s" % default_locales)
-        if default_locales: 
-            for locale in default_locales:
-                if ((locale == 'en_US')
-                    or (language_from_locale(locale).lower() ==
-                        country_from_locale(locale).lower())):
-                    default_locale = locale
-            if not default_locale:
-                default_locale = default_locales[0]
+        if default_locales:
+            default_locale = default_locales[0]
         else:
             default_locale = 'en_US'
         logging.debug("setting default locale to %s" % default_locale)
@@ -502,10 +482,10 @@ class LocalisationSettings(object):
             country=country_from_locale(self._locale).lower()
             logging.debug("layout_code='%s', ln='%s', CC='%s'",
                 layout_code, ln, country)
-            if ln == layout_code:
+            if country == layout_code:
                 logging.debug("Default layout is %s", layout_code)
                 default_layout = layout_code
-            elif country == layout_code:
+            elif ln == layout_code:
                 logging.debug("Backup layout is %s", layout_code)
                 backup_layout = layout_code
         if not default_layout:
@@ -552,8 +532,8 @@ class LocalisationSettings(object):
 # List of system locale codes
 _langcodes = __get_langcodes()
 
-# dictionnary of native language: language code
-_languages_dict = get_native_langs(_langcodes)
+# dictionary of native languages: language code
+_languages_dict = get_native_langs(langcodes)
 
-# dictionnary of layout codes: layout name
+# dictionary of layout codes: layout name
 _system_layouts_dict = __fill_layouts_dict()
