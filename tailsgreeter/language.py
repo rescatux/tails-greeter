@@ -533,7 +533,7 @@ class LocalisationSettings(object):
 _langcodes = __get_langcodes()
 
 # dictionary of native languages: language code
-_languages_dict = get_native_langs(langcodes)
+_languages_dict = get_native_langs(_langcodes)
 
 # dictionary of layout codes: layout name
 _system_layouts_dict = __fill_layouts_dict()
