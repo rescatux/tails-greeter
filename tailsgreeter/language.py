@@ -234,7 +234,7 @@ class TranslatableWindow(object):
     def translate_to(self, lang):
         """Loop through everything and translate on the fly"""
         try:
-            lang = gettext.translation(GdmGreeter.__appname__, GdmGreeter.config.locales_path, [str(lang)])
+            lang = gettext.translation(tailsgreeter.__appname__, tailsgreeter.config.locales_path, [str(lang)])
         except IOError:
             lang = None
 
