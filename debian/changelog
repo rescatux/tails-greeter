@@ -1,9 +1,10 @@
-tails-greeter (0.7.21+wheezy1~2.gbp824aca) feature-wheezy; urgency=low
+tails-greeter (0.7.21+wheezy1~3.gbpa846cd) feature-wheezy; urgency=low
 
-  ** SNAPSHOT build @824acae772324b7d72fd8b3bb1120e67ebbd17df **
+  ** SNAPSHOT build @a846cdeb0a2daa547c6cf2be7408a647ce827ec1 **
 
   * Rebuild for Debian Wheezy.
   * Take into account langcodes was renamed to _langcodes.
+  * Take into account GdmGreeter was renamed to tailsgreeter.
 
  -- Tails developers <tails@boum.org>  Mon, 04 Nov 2013 15:10:00 +0100
 
