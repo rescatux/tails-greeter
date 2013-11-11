@@ -23,6 +23,7 @@
 import logging, gtk, os
 import GdmGreeter
 from GdmGreeter.language import TranslatableWindow
+from helpwindow import HelpWindow
 
 class OptionsWindow(TranslatableWindow):
     """Display a pre-login window"""
@@ -48,6 +49,22 @@ class OptionsWindow(TranslatableWindow):
         self.warning_area.hide()
         self.entry_password.set_visibility(False)
         self.entry_password2.set_visibility(False)
+
+    def cb_doc_handler(self, label, page, data=None):
+        # Note that we add the "file://" part here, not in the <a> tag
+        # of the labels in the glade file. We're forced to add this
+        # callback *in addition* to the standard one (gtk.show_uri),
+        # which will do nothing for uri:s without a protocol
+        # part. This is critical since we otherwise would open the
+        # default browser (iceweasel) in T-G. If pygtk had a mechanism
+        # like gtk's g_signal_handler_find() this could be dealt with
+        # in a less messy way by just removing the default handler.
+        uri = "file:///usr/share/doc/tails/website/" + page
+        self.window.hide()
+        self.greeter.langpanel.window.hide()
+        HelpWindow(uri)
+        self.window.show()
+        self.greeter.langpanel.window.show()
 
     def set_password(self):
         """Set root access password"""
