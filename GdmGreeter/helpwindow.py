@@ -54,3 +54,20 @@ class HelpWindow(TranslatableWindow):
 
     def close(self, *args):
         self.window.destroy()
+
+    @staticmethod
+    def cb_doc_handler(cb_obj, label, page, data=None):
+        # Note that we add the "file://" part here, not in the <a> tag
+        # of the labels in the glade file. We're forced to add this
+        # callback *in addition* to the standard one (gtk.show_uri),
+        # which will do nothing for uri:s without a protocol
+        # part. This is critical since we otherwise would open the
+        # default browser (iceweasel) in T-G. If pygtk had a mechanism
+        # like gtk's g_signal_handler_find() this could be dealt with
+        # in a less messy way by just removing the default handler.
+        uri = "file:///usr/share/doc/tails/website/" + page
+        cb_obj.window.hide()
+        cb_obj.greeter.langpanel.window.hide()
+        HelpWindow(uri)
+        cb_obj.window.show()
+        cb_obj.greeter.langpanel.window.show()
