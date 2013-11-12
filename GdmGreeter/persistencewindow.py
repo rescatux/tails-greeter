@@ -192,7 +192,13 @@ class PersistenceWindow(TranslatableWindow):
         """Handle key press"""
         if event:
             if event.keyval in [ gtk.keysyms.Return, gtk.keysyms.KP_Enter ]:
-                self.go()
+                if self.window.get_focus().__class__.__name__ == "Label":
+                    # The only labels that we allow to be focused are
+                    # the help links, for which Return will activate
+                    # the link.
+                    return
+                else:
+                    self.go()
 
     def delete_event_cb(self, widget, event=None):
         """Ignore delete event (Esc)"""

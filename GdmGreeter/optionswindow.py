@@ -95,6 +95,11 @@ class OptionsWindow(TranslatableWindow):
             if event.keyval in [ gtk.keysyms.Return, gtk.keysyms.KP_Enter ]:
                 if self.entry_password.is_focus():
                     self.entry_password2.grab_focus()
+                elif self.window.get_focus().__class__.__name__ == "Label":
+                    # The only labels that we allow to be focused are
+                    # the help links, for which Return will activate
+                    # the link.
+                    return
                 else:
                     self.set_options_and_login()
 
