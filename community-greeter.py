@@ -79,10 +79,10 @@ class CommunityGreeterApp(GdmGreeterService):
         self.localisationsettings = GdmGreeter.language.LocalisationSettings(self)
         self.langpanel = self.load_window(LangPanel, self)
         self.persistencewindow = self.load_window(PersistenceWindow, self)
-        self.optionswindow = self.load_window(OptionsWindow, self)
         self.rootaccess = GdmGreeter.rootaccess.RootAccessSettings()
         self.camouflage = GdmGreeter.camouflage.CamouflageSettings()
         self.physical_security = GdmGreeter.physicalsecurity.PhysicalSecuritySettings()
+        self.optionswindow = self.load_window(OptionsWindow, self)
 
     def load_window(self, window_class, *args, **kwargs):
         """When loading a window, also translate it"""

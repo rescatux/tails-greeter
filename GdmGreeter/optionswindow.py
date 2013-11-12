@@ -41,7 +41,8 @@ class OptionsWindow(TranslatableWindow):
         self.warning_area = builder.get_object("warning_area")
         self.camouflage_checkbox = builder.get_object("camouflage_checkbox")
         self.macspoof_checkbox = builder.get_object("macspoof_checkbox")
-        self.macspoof_checkbox.set_active(True)
+        self.macspoof_checkbox.set_active(self.greeter.physical_security.macspoof)
+        self.macspoof_vm_warning_area = builder.get_object("macspoof_vm_warning_area")
 
         TranslatableWindow.__init__(self, builder.get_object("options_dialog"))
         self.window.set_visible(False)
@@ -49,6 +50,19 @@ class OptionsWindow(TranslatableWindow):
         self.warning_area.hide()
         self.entry_password.set_visibility(False)
         self.entry_password2.set_visibility(False)
+
+        def cb_macspoof_toggle(*args):
+            if self.greeter.physical_security.inside_virtual_machine() and \
+                    self.macspoof_checkbox.get_active():
+                self.macspoof_vm_warning_area.show()
+            else:
+                self.macspoof_vm_warning_area.hide()
+                # compact the window
+                self.window.resize(1, 1)
+
+        self.macspoof_checkbox.connect("toggled", cb_macspoof_toggle)
+        cb_macspoof_toggle()
+
 
     # Help callback handler
     cb_doc_handler = HelpWindow.cb_doc_handler
