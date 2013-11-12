@@ -23,6 +23,7 @@
 import logging, gtk, os
 import GdmGreeter
 from GdmGreeter.language import TranslatableWindow
+from helpwindow import HelpWindow
 
 class OptionsWindow(TranslatableWindow):
     """Display a pre-login window"""
@@ -40,14 +41,39 @@ class OptionsWindow(TranslatableWindow):
         self.warning_area = builder.get_object("warning_area")
         self.camouflage_checkbox = builder.get_object("camouflage_checkbox")
         self.macspoof_checkbox = builder.get_object("macspoof_checkbox")
-        self.macspoof_checkbox.set_active(True)
+        self.macspoof_checkbox.set_active(self.greeter.physical_security.macspoof)
+        self.macspoof_vm_warning_area = builder.get_object("macspoof_vm_warning_area")
 
         TranslatableWindow.__init__(self, builder.get_object("options_dialog"))
         self.window.set_visible(False)
 
-        self.warning_area.hide()
         self.entry_password.set_visibility(False)
         self.entry_password2.set_visibility(False)
+
+        def cb_pw_changed(*args):
+            self.warning_area.hide()
+            # compact the window
+            self.window.resize(1, 1)
+
+        self.entry_password.connect("changed", cb_pw_changed)
+        self.entry_password2.connect("changed", cb_pw_changed)
+        cb_pw_changed()
+
+        def cb_macspoof_toggle(*args):
+            if self.greeter.physical_security.inside_virtual_machine() and \
+                    self.macspoof_checkbox.get_active():
+                self.macspoof_vm_warning_area.show()
+            else:
+                self.macspoof_vm_warning_area.hide()
+                # compact the window
+                self.window.resize(1, 1)
+
+        self.macspoof_checkbox.connect("toggled", cb_macspoof_toggle)
+        cb_macspoof_toggle()
+
+
+    # Help callback handler
+    cb_doc_handler = HelpWindow.cb_doc_handler
 
     def set_password(self):
         """Set root access password"""
@@ -91,6 +117,11 @@ class OptionsWindow(TranslatableWindow):
             if event.keyval in [ gtk.keysyms.Return, gtk.keysyms.KP_Enter ]:
                 if self.entry_password.is_focus():
                     self.entry_password2.grab_focus()
+                elif self.window.get_focus().__class__.__name__ == "Label":
+                    # The only labels that we allow to be focused are
+                    # the help links, for which Return will activate
+                    # the link.
+                    return
                 else:
                     self.set_options_and_login()
 

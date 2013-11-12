@@ -24,6 +24,7 @@
 import logging, gtk, os
 import GdmGreeter
 from GdmGreeter.language import TranslatableWindow
+from helpwindow import HelpWindow
 
 class PersistenceWindow(TranslatableWindow):
     """First greeter screen"""
@@ -74,6 +75,9 @@ class PersistenceWindow(TranslatableWindow):
         # * support multiple persistent containers:
         #   - display brand, model, partition path and size for each container
         #   - create as many passphrase input fields as needed
+
+    # Help callback handler
+    cb_doc_handler = HelpWindow.cb_doc_handler
 
     def activate_persistence(self):
         """Ask the backend to activate persistence and handle errors
@@ -188,7 +192,13 @@ class PersistenceWindow(TranslatableWindow):
         """Handle key press"""
         if event:
             if event.keyval in [ gtk.keysyms.Return, gtk.keysyms.KP_Enter ]:
-                self.go()
+                if self.window.get_focus().__class__.__name__ == "Label":
+                    # The only labels that we allow to be focused are
+                    # the help links, for which Return will activate
+                    # the link.
+                    return
+                else:
+                    self.go()
 
     def delete_event_cb(self, widget, event=None):
         """Ignore delete event (Esc)"""
