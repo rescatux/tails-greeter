@@ -1,3 +1,22 @@
+tails-greeter (0.7.22~1.gbpaa71ea) UNRELEASED; urgency=low
+
+  ** SNAPSHOT build @aa71ea764bb7035d7f0c9d4662a07f69d8d1979f **
+
+  [ Tails developers ]
+  * Add a checkbox controlling MAC spoofing.
+  * Start network blocking detector when spoofing MAC.
+  * Rephrase MAC spoofing help for added clarity.
+  * Unblock network after login.
+  * Add helper class for displaying HTML-based help.
+  * Add a callback usable for 'activate-link' in labels.
+  * Add help links to all Tails options.
+  * Add help links for persistence and "more options".
+  * Fix link activation via Return key press.
+  * Show warning when MAC spoofing is toggled on inside a VM.
+  * Hide password mismatch warning when entry is changed.
+
+ -- Tails developers <amnesia@boum.org>  Tue, 12 Nov 2013 19:26:29 +0100
+
 tails-greeter (0.7.21) experimental; urgency=low
 
   [WinterFairy]
