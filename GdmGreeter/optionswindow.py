@@ -47,9 +47,17 @@ class OptionsWindow(TranslatableWindow):
         TranslatableWindow.__init__(self, builder.get_object("options_dialog"))
         self.window.set_visible(False)
 
-        self.warning_area.hide()
         self.entry_password.set_visibility(False)
         self.entry_password2.set_visibility(False)
+
+        def cb_pw_changed(*args):
+            self.warning_area.hide()
+            # compact the window
+            self.window.resize(1, 1)
+
+        self.entry_password.connect("changed", cb_pw_changed)
+        self.entry_password2.connect("changed", cb_pw_changed)
+        cb_pw_changed()
 
         def cb_macspoof_toggle(*args):
             if self.greeter.physical_security.inside_virtual_machine() and \
