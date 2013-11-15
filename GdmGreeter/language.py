@@ -362,6 +362,8 @@ class LocalisationSettings(object):
             t_code = 'nor'
         if t_code == 'srd':
             t_code = 'ita'
+        if t_code == 'hrv':
+            layouts.append('hr')
 
         def language_iter(config_registry, item, subitem, store):
             layout_code = item.get_name()
