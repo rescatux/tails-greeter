@@ -77,10 +77,10 @@ def get_native_langs(lang_list):
 def __fill_layouts_dict():
     """assemble dictionary of layout codes to corresponding layout name
     
-    We need this dictionnary to get the 'description' (human readeable name)
+    We need this dictionary to get the 'description' (human readable name)
     of the layout.
     
-    Instead of storing correspondance in this dictionnary, we should be able
+    Instead of storing correspondance in this dictionary, we should be able
     to query xklavier with the following code, but it fails because
     `Xkl.ConfigItem.set_name` doesn't exist in python bindings:
     
@@ -109,7 +109,7 @@ def __fill_layouts_dict():
         description = layout.get_description()
         if code not in layouts_dict:
             layouts_dict[code] = description
-	_xkl_registry.foreach_layout_variant(code, variant_iter, layout)
+        _xkl_registry.foreach_layout_variant(code, variant_iter, layout)
 
     _xkl_registry.foreach_layout(layout_iter, None)
     return layouts_dict
