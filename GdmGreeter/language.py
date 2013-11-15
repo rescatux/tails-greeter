@@ -358,6 +358,8 @@ class LocalisationSettings(object):
     def layouts_for_language(self):
         layouts = []
         t_code = ln_iso639_tri(self._language)
+        if t_code == 'nno' or t_code == 'nob':
+            t_code = 'nor'
 
         def language_iter(config_registry, item, subitem, store):
             layout_code = item.get_name()
