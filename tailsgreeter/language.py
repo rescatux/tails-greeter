@@ -47,24 +47,6 @@ def xkl_strip(string):
     This method cleans up this kind of strings."""
     return string.split("\x00", 1)[0]
 
-def ln_cc(lang_name):
-    """obtain language code from name
-    
-    for example: English -> en_US"""
-    return _languages_dict[unicode(lang_name)][0]
-
-def ln_list(lang_name):
-    """obtain list of locales for a given language name
-    
-    for example: English -> en_US, en_GB"""
-    return _languages_dict[unicode(lang_name)]
-
-def ln_country(ln_CC):
-    """get country name for locale
-    
-    example: en_US -> USA"""
-    return icu.Locale(ln_CC).getDisplayCountry(icu.Locale(ln_CC))
-
 def ln_iso639_tri(ln_CC):
     """get iso639 3-letter code
     
@@ -74,20 +56,6 @@ def ln_iso639_tri(ln_CC):
 def ln_iso639_2_T_to_B(ln_CC):
     """Convert a ISO-639-2/T code (e.g. deu for German) to a 639-2/B one (e.g. ger for German)"""
     return pycountry.languages.get(terminology=ln_CC).bibliographic
-
-def get_native_langs(lang_list):
-    """assemble dictionary of native language names with language codes"""
-    langs_dict = {}
-    for l in lang_list:
-        # English = Locale(en_GB)...
-        lang = icu.Locale(l).getDisplayLanguage(icu.Locale(l)).title()
-        try:
-            langs_dict[lang]
-        except: #XXX specify exception
-            langs_dict[lang] = []
-        if l not in langs_dict[lang]:
-            langs_dict[lang].append(l)
-    return langs_dict
 
 def __fill_layouts_dict():
     """assemble dictionary of layout codes to corresponding layout name
@@ -112,7 +80,7 @@ def __fill_layouts_dict():
         description = xkl_strip(layout.description)
         if code not in layouts_dict:
             layouts_dict[code] = description
-	_xkl_registry.foreach_layout_variant(code, variant_iter, layout)
+        _xkl_registry.foreach_layout_variant(code, variant_iter, layout)
 
     _xkl_registry.foreach_layout(layout_iter, None)
     return layouts_dict
@@ -416,13 +384,19 @@ class LocalisationSettings(object):
     def get_layouts_with_names(self):
         return layouts_with_names(self.get_layouts(), self.get_locale())
 
-    def layouts_for_language(self, lang):
+    def layouts_for_language(self):
         """Return the list of available layouts for given language
 
         Query XKL and return layouts for a given language.
         """
         layouts = []
         t_code = ln_iso639_tri(self._language)
+        if t_code == 'nno' or t_code == 'nob':
+            t_code = 'nor'
+        if t_code == 'srd':
+            t_code = 'ita'
+        if t_code == 'hrv':
+            layouts.append('hr')
 
         def language_iter(config_registry, item, subitem, store):
             layout_code = xkl_strip(item.name)
@@ -449,9 +423,7 @@ class LocalisationSettings(object):
         
         """
 
-        layouts = self.layouts_for_language(self._language)
-        if not layouts:
-            layouts = self.layouts_for_language(country_from_locale(self._locale).lower())
+        layouts = self.layouts_for_language()
         if not layouts:
             layouts = ['us']
         return layouts
@@ -531,9 +503,6 @@ class LocalisationSettings(object):
 
 # List of system locale codes
 _langcodes = __get_langcodes()
-
-# dictionary of native languages: language code
-_languages_dict = get_native_langs(_langcodes)
 
 # dictionary of layout codes: layout name
 _system_layouts_dict = __fill_layouts_dict()
