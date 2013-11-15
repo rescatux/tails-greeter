@@ -32,24 +32,6 @@ from icu import Locale, Collator
 import GdmGreeter.config
 
 
-def ln_cc(lang_name):
-    """obtain language code from name
-    
-    for example: English -> en_US"""
-    return _languages_dict[unicode(lang_name)][0]
-
-def ln_list(lang_name):
-    """obtain list of locales for a given language name
-    
-    for example: English -> en_US, en_GB"""
-    return _languages_dict[unicode(lang_name)]
-
-def ln_country(ln_CC):
-    """get country name for locale
-    
-    example: en_US -> USA"""
-    return Locale(ln_CC).getDisplayCountry(Locale(ln_CC))
-
 def ln_iso639_tri(ln_CC):
     """get iso639 3-letter code
     
@@ -59,20 +41,6 @@ def ln_iso639_tri(ln_CC):
 def ln_iso639_2_T_to_B(ln_CC):
     """Convert a ISO-639-2/T code (e.g. deu for German) to a 639-2/B one (e.g. ger for German)"""
     return pycountry.languages.get(terminology=ln_CC).bibliographic
-
-def get_native_langs(lang_list):
-    """assemble dictionary of native language names with language codes"""
-    langs_dict = {}
-    for l in lang_list:
-        # English = Locale(en_GB)...
-        lang = Locale(l).getDisplayLanguage(Locale(l)).title()
-        try:
-            langs_dict[lang]
-        except: #XXX specify exception
-            langs_dict[lang] = []
-        if l not in langs_dict[lang]:
-            langs_dict[lang].append(l)
-    return langs_dict
 
 def __fill_layouts_dict():
     """assemble dictionary of layout codes to corresponding layout name
@@ -492,9 +460,6 @@ class LocalisationSettings(object):
 
 # List of system locale codes
 langcodes = __get_langcodes()
-
-# dictionary of native languages: language code
-_languages_dict = get_native_langs(langcodes)
 
 # dictionary of layout codes: layout name
 _system_layouts_dict = __fill_layouts_dict()
