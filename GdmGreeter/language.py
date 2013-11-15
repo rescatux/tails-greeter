@@ -355,7 +355,7 @@ class LocalisationSettings(object):
     def get_layouts_with_names(self):
         return layouts_with_names(self.get_layouts(), self.get_locale())
 
-    def layouts_for_language(self, lang):
+    def layouts_for_language(self):
         layouts = []
         t_code = ln_iso639_tri(self._language)
 
@@ -384,9 +384,7 @@ class LocalisationSettings(object):
         
         """
 
-        layouts = self.layouts_for_language(self._language)
-        if not layouts:
-            layouts = self.layouts_for_language(country_from_locale(self._locale).lower())
+        layouts = self.layouts_for_language()
         if not layouts:
             layouts = ['us']
         return layouts
