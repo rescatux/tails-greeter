@@ -3,123 +3,120 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# kraim <7kraim@gmail.com>, 2013
-# alshara3 <hsn.ali91@gmail.com>, 2013
-# Mohammed ALDOUB <voulnet@gmail.com>, 2013
-# Sherief Alaa <sheriefalaa.w@gmail.com>, 2013
-# Tails_developers <tails@boum.org>, 2013
+# Illenc <provisionalib@hotmail.com>, 2013
+# norike <norikeave@hotmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: https://trac.torproject.org/projects/tor\n"
 "POT-Creation-Date: 2013-05-12 19:29+0200\n"
-"PO-Revision-Date: 2013-06-20 18:10+0000\n"
-"Last-Translator: Sherief Alaa <sheriefalaa.w@gmail.com>\n"
-"Language-Team: Arabic (http://www.transifex.com/projects/p/torproject/language/ar/)\n"
+"PO-Revision-Date: 2013-10-27 08:10+0000\n"
+"Last-Translator: Illenc <provisionalib@hotmail.com>\n"
+"Language-Team: Catalan (http://www.transifex.com/projects/p/torproject/language/ca/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ar\n"
-"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"Language: ca\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../glade/persistencewindow.glade.h:1
 msgid "Forward"
-msgstr "إلى الأمام"
+msgstr "Endavant"
 
 #: ../glade/persistencewindow.glade.h:2 ../glade/optionswindow.glade.h:1
 msgid "Login"
-msgstr "الدخول"
+msgstr "Entra"
 
 #: ../glade/persistencewindow.glade.h:3 ../glade/optionswindow.glade.h:2
 msgid "Welcome to Tails"
-msgstr "اهلاً بك في تيلز"
+msgstr "Benvingut a Tails"
 
 #: ../glade/persistencewindow.glade.h:4
 msgid "Use persistence?"
-msgstr "هل ترغب في استخدام مساحة دائمة علي القرص الصلب؟"
+msgstr "Utilitzar persistència?"
 
 #: ../glade/persistencewindow.glade.h:5
 msgid "Yes"
-msgstr "نعم"
+msgstr "Sí"
 
 #: ../glade/persistencewindow.glade.h:6
 msgid "No"
-msgstr "لا"
+msgstr "No"
 
 #: ../glade/persistencewindow.glade.h:7
 msgid "Passphrase:"
-msgstr "عبارة المرور:"
+msgstr "Frase de contrasenya:"
 
 #: ../glade/persistencewindow.glade.h:8
 msgid "Read-Only?"
-msgstr "للقراءة فقط؟"
+msgstr "Només-Escriptura?"
 
 #: ../glade/persistencewindow.glade.h:9
 msgid "<i>Wrong passphrase. Please try again.</i>"
-msgstr "<i>عبارة المرور غير صحيحة. الرجاء المحاولة مرة اخرى</i>"
+msgstr "<i>Frase de contrasenya incorrecte. Si us plau, torna-ho a provar.</i>"
 
 #: ../glade/persistencewindow.glade.h:10
 msgid "More options?"
-msgstr "خيارات أكثر؟"
+msgstr "Més opcions?"
 
 #: ../glade/optionswindow.glade.h:3
 msgid "Administration password"
-msgstr "كلمة السر الخاصة بالإدارة"
+msgstr "Contrasenya d'administració"
 
 #: ../glade/optionswindow.glade.h:4
 msgid ""
 "Enter an administration password in case you need to perform administration tasks.\n"
 "Otherwise it will be disabled for better security."
-msgstr "ادخل كلمة السر الخاصة بالإدارة في حال كنت تحتاج إلي عمل تغييرات إدارية. \nوإلا سيعطل هذا الخيار لتحسين الأمن."
+msgstr "Entri una contrasenya d'administració si ha de realitzar tasques d'administració.\nEn cas contrari, es deshabilitarà per a una major seguretat."
 
 #: ../glade/optionswindow.glade.h:6
 msgid "Password:"
-msgstr "كلمة السر:"
+msgstr "Contrasenya:"
 
 #: ../glade/optionswindow.glade.h:7
 msgid "Verify Password:"
-msgstr "تحقق من أو اعد كتابة كلمة السر:"
+msgstr "Comprova la contrasenya:"
 
 #: ../glade/optionswindow.glade.h:8
 msgid "<i>Passwords do not match</i>"
-msgstr "<i>كلمات السر غير متطابقة</i>"
+msgstr "<i>La contrasenya no concorda</i>"
 
 #: ../glade/optionswindow.glade.h:9
 msgid "Windows Camouflage"
-msgstr "تخفي كنظام تشغيل ويندوز"
+msgstr "Camuflatge de Windows"
 
 #: ../glade/optionswindow.glade.h:10
 msgid ""
 "This option makes Tails look more like Microsoft Windows XP. This may be "
 "useful in public places in order to avoid attracting suspicion."
-msgstr "هذا الخيار يجعل تيلز يشبه ويندوز اكس بي. وهذا قد يكون مفيداً في الاماكن العامه لتقليل الشبهه و جذب الانظار."
+msgstr "Aquesta opció fa que Tails s'assembli més a Microsoft Windows XP. Això pot ser útil en llocs públics per a impedir atraure sospites."
 
 #: ../glade/optionswindow.glade.h:11
 msgid "Activate Microsoft Windows XP Camouflage"
-msgstr "تفعيل التمويه كويندوز اكس بي"
+msgstr "Activar el camuflatge de Microsoft Windows XP"
 
 #: ../glade/langpanel.glade.h:1
 msgid " "
-msgstr "."
+msgstr " "
 
 #: ../glade/langpanel.glade.h:2 ../GdmGreeter/langpanel.py:42
 msgid "Language"
-msgstr "اللغة"
+msgstr "Llengua"
 
 #: ../glade/langpanel.glade.h:3
 msgid "Locale"
-msgstr "محلي"
+msgstr "Lloc"
 
 #: ../glade/langpanel.glade.h:4
 msgid "Layout"
-msgstr "التصميم"
+msgstr "Disseny"
 
 #: ../GdmGreeter/persistence.py:59
 #, python-format
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
-msgstr "live-persist فشل و كود العودة هو %(returncode)s:\n%(stderr)s"
+msgstr "live-persist ha fallat amb el codi de retorn %(returncode)s:⏎\n%(stderr)s"
 
 #: ../GdmGreeter/persistence.py:99
 #, python-format
@@ -127,7 +124,7 @@ msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "cryptsetup فشل و كود العودة هو %(returncode)s:\n%(stdout)s\n%(stderr)s"
+msgstr "cryptsetup ha fallat amb el codi de retorn %(returncode)s:⏎\n%(stdout)s⏎\n%(stderr)s"
 
 #: ../GdmGreeter/persistence.py:124
 #, python-format
@@ -135,9 +132,9 @@ msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "live-persist فشل و كود العودة هو %(returncode)s:\n%(stdout)s\n%(stderr)s"
+msgstr "live-persist ha fallat amb el codi de retorn %(returncode)s:⏎\n%(stdout)s⏎\n%(stderr)s"
 
 #: ../GdmGreeter/langpanel.py:124 ../GdmGreeter/langpanel.py:148
 #: ../GdmGreeter/langpanel.py:181
 msgid "Other..."
-msgstr "آخر..."
+msgstr "Altre..."

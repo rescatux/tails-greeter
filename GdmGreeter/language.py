@@ -32,24 +32,6 @@ from icu import Locale, Collator
 import GdmGreeter.config
 
 
-def ln_cc(lang_name):
-    """obtain language code from name
-    
-    for example: English -> en_US"""
-    return _languages_dict[unicode(lang_name)][0]
-
-def ln_list(lang_name):
-    """obtain list of locales for a given language name
-    
-    for example: English -> en_US, en_GB"""
-    return _languages_dict[unicode(lang_name)]
-
-def ln_country(ln_CC):
-    """get country name for locale
-    
-    example: en_US -> USA"""
-    return Locale(ln_CC).getDisplayCountry(Locale(ln_CC))
-
 def ln_iso639_tri(ln_CC):
     """get iso639 3-letter code
     
@@ -60,27 +42,13 @@ def ln_iso639_2_T_to_B(ln_CC):
     """Convert a ISO-639-2/T code (e.g. deu for German) to a 639-2/B one (e.g. ger for German)"""
     return pycountry.languages.get(terminology=ln_CC).bibliographic
 
-def get_native_langs(lang_list):
-    """assemble dictionary of native language names with language codes"""
-    langs_dict = {}
-    for l in lang_list:
-        # English = Locale(en_GB)...
-        lang = Locale(l).getDisplayLanguage(Locale(l)).title()
-        try:
-            langs_dict[lang]
-        except: #XXX specify exception
-            langs_dict[lang] = []
-        if l not in langs_dict[lang]:
-            langs_dict[lang].append(l)
-    return langs_dict
-
 def __fill_layouts_dict():
     """assemble dictionary of layout codes to corresponding layout name
     
-    We need this dictionnary to get the 'description' (human readeable name)
+    We need this dictionary to get the 'description' (human readable name)
     of the layout.
     
-    Instead of storing correspondance in this dictionnary, we should be able
+    Instead of storing correspondance in this dictionary, we should be able
     to query xklavier with the following code, but it fails because
     `Xkl.ConfigItem.set_name` doesn't exist in python bindings:
     
@@ -109,7 +77,7 @@ def __fill_layouts_dict():
         description = layout.get_description()
         if code not in layouts_dict:
             layouts_dict[code] = description
-	_xkl_registry.foreach_layout_variant(code, variant_iter, layout)
+        _xkl_registry.foreach_layout_variant(code, variant_iter, layout)
 
     _xkl_registry.foreach_layout(layout_iter, None)
     return layouts_dict
@@ -387,9 +355,13 @@ class LocalisationSettings(object):
     def get_layouts_with_names(self):
         return layouts_with_names(self.get_layouts(), self.get_locale())
 
-    def layouts_for_language(self, lang):
+    def layouts_for_language(self):
         layouts = []
         t_code = ln_iso639_tri(self._language)
+        if t_code == 'nno' or t_code == 'nob':
+            t_code = 'nor'
+        if t_code == 'hrv':
+            layouts.append('hr')
 
         def language_iter(config_registry, item, subitem, store):
             layout_code = item.get_name()
@@ -416,9 +388,7 @@ class LocalisationSettings(object):
         
         """
 
-        layouts = self.layouts_for_language(self._language)
-        if not layouts:
-            layouts = self.layouts_for_language(country_from_locale(self._locale).lower())
+        layouts = self.layouts_for_language()
         if not layouts:
             layouts = ['us']
         return layouts
@@ -492,9 +462,6 @@ class LocalisationSettings(object):
 
 # List of system locale codes
 langcodes = __get_langcodes()
-
-# dictionary of native languages: language code
-_languages_dict = get_native_langs(langcodes)
 
 # dictionary of layout codes: layout name
 _system_layouts_dict = __fill_layouts_dict()

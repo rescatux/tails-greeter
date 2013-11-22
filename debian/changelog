@@ -1,3 +1,18 @@
+tails-greeter (0.7.22) devel; urgency=low
+
+  [ WinterFairy ]
+  * Syntax fixes and spelling.
+  * Remove dead code.
+  * Removed an unused parameter.
+  * Fix norwegian keyboard layout.
+  * Fix keyboard layout for Croatia.
+
+  [ Other Tails developers ]
+  * Import translations from Transifex.
+  * Update POT and PO files.
+
+ -- Tails developers <tails@boum.org>  Fri, 22 Nov 2013 19:04:28 +0100
+
 tails-greeter (0.7.22~1.gbpaa71ea) UNRELEASED; urgency=low
 
   ** SNAPSHOT build @aa71ea764bb7035d7f0c9d4662a07f69d8d1979f **

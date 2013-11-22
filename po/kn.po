@@ -4,13 +4,14 @@
 # 
 # Translators:
 # msj2, 2013
+# samruda <samruda94@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: https://trac.torproject.org/projects/tor\n"
 "POT-Creation-Date: 2013-05-12 19:29+0200\n"
-"PO-Revision-Date: 2013-08-02 11:50+0000\n"
-"Last-Translator: msj2\n"
+"PO-Revision-Date: 2013-10-26 20:40+0000\n"
+"Last-Translator: samruda <samruda94@gmail.com>\n"
 "Language-Team: Kannada (http://www.transifex.com/projects/p/torproject/language/kn/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -40,7 +41,7 @@ msgstr "ಓಕೇ"
 
 #: ../glade/persistencewindow.glade.h:6
 msgid "No"
-msgstr "ಇಲ್ಲಪ್ಪ"
+msgstr "ಇಲ್ಲ"
 
 #: ../glade/persistencewindow.glade.h:7
 msgid "Passphrase:"
