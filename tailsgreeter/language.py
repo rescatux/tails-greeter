@@ -393,8 +393,6 @@ class LocalisationSettings(object):
         t_code = ln_iso639_tri(self._language)
         if t_code == 'nno' or t_code == 'nob':
             t_code = 'nor'
-        if t_code == 'srd':
-            t_code = 'ita'
         if t_code == 'hrv':
             layouts.append('hr')
 
