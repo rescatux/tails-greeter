@@ -1,17 +1,16 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Tails developers
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
 # zendegi <hamahangi@posteo.eu>, 2013
-# mohammad.s.n, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: https://trac.torproject.org/projects/tor\n"
-"POT-Creation-Date: 2013-09-29 14:53+0200\n"
-"PO-Revision-Date: 2013-10-19 07:10+0000\n"
-"Last-Translator: mohammad.s.n\n"
+"POT-Creation-Date: 2013-05-12 19:29+0200\n"
+"PO-Revision-Date: 2013-05-22 12:45+0000\n"
+"Last-Translator: runasand <runa.sandvik@gmail.com>\n"
 "Language-Team: Persian (http://www.transifex.com/projects/p/torproject/language/fa/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,296 +18,122 @@ msgstr ""
 "Language: fa\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../lib/Tails/Persistence/Configuration/Presets.pm:48
-msgid "Personal Data"
-msgstr "داده‌هاى شخصى"
+#: ../glade/persistencewindow.glade.h:1
+msgid "Forward"
+msgstr "Forward"
 
-#: ../lib/Tails/Persistence/Configuration/Presets.pm:50
-msgid "Keep files stored in the `Persistent' directory"
-msgstr "ذخيره‌كردن فايل‌ها در پوشه مداوم"
+#: ../glade/persistencewindow.glade.h:2 ../glade/optionswindow.glade.h:1
+msgid "Login"
+msgstr "ثبت ورود"
 
-#: ../lib/Tails/Persistence/Configuration/Presets.pm:58
-msgid "GnuPG"
-msgstr "گنو پرايوسى گارد (GnuPG)"
+#: ../glade/persistencewindow.glade.h:3 ../glade/optionswindow.glade.h:2
+msgid "Welcome to Tails"
+msgstr "به «تيلز» خوش آمديد"
 
-#: ../lib/Tails/Persistence/Configuration/Presets.pm:60
-msgid "GnuPG keyrings and configuration"
-msgstr "پيكربندى و جاكليدى گنو پرايوسى گارد"
+#: ../glade/persistencewindow.glade.h:4
+msgid "Use persistence?"
+msgstr "تداوم داده‌ها بكار بردن؟"
 
-#: ../lib/Tails/Persistence/Configuration/Presets.pm:68
-msgid "SSH Client"
-msgstr "مخدوم پوشته امن (SSH Client)"
+#: ../glade/persistencewindow.glade.h:5
+msgid "Yes"
+msgstr "بلى"
 
-#: ../lib/Tails/Persistence/Configuration/Presets.pm:70
-msgid "SSH keys, configuration and known hosts"
-msgstr "كليدها، پىكربندى و ميزبان‌هاى پوشته امن"
+#: ../glade/persistencewindow.glade.h:6
+msgid "No"
+msgstr "نه"
 
-#: ../lib/Tails/Persistence/Configuration/Presets.pm:78
-msgid "Pidgin"
-msgstr "پيام‌رسان پيجين (Pidgin)"
-
-#: ../lib/Tails/Persistence/Configuration/Presets.pm:80
-msgid "Pidgin profiles and OTR keyring"
-msgstr "نمايه‌ها و جاكليدى پيجين"
-
-#: ../lib/Tails/Persistence/Configuration/Presets.pm:88
-msgid "Claws Mail"
-msgstr "كلوز ميل (Claws Mail)"
-
-#: ../lib/Tails/Persistence/Configuration/Presets.pm:90
-msgid "Claws Mail profiles and locally stored email"
-msgstr "نمايه‌ها و اى‌ميل‌هاى ذخيره‌شده كلوز ميل"
-
-#: ../lib/Tails/Persistence/Configuration/Presets.pm:98
-msgid "GNOME Keyring"
-msgstr "جاكليدى گنوم (GNOME)"
-
-#: ../lib/Tails/Persistence/Configuration/Presets.pm:100
-msgid "Secrets stored by GNOME Keyring"
-msgstr "رازهائى كه توسط جاكليدى گنوم حفظ شده است"
-
-#: ../lib/Tails/Persistence/Configuration/Presets.pm:108
-msgid "Network Connections"
-msgstr "ارتباطات شبكه"
-
-#: ../lib/Tails/Persistence/Configuration/Presets.pm:110
-msgid "Configuration of network devices and connections"
-msgstr "پيكربندى دستگاه‌ها و ارتباطات شبكه"
-
-#: ../lib/Tails/Persistence/Configuration/Presets.pm:118
-msgid "Browser bookmarks"
-msgstr "نشانک‌هاى مرورگر"
-
-#: ../lib/Tails/Persistence/Configuration/Presets.pm:120
-msgid "Bookmarks saved in Iceweasel browser"
-msgstr "نشانک‌هاى ذخيره‌شده در مرورگر آيس‌ويزل"
-
-#: ../lib/Tails/Persistence/Configuration/Presets.pm:128
-msgid "Printers"
-msgstr "چاپگر‌ها"
-
-#: ../lib/Tails/Persistence/Configuration/Presets.pm:130
-msgid "Printers configuration"
-msgstr "پیکربندی چاپگر‌ها"
-
-#: ../lib/Tails/Persistence/Configuration/Presets.pm:138
-msgid "APT Packages"
-msgstr "بسته‌هاى اى‌پى‌تى (APT)"
-
-#: ../lib/Tails/Persistence/Configuration/Presets.pm:140
-msgid "Packages downloaded by APT"
-msgstr "بسته‌هائى كه APT دانلود كرده‌است"
-
-#: ../lib/Tails/Persistence/Configuration/Presets.pm:148
-msgid "APT Lists"
-msgstr "فهرست‌هاى اى‌پى‌تى (APT)"
-
-#: ../lib/Tails/Persistence/Configuration/Presets.pm:150
-msgid "Lists downloaded by APT"
-msgstr "فهرست‌هائى كه APT دانلود كرده‌است"
-
-#: ../lib/Tails/Persistence/Configuration/Presets.pm:158
-msgid "Dotfiles"
-msgstr "فايل‌هاى پنهان (Dotfiles)"
-
-#: ../lib/Tails/Persistence/Configuration/Presets.pm:160
-msgid ""
-"Symlink into $HOME every file or directory found in the `dotfiles' directory"
-msgstr "ساختن روابط نمادين (symlink) بين $HOME و هر فايل يا پوشه در پوشه فايل‌هاى پنهان (dotfiles)"
-
-#: ../lib/Tails/Persistence/Setup.pm:257
-msgid ""
-"The device Tails is running from cannot be found. Maybe you used the `toram'"
-" option?"
-msgstr "دستگاهى كه از آن تيلز اجرا مى‌شود يافت نشد. ممكن است از گزينه 'toram' استفاده كرديد؟"
-
-#: ../lib/Tails/Persistence/Setup.pm:276
-msgid "Setup Tails persistent volume"
-msgstr "ساختن ذخيره‌سازى مداوم تيلز"
-
-#: ../lib/Tails/Persistence/Setup.pm:420
-#, perl-format
-msgid "Device %s already has a persistent volume."
-msgstr "دستگاه %s از قبل حجم ذخيره‌سازى مداومى دارد"
-
-#: ../lib/Tails/Persistence/Setup.pm:428
-#, perl-format
-msgid "Device %s has not enough unallocated space."
-msgstr "دستگاه %s فضاى خالى كافى ندارد"
-
-#: ../lib/Tails/Persistence/Setup.pm:436 ../lib/Tails/Persistence/Setup.pm:450
-#, perl-format
-msgid "Device %s has no persistent volume."
-msgstr "دستگاه %s هيچ ذخيره‌سازى مداومى ندارد."
-
-#: ../lib/Tails/Persistence/Setup.pm:442
-msgid ""
-"Cannot delete the persistent volume while in use. You should restart Tails "
-"without persistence."
-msgstr "نمى‌توان ذخيره‌سازى مداوم در حال بكار بردن حذف كرد. بايد تيلزرا بدون تداوم دوباره شروع كنيد."
-
-#: ../lib/Tails/Persistence/Setup.pm:461
-msgid "Persistence volume is not unlocked."
-msgstr "ذخيره‌سازى مداوم  قفل است."
-
-#: ../lib/Tails/Persistence/Setup.pm:466
-msgid "Persistence volume is not mounted."
-msgstr "ذخيره‌سازى مداوم سوار نيست."
-
-#: ../lib/Tails/Persistence/Setup.pm:471
-msgid "Persistence volume is not readable. Permissions or ownership problems?"
-msgstr "ذخيره‌سازى مداوم قابل خواندن نيست. مشكلات با مجوزها يا مالكيت؟"
-
-#: ../lib/Tails/Persistence/Setup.pm:476
-msgid "Persistence volume is not writable. Maybe it was mounted read-only?"
-msgstr "ذخيره‌سازى مداوم قابل نوشتن نيست. شايد به صورت فقط خواندنى سوار شده‌است؟"
-
-#: ../lib/Tails/Persistence/Setup.pm:485
-#, perl-format
-msgid "Tails is running from non-USB device %s."
-msgstr "تيلز از دستگاه %s كه وسيله يواس‌بى نيست اجرا مى‌شود."
-
-#: ../lib/Tails/Persistence/Setup.pm:491
-#, perl-format
-msgid "Device %s is optical."
-msgstr "دستگاه %s نورى است."
-
-#: ../lib/Tails/Persistence/Setup.pm:498
-#, perl-format
-msgid "Device %s was not created using Tails USB installer."
-msgstr "دستگاه %s توسط «برنامه نصب‌كننده يواس‌بي تيلز» ساخته نبود."
-
-#: ../lib/Tails/Persistence/Setup.pm:532
-msgid "Error"
-msgstr "خطا"
-
-#: ../lib/Tails/Persistence/Setup.pm:839
-msgid "Persistence wizard - Finished"
-msgstr "معاون تداوم - تمام‌شده"
-
-#: ../lib/Tails/Persistence/Setup.pm:842
-msgid ""
-"Any changes you have made will only take effect after restarting Tails.\n"
-"\n"
-"You may now close this application."
-msgstr "تغييرات فقط بعد از بازآغازى تيلز فعال خواهد شد.\n\nحالا مى‌توانيد اين برنامه‌را ببنديد."
-
-#: ../lib/Tails/Persistence/Step/Bootstrap.pm:54
-msgid "Persistence wizard - Persistent volume creation"
-msgstr "معاون تداوم - ساختن حجم ذخيره‌سازى مداوم"
-
-#: ../lib/Tails/Persistence/Step/Bootstrap.pm:57
-msgid "Choose a passphrase to protect the persistent volume"
-msgstr "لطفاً عبارت عبورى براى محافظت‌كردن ذخيره‌سازى مداوم انتخاب كنيد"
-
-#. TRANSLATORS: size, device vendor, device model
-#: ../lib/Tails/Persistence/Step/Bootstrap.pm:61
-#, perl-format
-msgid ""
-"A %s persistent volume will be created on the <b>%s %s</b> device. Data on "
-"this volume will be stored in an encrypted form protected by a passphrase."
-msgstr "حجم ذخيره‌سازى %s در دستگاه <b>%s %s</b> ساخته خواهد شد. داده‌ها در اين حجم به صورت رمزشده‌است و با عبارت عبور محافظت مى‌شود."
-
-#: ../lib/Tails/Persistence/Step/Bootstrap.pm:66
-msgid "Create"
-msgstr "ساختن"
-
-#: ../lib/Tails/Persistence/Step/Bootstrap.pm:110
-msgid ""
-"<b>Beware!</b> Using persistence has consequences that must be well "
-"understood. Tails can't help you if you use it wrong! See <a "
-"href='file:///usr/share/doc/tails/website/doc/first_steps/persistence.en.html'>Tails"
-" documentation about persistence</a> to learn more."
-msgstr "<b>مواظب باشيد!</b> بكار بردن تداوم داده‌ها نتايجى دارد كه بايد آنهارا كاملاً بفهميد. اگر اشتباه كنيد، تيلز نمى‌تواند به شما كمک كند! <a href='file:///usr/share/doc/tails/website/doc/first_steps/persistence.en.html'>مستندات تيلز راجع به تداوم داده‌ها</a> تا بيشتر بخوانيد."
-
-#: ../lib/Tails/Persistence/Step/Bootstrap.pm:144
+#: ../glade/persistencewindow.glade.h:7
 msgid "Passphrase:"
-msgstr "عبارت عبور:"
+msgstr "عبارت عبور"
 
-#: ../lib/Tails/Persistence/Step/Bootstrap.pm:154
-msgid "Verify Passphrase:"
-msgstr "تاييد عبارت عبور:"
+#: ../glade/persistencewindow.glade.h:8
+msgid "Read-Only?"
+msgstr "فقط خواندنى؟"
 
-#: ../lib/Tails/Persistence/Step/Bootstrap.pm:167
-#: ../lib/Tails/Persistence/Step/Bootstrap.pm:231
-msgid "Passphrase can't be empty"
-msgstr "بايد عبارت عبورى انتخاب كرد"
+#: ../glade/persistencewindow.glade.h:9
+msgid "<i>Wrong passphrase. Please try again.</i>"
+msgstr "<i>عبارت عبور درست نیست. لطفاً دوباره سعی‌کنید.</i>"
 
-#: ../lib/Tails/Persistence/Step/Bootstrap.pm:222
-msgid "Passphrases do not match"
-msgstr "عبارات عبور با هم مطابقت ندارند"
+#: ../glade/persistencewindow.glade.h:10
+msgid "More options?"
+msgstr "گزینه‌های بیشتری؟"
 
-#: ../lib/Tails/Persistence/Step/Bootstrap.pm:262
-#: ../lib/Tails/Persistence/Step/Configure.pm:123
-msgid "Failed"
-msgstr "ناموفق"
+#: ../glade/optionswindow.glade.h:3
+msgid "Administration password"
+msgstr "رمز عبور مديريت"
 
-#: ../lib/Tails/Persistence/Step/Bootstrap.pm:271
-msgid "Mounting Tails persistence partition."
-msgstr "در حال سواركردن ذخيره‌سازى مداوم تيلز..."
-
-#: ../lib/Tails/Persistence/Step/Bootstrap.pm:274
-msgid "The Tails persistence partition will be mounted."
-msgstr "ذخيره‌سازى مداوم تيلز سوار خواهيم كرد."
-
-#: ../lib/Tails/Persistence/Step/Bootstrap.pm:296
-msgid "Creating..."
-msgstr "در حال ساختن..."
-
-#: ../lib/Tails/Persistence/Step/Bootstrap.pm:299
-msgid "Creating the persistent volume..."
-msgstr "در حال ساختن ذخيره‌سازى مداوم..."
-
-#: ../lib/Tails/Persistence/Step/Configure.pm:55
-msgid "Persistence wizard - Persistent volume configuration"
-msgstr "معاون تداوم - پيكربندى ذخيره‌سازى مداوم"
-
-#: ../lib/Tails/Persistence/Step/Configure.pm:58
-msgid "Specify the files that will be saved in the persistent volume"
-msgstr "فايل‌هائى‌ كه در ذخيره‌سازى مداوم ذخيره خواهد شد را مشخص كنيد."
-
-#. TRANSLATORS: partition, size, device vendor, device model
-#: ../lib/Tails/Persistence/Step/Configure.pm:62
-#, perl-format
+#: ../glade/optionswindow.glade.h:4
 msgid ""
-"The selected files will be stored in the encrypted partition %s (%s), on the"
-" <b>%s %s</b> device."
-msgstr "فايل‌هاى مشخص در ذخيره‌سازى رمزشده %s (%s) در دستگاه <b>%s %s</b>  ذخيره خواهد شد"
+"Enter an administration password in case you need to perform administration tasks.\n"
+"Otherwise it will be disabled for better security."
+msgstr "لطفاً رمز عبور مديريتى واردكنيد، در صورتى كه لازم‌است كارهاى مديريت انجام بدهيد.\nوگرنه، اين گزينه براى امنيت بيشتر غيرفعال مى‌شود."
 
-#: ../lib/Tails/Persistence/Step/Configure.pm:68
-msgid "Save"
-msgstr "ذخيره‌كردن"
+#: ../glade/optionswindow.glade.h:6
+msgid "Password:"
+msgstr "رمز عبور"
 
-#: ../lib/Tails/Persistence/Step/Configure.pm:137
-msgid "Saving..."
-msgstr "در حال ذخيره‌كردن..."
+#: ../glade/optionswindow.glade.h:7
+msgid "Verify Password:"
+msgstr "تاييد  رمز عبور"
 
-#: ../lib/Tails/Persistence/Step/Configure.pm:140
-msgid "Saving persistence configuration..."
-msgstr "در حال ذخيره‌كردن پىكربندى تداوم..."
+#: ../glade/optionswindow.glade.h:8
+msgid "<i>Passwords do not match</i>"
+msgstr "<i>رمزهاى عبور با هم مطابقت ندارند</i>"
 
-#: ../lib/Tails/Persistence/Step/Delete.pm:40
-msgid "Persistence wizard - Persistent volume deletion"
-msgstr "معاون تداوم - حذف‌كردن ذخيره‌سازى مداوم."
+#: ../glade/optionswindow.glade.h:9
+msgid "Windows Camouflage"
+msgstr "پوشش ویندوز"
 
-#: ../lib/Tails/Persistence/Step/Delete.pm:43
-msgid "Your persistent data will be deleted."
-msgstr "داده‌هاى مداومتان حذف خواهد شد."
-
-#: ../lib/Tails/Persistence/Step/Delete.pm:47
-#, perl-format
+#: ../glade/optionswindow.glade.h:10
 msgid ""
-"The persistent volume %s (%s), on the <b>%s %s</b> device, will be deleted."
-msgstr "فايل‌هاى مشخص در ذخيره‌سازى رمزشده %s (%s) در دستگاه <b>%s %s</b> حذف خواهند شد"
+"This option makes Tails look more like Microsoft Windows XP. This may be "
+"useful in public places in order to avoid attracting suspicion."
+msgstr "این گزینه کار می‌کند که تیلزرا بيشتر شابه مایکروسافت ویندوز اکس پی به نظر برسد. این گزینه شاید در محلات عامه به دردتان بخورد براى اين كه از ظن ديگران طفره‌رويد."
 
-#: ../lib/Tails/Persistence/Step/Delete.pm:53
-msgid "Delete"
-msgstr "حذف‌كردن"
+#: ../glade/optionswindow.glade.h:11
+msgid "Activate Microsoft Windows XP Camouflage"
+msgstr "پوشش مايكروسافت ويندوز اكس پى فعال‌كردن"
 
-#: ../lib/Tails/Persistence/Step/Delete.pm:91
-msgid "Deleting..."
-msgstr "در حال حذف‌كردن..."
+#: ../glade/langpanel.glade.h:1
+msgid " "
+msgstr " "
 
-#: ../lib/Tails/Persistence/Step/Delete.pm:94
-msgid "Deleting the persistent volume..."
-msgstr "در حال حذف‌كردن ذخيره‌سازى مداوم..."
+#: ../glade/langpanel.glade.h:2 ../GdmGreeter/langpanel.py:42
+msgid "Language"
+msgstr "زبان"
+
+#: ../glade/langpanel.glade.h:3
+msgid "Locale"
+msgstr "محل"
+
+#: ../glade/langpanel.glade.h:4
+msgid "Layout"
+msgstr "صفحه‌بندى"
+
+#: ../GdmGreeter/persistence.py:59
+#, python-format
+msgid ""
+"live-persist failed with return code %(returncode)s:\n"
+"%(stderr)s"
+msgstr "live-persist ناموفق با كد %(returncode)s:\n%(stderr)s"
+
+#: ../GdmGreeter/persistence.py:99
+#, python-format
+msgid ""
+"cryptsetup failed with return code %(returncode)s:\n"
+"%(stdout)s\n"
+"%(stderr)s"
+msgstr "«cryptsetup» ناموفق با كد %(returncode)s:\n%(stdout)s\n%(stderr)s"
+
+#: ../GdmGreeter/persistence.py:124
+#, python-format
+msgid ""
+"live-persist failed with return code %(returncode)s:\n"
+"%(stdout)s\n"
+"%(stderr)s"
+msgstr "«live-persist» ناموفق با كد %(returncode)s:\n%(stdout)s\n%(stderr)s"
+
+#: ../GdmGreeter/langpanel.py:124 ../GdmGreeter/langpanel.py:148
+#: ../GdmGreeter/langpanel.py:181
+msgid "Other..."
+msgstr "دیگر..."
