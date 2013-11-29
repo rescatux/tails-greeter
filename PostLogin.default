@@ -91,9 +91,6 @@ if [ -r "${PHYSICAL_SECURITY_SETTINGS}" ] ; then
 fi
 /usr/local/sbin/tails-unblock-network
 
-### (re-)start services that need to wait for post-login time
-service network-manager restart
-
 ### Localization
 
 # Import locale name
