@@ -1,18 +1,31 @@
-tails-greeter (0.7.23~1+feature.spoof.mac.gbp48fc74) feature-spoof-mac; urgency=low
+tails-greeter (0.7.23~1.gbpa4451b) UNRELEASED; urgency=low
 
-  ** SNAPSHOT build @48fc7463ae04e849c8bb7a300e864fd68dc34df4 **
+  ** SNAPSHOT build @a4451b3d931b3770f8b570f87fd5cb761e87441e **
 
+  [ Tails developers ]
   * Add a checkbox controlling MAC spoofing.
+  * tails-greeter (0.7.17~1.gbp819d3b)
   * Start network blocking detector when spoofing MAC.
   * Rephrase MAC spoofing help for added clarity.
   * Unblock network after login.
+  * tails-greeter (0.7.20~1.gbp5bfa46)
+  * tails-greeter (0.7.21~1.gbpabf313)
   * Add helper class for displaying HTML-based help.
   * Add a callback usable for 'activate-link' in labels.
   * Add help links to all Tails options.
+  * Add help links for persistence and "more options".
+  * Fix link activation via Return key press.
   * Show warning when MAC spoofing is toggled on inside a VM.
   * Hide password mismatch warning when entry is changed.
+  * tails-greeter (0.7.22~1.gbpaa71ea)
+  * tails-greeter (0.7.23~1+feature.spoof.mac.gbp48fc74)
+  * Drop help for "more options".
+  * Enable MAC spoofing when running in test suite.
+  * Don't start NM at post-login.
 
- -- Tails developers <tails@boum.org>  Fri, 22 Nov 2013 21:45:07 +0100
+  [ anonym ]
+
+ -- Tails developers <amnesia@boum.org>  Fri, 29 Nov 2013 15:58:57 +0100
 
 tails-greeter (0.7.22) devel; urgency=low
 
