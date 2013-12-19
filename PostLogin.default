@@ -26,8 +26,12 @@ CONSET=/etc/default/console-setup
 LOCALE_CFG=/etc/default/locale
 CODSET="Uni1" # universal codeset to properly display glyphs in localized console
 
-log_n_exit() {
+log_error() {
     echo "`date "+day %j of %Y [%T]"` $1" >> /var/log/gdm3/tails-greeter.errors
+}
+
+log_n_exit() {
+    log_error "$1"
     exit 0
 }
 
