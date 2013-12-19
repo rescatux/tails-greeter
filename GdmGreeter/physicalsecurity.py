@@ -30,7 +30,7 @@ class PhysicalSecuritySettings(object):
     """
     def __init__(self):
         # Whether to run macspoof
-        self._macspoof = not self.inside_virtual_machine()
+        self._macspoof = True
         self.write_settings()
 
     def write_settings(self):
@@ -50,9 +50,3 @@ class PhysicalSecuritySettings(object):
     def macspoof(self, new_state):
         self._macspoof = new_state
         self.write_settings()
-
-    @staticmethod
-    def inside_virtual_machine():
-        with open('/var/lib/live/detected-virtual-machine', 'r') as f:
-            return any(x.strip() != "" for x in f.read())
-        return False
