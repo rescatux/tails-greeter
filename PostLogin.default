@@ -94,6 +94,9 @@ if [ -r "${PHYSICAL_SECURITY_SETTINGS}" ] ; then
    fi
 fi
 /usr/local/sbin/tails-unblock-network
+if [ "$?" -ne 0 ]; then
+   log_error "tails-unblock-network exited with non-zero status"
+fi
 
 ### Localization
 
