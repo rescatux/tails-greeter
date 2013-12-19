@@ -30,8 +30,7 @@ class PhysicalSecuritySettings(object):
     """
     def __init__(self):
         # Whether to run macspoof
-        self._macspoof = not self.inside_virtual_machine() or \
-                         self.running_test_suite()
+        self._macspoof = not self.inside_virtual_machine()
         self.write_settings()
 
     def write_settings(self):
@@ -57,9 +56,3 @@ class PhysicalSecuritySettings(object):
         with open('/var/lib/live/detected-virtual-machine', 'r') as f:
             return any(x.strip() != "" for x in f.read())
         return False
-
-    @staticmethod
-    def running_test_suite():
-        with open('/proc/cmdline', 'r') as f:
-            return any(x == "autotest_never_use_this_option"
-                       for x in f.read().split())
