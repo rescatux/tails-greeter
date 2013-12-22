@@ -1,3 +1,12 @@
+tails-greeter (0.7.22+wheezy1~1.gbpcbc4bb) feature-wheezy; urgency=medium
+
+  ** SNAPSHOT build @cbc4bb7b921679499f7e6c02fe974434a744dd19 **
+
+  * Rebuild for Debian Wheezy.
+  * Adapt gbp.conf to ease working on the wheezy branch.
+
+ -- Tails developers <tails@boum.org>  Sun, 22 Dec 2013 17:51:42 +0100
+
 tails-greeter (0.7.22) devel; urgency=low
 
   [ WinterFairy ]
