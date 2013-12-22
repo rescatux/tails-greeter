@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Tails developers
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: https://trac.torproject.org/projects/tor\n"
-"POT-Creation-Date: 2013-09-29 14:53+0200\n"
-"PO-Revision-Date: 2013-10-26 14:30+0000\n"
+"POT-Creation-Date: 2013-05-12 19:29+0200\n"
+"PO-Revision-Date: 2013-10-26 10:40+0000\n"
 "Last-Translator: Radog <bensch.radek@gmail.com>\n"
 "Language-Team: Czech (http://www.transifex.com/projects/p/torproject/language/cs/)\n"
 "MIME-Version: 1.0\n"
@@ -19,296 +19,122 @@ msgstr ""
 "Language: cs\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
-#: ../lib/Tails/Persistence/Configuration/Presets.pm:48
-msgid "Personal Data"
-msgstr "Osobní data"
+#: ../glade/persistencewindow.glade.h:1
+msgid "Forward"
+msgstr "Vpřed"
 
-#: ../lib/Tails/Persistence/Configuration/Presets.pm:50
-msgid "Keep files stored in the `Persistent' directory"
-msgstr "Ukládejte data ve složce `Persistent'"
+#: ../glade/persistencewindow.glade.h:2 ../glade/optionswindow.glade.h:1
+msgid "Login"
+msgstr "Přihlásit se"
 
-#: ../lib/Tails/Persistence/Configuration/Presets.pm:58
-msgid "GnuPG"
-msgstr "GnuPG"
+#: ../glade/persistencewindow.glade.h:3 ../glade/optionswindow.glade.h:2
+msgid "Welcome to Tails"
+msgstr "Vítejte v Tails"
 
-#: ../lib/Tails/Persistence/Configuration/Presets.pm:60
-msgid "GnuPG keyrings and configuration"
-msgstr "GnuPG klíčenka a konfigurace"
+#: ../glade/persistencewindow.glade.h:4
+msgid "Use persistence?"
+msgstr "Použít trvale?"
 
-#: ../lib/Tails/Persistence/Configuration/Presets.pm:68
-msgid "SSH Client"
-msgstr "SSH Client"
+#: ../glade/persistencewindow.glade.h:5
+msgid "Yes"
+msgstr "Ano"
 
-#: ../lib/Tails/Persistence/Configuration/Presets.pm:70
-msgid "SSH keys, configuration and known hosts"
-msgstr "SSH klíče, konfigurace a známé počítače"
+#: ../glade/persistencewindow.glade.h:6
+msgid "No"
+msgstr "Ne"
 
-#: ../lib/Tails/Persistence/Configuration/Presets.pm:78
-msgid "Pidgin"
-msgstr "Pidgin"
-
-#: ../lib/Tails/Persistence/Configuration/Presets.pm:80
-msgid "Pidgin profiles and OTR keyring"
-msgstr "Pidgin profily a OTR klíčenka"
-
-#: ../lib/Tails/Persistence/Configuration/Presets.pm:88
-msgid "Claws Mail"
-msgstr "Claws Mail"
-
-#: ../lib/Tails/Persistence/Configuration/Presets.pm:90
-msgid "Claws Mail profiles and locally stored email"
-msgstr "Claws Mail profily a místní uložené emaily"
-
-#: ../lib/Tails/Persistence/Configuration/Presets.pm:98
-msgid "GNOME Keyring"
-msgstr "GNOME klíčenka"
-
-#: ../lib/Tails/Persistence/Configuration/Presets.pm:100
-msgid "Secrets stored by GNOME Keyring"
-msgstr "Uložená tajemství GNOME klíčenkou"
-
-#: ../lib/Tails/Persistence/Configuration/Presets.pm:108
-msgid "Network Connections"
-msgstr "Síťová připojení"
-
-#: ../lib/Tails/Persistence/Configuration/Presets.pm:110
-msgid "Configuration of network devices and connections"
-msgstr "Konfigurace síťových zařízení a připojení"
-
-#: ../lib/Tails/Persistence/Configuration/Presets.pm:118
-msgid "Browser bookmarks"
-msgstr "Záložky"
-
-#: ../lib/Tails/Persistence/Configuration/Presets.pm:120
-msgid "Bookmarks saved in Iceweasel browser"
-msgstr "Záložky uloženy v prohlížeči Iceweasel"
-
-#: ../lib/Tails/Persistence/Configuration/Presets.pm:128
-msgid "Printers"
-msgstr "Tiskárny"
-
-#: ../lib/Tails/Persistence/Configuration/Presets.pm:130
-msgid "Printers configuration"
-msgstr "Nastavení tiskáren"
-
-#: ../lib/Tails/Persistence/Configuration/Presets.pm:138
-msgid "APT Packages"
-msgstr "Balíčky APT"
-
-#: ../lib/Tails/Persistence/Configuration/Presets.pm:140
-msgid "Packages downloaded by APT"
-msgstr "Balíčky stažené pomocí APT"
-
-#: ../lib/Tails/Persistence/Configuration/Presets.pm:148
-msgid "APT Lists"
-msgstr "Seznamy APT"
-
-#: ../lib/Tails/Persistence/Configuration/Presets.pm:150
-msgid "Lists downloaded by APT"
-msgstr "Seznamy stažené pomocí APT"
-
-#: ../lib/Tails/Persistence/Configuration/Presets.pm:158
-msgid "Dotfiles"
-msgstr "Dotfiles"
-
-#: ../lib/Tails/Persistence/Configuration/Presets.pm:160
-msgid ""
-"Symlink into $HOME every file or directory found in the `dotfiles' directory"
-msgstr "Symbolický odkaz do $ HOME nalezne každý soubor nebo adresář v `dotfiles\" adresáři"
-
-#: ../lib/Tails/Persistence/Setup.pm:257
-msgid ""
-"The device Tails is running from cannot be found. Maybe you used the `toram'"
-" option?"
-msgstr "Nelze nalézt zařízení, na kterém běží Tails. Možná jste použili volbu `toram' ?"
-
-#: ../lib/Tails/Persistence/Setup.pm:276
-msgid "Setup Tails persistent volume"
-msgstr "Nastavení trvalého oddílu pro Tails"
-
-#: ../lib/Tails/Persistence/Setup.pm:420
-#, perl-format
-msgid "Device %s already has a persistent volume."
-msgstr "Zařízení %s už má trvalý oddíl."
-
-#: ../lib/Tails/Persistence/Setup.pm:428
-#, perl-format
-msgid "Device %s has not enough unallocated space."
-msgstr "Zařízení %s nemá dostatek nealokovaného místa."
-
-#: ../lib/Tails/Persistence/Setup.pm:436 ../lib/Tails/Persistence/Setup.pm:450
-#, perl-format
-msgid "Device %s has no persistent volume."
-msgstr "Zařízení %s nemá trvalý oddíl."
-
-#: ../lib/Tails/Persistence/Setup.pm:442
-msgid ""
-"Cannot delete the persistent volume while in use. You should restart Tails "
-"without persistence."
-msgstr "Nelze smazat trvalý oddíl, zatímco je používán. Musíte restartovat Tails bez používání trvalého oddílu."
-
-#: ../lib/Tails/Persistence/Setup.pm:461
-msgid "Persistence volume is not unlocked."
-msgstr "Trvalý oddíl není odemčen."
-
-#: ../lib/Tails/Persistence/Setup.pm:466
-msgid "Persistence volume is not mounted."
-msgstr "Trvalý oddíl není připojen."
-
-#: ../lib/Tails/Persistence/Setup.pm:471
-msgid "Persistence volume is not readable. Permissions or ownership problems?"
-msgstr "Trvalý oddíl není čitelný. Problém s povolením nebo s vlastnictvím?"
-
-#: ../lib/Tails/Persistence/Setup.pm:476
-msgid "Persistence volume is not writable. Maybe it was mounted read-only?"
-msgstr "Trvalý oddíl nejde přepsat. Nebyl připojen pouze pro čtení?"
-
-#: ../lib/Tails/Persistence/Setup.pm:485
-#, perl-format
-msgid "Tails is running from non-USB device %s."
-msgstr "Tails je spuštěn na jiném zařízení než USB %s."
-
-#: ../lib/Tails/Persistence/Setup.pm:491
-#, perl-format
-msgid "Device %s is optical."
-msgstr "Zařízení %s je optické."
-
-#: ../lib/Tails/Persistence/Setup.pm:498
-#, perl-format
-msgid "Device %s was not created using Tails USB installer."
-msgstr "Zařízení %s nebylo vytvořeno pomocí Tails USB instalátorem."
-
-#: ../lib/Tails/Persistence/Setup.pm:532
-msgid "Error"
-msgstr "Chyba"
-
-#: ../lib/Tails/Persistence/Setup.pm:839
-msgid "Persistence wizard - Finished"
-msgstr "Průvodce tvorby trvalého oddílu dokončil svou činnost."
-
-#: ../lib/Tails/Persistence/Setup.pm:842
-msgid ""
-"Any changes you have made will only take effect after restarting Tails.\n"
-"\n"
-"You may now close this application."
-msgstr "Všechny změny budou mít efekt až po restartu Tails.\n\nNyní můžete zavřít aplikaci."
-
-#: ../lib/Tails/Persistence/Step/Bootstrap.pm:54
-msgid "Persistence wizard - Persistent volume creation"
-msgstr "Průvodce tvorbou trvalého oddílu - Tvorba trvalého oddílu"
-
-#: ../lib/Tails/Persistence/Step/Bootstrap.pm:57
-msgid "Choose a passphrase to protect the persistent volume"
-msgstr "Vyberte heslo na ochranu trvalého oddílu"
-
-#. TRANSLATORS: size, device vendor, device model
-#: ../lib/Tails/Persistence/Step/Bootstrap.pm:61
-#, perl-format
-msgid ""
-"A %s persistent volume will be created on the <b>%s %s</b> device. Data on "
-"this volume will be stored in an encrypted form protected by a passphrase."
-msgstr "%s trvalý oddíl bude vytvořen na <b>%s %s</b> zařízení. Data v oddílu budou uložena v šifrované podobě a chráněná heslem."
-
-#: ../lib/Tails/Persistence/Step/Bootstrap.pm:66
-msgid "Create"
-msgstr "Vytvořit"
-
-#: ../lib/Tails/Persistence/Step/Bootstrap.pm:110
-msgid ""
-"<b>Beware!</b> Using persistence has consequences that must be well "
-"understood. Tails can't help you if you use it wrong! See <a "
-"href='file:///usr/share/doc/tails/website/doc/first_steps/persistence.en.html'>Tails"
-" documentation about persistence</a> to learn more."
-msgstr "<b>Pozor!</b> Užívání trvalého oddílu a následků s tímto spjatých je důležité dobře pochopit. Tails Vám nepomůže pokud ho používáte špatným způsobem! viz <a href='file:///usr/share/doc/tails/website/doc/first_steps/persistence.en.html'>Dokumentace o trvalém oddílu v Tails</a> Vám vysvětlí více."
-
-#: ../lib/Tails/Persistence/Step/Bootstrap.pm:144
+#: ../glade/persistencewindow.glade.h:7
 msgid "Passphrase:"
 msgstr "Heslo:"
 
-#: ../lib/Tails/Persistence/Step/Bootstrap.pm:154
-msgid "Verify Passphrase:"
+#: ../glade/persistencewindow.glade.h:8
+msgid "Read-Only?"
+msgstr "Jenom pro čtení?"
+
+#: ../glade/persistencewindow.glade.h:9
+msgid "<i>Wrong passphrase. Please try again.</i>"
+msgstr "<i>Špatné heslo. Zkuste to prosím znovu.</i>"
+
+#: ../glade/persistencewindow.glade.h:10
+msgid "More options?"
+msgstr "Více možností"
+
+#: ../glade/optionswindow.glade.h:3
+msgid "Administration password"
+msgstr "Administrační heslo"
+
+#: ../glade/optionswindow.glade.h:4
+msgid ""
+"Enter an administration password in case you need to perform administration tasks.\n"
+"Otherwise it will be disabled for better security."
+msgstr "Vložte administrační heslo v případě, že chcete provádět administrační úlohy.\nJinak budou adminstrační úlohy vypnuty pro vyšší bezpečnosti."
+
+#: ../glade/optionswindow.glade.h:6
+msgid "Password:"
+msgstr "Heslo."
+
+#: ../glade/optionswindow.glade.h:7
+msgid "Verify Password:"
 msgstr "Potvrďte heslo:"
 
-#: ../lib/Tails/Persistence/Step/Bootstrap.pm:167
-#: ../lib/Tails/Persistence/Step/Bootstrap.pm:231
-msgid "Passphrase can't be empty"
-msgstr "Heslo nesmí být prázdné"
+#: ../glade/optionswindow.glade.h:8
+msgid "<i>Passwords do not match</i>"
+msgstr "<i>Hesla se neshodují</i>"
 
-#: ../lib/Tails/Persistence/Step/Bootstrap.pm:222
-msgid "Passphrases do not match"
-msgstr "Hesla se neshodují"
+#: ../glade/optionswindow.glade.h:9
+msgid "Windows Camouflage"
+msgstr "Windows Kamufláž"
 
-#: ../lib/Tails/Persistence/Step/Bootstrap.pm:262
-#: ../lib/Tails/Persistence/Step/Configure.pm:123
-msgid "Failed"
-msgstr "Selhani"
-
-#: ../lib/Tails/Persistence/Step/Bootstrap.pm:271
-msgid "Mounting Tails persistence partition."
-msgstr "Připojování trvalého oddílu Tails."
-
-#: ../lib/Tails/Persistence/Step/Bootstrap.pm:274
-msgid "The Tails persistence partition will be mounted."
-msgstr "Trvalý oddíl Tails bude připojen."
-
-#: ../lib/Tails/Persistence/Step/Bootstrap.pm:296
-msgid "Creating..."
-msgstr "Vytváření..."
-
-#: ../lib/Tails/Persistence/Step/Bootstrap.pm:299
-msgid "Creating the persistent volume..."
-msgstr "Vytváření trvalého oddílu."
-
-#: ../lib/Tails/Persistence/Step/Configure.pm:55
-msgid "Persistence wizard - Persistent volume configuration"
-msgstr "Průvodce tvorby trvalého oddílu - Konfigurace trvalého oddílu"
-
-#: ../lib/Tails/Persistence/Step/Configure.pm:58
-msgid "Specify the files that will be saved in the persistent volume"
-msgstr "Specifikujte soubory, které budou uloženy na trvalém oddílu."
-
-#. TRANSLATORS: partition, size, device vendor, device model
-#: ../lib/Tails/Persistence/Step/Configure.pm:62
-#, perl-format
+#: ../glade/optionswindow.glade.h:10
 msgid ""
-"The selected files will be stored in the encrypted partition %s (%s), on the"
-" <b>%s %s</b> device."
-msgstr "Vybrané soubory budou uloženy v šifrovaném oddílu %s (%s), na <b>%s %s</b> zařízení"
+"This option makes Tails look more like Microsoft Windows XP. This may be "
+"useful in public places in order to avoid attracting suspicion."
+msgstr "Toto nastavení změní vzhled Tails na vzhled Microsoft Windows XP. Nastavení se používá na veřejných místech, pro vyhnutí se zbytečné pozornosti okolí."
 
-#: ../lib/Tails/Persistence/Step/Configure.pm:68
-msgid "Save"
-msgstr "Uložit"
+#: ../glade/optionswindow.glade.h:11
+msgid "Activate Microsoft Windows XP Camouflage"
+msgstr "Aktivovat Micro$oft Windows XP Kamufláž"
 
-#: ../lib/Tails/Persistence/Step/Configure.pm:137
-msgid "Saving..."
-msgstr "Ukládání..."
+#: ../glade/langpanel.glade.h:1
+msgid " "
+msgstr " "
 
-#: ../lib/Tails/Persistence/Step/Configure.pm:140
-msgid "Saving persistence configuration..."
-msgstr "Ukládání konfigurace trvalého oddílu..."
+#: ../glade/langpanel.glade.h:2 ../GdmGreeter/langpanel.py:42
+msgid "Language"
+msgstr "Jazyk"
 
-#: ../lib/Tails/Persistence/Step/Delete.pm:40
-msgid "Persistence wizard - Persistent volume deletion"
-msgstr "Průvodce tvorby trvalého oddílu - Odstranění trvalého oddílu"
+#: ../glade/langpanel.glade.h:3
+msgid "Locale"
+msgstr "Místní"
 
-#: ../lib/Tails/Persistence/Step/Delete.pm:43
-msgid "Your persistent data will be deleted."
-msgstr "Vaše trvalá data budou smazana."
+#: ../glade/langpanel.glade.h:4
+msgid "Layout"
+msgstr "Rozvržení"
 
-#: ../lib/Tails/Persistence/Step/Delete.pm:47
-#, perl-format
+#: ../GdmGreeter/persistence.py:59
+#, python-format
 msgid ""
-"The persistent volume %s (%s), on the <b>%s %s</b> device, will be deleted."
-msgstr "Trvalý oddíl %s (%s), na <b>%s %s</b> zařízení bude smazán."
+"live-persist failed with return code %(returncode)s:\n"
+"%(stderr)s"
+msgstr "live-persist selhal a vrátil kód %(returncode)s:\n%(stderr)s"
 
-#: ../lib/Tails/Persistence/Step/Delete.pm:53
-msgid "Delete"
-msgstr "Smazat"
+#: ../GdmGreeter/persistence.py:99
+#, python-format
+msgid ""
+"cryptsetup failed with return code %(returncode)s:\n"
+"%(stdout)s\n"
+"%(stderr)s"
+msgstr "cryptsetup selhal a vrátil kód %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
-#: ../lib/Tails/Persistence/Step/Delete.pm:91
-msgid "Deleting..."
-msgstr "Mazání..."
+#: ../GdmGreeter/persistence.py:124
+#, python-format
+msgid ""
+"live-persist failed with return code %(returncode)s:\n"
+"%(stdout)s\n"
+"%(stderr)s"
+msgstr "live-persist selhal a vrátil kód %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
-#: ../lib/Tails/Persistence/Step/Delete.pm:94
-msgid "Deleting the persistent volume..."
-msgstr "Mazání trvalého oddílu..."
+#: ../GdmGreeter/langpanel.py:124 ../GdmGreeter/langpanel.py:148
+#: ../GdmGreeter/langpanel.py:181
+msgid "Other..."
+msgstr "Ostatní..."
