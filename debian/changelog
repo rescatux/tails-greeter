@@ -1,3 +1,11 @@
+tails-greeter (0.7.22+1~feature.5588.no.autologin.consoles.1) feature-5588-no-autologin-consoles; urgency=medium
+
+  ** SNAPSHOT build @c794f59eba0f4e983cddabaf37ea299e7f27db2f **
+
+  * Don't give "amnesia" the right to run "setupcon" as root anymore.
+
+ -- Tails developers <tails@boum.org>  Sun, 22 Dec 2013 19:23:40 +0100
+
 tails-greeter (0.7.22) devel; urgency=low
 
   [ WinterFairy ]
