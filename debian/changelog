@@ -1,3 +1,11 @@
+tails-greeter (0.7.23+wheezy1~1.gbpb2f6eb) feature-wheezy; urgency=medium
+
+  ** SNAPSHOT build @b2f6eb8c761760bc0b3454dfcb7fd7f4da4e4181 **
+
+  * Rebuild for Debian Wheezy.
+
+ -- Tails developers <tails@boum.org>  Fri, 10 Jan 2014 13:48:07 +0100
+
 tails-greeter (0.7.23) stable; urgency=medium
 
   * Import translations from Transifex.
