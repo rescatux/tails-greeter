@@ -1,3 +1,11 @@
+tails-greeter (0.7.23+1~feature.5588.no.autologin.consoles.1) feature-5588-no-autologin-consoles; urgency=medium
+
+  ** SNAPSHOT build @ad4bb659ffb733f39b8a3a3afc8bc83157bf7ef4 **
+
+  * Don't give "amnesia" the right to run "setupcon" as root anymore.
+
+ -- Tails developers <tails@boum.org>  Fri, 10 Jan 2014 13:44:55 +0100
+
 tails-greeter (0.7.23) stable; urgency=medium
 
   * Import translations from Transifex.
@@ -5,14 +13,6 @@ tails-greeter (0.7.23) stable; urgency=medium
   * Update POT and PO files.
 
  -- Tails developers <tails@boum.org>  Fri, 10 Jan 2014 12:01:21 +0100
-
-tails-greeter (0.7.22+1~feature.5588.no.autologin.consoles.1) feature-5588-no-autologin-consoles; urgency=medium
-
-  ** SNAPSHOT build @c794f59eba0f4e983cddabaf37ea299e7f27db2f **
-
-  * Don't give "amnesia" the right to run "setupcon" as root anymore.
-
- -- Tails developers <tails@boum.org>  Sun, 22 Dec 2013 19:23:40 +0100
 
 tails-greeter (0.7.22) devel; urgency=low
 
