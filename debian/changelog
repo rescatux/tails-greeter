@@ -1,16 +1,7 @@
-tails-greeter (0.7.23) stable; urgency=medium
+tails-greeter (0.7.23+1~feature.spoof.mac.1.gbpcb7526) feature-spoof-mac; urgency=medium
 
-  * Import translations from Transifex.
-  * Update authors and maintainers metadata to match current reality.
-  * Update POT and PO files.
+  ** SNAPSHOT build @cb7526246635ab4a9c0564f3a0a6e5132cfb9eca **
 
- -- Tails developers <tails@boum.org>  Fri, 10 Jan 2014 12:01:21 +0100
-
-tails-greeter (0.7.23~1+feature.spoof.mac.gbpbca134) UNRELEASED; urgency=low
-
-  ** SNAPSHOT build @bca134367930aea2f3ca156f27b391e2677bdd20 **
-
-  [ Tails developers ]
   * Add a checkbox controlling MAC spoofing.
   * Start network blocking detector when spoofing MAC.
   * Rephrase MAC spoofing help for added clarity.
@@ -20,19 +11,21 @@ tails-greeter (0.7.23~1+feature.spoof.mac.gbpbca134) UNRELEASED; urgency=low
   * Add help links to all Tails options.
   * Add help links for persistence and "more options".
   * Fix link activation via Return key press.
-  * Show warning when MAC spoofing is toggled on inside a VM.
   * Hide password mismatch warning when entry is changed.
   * Drop help for "more options".
-  * Enable MAC spoofing when running in test suite.
   * Don't start NM at post-login.
-  * Import translations from Transifex.
-  * Update authors and maintainers metadata to match current reality.
   * Add non-fatal logging facility for PostLogin.
   * Log tails-unblock-network failures.
-  * Revert "Enable MAC spoofing when running in test suite."
-  * Revert "Show warning when MAC spoofing is toggled on inside a VM."
 
- -- Tails developers <amnesia@boum.org>  Thu, 19 Dec 2013 21:10:35 +0100
+ -- Tails developers <amnesia@boum.org>  Fri, 10 Jan 2014 13:41:08 +0100
+
+tails-greeter (0.7.23) stable; urgency=medium
+
+  * Import translations from Transifex.
+  * Update authors and maintainers metadata to match current reality.
+  * Update POT and PO files.
+
+ -- Tails developers <tails@boum.org>  Fri, 10 Jan 2014 12:01:21 +0100
 
 tails-greeter (0.7.22) devel; urgency=low
 
