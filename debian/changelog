@@ -1,3 +1,11 @@
+tails-greeter (0.7.23) stable; urgency=medium
+
+  * Import translations from Transifex.
+  * Update authors and maintainers metadata to match current reality.
+  * Update POT and PO files.
+
+ -- Tails developers <tails@boum.org>  Fri, 10 Jan 2014 12:01:21 +0100
+
 tails-greeter (0.7.22+1~feature.5588.no.autologin.consoles.1) feature-5588-no-autologin-consoles; urgency=medium
 
   ** SNAPSHOT build @c794f59eba0f4e983cddabaf37ea299e7f27db2f **
