@@ -1,3 +1,11 @@
+tails-greeter (0.7.23) stable; urgency=medium
+
+  * Import translations from Transifex.
+  * Update authors and maintainers metadata to match current reality.
+  * Update POT and PO files.
+
+ -- Tails developers <tails@boum.org>  Fri, 10 Jan 2014 12:01:21 +0100
+
 tails-greeter (0.7.22+wheezy1~2.gbpe39a1a) feature-wheezy; urgency=medium
 
   ** SNAPSHOT build @e39a1a71deeb459065e06710205eb88aaec18788 **
