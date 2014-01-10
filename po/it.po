@@ -4,14 +4,16 @@
 # 
 # Translators:
 # Fandor, 2013
+# Fandor, 2013
+# Tony Goodyear <fswitch20@hotmail.com>, 2012
 # Tony Goodyear <fswitch20@hotmail.com>, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
-"Report-Msgid-Bugs-To: https://trac.torproject.org/projects/tor\n"
-"POT-Creation-Date: 2013-05-12 19:29+0200\n"
-"PO-Revision-Date: 2013-05-18 01:41+0000\n"
-"Last-Translator: Fandor\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-11-22 13:49+0100\n"
+"PO-Revision-Date: 2013-12-12 15:40+0000\n"
+"Last-Translator: Gaetano Gallozzi <ggallozz@gmail.com>\n"
 "Language-Team: Italian (http://www.transifex.com/projects/p/torproject/language/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -67,7 +69,7 @@ msgstr "Password di Amministrazione"
 msgid ""
 "Enter an administration password in case you need to perform administration tasks.\n"
 "Otherwise it will be disabled for better security."
-msgstr "Inserire una password di amministrazione in caso si debbano eseguire delle attività di amministrazione.\nIn caso contrario sarà disabilitato per migliorare la sicurezza.."
+msgstr "Inserire una password di amministrazione in caso si debbano eseguire delle attività di amministrazione.\nIn caso contrario sarà disabilitata per migliorare la sicurezza.."
 
 #: ../glade/optionswindow.glade.h:6
 msgid "Password:"
@@ -79,7 +81,7 @@ msgstr "Verifica Password"
 
 #: ../glade/optionswindow.glade.h:8
 msgid "<i>Passwords do not match</i>"
-msgstr "<i>Le Passwords non sono uguali</i>"
+msgstr "<i>Le Passwords non corrispondono</i>"
 
 #: ../glade/optionswindow.glade.h:9
 msgid "Windows Camouflage"
@@ -89,7 +91,7 @@ msgstr "Mimetizzazione Windows"
 msgid ""
 "This option makes Tails look more like Microsoft Windows XP. This may be "
 "useful in public places in order to avoid attracting suspicion."
-msgstr "Questa opzione permette a Tails di mimetizzarsi come Microsoft Windows XP. Utile in luoghi pubblici per non attirare attenzione o sospetti."
+msgstr "Questa opzione permette a Tails di sembrare Microsoft Windows XP. Utile in luoghi pubblici per non attirare attenzione o sospetti."
 
 #: ../glade/optionswindow.glade.h:11
 msgid "Activate Microsoft Windows XP Camouflage"
@@ -109,14 +111,14 @@ msgstr "Impostazioni Internazionali"
 
 #: ../glade/langpanel.glade.h:4
 msgid "Layout"
-msgstr "Layout"
+msgstr "Dsiposizione"
 
 #: ../GdmGreeter/persistence.py:59
 #, python-format
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
-msgstr "live-persist fallito con return code %(returncode)s:\n%(stderr)s"
+msgstr "persistenza live fallita con return code %(returncode)s:\n%(stderr)s"
 
 #: ../GdmGreeter/persistence.py:99
 #, python-format
@@ -132,7 +134,7 @@ msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "live-persist fallito con return code %(returncode)s:\n%(stdout)s\n%(stderr)s"
+msgstr "persistenza live fallita con return code %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
 #: ../GdmGreeter/langpanel.py:124 ../GdmGreeter/langpanel.py:148
 #: ../GdmGreeter/langpanel.py:181
