@@ -1,6 +1,4 @@
-tails-greeter (0.7.23+1~feature.spoof.mac.1.gbpcb7526) feature-spoof-mac; urgency=medium
-
-  ** SNAPSHOT build @cb7526246635ab4a9c0564f3a0a6e5132cfb9eca **
+tails-greeter (0.7.24+1~feature.spoof.mac.1) feature-spoof-mac; urgency=medium
 
   * Add a checkbox controlling MAC spoofing.
   * Start network blocking detector when spoofing MAC.
@@ -18,6 +16,13 @@ tails-greeter (0.7.23+1~feature.spoof.mac.1.gbpcb7526) feature-spoof-mac; urgenc
   * Log tails-unblock-network failures.
 
  -- Tails developers <amnesia@boum.org>  Fri, 10 Jan 2014 13:41:08 +0100
+
+tails-greeter (0.7.24) stable; urgency=medium
+
+  * Import translations from Transifex
+  * Update POT and PO files.
+
+ -- Tails developers <tails@boum.org>  Wed, 29 Jan 2014 14:26:49 +0100
 
 tails-greeter (0.7.23) stable; urgency=medium
 

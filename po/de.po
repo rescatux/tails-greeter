@@ -9,6 +9,7 @@
 # Cooligan <ppt23@lkj.hopto.org>, 2012
 # Sacro <Scion@T-Online.de>, 2012
 # to_ba, 2013
+# to_ba, 2014
 # Victor1975 <VKerley75@gmail.com>, 2013
 # djcrackhome <wallcityserver@gmail.com>, 2012
 # Wasilis <inactive+Wasilis@transifex.com>, 2013
@@ -16,8 +17,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-22 13:49+0100\n"
-"PO-Revision-Date: 2013-11-28 16:30+0000\n"
+"POT-Creation-Date: 2014-01-10 12:01+0100\n"
+"PO-Revision-Date: 2014-01-21 15:10+0000\n"
 "Last-Translator: to_ba\n"
 "Language-Team: German (http://www.transifex.com/projects/p/torproject/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -100,7 +101,7 @@ msgstr "Diese Option lässt Tails wie Microsoft Windows XP aussehen. Dies kann i
 
 #: ../glade/optionswindow.glade.h:11
 msgid "Activate Microsoft Windows XP Camouflage"
-msgstr "Aktiviere Microsoft Windows XP Tarnung"
+msgstr "Microsoft Windows XP Tarnung aktivieren"
 
 #: ../glade/langpanel.glade.h:1
 msgid " "
@@ -116,7 +117,7 @@ msgstr "Ort"
 
 #: ../glade/langpanel.glade.h:4
 msgid "Layout"
-msgstr "Layout "
+msgstr "Anordnung"
 
 #: ../GdmGreeter/persistence.py:59
 #, python-format
@@ -139,7 +140,7 @@ msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "Live-Persist ist mit folgendem code fehlgeschlagen %(returncode)s:\n%(stdout)s\n%(stderr)s"
+msgstr "Live-Persist ist mit folgendem Code fehlgeschlagen %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
 #: ../GdmGreeter/langpanel.py:124 ../GdmGreeter/langpanel.py:148
 #: ../GdmGreeter/langpanel.py:181
