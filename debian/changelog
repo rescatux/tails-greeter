@@ -1,3 +1,10 @@
+tails-greeter (0.7.24) stable; urgency=medium
+
+  * Import translations from Transifex
+  * Update POT and PO files.
+
+ -- Tails developers <tails@boum.org>  Wed, 29 Jan 2014 14:26:49 +0100
+
 tails-greeter (0.7.23) stable; urgency=medium
 
   * Import translations from Transifex.
