@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# yodaa <aron.plotnikowski@cryptolab.net>, 2014
 # bogdrozd <bog.d@gazeta.pl>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
-"Report-Msgid-Bugs-To: https://trac.torproject.org/projects/tor\n"
-"POT-Creation-Date: 2013-05-12 19:29+0200\n"
-"PO-Revision-Date: 2013-08-28 09:02+0000\n"
-"Last-Translator: yodaa <slayer123312@gmail.com>\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-01-10 12:01+0100\n"
+"PO-Revision-Date: 2014-01-19 03:30+0000\n"
+"Last-Translator: yodaa <aron.plotnikowski@cryptolab.net>\n"
 "Language-Team: Polish (http://www.transifex.com/projects/p/torproject/language/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -104,7 +105,7 @@ msgstr "Język"
 
 #: ../glade/langpanel.glade.h:3
 msgid "Locale"
-msgstr "Ustawienia językowe"
+msgstr "Ustawienia regionalne"
 
 #: ../glade/langpanel.glade.h:4
 msgid "Layout"
