@@ -85,7 +85,7 @@ fi
 # previously blocked network devices.
 PHYSICAL_SECURITY_SETTINGS="/var/lib/gdm3/tails.physical_security"
 if [ -r "${PHYSICAL_SECURITY_SETTINGS}" ] ; then
-   install -m 0640 -o root -g "$LIVE_USERNAME" \
+   install -m 0640 -o root -g root \
       "${PHYSICAL_SECURITY_SETTINGS}" /var/lib/live/config/tails.physical_security
    sync
    . "${PHYSICAL_SECURITY_SETTINGS}"
