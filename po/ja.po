@@ -1,21 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # plazmism <gomidori@live.jp>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
-"Report-Msgid-Bugs-To: https://trac.torproject.org/projects/tor\n"
-"POT-Creation-Date: 2013-05-12 19:29+0200\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-02-21 19:40+0100\n"
 "PO-Revision-Date: 2013-06-07 09:20+0000\n"
 "Last-Translator: plazmism <gomidori@live.jp>\n"
-"Language-Team: Japanese (http://www.transifex.com/projects/p/torproject/language/ja/)\n"
+"Language-Team: Japanese (http://www.transifex.com/projects/p/torproject/"
+"language/ja/)\n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../glade/persistencewindow.glade.h:1
@@ -35,26 +36,30 @@ msgid "Use persistence?"
 msgstr "永続性を使用しますか？"
 
 #: ../glade/persistencewindow.glade.h:5
+msgid "<a href=\"doc/first_steps/persistence/use.en.html\">Help</a>"
+msgstr ""
+
+#: ../glade/persistencewindow.glade.h:6
 msgid "Yes"
 msgstr "はい"
 
-#: ../glade/persistencewindow.glade.h:6
+#: ../glade/persistencewindow.glade.h:7
 msgid "No"
 msgstr "いいえ"
 
-#: ../glade/persistencewindow.glade.h:7
+#: ../glade/persistencewindow.glade.h:8
 msgid "Passphrase:"
 msgstr "パスフレーズ:"
 
-#: ../glade/persistencewindow.glade.h:8
+#: ../glade/persistencewindow.glade.h:9
 msgid "Read-Only?"
 msgstr "リードオンリー？"
 
-#: ../glade/persistencewindow.glade.h:9
+#: ../glade/persistencewindow.glade.h:10
 msgid "<i>Wrong passphrase. Please try again.</i>"
 msgstr "<i>パスフレーズが間違っています。やり直してください。</i>"
 
-#: ../glade/persistencewindow.glade.h:10
+#: ../glade/persistencewindow.glade.h:11
 msgid "More options?"
 msgstr "詳細なオプション？"
 
@@ -64,35 +69,77 @@ msgstr "管理者パスワード"
 
 #: ../glade/optionswindow.glade.h:4
 msgid ""
-"Enter an administration password in case you need to perform administration tasks.\n"
-"Otherwise it will be disabled for better security."
-msgstr "管理者のタスクを実行する必要がある場合、管理者パスワードを入力してください。\nでなければ、セキュリティ向上のために無効になります。"
+"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
+"\">Help</a>"
+msgstr ""
 
-#: ../glade/optionswindow.glade.h:6
+#: ../glade/optionswindow.glade.h:5
+msgid ""
+"Enter an administration password in case you need to perform administration "
+"tasks.\n"
+"Otherwise it will be disabled for better security."
+msgstr ""
+"管理者のタスクを実行する必要がある場合、管理者パスワードを入力してくださ"
+"い。\n"
+"でなければ、セキュリティ向上のために無効になります。"
+
+#: ../glade/optionswindow.glade.h:7
 msgid "Password:"
 msgstr "パスワード:"
 
-#: ../glade/optionswindow.glade.h:7
+#: ../glade/optionswindow.glade.h:8
 msgid "Verify Password:"
 msgstr "パスワード確認:"
 
-#: ../glade/optionswindow.glade.h:8
+#: ../glade/optionswindow.glade.h:9
 msgid "<i>Passwords do not match</i>"
 msgstr "<i>パスワードが一致しません</i>"
 
-#: ../glade/optionswindow.glade.h:9
+#: ../glade/optionswindow.glade.h:10
 msgid "Windows Camouflage"
 msgstr "Windowsカモフラージュ"
 
-#: ../glade/optionswindow.glade.h:10
+#: ../glade/optionswindow.glade.h:11
+msgid ""
+"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">Help</"
+"a>"
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:12
 msgid ""
 "This option makes Tails look more like Microsoft Windows XP. This may be "
 "useful in public places in order to avoid attracting suspicion."
-msgstr "このオプションはTailsをよりMicrosoft Windows XPにみえるようにします。これは注意を引く疑いを避けるために公共の場所などで便利かもしれません。"
+msgstr ""
+"このオプションはTailsをよりMicrosoft Windows XPにみえるようにします。これは注"
+"意を引く疑いを避けるために公共の場所などで便利かもしれません。"
 
-#: ../glade/optionswindow.glade.h:11
+#: ../glade/optionswindow.glade.h:13
 msgid "Activate Microsoft Windows XP Camouflage"
 msgstr "Microsoft Windows XPカモフラージュを有効化"
+
+#: ../glade/optionswindow.glade.h:14
+msgid "MAC address spoofing"
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:15
+msgid "<a href=\"doc/advanced_topics/mac_changer.en.html\">Help</a>"
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:16
+msgid ""
+"Spoofing MAC addresses hides the serial number of your network cards to the "
+"local networks. This can help you hide your geographical location."
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:17
+msgid ""
+"It is generally safer to spoof MAC addresses, but it might also raise "
+"suspicion or cause network connection problems. See the documentation."
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:18
+msgid "Spoof all MAC addresses"
+msgstr ""
 
 #: ../glade/langpanel.glade.h:1
 msgid " "
@@ -115,7 +162,9 @@ msgstr "レイアウト"
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
-msgstr "live-persistが失敗しました。リターンコードは %(returncode)s:\n%(stderr)s"
+msgstr ""
+"live-persistが失敗しました。リターンコードは %(returncode)s:\n"
+"%(stderr)s"
 
 #: ../GdmGreeter/persistence.py:99
 #, python-format
@@ -123,7 +172,10 @@ msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "cryptsetup が失敗しました。リターンコードは %(returncode)s:\n%(stdout)s\n%(stderr)s"
+msgstr ""
+"cryptsetup が失敗しました。リターンコードは %(returncode)s:\n"
+"%(stdout)s\n"
+"%(stderr)s"
 
 #: ../GdmGreeter/persistence.py:124
 #, python-format
@@ -131,7 +183,10 @@ msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "live-persistが失敗しました。リターンコードは %(returncode)s:\n%(stdout)s\n%(stderr)s"
+msgstr ""
+"live-persistが失敗しました。リターンコードは %(returncode)s:\n"
+"%(stdout)s\n"
+"%(stderr)s"
 
 #: ../GdmGreeter/langpanel.py:124 ../GdmGreeter/langpanel.py:148
 #: ../GdmGreeter/langpanel.py:181

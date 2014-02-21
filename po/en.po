@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tails-greeter\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-01 15:10+0200\n"
+"POT-Creation-Date: 2014-02-21 19:40+0100\n"
 "PO-Revision-Date: 2011-04-22 17:42+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: English <en@li.org>\n"
@@ -16,41 +16,47 @@ msgstr ""
 "X-Launchpad-Export-Date: 2011-05-03 06:15+0000\n"
 "X-Generator: Launchpad (build 12758)\n"
 
-#: ../glade/persistencewindow.glade.h:1 ../glade/optionswindow.glade.h:1
-#: ../GdmGreeter/persistencewindow.py:128
+#: ../glade/persistencewindow.glade.h:1
+msgid "Forward"
+msgstr ""
+
+#: ../glade/persistencewindow.glade.h:2 ../glade/optionswindow.glade.h:1
 msgid "Login"
 msgstr ""
 
-#: ../glade/persistencewindow.glade.h:2 ../glade/optionswindow.glade.h:2
+#: ../glade/persistencewindow.glade.h:3 ../glade/optionswindow.glade.h:2
 msgid "Welcome to Tails"
 msgstr ""
 
-#: ../glade/persistencewindow.glade.h:3
+#: ../glade/persistencewindow.glade.h:4
 msgid "Use persistence?"
 msgstr ""
 
-#: ../glade/persistencewindow.glade.h:4
-msgid "Yes"
-msgstr ""
-
 #: ../glade/persistencewindow.glade.h:5
-msgid "No"
+msgid "<a href=\"doc/first_steps/persistence/use.en.html\">Help</a>"
 msgstr ""
 
 #: ../glade/persistencewindow.glade.h:6
-msgid "Passphrase:"
+msgid "Yes"
 msgstr ""
 
 #: ../glade/persistencewindow.glade.h:7
-msgid "Read-Only?"
+msgid "No"
 msgstr ""
 
-#: ../glade/persistencewindow.glade.h:8 ../glade/optionswindow.glade.h:8
-#: ../glade/langpanel.glade.h:1
-msgid " "
+#: ../glade/persistencewindow.glade.h:8
+msgid "Passphrase:"
 msgstr ""
 
 #: ../glade/persistencewindow.glade.h:9
+msgid "Read-Only?"
+msgstr ""
+
+#: ../glade/persistencewindow.glade.h:10
+msgid "<i>Wrong passphrase. Please try again.</i>"
+msgstr ""
+
+#: ../glade/persistencewindow.glade.h:11
 msgid "More options?"
 msgstr ""
 
@@ -60,31 +66,75 @@ msgstr ""
 
 #: ../glade/optionswindow.glade.h:4
 msgid ""
+"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
+"\">Help</a>"
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:5
+msgid ""
 "Enter an administration password in case you need to perform administration "
 "tasks.\n"
 "Otherwise it will be disabled for better security."
 msgstr ""
 
-#: ../glade/optionswindow.glade.h:6
+#: ../glade/optionswindow.glade.h:7
 msgid "Password:"
 msgstr ""
 
-#: ../glade/optionswindow.glade.h:7
+#: ../glade/optionswindow.glade.h:8
 msgid "Verify Password:"
 msgstr ""
 
 #: ../glade/optionswindow.glade.h:9
-msgid "Windows Camouflage"
+msgid "<i>Passwords do not match</i>"
 msgstr ""
 
 #: ../glade/optionswindow.glade.h:10
+msgid "Windows Camouflage"
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:11
+msgid ""
+"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">Help</"
+"a>"
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:12
 msgid ""
 "This option makes Tails look more like Microsoft Windows XP. This may be "
 "useful in public places in order to avoid attracting suspicion."
 msgstr ""
 
-#: ../glade/optionswindow.glade.h:11
+#: ../glade/optionswindow.glade.h:13
 msgid "Activate Microsoft Windows XP Camouflage"
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:14
+msgid "MAC address spoofing"
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:15
+msgid "<a href=\"doc/advanced_topics/mac_changer.en.html\">Help</a>"
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:16
+msgid ""
+"Spoofing MAC addresses hides the serial number of your network cards to the "
+"local networks. This can help you hide your geographical location."
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:17
+msgid ""
+"It is generally safer to spoof MAC addresses, but it might also raise "
+"suspicion or cause network connection problems. See the documentation."
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:18
+msgid "Spoof all MAC addresses"
+msgstr ""
+
+#: ../glade/langpanel.glade.h:1
+msgid " "
 msgstr ""
 
 #: ../glade/langpanel.glade.h:2 ../GdmGreeter/langpanel.py:42
@@ -97,10 +147,6 @@ msgstr ""
 
 #: ../glade/langpanel.glade.h:4
 msgid "Layout"
-msgstr ""
-
-#: ../GdmGreeter/optionswindow.py:68
-msgid "<i>Passwords do not match</i>"
 msgstr ""
 
 #: ../GdmGreeter/persistence.py:59
@@ -124,10 +170,6 @@ msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr ""
-
-#: ../GdmGreeter/persistencewindow.py:94
-msgid "<i>Wrong passphrase. Please try again.</i>"
 msgstr ""
 
 #: ../GdmGreeter/langpanel.py:124 ../GdmGreeter/langpanel.py:148
