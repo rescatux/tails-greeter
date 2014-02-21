@@ -352,7 +352,7 @@ Otherwise it will be disabled for better security.</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="xalign">0</property>
-                        <property name="label" translatable="yes">Spoof all MAC addresses</property>
+                        <property name="label" translatable="yes">MAC address spoofing</property>
                         <attributes>
                           <attribute name="weight" value="semibold"/>
                           <attribute name="size" value="11000"/>
@@ -392,7 +392,7 @@ Otherwise it will be disabled for better security.</property>
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="xalign">0</property>
-                    <property name="label" translatable="yes">This option hides the serial number of your network cards to the local networks. This can help you hide your geographical location.</property>
+                    <property name="label" translatable="yes">Spoofing MAC addresses hides the serial number of your network cards to the local networks. This can help you hide your geographical location.</property>
                     <property name="wrap">True</property>
                     <property name="width_chars">72</property>
                   </object>
