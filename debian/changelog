@@ -1,4 +1,6 @@
-tails-greeter (0.7.24+1~feature.spoof.mac.1) feature-spoof-mac; urgency=medium
+tails-greeter (0.7.25+1~feature.spoof.mac.1) feature-spoof-mac; urgency=medium
+
+  ** SNAPSHOT build @985159e3c50c69211d6f647750670e2167281431 **
 
   * Add a checkbox controlling MAC spoofing.
   * Start network blocking detector when spoofing MAC.
@@ -9,13 +11,21 @@ tails-greeter (0.7.24+1~feature.spoof.mac.1) feature-spoof-mac; urgency=medium
   * Add help links to all Tails options.
   * Add help links for persistence and "more options".
   * Fix link activation via Return key press.
+  * Show warning when MAC spoofing is toggled on inside a VM.
   * Hide password mismatch warning when entry is changed.
   * Drop help for "more options".
+  * Enable MAC spoofing when running in test suite.
   * Don't start NM at post-login.
   * Add non-fatal logging facility for PostLogin.
   * Log tails-unblock-network failures.
+  * Revert "Enable MAC spoofing when running in test suite."
+  * Revert "Show warning when MAC spoofing is toggled on inside a VM."
+  * Log the stdout/err on tails-unblock-network error.
+  * Don't make tails.physical_security readable by $LIVE_USER.
+  * Minor rephrasings in MAC spoof option.
+  * Script has changed name.
 
- -- Tails developers <amnesia@boum.org>  Fri, 10 Jan 2014 13:41:08 +0100
+ -- Tails developers <amnesia@boum.org>  Fri, 21 Feb 2014 05:25:29 +0100
 
 tails-greeter (0.7.24) stable; urgency=medium
 
