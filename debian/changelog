@@ -5,7 +5,7 @@ tails-greeter (0.7.25) devel; urgency=medium
   * Add help links to options.
   * Hide password mismatch warning when entry is changed.
 
- -- Tails developers <amnesia@boum.org>  Fri, 21 Feb 2014 05:25:29 +0100
+ -- Tails developers <tails@boum.org>  Fri, 21 Feb 2014 05:25:29 +0100
 
 tails-greeter (0.7.24) stable; urgency=medium
 
