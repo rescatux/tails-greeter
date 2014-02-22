@@ -1,3 +1,9 @@
+tails-greeter (0.7.25+wheezy1) feature-wheezy; urgency=medium
+
+  * Rebuild for Debian Wheezy.
+
+ -- Tails developers <tails@boum.org>  Sat, 22 Feb 2014 10:56:49 +0100
+
 tails-greeter (0.7.25) devel; urgency=medium
 
   * Don't give "amnesia" the right to run "setupcon" as root anymore.
