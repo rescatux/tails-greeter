@@ -78,18 +78,45 @@
                 <property name="can_focus">False</property>
                 <property name="spacing">10</property>
                 <child>
-                  <object class="GtkLabel" id="admin_label">
+                  <object class="GtkHBox" id="password_top">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="xalign">0</property>
-                    <property name="label" translatable="yes">Administration password</property>
-                    <attributes>
-                      <attribute name="weight" value="semibold"/>
-                      <attribute name="size" value="11000"/>
-                    </attributes>
+                    <child>
+                      <object class="GtkLabel" id="admin_label">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="xalign">0</property>
+                        <property name="label" translatable="yes">Administration password</property>
+                        <attributes>
+                          <attribute name="weight" value="semibold"/>
+                          <attribute name="size" value="11000"/>
+                        </attributes>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="password_docs">
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="xalign">0</property>
+                        <property name="use_markup">True</property>
+                        <property name="label" translatable="yes">&lt;a href=&quot;doc/first_steps/startup_options/administration_password.en.html&quot;&gt;Help&lt;/a&gt;</property>
+                        <signal name="activate-link" handler="cb_doc_handler" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="pack_type">GTK_PACK_END</property>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
                   </object>
                   <packing>
-                    <property name="expand">False</property>
+                    <property name="expand">True</property>
                     <property name="fill">True</property>
                     <property name="position">0</property>
                   </packing>
@@ -234,18 +261,45 @@ Otherwise it will be disabled for better security.</property>
                 <property name="can_focus">False</property>
                 <property name="spacing">10</property>
                 <child>
-                  <object class="GtkLabel" id="camouflage_header">
+                  <object class="GtkHBox" id="camouflage_top">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="xalign">0</property>
-                    <property name="label" translatable="yes">Windows Camouflage</property>
-                    <attributes>
-                      <attribute name="weight" value="semibold"/>
-                      <attribute name="size" value="11000"/>
-                    </attributes>
+                    <child>
+                      <object class="GtkLabel" id="camouflage_header">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="xalign">0</property>
+                        <property name="label" translatable="yes">Windows Camouflage</property>
+                        <attributes>
+                          <attribute name="weight" value="semibold"/>
+                          <attribute name="size" value="11000"/>
+                        </attributes>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="camouflage_docs">
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="xalign">0</property>
+                        <property name="use_markup">True</property>
+                        <property name="label" translatable="yes">&lt;a href=&quot;doc/first_steps/startup_options/windows_camouflage.en.html&quot;&gt;Help&lt;/a&gt;</property>
+                        <signal name="activate-link" handler="cb_doc_handler" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="pack_type">GTK_PACK_END</property>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
                   </object>
                   <packing>
-                    <property name="expand">False</property>
+                    <property name="expand">True</property>
                     <property name="fill">True</property>
                     <property name="position">0</property>
                   </packing>
@@ -288,6 +342,100 @@ Otherwise it will be disabled for better security.</property>
                 <property name="fill">True</property>
                 <property name="position">2</property>
               </packing>
+            </child>
+            <child>
+              <object class="GtkVBox" id="macspoof_box">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="spacing">10</property>
+                <child>
+                  <object class="GtkHBox" id="macspoof_top">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <child>
+                      <object class="GtkLabel" id="macspoof_header">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="xalign">0</property>
+                        <property name="label" translatable="yes">MAC address spoofing</property>
+                        <attributes>
+                          <attribute name="weight" value="semibold"/>
+                          <attribute name="size" value="11000"/>
+                        </attributes>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="macspoof_docs">
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="xalign">0</property>
+                        <property name="use_markup">True</property>
+                        <property name="label" translatable="yes">&lt;a href=&quot;doc/advanced_topics/mac_changer.en.html&quot;&gt;Help&lt;/a&gt;</property>
+                        <signal name="activate-link" handler="cb_doc_handler" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="pack_type">GTK_PACK_END</property>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="expand">True</property>
+                    <property name="fill">True</property>
+                    <property name="position">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="macspoof_help">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="xalign">0</property>
+                    <property name="label" translatable="yes">Spoofing MAC addresses hides the serial number of your network cards to the local networks. This can help you hide your geographical location.</property>
+                    <property name="wrap">True</property>
+                    <property name="width_chars">72</property>
+                  </object>
+                  <packing>
+                    <property name="expand">True</property>
+                    <property name="fill">True</property>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="macspoof_warning">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="xalign">0</property>
+                    <property name="label" translatable="yes">It is generally safer to spoof MAC addresses, but it might also raise suspicion or cause network connection problems. See the documentation.</property>
+                    <property name="wrap">True</property>
+                    <property name="width_chars">72</property>
+                  </object>
+                  <packing>
+                    <property name="expand">True</property>
+                    <property name="fill">True</property>
+                    <property name="position">2</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkCheckButton" id="macspoof_checkbox">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="xalign">0</property>
+                    <property name="label" translatable="yes">Spoof all MAC addresses</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">3</property>
+                  </packing>
+                </child>
+              </object>
             </child>
           </object>
           <packing>

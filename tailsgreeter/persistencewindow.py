@@ -25,6 +25,7 @@ from gi.repository import Gdk, Gtk
 import logging, os
 import tailsgreeter
 from tailsgreeter.language import TranslatableWindow
+from helpwindow import HelpWindow
 
 class PersistenceWindow(TranslatableWindow):
     """First greeter screen"""
@@ -75,6 +76,9 @@ class PersistenceWindow(TranslatableWindow):
         # * support multiple persistent containers:
         #   - display brand, model, partition path and size for each container
         #   - create as many passphrase input fields as needed
+
+    # Help callback handler
+    cb_doc_handler = HelpWindow.cb_doc_handler
 
     def activate_persistence(self):
         """Ask the backend to activate persistence and handle errors
@@ -188,8 +192,14 @@ class PersistenceWindow(TranslatableWindow):
     def key_press_event_cb(self, widget, event=None):
         """Handle key press"""
         if event:
-            if event.keyval in [ Gdk.KEY_Return, Gdk.KEY_KP_Enter ]:
-                self.go()
+            if event.keyval in [ Gtk.KEY_Return, Gdm.KEY_KP_Enter ]:
+                if self.window.get_focus().__class__.__name__ == "Label":
+                    # The only labels that we allow to be focused are
+                    # the help links, for which Return will activate
+                    # the link.
+                    return
+                else:
+                    self.go()
 
     def delete_event_cb(self, widget, event=None):
         """Ignore delete event (Esc)"""

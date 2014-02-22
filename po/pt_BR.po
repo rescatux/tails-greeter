@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # alkaid <alkaidw@gmail.com>, 2012
 # Communia <ameaneantie@riseup.net>, 2013
@@ -12,15 +12,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
-"Report-Msgid-Bugs-To: https://trac.torproject.org/projects/tor\n"
-"POT-Creation-Date: 2013-05-12 19:29+0200\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-02-21 19:40+0100\n"
 "PO-Revision-Date: 2013-10-06 16:20+0000\n"
 "Last-Translator: Communia <ameaneantie@riseup.net>\n"
-"Language-Team: Portuguese (Brazil) (http://www.transifex.com/projects/p/torproject/language/pt_BR/)\n"
+"Language-Team: Portuguese (Brazil) (http://www.transifex.com/projects/p/"
+"torproject/language/pt_BR/)\n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pt_BR\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: ../glade/persistencewindow.glade.h:1
@@ -40,26 +41,30 @@ msgid "Use persistence?"
 msgstr "Usar Permanência?"
 
 #: ../glade/persistencewindow.glade.h:5
+msgid "<a href=\"doc/first_steps/persistence/use.en.html\">Help</a>"
+msgstr ""
+
+#: ../glade/persistencewindow.glade.h:6
 msgid "Yes"
 msgstr "Sim"
 
-#: ../glade/persistencewindow.glade.h:6
+#: ../glade/persistencewindow.glade.h:7
 msgid "No"
 msgstr "Não"
 
-#: ../glade/persistencewindow.glade.h:7
+#: ../glade/persistencewindow.glade.h:8
 msgid "Passphrase:"
 msgstr "Senha:"
 
-#: ../glade/persistencewindow.glade.h:8
+#: ../glade/persistencewindow.glade.h:9
 msgid "Read-Only?"
 msgstr "Somente leitura?"
 
-#: ../glade/persistencewindow.glade.h:9
+#: ../glade/persistencewindow.glade.h:10
 msgid "<i>Wrong passphrase. Please try again.</i>"
 msgstr "<i>Senha incorreta. Por favor,tente novamente.</i>"
 
-#: ../glade/persistencewindow.glade.h:10
+#: ../glade/persistencewindow.glade.h:11
 msgid "More options?"
 msgstr "Mais opções?"
 
@@ -69,35 +74,77 @@ msgstr "Senha do administrador"
 
 #: ../glade/optionswindow.glade.h:4
 msgid ""
-"Enter an administration password in case you need to perform administration tasks.\n"
-"Otherwise it will be disabled for better security."
-msgstr "Crie uma senha do administrador caso você precise realizar tarefas administrativas.\nCaso contrário, para maior segurança, essa função será desabilitada ."
+"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
+"\">Help</a>"
+msgstr ""
 
-#: ../glade/optionswindow.glade.h:6
+#: ../glade/optionswindow.glade.h:5
+msgid ""
+"Enter an administration password in case you need to perform administration "
+"tasks.\n"
+"Otherwise it will be disabled for better security."
+msgstr ""
+"Crie uma senha do administrador caso você precise realizar tarefas "
+"administrativas.\n"
+"Caso contrário, para maior segurança, essa função será desabilitada ."
+
+#: ../glade/optionswindow.glade.h:7
 msgid "Password:"
 msgstr "Senha:"
 
-#: ../glade/optionswindow.glade.h:7
+#: ../glade/optionswindow.glade.h:8
 msgid "Verify Password:"
 msgstr "Verifique a senha:"
 
-#: ../glade/optionswindow.glade.h:8
+#: ../glade/optionswindow.glade.h:9
 msgid "<i>Passwords do not match</i>"
 msgstr "<i>As senhas não correspondem</i>"
 
-#: ../glade/optionswindow.glade.h:9
+#: ../glade/optionswindow.glade.h:10
 msgid "Windows Camouflage"
 msgstr "Camuflar Janela"
 
-#: ../glade/optionswindow.glade.h:10
+#: ../glade/optionswindow.glade.h:11
+msgid ""
+"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">Help</"
+"a>"
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:12
 msgid ""
 "This option makes Tails look more like Microsoft Windows XP. This may be "
 "useful in public places in order to avoid attracting suspicion."
-msgstr "Essa opção deixa o Tails mais parecido com o Microsoft Windows XP. Isso poderá ser útil em lugares públicos para evitar suspeitas."
+msgstr ""
+"Essa opção deixa o Tails mais parecido com o Microsoft Windows XP. Isso "
+"poderá ser útil em lugares públicos para evitar suspeitas."
 
-#: ../glade/optionswindow.glade.h:11
+#: ../glade/optionswindow.glade.h:13
 msgid "Activate Microsoft Windows XP Camouflage"
 msgstr "Ativar Camuflagem Microsoft Windows XP"
+
+#: ../glade/optionswindow.glade.h:14
+msgid "MAC address spoofing"
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:15
+msgid "<a href=\"doc/advanced_topics/mac_changer.en.html\">Help</a>"
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:16
+msgid ""
+"Spoofing MAC addresses hides the serial number of your network cards to the "
+"local networks. This can help you hide your geographical location."
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:17
+msgid ""
+"It is generally safer to spoof MAC addresses, but it might also raise "
+"suspicion or cause network connection problems. See the documentation."
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:18
+msgid "Spoof all MAC addresses"
+msgstr ""
 
 #: ../glade/langpanel.glade.h:1
 msgid " "
@@ -120,7 +167,9 @@ msgstr "Layout"
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
-msgstr "live-persist falhou com código de retorno %(returncode)s:\n%(stderr)s"
+msgstr ""
+"live-persist falhou com código de retorno %(returncode)s:\n"
+"%(stderr)s"
 
 #: ../GdmGreeter/persistence.py:99
 #, python-format
@@ -128,7 +177,10 @@ msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "cryptsetup falhou com código de retorno %(returncode)s:\n%(stdout)s\n%(stderr)s"
+msgstr ""
+"cryptsetup falhou com código de retorno %(returncode)s:\n"
+"%(stdout)s\n"
+"%(stderr)s"
 
 #: ../GdmGreeter/persistence.py:124
 #, python-format
@@ -136,7 +188,10 @@ msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "live-persist falhou com código de retorno %(returncode)s:\n%(stdout)s\n%(stderr)s"
+msgstr ""
+"live-persist falhou com código de retorno %(returncode)s:\n"
+"%(stdout)s\n"
+"%(stderr)s"
 
 #: ../GdmGreeter/langpanel.py:124 ../GdmGreeter/langpanel.py:148
 #: ../GdmGreeter/langpanel.py:181

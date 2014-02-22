@@ -12,4 +12,4 @@ tailsgreeter/persistencewindow.py
 tailsgreeter/optionswindow.py
 tailsgreeter/langpanel.py
 tailsgreeter/language.py
-
+GdmGreeter/physicalsecurity.py

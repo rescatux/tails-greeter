@@ -94,20 +94,46 @@
                 <property name="can_focus">False</property>
                 <property name="spacing">5</property>
                 <child>
-                  <object class="GtkLabel" id="persistence_label">
+                  <object class="GtkHBox" id="persistence_top">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="xalign">0</property>
-                    <property name="ypad">2</property>
-                    <property name="label" translatable="yes">Use persistence?</property>
-                    <property name="ellipsize">middle</property>
-                    <attributes>
-                      <attribute name="weight" value="semibold"/>
-                      <attribute name="size" value="11000"/>
-                    </attributes>
+                    <child>
+                      <object class="GtkLabel" id="persistence_label">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="xalign">0</property>
+                        <property name="ypad">2</property>
+                        <property name="label" translatable="yes">Use persistence?</property>
+                        <attributes>
+                          <attribute name="weight" value="semibold"/>
+                          <attribute name="size" value="11000"/>
+                        </attributes>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="persistence_docs">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="xalign">0</property>
+                        <property name="use_markup">True</property>
+                        <property name="label" translatable="yes">&lt;a href=&quot;doc/first_steps/persistence/use.en.html&quot;&gt;Help&lt;/a&gt;</property>
+                        <signal name="activate-link" handler="cb_doc_handler" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="pack_type">GTK_PACK_END</property>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
                   </object>
                   <packing>
-                    <property name="expand">False</property>
+                    <property name="expand">True</property>
                     <property name="fill">True</property>
                     <property name="position">0</property>
                   </packing>

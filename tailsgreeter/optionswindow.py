@@ -24,6 +24,7 @@ from gi.repository import Gdk, Gtk
 import logging, os
 import tailsgreeter
 from tailsgreeter.language import TranslatableWindow
+from helpwindow import HelpWindow
 
 class OptionsWindow(TranslatableWindow):
     """Display a pre-login window"""
@@ -40,13 +41,26 @@ class OptionsWindow(TranslatableWindow):
         self.warning_label = builder.get_object("warning_label")
         self.warning_area = builder.get_object("warning_area")
         self.camouflage_checkbox = builder.get_object("camouflage_checkbox")
+        self.macspoof_checkbox = builder.get_object("macspoof_checkbox")
+        self.macspoof_checkbox.set_active(True)
 
         TranslatableWindow.__init__(self, builder.get_object("options_dialog"))
         self.window.set_visible(False)
 
-        self.warning_area.hide()
         self.entry_password.set_visibility(False)
         self.entry_password2.set_visibility(False)
+
+        def cb_pw_changed(*args):
+            self.warning_area.hide()
+            # compact the window
+            self.window.resize(1, 1)
+
+        self.entry_password.connect("changed", cb_pw_changed)
+        self.entry_password2.connect("changed", cb_pw_changed)
+        cb_pw_changed()
+
+    # Help callback handler
+    cb_doc_handler = HelpWindow.cb_doc_handler
 
     def set_password(self):
         """Set root access password"""
@@ -58,6 +72,10 @@ class OptionsWindow(TranslatableWindow):
         """Set camouflage theme"""
         if self.camouflage_checkbox.get_active():
             self.greeter.camouflage.os = 'winxp'
+
+    def set_macspoof(self):
+        """Set macspoof status"""
+        self.greeter.physical_security.macspoof = self.macspoof_checkbox.get_active()
 
     def validate_options(self):
         """Validate the selected options"""
@@ -74,6 +92,7 @@ class OptionsWindow(TranslatableWindow):
             self.greeter.login()
             self.set_password()
             self.set_camouflage()
+            self.set_macspoof()
 
     def cb_login_clicked(self, widget, data=None):
         """Login button click handler"""
@@ -85,6 +104,11 @@ class OptionsWindow(TranslatableWindow):
             if event.keyval in [ Gdk.KEY_Return, Gdk.KEY_KP_Enter ]:
                 if self.entry_password.is_focus():
                     self.entry_password2.grab_focus()
+                elif self.window.get_focus().__class__.__name__ == "Label":
+                    # The only labels that we allow to be focused are
+                    # the help links, for which Return will activate
+                    # the link.
+                    return
                 else:
                     self.set_options_and_login()
 

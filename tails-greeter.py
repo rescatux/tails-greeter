@@ -46,6 +46,7 @@ import tailsgreeter.config
 import tailsgreeter.rootaccess
 import tailsgreeter.camouflage
 import tailsgreeter.persistence
+import tailsgreeter.physicalsecurity
 
 from tailsgreeter.language import TranslatableWindow
 from tailsgreeter.langpanel import LangPanel
@@ -85,6 +86,7 @@ class CommunityGreeterApp():
         )
         self.rootaccess = tailsgreeter.rootaccess.RootAccessSettings()
         self.camouflage = tailsgreeter.camouflage.CamouflageSettings()
+        self.physical_security = tailsgreeter.physicalsecurity.PhysicalSecuritySettings()
 
         # Load views
         self.langpanel = self.load_window(LangPanel, self)

@@ -1,3 +1,12 @@
+tails-greeter (0.7.25) devel; urgency=medium
+
+  * Don't give "amnesia" the right to run "setupcon" as root anymore.
+  * Support MAC spoofing.
+  * Add help links to options.
+  * Hide password mismatch warning when entry is changed.
+
+ -- Tails developers <tails@boum.org>  Fri, 21 Feb 2014 05:25:29 +0100
+
 tails-greeter (0.7.24+wheezy1) feature-wheezy; urgency=medium
 
   * Rebuild for Debian Wheezy.
