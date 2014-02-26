@@ -19,8 +19,8 @@
 
 """
 
-import GdmGreeter
-from   GdmGreeter.language import TranslatableWindow
+import tailsgreeter
+from   tailsgreeter.language import TranslatableWindow
 import gtk
 import os
 import webbrowser
@@ -31,8 +31,8 @@ class HelpWindow(TranslatableWindow):
 
     def __init__(self, uri):
         builder = gtk.Builder()
-        builder.set_translation_domain(GdmGreeter.__appname__)
-        builder.add_from_file(os.path.join(GdmGreeter.GLADE_DIR,
+        builder.set_translation_domain(tailsgreeter.__appname__)
+        builder.add_from_file(os.path.join(tailsgreeter.GLADE_DIR,
                                            "helpwindow.glade"))
         builder.connect_signals(self)
         TranslatableWindow.__init__(self, builder.get_object("help_dialog"))

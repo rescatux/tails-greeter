@@ -22,7 +22,7 @@ import os
 import logging
 import pipes
 
-import GdmGreeter.config
+import tailsgreeter.config
 
 class PhysicalSecuritySettings(object):
     """Model storing settings related to physical security
@@ -34,7 +34,7 @@ class PhysicalSecuritySettings(object):
         self.write_settings()
 
     def write_settings(self):
-        physical_security_settings_file = GdmGreeter.config.physical_security_settings
+        physical_security_settings_file = tailsgreeter.config.physical_security_settings
         with open(physical_security_settings_file, 'w') as f:
             os.chmod(physical_security_settings_file, 0o600)
             f.write('TAILS_MACSPOOF_ENABLED={0}\n'.format(
