@@ -1,3 +1,10 @@
+tails-greeter (0.7.25+wheezy4) feature-wheezy; urgency=medium
+
+  * Migrate helpwindow.glade to GTK3.
+  * Fix imports.
+
+ -- Tails developers <tails@boum.org>  Wed, 26 Feb 2014 15:31:03 +0100
+
 tails-greeter (0.7.25+wheezy3) feature-wheezy; urgency=medium
 
   * Complete the merge for real, hopefully, this time.
