@@ -1,3 +1,9 @@
+tails-greeter (0.7.25+wheezy2) feature-wheezy; urgency=medium
+
+  * Complete the last merge from master.
+
+ -- Tails developers <tails@boum.org>  Wed, 26 Feb 2014 11:15:36 +0100
+
 tails-greeter (0.7.25+wheezy1) feature-wheezy; urgency=medium
 
   * Rebuild for Debian Wheezy.
