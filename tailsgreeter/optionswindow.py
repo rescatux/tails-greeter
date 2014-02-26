@@ -24,7 +24,7 @@ from gi.repository import Gdk, Gtk
 import logging, os
 import tailsgreeter
 from tailsgreeter.language import TranslatableWindow
-from helpwindow import HelpWindow
+from tailsgreeter.helpwindow import HelpWindow
 
 class OptionsWindow(TranslatableWindow):
     """Display a pre-login window"""
