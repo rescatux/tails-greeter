@@ -18,13 +18,14 @@
 """Help screen
 
 """
-
-from gi.repository import Gtk
-import tailsgreeter
-from   tailsgreeter.language import TranslatableWindow
 import os
 import webbrowser
-import webkit
+
+from gi.repository import Gtk
+from gi.repository import Webkit
+
+import tailsgreeter
+from   tailsgreeter.language import TranslatableWindow
 
 class HelpWindow(TranslatableWindow):
     """Displays a modal html help window"""
@@ -36,7 +37,7 @@ class HelpWindow(TranslatableWindow):
                                            "helpwindow.glade"))
         builder.connect_signals(self)
         TranslatableWindow.__init__(self, builder.get_object("help_dialog"))
-        self.html_help = webkit.WebView()
+        self.html_help = Webkit.WebView()
 
         def cb_request_starting(web_view, web_frame, web_ressource, request,
                                 response, user_data = None):
