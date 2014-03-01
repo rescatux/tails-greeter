@@ -19,9 +19,9 @@
 
 """
 
+from gi.repository import Gtk
 import tailsgreeter
 from   tailsgreeter.language import TranslatableWindow
-import gtk
 import os
 import webbrowser
 import webkit
@@ -30,7 +30,7 @@ class HelpWindow(TranslatableWindow):
     """Displays a modal html help window"""
 
     def __init__(self, uri):
-        builder = gtk.Builder()
+        builder = Gtk.Builder()
         builder.set_translation_domain(tailsgreeter.__appname__)
         builder.add_from_file(os.path.join(tailsgreeter.GLADE_DIR,
                                            "helpwindow.glade"))
@@ -59,7 +59,7 @@ class HelpWindow(TranslatableWindow):
     def cb_doc_handler(cb_obj, label, page, data=None):
         # Note that we add the "file://" part here, not in the <a> tag
         # of the labels in the glade file. We're forced to add this
-        # callback *in addition* to the standard one (gtk.show_uri),
+        # callback *in addition* to the standard one (Gtk.show_uri),
         # which will do nothing for uri:s without a protocol
         # part. This is critical since we otherwise would open the
         # default browser (iceweasel) in T-G. If pygtk had a mechanism
