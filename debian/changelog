@@ -1,3 +1,11 @@
+tails-greeter (0.7.25+wheezy5) feature-wheezy; urgency=medium
+
+  * Import Gtk with gi.
+  * Import Webkit with gi
+  * Depend on gir1.2-webkit-3.0.
+
+ -- Tails developers <tails@boum.org>  Sun, 02 Mar 2014 09:55:21 +0100
+
 tails-greeter (0.7.25+wheezy4) feature-wheezy; urgency=medium
 
   * Migrate helpwindow.glade to GTK3.
