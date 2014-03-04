@@ -28,8 +28,13 @@ class PhysicalSecuritySettings(object):
     """Model storing settings related to physical security
 
     """
+
+    NETCONF_DIRECT = "direct"
+    NETCONF_OBSTACLE = "obstacle"
+
     def __init__(self):
         # Whether to run macspoof
+        self._netconf = self.NETCONF_DIRECT
         self._macspoof = True
         self.write_settings()
 
@@ -37,14 +42,25 @@ class PhysicalSecuritySettings(object):
         physical_security_settings_file = GdmGreeter.config.physical_security_settings
         with open(physical_security_settings_file, 'w') as f:
             os.chmod(physical_security_settings_file, 0o600)
+            f.write('TAILS_NETCONF={0}\n'.format(
+                    pipes.quote(self.netconf)))
             f.write('TAILS_MACSPOOF_ENABLED={0}\n'.format(
                     pipes.quote(str(self.macspoof).lower())))
             logging.debug('physical security settings written to %s',
                           physical_security_settings_file)
 
     @property
+    def netconf(self):
+        return self._netconf
+
+    @property
     def macspoof(self):
         return self._macspoof
+
+    @netconf.setter
+    def netconf(self, new_state):
+        self._netconf = new_state
+        self.write_settings()
 
     @macspoof.setter
     def macspoof(self, new_state):
