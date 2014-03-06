@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-06 17:15+0100\n"
+"POT-Creation-Date: 2014-03-06 17:16+0100\n"
 "PO-Revision-Date: 2013-10-26 20:40+0000\n"
 "Last-Translator: samruda <samruda94@gmail.com>\n"
 "Language-Team: Kannada (http://www.transifex.com/projects/p/torproject/"
@@ -96,7 +96,8 @@ msgid "<i>Passwords do not match</i>"
 msgstr "<i>ಗುಪ್ತಪದ ತಾಳೆಯಾಗ್ತಿಲ್ಲ<i>"
 
 #: ../glade/optionswindow.glade.h:10
-msgid "Windows Camouflage"
+#, fuzzy
+msgid "Windows camouflage"
 msgstr "ವಿಂಡೋಸ್ ಮಾಯಾಜಾಲ"
 
 #: ../glade/optionswindow.glade.h:11

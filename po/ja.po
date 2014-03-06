@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-06 17:15+0100\n"
+"POT-Creation-Date: 2014-03-06 17:16+0100\n"
 "PO-Revision-Date: 2014-03-05 17:00+0000\n"
 "Last-Translator: plazmism <gomidori@live.jp>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/torproject/"
@@ -100,7 +100,8 @@ msgid "<i>Passwords do not match</i>"
 msgstr "<i>パスワードが一致しません</i>"
 
 #: ../glade/optionswindow.glade.h:10
-msgid "Windows Camouflage"
+#, fuzzy
+msgid "Windows camouflage"
 msgstr "Windowsカモフラージュ"
 
 #: ../glade/optionswindow.glade.h:11

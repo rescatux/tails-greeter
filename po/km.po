@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-06 17:15+0100\n"
+"POT-Creation-Date: 2014-03-06 17:16+0100\n"
 "PO-Revision-Date: 2014-03-03 08:30+0000\n"
 "Last-Translator: khoemsokhem <sokhem@open.org.kh>\n"
 "Language-Team: Khmer (http://www.transifex.com/projects/p/torproject/"
@@ -100,7 +100,8 @@ msgid "<i>Passwords do not match</i>"
 msgstr "<i>ពាក្យសម្ងាត់​មិន​ផ្គូផ្គង</i>"
 
 #: ../glade/optionswindow.glade.h:10
-msgid "Windows Camouflage"
+#, fuzzy
+msgid "Windows camouflage"
 msgstr "Windows Camouflage"
 
 #: ../glade/optionswindow.glade.h:11

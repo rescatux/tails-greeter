@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tails-greeter\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-06 17:15+0100\n"
+"POT-Creation-Date: 2014-03-06 17:16+0100\n"
 "PO-Revision-Date: 2011-04-22 17:42+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: English <en@li.org>\n"
@@ -90,7 +90,7 @@ msgid "<i>Passwords do not match</i>"
 msgstr ""
 
 #: ../glade/optionswindow.glade.h:10
-msgid "Windows Camouflage"
+msgid "Windows camouflage"
 msgstr ""
 
 #: ../glade/optionswindow.glade.h:11
