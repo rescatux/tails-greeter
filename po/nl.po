@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-04 11:11+0100\n"
+"POT-Creation-Date: 2014-03-06 15:29+0100\n"
 "PO-Revision-Date: 2013-12-08 20:42+0000\n"
 "Last-Translator: runasand <runa.sandvik@gmail.com>\n"
 "Language-Team: Dutch (http://www.transifex.com/projects/p/torproject/"
@@ -36,7 +36,7 @@ msgid "Use persistence?"
 msgstr "Persistentie gebruiken?"
 
 #: ../glade/persistencewindow.glade.h:5
-msgid "<a href=\"doc/first_steps/persistence/use.en.html\">Help</a>"
+msgid "<a href=\"doc/first_steps/persistence/use.en.html\">Documentation</a>"
 msgstr ""
 
 #: ../glade/persistencewindow.glade.h:6
@@ -70,7 +70,7 @@ msgstr "Beheerderswachtwoord"
 #: ../glade/optionswindow.glade.h:4
 msgid ""
 "<a href=\"doc/first_steps/startup_options/administration_password.en.html"
-"\">Help</a>"
+"\">Documentation</a>"
 msgstr ""
 
 #: ../glade/optionswindow.glade.h:5
@@ -101,8 +101,8 @@ msgstr "Windows Camouflage"
 
 #: ../glade/optionswindow.glade.h:11
 msgid ""
-"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">Help</"
-"a>"
+"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
+"\">Documentation</a>"
 msgstr ""
 
 #: ../glade/optionswindow.glade.h:12
@@ -123,7 +123,8 @@ msgstr ""
 
 #: ../glade/optionswindow.glade.h:15
 msgid ""
-"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Help</a>"
+"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
+"\">Documentation</a>"
 msgstr ""
 
 #: ../glade/optionswindow.glade.h:16
