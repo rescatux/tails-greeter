@@ -1,3 +1,16 @@
+tails-greeter (0.7.25+1~feature.netconf.2) feature-bridge-mode; urgency=medium
+
+  ** SNAPSHOT build @dc3ffda5c93177bbfe67e583fa6161d654d04b60 **
+
+  * Also log error status.
+  * Remove 'See the documentation'
+  * The MAC spoofing documentation has moved.
+  * Add GUI control for (Tor) network configuration.
+  * Link to correct user documentation.
+  * Set DisableNetwork for "obstacled" network.
+
+ -- Tails developers <amnesia@boum.org>  Wed, 05 Mar 2014 18:48:36 +0100
+
 tails-greeter (0.7.25) devel; urgency=medium
 
   * Don't give "amnesia" the right to run "setupcon" as root anymore.

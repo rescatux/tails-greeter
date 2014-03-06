@@ -92,6 +92,10 @@ if [ -r "${PHYSICAL_SECURITY_SETTINGS}" ] ; then
    if [ "${TAILS_MACSPOOF_ENABLED}" = true ]; then
       /usr/local/sbin/tails-restricted-network-detector &
    fi
+   if [ "${TAILS_NETCONF}" = "obstacle" ]; then
+      . /usr/local/lib/tails-shell-library/tor.sh
+      tor_set_in_torrc "DisableNetwork" "1"
+   fi
 fi
 
 UNBLOCK_NETWORK_LOG="$(/usr/local/sbin/tails-unblock-network 2>&1)"
