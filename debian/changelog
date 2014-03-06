@@ -1,3 +1,10 @@
+tails-greeter (0.7.27) devel; urgency=medium
+
+  * Decapitalise option header.
+  * Update POT and PO files.
+
+ -- Tails developers <amnesia@boum.org>  Thu, 06 Mar 2014 17:18:15 +0100
+
 tails-greeter (0.7.26) devel; urgency=medium
 
   * Rename "Help" link to "Documentation".
