@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # Bobbymoto, 2013
 # mo <moritz@torservers.net>, 2013
@@ -10,6 +10,7 @@
 # Sacro <Scion@T-Online.de>, 2012
 # to_ba, 2013
 # to_ba, 2014
+# tom_fate <tomoffate@gmail.com>, 2014
 # Victor1975 <VKerley75@gmail.com>, 2013
 # djcrackhome <wallcityserver@gmail.com>, 2012
 # Wasilis <inactive+Wasilis@transifex.com>, 2013
@@ -17,15 +18,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-06 15:29+0100\n"
-"PO-Revision-Date: 2014-01-21 15:10+0000\n"
+"POT-Creation-Date: 2014-03-04 11:11+0100\n"
+"PO-Revision-Date: 2014-03-05 15:24+0000\n"
 "Last-Translator: to_ba\n"
-"Language-Team: German (http://www.transifex.com/projects/p/torproject/"
-"language/de/)\n"
-"Language: de\n"
+"Language-Team: German (http://www.transifex.com/projects/p/torproject/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../glade/persistencewindow.glade.h:1
@@ -45,8 +45,8 @@ msgid "Use persistence?"
 msgstr "Persistenz benutzen?"
 
 #: ../glade/persistencewindow.glade.h:5
-msgid "<a href=\"doc/first_steps/persistence/use.en.html\">Documentation</a>"
-msgstr ""
+msgid "<a href=\"doc/first_steps/persistence/use.en.html\">Help</a>"
+msgstr "<a href=\"doc/first_steps/persistence/use.en.html\">Hilfe</a>"
 
 #: ../glade/persistencewindow.glade.h:6
 msgid "Yes"
@@ -78,19 +78,15 @@ msgstr "Administrationspasswort"
 
 #: ../glade/optionswindow.glade.h:4
 msgid ""
-"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
-"\">Documentation</a>"
-msgstr ""
+"<a "
+"href=\"doc/first_steps/startup_options/administration_password.en.html\">Help</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/administration_password.en.html\">Hilfe</a>"
 
 #: ../glade/optionswindow.glade.h:5
 msgid ""
-"Enter an administration password in case you need to perform administration "
-"tasks.\n"
+"Enter an administration password in case you need to perform administration tasks.\n"
 "Otherwise it will be disabled for better security."
-msgstr ""
-"Ein Administrationspasswort eingeben, falls Sie administrative Aufgaben "
-"durchführen wollen.\n"
-"Andernfalls wird diese Funktion zur Erhöhung der Sicherheit deaktiviert."
+msgstr "Ein Administrationspasswort eingeben, falls Sie administrative Aufgaben durchführen wollen.\nAndernfalls wird diese Funktion zur Erhöhung der Sicherheit deaktiviert."
 
 #: ../glade/optionswindow.glade.h:7
 msgid "Password:"
@@ -110,17 +106,15 @@ msgstr "Windows-Tarnung"
 
 #: ../glade/optionswindow.glade.h:11
 msgid ""
-"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
-"\">Documentation</a>"
-msgstr ""
+"<a "
+"href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">Help</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">Hilfe</a>"
 
 #: ../glade/optionswindow.glade.h:12
 msgid ""
 "This option makes Tails look more like Microsoft Windows XP. This may be "
 "useful in public places in order to avoid attracting suspicion."
-msgstr ""
-"Diese Option lässt Tails wie Microsoft Windows XP aussehen. Dies kann in der "
-"Öffentlichkeit hilfreich sein, um keine Aufmerksamkeit zu erregen."
+msgstr "Diese Option lässt Tails wie Microsoft Windows XP aussehen. Dies kann in der Öffentlichkeit hilfreich sein, um keine Aufmerksamkeit zu erregen."
 
 #: ../glade/optionswindow.glade.h:13
 msgid "Activate Microsoft Windows XP Camouflage"
@@ -128,29 +122,27 @@ msgstr "Microsoft Windows XP Tarnung aktivieren"
 
 #: ../glade/optionswindow.glade.h:14
 msgid "MAC address spoofing"
-msgstr ""
+msgstr "Manipulation der MAC-Adresse"
 
 #: ../glade/optionswindow.glade.h:15
-msgid ""
-"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
-"\">Documentation</a>"
-msgstr ""
+msgid "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Help</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Hilfe</a>"
 
 #: ../glade/optionswindow.glade.h:16
 msgid ""
 "Spoofing MAC addresses hides the serial number of your network cards to the "
 "local networks. This can help you hide your geographical location."
-msgstr ""
+msgstr "Durch die Manipulation der MAC-Adresse kann die Seriennummer der eigenen Netzwerkkarte im lokalen Netzwerk verborgen werden, dies kann wiederum helfen Ihren geografischen Standort geheim zu halten."
 
 #: ../glade/optionswindow.glade.h:17
 msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
 "suspicion or cause network connection problems."
-msgstr ""
+msgstr "Es ist im Allgemeinen sicherer, MAC-Adressen zu fälschen, aber es könnte auch den Verdacht erhöhen oder Netzwerkverbindungsprobleme verursachen."
 
 #: ../glade/optionswindow.glade.h:18
 msgid "Spoof all MAC addresses"
-msgstr ""
+msgstr "Alle MAC-Adressen manipulieren"
 
 #: ../glade/langpanel.glade.h:1
 msgid " "
@@ -173,9 +165,7 @@ msgstr "Anordnung"
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
-msgstr ""
-"Live-Persist ist mit folgendem Code fehlgeschlagen %(returncode)s:\n"
-"%(stderr)s"
+msgstr "Live-Persist ist mit folgendem Code fehlgeschlagen %(returncode)s:\n%(stderr)s"
 
 #: ../GdmGreeter/persistence.py:99
 #, python-format
@@ -183,10 +173,7 @@ msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr ""
-"cryptsetup t ist mit folgendem Code fehlgeschlagen %(returncode)s:\n"
-"%(stdout)s\n"
-"%(stderr)s"
+msgstr "cryptsetup t ist mit folgendem Code fehlgeschlagen %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
 #: ../GdmGreeter/persistence.py:124
 #, python-format
@@ -194,10 +181,7 @@ msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr ""
-"Live-Persist ist mit folgendem Code fehlgeschlagen %(returncode)s:\n"
-"%(stdout)s\n"
-"%(stderr)s"
+msgstr "Live-Persist ist mit folgendem Code fehlgeschlagen %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
 #: ../GdmGreeter/langpanel.py:124 ../GdmGreeter/langpanel.py:148
 #: ../GdmGreeter/langpanel.py:181

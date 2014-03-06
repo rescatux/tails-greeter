@@ -1,22 +1,21 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # BudGet <budgeet@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-06 15:29+0100\n"
+"Report-Msgid-Bugs-To: https://trac.torproject.org/projects/tor\n"
+"POT-Creation-Date: 2013-05-12 19:29+0200\n"
 "PO-Revision-Date: 2013-10-29 19:00+0000\n"
 "Last-Translator: BudGet <budgeet@gmail.com>\n"
-"Language-Team: Slovak (http://www.transifex.com/projects/p/torproject/"
-"language/sk/)\n"
-"Language: sk\n"
+"Language-Team: Slovak (http://www.transifex.com/projects/p/torproject/language/sk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: sk\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: ../glade/persistencewindow.glade.h:1
@@ -36,30 +35,26 @@ msgid "Use persistence?"
 msgstr "Použiť ukladanie na disk?"
 
 #: ../glade/persistencewindow.glade.h:5
-msgid "<a href=\"doc/first_steps/persistence/use.en.html\">Documentation</a>"
-msgstr ""
-
-#: ../glade/persistencewindow.glade.h:6
 msgid "Yes"
 msgstr "Áno"
 
-#: ../glade/persistencewindow.glade.h:7
+#: ../glade/persistencewindow.glade.h:6
 msgid "No"
 msgstr "Nie"
 
-#: ../glade/persistencewindow.glade.h:8
+#: ../glade/persistencewindow.glade.h:7
 msgid "Passphrase:"
 msgstr "Heslová fráza: "
 
-#: ../glade/persistencewindow.glade.h:9
+#: ../glade/persistencewindow.glade.h:8
 msgid "Read-Only?"
 msgstr "Len na čítanie?"
 
-#: ../glade/persistencewindow.glade.h:10
+#: ../glade/persistencewindow.glade.h:9
 msgid "<i>Wrong passphrase. Please try again.</i>"
 msgstr "<i>Nesprávne heslo. Prosím skúste znovu.</i>"
 
-#: ../glade/persistencewindow.glade.h:11
+#: ../glade/persistencewindow.glade.h:10
 msgid "More options?"
 msgstr "Viac možností?"
 
@@ -69,76 +64,35 @@ msgstr "Administračné heslo"
 
 #: ../glade/optionswindow.glade.h:4
 msgid ""
-"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
-"\">Documentation</a>"
-msgstr ""
-
-#: ../glade/optionswindow.glade.h:5
-msgid ""
-"Enter an administration password in case you need to perform administration "
-"tasks.\n"
+"Enter an administration password in case you need to perform administration tasks.\n"
 "Otherwise it will be disabled for better security."
-msgstr ""
-"Vložte administračné heslo ak chcete robiť administračné úlohy.\n"
-"Ak heslo nevložíte, bude táto možnosť deaktivovaná pre bezpečnostné účely."
+msgstr "Vložte administračné heslo ak chcete robiť administračné úlohy.\nAk heslo nevložíte, bude táto možnosť deaktivovaná pre bezpečnostné účely."
 
-#: ../glade/optionswindow.glade.h:7
+#: ../glade/optionswindow.glade.h:6
 msgid "Password:"
 msgstr "Heslo:"
 
-#: ../glade/optionswindow.glade.h:8
+#: ../glade/optionswindow.glade.h:7
 msgid "Verify Password:"
 msgstr "Potvrď heslo:"
 
-#: ../glade/optionswindow.glade.h:9
+#: ../glade/optionswindow.glade.h:8
 msgid "<i>Passwords do not match</i>"
 msgstr "<i>Heslá sa nezhodujú</i>"
 
-#: ../glade/optionswindow.glade.h:10
+#: ../glade/optionswindow.glade.h:9
 msgid "Windows Camouflage"
 msgstr "Windows Kamufláž"
 
-#: ../glade/optionswindow.glade.h:11
-msgid ""
-"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
-"\">Documentation</a>"
-msgstr ""
-
-#: ../glade/optionswindow.glade.h:12
+#: ../glade/optionswindow.glade.h:10
 msgid ""
 "This option makes Tails look more like Microsoft Windows XP. This may be "
 "useful in public places in order to avoid attracting suspicion."
 msgstr "Táto možnosť "
 
-#: ../glade/optionswindow.glade.h:13
+#: ../glade/optionswindow.glade.h:11
 msgid "Activate Microsoft Windows XP Camouflage"
 msgstr "Aktivovať Microsoft Windows XP Kamufláž"
-
-#: ../glade/optionswindow.glade.h:14
-msgid "MAC address spoofing"
-msgstr ""
-
-#: ../glade/optionswindow.glade.h:15
-msgid ""
-"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
-"\">Documentation</a>"
-msgstr ""
-
-#: ../glade/optionswindow.glade.h:16
-msgid ""
-"Spoofing MAC addresses hides the serial number of your network cards to the "
-"local networks. This can help you hide your geographical location."
-msgstr ""
-
-#: ../glade/optionswindow.glade.h:17
-msgid ""
-"It is generally safer to spoof MAC addresses, but it might also raise "
-"suspicion or cause network connection problems."
-msgstr ""
-
-#: ../glade/optionswindow.glade.h:18
-msgid "Spoof all MAC addresses"
-msgstr ""
 
 #: ../glade/langpanel.glade.h:1
 msgid " "
@@ -161,9 +115,7 @@ msgstr "Rozloženie"
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
-msgstr ""
-"live-persist zlyhal s chybovým kódom %(returncode)s:\n"
-"%(stderr)s"
+msgstr "live-persist zlyhal s chybovým kódom %(returncode)s:\n%(stderr)s"
 
 #: ../GdmGreeter/persistence.py:99
 #, python-format
@@ -171,10 +123,7 @@ msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr ""
-"cryptsetup zlyhal s chybovým kódom %(returncode)s:\n"
-"%(stdout)s\n"
-"%(stderr)s"
+msgstr "cryptsetup zlyhal s chybovým kódom %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
 #: ../GdmGreeter/persistence.py:124
 #, python-format
@@ -182,10 +131,7 @@ msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr ""
-"live-persist zlyhal s chybovým kódom %(returncode)s:\n"
-"%(stdout)s\n"
-"%(stderr)s"
+msgstr "live-persist zlyhal s chybovým kódom %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
 #: ../GdmGreeter/langpanel.py:124 ../GdmGreeter/langpanel.py:148
 #: ../GdmGreeter/langpanel.py:181

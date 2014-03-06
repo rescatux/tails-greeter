@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-06 15:29+0100\n"
+"POT-Creation-Date: 2014-03-06 16:49+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -134,6 +134,28 @@ msgstr ""
 
 #: ../glade/optionswindow.glade.h:18
 msgid "Spoof all MAC addresses"
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:19
+msgid "Network configuration"
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:20
+msgid ""
+"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
+"\">Documentation</a>"
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:21
+msgid ""
+"This computer's Internet connection is clear of obstacles. You would like to "
+"connect directly to the Tor network."
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:22
+msgid ""
+"This computer's Internet connection is censored, filtered, or proxied. You "
+"need to configure bridge, firewall, or proxy settings."
 msgstr ""
 
 #: ../glade/langpanel.glade.h:1
