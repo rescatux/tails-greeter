@@ -1,3 +1,10 @@
+tails-greeter (0.7.27+wheezy3) feature-wheezy; urgency=medium
+
+  * Fix one more misspelled WebKit occurrence.
+  * Update key code accessors for GTK3.
+
+ -- Tails developers <tails@boum.org>  Tue, 11 Mar 2014 16:24:11 +0100
+
 tails-greeter (0.7.27+wheezy2) feature-wheezy; urgency=medium
 
   * Fix WebKit name in import.
