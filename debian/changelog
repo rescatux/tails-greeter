@@ -1,3 +1,9 @@
+tails-greeter (0.7.27+wheezy2) feature-wheezy; urgency=medium
+
+  * Fix WebKit name in import.
+
+ -- Tails developers <tails@boum.org>  Tue, 11 Mar 2014 16:15:00 +0100
+
 tails-greeter (0.7.27+wheezy1) feature-wheezy; urgency=medium
 
   * Rebuild for Debian Wheezy.
