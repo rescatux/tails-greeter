@@ -192,7 +192,7 @@ class PersistenceWindow(TranslatableWindow):
     def key_press_event_cb(self, widget, event=None):
         """Handle key press"""
         if event:
-            if event.keyval in [ Gtk.KEY_Return, Gdm.KEY_KP_Enter ]:
+            if event.keyval in [ Gdk.KEY_Return, Gdk.KEY_KP_Enter ]:
                 if self.window.get_focus().__class__.__name__ == "Label":
                     # The only labels that we allow to be focused are
                     # the help links, for which Return will activate
