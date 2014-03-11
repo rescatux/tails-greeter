@@ -37,7 +37,7 @@ class HelpWindow(TranslatableWindow):
                                            "helpwindow.glade"))
         builder.connect_signals(self)
         TranslatableWindow.__init__(self, builder.get_object("help_dialog"))
-        self.html_help = Webkit.WebView()
+        self.html_help = WebKit.WebView()
 
         def cb_request_starting(web_view, web_frame, web_ressource, request,
                                 response, user_data = None):
