@@ -3,73 +3,71 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# sgtpepper <barlasmirc@gmail.com>, 2013
-# Caner BAŞARAN <basaran.caner@gmail.com>, 2013
-# cmldrs <cmldrs@yandex.com>, 2014
-# Tim Tanurhan <timtanurhan@hotmail.com>, 2014
+# Sutha <sutha@open.org.kh>, 2014
+# khoemsokhem <sokhem@open.org.kh>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-03-06 17:16+0100\n"
-"PO-Revision-Date: 2014-03-02 18:20+0000\n"
-"Last-Translator: cmldrs <cmldrs@yandex.com>\n"
-"Language-Team: Turkish (http://www.transifex.com/projects/p/torproject/"
-"language/tr/)\n"
-"Language: tr\n"
+"PO-Revision-Date: 2014-03-03 08:30+0000\n"
+"Last-Translator: khoemsokhem <sokhem@open.org.kh>\n"
+"Language-Team: Khmer (http://www.transifex.com/projects/p/torproject/"
+"language/km/)\n"
+"Language: km\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../glade/persistencewindow.glade.h:1
 msgid "Forward"
-msgstr "İleri"
+msgstr "បញ្ជូន​បន្ត"
 
 #: ../glade/persistencewindow.glade.h:2 ../glade/optionswindow.glade.h:1
 msgid "Login"
-msgstr "Giriş"
+msgstr "ចូល"
 
 #: ../glade/persistencewindow.glade.h:3 ../glade/optionswindow.glade.h:2
 msgid "Welcome to Tails"
-msgstr "Tails'e Hoşgeldiniz"
+msgstr "ស្វាគមន៍​មកកាន់ Tails"
 
 #: ../glade/persistencewindow.glade.h:4
 msgid "Use persistence?"
-msgstr "Süreklilik kullan?"
+msgstr "ប្រើ persistence?"
 
 #: ../glade/persistencewindow.glade.h:5
 #, fuzzy
 msgid "<a href=\"doc/first_steps/persistence/use.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/persistence/use.en.html\">Yardım</a>"
+msgstr "<a href=\"doc/first_steps/persistence/use.en.html\">ជំនួយ</a>"
 
 #: ../glade/persistencewindow.glade.h:6
 msgid "Yes"
-msgstr "Evet"
+msgstr "បាទ/ចាស"
 
 #: ../glade/persistencewindow.glade.h:7
 msgid "No"
-msgstr "Hayır"
+msgstr "ទេ"
 
 #: ../glade/persistencewindow.glade.h:8
 msgid "Passphrase:"
-msgstr "Parola Cümlesi:"
+msgstr "ឃ្លា​សម្ងាត់៖"
 
 #: ../glade/persistencewindow.glade.h:9
 msgid "Read-Only?"
-msgstr "Salt-Okunur?"
+msgstr "បាន​តែ​អាន?"
 
 #: ../glade/persistencewindow.glade.h:10
 msgid "<i>Wrong passphrase. Please try again.</i>"
-msgstr "<i>Yanlış parola cümlesi. Tekrar deneyin.</i>"
+msgstr "<i>ឃ្លា​សម្ងាត់​ខុស។ សូម​ព្យាយាម​ម្ដងទៀត។</i>"
 
 #: ../glade/persistencewindow.glade.h:11
 msgid "More options?"
-msgstr "Diğer seçenekler?"
+msgstr "ជម្រើស​ច្រើន?"
 
 #: ../glade/optionswindow.glade.h:3
 msgid "Administration password"
-msgstr "Yönetim parolası"
+msgstr "ពាក្យ​សម្ងាត់​សម្រាប់​ការ​គ្រប់គ្រង"
 
 #: ../glade/optionswindow.glade.h:4
 #, fuzzy
@@ -78,7 +76,7 @@ msgid ""
 "\">Documentation</a>"
 msgstr ""
 "<a href=\"doc/first_steps/startup_options/administration_password.en.html"
-"\">Yardım</a>"
+"\">ជំនួយ</a>"
 
 #: ../glade/optionswindow.glade.h:5
 msgid ""
@@ -86,26 +84,25 @@ msgid ""
 "tasks.\n"
 "Otherwise it will be disabled for better security."
 msgstr ""
-"Bilgisayarda üst düzey güvenlik gerektiren yönetim görevlerini "
-"gerçekleştirecekseniz, parola girmelisiniz.\n"
-"Parola girilmediği taktirde güvenlik için devre dışı bırakılacaktır."
+"បញ្ចូល​​ពាក្យ​សម្ងាត់​សម្រាប់​ការ​គ្រប់គ្រង​ក្នុង​ករណី​ដែល​អ្នក​ត្រូវ​ការ​​ភារកិច្ច​សម្រាប់​ការ​គ្រប់គ្រង។\n"
+"ម៉្យាងវិញទៀត​វា​នឹង​​ត្រូវ​បាន​បិទ​ដើម្បី​សុវត្ថិភាព​ឲ្យ​កាន់​តែ​ប្រសើរ។"
 
 #: ../glade/optionswindow.glade.h:7
 msgid "Password:"
-msgstr "Parola:"
+msgstr "ពាក្យ​សម្ងាត់៖"
 
 #: ../glade/optionswindow.glade.h:8
 msgid "Verify Password:"
-msgstr "Parola Doğrula:"
+msgstr "ផ្ទៀងផ្ទាត់​​ពាក្យ​សម្ងាត់៖"
 
 #: ../glade/optionswindow.glade.h:9
 msgid "<i>Passwords do not match</i>"
-msgstr "<i>Parolalar eşleşmiyor</i>"
+msgstr "<i>ពាក្យសម្ងាត់​មិន​ផ្គូផ្គង</i>"
 
 #: ../glade/optionswindow.glade.h:10
 #, fuzzy
 msgid "Windows camouflage"
-msgstr "Windows Kamuflaj"
+msgstr "Windows Camouflage"
 
 #: ../glade/optionswindow.glade.h:11
 #, fuzzy
@@ -113,24 +110,24 @@ msgid ""
 "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
 "\">Documentation</a>"
 msgstr ""
-"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
-"\">Yardım</a>"
+"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">ជំនួយ</"
+"a>"
 
 #: ../glade/optionswindow.glade.h:12
 msgid ""
 "This option makes Tails look more like Microsoft Windows XP. This may be "
 "useful in public places in order to avoid attracting suspicion."
 msgstr ""
-"Bu seçenek, Tails'ı daha fazla Microsoft Windows XP gibi görünmesini sağlar. "
-"Halka açık yerlerde, şüphe çekmemek için yararlı olabilir."
+"ជម្រើស​នេះ​ធ្វើ​ឲ្យ​ Tails មាន​លក្ខណៈ​ដូច​ជា Microsoft Windows XP ។ វា​អាច​ផ្ដល់​ប្រយោជន៍​ជា​"
+"សាធារណៈ​ ​ដើម្បី​​ជៀសវាង attracting suspicion ។"
 
 #: ../glade/optionswindow.glade.h:13
 msgid "Activate Microsoft Windows XP Camouflage"
-msgstr "Microsoft Windows XP Kamuflajı Etkinleştir"
+msgstr "ធ្វើ​ឲ្យ Microsoft Windows XP Camouflage សកម្ម"
 
 #: ../glade/optionswindow.glade.h:14
 msgid "MAC address spoofing"
-msgstr "MAC adresi yanıltma sinyali"
+msgstr "បញ្ឆោត​អាសយដ្ឋាន MAC"
 
 #: ../glade/optionswindow.glade.h:15
 #, fuzzy
@@ -138,16 +135,16 @@ msgid ""
 "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
 "\">Documentation</a>"
 msgstr ""
-"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
-"\">Yardım</a>"
+"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">ជំនួយ</"
+"a>"
 
 #: ../glade/optionswindow.glade.h:16
 msgid ""
 "Spoofing MAC addresses hides the serial number of your network cards to the "
 "local networks. This can help you hide your geographical location."
 msgstr ""
-"MAC adreslerini yanıltma yerel ağlar için ağ kartlarınızın seri numarasını "
-"gizler. Bu coğrafi konumunuzu gizlemenize yardımcı olabilir."
+"ការ​បញ្ឆោត​អាសយដ្ឋាន MAC លាក់​លេខ​ស៊េរី​កាត​បណ្ដាញ​របស់​អ្នក​ចំពោះ​បណ្ដាញ​មូលដ្ឋាន។ វា​អាច​ជួយ​អ្នក​លាក់​"
+"ទីតាំង​ភូមិសាស្ត្រ​របស់​អ្នក។"
 
 #: ../glade/optionswindow.glade.h:17
 #, fuzzy
@@ -155,13 +152,12 @@ msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
 "suspicion or cause network connection problems."
 msgstr ""
-"Bu MAC adreslerini yanıltmak genellikle güvenlidir, ama aynı zamanda şüphe "
-"uyandırabilir veya ağ bağlantısı sorunlarına neden olabilir. Bilgi için "
-"belgelere bakın"
+"ជា​ទូទៅ​វា​កាន់តែ​មាន​សុវត្ថិភាព​ដើម្បី​បញ្ឆោត​អាសយដ្ឋាន MAC ប៉ុន្តែ​វា​អាច​បង្កើន​ការ​សង្ស័យ ឬ​ធ្វើ​ឲ្យ​ការ​"
+"ភ្ជាប់​បណ្ដាញ​មាន​បញ្ហា។ សូម​មើល​ឯកសារ។"
 
 #: ../glade/optionswindow.glade.h:18
 msgid "Spoof all MAC addresses"
-msgstr "Tüm MAC adreslerini yanıltma sinyali"
+msgstr "បញ្ឆោត​អាសយដ្ឋាន MAC ទាំងអស់"
 
 #: ../glade/optionswindow.glade.h:19
 msgid "Network configuration"
@@ -173,8 +169,8 @@ msgid ""
 "<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
 "\">Documentation</a>"
 msgstr ""
-"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
-"\">Yardım</a>"
+"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">ជំនួយ</"
+"a>"
 
 #: ../glade/optionswindow.glade.h:21
 msgid ""
@@ -194,15 +190,15 @@ msgstr " "
 
 #: ../glade/langpanel.glade.h:2 ../GdmGreeter/langpanel.py:42
 msgid "Language"
-msgstr "Dil"
+msgstr "ភាសា"
 
 #: ../glade/langpanel.glade.h:3
 msgid "Locale"
-msgstr "Yerel ayar"
+msgstr "ទីតាំង"
 
 #: ../glade/langpanel.glade.h:4
 msgid "Layout"
-msgstr "Yerleşim"
+msgstr "ប្លង់"
 
 #: ../GdmGreeter/persistence.py:59
 #, python-format
@@ -210,8 +206,8 @@ msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
 msgstr ""
-"Geri dönüş kodu  %(returncode)s: %(stderr)s\n"
-"ile canlı-ısrar başarısız"
+"បាន​បរាជ័យ live-persist ជាមួយ return code %(returncode)s:\n"
+"%(stderr)s"
 
 #: ../GdmGreeter/persistence.py:99
 #, python-format
@@ -220,7 +216,7 @@ msgid ""
 "%(stdout)s\n"
 "%(stderr)s"
 msgstr ""
-"geridönüş kodu ile cryptsetup başarısız. %(returncode)s:\n"
+"បាន​បរាជ័យ cryptsetup ជាមួយ return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
 
@@ -231,14 +227,14 @@ msgid ""
 "%(stdout)s\n"
 "%(stderr)s"
 msgstr ""
-"canlı ısrar şu kodla başarısız: %(returncode)s:\n"
+"បាន​បរាជ័យ live-persist ជាមួយ return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
 
 #: ../GdmGreeter/langpanel.py:124 ../GdmGreeter/langpanel.py:148
 #: ../GdmGreeter/langpanel.py:181
 msgid "Other..."
-msgstr "Diğer..."
+msgstr "ផ្សេងទៀត..."
 
 #~ msgid "<a href=\"doc/advanced_topics/mac_changer.en.html\">Help</a>"
-#~ msgstr "<a href=\"doc/advanced_topics/mac_changer.en.html\">Yardım</a>"
+#~ msgstr "<a href=\"doc/advanced_topics/mac_changer.en.html\">ជំនួយ</a>"

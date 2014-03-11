@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-21 19:40+0100\n"
+"POT-Creation-Date: 2014-03-06 17:16+0100\n"
 "PO-Revision-Date: 2013-08-27 23:50+0000\n"
 "Last-Translator: chinrur <chinrur@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/"
@@ -37,7 +37,7 @@ msgid "Use persistence?"
 msgstr "使用持久性？"
 
 #: ../glade/persistencewindow.glade.h:5
-msgid "<a href=\"doc/first_steps/persistence/use.en.html\">Help</a>"
+msgid "<a href=\"doc/first_steps/persistence/use.en.html\">Documentation</a>"
 msgstr ""
 
 #: ../glade/persistencewindow.glade.h:6
@@ -71,7 +71,7 @@ msgstr "系統管理員密碼"
 #: ../glade/optionswindow.glade.h:4
 msgid ""
 "<a href=\"doc/first_steps/startup_options/administration_password.en.html"
-"\">Help</a>"
+"\">Documentation</a>"
 msgstr ""
 
 #: ../glade/optionswindow.glade.h:5
@@ -96,13 +96,14 @@ msgid "<i>Passwords do not match</i>"
 msgstr "<i>密碼不符合</i>"
 
 #: ../glade/optionswindow.glade.h:10
-msgid "Windows Camouflage"
+#, fuzzy
+msgid "Windows camouflage"
 msgstr "偽裝成Windows"
 
 #: ../glade/optionswindow.glade.h:11
 msgid ""
-"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">Help</"
-"a>"
+"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
+"\">Documentation</a>"
 msgstr ""
 
 #: ../glade/optionswindow.glade.h:12
@@ -120,7 +121,9 @@ msgid "MAC address spoofing"
 msgstr ""
 
 #: ../glade/optionswindow.glade.h:15
-msgid "<a href=\"doc/advanced_topics/mac_changer.en.html\">Help</a>"
+msgid ""
+"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
+"\">Documentation</a>"
 msgstr ""
 
 #: ../glade/optionswindow.glade.h:16
@@ -132,11 +135,33 @@ msgstr ""
 #: ../glade/optionswindow.glade.h:17
 msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
-"suspicion or cause network connection problems. See the documentation."
+"suspicion or cause network connection problems."
 msgstr ""
 
 #: ../glade/optionswindow.glade.h:18
 msgid "Spoof all MAC addresses"
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:19
+msgid "Network configuration"
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:20
+msgid ""
+"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
+"\">Documentation</a>"
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:21
+msgid ""
+"This computer's Internet connection is clear of obstacles. You would like to "
+"connect directly to the Tor network."
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:22
+msgid ""
+"This computer's Internet connection is censored, filtered, or proxied. You "
+"need to configure bridge, firewall, or proxy settings."
 msgstr ""
 
 #: ../glade/langpanel.glade.h:1

@@ -4,13 +4,14 @@
 #
 # Translators:
 # ddark008 <i@ddark008.ru>, 2012
+# oulgocke <beandonlybe@yandex.ru>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-21 19:40+0100\n"
-"PO-Revision-Date: 2013-05-22 12:45+0000\n"
-"Last-Translator: runasand <runa.sandvik@gmail.com>\n"
+"POT-Creation-Date: 2014-03-06 17:16+0100\n"
+"PO-Revision-Date: 2014-03-05 09:11+0000\n"
+"Last-Translator: oulgocke <beandonlybe@yandex.ru>\n"
 "Language-Team: Russian (http://www.transifex.com/projects/p/torproject/"
 "language/ru/)\n"
 "Language: ru\n"
@@ -37,8 +38,9 @@ msgid "Use persistence?"
 msgstr "Использовать постоянную память?"
 
 #: ../glade/persistencewindow.glade.h:5
-msgid "<a href=\"doc/first_steps/persistence/use.en.html\">Help</a>"
-msgstr ""
+#, fuzzy
+msgid "<a href=\"doc/first_steps/persistence/use.en.html\">Documentation</a>"
+msgstr "<a href=\"doc/first_steps/persistence/use.en.html\">Помощь</a>"
 
 #: ../glade/persistencewindow.glade.h:6
 msgid "Yes"
@@ -69,10 +71,13 @@ msgid "Administration password"
 msgstr "Пароль администратора"
 
 #: ../glade/optionswindow.glade.h:4
+#, fuzzy
 msgid ""
 "<a href=\"doc/first_steps/startup_options/administration_password.en.html"
-"\">Help</a>"
+"\">Documentation</a>"
 msgstr ""
+"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
+"\">Помощь</a>"
 
 #: ../glade/optionswindow.glade.h:5
 msgid ""
@@ -96,14 +101,18 @@ msgid "<i>Passwords do not match</i>"
 msgstr "<i>Пароли не совпадают</i>"
 
 #: ../glade/optionswindow.glade.h:10
-msgid "Windows Camouflage"
+#, fuzzy
+msgid "Windows camouflage"
 msgstr "Маскировка под Windows"
 
 #: ../glade/optionswindow.glade.h:11
+#, fuzzy
 msgid ""
-"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">Help</"
-"a>"
+"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
+"\">Documentation</a>"
 msgstr ""
+"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
+"\">Помощь</a>"
 
 #: ../glade/optionswindow.glade.h:12
 msgid ""
@@ -119,26 +128,58 @@ msgstr "Активировать маскировку под Microsoft Windows X
 
 #: ../glade/optionswindow.glade.h:14
 msgid "MAC address spoofing"
-msgstr ""
+msgstr "Спуфинг MAC-адреса"
 
 #: ../glade/optionswindow.glade.h:15
-msgid "<a href=\"doc/advanced_topics/mac_changer.en.html\">Help</a>"
+#, fuzzy
+msgid ""
+"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
+"\">Documentation</a>"
 msgstr ""
+"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Помощь</a>"
 
 #: ../glade/optionswindow.glade.h:16
 msgid ""
 "Spoofing MAC addresses hides the serial number of your network cards to the "
 "local networks. This can help you hide your geographical location."
 msgstr ""
+"Спуфинг MAC-адреса скрывает серийный номер вашей сетевой карты от локальной "
+"сети. Это может помочь скрыть ваше географическое положение."
 
 #: ../glade/optionswindow.glade.h:17
 msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
-"suspicion or cause network connection problems. See the documentation."
+"suspicion or cause network connection problems."
 msgstr ""
+"Как правило, использовать спуфинг MAC-адресов безопаснее, но это может "
+"вызвать подозрения или проблемы с сетевым подключением."
 
 #: ../glade/optionswindow.glade.h:18
 msgid "Spoof all MAC addresses"
+msgstr "Спуфинг всех MAC-адресов"
+
+#: ../glade/optionswindow.glade.h:19
+msgid "Network configuration"
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:20
+#, fuzzy
+msgid ""
+"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
+"\">Documentation</a>"
+msgstr ""
+"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Помощь</a>"
+
+#: ../glade/optionswindow.glade.h:21
+msgid ""
+"This computer's Internet connection is clear of obstacles. You would like to "
+"connect directly to the Tor network."
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:22
+msgid ""
+"This computer's Internet connection is censored, filtered, or proxied. You "
+"need to configure bridge, firewall, or proxy settings."
 msgstr ""
 
 #: ../glade/langpanel.glade.h:1

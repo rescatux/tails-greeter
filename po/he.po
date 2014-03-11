@@ -5,15 +5,16 @@
 # Translators:
 # aharonoosh <aharonoosh1@gmail.com>, 2012
 # GenghisKhan <genghiskhan@gmx.ca>, 2013
+# Kunda, 2014
 # blackbird <yaelgogol@gmail.com>, 2012
 # יעקב פייקין <jacobpa9@gmail.com>, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-21 19:40+0100\n"
-"PO-Revision-Date: 2013-07-25 10:30+0000\n"
-"Last-Translator: GenghisKhan <genghiskhan@gmx.ca>\n"
+"POT-Creation-Date: 2014-03-06 17:16+0100\n"
+"PO-Revision-Date: 2014-01-30 13:23+0000\n"
+"Last-Translator: Kunda\n"
 "Language-Team: Hebrew (http://www.transifex.com/projects/p/torproject/"
 "language/he/)\n"
 "Language: he\n"
@@ -39,7 +40,7 @@ msgid "Use persistence?"
 msgstr "השתמש בעקשנות?"
 
 #: ../glade/persistencewindow.glade.h:5
-msgid "<a href=\"doc/first_steps/persistence/use.en.html\">Help</a>"
+msgid "<a href=\"doc/first_steps/persistence/use.en.html\">Documentation</a>"
 msgstr ""
 
 #: ../glade/persistencewindow.glade.h:6
@@ -73,7 +74,7 @@ msgstr "סיסמת מנהל"
 #: ../glade/optionswindow.glade.h:4
 msgid ""
 "<a href=\"doc/first_steps/startup_options/administration_password.en.html"
-"\">Help</a>"
+"\">Documentation</a>"
 msgstr ""
 
 #: ../glade/optionswindow.glade.h:5
@@ -98,13 +99,14 @@ msgid "<i>Passwords do not match</i>"
 msgstr "<i>סיסמאות אינו תואמות</i>"
 
 #: ../glade/optionswindow.glade.h:10
-msgid "Windows Camouflage"
+#, fuzzy
+msgid "Windows camouflage"
 msgstr "הסוואה של Windows"
 
 #: ../glade/optionswindow.glade.h:11
 msgid ""
-"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">Help</"
-"a>"
+"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
+"\">Documentation</a>"
 msgstr ""
 
 #: ../glade/optionswindow.glade.h:12
@@ -117,14 +119,16 @@ msgstr ""
 
 #: ../glade/optionswindow.glade.h:13
 msgid "Activate Microsoft Windows XP Camouflage"
-msgstr "הסוואת Microsoft Windows XP מופעלת"
+msgstr "הפעל הסוואת Microsoft Windows XP"
 
 #: ../glade/optionswindow.glade.h:14
 msgid "MAC address spoofing"
 msgstr ""
 
 #: ../glade/optionswindow.glade.h:15
-msgid "<a href=\"doc/advanced_topics/mac_changer.en.html\">Help</a>"
+msgid ""
+"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
+"\">Documentation</a>"
 msgstr ""
 
 #: ../glade/optionswindow.glade.h:16
@@ -136,11 +140,33 @@ msgstr ""
 #: ../glade/optionswindow.glade.h:17
 msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
-"suspicion or cause network connection problems. See the documentation."
+"suspicion or cause network connection problems."
 msgstr ""
 
 #: ../glade/optionswindow.glade.h:18
 msgid "Spoof all MAC addresses"
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:19
+msgid "Network configuration"
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:20
+msgid ""
+"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
+"\">Documentation</a>"
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:21
+msgid ""
+"This computer's Internet connection is clear of obstacles. You would like to "
+"connect directly to the Tor network."
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:22
+msgid ""
+"This computer's Internet connection is censored, filtered, or proxied. You "
+"need to configure bridge, firewall, or proxy settings."
 msgstr ""
 
 #: ../glade/langpanel.glade.h:1
@@ -153,7 +179,7 @@ msgstr "שפה"
 
 #: ../glade/langpanel.glade.h:3
 msgid "Locale"
-msgstr "מקומי"
+msgstr "אזור"
 
 #: ../glade/langpanel.glade.h:4
 msgid "Layout"
@@ -164,7 +190,9 @@ msgstr "מערך"
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
-msgstr "הפעלה חיה עקבית נכשלה עם השגיאה:   %(returncode)s:⏎ %(stderr)s"
+msgstr ""
+"הפעלה חיה עקבית נכשלה עם השגיאה %(returncode)s:\n"
+"%(stderr)s"
 
 #: ../GdmGreeter/persistence.py:99
 #, python-format
@@ -173,7 +201,9 @@ msgid ""
 "%(stdout)s\n"
 "%(stderr)s"
 msgstr ""
-"cryptsetup נכשל עם הודעת השגיאה: %(returncode)s:⏎ %(stdout)s⏎ %(stderr)s"
+"cryptsetup נכשל עם הודעת השגיאה: %(returncode)s:\n"
+"%(stdout)s\n"
+"%(stderr)s"
 
 #: ../GdmGreeter/persistence.py:124
 #, python-format
@@ -182,7 +212,9 @@ msgid ""
 "%(stdout)s\n"
 "%(stderr)s"
 msgstr ""
-"הפעלה חיה עקבית נכשלה עם השגיאה: %(returncode)s:⏎ %(stdout)s⏎ %(stderr)s"
+"הפעלה חיה עקבית נכשלה עם השגיאה: %(returncode)s:\n"
+"%(stdout)s \n"
+"%(stderr)s"
 
 #: ../GdmGreeter/langpanel.py:124 ../GdmGreeter/langpanel.py:148
 #: ../GdmGreeter/langpanel.py:181

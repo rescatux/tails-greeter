@@ -5,15 +5,16 @@
 # Translators:
 # Fandor, 2013
 # Fandor, 2013
+# Francesca Ciceri <madamezou@zouish.org>, 2014
 # Tony Goodyear <fswitch20@hotmail.com>, 2012
 # Tony Goodyear <fswitch20@hotmail.com>, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-21 19:40+0100\n"
-"PO-Revision-Date: 2013-12-12 15:40+0000\n"
-"Last-Translator: Gaetano Gallozzi <ggallozz@gmail.com>\n"
+"POT-Creation-Date: 2014-03-06 17:16+0100\n"
+"PO-Revision-Date: 2014-02-22 19:50+0000\n"
+"Last-Translator: Francesca Ciceri <madamezou@zouish.org>\n"
 "Language-Team: Italian (http://www.transifex.com/projects/p/torproject/"
 "language/it/)\n"
 "Language: it\n"
@@ -36,15 +37,16 @@ msgstr "Benvenuto in Tails"
 
 #: ../glade/persistencewindow.glade.h:4
 msgid "Use persistence?"
-msgstr "Utilizzare la persistenza ?"
+msgstr "Utilizzare la persistenza?"
 
 #: ../glade/persistencewindow.glade.h:5
-msgid "<a href=\"doc/first_steps/persistence/use.en.html\">Help</a>"
-msgstr ""
+#, fuzzy
+msgid "<a href=\"doc/first_steps/persistence/use.en.html\">Documentation</a>"
+msgstr "<a href=\"doc/first_steps/persistence/use.en.html\">Aiuto</a>"
 
 #: ../glade/persistencewindow.glade.h:6
 msgid "Yes"
-msgstr "Si"
+msgstr "Sì"
 
 #: ../glade/persistencewindow.glade.h:7
 msgid "No"
@@ -56,7 +58,7 @@ msgstr "Frase segreta:"
 
 #: ../glade/persistencewindow.glade.h:9
 msgid "Read-Only?"
-msgstr "Sola Lettura?"
+msgstr "Sola lettura?"
 
 #: ../glade/persistencewindow.glade.h:10
 msgid "<i>Wrong passphrase. Please try again.</i>"
@@ -68,13 +70,16 @@ msgstr "Altre opzioni?"
 
 #: ../glade/optionswindow.glade.h:3
 msgid "Administration password"
-msgstr "Password di Amministrazione"
+msgstr "Password di amministrazione"
 
 #: ../glade/optionswindow.glade.h:4
+#, fuzzy
 msgid ""
 "<a href=\"doc/first_steps/startup_options/administration_password.en.html"
-"\">Help</a>"
+"\">Documentation</a>"
 msgstr ""
+"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
+"\">Aiuto</a>"
 
 #: ../glade/optionswindow.glade.h:5
 msgid ""
@@ -84,29 +89,33 @@ msgid ""
 msgstr ""
 "Inserire una password di amministrazione in caso si debbano eseguire delle "
 "attività di amministrazione.\n"
-"In caso contrario sarà disabilitata per migliorare la sicurezza.."
+"In caso contrario sarà disabilitata per migliorare la sicurezza."
 
 #: ../glade/optionswindow.glade.h:7
 msgid "Password:"
-msgstr "Password"
+msgstr "Password:"
 
 #: ../glade/optionswindow.glade.h:8
 msgid "Verify Password:"
-msgstr "Verifica Password"
+msgstr "Verifica password:"
 
 #: ../glade/optionswindow.glade.h:9
 msgid "<i>Passwords do not match</i>"
-msgstr "<i>Le Passwords non corrispondono</i>"
+msgstr "<i>Le password non corrispondono</i>"
 
 #: ../glade/optionswindow.glade.h:10
-msgid "Windows Camouflage"
+#, fuzzy
+msgid "Windows camouflage"
 msgstr "Mimetizzazione Windows"
 
 #: ../glade/optionswindow.glade.h:11
+#, fuzzy
 msgid ""
-"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">Help</"
-"a>"
+"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
+"\">Documentation</a>"
 msgstr ""
+"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
+"\">Aiuto</a>"
 
 #: ../glade/optionswindow.glade.h:12
 msgid ""
@@ -122,26 +131,63 @@ msgstr "Attiva mimetizzazione Microsoft Windows XP "
 
 #: ../glade/optionswindow.glade.h:14
 msgid "MAC address spoofing"
-msgstr ""
+msgstr "offuscamento dell'indirizzo MAC"
 
 #: ../glade/optionswindow.glade.h:15
-msgid "<a href=\"doc/advanced_topics/mac_changer.en.html\">Help</a>"
+#, fuzzy
+msgid ""
+"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
+"\">Documentation</a>"
 msgstr ""
+"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
+"\">Aiuto</a>"
 
 #: ../glade/optionswindow.glade.h:16
 msgid ""
 "Spoofing MAC addresses hides the serial number of your network cards to the "
 "local networks. This can help you hide your geographical location."
 msgstr ""
+"Offuscare l'indirizzo MAC significa nascondere il numero seriale della "
+"propria scheda di rete alle reti locali. Questo permette di non rendere nota "
+"la propria posizione geografica."
 
 #: ../glade/optionswindow.glade.h:17
+#, fuzzy
 msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
-"suspicion or cause network connection problems. See the documentation."
+"suspicion or cause network connection problems."
 msgstr ""
+"Generalmente, offuscare l'indirizzo MAC è più sicuro ma potrebbe suscitare "
+"sospetti o causare problemi di connessione. Per maggiori informazioni, "
+"leggere la documentazione."
 
 #: ../glade/optionswindow.glade.h:18
 msgid "Spoof all MAC addresses"
+msgstr "Offusca tutti gli indirizzi MAC"
+
+#: ../glade/optionswindow.glade.h:19
+msgid "Network configuration"
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:20
+#, fuzzy
+msgid ""
+"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
+"\">Documentation</a>"
+msgstr ""
+"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
+"\">Aiuto</a>"
+
+#: ../glade/optionswindow.glade.h:21
+msgid ""
+"This computer's Internet connection is clear of obstacles. You would like to "
+"connect directly to the Tor network."
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:22
+msgid ""
+"This computer's Internet connection is censored, filtered, or proxied. You "
+"need to configure bridge, firewall, or proxy settings."
 msgstr ""
 
 #: ../glade/langpanel.glade.h:1
@@ -154,11 +200,11 @@ msgstr "Lingua"
 
 #: ../glade/langpanel.glade.h:3
 msgid "Locale"
-msgstr "Impostazioni Internazionali"
+msgstr "Impostazioni internazionali"
 
 #: ../glade/langpanel.glade.h:4
 msgid "Layout"
-msgstr "Dsiposizione"
+msgstr "Disposizione"
 
 #: ../GdmGreeter/persistence.py:59
 #, python-format
@@ -195,3 +241,6 @@ msgstr ""
 #: ../GdmGreeter/langpanel.py:181
 msgid "Other..."
 msgstr "Altro..."
+
+#~ msgid "<a href=\"doc/advanced_topics/mac_changer.en.html\">Help</a>"
+#~ msgstr "<a href=\"doc/advanced_topics/mac_changer.en.html\">Aiuto</a>"

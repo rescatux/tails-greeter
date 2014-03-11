@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
+# mvdwrd <maarten@vanderwoord.nl>, 2014
 # Richard E. van der Luit <nippur@fedoraproject.org>, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-21 19:40+0100\n"
-"PO-Revision-Date: 2013-12-08 20:42+0000\n"
-"Last-Translator: runasand <runa.sandvik@gmail.com>\n"
+"POT-Creation-Date: 2014-03-06 17:16+0100\n"
+"PO-Revision-Date: 2014-02-25 09:16+0000\n"
+"Last-Translator: mvdwrd <maarten@vanderwoord.nl>\n"
 "Language-Team: Dutch (http://www.transifex.com/projects/p/torproject/"
 "language/nl/)\n"
 "Language: nl\n"
@@ -36,8 +37,9 @@ msgid "Use persistence?"
 msgstr "Persistentie gebruiken?"
 
 #: ../glade/persistencewindow.glade.h:5
-msgid "<a href=\"doc/first_steps/persistence/use.en.html\">Help</a>"
-msgstr ""
+#, fuzzy
+msgid "<a href=\"doc/first_steps/persistence/use.en.html\">Documentation</a>"
+msgstr "Help"
 
 #: ../glade/persistencewindow.glade.h:6
 msgid "Yes"
@@ -68,10 +70,11 @@ msgid "Administration password"
 msgstr "Beheerderswachtwoord"
 
 #: ../glade/optionswindow.glade.h:4
+#, fuzzy
 msgid ""
 "<a href=\"doc/first_steps/startup_options/administration_password.en.html"
-"\">Help</a>"
-msgstr ""
+"\">Documentation</a>"
+msgstr "Help"
 
 #: ../glade/optionswindow.glade.h:5
 msgid ""
@@ -96,14 +99,16 @@ msgid "<i>Passwords do not match</i>"
 msgstr "<i>Wachtwoorden zijn niet gelijk</i>"
 
 #: ../glade/optionswindow.glade.h:10
-msgid "Windows Camouflage"
+#, fuzzy
+msgid "Windows camouflage"
 msgstr "Windows Camouflage"
 
 #: ../glade/optionswindow.glade.h:11
+#, fuzzy
 msgid ""
-"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">Help</"
-"a>"
-msgstr ""
+"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
+"\">Documentation</a>"
+msgstr "Help"
 
 #: ../glade/optionswindow.glade.h:12
 msgid ""
@@ -119,26 +124,57 @@ msgstr "Activeer Microsoft Windows XP Camouflage"
 
 #: ../glade/optionswindow.glade.h:14
 msgid "MAC address spoofing"
-msgstr ""
+msgstr "MAC adres spoofing"
 
 #: ../glade/optionswindow.glade.h:15
-msgid "<a href=\"doc/advanced_topics/mac_changer.en.html\">Help</a>"
-msgstr ""
+#, fuzzy
+msgid ""
+"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
+"\">Documentation</a>"
+msgstr "Help"
 
 #: ../glade/optionswindow.glade.h:16
 msgid ""
 "Spoofing MAC addresses hides the serial number of your network cards to the "
 "local networks. This can help you hide your geographical location."
 msgstr ""
+"MAC adres spoofing verbergt het serienummer van je netwerkkaart op lokale "
+"netwerken. Dit kan helpen bij het verbergen van je geografische locatie."
 
 #: ../glade/optionswindow.glade.h:17
+#, fuzzy
 msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
-"suspicion or cause network connection problems. See the documentation."
+"suspicion or cause network connection problems."
 msgstr ""
+"Het is over het algemeen veiliger om MAC adressen te spoofen, het kan echter "
+"ook argwaan opwekken of verbindingsproblemen veroorzaken. Zie documentatie."
 
 #: ../glade/optionswindow.glade.h:18
 msgid "Spoof all MAC addresses"
+msgstr "Alle MAC adressen spoofen"
+
+#: ../glade/optionswindow.glade.h:19
+msgid "Network configuration"
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:20
+#, fuzzy
+msgid ""
+"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
+"\">Documentation</a>"
+msgstr "Help"
+
+#: ../glade/optionswindow.glade.h:21
+msgid ""
+"This computer's Internet connection is clear of obstacles. You would like to "
+"connect directly to the Tor network."
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:22
+msgid ""
+"This computer's Internet connection is censored, filtered, or proxied. You "
+"need to configure bridge, firewall, or proxy settings."
 msgstr ""
 
 #: ../glade/langpanel.glade.h:1
@@ -192,3 +228,6 @@ msgstr ""
 #: ../GdmGreeter/langpanel.py:181
 msgid "Other..."
 msgstr "Anders..."
+
+#~ msgid "<a href=\"doc/advanced_topics/mac_changer.en.html\">Help</a>"
+#~ msgstr "Help"

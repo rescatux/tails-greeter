@@ -43,6 +43,8 @@ class OptionsWindow(TranslatableWindow):
         self.camouflage_checkbox = builder.get_object("camouflage_checkbox")
         self.macspoof_checkbox = builder.get_object("macspoof_checkbox")
         self.macspoof_checkbox.set_active(True)
+        self.netconf_direct = builder.get_object("netconf_direct")
+        self.netconf_direct.set_active(True)
 
         TranslatableWindow.__init__(self, builder.get_object("options_dialog"))
         self.window.set_visible(False)
@@ -77,6 +79,13 @@ class OptionsWindow(TranslatableWindow):
         """Set macspoof status"""
         self.greeter.physical_security.macspoof = self.macspoof_checkbox.get_active()
 
+    def set_netconf(self):
+        """Set network configuration"""
+        if self.netconf_direct.get_active():
+            self.greeter.physical_security.netconf = self.greeter.physical_security.NETCONF_DIRECT
+        else:
+            self.greeter.physical_security.netconf = self.greeter.physical_security.NETCONF_OBSTACLE
+
     def validate_options(self):
         """Validate the selected options"""
         auth_password = self.entry_password.get_text()
@@ -93,6 +102,7 @@ class OptionsWindow(TranslatableWindow):
             self.set_password()
             self.set_camouflage()
             self.set_macspoof()
+            self.set_netconf()
 
     def cb_login_clicked(self, widget, data=None):
         """Login button click handler"""

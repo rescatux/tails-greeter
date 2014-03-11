@@ -1,3 +1,21 @@
+tails-greeter (0.7.27) devel; urgency=medium
+
+  * Decapitalise option header.
+  * Update POT and PO files.
+
+ -- Tails developers <amnesia@boum.org>  Thu, 06 Mar 2014 17:18:15 +0100
+
+tails-greeter (0.7.26) devel; urgency=medium
+
+  * Rename "Help" link to "Documentation".
+  * Add GUI control for (Tor) network configuration,
+    and set DisableNetwork for "obstacled" network.
+  * Also log error status.
+  * Update links to user documentation.
+  * Update POT and PO files.
+
+ -- Tails developers <tails@boum.org>  Thu, 06 Mar 2014 16:53:05 +0100
+
 tails-greeter (0.7.25+wheezy5) feature-wheezy; urgency=medium
 
   * Import Gtk with gi.
