@@ -1,3 +1,10 @@
+tails-greeter (0.7.27+wheezy1) feature-wheezy; urgency=medium
+
+  * Rebuild for Debian Wheezy.
+  * Convert optionswindow to glade/gtk3.
+
+ -- Tails developers <tails@boum.org>  Tue, 11 Mar 2014 15:10:56 +0100
+
 tails-greeter (0.7.27) devel; urgency=medium
 
   * Decapitalise option header.
