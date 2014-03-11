@@ -22,7 +22,7 @@ import os
 import webbrowser
 
 from gi.repository import Gtk
-from gi.repository import Webkit
+from gi.repository import WebKit
 
 import tailsgreeter
 from   tailsgreeter.language import TranslatableWindow
