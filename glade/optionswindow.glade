@@ -142,7 +142,7 @@
                                 <property name="can_focus">False</property>
                                 <property name="xalign">0</property>
                                 <property name="label" translatable="yes">Enter an administration password in case you need to perform administration tasks.
-                                Otherwise it will be disabled for better security.</property>
+Otherwise it will be disabled for better security.</property>
                                 <property name="wrap">True</property>
                                 <property name="width_chars">72</property>
                               </object>
