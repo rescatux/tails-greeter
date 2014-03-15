@@ -52,7 +52,7 @@
           <object class="GtkFrame" id="options_frame">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="shadow">in</property>
+            <property name="shadow">none</property>
             <child>
               <object class="GtkScrolledWindow" id="options_scroll">
                 <property name="visible">True</property>
