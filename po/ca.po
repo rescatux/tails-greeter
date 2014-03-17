@@ -4,14 +4,15 @@
 #
 # Translators:
 # Illenc <provisionalib@hotmail.com>, 2013
+# CodiObert <codiobert@codiobert.es>, 2014
 # norike <norikeave@hotmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-17 13:30+0100\n"
-"PO-Revision-Date: 2013-10-27 08:10+0000\n"
-"Last-Translator: Illenc <provisionalib@hotmail.com>\n"
+"POT-Creation-Date: 2014-03-17 13:54+0100\n"
+"PO-Revision-Date: 2014-03-14 07:55+0000\n"
+"Last-Translator: CodiObert <codiobert@codiobert.es>\n"
 "Language-Team: Catalan (http://www.transifex.com/projects/p/torproject/"
 "language/ca/)\n"
 "Language: ca\n"
@@ -38,7 +39,7 @@ msgstr "Utilitzar persistència?"
 
 #: ../glade/persistencewindow.glade.h:5
 msgid "<a href=\"doc/first_steps/persistence/use.en.html\">Documentation</a>"
-msgstr ""
+msgstr "<a href=\"doc/first_steps/persistence/use.en.html\">Documentació</a>"
 
 #: ../glade/persistencewindow.glade.h:6
 msgid "Yes"
@@ -73,9 +74,10 @@ msgid ""
 "<a href=\"doc/first_steps/startup_options/administration_password.en.html"
 "\">Documentation</a>"
 msgstr ""
+"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
+"\">Documentació</a>"
 
 #: ../glade/optionswindow.glade.h:5
-#, fuzzy
 msgid ""
 "Enter an administration password in case you need to perform administration "
 "tasks.\n"
@@ -98,15 +100,16 @@ msgid "<i>Passwords do not match</i>"
 msgstr "<i>La contrasenya no concorda</i>"
 
 #: ../glade/optionswindow.glade.h:10
-#, fuzzy
 msgid "Windows camouflage"
-msgstr "Camuflatge de Windows"
+msgstr "camuflatge de Windows"
 
 #: ../glade/optionswindow.glade.h:11
 msgid ""
 "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
 "\">Documentation</a>"
 msgstr ""
+"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
+"\">Documentació</a>"
 
 #: ../glade/optionswindow.glade.h:12
 msgid ""
@@ -122,51 +125,65 @@ msgstr "Activar el camuflatge de Microsoft Windows XP"
 
 #: ../glade/optionswindow.glade.h:14
 msgid "MAC address spoofing"
-msgstr ""
+msgstr "Falsificació d'adreça MAC"
 
 #: ../glade/optionswindow.glade.h:15
 msgid ""
 "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
 "\">Documentation</a>"
 msgstr ""
+"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
+"\">Documentació</a>"
 
 #: ../glade/optionswindow.glade.h:16
 msgid ""
 "Spoofing MAC addresses hides the serial number of your network cards to the "
 "local networks. This can help you hide your geographical location."
 msgstr ""
+"La falsificació d'adreces MAC oculta el número de sèrie de la targeta de "
+"xarxa per a les xarxes locals. Això pot ajudar a ocultar la seva ubicació "
+"geogràfica."
 
 #: ../glade/optionswindow.glade.h:17
 msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
 "suspicion or cause network connection problems."
 msgstr ""
+"En general, és més segur que simuli les adreces MAC, però també podria "
+"aixecar sospites o provocar problemes de connexió de xarxa."
 
 #: ../glade/optionswindow.glade.h:18
 msgid "Spoof all MAC addresses"
-msgstr ""
+msgstr "Falsifica totes les adreces MAC"
 
 #: ../glade/optionswindow.glade.h:19
 msgid "Network configuration"
-msgstr ""
+msgstr "Configuració de xarxa"
 
 #: ../glade/optionswindow.glade.h:20
 msgid ""
 "<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
 "\">Documentation</a>"
 msgstr ""
+"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
+"\">Documentació</a>"
 
 #: ../glade/optionswindow.glade.h:21
 msgid ""
 "This computer's Internet connection is clear of obstacles. You would like to "
 "connect directly to the Tor network."
 msgstr ""
+"La connexió a Internet d'aquest equip està lliure d'obstacles. Li agradaria "
+"connectar directament a la xarxa Tor."
 
 #: ../glade/optionswindow.glade.h:22
 msgid ""
 "This computer's Internet connection is censored, filtered, or proxied. You "
 "need to configure bridge, firewall, or proxy settings."
 msgstr ""
+"La connexió a Internet d'aquest equip està censurada, filtrada o conté "
+"intermediaris. Cal configurar el pont, el tallafocs o la configuració del "
+"servidor intermediari."
 
 #: ../glade/langpanel.glade.h:1
 msgid " "

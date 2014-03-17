@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-17 13:30+0100\n"
-"PO-Revision-Date: 2014-03-03 08:30+0000\n"
+"POT-Creation-Date: 2014-03-17 13:54+0100\n"
+"PO-Revision-Date: 2014-03-11 07:50+0000\n"
 "Last-Translator: khoemsokhem <sokhem@open.org.kh>\n"
 "Language-Team: Khmer (http://www.transifex.com/projects/p/torproject/"
 "language/km/)\n"
@@ -37,9 +37,8 @@ msgid "Use persistence?"
 msgstr "ប្រើ persistence?"
 
 #: ../glade/persistencewindow.glade.h:5
-#, fuzzy
 msgid "<a href=\"doc/first_steps/persistence/use.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/persistence/use.en.html\">ជំនួយ</a>"
+msgstr "<a href=\"doc/first_steps/persistence/use.en.html\">ឯកសារ</a>"
 
 #: ../glade/persistencewindow.glade.h:6
 msgid "Yes"
@@ -70,16 +69,14 @@ msgid "Administration password"
 msgstr "ពាក្យ​សម្ងាត់​សម្រាប់​ការ​គ្រប់គ្រង"
 
 #: ../glade/optionswindow.glade.h:4
-#, fuzzy
 msgid ""
 "<a href=\"doc/first_steps/startup_options/administration_password.en.html"
 "\">Documentation</a>"
 msgstr ""
 "<a href=\"doc/first_steps/startup_options/administration_password.en.html"
-"\">ជំនួយ</a>"
+"\">ឯកសារ</a>"
 
 #: ../glade/optionswindow.glade.h:5
-#, fuzzy
 msgid ""
 "Enter an administration password in case you need to perform administration "
 "tasks.\n"
@@ -101,18 +98,16 @@ msgid "<i>Passwords do not match</i>"
 msgstr "<i>ពាក្យសម្ងាត់​មិន​ផ្គូផ្គង</i>"
 
 #: ../glade/optionswindow.glade.h:10
-#, fuzzy
 msgid "Windows camouflage"
-msgstr "Windows Camouflage"
+msgstr "Windows camouflage"
 
 #: ../glade/optionswindow.glade.h:11
-#, fuzzy
 msgid ""
 "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
 "\">Documentation</a>"
 msgstr ""
-"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">ជំនួយ</"
-"a>"
+"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
+"\">ឯកសារ</a>"
 
 #: ../glade/optionswindow.glade.h:12
 msgid ""
@@ -131,13 +126,11 @@ msgid "MAC address spoofing"
 msgstr "បញ្ឆោត​អាសយដ្ឋាន MAC"
 
 #: ../glade/optionswindow.glade.h:15
-#, fuzzy
 msgid ""
 "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
 "\">Documentation</a>"
 msgstr ""
-"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">ជំនួយ</"
-"a>"
+"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">ឯកសារ</a>"
 
 #: ../glade/optionswindow.glade.h:16
 msgid ""
@@ -148,13 +141,12 @@ msgstr ""
 "ទីតាំង​ភូមិសាស្ត្រ​របស់​អ្នក។"
 
 #: ../glade/optionswindow.glade.h:17
-#, fuzzy
 msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
 "suspicion or cause network connection problems."
 msgstr ""
-"ជា​ទូទៅ​វា​កាន់តែ​មាន​សុវត្ថិភាព​ដើម្បី​បញ្ឆោត​អាសយដ្ឋាន MAC ប៉ុន្តែ​វា​អាច​បង្កើន​ការ​សង្ស័យ ឬ​ធ្វើ​ឲ្យ​ការ​"
-"ភ្ជាប់​បណ្ដាញ​មាន​បញ្ហា។ សូម​មើល​ឯកសារ។"
+"ជា​ទូទៅ​វា​កាន់តែ​មាន​សុវត្ថិភាព​ដើម្បី​បញ្ឆោត​អាសយដ្ឋាន​ MAC ប៉ុន្តែ​វា​ក៏​អាច​បង្កើន​ការ​សង្ស័យ ឬ​ធ្វើឲ្យ​ការ​"
+"ភ្ជាប់​បណ្ដាញ​មាន​បញ្ហា។"
 
 #: ../glade/optionswindow.glade.h:18
 msgid "Spoof all MAC addresses"
@@ -162,28 +154,29 @@ msgstr "បញ្ឆោត​អាសយដ្ឋាន MAC ទាំងអស�
 
 #: ../glade/optionswindow.glade.h:19
 msgid "Network configuration"
-msgstr ""
+msgstr "ការ​កំណត់​រចនាសម្ព័ន្ធ​បណ្ដាញ"
 
 #: ../glade/optionswindow.glade.h:20
-#, fuzzy
 msgid ""
 "<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
 "\">Documentation</a>"
 msgstr ""
-"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">ជំនួយ</"
-"a>"
+"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
+"\">ឯកសារ</a>"
 
 #: ../glade/optionswindow.glade.h:21
 msgid ""
 "This computer's Internet connection is clear of obstacles. You would like to "
 "connect directly to the Tor network."
-msgstr ""
+msgstr "ការ​ភ្ជាប់​អ៊ីនធឺណិត​កុំព្យូទ័រ​នេះ​គ្មានបញ្ហា​ទេ។ អ្នកចង់ភ្ជាប់​ដោយ​ផ្ទាល់​ទៅ​បណ្ដាញ Tor ។"
 
 #: ../glade/optionswindow.glade.h:22
 msgid ""
 "This computer's Internet connection is censored, filtered, or proxied. You "
 "need to configure bridge, firewall, or proxy settings."
 msgstr ""
+"ការ​ភ្ជាប់អ៊ីនធឺណិត​កុំព្យូទ័រ​នេះ​​ត្រូវ​បាន​ពិនិត្យ ច្រោះ ឬ​កំណត់​ប្រូកស៊ី។ អ្នក​ត្រូវ​កំណត់​រចនាសម្ព័ន្ធ​ប៊្រីត ជញ្ជាំង​"
+"ភ្លើង ឬ​ការ​កំណត់​ប្រូកស៊ី។"
 
 #: ../glade/langpanel.glade.h:1
 msgid " "
@@ -236,6 +229,3 @@ msgstr ""
 #: ../GdmGreeter/langpanel.py:181
 msgid "Other..."
 msgstr "ផ្សេងទៀត..."
-
-#~ msgid "<a href=\"doc/advanced_topics/mac_changer.en.html\">Help</a>"
-#~ msgstr "<a href=\"doc/advanced_topics/mac_changer.en.html\">ជំនួយ</a>"

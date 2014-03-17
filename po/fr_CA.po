@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-17 13:30+0100\n"
-"PO-Revision-Date: 2014-03-05 17:50+0000\n"
+"POT-Creation-Date: 2014-03-17 13:54+0100\n"
+"PO-Revision-Date: 2014-03-07 14:31+0000\n"
 "Last-Translator: Alain-Olivier  Breysse\n"
 "Language-Team: French (Canada) (http://www.transifex.com/projects/p/"
 "torproject/language/fr_CA/)\n"
@@ -38,9 +38,8 @@ msgid "Use persistence?"
 msgstr "Utiliser la persistance?"
 
 #: ../glade/persistencewindow.glade.h:5
-#, fuzzy
 msgid "<a href=\"doc/first_steps/persistence/use.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/persistence/use.en.html\">Aide</a>"
+msgstr "<a href=\"doc/first_steps/persistence/use.en.html\">Documentation</a>"
 
 #: ../glade/persistencewindow.glade.h:6
 msgid "Yes"
@@ -71,16 +70,14 @@ msgid "Administration password"
 msgstr "Mot de passe d'administration"
 
 #: ../glade/optionswindow.glade.h:4
-#, fuzzy
 msgid ""
 "<a href=\"doc/first_steps/startup_options/administration_password.en.html"
 "\">Documentation</a>"
 msgstr ""
 "<a href=\"doc/first_steps/startup_options/administration_password.en.html"
-"\">Aide</a>"
+"\">Documentation</a>"
 
 #: ../glade/optionswindow.glade.h:5
-#, fuzzy
 msgid ""
 "Enter an administration password in case you need to perform administration "
 "tasks.\n"
@@ -104,18 +101,16 @@ msgid "<i>Passwords do not match</i>"
 msgstr "<i>Les mots de passe ne correspondent pas</i>"
 
 #: ../glade/optionswindow.glade.h:10
-#, fuzzy
 msgid "Windows camouflage"
 msgstr "Camouflage Windows"
 
 #: ../glade/optionswindow.glade.h:11
-#, fuzzy
 msgid ""
 "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
 "\">Documentation</a>"
 msgstr ""
-"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">Aide</"
-"a>"
+"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
+"\">Documentation</a>"
 
 #: ../glade/optionswindow.glade.h:12
 msgid ""
@@ -134,12 +129,12 @@ msgid "MAC address spoofing"
 msgstr "Usurpation d'adresse MAC"
 
 #: ../glade/optionswindow.glade.h:15
-#, fuzzy
 msgid ""
 "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
 "\">Documentation</a>"
 msgstr ""
-"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Aide</a>"
+"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
+"\">Documentation</a>"
 
 #: ../glade/optionswindow.glade.h:16
 msgid ""
@@ -164,27 +159,32 @@ msgstr "Usurper toutes les adresses MAC"
 
 #: ../glade/optionswindow.glade.h:19
 msgid "Network configuration"
-msgstr ""
+msgstr "Configuration du réseau"
 
 #: ../glade/optionswindow.glade.h:20
-#, fuzzy
 msgid ""
 "<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
 "\">Documentation</a>"
 msgstr ""
-"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Aide</a>"
+"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
+"\">Documentation</a>"
 
 #: ../glade/optionswindow.glade.h:21
 msgid ""
 "This computer's Internet connection is clear of obstacles. You would like to "
 "connect directly to the Tor network."
 msgstr ""
+"La connexion réseau de cet ordinateur est sans obstacle. Voudriez-vous vous "
+"connecter directement au réseau Tor?"
 
 #: ../glade/optionswindow.glade.h:22
 msgid ""
 "This computer's Internet connection is censored, filtered, or proxied. You "
 "need to configure bridge, firewall, or proxy settings."
 msgstr ""
+"La connexion réseau de cet ordinateur est censurée, filtrée ou relayée par "
+"un serveur mandataire. Vous devez configurer les paramètres de pont, coupe-"
+"feu ou serveur mandataire."
 
 #: ../glade/langpanel.glade.h:1
 msgid " "

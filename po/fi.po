@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-17 13:30+0100\n"
+"POT-Creation-Date: 2014-03-17 13:54+0100\n"
 "PO-Revision-Date: 2014-02-16 10:40+0000\n"
 "Last-Translator: karvjorm <karvonen.jorma@gmail.com>\n"
 "Language-Team: Finnish (http://www.transifex.com/projects/p/torproject/"
@@ -75,7 +75,6 @@ msgid ""
 msgstr ""
 
 #: ../glade/optionswindow.glade.h:5
-#, fuzzy
 msgid ""
 "Enter an administration password in case you need to perform administration "
 "tasks.\n"

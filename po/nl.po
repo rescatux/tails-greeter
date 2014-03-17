@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
+# joostrijneveld <joostrijneveld@gmail.com>, 2014
 # mvdwrd <maarten@vanderwoord.nl>, 2014
 # Richard E. van der Luit <nippur@fedoraproject.org>, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-17 13:30+0100\n"
-"PO-Revision-Date: 2014-02-25 09:16+0000\n"
+"POT-Creation-Date: 2014-03-17 13:54+0100\n"
+"PO-Revision-Date: 2014-03-13 10:50+0000\n"
 "Last-Translator: mvdwrd <maarten@vanderwoord.nl>\n"
 "Language-Team: Dutch (http://www.transifex.com/projects/p/torproject/"
 "language/nl/)\n"
@@ -37,9 +38,8 @@ msgid "Use persistence?"
 msgstr "Persistentie gebruiken?"
 
 #: ../glade/persistencewindow.glade.h:5
-#, fuzzy
 msgid "<a href=\"doc/first_steps/persistence/use.en.html\">Documentation</a>"
-msgstr "Help"
+msgstr "Documentatie"
 
 #: ../glade/persistencewindow.glade.h:6
 msgid "Yes"
@@ -70,14 +70,12 @@ msgid "Administration password"
 msgstr "Beheerderswachtwoord"
 
 #: ../glade/optionswindow.glade.h:4
-#, fuzzy
 msgid ""
 "<a href=\"doc/first_steps/startup_options/administration_password.en.html"
 "\">Documentation</a>"
-msgstr "Help"
+msgstr "Documentatie"
 
 #: ../glade/optionswindow.glade.h:5
-#, fuzzy
 msgid ""
 "Enter an administration password in case you need to perform administration "
 "tasks.\n"
@@ -100,16 +98,14 @@ msgid "<i>Passwords do not match</i>"
 msgstr "<i>Wachtwoorden zijn niet gelijk</i>"
 
 #: ../glade/optionswindow.glade.h:10
-#, fuzzy
 msgid "Windows camouflage"
-msgstr "Windows Camouflage"
+msgstr "Windows camouflage"
 
 #: ../glade/optionswindow.glade.h:11
-#, fuzzy
 msgid ""
 "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
 "\">Documentation</a>"
-msgstr "Help"
+msgstr "Documentatie"
 
 #: ../glade/optionswindow.glade.h:12
 msgid ""
@@ -128,11 +124,10 @@ msgid "MAC address spoofing"
 msgstr "MAC adres spoofing"
 
 #: ../glade/optionswindow.glade.h:15
-#, fuzzy
 msgid ""
 "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
 "\">Documentation</a>"
-msgstr "Help"
+msgstr "Documentatie"
 
 #: ../glade/optionswindow.glade.h:16
 msgid ""
@@ -143,7 +138,6 @@ msgstr ""
 "netwerken. Dit kan helpen bij het verbergen van je geografische locatie."
 
 #: ../glade/optionswindow.glade.h:17
-#, fuzzy
 msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
 "suspicion or cause network connection problems."
@@ -157,26 +151,30 @@ msgstr "Alle MAC adressen spoofen"
 
 #: ../glade/optionswindow.glade.h:19
 msgid "Network configuration"
-msgstr ""
+msgstr "Netwerkconfiguratie"
 
 #: ../glade/optionswindow.glade.h:20
-#, fuzzy
 msgid ""
 "<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
 "\">Documentation</a>"
-msgstr "Help"
+msgstr "Documentatie"
 
 #: ../glade/optionswindow.glade.h:21
 msgid ""
 "This computer's Internet connection is clear of obstacles. You would like to "
 "connect directly to the Tor network."
 msgstr ""
+"De internetverbinding van deze computer is vrij van obstakels. U wilt direct "
+"met het Tor netwerk verbinden."
 
 #: ../glade/optionswindow.glade.h:22
 msgid ""
 "This computer's Internet connection is censored, filtered, or proxied. You "
 "need to configure bridge, firewall, or proxy settings."
 msgstr ""
+"De internetverbinding van deze computer is gecensureerd, gefiltered of loopt "
+"via een proxy. U dient de bridge, firewall of proxy instellingen te "
+"configureren."
 
 #: ../glade/langpanel.glade.h:1
 msgid " "
@@ -229,6 +227,3 @@ msgstr ""
 #: ../GdmGreeter/langpanel.py:181
 msgid "Other..."
 msgstr "Anders..."
-
-#~ msgid "<a href=\"doc/advanced_topics/mac_changer.en.html\">Help</a>"
-#~ msgstr "Help"
