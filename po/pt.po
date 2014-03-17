@@ -38,7 +38,7 @@ msgstr "Usar Persistência?"
 
 #: ../glade/persistencewindow.glade.h:5
 msgid "<a href=\"doc/first_steps/persistence/use.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/persistence/use.en.html\">Documentação</a>"
+msgstr "<a href=\"doc/first_steps/persistence/use.pt.html\">Documentação</a>"
 
 #: ../glade/persistencewindow.glade.h:6
 msgid "Yes"
@@ -73,7 +73,7 @@ msgid ""
 "<a href=\"doc/first_steps/startup_options/administration_password.en.html"
 "\">Documentation</a>"
 msgstr ""
-"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
+"<a href=\"doc/first_steps/startup_options/administration_password.pt.html"
 "\">Documentação</a>"
 
 #: ../glade/optionswindow.glade.h:5
@@ -107,7 +107,7 @@ msgid ""
 "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
 "\">Documentation</a>"
 msgstr ""
-"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
+"<a href=\"doc/first_steps/startup_options/windows_camouflage.pt.html"
 "\">Documentação</a>"
 
 #: ../glade/optionswindow.glade.h:12
@@ -131,7 +131,7 @@ msgid ""
 "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
 "\">Documentation</a>"
 msgstr ""
-"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
+"<a href=\"doc/first_steps/startup_options/mac_spoofing.pt.html"
 "\">Documentação</a>"
 
 #: ../glade/optionswindow.glade.h:16
@@ -163,7 +163,7 @@ msgid ""
 "<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
 "\">Documentation</a>"
 msgstr ""
-"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
+"<a href=\"doc/first_steps/startup_options/network_configuration.pt.html"
 "\">Documentação</a>"
 
 #: ../glade/optionswindow.glade.h:21
