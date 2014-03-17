@@ -1,10 +1,13 @@
-tails-greeter (0.7.27+1~feature.6882.scrollable.options.1) feature-6882-scrollable-options; urgency=medium
+tails-greeter (0.7.27+1~feature.6882.scrollable.options.2) feature-6882-scrollable-options; urgency=medium
 
-  ** SNAPSHOT build @3edffd5b41d5a1e63a1ff9f9f3d5120b984d8428 **
+  ** SNAPSHOT build @5651d5bd5ce3b5e0e0a74ce80e55d309a185759e **
 
   * Add a GtkScrollableWindow around the options.
+  * Remove spurious whitespace that aligns text in a very weird way.
+  * Remove spurious packaging section.
+  * Remove inner border in options window.
 
- -- Tails developers <amnesia@boum.org>  Fri, 14 Mar 2014 18:46:25 +0100
+ -- Tails developers <amnesia@boum.org>  Mon, 17 Mar 2014 11:49:18 +0100
 
 tails-greeter (0.7.27) devel; urgency=medium
 
