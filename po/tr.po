@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-06 17:16+0100\n"
-"PO-Revision-Date: 2014-03-02 18:20+0000\n"
+"POT-Creation-Date: 2014-03-17 13:54+0100\n"
+"PO-Revision-Date: 2014-03-13 20:51+0000\n"
 "Last-Translator: cmldrs <cmldrs@yandex.com>\n"
 "Language-Team: Turkish (http://www.transifex.com/projects/p/torproject/"
 "language/tr/)\n"
@@ -39,9 +39,8 @@ msgid "Use persistence?"
 msgstr "Süreklilik kullan?"
 
 #: ../glade/persistencewindow.glade.h:5
-#, fuzzy
 msgid "<a href=\"doc/first_steps/persistence/use.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/persistence/use.en.html\">Yardım</a>"
+msgstr "<a href=\"doc/first_steps/persistence/use.en.html\">Belgesi</a>"
 
 #: ../glade/persistencewindow.glade.h:6
 msgid "Yes"
@@ -72,13 +71,12 @@ msgid "Administration password"
 msgstr "Yönetim parolası"
 
 #: ../glade/optionswindow.glade.h:4
-#, fuzzy
 msgid ""
 "<a href=\"doc/first_steps/startup_options/administration_password.en.html"
 "\">Documentation</a>"
 msgstr ""
 "<a href=\"doc/first_steps/startup_options/administration_password.en.html"
-"\">Yardım</a>"
+"\">Belgesi</a>"
 
 #: ../glade/optionswindow.glade.h:5
 msgid ""
@@ -103,18 +101,16 @@ msgid "<i>Passwords do not match</i>"
 msgstr "<i>Parolalar eşleşmiyor</i>"
 
 #: ../glade/optionswindow.glade.h:10
-#, fuzzy
 msgid "Windows camouflage"
-msgstr "Windows Kamuflaj"
+msgstr "Windows kamuflaj"
 
 #: ../glade/optionswindow.glade.h:11
-#, fuzzy
 msgid ""
 "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
 "\">Documentation</a>"
 msgstr ""
 "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
-"\">Yardım</a>"
+"\">Belgesi</a>"
 
 #: ../glade/optionswindow.glade.h:12
 msgid ""
@@ -133,13 +129,11 @@ msgid "MAC address spoofing"
 msgstr "MAC adresi yanıltma sinyali"
 
 #: ../glade/optionswindow.glade.h:15
-#, fuzzy
 msgid ""
 "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
 "\">Documentation</a>"
 msgstr ""
-"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
-"\">Yardım</a>"
+"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Belgesi</a>"
 
 #: ../glade/optionswindow.glade.h:16
 msgid ""
@@ -150,14 +144,12 @@ msgstr ""
 "gizler. Bu coğrafi konumunuzu gizlemenize yardımcı olabilir."
 
 #: ../glade/optionswindow.glade.h:17
-#, fuzzy
 msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
 "suspicion or cause network connection problems."
 msgstr ""
-"Bu MAC adreslerini yanıltmak genellikle güvenlidir, ama aynı zamanda şüphe "
-"uyandırabilir veya ağ bağlantısı sorunlarına neden olabilir. Bilgi için "
-"belgelere bakın"
+"Bu MAC adreslerini aldatma genellikle güvenlidir, ama aynı zamanda şüphe "
+"uyandırabilmektedir veya ağ bağlantısı sorunlarına neden olabilir."
 
 #: ../glade/optionswindow.glade.h:18
 msgid "Spoof all MAC addresses"
@@ -165,28 +157,31 @@ msgstr "Tüm MAC adreslerini yanıltma sinyali"
 
 #: ../glade/optionswindow.glade.h:19
 msgid "Network configuration"
-msgstr ""
+msgstr "Ağ yapılandırma"
 
 #: ../glade/optionswindow.glade.h:20
-#, fuzzy
 msgid ""
 "<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
 "\">Documentation</a>"
 msgstr ""
-"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
-"\">Yardım</a>"
+"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
+"\">Belgesi</a>"
 
 #: ../glade/optionswindow.glade.h:21
 msgid ""
 "This computer's Internet connection is clear of obstacles. You would like to "
 "connect directly to the Tor network."
 msgstr ""
+"Bu bilgisayarın Internet bağlantısı engellemeye açık. Doğrudan Tor ağına "
+"bağlanmak istiyormusunuz."
 
 #: ../glade/optionswindow.glade.h:22
 msgid ""
 "This computer's Internet connection is censored, filtered, or proxied. You "
 "need to configure bridge, firewall, or proxy settings."
 msgstr ""
+"Bu bilgisayarın Internet bağlantısı, sansürlendi, filtrelendi ya da taşındı. "
+"Köprü, güvenlik duvarı veya proxy ayarlarını yapılandırmanız gerekir."
 
 #: ../glade/langpanel.glade.h:1
 msgid " "
@@ -239,6 +234,3 @@ msgstr ""
 #: ../GdmGreeter/langpanel.py:181
 msgid "Other..."
 msgstr "Diğer..."
-
-#~ msgid "<a href=\"doc/advanced_topics/mac_changer.en.html\">Help</a>"
-#~ msgstr "<a href=\"doc/advanced_topics/mac_changer.en.html\">Yardım</a>"

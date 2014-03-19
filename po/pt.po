@@ -3,18 +3,18 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# vargaviktor <viktor.varga@gmail.com>, 2013
-# vargaviktor <viktor.varga@gmail.com>, 2012
+# André Monteiro <andre.monteir@gmail.com>, 2014
+# sierleunam <cfb53275@opayq.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-03-17 13:54+0100\n"
-"PO-Revision-Date: 2013-05-22 12:45+0000\n"
-"Last-Translator: vargaviktor <viktor.varga@gmail.com>\n"
-"Language-Team: Hungarian (http://www.transifex.com/projects/p/torproject/"
-"language/hu/)\n"
-"Language: hu\n"
+"PO-Revision-Date: 2014-03-14 12:10+0000\n"
+"Last-Translator: André Monteiro <andre.monteir@gmail.com>\n"
+"Language-Team: Portuguese (http://www.transifex.com/projects/p/torproject/"
+"language/pt/)\n"
+"Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -22,57 +22,59 @@ msgstr ""
 
 #: ../glade/persistencewindow.glade.h:1
 msgid "Forward"
-msgstr "Előre"
+msgstr "Avançar"
 
 #: ../glade/persistencewindow.glade.h:2 ../glade/optionswindow.glade.h:1
 msgid "Login"
-msgstr "Belépés"
+msgstr "Autenticação"
 
 #: ../glade/persistencewindow.glade.h:3 ../glade/optionswindow.glade.h:2
 msgid "Welcome to Tails"
-msgstr "Köszönjük a Trails-ben"
+msgstr "Bem-vindo ao Tails"
 
 #: ../glade/persistencewindow.glade.h:4
 msgid "Use persistence?"
-msgstr "Perzisztencia használata?"
+msgstr "Usar Persistência?"
 
 #: ../glade/persistencewindow.glade.h:5
 msgid "<a href=\"doc/first_steps/persistence/use.en.html\">Documentation</a>"
-msgstr ""
+msgstr "<a href=\"doc/first_steps/persistence/use.pt.html\">Documentação</a>"
 
 #: ../glade/persistencewindow.glade.h:6
 msgid "Yes"
-msgstr "Igen"
+msgstr "Sim"
 
 #: ../glade/persistencewindow.glade.h:7
 msgid "No"
-msgstr "Nem"
+msgstr "Não"
 
 #: ../glade/persistencewindow.glade.h:8
 msgid "Passphrase:"
-msgstr "Jelszó:"
+msgstr "Palavra-passe"
 
 #: ../glade/persistencewindow.glade.h:9
 msgid "Read-Only?"
-msgstr "Csak olvasható?"
+msgstr "Só de leitura?"
 
 #: ../glade/persistencewindow.glade.h:10
 msgid "<i>Wrong passphrase. Please try again.</i>"
-msgstr "<i>Hibás jelszó. Próbálja meg újra.</i>"
+msgstr "<i>Palavra-chave errada. Por favor tente novamente.</i>"
 
 #: ../glade/persistencewindow.glade.h:11
 msgid "More options?"
-msgstr "További beállítások?"
+msgstr "Mais Opções?"
 
 #: ../glade/optionswindow.glade.h:3
 msgid "Administration password"
-msgstr "Adminisztrátori jelszó"
+msgstr "Palavra-passe de administração"
 
 #: ../glade/optionswindow.glade.h:4
 msgid ""
 "<a href=\"doc/first_steps/startup_options/administration_password.en.html"
 "\">Documentation</a>"
 msgstr ""
+"<a href=\"doc/first_steps/startup_options/administration_password.pt.html"
+"\">Documentação</a>"
 
 #: ../glade/optionswindow.glade.h:5
 msgid ""
@@ -80,92 +82,105 @@ msgid ""
 "tasks.\n"
 "Otherwise it will be disabled for better security."
 msgstr ""
-"Adjon meg egy adminisztrátori jelszót az adminisztrációs feladatokhoz.\n"
-"\n"
-"Egyébként kikapcsolt, a magasabb biztonság érdekében."
+"Introduza uma palavra-passe de administração em caso de necessidade de "
+"efetuar tarefas administrativas.\n"
+"Caso contrário será desativado para maior segurança."
 
 #: ../glade/optionswindow.glade.h:7
 msgid "Password:"
-msgstr "Jelszó:"
+msgstr "Senha:"
 
 #: ../glade/optionswindow.glade.h:8
 msgid "Verify Password:"
-msgstr "Jelszó ellenőrzése:"
+msgstr "Verificar Senha:"
 
 #: ../glade/optionswindow.glade.h:9
 msgid "<i>Passwords do not match</i>"
-msgstr "<i>A jelszavak nem egyeznek</i>"
+msgstr "<i>Senhas não coincidem</i>"
 
 #: ../glade/optionswindow.glade.h:10
-#, fuzzy
 msgid "Windows camouflage"
-msgstr "Windows álcázás"
+msgstr "Camuflagem Windows"
 
 #: ../glade/optionswindow.glade.h:11
 msgid ""
 "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
 "\">Documentation</a>"
 msgstr ""
+"<a href=\"doc/first_steps/startup_options/windows_camouflage.pt.html"
+"\">Documentação</a>"
 
 #: ../glade/optionswindow.glade.h:12
 msgid ""
 "This option makes Tails look more like Microsoft Windows XP. This may be "
 "useful in public places in order to avoid attracting suspicion."
 msgstr ""
-"Ez az opció  a Tails-t a Microsoft Windows XP-hez hasonlóvá teszi. Ez fontos "
-"lehet publikus helyeken, ahol figyelmet kelthetünk fel."
+"Esta opção torna o Tails mais parecido com o Microsoft Windows XP. Isto pode "
+"ser útil em espaços públicos de modo a evitar ou atrair atenções."
 
 #: ../glade/optionswindow.glade.h:13
 msgid "Activate Microsoft Windows XP Camouflage"
-msgstr "Microsoft Windows XP álcázás bekapcsolása"
+msgstr "Ativar camuflagem Microsoft Windows XP"
 
 #: ../glade/optionswindow.glade.h:14
 msgid "MAC address spoofing"
-msgstr ""
+msgstr "Roubo de identidade MAC"
 
 #: ../glade/optionswindow.glade.h:15
 msgid ""
 "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
 "\">Documentation</a>"
 msgstr ""
+"<a href=\"doc/first_steps/startup_options/mac_spoofing.pt.html"
+"\">Documentação</a>"
 
 #: ../glade/optionswindow.glade.h:16
 msgid ""
 "Spoofing MAC addresses hides the serial number of your network cards to the "
 "local networks. This can help you hide your geographical location."
 msgstr ""
+"O roubo de identidade MAC esconde o número de série das placas de rede às "
+"redes locais. Isto pode ajudar a ocultar a sua localização geográfica."
 
 #: ../glade/optionswindow.glade.h:17
 msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
 "suspicion or cause network connection problems."
 msgstr ""
+"É geralmente seguro personificar endereços MAC, mas pode também levantar "
+"suspeitas ou causar problemas de rede."
 
 #: ../glade/optionswindow.glade.h:18
 msgid "Spoof all MAC addresses"
-msgstr ""
+msgstr "Personificar todos os endereços MAC"
 
 #: ../glade/optionswindow.glade.h:19
 msgid "Network configuration"
-msgstr ""
+msgstr "Configuração de rede"
 
 #: ../glade/optionswindow.glade.h:20
 msgid ""
 "<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
 "\">Documentation</a>"
 msgstr ""
+"<a href=\"doc/first_steps/startup_options/network_configuration.pt.html"
+"\">Documentação</a>"
 
 #: ../glade/optionswindow.glade.h:21
 msgid ""
 "This computer's Internet connection is clear of obstacles. You would like to "
 "connect directly to the Tor network."
 msgstr ""
+"A ligação deste computador à Internet está livre de obstáculos. Pode ligar-"
+"se diretamente à rede Tor."
 
 #: ../glade/optionswindow.glade.h:22
 msgid ""
 "This computer's Internet connection is censored, filtered, or proxied. You "
 "need to configure bridge, firewall, or proxy settings."
 msgstr ""
+"A ligação deste computador à Internet está censorada, filtrada ou "
+"redirecionada. Precisa de configurar ponte, firewall ou definições de proxy."
 
 #: ../glade/langpanel.glade.h:1
 msgid " "
@@ -173,15 +188,15 @@ msgstr " "
 
 #: ../glade/langpanel.glade.h:2 ../GdmGreeter/langpanel.py:42
 msgid "Language"
-msgstr "Nyelv"
+msgstr "Idioma"
 
 #: ../glade/langpanel.glade.h:3
 msgid "Locale"
-msgstr "Lokáció"
+msgstr "Localização"
 
 #: ../glade/langpanel.glade.h:4
 msgid "Layout"
-msgstr "Kiosztás"
+msgstr "Disposição"
 
 #: ../GdmGreeter/persistence.py:59
 #, python-format
@@ -189,7 +204,7 @@ msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
 msgstr ""
-"live-persist sikertelen a következő visszatérési kóddal: %(returncode)s:\n"
+"O live-persist falhou com o código de retorno %(returncode)s:\n"
 "%(stderr)s"
 
 #: ../GdmGreeter/persistence.py:99
@@ -199,7 +214,7 @@ msgid ""
 "%(stdout)s\n"
 "%(stderr)s"
 msgstr ""
-"cryptsetup sikertelen a következő visszatérési kóddal:  %(returncode)s:\n"
+"O cryptsetup falhou com o código de retorno %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
 
@@ -210,11 +225,11 @@ msgid ""
 "%(stdout)s\n"
 "%(stderr)s"
 msgstr ""
-"live-persist sikertelen a következő visszatérési kóddal:  %(returncode)s:\n"
+"O live-persist falhou com o código de retorno %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
 
 #: ../GdmGreeter/langpanel.py:124 ../GdmGreeter/langpanel.py:148
 #: ../GdmGreeter/langpanel.py:181
 msgid "Other..."
-msgstr "Egyéb..."
+msgstr "Outro..."

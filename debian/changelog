@@ -1,3 +1,19 @@
+tails-greeter (0.7.28) testing; urgency=medium
+
+  * tails 0.23 translation
+  * Add a GtkScrollableWindow around the options.
+  * Update POT and PO files.
+  * Remove spurious whitespace that aligns text in a very weird way.
+  * Remove spurious packaging section.
+  * Remove inner border in options window.
+  * Point to localized doc.
+  * Update POT and PO files.
+  * Unfuzzy translation.
+  * Import PO files from Transifex, update POT and PO files.
+  * Fix translated "Documentation" links.
+
+ -- Tails developers <amnesia@boum.org>  Mon, 17 Mar 2014 14:37:59 +0100
+
 tails-greeter (0.7.27+wheezy3) feature-wheezy; urgency=medium
 
   * Fix one more misspelled WebKit occurrence.

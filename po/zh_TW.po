@@ -5,13 +5,14 @@
 # Translators:
 # chinrur <chinrur@gmail.com>, 2013
 # wongyinho981 <wongyinho981@gmail.com>, 2013
+# xatier 同學@提不起勁 <xatierlike@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-06 17:16+0100\n"
-"PO-Revision-Date: 2013-08-27 23:50+0000\n"
-"Last-Translator: chinrur <chinrur@gmail.com>\n"
+"POT-Creation-Date: 2014-03-17 13:54+0100\n"
+"PO-Revision-Date: 2014-03-13 12:00+0000\n"
+"Last-Translator: xatier 同學@提不起勁 <xatierlike@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/"
 "torproject/language/zh_TW/)\n"
 "Language: zh_TW\n"
@@ -38,7 +39,7 @@ msgstr "使用持久性？"
 
 #: ../glade/persistencewindow.glade.h:5
 msgid "<a href=\"doc/first_steps/persistence/use.en.html\">Documentation</a>"
-msgstr ""
+msgstr "<a href=\"doc/first_steps/persistence/use.en.html\">文件</a>"
 
 #: ../glade/persistencewindow.glade.h:6
 msgid "Yes"
@@ -73,6 +74,8 @@ msgid ""
 "<a href=\"doc/first_steps/startup_options/administration_password.en.html"
 "\">Documentation</a>"
 msgstr ""
+"<a href=\"doc/first_steps/startup_options/administration_password.en.html\">"
+"文件</a>"
 
 #: ../glade/optionswindow.glade.h:5
 msgid ""
@@ -96,15 +99,16 @@ msgid "<i>Passwords do not match</i>"
 msgstr "<i>密碼不符合</i>"
 
 #: ../glade/optionswindow.glade.h:10
-#, fuzzy
 msgid "Windows camouflage"
-msgstr "偽裝成Windows"
+msgstr "視窗偽裝"
 
 #: ../glade/optionswindow.glade.h:11
 msgid ""
 "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
 "\">Documentation</a>"
 msgstr ""
+"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">文件</"
+"a>"
 
 #: ../glade/optionswindow.glade.h:12
 msgid ""
@@ -118,51 +122,58 @@ msgstr "開啟Microsoft Windows XP偽裝"
 
 #: ../glade/optionswindow.glade.h:14
 msgid "MAC address spoofing"
-msgstr ""
+msgstr "MAC 地址欺騙"
 
 #: ../glade/optionswindow.glade.h:15
 msgid ""
 "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
 "\">Documentation</a>"
 msgstr ""
+"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">文件</a>"
 
 #: ../glade/optionswindow.glade.h:16
 msgid ""
 "Spoofing MAC addresses hides the serial number of your network cards to the "
 "local networks. This can help you hide your geographical location."
 msgstr ""
+"MAC 地址欺騙可以在區域網路中隱藏您的網路卡流水號。可以幫助您隱藏地理定位資"
+"訊。"
 
 #: ../glade/optionswindow.glade.h:17
 msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
 "suspicion or cause network connection problems."
-msgstr ""
+msgstr "一般來說 MAC address spoofing 是安全的，但是可能會造成網路連線問題。"
 
 #: ../glade/optionswindow.glade.h:18
 msgid "Spoof all MAC addresses"
-msgstr ""
+msgstr "Spoof 所有的 MAC 地址"
 
 #: ../glade/optionswindow.glade.h:19
 msgid "Network configuration"
-msgstr ""
+msgstr "網路設定"
 
 #: ../glade/optionswindow.glade.h:20
 msgid ""
 "<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
 "\">Documentation</a>"
 msgstr ""
+"<a href=\"doc/first_steps/startup_options/network_configuration.en.html\">文"
+"件</a>"
 
 #: ../glade/optionswindow.glade.h:21
 msgid ""
 "This computer's Internet connection is clear of obstacles. You would like to "
 "connect directly to the Tor network."
-msgstr ""
+msgstr "這部電腦的連線是暢通的。您可能想直接連線到 Tor 網路。"
 
 #: ../glade/optionswindow.glade.h:22
 msgid ""
 "This computer's Internet connection is censored, filtered, or proxied. You "
 "need to configure bridge, firewall, or proxy settings."
 msgstr ""
+"這部電腦的網路連線是被檢查、過濾、或是有代理的。您需要設定網橋、防火牆、或是"
+"代理。"
 
 #: ../glade/langpanel.glade.h:1
 msgid " "

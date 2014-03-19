@@ -3,20 +3,22 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
+# ihints <ihints@gmail.com>, 2014
 # simabull tsai, 2013
 # simabull tsai, 2013
 # ln191810 <ln191810@gmail.com>, 2012
 # ln191810 <ln191810@gmail.com>, 2012
 # xtoaster <zhazhenzhong@gmail.com>, 2012
+# baoliandeng <nkzhangjg@gmail.com>, 2014
 # Y.F Yang <yfdyh000@gmail.com>, 2014
 # xtoaster <zhazhenzhong@gmail.com>, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-06 17:16+0100\n"
-"PO-Revision-Date: 2014-02-25 00:50+0000\n"
-"Last-Translator: Y.F Yang <yfdyh000@gmail.com>\n"
+"POT-Creation-Date: 2014-03-17 13:54+0100\n"
+"PO-Revision-Date: 2014-03-13 07:01+0000\n"
+"Last-Translator: ihints <ihints@gmail.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/projects/p/"
 "torproject/language/zh_CN/)\n"
 "Language: zh_CN\n"
@@ -42,9 +44,8 @@ msgid "Use persistence?"
 msgstr "持久保存工作数据？"
 
 #: ../glade/persistencewindow.glade.h:5
-#, fuzzy
 msgid "<a href=\"doc/first_steps/persistence/use.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/persistence/use.en.html\">帮助</a>"
+msgstr "<a href=\"doc/first_steps/persistence/use.en.html\">Documentation</a>"
 
 #: ../glade/persistencewindow.glade.h:6
 msgid "Yes"
@@ -75,13 +76,12 @@ msgid "Administration password"
 msgstr "管理员密码"
 
 #: ../glade/optionswindow.glade.h:4
-#, fuzzy
 msgid ""
 "<a href=\"doc/first_steps/startup_options/administration_password.en.html"
 "\">Documentation</a>"
 msgstr ""
-"<a href=\"doc/first_steps/startup_options/administration_password.en.html\">"
-"帮助</a>"
+"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
+"\">Documentation</a>"
 
 #: ../glade/optionswindow.glade.h:5
 msgid ""
@@ -104,17 +104,15 @@ msgid "<i>Passwords do not match</i>"
 msgstr "<i>密码不正确</i>"
 
 #: ../glade/optionswindow.glade.h:10
-#, fuzzy
 msgid "Windows camouflage"
-msgstr "伪装 Windows"
+msgstr "伪装Windows"
 
 #: ../glade/optionswindow.glade.h:11
-#, fuzzy
 msgid ""
 "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
 "\">Documentation</a>"
 msgstr ""
-"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">帮助</"
+"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">文档</"
 "a>"
 
 #: ../glade/optionswindow.glade.h:12
@@ -134,13 +132,12 @@ msgid "MAC address spoofing"
 msgstr "MAC 地址欺骗"
 
 #: ../glade/optionswindow.glade.h:15
-#, fuzzy
 msgid ""
 "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
 "\">Documentation</a>"
 msgstr ""
-"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">帮助</"
-"a>"
+"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
+"\">Documentation</a>"
 
 #: ../glade/optionswindow.glade.h:16
 msgid ""
@@ -151,7 +148,6 @@ msgstr ""
 "置。"
 
 #: ../glade/optionswindow.glade.h:17
-#, fuzzy
 msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
 "suspicion or cause network connection problems."
@@ -165,28 +161,27 @@ msgstr "欺骗所有 MAC 地址"
 
 #: ../glade/optionswindow.glade.h:19
 msgid "Network configuration"
-msgstr ""
+msgstr "网络确认"
 
 #: ../glade/optionswindow.glade.h:20
-#, fuzzy
 msgid ""
 "<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
 "\">Documentation</a>"
 msgstr ""
-"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">帮助</"
-"a>"
+"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
+"\">Documentation</a>"
 
 #: ../glade/optionswindow.glade.h:21
 msgid ""
 "This computer's Internet connection is clear of obstacles. You would like to "
 "connect directly to the Tor network."
-msgstr ""
+msgstr "该电脑的连接故障已排除，您可以直接连接Tor网络。"
 
 #: ../glade/optionswindow.glade.h:22
 msgid ""
 "This computer's Internet connection is censored, filtered, or proxied. You "
 "need to configure bridge, firewall, or proxy settings."
-msgstr ""
+msgstr "该电脑的互联网链接被屏蔽。你需要配置网桥、防火墙或者代理设置。"
 
 #: ../glade/langpanel.glade.h:1
 msgid " "
@@ -239,6 +234,3 @@ msgstr ""
 #: ../GdmGreeter/langpanel.py:181
 msgid "Other..."
 msgstr "其他..."
-
-#~ msgid "<a href=\"doc/advanced_topics/mac_changer.en.html\">Help</a>"
-#~ msgstr "<a href=\"doc/advanced_topics/mac_changer.en.html\">帮助</a>"

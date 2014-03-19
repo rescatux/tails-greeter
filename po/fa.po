@@ -3,15 +3,16 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
+# signal89 <ali.faraji90@gmail.com>, 2014
 # desmati <desmati@gmail.com>, 2014
 # zendegi <hamahangi@posteo.eu>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-06 17:16+0100\n"
-"PO-Revision-Date: 2014-02-24 14:29+0000\n"
-"Last-Translator: desmati <desmati@gmail.com>\n"
+"POT-Creation-Date: 2014-03-17 13:54+0100\n"
+"PO-Revision-Date: 2014-03-10 09:30+0000\n"
+"Last-Translator: signal89 <ali.faraji90@gmail.com>\n"
 "Language-Team: Persian (http://www.transifex.com/projects/p/torproject/"
 "language/fa/)\n"
 "Language: fa\n"
@@ -37,9 +38,8 @@ msgid "Use persistence?"
 msgstr "تداوم داده‌ها بكار بردن؟"
 
 #: ../glade/persistencewindow.glade.h:5
-#, fuzzy
 msgid "<a href=\"doc/first_steps/persistence/use.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/persistence/use.en.html\">راهنما</a>"
+msgstr "<a href=\"doc/first_steps/persistence/use.en.html\">مستندات</a>"
 
 #: ../glade/persistencewindow.glade.h:6
 msgid "Yes"
@@ -70,13 +70,12 @@ msgid "Administration password"
 msgstr "رمز عبور مديريت"
 
 #: ../glade/optionswindow.glade.h:4
-#, fuzzy
 msgid ""
 "<a href=\"doc/first_steps/startup_options/administration_password.en.html"
 "\">Documentation</a>"
 msgstr ""
 "<a href=\"doc/first_steps/startup_options/administration_password.en.html"
-"\">راهنما</a>"
+"\">مستندات</a>"
 
 #: ../glade/optionswindow.glade.h:5
 msgid ""
@@ -101,18 +100,16 @@ msgid "<i>Passwords do not match</i>"
 msgstr "<i>رمزهاى عبور با هم مطابقت ندارند</i>"
 
 #: ../glade/optionswindow.glade.h:10
-#, fuzzy
 msgid "Windows camouflage"
-msgstr "پوشش ویندوز"
+msgstr "استتار پنجره"
 
 #: ../glade/optionswindow.glade.h:11
-#, fuzzy
 msgid ""
 "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
 "\">Documentation</a>"
 msgstr ""
 "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
-"\">راهنما</a>"
+"\">مستندات</a>"
 
 #: ../glade/optionswindow.glade.h:12
 msgid ""
@@ -132,13 +129,11 @@ msgid "MAC address spoofing"
 msgstr "جعل آدرس مک"
 
 #: ../glade/optionswindow.glade.h:15
-#, fuzzy
 msgid ""
 "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
 "\">Documentation</a>"
 msgstr ""
-"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
-"\">راهنما</a>"
+"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">مستندات</a>"
 
 #: ../glade/optionswindow.glade.h:16
 msgid ""
@@ -149,13 +144,12 @@ msgstr ""
 "ترتیب می توانید موقعیت جغرافیایی خود را پنهان کنید."
 
 #: ../glade/optionswindow.glade.h:17
-#, fuzzy
 msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
 "suspicion or cause network connection problems."
 msgstr ""
-"اگر آدرس مک را جعل کنید، خیلی امن تر است، اما ممکن است شک برانگیز باشد و یا "
-"مشکلاتی در اتصال به اینترنت ایجاد کند. به مستندات مراجعه کنید."
+"به‌طور کلی استفاده ازقابلیت MAC Spoofing امن‌تر است اما این امکان ممکن است "
+"مشکوک تلقی شود و یا باعث ایجاد مشکل در ارتباط گردد."
 
 #: ../glade/optionswindow.glade.h:18
 msgid "Spoof all MAC addresses"
@@ -163,28 +157,31 @@ msgstr "همه آدرس های مک را جعل کن"
 
 #: ../glade/optionswindow.glade.h:19
 msgid "Network configuration"
-msgstr ""
+msgstr "تنظیمات شبکه"
 
 #: ../glade/optionswindow.glade.h:20
-#, fuzzy
 msgid ""
 "<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
 "\">Documentation</a>"
 msgstr ""
-"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
-"\">راهنما</a>"
+"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
+"\">مستندات</a>"
 
 #: ../glade/optionswindow.glade.h:21
 msgid ""
 "This computer's Internet connection is clear of obstacles. You would like to "
 "connect directly to the Tor network."
 msgstr ""
+"اتصال اینترنت این رایانه بدون مانع است. آیا مایلید مستقیم به شبکه تور متصل "
+"شوید؟"
 
 #: ../glade/optionswindow.glade.h:22
 msgid ""
 "This computer's Internet connection is censored, filtered, or proxied. You "
 "need to configure bridge, firewall, or proxy settings."
 msgstr ""
+"اتصال اینترنت این رایانه سانسور و یا فیلتر شده است. شما باید تنظیمات پل، "
+"فایروال و یا پروکسی را انجام دهید."
 
 #: ../glade/langpanel.glade.h:1
 msgid " "
@@ -237,6 +234,3 @@ msgstr ""
 #: ../GdmGreeter/langpanel.py:181
 msgid "Other..."
 msgstr "دیگر..."
-
-#~ msgid "<a href=\"doc/advanced_topics/mac_changer.en.html\">Help</a>"
-#~ msgstr "<a href=\"doc/advanced_topics/mac_changer.en.html\">راهنما</a>"
