@@ -50,13 +50,11 @@
           <object class="GtkFrame" id="options_frame">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="shadow">none</property>
+            <property name="label_xalign">0</property>
             <child>
               <object class="GtkScrolledWindow" id="options_scroll">
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
-                <property name="hscrollbar_policy">automatic</property>
-                <property name="vscrollbar_policy">automatic</property>
                 <child>
                   <object class="GtkViewport" id="options_view">
                     <property name="visible">True</property>
@@ -116,14 +114,14 @@
                                     <property name="visible">True</property>
                                     <property name="can_focus">True</property>
                                     <property name="xalign">0</property>
+                                    <property name="label" translatable="yes">&lt;a href="doc/first_steps/startup_options/administration_password.en.html"&gt;Documentation&lt;/a&gt;</property>
                                     <property name="use_markup">True</property>
-                                    <property name="label" translatable="yes">&lt;a href=&quot;doc/first_steps/startup_options/administration_password.en.html&quot;&gt;Documentation&lt;/a&gt;</property>
                                     <signal name="activate-link" handler="cb_doc_handler" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">False</property>
                                     <property name="fill">True</property>
-                                    <property name="pack_type">GTK_PACK_END</property>
+                                    <property name="pack_type">end</property>
                                     <property name="position">1</property>
                                   </packing>
                                 </child>
@@ -166,13 +164,11 @@ Otherwise it will be disabled for better security.</property>
                                     <property name="invisible_char_set">True</property>
                                     <property name="primary_icon_activatable">False</property>
                                     <property name="secondary_icon_activatable">False</property>
-                                    <property name="primary_icon_sensitive">True</property>
-                                    <property name="secondary_icon_sensitive">True</property>
                                   </object>
                                   <packing>
                                     <property name="left_attach">1</property>
                                     <property name="right_attach">2</property>
-                                    <property name="y_options"></property>
+                                    <property name="y_options"/>
                                   </packing>
                                 </child>
                                 <child>
@@ -183,8 +179,6 @@ Otherwise it will be disabled for better security.</property>
                                     <property name="invisible_char_set">True</property>
                                     <property name="primary_icon_activatable">False</property>
                                     <property name="secondary_icon_activatable">False</property>
-                                    <property name="primary_icon_sensitive">True</property>
-                                    <property name="secondary_icon_sensitive">True</property>
                                   </object>
                                   <packing>
                                     <property name="left_attach">1</property>
@@ -303,14 +297,14 @@ Otherwise it will be disabled for better security.</property>
                                     <property name="visible">True</property>
                                     <property name="can_focus">True</property>
                                     <property name="xalign">0</property>
+                                    <property name="label" translatable="yes">&lt;a href="doc/first_steps/startup_options/windows_camouflage.en.html"&gt;Documentation&lt;/a&gt;</property>
                                     <property name="use_markup">True</property>
-                                    <property name="label" translatable="yes">&lt;a href=&quot;doc/first_steps/startup_options/windows_camouflage.en.html&quot;&gt;Documentation&lt;/a&gt;</property>
                                     <signal name="activate-link" handler="cb_doc_handler" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">False</property>
                                     <property name="fill">True</property>
-                                    <property name="pack_type">GTK_PACK_END</property>
+                                    <property name="pack_type">end</property>
                                     <property name="position">1</property>
                                   </packing>
                                 </child>
@@ -338,10 +332,12 @@ Otherwise it will be disabled for better security.</property>
                             </child>
                             <child>
                               <object class="GtkCheckButton" id="camouflage_checkbox">
+                                <property name="label" translatable="yes">Activate Microsoft Windows XP Camouflage</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
+                                <property name="receives_default">False</property>
                                 <property name="xalign">0</property>
-                                <property name="label" translatable="yes">Activate Microsoft Windows XP Camouflage</property>
+                                <property name="draw_indicator">False</property>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -350,6 +346,11 @@ Otherwise it will be disabled for better security.</property>
                               </packing>
                             </child>
                           </object>
+                          <packing>
+                            <property name="expand">True</property>
+                            <property name="fill">True</property>
+                            <property name="position">2</property>
+                          </packing>
                         </child>
                         <child>
                           <object class="GtkVBox" id="macspoof_box">
@@ -382,14 +383,14 @@ Otherwise it will be disabled for better security.</property>
                                     <property name="visible">True</property>
                                     <property name="can_focus">True</property>
                                     <property name="xalign">0</property>
+                                    <property name="label" translatable="yes">&lt;a href="doc/first_steps/startup_options/mac_spoofing.en.html"&gt;Documentation&lt;/a&gt;</property>
                                     <property name="use_markup">True</property>
-                                    <property name="label" translatable="yes">&lt;a href=&quot;doc/first_steps/startup_options/mac_spoofing.en.html&quot;&gt;Documentation&lt;/a&gt;</property>
                                     <signal name="activate-link" handler="cb_doc_handler" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">False</property>
                                     <property name="fill">True</property>
-                                    <property name="pack_type">GTK_PACK_END</property>
+                                    <property name="pack_type">end</property>
                                     <property name="position">1</property>
                                   </packing>
                                 </child>
@@ -432,10 +433,12 @@ Otherwise it will be disabled for better security.</property>
                             </child>
                             <child>
                               <object class="GtkCheckButton" id="macspoof_checkbox">
+                                <property name="label" translatable="yes">Spoof all MAC addresses</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
+                                <property name="receives_default">False</property>
                                 <property name="xalign">0</property>
-                                <property name="label" translatable="yes">Spoof all MAC addresses</property>
+                                <property name="draw_indicator">False</property>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -444,6 +447,11 @@ Otherwise it will be disabled for better security.</property>
                               </packing>
                             </child>
                           </object>
+                          <packing>
+                            <property name="expand">True</property>
+                            <property name="fill">True</property>
+                            <property name="position">3</property>
+                          </packing>
                         </child>
                         <child>
                           <object class="GtkVBox" id="netconf_box">
@@ -476,14 +484,14 @@ Otherwise it will be disabled for better security.</property>
                                     <property name="visible">True</property>
                                     <property name="can_focus">True</property>
                                     <property name="xalign">0</property>
+                                    <property name="label" translatable="yes">&lt;a href="doc/first_steps/startup_options/network_configuration.en.html"&gt;Documentation&lt;/a&gt;</property>
                                     <property name="use_markup">True</property>
-                                    <property name="label" translatable="yes">&lt;a href=&quot;doc/first_steps/startup_options/network_configuration.en.html&quot;&gt;Documentation&lt;/a&gt;</property>
                                     <signal name="activate-link" handler="cb_doc_handler" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">False</property>
                                     <property name="fill">True</property>
-                                    <property name="pack_type">GTK_PACK_END</property>
+                                    <property name="pack_type">end</property>
                                     <property name="position">1</property>
                                   </packing>
                                 </child>
@@ -498,10 +506,13 @@ Otherwise it will be disabled for better security.</property>
                               <object class="GtkRadioButton" id="netconf_direct">
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
+                                <property name="receives_default">False</property>
                                 <property name="xalign">0</property>
+                                <property name="draw_indicator">False</property>
                                 <child>
                                   <object class="GtkLabel" id="netconf_direct_label">
                                     <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
                                     <property name="label" translatable="yes">This computer's Internet connection is clear of obstacles. You would like to connect directly to the Tor network.</property>
                                     <property name="wrap">True</property>
                                     <property name="width_chars">72</property>
@@ -516,13 +527,16 @@ Otherwise it will be disabled for better security.</property>
                             </child>
                             <child>
                               <object class="GtkRadioButton" id="netconf_obstacle">
-                                <property name="group">netconf_direct</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
+                                <property name="receives_default">False</property>
                                 <property name="xalign">0</property>
+                                <property name="draw_indicator">False</property>
+                                <property name="group">netconf_direct</property>
                                 <child>
                                   <object class="GtkLabel" id="netconf_obstacle_label">
                                     <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
                                     <property name="label" translatable="yes">This computer's Internet connection is censored, filtered, or proxied. You need to configure bridge, firewall, or proxy settings.</property>
                                     <property name="wrap">True</property>
                                     <property name="width_chars">72</property>
@@ -536,19 +550,24 @@ Otherwise it will be disabled for better security.</property>
                               </packing>
                             </child>
                           </object>
+                          <packing>
+                            <property name="expand">True</property>
+                            <property name="fill">True</property>
+                            <property name="position">4</property>
+                          </packing>
                         </child>
                       </object>
                     </child>
                   </object>
                 </child>
               </object>
-              <packing>
-                <property name="expand">True</property>
-                <property name="fill">True</property>
-                <property name="position">2</property>
-              </packing>
             </child>
           </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
         </child>
       </object>
     </child>
