@@ -72,7 +72,7 @@ class OptionsWindow(TranslatableWindow):
         # what GTK thinks is necessary for the window to fit
         # everything without showing a scrollbar, if that's possible.
         nice_width = 700
-        nice_height = 700
+        nice_height = 740
 
         width_request = min(nice_width, screen_width)
         height_request = min(nice_height, free_height)
@@ -80,8 +80,8 @@ class OptionsWindow(TranslatableWindow):
         # For low (height-wise) resolution we have to un-center the
         # dialog and move it to the top of the screen, so it won't
         # shadow the language panel.
-        if screen_height < 768:
-            self.dialog.set_position(gtk.WIN_POS_NONE)
+        if screen_height - height_request < 2*langpanel_height:
+            self.dialog.set_position(Gtk.WindowPosition.NONE)
             self.dialog.move((screen_width-width_request)/2, 0)
 
         self.dialog.set_size_request(width_request, height_request)
