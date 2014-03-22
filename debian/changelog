@@ -1,3 +1,11 @@
+tails-greeter (0.7.28+wheezy2) feature-wheezy; urgency=medium
+
+  * Bump the options window "nice height" for Wheezy.
+  * Constant has moved in Wheezy's PyGTK.
+  * Be more intelligent when to *not* un-center the options window.
+
+ -- Tails developers <amnesia@boum.org>  Sat, 22 Mar 2014 12:15:06 +0100
+
 tails-greeter (0.7.28+wheezy1) feature-wheezy; urgency=medium
 
   * Save optionswindow.glade with glade3.
