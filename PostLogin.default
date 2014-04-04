@@ -142,7 +142,7 @@ else
 fi
 
 # Reload CUPS configuration to take persistent printers into account if necessary
-if grep -qs '^/etc/cups\s\+' /live/persistence/*_unlocked/live-persistence.conf ; then
+if grep -qs '^/etc/cups\s\+' /live/persistence/*_unlocked/persistence.conf ; then
     service cups force-reload
 fi
 
