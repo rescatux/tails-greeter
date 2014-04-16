@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
+# Animalcustomize <inacho24@hotmail.com>, 2014
 # Envite <envite@rolamasao.org>, 2013
 # strel, 2013-2014
 # strel, 2012-2013
@@ -10,9 +11,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-17 13:54+0100\n"
-"PO-Revision-Date: 2014-03-07 17:00+0000\n"
-"Last-Translator: strel\n"
+"POT-Creation-Date: 2014-04-16 16:16+0200\n"
+"PO-Revision-Date: 2014-04-12 17:20+0000\n"
+"Last-Translator: Animalcustomize <inacho24@hotmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/projects/p/torproject/"
 "language/es/)\n"
 "Language: es\n"
@@ -27,7 +28,7 @@ msgstr "Adelante"
 
 #: ../glade/persistencewindow.glade.h:2 ../glade/optionswindow.glade.h:1
 msgid "Login"
-msgstr "Ingresar"
+msgstr "Entrar"
 
 #: ../glade/persistencewindow.glade.h:3 ../glade/optionswindow.glade.h:2
 msgid "Welcome to Tails"
@@ -39,7 +40,7 @@ msgstr "¿Usar persistencia?"
 
 #: ../glade/persistencewindow.glade.h:5
 msgid "<a href=\"doc/first_steps/persistence/use.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/persistence/use.en.html\">Documentación</a>"
+msgstr "<a href=\"doc/first_steps/persistence/use.es.html\">Documentación</a>"
 
 #: ../glade/persistencewindow.glade.h:6
 msgid "Yes"
@@ -74,7 +75,7 @@ msgid ""
 "<a href=\"doc/first_steps/startup_options/administration_password.en.html"
 "\">Documentation</a>"
 msgstr ""
-"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
+"<a href=\"doc/first_steps/startup_options/administration_password.es.html"
 "\">Documentación</a>"
 
 #: ../glade/optionswindow.glade.h:5
@@ -108,7 +109,7 @@ msgid ""
 "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
 "\">Documentation</a>"
 msgstr ""
-"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
+"<a href=\"doc/first_steps/startup_options/windows_camouflage.es.html"
 "\">Documentación</a>"
 
 #: ../glade/optionswindow.glade.h:12
@@ -132,7 +133,7 @@ msgid ""
 "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
 "\">Documentation</a>"
 msgstr ""
-"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
+"<a href=\"doc/first_steps/startup_options/mac_spoofing.es.html"
 "\">Documentación</a>"
 
 #: ../glade/optionswindow.glade.h:16
@@ -165,7 +166,7 @@ msgid ""
 "<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
 "\">Documentation</a>"
 msgstr ""
-"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
+"<a href=\"doc/first_steps/startup_options/network_configuration.es.html"
 "\">Documentación</a>"
 
 #: ../glade/optionswindow.glade.h:21

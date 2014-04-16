@@ -3,77 +3,78 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# Martin Srebotnjak <miles@filmsi.net>, 2013
-# ajitam <matija@srebrni-galeb.si>, 2013
+# Andi Chandler <andi@gowling.com>, 2014
+# richardshaylor <rshaylor@me.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-04-16 16:16+0200\n"
-"PO-Revision-Date: 2013-09-19 00:40+0000\n"
-"Last-Translator: ajitam <matija@srebrni-galeb.si>\n"
-"Language-Team: Slovenian (http://www.transifex.com/projects/p/torproject/"
-"language/sl/)\n"
-"Language: sl\n"
+"PO-Revision-Date: 2014-04-10 10:00+0000\n"
+"Last-Translator: Andi Chandler <andi@gowling.com>\n"
+"Language-Team: English (United Kingdom) (http://www.transifex.com/projects/p/"
+"torproject/language/en_GB/)\n"
+"Language: en_GB\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
-"%100==4 ? 2 : 3);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../glade/persistencewindow.glade.h:1
 msgid "Forward"
-msgstr "Naprej"
+msgstr "Forward"
 
 #: ../glade/persistencewindow.glade.h:2 ../glade/optionswindow.glade.h:1
 msgid "Login"
-msgstr "Prijava"
+msgstr "Login"
 
 #: ../glade/persistencewindow.glade.h:3 ../glade/optionswindow.glade.h:2
 msgid "Welcome to Tails"
-msgstr "Dobrodošli v Tails"
+msgstr "Welcome to Tails"
 
 #: ../glade/persistencewindow.glade.h:4
 msgid "Use persistence?"
-msgstr "Trajna namestitev?"
+msgstr "Use persistence?"
 
 #: ../glade/persistencewindow.glade.h:5
 msgid "<a href=\"doc/first_steps/persistence/use.en.html\">Documentation</a>"
-msgstr ""
+msgstr "<a href=\"doc/first_steps/persistence/use.en.html\">Documentation</a>"
 
 #: ../glade/persistencewindow.glade.h:6
 msgid "Yes"
-msgstr "Da"
+msgstr "Yes"
 
 #: ../glade/persistencewindow.glade.h:7
 msgid "No"
-msgstr "Ne"
+msgstr "No"
 
 #: ../glade/persistencewindow.glade.h:8
 msgid "Passphrase:"
-msgstr "Geslo:"
+msgstr "Passphrase:"
 
 #: ../glade/persistencewindow.glade.h:9
 msgid "Read-Only?"
-msgstr "Samo za branje?"
+msgstr "Read-Only?"
 
 #: ../glade/persistencewindow.glade.h:10
 msgid "<i>Wrong passphrase. Please try again.</i>"
-msgstr "Napačno geslo. Poizkusite ponovno."
+msgstr "<i>Wrong passphrase. Please try again.</i>"
 
 #: ../glade/persistencewindow.glade.h:11
 msgid "More options?"
-msgstr "Dodatne možnosti?"
+msgstr "More options?"
 
 #: ../glade/optionswindow.glade.h:3
 msgid "Administration password"
-msgstr "Geslo upravitelja"
+msgstr "Administration password"
 
 #: ../glade/optionswindow.glade.h:4
 msgid ""
 "<a href=\"doc/first_steps/startup_options/administration_password.en.html"
 "\">Documentation</a>"
 msgstr ""
+"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
+"\">Documentation</a>"
 
 #: ../glade/optionswindow.glade.h:5
 msgid ""
@@ -81,91 +82,105 @@ msgid ""
 "tasks.\n"
 "Otherwise it will be disabled for better security."
 msgstr ""
-"Če se želite lotiti upraviteljskih opravil, vnesite upraviteljsko geslo.⏎\n"
-"Sicer bo slednje zavoljo večje varnosti onemogočeno."
+"Enter an administration password in case you need to perform administration "
+"tasks.\n"
+"Otherwise it will be disabled for better security."
 
 #: ../glade/optionswindow.glade.h:7
 msgid "Password:"
-msgstr "Geslo:"
+msgstr "Password:"
 
 #: ../glade/optionswindow.glade.h:8
 msgid "Verify Password:"
-msgstr "Ponoven vnos gesla:"
+msgstr "Verify Password:"
 
 #: ../glade/optionswindow.glade.h:9
 msgid "<i>Passwords do not match</i>"
-msgstr "<i>Gesli se ne ujemata</i>"
+msgstr "<i>Passwords do not match</i>"
 
 #: ../glade/optionswindow.glade.h:10
-#, fuzzy
 msgid "Windows camouflage"
-msgstr "Windows Camouflage"
+msgstr "Windows camouflage"
 
 #: ../glade/optionswindow.glade.h:11
 msgid ""
 "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
 "\">Documentation</a>"
 msgstr ""
+"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
+"\">Documentation</a>"
 
 #: ../glade/optionswindow.glade.h:12
 msgid ""
 "This option makes Tails look more like Microsoft Windows XP. This may be "
 "useful in public places in order to avoid attracting suspicion."
 msgstr ""
-"S to možnostjo je Tails videti bolj podoben Microsoft Windows XP. To je "
-"lahko uporabno na javnih mestih, da ni videti sumljivo."
+"This option makes Tails look more like Microsoft Windows XP. This may be "
+"useful in public places in order to avoid attracting suspicion."
 
 #: ../glade/optionswindow.glade.h:13
 msgid "Activate Microsoft Windows XP Camouflage"
-msgstr "Aktiviraj Microsoft Windows XP Camouflage"
+msgstr "Activate Microsoft Windows XP Camouflage"
 
 #: ../glade/optionswindow.glade.h:14
 msgid "MAC address spoofing"
-msgstr ""
+msgstr "MAC address spoofing"
 
 #: ../glade/optionswindow.glade.h:15
 msgid ""
 "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
 "\">Documentation</a>"
 msgstr ""
+"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
+"\">Documentation</a>"
 
 #: ../glade/optionswindow.glade.h:16
 msgid ""
 "Spoofing MAC addresses hides the serial number of your network cards to the "
 "local networks. This can help you hide your geographical location."
 msgstr ""
+"Spoofing MAC addresses hides the serial number of your network cards to the "
+"local networks. This can help you hide your geographical location."
 
 #: ../glade/optionswindow.glade.h:17
 msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
 "suspicion or cause network connection problems."
 msgstr ""
+"It is generally safer to spoof MAC addresses, but it might also raise "
+"suspicion or cause network connection problems."
 
 #: ../glade/optionswindow.glade.h:18
 msgid "Spoof all MAC addresses"
-msgstr ""
+msgstr "Spoof all MAC addresses"
 
 #: ../glade/optionswindow.glade.h:19
 msgid "Network configuration"
-msgstr ""
+msgstr "Network configuration"
 
 #: ../glade/optionswindow.glade.h:20
 msgid ""
 "<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
 "\">Documentation</a>"
 msgstr ""
+"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
+"\">Documentation</a>"
 
 #: ../glade/optionswindow.glade.h:21
 msgid ""
 "This computer's Internet connection is clear of obstacles. You would like to "
 "connect directly to the Tor network."
 msgstr ""
+"This computer's Internet connection is clear of obstacles. You would like to "
+"connect directly to the Tor network."
 
 #: ../glade/optionswindow.glade.h:22
 msgid ""
 "This computer's Internet connection is censored, filtered, or proxied. You "
 "need to configure bridge, firewall, or proxy settings."
 msgstr ""
+"This computer's Internet connection is censored, filtered, or proxied. You "
+"need to configure bridge, firewall, or proxy settings."
 
 #: ../glade/langpanel.glade.h:1
 msgid " "
@@ -173,15 +188,15 @@ msgstr " "
 
 #: ../glade/langpanel.glade.h:2 ../GdmGreeter/langpanel.py:42
 msgid "Language"
-msgstr "Jezik"
+msgstr "Language"
 
 #: ../glade/langpanel.glade.h:3
 msgid "Locale"
-msgstr "Krajevne nastavitve"
+msgstr "Locale"
 
 #: ../glade/langpanel.glade.h:4
 msgid "Layout"
-msgstr "Postavitev"
+msgstr "Layout"
 
 #: ../GdmGreeter/persistence.py:59
 #, python-format
@@ -189,7 +204,7 @@ msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
 msgstr ""
-"live-persist je spodletel z vrnjeno kodo %(returncode)s:⏎\n"
+"live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
 
 #: ../GdmGreeter/persistence.py:99
@@ -199,8 +214,8 @@ msgid ""
 "%(stdout)s\n"
 "%(stderr)s"
 msgstr ""
-"cryptsetup je spodletel z vrnjeno kodo %(returncode)s:⏎\n"
-"%(stdout)s⏎\n"
+"cryptsetup failed with return code %(returncode)s:\n"
+"%(stdout)s\n"
 "%(stderr)s"
 
 #: ../GdmGreeter/persistence.py:124
@@ -210,11 +225,11 @@ msgid ""
 "%(stdout)s\n"
 "%(stderr)s"
 msgstr ""
-"live-persist je spodletel z vrnjeno kodo %(returncode)s:⏎\n"
-"%(stdout)s⏎\n"
+"live-persist failed with return code %(returncode)s:\n"
+"%(stdout)s\n"
 "%(stderr)s"
 
 #: ../GdmGreeter/langpanel.py:124 ../GdmGreeter/langpanel.py:148
 #: ../GdmGreeter/langpanel.py:181
 msgid "Other..."
-msgstr "Drugo ..."
+msgstr "Other..."

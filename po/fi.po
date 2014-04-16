@@ -4,14 +4,14 @@
 #
 # Translators:
 # karvjorm <karvonen.jorma@gmail.com>, 2014
-# mikkoharhanen <gitti@mikkoharhanen.fi>, 2013
+# mikkoharhanen <gitti@mikkoharhanen.fi>, 2013-2014
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-17 13:54+0100\n"
-"PO-Revision-Date: 2014-02-16 10:40+0000\n"
-"Last-Translator: karvjorm <karvonen.jorma@gmail.com>\n"
+"POT-Creation-Date: 2014-04-16 16:16+0200\n"
+"PO-Revision-Date: 2014-03-23 16:30+0000\n"
+"Last-Translator: mikkoharhanen <gitti@mikkoharhanen.fi>\n"
 "Language-Team: Finnish (http://www.transifex.com/projects/p/torproject/"
 "language/fi/)\n"
 "Language: fi\n"
@@ -38,7 +38,7 @@ msgstr "Säilytä muutokset?"
 
 #: ../glade/persistencewindow.glade.h:5
 msgid "<a href=\"doc/first_steps/persistence/use.en.html\">Documentation</a>"
-msgstr ""
+msgstr "<a href=\"doc/first_steps/persistence/use.en.html\">Ohjeet</a>"
 
 #: ../glade/persistencewindow.glade.h:6
 msgid "Yes"
@@ -73,6 +73,8 @@ msgid ""
 "<a href=\"doc/first_steps/startup_options/administration_password.en.html"
 "\">Documentation</a>"
 msgstr ""
+"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
+"\">Ohjeet</a>"
 
 #: ../glade/optionswindow.glade.h:5
 msgid ""
@@ -97,7 +99,6 @@ msgid "<i>Passwords do not match</i>"
 msgstr "<i>Salasanat eivät täsmää</i>"
 
 #: ../glade/optionswindow.glade.h:10
-#, fuzzy
 msgid "Windows camouflage"
 msgstr "Windows-naamiointi"
 
@@ -106,6 +107,8 @@ msgid ""
 "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
 "\">Documentation</a>"
 msgstr ""
+"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
+"\">Ohjeet</a>"
 
 #: ../glade/optionswindow.glade.h:12
 msgid ""
@@ -121,51 +124,63 @@ msgstr "Ota Microsoft Windows XP -naamiointi käyttöön"
 
 #: ../glade/optionswindow.glade.h:14
 msgid "MAC address spoofing"
-msgstr ""
+msgstr "MAC-osoitteen väärentäminen"
 
 #: ../glade/optionswindow.glade.h:15
 msgid ""
 "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
 "\">Documentation</a>"
 msgstr ""
+"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Ohjeet</a>"
 
 #: ../glade/optionswindow.glade.h:16
 msgid ""
 "Spoofing MAC addresses hides the serial number of your network cards to the "
 "local networks. This can help you hide your geographical location."
 msgstr ""
+"Väärennetty MAC-osoite piilottaa verkkokorttisi sarjanumeron. Väärentäminen "
+"helpottaa maantieteellisen sijainnin piilottamista."
 
 #: ../glade/optionswindow.glade.h:17
 msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
 "suspicion or cause network connection problems."
 msgstr ""
+"MAC-osoitteen väärentäminen on yleensä hyödyllistä, mutta väärennetty osoite "
+"voi herättää huomiota tai aiheuttaa ongelmia verkkoyhteydessä."
 
 #: ../glade/optionswindow.glade.h:18
 msgid "Spoof all MAC addresses"
-msgstr ""
+msgstr "Väärennä kaikki MAC-osoitteet"
 
 #: ../glade/optionswindow.glade.h:19
 msgid "Network configuration"
-msgstr ""
+msgstr "Verkon asetukset"
 
 #: ../glade/optionswindow.glade.h:20
 msgid ""
 "<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
 "\">Documentation</a>"
 msgstr ""
+"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
+"\">Ohjeet</a>"
 
 #: ../glade/optionswindow.glade.h:21
 msgid ""
 "This computer's Internet connection is clear of obstacles. You would like to "
 "connect directly to the Tor network."
 msgstr ""
+"Tietokoneen Internet-yhteydessä ei ole esteitä. Voit yhdistää suoraan Tor-"
+"verkkoon."
 
 #: ../glade/optionswindow.glade.h:22
 msgid ""
 "This computer's Internet connection is censored, filtered, or proxied. You "
 "need to configure bridge, firewall, or proxy settings."
 msgstr ""
+"Tietokoneen Internet-yhteyttä sensuroidaan, suodatetaan tai käytetään "
+"välityspalvelimen kautta. Sinun täytyy määrittää silta-, palomuuri- ja "
+"välityspalvelinasetukset."
 
 #: ../glade/langpanel.glade.h:1
 msgid " "
