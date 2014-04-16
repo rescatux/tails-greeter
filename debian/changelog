@@ -1,3 +1,9 @@
+tails-greeter (0.7.29) stable; urgency=medium
+
+  * Update POT and PO files.
+
+ -- Tails developers <tails@boum.org>  Wed, 16 Apr 2014 16:17:34 +0200
+
 tails-greeter (0.7.28) testing; urgency=medium
 
   * tails 0.23 translation
