@@ -271,6 +271,7 @@ class LocalisationSettings(object):
         return locales_dict
 
     def __apply_layout_to_upcoming_session(self):
+        variant = ''
         if self._layout != 'us':
             layout = '%s,us' % self._layout
             if self._variant:
