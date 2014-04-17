@@ -271,14 +271,11 @@ class LocalisationSettings(object):
         return locales_dict
 
     def __apply_layout_to_upcoming_session(self):
-        variant = ''
-        if self._layout != 'us':
-            layout = 'us,%s' % self._layout
-            if self._variant:
-                variant = '%s,' % self._variant
-        else:
-            layout = self._layout
+        layout = self._layout
+        if self._variant:
             variant = self._variant
+        else:
+            variant = ''
         with open(tailsgreeter.config.locale_output_path, 'w') as f:
             os.chmod(tailsgreeter.config.locale_output_path, 0o600)
             f.write('TAILS_LOCALE_NAME=%s\n' % self._locale)
