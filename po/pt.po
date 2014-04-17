@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-17 13:54+0100\n"
-"PO-Revision-Date: 2014-03-14 12:10+0000\n"
+"POT-Creation-Date: 2014-04-16 16:16+0200\n"
+"PO-Revision-Date: 2014-04-09 17:10+0000\n"
 "Last-Translator: André Monteiro <andre.monteir@gmail.com>\n"
 "Language-Team: Portuguese (http://www.transifex.com/projects/p/torproject/"
 "language/pt/)\n"
@@ -38,7 +38,7 @@ msgstr "Usar Persistência?"
 
 #: ../glade/persistencewindow.glade.h:5
 msgid "<a href=\"doc/first_steps/persistence/use.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/persistence/use.pt.html\">Documentação</a>"
+msgstr "<a href=\"doc/first_steps/persistence/use.en.html\">Documentação</a>"
 
 #: ../glade/persistencewindow.glade.h:6
 msgid "Yes"
@@ -73,7 +73,7 @@ msgid ""
 "<a href=\"doc/first_steps/startup_options/administration_password.en.html"
 "\">Documentation</a>"
 msgstr ""
-"<a href=\"doc/first_steps/startup_options/administration_password.pt.html"
+"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
 "\">Documentação</a>"
 
 #: ../glade/optionswindow.glade.h:5
@@ -107,7 +107,7 @@ msgid ""
 "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
 "\">Documentation</a>"
 msgstr ""
-"<a href=\"doc/first_steps/startup_options/windows_camouflage.pt.html"
+"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
 "\">Documentação</a>"
 
 #: ../glade/optionswindow.glade.h:12
@@ -131,7 +131,7 @@ msgid ""
 "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
 "\">Documentation</a>"
 msgstr ""
-"<a href=\"doc/first_steps/startup_options/mac_spoofing.pt.html"
+"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
 "\">Documentação</a>"
 
 #: ../glade/optionswindow.glade.h:16
@@ -163,7 +163,7 @@ msgid ""
 "<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
 "\">Documentation</a>"
 msgstr ""
-"<a href=\"doc/first_steps/startup_options/network_configuration.pt.html"
+"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
 "\">Documentação</a>"
 
 #: ../glade/optionswindow.glade.h:21

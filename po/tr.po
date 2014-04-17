@@ -7,13 +7,14 @@
 # Caner BAŞARAN <basaran.caner@gmail.com>, 2013
 # cmldrs <cmldrs@yandex.com>, 2014
 # Tim Tanurhan <timtanurhan@hotmail.com>, 2014
+# volkangezer <volkangezer@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-17 13:54+0100\n"
-"PO-Revision-Date: 2014-03-13 20:51+0000\n"
-"Last-Translator: cmldrs <cmldrs@yandex.com>\n"
+"POT-Creation-Date: 2014-04-16 16:16+0200\n"
+"PO-Revision-Date: 2014-03-31 00:50+0000\n"
+"Last-Translator: volkangezer <volkangezer@gmail.com>\n"
 "Language-Team: Turkish (http://www.transifex.com/projects/p/torproject/"
 "language/tr/)\n"
 "Language: tr\n"
@@ -32,7 +33,7 @@ msgstr "Giriş"
 
 #: ../glade/persistencewindow.glade.h:3 ../glade/optionswindow.glade.h:2
 msgid "Welcome to Tails"
-msgstr "Tails'e Hoşgeldiniz"
+msgstr "Tails'e Hoş Geldiniz"
 
 #: ../glade/persistencewindow.glade.h:4
 msgid "Use persistence?"
@@ -40,7 +41,7 @@ msgstr "Süreklilik kullan?"
 
 #: ../glade/persistencewindow.glade.h:5
 msgid "<a href=\"doc/first_steps/persistence/use.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/persistence/use.en.html\">Belgesi</a>"
+msgstr "<a href=\"doc/first_steps/persistence/use.en.html\">Belgelendirme</a>"
 
 #: ../glade/persistencewindow.glade.h:6
 msgid "Yes"
@@ -75,8 +76,8 @@ msgid ""
 "<a href=\"doc/first_steps/startup_options/administration_password.en.html"
 "\">Documentation</a>"
 msgstr ""
-"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
-"\">Belgesi</a>"
+"<a href=\"doc/first_steps/startup_options/administration_password.tr.html"
+"\">Belgelendirme</a>"
 
 #: ../glade/optionswindow.glade.h:5
 msgid ""
@@ -86,7 +87,7 @@ msgid ""
 msgstr ""
 "Bilgisayarda üst düzey güvenlik gerektiren yönetim görevlerini "
 "gerçekleştirecekseniz, parola girmelisiniz.\n"
-"Parola girilmediği taktirde güvenlik için devre dışı bırakılacaktır."
+"Parola girilmediği takdirde güvenlik için devre dışı bırakılacaktır."
 
 #: ../glade/optionswindow.glade.h:7
 msgid "Password:"
@@ -109,16 +110,16 @@ msgid ""
 "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
 "\">Documentation</a>"
 msgstr ""
-"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
-"\">Belgesi</a>"
+"<a href=\"doc/first_steps/startup_options/windows_camouflage.tr.html"
+"\">Belgelendirme</a>"
 
 #: ../glade/optionswindow.glade.h:12
 msgid ""
 "This option makes Tails look more like Microsoft Windows XP. This may be "
 "useful in public places in order to avoid attracting suspicion."
 msgstr ""
-"Bu seçenek, Tails'ı daha fazla Microsoft Windows XP gibi görünmesini sağlar. "
-"Halka açık yerlerde, şüphe çekmemek için yararlı olabilir."
+"Bu seçenek, Tails'ın daha fazla Microsoft Windows XP gibi görünmesini "
+"sağlar. Halka açık yerlerde, şüphe çekmemek için yararlı olabilir."
 
 #: ../glade/optionswindow.glade.h:13
 msgid "Activate Microsoft Windows XP Camouflage"
@@ -133,7 +134,8 @@ msgid ""
 "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
 "\">Documentation</a>"
 msgstr ""
-"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Belgesi</a>"
+"<a href=\"doc/first_steps/startup_options/mac_spoofing.tr.html"
+"\">Belgelendirme</a>"
 
 #: ../glade/optionswindow.glade.h:16
 msgid ""
@@ -164,24 +166,25 @@ msgid ""
 "<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
 "\">Documentation</a>"
 msgstr ""
-"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
-"\">Belgesi</a>"
+"<a href=\"doc/first_steps/startup_options/network_configuration.tr.html"
+"\">Belgelendirme</a>"
 
 #: ../glade/optionswindow.glade.h:21
 msgid ""
 "This computer's Internet connection is clear of obstacles. You would like to "
 "connect directly to the Tor network."
 msgstr ""
-"Bu bilgisayarın Internet bağlantısı engellemeye açık. Doğrudan Tor ağına "
-"bağlanmak istiyormusunuz."
+"Bu bilgisayarın İnternet bağlantısı engellemeye açık. Doğrudan Tor ağına "
+"bağlanmak istiyorsunuz."
 
 #: ../glade/optionswindow.glade.h:22
 msgid ""
 "This computer's Internet connection is censored, filtered, or proxied. You "
 "need to configure bridge, firewall, or proxy settings."
 msgstr ""
-"Bu bilgisayarın Internet bağlantısı, sansürlendi, filtrelendi ya da taşındı. "
-"Köprü, güvenlik duvarı veya proxy ayarlarını yapılandırmanız gerekir."
+"Bu bilgisayarın İnternet bağlantısı sansürlendi, filtrelendi ya da vekil "
+"sunucuya bağlı. Köprü, güvenlik duvarı veya proxy ayarlarını yapılandırmanız "
+"gerekir."
 
 #: ../glade/langpanel.glade.h:1
 msgid " "

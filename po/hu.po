@@ -3,15 +3,16 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
+# lajos <mrlajos@gmail.com>, 2014
 # vargaviktor <viktor.varga@gmail.com>, 2013
 # vargaviktor <viktor.varga@gmail.com>, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-17 13:54+0100\n"
-"PO-Revision-Date: 2013-05-22 12:45+0000\n"
-"Last-Translator: vargaviktor <viktor.varga@gmail.com>\n"
+"POT-Creation-Date: 2014-04-16 16:16+0200\n"
+"PO-Revision-Date: 2014-04-07 14:30+0000\n"
+"Last-Translator: lajos <mrlajos@gmail.com>\n"
 "Language-Team: Hungarian (http://www.transifex.com/projects/p/torproject/"
 "language/hu/)\n"
 "Language: hu\n"
@@ -38,7 +39,7 @@ msgstr "Perzisztencia használata?"
 
 #: ../glade/persistencewindow.glade.h:5
 msgid "<a href=\"doc/first_steps/persistence/use.en.html\">Documentation</a>"
-msgstr ""
+msgstr "<a href=\"doc/first_steps/persistence/use.en.html\">Dokumentáció</a>"
 
 #: ../glade/persistencewindow.glade.h:6
 msgid "Yes"
@@ -73,6 +74,8 @@ msgid ""
 "<a href=\"doc/first_steps/startup_options/administration_password.en.html"
 "\">Documentation</a>"
 msgstr ""
+"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
+"\">Dokumentáció</a>"
 
 #: ../glade/optionswindow.glade.h:5
 msgid ""
@@ -97,7 +100,6 @@ msgid "<i>Passwords do not match</i>"
 msgstr "<i>A jelszavak nem egyeznek</i>"
 
 #: ../glade/optionswindow.glade.h:10
-#, fuzzy
 msgid "Windows camouflage"
 msgstr "Windows álcázás"
 
@@ -106,6 +108,8 @@ msgid ""
 "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
 "\">Documentation</a>"
 msgstr ""
+"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
+"\">Dokumentáció</a>"
 
 #: ../glade/optionswindow.glade.h:12
 msgid ""
@@ -121,51 +125,63 @@ msgstr "Microsoft Windows XP álcázás bekapcsolása"
 
 #: ../glade/optionswindow.glade.h:14
 msgid "MAC address spoofing"
-msgstr ""
+msgstr "MAC cím spoofing"
 
 #: ../glade/optionswindow.glade.h:15
 msgid ""
 "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
 "\">Documentation</a>"
 msgstr ""
+"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
+"\">Dokumentáció</a>"
 
 #: ../glade/optionswindow.glade.h:16
 msgid ""
 "Spoofing MAC addresses hides the serial number of your network cards to the "
 "local networks. This can help you hide your geographical location."
 msgstr ""
+"MAC cím spoofing elrejti a hálózati kártyád széria számát a helyi hálózaton. "
+"Ez segít elrejteni a földrajzi helyzeted."
 
 #: ../glade/optionswindow.glade.h:17
 msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
 "suspicion or cause network connection problems."
 msgstr ""
+"Általában biztonságos elrejteni a MAC címet de ez gyanút kelthet vagy "
+"hálózati kapcsolati problémákat okozhat."
 
 #: ../glade/optionswindow.glade.h:18
 msgid "Spoof all MAC addresses"
-msgstr ""
+msgstr "Összes MAC cím elrejtése"
 
 #: ../glade/optionswindow.glade.h:19
 msgid "Network configuration"
-msgstr ""
+msgstr "Hálózati konfiguráció"
 
 #: ../glade/optionswindow.glade.h:20
 msgid ""
 "<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
 "\">Documentation</a>"
 msgstr ""
+"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
+"\">Dokumentáció</a>"
 
 #: ../glade/optionswindow.glade.h:21
 msgid ""
 "This computer's Internet connection is clear of obstacles. You would like to "
 "connect directly to the Tor network."
 msgstr ""
+"A számítógép internet kapcsolata akadályoktól mentes. Szeretnél közvetlenül "
+"kapcsolódni a Tor hálózathoz."
 
 #: ../glade/optionswindow.glade.h:22
 msgid ""
 "This computer's Internet connection is censored, filtered, or proxied. You "
 "need to configure bridge, firewall, or proxy settings."
 msgstr ""
+"A számítógép internet kapcsolata cenzúrázott, szűrt vagy proxy-t használ. "
+"konfigurálnod kell a bridge, tűzfal vagy proxy beállításokat."
 
 #: ../glade/langpanel.glade.h:1
 msgid " "

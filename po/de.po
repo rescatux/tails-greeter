@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-17 13:54+0100\n"
+"POT-Creation-Date: 2014-04-16 16:16+0200\n"
 "PO-Revision-Date: 2014-03-11 13:52+0000\n"
 "Last-Translator: to_ba\n"
 "Language-Team: German (http://www.transifex.com/projects/p/torproject/"
@@ -48,7 +48,7 @@ msgstr "Persistenz benutzen?"
 
 #: ../glade/persistencewindow.glade.h:5
 msgid "<a href=\"doc/first_steps/persistence/use.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/persistence/use.de.html\">Dokumentation</a>"
+msgstr "<a href=\"doc/first_steps/persistence/use.en.html\">Dokumentation</a>"
 
 #: ../glade/persistencewindow.glade.h:6
 msgid "Yes"
@@ -83,7 +83,7 @@ msgid ""
 "<a href=\"doc/first_steps/startup_options/administration_password.en.html"
 "\">Documentation</a>"
 msgstr ""
-"<a href=\"doc/first_steps/startup_options/administration_password.de.html"
+"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
 "\">Dokumentation</a>"
 
 #: ../glade/optionswindow.glade.h:5
@@ -117,7 +117,7 @@ msgid ""
 "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
 "\">Documentation</a>"
 msgstr ""
-"<a href=\"doc/first_steps/startup_options/windows_camouflage.de.html"
+"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
 "\">Dokumentation</a>"
 
 #: ../glade/optionswindow.glade.h:12
@@ -141,7 +141,7 @@ msgid ""
 "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
 "\">Documentation</a>"
 msgstr ""
-"<a href=\"doc/first_steps/startup_options/mac_spoofing.de.html"
+"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
 "\">Dokumentation</a>"
 
 #: ../glade/optionswindow.glade.h:16
@@ -174,7 +174,7 @@ msgid ""
 "<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
 "\">Documentation</a>"
 msgstr ""
-"<a href=\"doc/first_steps/startup_options/network_configuration.de.html"
+"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
 "\">Dokumentation</a>"
 
 #: ../glade/optionswindow.glade.h:21
