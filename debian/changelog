@@ -1,3 +1,11 @@
+tails-greeter (0.7.29+wheezy2) devel; urgency=medium
+
+  * Drop layout = 'us,$layout' and comma in variant hacks:
+    it's not working right, let's try to simply set the layout and variant
+    we actually want.
+
+ -- Tails developers <tails@boum.org>  Thu, 17 Apr 2014 22:46:49 +0200
+
 tails-greeter (0.7.29+wheezy1) devel; urgency=medium
 
   * Initialize variable in all cases.
