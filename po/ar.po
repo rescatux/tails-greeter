@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # kraim <biskraim@gmail.com>, 2013
 # Arwa M, 2014
@@ -15,17 +15,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-16 16:16+0200\n"
+"POT-Creation-Date: 2014-03-17 13:54+0100\n"
 "PO-Revision-Date: 2014-04-04 15:30+0000\n"
 "Last-Translator: uzumaki <tx99h4@hotmail.com>\n"
-"Language-Team: Arabic (http://www.transifex.com/projects/p/torproject/"
-"language/ar/)\n"
-"Language: ar\n"
+"Language-Team: Arabic (http://www.transifex.com/projects/p/torproject/language/ar/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
-"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"Language: ar\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
 #: ../glade/persistencewindow.glade.h:1
 msgid "Forward"
@@ -77,20 +75,15 @@ msgstr "كلمة السر الخاصة بالإدارة"
 
 #: ../glade/optionswindow.glade.h:4
 msgid ""
-"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
-"\">Documentation</a>"
-msgstr ""
-"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
-"\">الوثائق</a>"
+"<a "
+"href=\"doc/first_steps/startup_options/administration_password.en.html\">Documentation</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/administration_password.en.html\">الوثائق</a>"
 
 #: ../glade/optionswindow.glade.h:5
 msgid ""
-"Enter an administration password in case you need to perform administration "
-"tasks.\n"
+"Enter an administration password in case you need to perform administration tasks.\n"
 "Otherwise it will be disabled for better security."
-msgstr ""
-"ادخل كلمة السر الخاصة بالإدارة في حال كنت تحتاج إلي عمل تغييرات إدارية. \n"
-"وإلا سيعطل هذا الخيار لتحسين الأمن."
+msgstr "ادخل كلمة السر الخاصة بالإدارة في حال كنت تحتاج إلي عمل تغييرات إدارية. \nوإلا سيعطل هذا الخيار لتحسين الأمن."
 
 #: ../glade/optionswindow.glade.h:7
 msgid "Password:"
@@ -110,19 +103,15 @@ msgstr "تَخَفِّي ويندوز"
 
 #: ../glade/optionswindow.glade.h:11
 msgid ""
-"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
-"\">Documentation</a>"
-msgstr ""
-"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
-"\">الوثائق</a>"
+"<a "
+"href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">Documentation</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">الوثائق</a>"
 
 #: ../glade/optionswindow.glade.h:12
 msgid ""
 "This option makes Tails look more like Microsoft Windows XP. This may be "
 "useful in public places in order to avoid attracting suspicion."
-msgstr ""
-"هذا الخيار يجعل تيلز يشبه ويندوز اكس بي. وهذا قد يكون مفيداً في الاماكن "
-"العامه لتقليل الشبهه و جذب الانظار."
+msgstr "هذا الخيار يجعل تيلز يشبه ويندوز اكس بي. وهذا قد يكون مفيداً في الاماكن العامه لتقليل الشبهه و جذب الانظار."
 
 #: ../glade/optionswindow.glade.h:13
 msgid "Activate Microsoft Windows XP Camouflage"
@@ -134,26 +123,21 @@ msgstr "انتحال عنوان MAC "
 
 #: ../glade/optionswindow.glade.h:15
 msgid ""
-"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
-"\">Documentation</a>"
-msgstr ""
-"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">الوثائق</a>"
+"<a "
+"href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Documentation</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">الوثائق</a>"
 
 #: ../glade/optionswindow.glade.h:16
 msgid ""
 "Spoofing MAC addresses hides the serial number of your network cards to the "
 "local networks. This can help you hide your geographical location."
-msgstr ""
-"انتحال عناوين MAC أخرى يخفي أرقام تسلسل بطاقات شبكتك للشبكات المحلية. هذا "
-"الأمر يساعدك على إخفاء موقعك الجغرافي."
+msgstr "انتحال عناوين MAC أخرى يخفي أرقام تسلسل بطاقات شبكتك للشبكات المحلية. هذا الأمر يساعدك على إخفاء موقعك الجغرافي."
 
 #: ../glade/optionswindow.glade.h:17
 msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
 "suspicion or cause network connection problems."
-msgstr ""
-"انتحال عناوين وحدات التحكم في وصول الوسائط أأمن بشكل عام ولكنه أيضا قد يثير "
-"الشكوك أو يسبب مشاكل في الاتصال بالشبكة."
+msgstr "انتحال عناوين وحدات التحكم في وصول الوسائط أأمن بشكل عام ولكنه أيضا قد يثير الشكوك أو يسبب مشاكل في الاتصال بالشبكة."
 
 #: ../glade/optionswindow.glade.h:18
 msgid "Spoof all MAC addresses"
@@ -165,27 +149,21 @@ msgstr "تكوين الشبكة"
 
 #: ../glade/optionswindow.glade.h:20
 msgid ""
-"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
-"\">Documentation</a>"
-msgstr ""
-"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
-"\">الوثائق</a>"
+"<a "
+"href=\"doc/first_steps/startup_options/network_configuration.en.html\">Documentation</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/network_configuration.en.html\">الوثائق</a>"
 
 #: ../glade/optionswindow.glade.h:21
 msgid ""
-"This computer's Internet connection is clear of obstacles. You would like to "
-"connect directly to the Tor network."
-msgstr ""
-"اتصال هذا الحاسب بالإنترنت خالٍ من العوائق. أنت تود الاتصال بشبكة Tor بشكل "
-"مباشر."
+"This computer's Internet connection is clear of obstacles. You would like to"
+" connect directly to the Tor network."
+msgstr "اتصال هذا الحاسب بالإنترنت خالٍ من العوائق. أنت تود الاتصال بشبكة Tor بشكل مباشر."
 
 #: ../glade/optionswindow.glade.h:22
 msgid ""
 "This computer's Internet connection is censored, filtered, or proxied. You "
 "need to configure bridge, firewall, or proxy settings."
-msgstr ""
-"اتصال هذا الحاسب الإنترنت مراقب أو مصفى أو له وكيل. عليك تكوين إعدادات الجسر "
-"أو جدار الحماية أو الوكيل."
+msgstr "اتصال هذا الحاسب الإنترنت مراقب أو مصفى أو له وكيل. عليك تكوين إعدادات الجسر أو جدار الحماية أو الوكيل."
 
 #: ../glade/langpanel.glade.h:1
 msgid " "
@@ -208,9 +186,7 @@ msgstr "التصميم"
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
-msgstr ""
-"live-persist فشل و كود العودة هو %(returncode)s:\n"
-"%(stderr)s"
+msgstr "live-persist فشل و كود العودة هو %(returncode)s:\n%(stderr)s"
 
 #: ../GdmGreeter/persistence.py:99
 #, python-format
@@ -218,10 +194,7 @@ msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr ""
-"cryptsetup فشل و كود العودة هو %(returncode)s:\n"
-"%(stdout)s\n"
-"%(stderr)s"
+msgstr "cryptsetup فشل و كود العودة هو %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
 #: ../GdmGreeter/persistence.py:124
 #, python-format
@@ -229,10 +202,7 @@ msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr ""
-"live-persist فشل و كود العودة هو %(returncode)s:\n"
-"%(stdout)s\n"
-"%(stderr)s"
+msgstr "live-persist فشل و كود العودة هو %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
 #: ../GdmGreeter/langpanel.py:124 ../GdmGreeter/langpanel.py:148
 #: ../GdmGreeter/langpanel.py:181

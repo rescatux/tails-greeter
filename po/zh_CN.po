@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # ihints <ihints@gmail.com>, 2014
 # simabull tsai, 2013
@@ -16,15 +16,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-16 16:16+0200\n"
+"POT-Creation-Date: 2014-03-06 17:16+0100\n"
 "PO-Revision-Date: 2014-03-13 07:01+0000\n"
 "Last-Translator: ihints <ihints@gmail.com>\n"
-"Language-Team: Chinese (China) (http://www.transifex.com/projects/p/"
-"torproject/language/zh_CN/)\n"
-"Language: zh_CN\n"
+"Language-Team: Chinese (China) (http://www.transifex.com/projects/p/torproject/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../glade/persistencewindow.glade.h:1
@@ -77,19 +76,15 @@ msgstr "管理员密码"
 
 #: ../glade/optionswindow.glade.h:4
 msgid ""
-"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
-"\">Documentation</a>"
-msgstr ""
-"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
-"\">Documentation</a>"
+"<a "
+"href=\"doc/first_steps/startup_options/administration_password.en.html\">Documentation</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/administration_password.en.html\">Documentation</a>"
 
 #: ../glade/optionswindow.glade.h:5
 msgid ""
-"Enter an administration password in case you need to perform administration "
-"tasks.\n"
+"Enter an administration password in case you need to perform administration tasks.\n"
 "Otherwise it will be disabled for better security."
-msgstr ""
-"在您执行管理任务时需要管理员密码。\\n如果没有的话会由于安全性问题而被禁用。"
+msgstr "在您执行管理任务时需要管理员密码。\\n如果没有的话会由于安全性问题而被禁用。"
 
 #: ../glade/optionswindow.glade.h:7
 msgid "Password:"
@@ -109,19 +104,15 @@ msgstr "伪装Windows"
 
 #: ../glade/optionswindow.glade.h:11
 msgid ""
-"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
-"\">Documentation</a>"
-msgstr ""
-"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">文档</"
-"a>"
+"<a "
+"href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">Documentation</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">文档</a>"
 
 #: ../glade/optionswindow.glade.h:12
 msgid ""
 "This option makes Tails look more like Microsoft Windows XP. This may be "
 "useful in public places in order to avoid attracting suspicion."
-msgstr ""
-"此选项使 Tails 看起来更象是 Microsoft Windows XP。为了避免在公共场所引起怀"
-"疑，这是十分有用的。"
+msgstr "此选项使 Tails 看起来更象是 Microsoft Windows XP。为了避免在公共场所引起怀疑，这是十分有用的。"
 
 #: ../glade/optionswindow.glade.h:13
 msgid "Activate Microsoft Windows XP Camouflage"
@@ -133,27 +124,21 @@ msgstr "MAC 地址欺骗"
 
 #: ../glade/optionswindow.glade.h:15
 msgid ""
-"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
-"\">Documentation</a>"
-msgstr ""
-"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
-"\">Documentation</a>"
+"<a "
+"href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Documentation</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Documentation</a>"
 
 #: ../glade/optionswindow.glade.h:16
 msgid ""
 "Spoofing MAC addresses hides the serial number of your network cards to the "
 "local networks. This can help you hide your geographical location."
-msgstr ""
-"欺骗 MAC 地址，隐匿您的网卡到本地网络的序列号。这可以帮助您隐藏自己的地理位"
-"置。"
+msgstr "欺骗 MAC 地址，隐匿您的网卡到本地网络的序列号。这可以帮助您隐藏自己的地理位置。"
 
 #: ../glade/optionswindow.glade.h:17
 msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
 "suspicion or cause network connection problems."
-msgstr ""
-"欺骗 MAC 地址通常都是安全的，但也存在引发或导致网络连通问题的可能。请参阅文"
-"档。"
+msgstr "欺骗 MAC 地址通常都是安全的，但也存在引发或导致网络连通问题的可能。请参阅文档。"
 
 #: ../glade/optionswindow.glade.h:18
 msgid "Spoof all MAC addresses"
@@ -165,16 +150,14 @@ msgstr "网络确认"
 
 #: ../glade/optionswindow.glade.h:20
 msgid ""
-"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
-"\">Documentation</a>"
-msgstr ""
-"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
-"\">Documentation</a>"
+"<a "
+"href=\"doc/first_steps/startup_options/network_configuration.en.html\">Documentation</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/network_configuration.en.html\">Documentation</a>"
 
 #: ../glade/optionswindow.glade.h:21
 msgid ""
-"This computer's Internet connection is clear of obstacles. You would like to "
-"connect directly to the Tor network."
+"This computer's Internet connection is clear of obstacles. You would like to"
+" connect directly to the Tor network."
 msgstr "该电脑的连接故障已排除，您可以直接连接Tor网络。"
 
 #: ../glade/optionswindow.glade.h:22
@@ -204,9 +187,7 @@ msgstr "布局"
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
-msgstr ""
-"负责持久卷设置的 live-persist 执行失败，返回代码 %(returncode)s:\n"
-"%(stderr)s"
+msgstr "负责持久卷设置的 live-persist 执行失败，返回代码 %(returncode)s:\n%(stderr)s"
 
 #: ../GdmGreeter/persistence.py:99
 #, python-format
@@ -214,10 +195,7 @@ msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr ""
-"加密设置失败，返回代码 %(returncode)s:\n"
-"%(stdout)s\n"
-"%(stderr)s"
+msgstr "加密设置失败，返回代码 %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
 #: ../GdmGreeter/persistence.py:124
 #, python-format
@@ -225,10 +203,7 @@ msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr ""
-"负责持久卷设置的 live-persist 执行失败，，返回代码 %(returncode)s:\n"
-"%(stdout)s\n"
-"%(stderr)s"
+msgstr "负责持久卷设置的 live-persist 执行失败，，返回代码 %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
 #: ../GdmGreeter/langpanel.py:124 ../GdmGreeter/langpanel.py:148
 #: ../GdmGreeter/langpanel.py:181
