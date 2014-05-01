@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # karvjorm <karvonen.jorma@gmail.com>, 2014
 # mikkoharhanen <gitti@mikkoharhanen.fi>, 2013-2014
@@ -9,15 +9,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-16 16:16+0200\n"
+"POT-Creation-Date: 2014-03-17 13:54+0100\n"
 "PO-Revision-Date: 2014-03-23 16:30+0000\n"
 "Last-Translator: mikkoharhanen <gitti@mikkoharhanen.fi>\n"
-"Language-Team: Finnish (http://www.transifex.com/projects/p/torproject/"
-"language/fi/)\n"
-"Language: fi\n"
+"Language-Team: Finnish (http://www.transifex.com/projects/p/torproject/language/fi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: fi\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../glade/persistencewindow.glade.h:1
@@ -70,21 +69,15 @@ msgstr "Ylläpidon salasana"
 
 #: ../glade/optionswindow.glade.h:4
 msgid ""
-"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
-"\">Documentation</a>"
-msgstr ""
-"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
-"\">Ohjeet</a>"
+"<a "
+"href=\"doc/first_steps/startup_options/administration_password.en.html\">Documentation</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/administration_password.en.html\">Ohjeet</a>"
 
 #: ../glade/optionswindow.glade.h:5
 msgid ""
-"Enter an administration password in case you need to perform administration "
-"tasks.\n"
+"Enter an administration password in case you need to perform administration tasks.\n"
 "Otherwise it will be disabled for better security."
-msgstr ""
-"Valitse ylläpidon salasana siltä varalta, että joudut tekemään "
-"ylläpidollisia toimenpiteitä.\n"
-"Muutoin ylläpito estetään turvallisuussyistä."
+msgstr "Valitse ylläpidon salasana siltä varalta, että joudut tekemään ylläpidollisia toimenpiteitä.\nMuutoin ylläpito estetään turvallisuussyistä."
 
 #: ../glade/optionswindow.glade.h:7
 msgid "Password:"
@@ -104,19 +97,15 @@ msgstr "Windows-naamiointi"
 
 #: ../glade/optionswindow.glade.h:11
 msgid ""
-"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
-"\">Documentation</a>"
-msgstr ""
-"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
-"\">Ohjeet</a>"
+"<a "
+"href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">Documentation</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">Ohjeet</a>"
 
 #: ../glade/optionswindow.glade.h:12
 msgid ""
 "This option makes Tails look more like Microsoft Windows XP. This may be "
 "useful in public places in order to avoid attracting suspicion."
-msgstr ""
-"Valinta naamioi Tailsin muistuttamaan Microsoft Windows XP:tä. Naamionti voi "
-"olla hyödyllistä julkisissa tiloissa, kun halutaan välttää epäluuloisuutta."
+msgstr "Valinta naamioi Tailsin muistuttamaan Microsoft Windows XP:tä. Naamionti voi olla hyödyllistä julkisissa tiloissa, kun halutaan välttää epäluuloisuutta."
 
 #: ../glade/optionswindow.glade.h:13
 msgid "Activate Microsoft Windows XP Camouflage"
@@ -128,26 +117,21 @@ msgstr "MAC-osoitteen väärentäminen"
 
 #: ../glade/optionswindow.glade.h:15
 msgid ""
-"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
-"\">Documentation</a>"
-msgstr ""
-"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Ohjeet</a>"
+"<a "
+"href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Documentation</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Ohjeet</a>"
 
 #: ../glade/optionswindow.glade.h:16
 msgid ""
 "Spoofing MAC addresses hides the serial number of your network cards to the "
 "local networks. This can help you hide your geographical location."
-msgstr ""
-"Väärennetty MAC-osoite piilottaa verkkokorttisi sarjanumeron. Väärentäminen "
-"helpottaa maantieteellisen sijainnin piilottamista."
+msgstr "Väärennetty MAC-osoite piilottaa verkkokorttisi sarjanumeron. Väärentäminen helpottaa maantieteellisen sijainnin piilottamista."
 
 #: ../glade/optionswindow.glade.h:17
 msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
 "suspicion or cause network connection problems."
-msgstr ""
-"MAC-osoitteen väärentäminen on yleensä hyödyllistä, mutta väärennetty osoite "
-"voi herättää huomiota tai aiheuttaa ongelmia verkkoyhteydessä."
+msgstr "MAC-osoitteen väärentäminen on yleensä hyödyllistä, mutta väärennetty osoite voi herättää huomiota tai aiheuttaa ongelmia verkkoyhteydessä."
 
 #: ../glade/optionswindow.glade.h:18
 msgid "Spoof all MAC addresses"
@@ -159,28 +143,21 @@ msgstr "Verkon asetukset"
 
 #: ../glade/optionswindow.glade.h:20
 msgid ""
-"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
-"\">Documentation</a>"
-msgstr ""
-"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
-"\">Ohjeet</a>"
+"<a "
+"href=\"doc/first_steps/startup_options/network_configuration.en.html\">Documentation</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/network_configuration.en.html\">Ohjeet</a>"
 
 #: ../glade/optionswindow.glade.h:21
 msgid ""
-"This computer's Internet connection is clear of obstacles. You would like to "
-"connect directly to the Tor network."
-msgstr ""
-"Tietokoneen Internet-yhteydessä ei ole esteitä. Voit yhdistää suoraan Tor-"
-"verkkoon."
+"This computer's Internet connection is clear of obstacles. You would like to"
+" connect directly to the Tor network."
+msgstr "Tietokoneen Internet-yhteydessä ei ole esteitä. Voit yhdistää suoraan Tor-verkkoon."
 
 #: ../glade/optionswindow.glade.h:22
 msgid ""
 "This computer's Internet connection is censored, filtered, or proxied. You "
 "need to configure bridge, firewall, or proxy settings."
-msgstr ""
-"Tietokoneen Internet-yhteyttä sensuroidaan, suodatetaan tai käytetään "
-"välityspalvelimen kautta. Sinun täytyy määrittää silta-, palomuuri- ja "
-"välityspalvelinasetukset."
+msgstr "Tietokoneen Internet-yhteyttä sensuroidaan, suodatetaan tai käytetään välityspalvelimen kautta. Sinun täytyy määrittää silta-, palomuuri- ja välityspalvelinasetukset."
 
 #: ../glade/langpanel.glade.h:1
 msgid " "
@@ -203,9 +180,7 @@ msgstr "Näppäinasettelu"
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
-msgstr ""
-"live-persist epäonnistui paluuarvolla %(returncode)s:\n"
-"%(stderr)s"
+msgstr "live-persist epäonnistui paluuarvolla %(returncode)s:\n%(stderr)s"
 
 #: ../GdmGreeter/persistence.py:99
 #, python-format
@@ -213,10 +188,7 @@ msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr ""
-"cryptsetup epäonnistui paluuarvolla %(returncode)s:\n"
-"%(stdout)s\n"
-"%(stderr)s"
+msgstr "cryptsetup epäonnistui paluuarvolla %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
 #: ../GdmGreeter/persistence.py:124
 #, python-format
@@ -224,10 +196,7 @@ msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr ""
-"live-persist epäonnistui paluuarvolla %(returncode)s:\n"
-"%(stdout)s\n"
-"%(stderr)s"
+msgstr "live-persist epäonnistui paluuarvolla %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
 #: ../GdmGreeter/langpanel.py:124 ../GdmGreeter/langpanel.py:148
 #: ../GdmGreeter/langpanel.py:181
