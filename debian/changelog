@@ -1,3 +1,9 @@
+tails-greeter (0.7.30+wheezy1) devel; urgency=medium
+
+  * Rebuild for Debian Wheezy.
+
+ -- Tails developers <tails@boum.org>  Thu, 01 May 2014 11:43:38 +0200
+
 tails-greeter (0.7.30) stable; urgency=medium
 
   * Update POT and PO files.
