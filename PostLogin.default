@@ -123,6 +123,15 @@ grep_n_set "XKBOPTIONS" ${KBDSET} ${TAILS_XKBOPTIONS}
 force_set "CODESET" ${CONSET} ${CODSET}
 grep_n_set "LANG"       ${LOCALE_CFG} "${TAILS_LOCALE_NAME}.UTF-8"
 
+# Save keyboard settings so that tails-configure-keyboard can set it
+# in the GNOME session.
+cat > /var/lib/tails-user-session/keyboard <<EOF
+XKBMODEL="$TAILS_XKBMODEL"
+XKBLAYOUT="$TAILS_XKBLAYOUT"
+XKBVARIANT="$TAILS_XKBVARIANT"
+XKBOPTIONS="$TAILS_XKBOPTIONS"
+EOF
+
 ### Persistence
 
 # Copy persistence configuration to a root-writable, world-readable place,
