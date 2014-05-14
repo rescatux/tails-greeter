@@ -51,6 +51,7 @@ class HelpWindow(TranslatableWindow):
         self.html_help.load_uri(uri)
         self.help_container.add_child(builder, self.html_help, None)
         self.html_help.show()
+        self.window.resize(self.window.get_size()[0], self.window.get_screen().get_height())
         self.window.run()
 
     def close(self, *args):
