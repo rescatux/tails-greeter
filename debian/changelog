@@ -1,3 +1,13 @@
+tails-greeter (0.7.30+wheezy1+bugfix.7065.keyboard.localization~1.gbpb67b7a) bugfix-7065-keyboard-localization; urgency=medium
+
+  ** SNAPSHOT build @b67b7a9acdeeb7a3f02e74b4983dbdd83467ff0a **
+
+  * Revert "Adapt gbp.conf to ease working on the wheezy branch."
+  * Save keyboard settings at PostLogin time, so that tails-configure-keyboard
+    can set it in the GNOME session.
+
+ -- Tails developers <tails@boum.org>  Fri, 09 May 2014 16:50:03 +0200
+
 tails-greeter (0.7.30+wheezy1) devel; urgency=medium
 
   * Rebuild for Debian Wheezy.
