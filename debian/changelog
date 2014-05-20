@@ -1,3 +1,12 @@
+tails-greeter (0.7.31+wheezy1+bugfix.7065.keyboard.localization~1.gbp96209e) bugfix-7065-keyboard-localization; urgency=medium
+
+  ** SNAPSHOT build @96209e159be005859e70422185dbdb4b9b630d39 **
+
+  * Don't set Xkb options. (Closes #7250)
+  * Simply set chosen keyboard layout with no 'us' switch.
+
+ -- Tails developers <tails@boum.org>  Tue, 20 May 2014 12:30:45 +0200
+
 tails-greeter (0.7.31) devel; urgency=medium
 
   [ Tails developers ]
