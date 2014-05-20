@@ -3,189 +3,184 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Fandor, 2013
-# Fandor, 2013
-# il_doc <filippo.giomi@gmail.com>, 2014
-# Francesca Ciceri <madamezou@zouish.org>, 2014
-# Tony Goodyear <fswitch20@hotmail.com>, 2012
-# il_doc <filippo.giomi@gmail.com>, 2014
-# Tony Goodyear <fswitch20@hotmail.com>, 2012
+# ilbe123 <a3057016@drdrb.net>, 2014
+# Dr.what <javrick6@naver.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-04-27 13:07+0200\n"
-"PO-Revision-Date: 2014-04-28 10:50+0000\n"
-"Last-Translator: Francesca Ciceri <madamezou@zouish.org>\n"
-"Language-Team: Italian (http://www.transifex.com/projects/p/torproject/language/it/)\n"
+"PO-Revision-Date: 2014-05-06 08:00+0000\n"
+"Last-Translator: ilbe123 <a3057016@drdrb.net>\n"
+"Language-Team: Korean (http://www.transifex.com/projects/p/torproject/language/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: it\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../glade/persistencewindow.glade.h:1
 msgid "Forward"
-msgstr "Avanti"
+msgstr "앞으로"
 
 #: ../glade/persistencewindow.glade.h:2 ../glade/optionswindow.glade.h:1
 msgid "Login"
-msgstr "Accesso"
+msgstr "로그인"
 
 #: ../glade/persistencewindow.glade.h:3 ../glade/optionswindow.glade.h:2
 msgid "Welcome to Tails"
-msgstr "Benvenuti in Tails"
+msgstr "Tails에 오신 것을 환영합니다!"
 
 #: ../glade/persistencewindow.glade.h:4
 msgid "Use persistence?"
-msgstr "Utilizzare la persistenza?"
+msgstr "영구성 사용 하시겠습니까?"
 
 #: ../glade/persistencewindow.glade.h:5
 msgid "<a href=\"doc/first_steps/persistence/use.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/persistence/use.it.html\">Documentazione</a>"
+msgstr "<a href=\"doc/first_steps/persistence/use.en.html\">문서</a>"
 
 #: ../glade/persistencewindow.glade.h:6
 msgid "Yes"
-msgstr "Sì"
+msgstr "예"
 
 #: ../glade/persistencewindow.glade.h:7
 msgid "No"
-msgstr "No"
+msgstr "아니오"
 
 #: ../glade/persistencewindow.glade.h:8
 msgid "Passphrase:"
-msgstr "Frase segreta:"
+msgstr "암호 :"
 
 #: ../glade/persistencewindow.glade.h:9
 msgid "Read-Only?"
-msgstr "Sola lettura?"
+msgstr "읽기 전용으로 하시겠습니까?"
 
 #: ../glade/persistencewindow.glade.h:10
 msgid "<i>Wrong passphrase. Please try again.</i>"
-msgstr "<i>Frase segreta sbagliata. Provare di nuovo.</i>"
+msgstr "<i>암호가 잘못되었습니다. 다시 시도하십시오.</i>"
 
 #: ../glade/persistencewindow.glade.h:11
 msgid "More options?"
-msgstr "Altre opzioni?"
+msgstr "상세한 옵션?"
 
 #: ../glade/optionswindow.glade.h:3
 msgid "Administration password"
-msgstr "Password di amministrazione"
+msgstr "관리 암호"
 
 #: ../glade/optionswindow.glade.h:4
 msgid ""
 "<a "
 "href=\"doc/first_steps/startup_options/administration_password.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/administration_password.it.html\">Documentazione</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/administration_password.en.html\">문서</a>"
 
 #: ../glade/optionswindow.glade.h:5
 msgid ""
 "Enter an administration password in case you need to perform administration tasks.\n"
 "Otherwise it will be disabled for better security."
-msgstr "Inserire una password di amministrazione in caso si debbano eseguire delle attività di amministrazione. In caso contrario la password di amministrazione sarà disabilitata per migliorare la sicurezza."
+msgstr "관리자 작업을 수행해야하는 경우 관리자 암호를 입력하십시오.\n아니면 보안 향상을 위해 사용할 수 없습니다."
 
 #: ../glade/optionswindow.glade.h:7
 msgid "Password:"
-msgstr "Password:"
+msgstr "암호 : "
 
 #: ../glade/optionswindow.glade.h:8
 msgid "Verify Password:"
-msgstr "Verifica password:"
+msgstr "암호 확인 : "
 
 #: ../glade/optionswindow.glade.h:9
 msgid "<i>Passwords do not match</i>"
-msgstr "<i>Le password non corrispondono</i>"
+msgstr "<i>비밀번호가 일치하지 않습니다.</i>"
 
 #: ../glade/optionswindow.glade.h:10
 msgid "Windows camouflage"
-msgstr "Maschera da Windows"
+msgstr "Windows 위장"
 
 #: ../glade/optionswindow.glade.h:11
 msgid ""
 "<a "
 "href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/windows_camouflage.it.html\">Documentazione</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">문서</a>"
 
 #: ../glade/optionswindow.glade.h:12
 msgid ""
 "This option makes Tails look more like Microsoft Windows XP. This may be "
 "useful in public places in order to avoid attracting suspicion."
-msgstr "Questa opzione permette a Tails di sembrare Microsoft Windows XP. Utile in luoghi pubblici per non attirare attenzione o sospetti."
+msgstr "이 옵션은 Tails을 더 Microsoft Windows XP로 보이게합니다. 이것은주의를 끄는 의심을 피하기 위해 공공 장소 같은 곳에서 유용 할 수 있습니다."
 
 #: ../glade/optionswindow.glade.h:13
 msgid "Activate Microsoft Windows XP Camouflage"
-msgstr "Attivare mimetizzazione Microsoft Windows XP "
+msgstr "Microsoft Windows XP 위장을 활성화"
 
 #: ../glade/optionswindow.glade.h:14
 msgid "MAC address spoofing"
-msgstr "Offuscamento dell'indirizzo MAC"
+msgstr "MAC 주소 위장"
 
 #: ../glade/optionswindow.glade.h:15
 msgid ""
 "<a "
 "href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/mac_spoofing.it.html\">Documentazione</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">문서</a>"
 
 #: ../glade/optionswindow.glade.h:16
 msgid ""
 "Spoofing MAC addresses hides the serial number of your network cards to the "
 "local networks. This can help you hide your geographical location."
-msgstr "Offuscare l'indirizzo MAC significa nascondere il numero seriale della propria scheda di rete alle reti locali. Questo permette di non rendere nota la propria posizione geografica."
+msgstr "MAC 주소를 위장하여 로컬 네트워크에 네트워크 카드의 일련 번호를 은폐합니다. 이것은 지리적 정보의 은폐에 도움이 됩니다."
 
 #: ../glade/optionswindow.glade.h:17
 msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
 "suspicion or cause network connection problems."
-msgstr "Generalmente è più sicuro oscurare l'indirizzo MAC, ma può generare sospetti o causare problemi di connessione."
+msgstr "일반적으로 MAC 주소를 위장하는 것이 안전하지만, 의심을 불러일으키거나 네트워크 연결 문제를 일으키는 경우도 있습니다."
 
 #: ../glade/optionswindow.glade.h:18
 msgid "Spoof all MAC addresses"
-msgstr "Offusca tutti gli indirizzi MAC"
+msgstr "모든 MAC 주소를 위장하기"
 
 #: ../glade/optionswindow.glade.h:19
 msgid "Network configuration"
-msgstr "Configurazioni di rete"
+msgstr "네크워크 구성"
 
 #: ../glade/optionswindow.glade.h:20
 msgid ""
 "<a "
 "href=\"doc/first_steps/startup_options/network_configuration.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/network_configuration.it.html\">Documentazione</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/network_configuration.en.html\">문서</a>"
 
 #: ../glade/optionswindow.glade.h:21
 msgid ""
 "This computer's Internet connection is clear of obstacles. You would like to"
 " connect directly to the Tor network."
-msgstr "La connessione a Internet di questo computer non è bloccata in alcun modo. Volendo puoi connetterti direttamente alla rete Tor."
+msgstr "이 컴퓨터의 인터넷 연결에는 문제가 없습니다. Tor 네트워크에 직접 연결합니다."
 
 #: ../glade/optionswindow.glade.h:22
 msgid ""
 "This computer's Internet connection is censored, filtered, or proxied. You "
 "need to configure bridge, firewall, or proxy settings."
-msgstr "La connessione a Internet di questo computer è bloccata da censura, filtrata o utilizza un proxy. È necessario configurare un bridge, firewall o un proxy."
+msgstr "이 컴퓨터의 인터넷 연결은 검열되어 있거나 필터링되어 있는 프록시를 통합니다. 브리지 내지는 방화벽, 프록시 설정을 구성해야합니다."
 
 #: ../glade/langpanel.glade.h:1
 msgid " "
-msgstr " "
+msgstr ". "
 
 #: ../glade/langpanel.glade.h:2 ../GdmGreeter/langpanel.py:42
 msgid "Language"
-msgstr "Lingua"
+msgstr "언어"
 
 #: ../glade/langpanel.glade.h:3
 msgid "Locale"
-msgstr "Impostazioni internazionali"
+msgstr "지역"
 
 #: ../glade/langpanel.glade.h:4
 msgid "Layout"
-msgstr "Disposizione"
+msgstr "레이아웃"
 
 #: ../GdmGreeter/persistence.py:59
 #, python-format
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
-msgstr "live-persist ha fallito con return code %(returncode)s:\n%(stderr)s"
+msgstr "live-persist가 실패했습니다. 반환 코드는 %(returncode)s:\n%(stderr)s"
 
 #: ../GdmGreeter/persistence.py:99
 #, python-format
@@ -193,7 +188,7 @@ msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "cryptsetup ha fallito con return code %(returncode)s:\n%(stdout)s\n%(stderr)s"
+msgstr "cryptsetup이 실패했습니다. 반환 코드는 %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
 #: ../GdmGreeter/persistence.py:124
 #, python-format
@@ -201,9 +196,9 @@ msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "live-persist ha fallito con return code %(returncode)s:\n%(stdout)s\n%(stderr)s"
+msgstr "live-persist가 실패했습니다. 반환 코드는 %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
 #: ../GdmGreeter/langpanel.py:124 ../GdmGreeter/langpanel.py:148
 #: ../GdmGreeter/langpanel.py:181
 msgid "Other..."
-msgstr "Altro..."
+msgstr "기타..."

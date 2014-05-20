@@ -1,12 +1,15 @@
-tails-greeter (0.7.30+wheezy1+bugfix.7065.keyboard.localization~1.gbpb67b7a) bugfix-7065-keyboard-localization; urgency=medium
+tails-greeter (0.7.31) devel; urgency=medium
 
-  ** SNAPSHOT build @b67b7a9acdeeb7a3f02e74b4983dbdd83467ff0a **
-
+  [ Tails developers ]
+  * Fix persistent printers
   * Revert "Adapt gbp.conf to ease working on the wheezy branch."
-  * Save keyboard settings at PostLogin time, so that tails-configure-keyboard
-    can set it in the GNOME session.
+  * Save keyboard settings at PostLogin time, so that tails-configure-keyboard can set it in the GNOME session.
+  * Import translations from Transifex.
 
- -- Tails developers <tails@boum.org>  Fri, 09 May 2014 16:50:03 +0200
+  [ kurono ]
+  * Feature #7009: Make the Greeter's help window resolution-aware
+
+ -- Tails developers <tails@boum.org>  Wed, 14 May 2014 13:14:41 +0200
 
 tails-greeter (0.7.30+wheezy1) devel; urgency=medium
 
