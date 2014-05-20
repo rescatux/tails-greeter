@@ -471,15 +471,8 @@ class LocalisationSettings(object):
     def __apply_layout_to_current_screen(self):
         logging.debug("layout=%s" % self._layout)
 
-        if self._layout != 'us':
-            layout_list = ['us', self._layout]
-            variant_list = ['', self._variant]
-        else:
-            layout_list = [self._layout]
-            variant_list = [self._variant]
-
-        self._xkl_record.set_layouts(layout_list)
-        self._xkl_record.set_variants(variant_list)
+        self._xkl_record.set_layouts([self._layout])
+        self._xkl_record.set_variants([self._variant])
         self._xkl_record.activate(self._xkl_engine)
         # try to 'enforce layout'
         self._xkl_engine.start_listen(Xkl.EngineListenModes.TRACK_KEYBOARD_STATE)
