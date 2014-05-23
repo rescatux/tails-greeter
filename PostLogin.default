@@ -72,9 +72,9 @@ CAMOUFLAGE_SETTINGS="/var/lib/gdm3/tails.camouflage"
 if [ -r "${CAMOUFLAGE_SETTINGS}" ] ; then
     . "${CAMOUFLAGE_SETTINGS}"
     case "${TAILS_CAMOUFLAGE_OS}" in
-	winxp)
+	win8)
 	    install -m 0644 \
-	        /usr/share/applications/tails-activate-winxp-theme.desktop \
+	        /usr/share/applications/tails-activate-win8-theme.desktop \
 	        /etc/xdg/autostart/
 	    ;;
     esac

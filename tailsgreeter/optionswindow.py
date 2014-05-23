@@ -98,7 +98,7 @@ class OptionsWindow(TranslatableWindow):
     def set_camouflage(self):
         """Set camouflage theme"""
         if self.camouflage_checkbox.get_active():
-            self.greeter.camouflage.os = 'winxp'
+            self.greeter.camouflage.os = 'win8'
 
     def set_macspoof(self):
         """Set macspoof status"""
