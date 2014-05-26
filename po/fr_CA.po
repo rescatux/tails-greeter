@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-06 17:16+0100\n"
-"PO-Revision-Date: 2014-03-07 14:31+0000\n"
+"POT-Creation-Date: 2014-05-14 13:14+0200\n"
+"PO-Revision-Date: 2014-05-17 14:36+0000\n"
 "Last-Translator: Alain-Olivier  Breysse\n"
 "Language-Team: French (Canada) (http://www.transifex.com/projects/p/torproject/language/fr_CA/)\n"
 "MIME-Version: 1.0\n"
@@ -164,7 +164,7 @@ msgstr "La connexion réseau de cet ordinateur est censurée, filtrée ou relay�
 msgid " "
 msgstr " "
 
-#: ../glade/langpanel.glade.h:2 ../GdmGreeter/langpanel.py:42
+#: ../glade/langpanel.glade.h:2 ../tailsgreeter/langpanel.py:43
 msgid "Language"
 msgstr "Langue"
 
@@ -176,14 +176,14 @@ msgstr "Locale"
 msgid "Layout"
 msgstr "Mise en page"
 
-#: ../GdmGreeter/persistence.py:59
+#: ../tailsgreeter/persistence.py:59
 #, python-format
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
 msgstr "échec de live-persist avec le code de retour %(returncode)s :\n%(stderr)s"
 
-#: ../GdmGreeter/persistence.py:99
+#: ../tailsgreeter/persistence.py:99
 #, python-format
 msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
@@ -191,7 +191,7 @@ msgid ""
 "%(stderr)s"
 msgstr "échec de cryptsetup avec le code de retour %(returncode)s :\n%(stdout)s\n%(stderr)s"
 
-#: ../GdmGreeter/persistence.py:124
+#: ../tailsgreeter/persistence.py:124
 #, python-format
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
@@ -199,7 +199,7 @@ msgid ""
 "%(stderr)s"
 msgstr "échec de live-persist avec le code de retour %(returncode)s :\n%(stdout)s\n%(stderr)s"
 
-#: ../GdmGreeter/langpanel.py:124 ../GdmGreeter/langpanel.py:148
-#: ../GdmGreeter/langpanel.py:181
+#: ../tailsgreeter/langpanel.py:125 ../tailsgreeter/langpanel.py:152
+#: ../tailsgreeter/langpanel.py:185
 msgid "Other..."
 msgstr "Autre..."

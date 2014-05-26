@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-27 13:07+0200\n"
-"PO-Revision-Date: 2014-05-09 22:40+0000\n"
+"POT-Creation-Date: 2014-05-14 13:14+0200\n"
+"PO-Revision-Date: 2014-05-17 12:53+0000\n"
 "Last-Translator: her_tor_es_ar <cvmay08@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/projects/p/torproject/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -166,7 +166,7 @@ msgstr "La conexión a Internet de esta computadora está censurada, filtrada, o
 msgid " "
 msgstr " "
 
-#: ../glade/langpanel.glade.h:2 ../GdmGreeter/langpanel.py:42
+#: ../glade/langpanel.glade.h:2 ../tailsgreeter/langpanel.py:43
 msgid "Language"
 msgstr "Idioma"
 
@@ -178,14 +178,14 @@ msgstr "Localización"
 msgid "Layout"
 msgstr "Composición"
 
-#: ../GdmGreeter/persistence.py:59
+#: ../tailsgreeter/persistence.py:59
 #, python-format
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
 msgstr "live-persist falló devolviendo el código %(returncode)s: \n%(stderr)s"
 
-#: ../GdmGreeter/persistence.py:99
+#: ../tailsgreeter/persistence.py:99
 #, python-format
 msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
@@ -193,7 +193,7 @@ msgid ""
 "%(stderr)s"
 msgstr "cryptsetup falló devolviendo el código %(returncode)s: \n%(stdout)s \n%(stderr)s"
 
-#: ../GdmGreeter/persistence.py:124
+#: ../tailsgreeter/persistence.py:124
 #, python-format
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
@@ -201,7 +201,7 @@ msgid ""
 "%(stderr)s"
 msgstr "live-persist falló devolviendo el código %(returncode)s: \n%(stdout)s \n%(stderr)s"
 
-#: ../GdmGreeter/langpanel.py:124 ../GdmGreeter/langpanel.py:148
-#: ../GdmGreeter/langpanel.py:181
+#: ../tailsgreeter/langpanel.py:125 ../tailsgreeter/langpanel.py:152
+#: ../tailsgreeter/langpanel.py:185
 msgid "Other..."
 msgstr "Otro..."

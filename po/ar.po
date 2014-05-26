@@ -5,7 +5,7 @@
 # Translators:
 # kraim <biskraim@gmail.com>, 2013
 # Arwa M, 2014
-# Mohammed Guessous <guessousuni@gmail.com>, 2014
+# Mohammed hassane GUESSOUS <guessousuni@gmail.com>, 2014
 # alshara3 <hsn.ali91@gmail.com>, 2013
 # Mohammed ALDOUB <voulnet@gmail.com>, 2013
 # Sherief Alaa <sheriefalaa.w@gmail.com>, 2013
@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-17 13:54+0100\n"
-"PO-Revision-Date: 2014-04-04 15:30+0000\n"
+"POT-Creation-Date: 2014-05-14 13:14+0200\n"
+"PO-Revision-Date: 2014-05-17 14:36+0000\n"
 "Last-Translator: uzumaki <tx99h4@hotmail.com>\n"
 "Language-Team: Arabic (http://www.transifex.com/projects/p/torproject/language/ar/)\n"
 "MIME-Version: 1.0\n"
@@ -169,7 +169,7 @@ msgstr "اتصال هذا الحاسب الإنترنت مراقب أو مصفى
 msgid " "
 msgstr "."
 
-#: ../glade/langpanel.glade.h:2 ../GdmGreeter/langpanel.py:42
+#: ../glade/langpanel.glade.h:2 ../tailsgreeter/langpanel.py:43
 msgid "Language"
 msgstr "اللغة"
 
@@ -181,14 +181,14 @@ msgstr "محلي"
 msgid "Layout"
 msgstr "التصميم"
 
-#: ../GdmGreeter/persistence.py:59
+#: ../tailsgreeter/persistence.py:59
 #, python-format
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
 msgstr "live-persist فشل و كود العودة هو %(returncode)s:\n%(stderr)s"
 
-#: ../GdmGreeter/persistence.py:99
+#: ../tailsgreeter/persistence.py:99
 #, python-format
 msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
@@ -196,7 +196,7 @@ msgid ""
 "%(stderr)s"
 msgstr "cryptsetup فشل و كود العودة هو %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
-#: ../GdmGreeter/persistence.py:124
+#: ../tailsgreeter/persistence.py:124
 #, python-format
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
@@ -204,7 +204,7 @@ msgid ""
 "%(stderr)s"
 msgstr "live-persist فشل و كود العودة هو %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
-#: ../GdmGreeter/langpanel.py:124 ../GdmGreeter/langpanel.py:148
-#: ../GdmGreeter/langpanel.py:181
+#: ../tailsgreeter/langpanel.py:125 ../tailsgreeter/langpanel.py:152
+#: ../tailsgreeter/langpanel.py:185
 msgid "Other..."
 msgstr "آخر..."

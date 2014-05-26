@@ -6,7 +6,7 @@
 # alkaid <alkaidw@gmail.com>, 2012
 # Communia <ameaneantie@riseup.net>, 2013-2014
 # carlo_valente <carlo.gt.valente@gmail.com>, 2014
-# ebonsi, 2013
+# Eduardo Bonsi, 2013
 # bruuh <bruuh@outlook.com>, 2012
 # Killer <luis_zik13@hotmail.com>, 2012
 # NICEcookie <rafaelmartinsrm@gmail.com>, 2012
@@ -15,9 +15,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-06 17:16+0100\n"
-"PO-Revision-Date: 2014-03-07 17:20+0000\n"
-"Last-Translator: carlo_valente <carlo.gt.valente@gmail.com>\n"
+"POT-Creation-Date: 2014-05-14 13:14+0200\n"
+"PO-Revision-Date: 2014-05-17 14:36+0000\n"
+"Last-Translator: Communia <ameaneantie@riseup.net>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/projects/p/torproject/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -169,7 +169,7 @@ msgstr "A conexão à Internet desse computador está censurada, filtrada ou atr
 msgid " "
 msgstr " "
 
-#: ../glade/langpanel.glade.h:2 ../GdmGreeter/langpanel.py:42
+#: ../glade/langpanel.glade.h:2 ../tailsgreeter/langpanel.py:43
 msgid "Language"
 msgstr "Idioma"
 
@@ -181,30 +181,30 @@ msgstr "Local"
 msgid "Layout"
 msgstr "Layout"
 
-#: ../GdmGreeter/persistence.py:59
+#: ../tailsgreeter/persistence.py:59
 #, python-format
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
 msgstr "live-persist falhou com código de retorno %(returncode)s:\n%(stderr)s"
 
-#: ../GdmGreeter/persistence.py:99
+#: ../tailsgreeter/persistence.py:99
 #, python-format
 msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "cryptsetup falhou ao retornar o código %(returncode)s:\n%(stdout)s\n%(stderr)s"
+msgstr "cryptsetup não pôde retornar o código %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
-#: ../GdmGreeter/persistence.py:124
+#: ../tailsgreeter/persistence.py:124
 #, python-format
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "live-persist falhou ao retornar o código %(returncode)s:\n%(stdout)s\n%(stderr)s"
+msgstr "live-persist não pôde retornar o código %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
-#: ../GdmGreeter/langpanel.py:124 ../GdmGreeter/langpanel.py:148
-#: ../GdmGreeter/langpanel.py:181
+#: ../tailsgreeter/langpanel.py:125 ../tailsgreeter/langpanel.py:152
+#: ../tailsgreeter/langpanel.py:185
 msgid "Other..."
 msgstr "Outro..."

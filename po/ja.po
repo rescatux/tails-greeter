@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-06 17:16+0100\n"
-"PO-Revision-Date: 2014-03-07 12:53+0000\n"
+"POT-Creation-Date: 2014-05-14 13:14+0200\n"
+"PO-Revision-Date: 2014-05-17 14:36+0000\n"
 "Last-Translator: plazmism <gomidori@live.jp>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/torproject/language/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -162,7 +162,7 @@ msgstr "このコンピューターのインターネット接続は検閲され
 msgid " "
 msgstr " "
 
-#: ../glade/langpanel.glade.h:2 ../GdmGreeter/langpanel.py:42
+#: ../glade/langpanel.glade.h:2 ../tailsgreeter/langpanel.py:43
 msgid "Language"
 msgstr "言語"
 
@@ -174,14 +174,14 @@ msgstr "地域"
 msgid "Layout"
 msgstr "レイアウト"
 
-#: ../GdmGreeter/persistence.py:59
+#: ../tailsgreeter/persistence.py:59
 #, python-format
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
 msgstr "live-persistが失敗しました。リターンコードは %(returncode)s:\n%(stderr)s"
 
-#: ../GdmGreeter/persistence.py:99
+#: ../tailsgreeter/persistence.py:99
 #, python-format
 msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
@@ -189,7 +189,7 @@ msgid ""
 "%(stderr)s"
 msgstr "cryptsetup が失敗しました。リターンコードは %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
-#: ../GdmGreeter/persistence.py:124
+#: ../tailsgreeter/persistence.py:124
 #, python-format
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
@@ -197,7 +197,7 @@ msgid ""
 "%(stderr)s"
 msgstr "live-persistが失敗しました。リターンコードは %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
-#: ../GdmGreeter/langpanel.py:124 ../GdmGreeter/langpanel.py:148
-#: ../GdmGreeter/langpanel.py:181
+#: ../tailsgreeter/langpanel.py:125 ../tailsgreeter/langpanel.py:152
+#: ../tailsgreeter/langpanel.py:185
 msgid "Other..."
 msgstr "その他..."

@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-17 13:54+0100\n"
-"PO-Revision-Date: 2014-04-11 17:30+0000\n"
+"POT-Creation-Date: 2014-05-14 13:14+0200\n"
+"PO-Revision-Date: 2014-05-17 14:36+0000\n"
 "Last-Translator: FHRFHRFHRFHR <fhr@fhrnet.eu>\n"
 "Language-Team: Czech (http://www.transifex.com/projects/p/torproject/language/cs/)\n"
 "MIME-Version: 1.0\n"
@@ -165,7 +165,7 @@ msgstr "Internetové připojení tohoto počítače je cenzurované, filtrované
 msgid " "
 msgstr " "
 
-#: ../glade/langpanel.glade.h:2 ../GdmGreeter/langpanel.py:42
+#: ../glade/langpanel.glade.h:2 ../tailsgreeter/langpanel.py:43
 msgid "Language"
 msgstr "Jazyk"
 
@@ -177,14 +177,14 @@ msgstr "Místní"
 msgid "Layout"
 msgstr "Rozvržení"
 
-#: ../GdmGreeter/persistence.py:59
+#: ../tailsgreeter/persistence.py:59
 #, python-format
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
 msgstr "live-persist selhal a vrátil kód %(returncode)s:\n%(stderr)s"
 
-#: ../GdmGreeter/persistence.py:99
+#: ../tailsgreeter/persistence.py:99
 #, python-format
 msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
@@ -192,7 +192,7 @@ msgid ""
 "%(stderr)s"
 msgstr "cryptsetup selhal a vrátil kód %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
-#: ../GdmGreeter/persistence.py:124
+#: ../tailsgreeter/persistence.py:124
 #, python-format
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
@@ -200,7 +200,7 @@ msgid ""
 "%(stderr)s"
 msgstr "live-persist selhal a vrátil kód %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
-#: ../GdmGreeter/langpanel.py:124 ../GdmGreeter/langpanel.py:148
-#: ../GdmGreeter/langpanel.py:181
+#: ../tailsgreeter/langpanel.py:125 ../tailsgreeter/langpanel.py:152
+#: ../tailsgreeter/langpanel.py:185
 msgid "Other..."
 msgstr "Ostatní..."
