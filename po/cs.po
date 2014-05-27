@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # FHRFHRFHRFHR <fhr@fhrnet.eu>, 2013
 # FHRFHRFHRFHR <fhr@fhrnet.eu>, 2014
@@ -11,14 +11,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-17 13:54+0100\n"
-"PO-Revision-Date: 2014-04-11 17:30+0000\n"
+"POT-Creation-Date: 2014-05-26 15:09+0200\n"
+"PO-Revision-Date: 2014-05-17 14:36+0000\n"
 "Last-Translator: FHRFHRFHRFHR <fhr@fhrnet.eu>\n"
-"Language-Team: Czech (http://www.transifex.com/projects/p/torproject/language/cs/)\n"
+"Language-Team: Czech (http://www.transifex.com/projects/p/torproject/"
+"language/cs/)\n"
+"Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: cs\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: ../glade/persistencewindow.glade.h:1
@@ -71,15 +72,21 @@ msgstr "Administrační heslo"
 
 #: ../glade/optionswindow.glade.h:4
 msgid ""
-"<a "
-"href=\"doc/first_steps/startup_options/administration_password.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/administration_password.en.html\">Dokumentace</a>"
+"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
+"\">Documentation</a>"
+msgstr ""
+"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
+"\">Dokumentace</a>"
 
 #: ../glade/optionswindow.glade.h:5
 msgid ""
-"Enter an administration password in case you need to perform administration tasks.\n"
+"Enter an administration password in case you need to perform administration "
+"tasks.\n"
 "Otherwise it will be disabled for better security."
-msgstr "Vložte administrační heslo v případě, že chcete provádět administrační úlohy.\nJinak budou adminstrační úlohy vypnuty pro vyšší bezpečnosti."
+msgstr ""
+"Vložte administrační heslo v případě, že chcete provádět administrační "
+"úlohy.\n"
+"Jinak budou adminstrační úlohy vypnuty pro vyšší bezpečnosti."
 
 #: ../glade/optionswindow.glade.h:7
 msgid "Password:"
@@ -99,15 +106,19 @@ msgstr "Windows kamufláž"
 
 #: ../glade/optionswindow.glade.h:11
 msgid ""
-"<a "
-"href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">Dokumentace</a>"
+"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
+"\">Documentation</a>"
+msgstr ""
+"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
+"\">Dokumentace</a>"
 
 #: ../glade/optionswindow.glade.h:12
 msgid ""
 "This option makes Tails look more like Microsoft Windows XP. This may be "
 "useful in public places in order to avoid attracting suspicion."
-msgstr "Toto nastavení změní vzhled Tails na vzhled Microsoft Windows XP. Nastavení se používá na veřejných místech, pro vyhnutí se zbytečné pozornosti okolí."
+msgstr ""
+"Toto nastavení změní vzhled Tails na vzhled Microsoft Windows XP. Nastavení "
+"se používá na veřejných místech, pro vyhnutí se zbytečné pozornosti okolí."
 
 #: ../glade/optionswindow.glade.h:13
 msgid "Activate Microsoft Windows XP Camouflage"
@@ -119,21 +130,27 @@ msgstr "Spoofing MAC adresy"
 
 #: ../glade/optionswindow.glade.h:15
 msgid ""
-"<a "
-"href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Dokumentace</a>"
+"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
+"\">Documentation</a>"
+msgstr ""
+"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
+"\">Dokumentace</a>"
 
 #: ../glade/optionswindow.glade.h:16
 msgid ""
 "Spoofing MAC addresses hides the serial number of your network cards to the "
 "local networks. This can help you hide your geographical location."
-msgstr "Podvrhování MAC adresy schovává sériové číslo vašich síťových karet lokálním sítím. Toto může pomoci schovat vaši geografickou polohu."
+msgstr ""
+"Podvrhování MAC adresy schovává sériové číslo vašich síťových karet lokálním "
+"sítím. Toto může pomoci schovat vaši geografickou polohu."
 
 #: ../glade/optionswindow.glade.h:17
 msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
 "suspicion or cause network connection problems."
-msgstr "Je celkově bezpečnější schovat MAC adresy, ale také to může vznést podezření nebo způsobit problémy s připojením k síti."
+msgstr ""
+"Je celkově bezpečnější schovat MAC adresy, ale také to může vznést podezření "
+"nebo způsobit problémy s připojením k síti."
 
 #: ../glade/optionswindow.glade.h:18
 msgid "Spoof all MAC addresses"
@@ -145,27 +162,33 @@ msgstr "Konfigurace sítě"
 
 #: ../glade/optionswindow.glade.h:20
 msgid ""
-"<a "
-"href=\"doc/first_steps/startup_options/network_configuration.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/network_configuration.en.html\">Dokumentace</a>"
+"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
+"\">Documentation</a>"
+msgstr ""
+"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
+"\">Dokumentace</a>"
 
 #: ../glade/optionswindow.glade.h:21
 msgid ""
-"This computer's Internet connection is clear of obstacles. You would like to"
-" connect directly to the Tor network."
-msgstr "Internetové připojení tohoto počítače nemá v cestě překážky. Budete se chtít připojit přímo do sítě Tor."
+"This computer's Internet connection is clear of obstacles. You would like to "
+"connect directly to the Tor network."
+msgstr ""
+"Internetové připojení tohoto počítače nemá v cestě překážky. Budete se chtít "
+"připojit přímo do sítě Tor."
 
 #: ../glade/optionswindow.glade.h:22
 msgid ""
 "This computer's Internet connection is censored, filtered, or proxied. You "
 "need to configure bridge, firewall, or proxy settings."
-msgstr "Internetové připojení tohoto počítače je cenzurované, filtrované, nebo je použito proxy. Potřebujete nastavit most, firewall nebo proxy."
+msgstr ""
+"Internetové připojení tohoto počítače je cenzurované, filtrované, nebo je "
+"použito proxy. Potřebujete nastavit most, firewall nebo proxy."
 
 #: ../glade/langpanel.glade.h:1
 msgid " "
 msgstr " "
 
-#: ../glade/langpanel.glade.h:2 ../GdmGreeter/langpanel.py:42
+#: ../glade/langpanel.glade.h:2 ../tailsgreeter/langpanel.py:43
 msgid "Language"
 msgstr "Jazyk"
 
@@ -177,30 +200,38 @@ msgstr "Místní"
 msgid "Layout"
 msgstr "Rozvržení"
 
-#: ../GdmGreeter/persistence.py:59
+#: ../tailsgreeter/persistence.py:59
 #, python-format
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
-msgstr "live-persist selhal a vrátil kód %(returncode)s:\n%(stderr)s"
+msgstr ""
+"live-persist selhal a vrátil kód %(returncode)s:\n"
+"%(stderr)s"
 
-#: ../GdmGreeter/persistence.py:99
+#: ../tailsgreeter/persistence.py:99
 #, python-format
 msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "cryptsetup selhal a vrátil kód %(returncode)s:\n%(stdout)s\n%(stderr)s"
+msgstr ""
+"cryptsetup selhal a vrátil kód %(returncode)s:\n"
+"%(stdout)s\n"
+"%(stderr)s"
 
-#: ../GdmGreeter/persistence.py:124
+#: ../tailsgreeter/persistence.py:124
 #, python-format
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "live-persist selhal a vrátil kód %(returncode)s:\n%(stdout)s\n%(stderr)s"
+msgstr ""
+"live-persist selhal a vrátil kód %(returncode)s:\n"
+"%(stdout)s\n"
+"%(stderr)s"
 
-#: ../GdmGreeter/langpanel.py:124 ../GdmGreeter/langpanel.py:148
-#: ../GdmGreeter/langpanel.py:181
+#: ../tailsgreeter/langpanel.py:125 ../tailsgreeter/langpanel.py:152
+#: ../tailsgreeter/langpanel.py:185
 msgid "Other..."
 msgstr "Ostatní..."

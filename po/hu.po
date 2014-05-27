@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # lajos <mrlajos@gmail.com>, 2014
 # vargaviktor <viktor.varga@gmail.com>, 2013
@@ -10,14 +10,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-17 13:54+0100\n"
-"PO-Revision-Date: 2014-04-07 14:30+0000\n"
+"POT-Creation-Date: 2014-05-26 15:09+0200\n"
+"PO-Revision-Date: 2014-05-17 14:36+0000\n"
 "Last-Translator: lajos <mrlajos@gmail.com>\n"
-"Language-Team: Hungarian (http://www.transifex.com/projects/p/torproject/language/hu/)\n"
+"Language-Team: Hungarian (http://www.transifex.com/projects/p/torproject/"
+"language/hu/)\n"
+"Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: hu\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../glade/persistencewindow.glade.h:1
@@ -70,15 +71,21 @@ msgstr "Adminisztrátori jelszó"
 
 #: ../glade/optionswindow.glade.h:4
 msgid ""
-"<a "
-"href=\"doc/first_steps/startup_options/administration_password.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/administration_password.en.html\">Dokumentáció</a>"
+"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
+"\">Documentation</a>"
+msgstr ""
+"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
+"\">Dokumentáció</a>"
 
 #: ../glade/optionswindow.glade.h:5
 msgid ""
-"Enter an administration password in case you need to perform administration tasks.\n"
+"Enter an administration password in case you need to perform administration "
+"tasks.\n"
 "Otherwise it will be disabled for better security."
-msgstr "Adjon meg egy adminisztrátori jelszót az adminisztrációs feladatokhoz.\n\nEgyébként kikapcsolt, a magasabb biztonság érdekében."
+msgstr ""
+"Adjon meg egy adminisztrátori jelszót az adminisztrációs feladatokhoz.\n"
+"\n"
+"Egyébként kikapcsolt, a magasabb biztonság érdekében."
 
 #: ../glade/optionswindow.glade.h:7
 msgid "Password:"
@@ -98,15 +105,19 @@ msgstr "Windows álcázás"
 
 #: ../glade/optionswindow.glade.h:11
 msgid ""
-"<a "
-"href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">Dokumentáció</a>"
+"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
+"\">Documentation</a>"
+msgstr ""
+"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
+"\">Dokumentáció</a>"
 
 #: ../glade/optionswindow.glade.h:12
 msgid ""
 "This option makes Tails look more like Microsoft Windows XP. This may be "
 "useful in public places in order to avoid attracting suspicion."
-msgstr "Ez az opció  a Tails-t a Microsoft Windows XP-hez hasonlóvá teszi. Ez fontos lehet publikus helyeken, ahol figyelmet kelthetünk fel."
+msgstr ""
+"Ez az opció  a Tails-t a Microsoft Windows XP-hez hasonlóvá teszi. Ez fontos "
+"lehet publikus helyeken, ahol figyelmet kelthetünk fel."
 
 #: ../glade/optionswindow.glade.h:13
 msgid "Activate Microsoft Windows XP Camouflage"
@@ -118,21 +129,27 @@ msgstr "MAC cím spoofing"
 
 #: ../glade/optionswindow.glade.h:15
 msgid ""
-"<a "
-"href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Dokumentáció</a>"
+"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
+"\">Documentation</a>"
+msgstr ""
+"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
+"\">Dokumentáció</a>"
 
 #: ../glade/optionswindow.glade.h:16
 msgid ""
 "Spoofing MAC addresses hides the serial number of your network cards to the "
 "local networks. This can help you hide your geographical location."
-msgstr "MAC cím spoofing elrejti a hálózati kártyád széria számát a helyi hálózaton. Ez segít elrejteni a földrajzi helyzeted."
+msgstr ""
+"MAC cím spoofing elrejti a hálózati kártyád széria számát a helyi hálózaton. "
+"Ez segít elrejteni a földrajzi helyzeted."
 
 #: ../glade/optionswindow.glade.h:17
 msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
 "suspicion or cause network connection problems."
-msgstr "Általában biztonságos elrejteni a MAC címet de ez gyanút kelthet vagy hálózati kapcsolati problémákat okozhat."
+msgstr ""
+"Általában biztonságos elrejteni a MAC címet de ez gyanút kelthet vagy "
+"hálózati kapcsolati problémákat okozhat."
 
 #: ../glade/optionswindow.glade.h:18
 msgid "Spoof all MAC addresses"
@@ -144,27 +161,33 @@ msgstr "Hálózati konfiguráció"
 
 #: ../glade/optionswindow.glade.h:20
 msgid ""
-"<a "
-"href=\"doc/first_steps/startup_options/network_configuration.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/network_configuration.en.html\">Dokumentáció</a>"
+"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
+"\">Documentation</a>"
+msgstr ""
+"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
+"\">Dokumentáció</a>"
 
 #: ../glade/optionswindow.glade.h:21
 msgid ""
-"This computer's Internet connection is clear of obstacles. You would like to"
-" connect directly to the Tor network."
-msgstr "A számítógép internet kapcsolata akadályoktól mentes. Szeretnél közvetlenül kapcsolódni a Tor hálózathoz."
+"This computer's Internet connection is clear of obstacles. You would like to "
+"connect directly to the Tor network."
+msgstr ""
+"A számítógép internet kapcsolata akadályoktól mentes. Szeretnél közvetlenül "
+"kapcsolódni a Tor hálózathoz."
 
 #: ../glade/optionswindow.glade.h:22
 msgid ""
 "This computer's Internet connection is censored, filtered, or proxied. You "
 "need to configure bridge, firewall, or proxy settings."
-msgstr "A számítógép internet kapcsolata cenzúrázott, szűrt vagy proxy-t használ. konfigurálnod kell a bridge, tűzfal vagy proxy beállításokat."
+msgstr ""
+"A számítógép internet kapcsolata cenzúrázott, szűrt vagy proxy-t használ. "
+"konfigurálnod kell a bridge, tűzfal vagy proxy beállításokat."
 
 #: ../glade/langpanel.glade.h:1
 msgid " "
 msgstr " "
 
-#: ../glade/langpanel.glade.h:2 ../GdmGreeter/langpanel.py:42
+#: ../glade/langpanel.glade.h:2 ../tailsgreeter/langpanel.py:43
 msgid "Language"
 msgstr "Nyelv"
 
@@ -176,30 +199,38 @@ msgstr "Lokáció"
 msgid "Layout"
 msgstr "Kiosztás"
 
-#: ../GdmGreeter/persistence.py:59
+#: ../tailsgreeter/persistence.py:59
 #, python-format
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
-msgstr "live-persist sikertelen a következő visszatérési kóddal: %(returncode)s:\n%(stderr)s"
+msgstr ""
+"live-persist sikertelen a következő visszatérési kóddal: %(returncode)s:\n"
+"%(stderr)s"
 
-#: ../GdmGreeter/persistence.py:99
+#: ../tailsgreeter/persistence.py:99
 #, python-format
 msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "cryptsetup sikertelen a következő visszatérési kóddal:  %(returncode)s:\n%(stdout)s\n%(stderr)s"
+msgstr ""
+"cryptsetup sikertelen a következő visszatérési kóddal:  %(returncode)s:\n"
+"%(stdout)s\n"
+"%(stderr)s"
 
-#: ../GdmGreeter/persistence.py:124
+#: ../tailsgreeter/persistence.py:124
 #, python-format
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "live-persist sikertelen a következő visszatérési kóddal:  %(returncode)s:\n%(stdout)s\n%(stderr)s"
+msgstr ""
+"live-persist sikertelen a következő visszatérési kóddal:  %(returncode)s:\n"
+"%(stdout)s\n"
+"%(stderr)s"
 
-#: ../GdmGreeter/langpanel.py:124 ../GdmGreeter/langpanel.py:148
-#: ../GdmGreeter/langpanel.py:181
+#: ../tailsgreeter/langpanel.py:125 ../tailsgreeter/langpanel.py:152
+#: ../tailsgreeter/langpanel.py:185
 msgid "Other..."
 msgstr "Egyéb..."

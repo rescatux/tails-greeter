@@ -237,7 +237,6 @@ class LocalisationSettings(object):
         self._locale = 'en_US'
         self._layout = 'us'
         self._variant = ''
-        self._options = 'grp:alt_shift_toggle'
 
         actusermanager = AccountsService.UserManager.get_default()
         self.__actusermanager_loadedid = actusermanager.connect(
@@ -282,7 +281,6 @@ class LocalisationSettings(object):
             f.write('TAILS_XKBMODEL=%s\n' % 'pc105') # use default value from /etc/default/keyboard
             f.write('TAILS_XKBLAYOUT=%s\n' % layout)
             f.write('TAILS_XKBVARIANT=%s\n' % variant)
-            f.write('TAILS_XKBOPTIONS=%s\n' % self._options)
 
     # LANGUAGES
 
@@ -473,28 +471,17 @@ class LocalisationSettings(object):
     def __apply_layout_to_current_screen(self):
         logging.debug("layout=%s" % self._layout)
 
-        if self._layout != 'us':
-            layout_list = ['us', self._layout]
-            variant_list = ['', self._variant]
-        else:
-            layout_list = [self._layout]
-            variant_list = [self._variant]
-
-        self._xkl_record.set_layouts(layout_list)
-        self._xkl_record.set_variants(variant_list)
-        # 'grp:sclk_toggle' would be much more convenient but we default to
-        # mustdie switcher in here
-        self._xkl_record.set_options([self._options])
+        self._xkl_record.set_layouts([self._layout])
+        self._xkl_record.set_variants([self._variant])
         self._xkl_record.activate(self._xkl_engine)
         # try to 'enforce layout'
         self._xkl_engine.start_listen(Xkl.EngineListenModes.TRACK_KEYBOARD_STATE)
         self._xkl_engine.lock_group(1)
         self._xkl_engine.stop_listen(Xkl.EngineListenModes.TRACK_KEYBOARD_STATE)
 
-        logging.debug('L:%s V:%s O:%s',
+        logging.debug('L:%s V:%s',
                        self._xkl_record.layouts,
-                       self._xkl_record.variants,
-                       self._xkl_record.options)
+                       self._xkl_record.variants)
 
 # MODULE INITIALISATION
 

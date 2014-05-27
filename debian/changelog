@@ -6,6 +6,15 @@ tails-greeter (0.7.31+feature.6342.update.camouflage.for.gnome3~1.gbp95f3da) fea
 
  -- Tails developers <tails@boum.org>  Tue, 27 May 2014 15:48:07 +0200
 
+tails-greeter (0.7.32) devel; urgency=medium
+
+  * Don't set Xkb options. (Closes #7250)
+  * Simply set chosen keyboard layout with no 'us' switch.
+  * Import translations from Transifex.
+  * Update POT and PO files.
+
+ -- Tails developers <tails@boum.org>  Mon, 26 May 2014 15:10:13 +0200
+
 tails-greeter (0.7.31) devel; urgency=medium
 
   [ Tails developers ]

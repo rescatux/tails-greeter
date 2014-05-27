@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-17 13:30+0100\n"
+"POT-Creation-Date: 2014-05-26 15:09+0200\n"
 "PO-Revision-Date: 2014-03-17 13:31+0100\n"
 "Last-Translator: Onizuka\n"
 "Language-Team: French (http://www.transifex.com/projects/p/torproject/"
@@ -188,7 +188,7 @@ msgstr ""
 msgid " "
 msgstr " "
 
-#: ../glade/langpanel.glade.h:2 ../GdmGreeter/langpanel.py:42
+#: ../glade/langpanel.glade.h:2 ../tailsgreeter/langpanel.py:43
 msgid "Language"
 msgstr "Langue"
 
@@ -200,7 +200,7 @@ msgstr "Lieu"
 msgid "Layout"
 msgstr "Agencement"
 
-#: ../GdmGreeter/persistence.py:59
+#: ../tailsgreeter/persistence.py:59
 #, python-format
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
@@ -209,7 +209,7 @@ msgstr ""
 "échec de live-persist avec le code de retour %(returncode)s :\n"
 "%(stderr)s"
 
-#: ../GdmGreeter/persistence.py:99
+#: ../tailsgreeter/persistence.py:99
 #, python-format
 msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
@@ -220,7 +220,7 @@ msgstr ""
 "%(stdout)s\n"
 "%(stderr)s"
 
-#: ../GdmGreeter/persistence.py:124
+#: ../tailsgreeter/persistence.py:124
 #, python-format
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
@@ -231,7 +231,7 @@ msgstr ""
 "%(stdout)s\n"
 "%(stderr)s"
 
-#: ../GdmGreeter/langpanel.py:124 ../GdmGreeter/langpanel.py:148
-#: ../GdmGreeter/langpanel.py:181
+#: ../tailsgreeter/langpanel.py:125 ../tailsgreeter/langpanel.py:152
+#: ../tailsgreeter/langpanel.py:185
 msgid "Other..."
 msgstr "Autre..."

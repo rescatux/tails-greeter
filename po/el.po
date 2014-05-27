@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # pappasadrian <pappasadrian@gmail.com>, 2014
 # firespin <dartworldgr@hotmail.com>, 2014
@@ -11,14 +11,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-27 13:07+0200\n"
-"PO-Revision-Date: 2014-05-08 22:20+0000\n"
+"POT-Creation-Date: 2014-05-26 15:09+0200\n"
+"PO-Revision-Date: 2014-05-17 14:36+0000\n"
 "Last-Translator: firespin <dartworldgr@hotmail.com>\n"
-"Language-Team: Greek (http://www.transifex.com/projects/p/torproject/language/el/)\n"
+"Language-Team: Greek (http://www.transifex.com/projects/p/torproject/"
+"language/el/)\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: el\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../glade/persistencewindow.glade.h:1
@@ -71,15 +72,21 @@ msgstr "Κωδικός διαχείρισης"
 
 #: ../glade/optionswindow.glade.h:4
 msgid ""
-"<a "
-"href=\"doc/first_steps/startup_options/administration_password.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/administration_password.en.html\">Τεκμηρίωση</a>"
+"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
+"\">Documentation</a>"
+msgstr ""
+"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
+"\">Τεκμηρίωση</a>"
 
 #: ../glade/optionswindow.glade.h:5
 msgid ""
-"Enter an administration password in case you need to perform administration tasks.\n"
+"Enter an administration password in case you need to perform administration "
+"tasks.\n"
 "Otherwise it will be disabled for better security."
-msgstr "Εισάγετε ένα κωδικό διαχείρισης σε περίπτωση που χρειαστείτε να πραγματοποιήσετε διαχειριστικές εργασίες. Ειδάλλως θα απανεργοποιηθεί για καλύτερη ασφάλεια."
+msgstr ""
+"Εισάγετε ένα κωδικό διαχείρισης σε περίπτωση που χρειαστείτε να "
+"πραγματοποιήσετε διαχειριστικές εργασίες. Ειδάλλως θα απανεργοποιηθεί για "
+"καλύτερη ασφάλεια."
 
 #: ../glade/optionswindow.glade.h:7
 msgid "Password:"
@@ -99,15 +106,20 @@ msgstr "Windows καμουφλάζ"
 
 #: ../glade/optionswindow.glade.h:11
 msgid ""
-"<a "
-"href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">Τεκμηρίωση</a>"
+"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
+"\">Documentation</a>"
+msgstr ""
+"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
+"\">Τεκμηρίωση</a>"
 
 #: ../glade/optionswindow.glade.h:12
 msgid ""
 "This option makes Tails look more like Microsoft Windows XP. This may be "
 "useful in public places in order to avoid attracting suspicion."
-msgstr "Αυτή η επιλογή κάνει το Tails να μοιάζει περισσότερο με Microsoft Windows XP. Αυτό μπορεί να είναι χρήσιμο σε δημόσια μέρη ώστε να μην προσελκύετε υποψίες."
+msgstr ""
+"Αυτή η επιλογή κάνει το Tails να μοιάζει περισσότερο με Microsoft Windows "
+"XP. Αυτό μπορεί να είναι χρήσιμο σε δημόσια μέρη ώστε να μην προσελκύετε "
+"υποψίες."
 
 #: ../glade/optionswindow.glade.h:13
 msgid "Activate Microsoft Windows XP Camouflage"
@@ -119,21 +131,29 @@ msgstr "MAC διεύθυνση παραπλάνηση"
 
 #: ../glade/optionswindow.glade.h:15
 msgid ""
-"<a "
-"href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Τεκμηρίωση</a>"
+"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
+"\">Documentation</a>"
+msgstr ""
+"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Τεκμηρίωση</"
+"a>"
 
 #: ../glade/optionswindow.glade.h:16
 msgid ""
 "Spoofing MAC addresses hides the serial number of your network cards to the "
 "local networks. This can help you hide your geographical location."
-msgstr "Η παραπλάνηση των διευθύνσεων MAC κρύβει τον σειριακό αριθμό των καρτών δικτύου σας για τα τοπικά δίκτυα. Αυτό μπορεί να σας βοηθήσει να κρύψετε τη γεωγραφική θέση σας."
+msgstr ""
+"Η παραπλάνηση των διευθύνσεων MAC κρύβει τον σειριακό αριθμό των καρτών "
+"δικτύου σας για τα τοπικά δίκτυα. Αυτό μπορεί να σας βοηθήσει να κρύψετε τη "
+"γεωγραφική θέση σας."
 
 #: ../glade/optionswindow.glade.h:17
 msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
 "suspicion or cause network connection problems."
-msgstr "Είναι γενικά ασφαλέστερο να παραπλανήσετε τις διευθύνσεις MAC, αλλά θα μπορούσε επίσης να αυξήσει την υποψία ή να προκαλέσει προβλήματα σύνδεσης με το δίκτυο."
+msgstr ""
+"Είναι γενικά ασφαλέστερο να παραπλανήσετε τις διευθύνσεις MAC, αλλά θα "
+"μπορούσε επίσης να αυξήσει την υποψία ή να προκαλέσει προβλήματα σύνδεσης με "
+"το δίκτυο."
 
 #: ../glade/optionswindow.glade.h:18
 msgid "Spoof all MAC addresses"
@@ -145,27 +165,34 @@ msgstr "Ρυθμίσεις δικτύου"
 
 #: ../glade/optionswindow.glade.h:20
 msgid ""
-"<a "
-"href=\"doc/first_steps/startup_options/network_configuration.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/network_configuration.en.html\">Τεκμηρίωση</a>"
+"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
+"\">Documentation</a>"
+msgstr ""
+"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
+"\">Τεκμηρίωση</a>"
 
 #: ../glade/optionswindow.glade.h:21
 msgid ""
-"This computer's Internet connection is clear of obstacles. You would like to"
-" connect directly to the Tor network."
-msgstr "Η σύνδεση διαδικτύου αυτού του υπολογιστή δεν παρεμποδίζεται. Θα θέλατε να συνδεθείτε απ' ευθείας στο δίκτυο Tor."
+"This computer's Internet connection is clear of obstacles. You would like to "
+"connect directly to the Tor network."
+msgstr ""
+"Η σύνδεση διαδικτύου αυτού του υπολογιστή δεν παρεμποδίζεται. Θα θέλατε να "
+"συνδεθείτε απ' ευθείας στο δίκτυο Tor."
 
 #: ../glade/optionswindow.glade.h:22
 msgid ""
 "This computer's Internet connection is censored, filtered, or proxied. You "
 "need to configure bridge, firewall, or proxy settings."
-msgstr "Η σύνδεση διαδικτύου αυτού του υπολογιστή λογοκρίνεται, φιλτράρεται ή περνάει από proxy. Πρέπει να ρυθμίσετε τις επιλογές για τις γέφυρες, το firewall ή το proxy. "
+msgstr ""
+"Η σύνδεση διαδικτύου αυτού του υπολογιστή λογοκρίνεται, φιλτράρεται ή "
+"περνάει από proxy. Πρέπει να ρυθμίσετε τις επιλογές για τις γέφυρες, το "
+"firewall ή το proxy. "
 
 #: ../glade/langpanel.glade.h:1
 msgid " "
 msgstr " "
 
-#: ../glade/langpanel.glade.h:2 ../GdmGreeter/langpanel.py:42
+#: ../glade/langpanel.glade.h:2 ../tailsgreeter/langpanel.py:43
 msgid "Language"
 msgstr "Γλώσσα"
 
@@ -177,30 +204,38 @@ msgstr "Τοποθεσία"
 msgid "Layout"
 msgstr "Διάταξη"
 
-#: ../GdmGreeter/persistence.py:59
+#: ../tailsgreeter/persistence.py:59
 #, python-format
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
-msgstr "Το live-persist απέτυχε με κωδικό επιστροφής %(returncode)s:\n%(stderr)s"
+msgstr ""
+"Το live-persist απέτυχε με κωδικό επιστροφής %(returncode)s:\n"
+"%(stderr)s"
 
-#: ../GdmGreeter/persistence.py:99
+#: ../tailsgreeter/persistence.py:99
 #, python-format
 msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "Το cryptsetup απέτυχε με κωδικό επιστροφής %(returncode)s:\n%(stdout)s\n%(stderr)s"
+msgstr ""
+"Το cryptsetup απέτυχε με κωδικό επιστροφής %(returncode)s:\n"
+"%(stdout)s\n"
+"%(stderr)s"
 
-#: ../GdmGreeter/persistence.py:124
+#: ../tailsgreeter/persistence.py:124
 #, python-format
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "Το live-persist Απέτυχε με κωδικό επιστροφής %(returncode)s:\n%(stdout)s\n%(stderr)s"
+msgstr ""
+"Το live-persist Απέτυχε με κωδικό επιστροφής %(returncode)s:\n"
+"%(stdout)s\n"
+"%(stderr)s"
 
-#: ../GdmGreeter/langpanel.py:124 ../GdmGreeter/langpanel.py:148
-#: ../GdmGreeter/langpanel.py:181
+#: ../tailsgreeter/langpanel.py:125 ../tailsgreeter/langpanel.py:152
+#: ../tailsgreeter/langpanel.py:185
 msgid "Other..."
 msgstr "Άλλα..."
