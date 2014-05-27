@@ -1,10 +1,10 @@
-tails-greeter (0.7.31+feature.6342.update.camouflage.for.gnome3~1.gbp95f3da) feature-6342-update-camouflage-for-gnome3; urgency=medium
+tails-greeter (0.7.32+feature.6342.update.camouflage.for.gnome3~1.gbp93a918) feature-6342-update-camouflage-for-gnome3; urgency=medium
 
-  ** SNAPSHOT build @95f3dad016e1239726502d5f917046ba5d768092 **
+  ** SNAPSHOT build @93a918f5f45488c6eac5d9618123e8a9c41d6906 **
 
   * Update setup for windows 8 camouflage
 
- -- Tails developers <tails@boum.org>  Tue, 27 May 2014 15:48:07 +0200
+ -- Tails developers <tails@boum.org>  Tue, 27 May 2014 17:40:20 +0200
 
 tails-greeter (0.7.32) devel; urgency=medium
 
