@@ -1,10 +1,9 @@
-tails-greeter (0.7.32+feature.6342.update.camouflage.for.gnome3~1.gbp93a918) feature-6342-update-camouflage-for-gnome3; urgency=medium
-
-  ** SNAPSHOT build @93a918f5f45488c6eac5d9618123e8a9c41d6906 **
+tails-greeter (0.7.33) devel; urgency=medium
 
   * Update setup for windows 8 camouflage
+  * Import translations from Transifex, update POT and PO files.
 
- -- Tails developers <tails@boum.org>  Tue, 27 May 2014 17:40:20 +0200
+ -- Tails developers <tails@boum.org>  Wed, 28 May 2014 22:35:35 +0200
 
 tails-greeter (0.7.32) devel; urgency=medium
 
