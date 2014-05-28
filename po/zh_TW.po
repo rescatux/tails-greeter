@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # chinrur <chinrur@gmail.com>, 2013
 # wongyinho981 <wongyinho981@gmail.com>, 2013
@@ -10,15 +10,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-26 15:09+0200\n"
+"POT-Creation-Date: 2014-05-14 13:14+0200\n"
 "PO-Revision-Date: 2014-05-17 14:36+0000\n"
 "Last-Translator: xatier 同學@提不起勁 <xatierlike@gmail.com>\n"
-"Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/"
-"torproject/language/zh_TW/)\n"
-"Language: zh_TW\n"
+"Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/torproject/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: zh_TW\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../glade/persistencewindow.glade.h:1
@@ -71,20 +70,15 @@ msgstr "系統管理員密碼"
 
 #: ../glade/optionswindow.glade.h:4
 msgid ""
-"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
-"\">Documentation</a>"
-msgstr ""
-"<a href=\"doc/first_steps/startup_options/administration_password.en.html\">"
-"文件</a>"
+"<a "
+"href=\"doc/first_steps/startup_options/administration_password.en.html\">Documentation</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/administration_password.en.html\">文件</a>"
 
 #: ../glade/optionswindow.glade.h:5
 msgid ""
-"Enter an administration password in case you need to perform administration "
-"tasks.\n"
+"Enter an administration password in case you need to perform administration tasks.\n"
 "Otherwise it will be disabled for better security."
-msgstr ""
-"進行管理工作時請輸入系統管理員密碼。\n"
-"否則會因安全理由而被禁用。"
+msgstr "進行管理工作時請輸入系統管理員密碼。\n否則會因安全理由而被禁用。"
 
 #: ../glade/optionswindow.glade.h:7
 msgid "Password:"
@@ -104,11 +98,9 @@ msgstr "視窗偽裝"
 
 #: ../glade/optionswindow.glade.h:11
 msgid ""
-"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
-"\">Documentation</a>"
-msgstr ""
-"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">文件</"
-"a>"
+"<a "
+"href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">Documentation</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">文件</a>"
 
 #: ../glade/optionswindow.glade.h:12
 msgid ""
@@ -126,18 +118,15 @@ msgstr "MAC 地址欺騙"
 
 #: ../glade/optionswindow.glade.h:15
 msgid ""
-"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
-"\">Documentation</a>"
-msgstr ""
-"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">文件</a>"
+"<a "
+"href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Documentation</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">文件</a>"
 
 #: ../glade/optionswindow.glade.h:16
 msgid ""
 "Spoofing MAC addresses hides the serial number of your network cards to the "
 "local networks. This can help you hide your geographical location."
-msgstr ""
-"MAC 地址欺騙可以在區域網路中隱藏您的網路卡流水號。可以幫助您隱藏地理定位資"
-"訊。"
+msgstr "MAC 地址欺騙可以在區域網路中隱藏您的網路卡流水號。可以幫助您隱藏地理定位資訊。"
 
 #: ../glade/optionswindow.glade.h:17
 msgid ""
@@ -155,25 +144,21 @@ msgstr "網路設定"
 
 #: ../glade/optionswindow.glade.h:20
 msgid ""
-"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
-"\">Documentation</a>"
-msgstr ""
-"<a href=\"doc/first_steps/startup_options/network_configuration.en.html\">文"
-"件</a>"
+"<a "
+"href=\"doc/first_steps/startup_options/network_configuration.en.html\">Documentation</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/network_configuration.en.html\">文件</a>"
 
 #: ../glade/optionswindow.glade.h:21
 msgid ""
-"This computer's Internet connection is clear of obstacles. You would like to "
-"connect directly to the Tor network."
+"This computer's Internet connection is clear of obstacles. You would like to"
+" connect directly to the Tor network."
 msgstr "這部電腦的連線是暢通的。您可能想直接連線到 Tor 網路。"
 
 #: ../glade/optionswindow.glade.h:22
 msgid ""
 "This computer's Internet connection is censored, filtered, or proxied. You "
 "need to configure bridge, firewall, or proxy settings."
-msgstr ""
-"這部電腦的網路連線是被檢查、過濾、或是有代理的。您需要設定網橋、防火牆、或是"
-"代理。"
+msgstr "這部電腦的網路連線是被檢查、過濾、或是有代理的。您需要設定網橋、防火牆、或是代理。"
 
 #: ../glade/langpanel.glade.h:1
 msgid " "
@@ -196,9 +181,7 @@ msgstr "顯示"
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
-msgstr ""
-"live-persist 失敗並傳回錯誤代碼 %(returncode)s:\n"
-"%(stderr)s"
+msgstr "live-persist 失敗並傳回錯誤代碼 %(returncode)s:\n%(stderr)s"
 
 #: ../tailsgreeter/persistence.py:99
 #, python-format
@@ -206,10 +189,7 @@ msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr ""
-"設定密碼失敗，代碼 %(returncode)s:\n"
-"%(stdout)s\n"
-"%(stderr)s"
+msgstr "設定密碼失敗，代碼 %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
 #: ../tailsgreeter/persistence.py:124
 #, python-format
@@ -217,10 +197,7 @@ msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr ""
-"live-persist 失敗並傳回錯誤代碼 %(returncode)s:⏎\n"
-"%(stdout)s⏎\n"
-"%(stderr)s"
+msgstr "live-persist 失敗並傳回錯誤代碼 %(returncode)s:⏎\n%(stdout)s⏎\n%(stderr)s"
 
 #: ../tailsgreeter/langpanel.py:125 ../tailsgreeter/langpanel.py:152
 #: ../tailsgreeter/langpanel.py:185

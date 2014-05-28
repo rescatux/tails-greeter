@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-26 15:09+0200\n"
+"POT-Creation-Date: 2014-05-28 22:33+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -102,12 +102,12 @@ msgstr ""
 
 #: ../glade/optionswindow.glade.h:12
 msgid ""
-"This option makes Tails look more like Microsoft Windows XP. This may be "
+"This option makes Tails look more like Microsoft Windows 8. This may be "
 "useful in public places in order to avoid attracting suspicion."
 msgstr ""
 
 #: ../glade/optionswindow.glade.h:13
-msgid "Activate Microsoft Windows XP Camouflage"
+msgid "Activate Microsoft Windows 8 Camouflage"
 msgstr ""
 
 #: ../glade/optionswindow.glade.h:14
