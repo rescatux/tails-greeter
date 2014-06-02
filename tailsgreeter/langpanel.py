@@ -38,7 +38,7 @@ class LangDialog(TranslatableWindow):
         self.dialog = builder.get_object("languages_dialog")
         self.treeview = builder.get_object("languages_treeview")
         self.liststore = builder.get_object("languages_liststore")
-        builder.connect_signals(self.dialog)
+        builder.connect_signals(self)
 
         tvcolumn = Gtk.TreeViewColumn(_("Language"))
         self.treeview.append_column(tvcolumn)
@@ -51,15 +51,13 @@ class LangDialog(TranslatableWindow):
     def cb_langdialog_key_press(self, widget, event, data=None):
         """Handle key press in langdialog"""
         if event.keyval in [ Gdk.KEY_Return, Gdk.KEY_KP_Enter ]:
-            if isinstance(data, Gtk.Dialog):
-                data.response(True)
+            self.dialog.response(True)
 
     def cb_langdialog_button_press(self, widget, event, data=None):
         """Handle mouse click in langdialog"""
-        if (event.type == Gdk._2BUTTON_PRESS or
-                event.type == Gdk._3BUTTON_PRESS):
-            if isinstance(data, Gtk.Dialog):
-                data.response(True)
+        if (event.type == Gdk.EventType._2BUTTON_PRESS or
+                event.type == Gdk.EventType._3BUTTON_PRESS):
+            self.dialog.response(True)
 
 class LangPanel(TranslatableWindow):
     """Display language and layout selection panel"""
