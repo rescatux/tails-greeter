@@ -45,7 +45,7 @@ class PersistenceSettings(object):
             [
                 "/usr/bin/sudo", "-n", "/usr/local/sbin/live-persist",
                 "--log-file=/var/log/live-persist",
-                "--encryption=luks", "--media=removable",
+                "--encryption=luks",
                 "list", "TailsData"
             ],
             stdout=subprocess.PIPE,
