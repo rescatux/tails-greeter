@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # Sutha <sutha@open.org.kh>, 2014
 # khoemsokhem <sokhem@open.org.kh>, 2014
@@ -9,14 +9,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-14 13:14+0200\n"
+"POT-Creation-Date: 2014-06-11 16:20+0200\n"
 "PO-Revision-Date: 2014-05-17 14:36+0000\n"
 "Last-Translator: khoemsokhem <sokhem@open.org.kh>\n"
-"Language-Team: Khmer (http://www.transifex.com/projects/p/torproject/language/km/)\n"
+"Language-Team: Khmer (http://www.transifex.com/projects/p/torproject/"
+"language/km/)\n"
+"Language: km\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: km\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../glade/persistencewindow.glade.h:1
@@ -69,15 +70,20 @@ msgstr "ពាក្យ​សម្ងាត់​សម្រាប់​កា
 
 #: ../glade/optionswindow.glade.h:4
 msgid ""
-"<a "
-"href=\"doc/first_steps/startup_options/administration_password.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/administration_password.en.html\">ឯកសារ</a>"
+"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
+"\">Documentation</a>"
+msgstr ""
+"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
+"\">ឯកសារ</a>"
 
 #: ../glade/optionswindow.glade.h:5
 msgid ""
-"Enter an administration password in case you need to perform administration tasks.\n"
+"Enter an administration password in case you need to perform administration "
+"tasks.\n"
 "Otherwise it will be disabled for better security."
-msgstr "បញ្ចូល​​ពាក្យ​សម្ងាត់​សម្រាប់​ការ​គ្រប់គ្រង​ក្នុង​ករណី​ដែល​អ្នក​ត្រូវ​ការ​​ភារកិច្ច​សម្រាប់​ការ​គ្រប់គ្រង។\nម៉្យាងវិញទៀត​វា​នឹង​​ត្រូវ​បាន​បិទ​ដើម្បី​សុវត្ថិភាព​ឲ្យ​កាន់​តែ​ប្រសើរ។"
+msgstr ""
+"បញ្ចូល​​ពាក្យ​សម្ងាត់​សម្រាប់​ការ​គ្រប់គ្រង​ក្នុង​ករណី​ដែល​អ្នក​ត្រូវ​ការ​​ភារកិច្ច​សម្រាប់​ការ​គ្រប់គ្រង។\n"
+"ម៉្យាងវិញទៀត​វា​នឹង​​ត្រូវ​បាន​បិទ​ដើម្បី​សុវត្ថិភាព​ឲ្យ​កាន់​តែ​ប្រសើរ។"
 
 #: ../glade/optionswindow.glade.h:7
 msgid "Password:"
@@ -97,18 +103,24 @@ msgstr "Windows camouflage"
 
 #: ../glade/optionswindow.glade.h:11
 msgid ""
-"<a "
-"href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">ឯកសារ</a>"
+"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
+"\">Documentation</a>"
+msgstr ""
+"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
+"\">ឯកសារ</a>"
 
 #: ../glade/optionswindow.glade.h:12
+#, fuzzy
 msgid ""
-"This option makes Tails look more like Microsoft Windows XP. This may be "
+"This option makes Tails look more like Microsoft Windows 8. This may be "
 "useful in public places in order to avoid attracting suspicion."
-msgstr "ជម្រើស​នេះ​ធ្វើ​ឲ្យ​ Tails មាន​លក្ខណៈ​ដូច​ជា Microsoft Windows XP ។ វា​អាច​ផ្ដល់​ប្រយោជន៍​ជា​សាធារណៈ​ ​ដើម្បី​​ជៀសវាង attracting suspicion ។"
+msgstr ""
+"ជម្រើស​នេះ​ធ្វើ​ឲ្យ​ Tails មាន​លក្ខណៈ​ដូច​ជា Microsoft Windows XP ។ វា​អាច​ផ្ដល់​ប្រយោជន៍​ជា​"
+"សាធារណៈ​ ​ដើម្បី​​ជៀសវាង attracting suspicion ។"
 
 #: ../glade/optionswindow.glade.h:13
-msgid "Activate Microsoft Windows XP Camouflage"
+#, fuzzy
+msgid "Activate Microsoft Windows 8 Camouflage"
 msgstr "ធ្វើ​ឲ្យ Microsoft Windows XP Camouflage សកម្ម"
 
 #: ../glade/optionswindow.glade.h:14
@@ -117,21 +129,26 @@ msgstr "បញ្ឆោត​អាសយដ្ឋាន MAC"
 
 #: ../glade/optionswindow.glade.h:15
 msgid ""
-"<a "
-"href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">ឯកសារ</a>"
+"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
+"\">Documentation</a>"
+msgstr ""
+"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">ឯកសារ</a>"
 
 #: ../glade/optionswindow.glade.h:16
 msgid ""
 "Spoofing MAC addresses hides the serial number of your network cards to the "
 "local networks. This can help you hide your geographical location."
-msgstr "ការ​បញ្ឆោត​អាសយដ្ឋាន MAC លាក់​លេខ​ស៊េរី​កាត​បណ្ដាញ​របស់​អ្នក​ចំពោះ​បណ្ដាញ​មូលដ្ឋាន។ វា​អាច​ជួយ​អ្នក​លាក់​ទីតាំង​ភូមិសាស្ត្រ​របស់​អ្នក។"
+msgstr ""
+"ការ​បញ្ឆោត​អាសយដ្ឋាន MAC លាក់​លេខ​ស៊េរី​កាត​បណ្ដាញ​របស់​អ្នក​ចំពោះ​បណ្ដាញ​មូលដ្ឋាន។ វា​អាច​ជួយ​អ្នក​លាក់​"
+"ទីតាំង​ភូមិសាស្ត្រ​របស់​អ្នក។"
 
 #: ../glade/optionswindow.glade.h:17
 msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
 "suspicion or cause network connection problems."
-msgstr "ជា​ទូទៅ​វា​កាន់តែ​មាន​សុវត្ថិភាព​ដើម្បី​បញ្ឆោត​អាសយដ្ឋាន​ MAC ប៉ុន្តែ​វា​ក៏​អាច​បង្កើន​ការ​សង្ស័យ ឬ​ធ្វើឲ្យ​ការ​ភ្ជាប់​បណ្ដាញ​មាន​បញ្ហា។"
+msgstr ""
+"ជា​ទូទៅ​វា​កាន់តែ​មាន​សុវត្ថិភាព​ដើម្បី​បញ្ឆោត​អាសយដ្ឋាន​ MAC ប៉ុន្តែ​វា​ក៏​អាច​បង្កើន​ការ​សង្ស័យ ឬ​ធ្វើឲ្យ​ការ​"
+"ភ្ជាប់​បណ្ដាញ​មាន​បញ្ហា។"
 
 #: ../glade/optionswindow.glade.h:18
 msgid "Spoof all MAC addresses"
@@ -143,21 +160,25 @@ msgstr "ការ​កំណត់​រចនាសម្ព័ន្ធ​ប
 
 #: ../glade/optionswindow.glade.h:20
 msgid ""
-"<a "
-"href=\"doc/first_steps/startup_options/network_configuration.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/network_configuration.en.html\">ឯកសារ</a>"
+"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
+"\">Documentation</a>"
+msgstr ""
+"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
+"\">ឯកសារ</a>"
 
 #: ../glade/optionswindow.glade.h:21
 msgid ""
-"This computer's Internet connection is clear of obstacles. You would like to"
-" connect directly to the Tor network."
+"This computer's Internet connection is clear of obstacles. You would like to "
+"connect directly to the Tor network."
 msgstr "ការ​ភ្ជាប់​អ៊ីនធឺណិត​កុំព្យូទ័រ​នេះ​គ្មានបញ្ហា​ទេ។ អ្នកចង់ភ្ជាប់​ដោយ​ផ្ទាល់​ទៅ​បណ្ដាញ Tor ។"
 
 #: ../glade/optionswindow.glade.h:22
 msgid ""
 "This computer's Internet connection is censored, filtered, or proxied. You "
 "need to configure bridge, firewall, or proxy settings."
-msgstr "ការ​ភ្ជាប់អ៊ីនធឺណិត​កុំព្យូទ័រ​នេះ​​ត្រូវ​បាន​ពិនិត្យ ច្រោះ ឬ​កំណត់​ប្រូកស៊ី។ អ្នក​ត្រូវ​កំណត់​រចនាសម្ព័ន្ធ​ប៊្រីត ជញ្ជាំង​ភ្លើង ឬ​ការ​កំណត់​ប្រូកស៊ី។"
+msgstr ""
+"ការ​ភ្ជាប់អ៊ីនធឺណិត​កុំព្យូទ័រ​នេះ​​ត្រូវ​បាន​ពិនិត្យ ច្រោះ ឬ​កំណត់​ប្រូកស៊ី។ អ្នក​ត្រូវ​កំណត់​រចនាសម្ព័ន្ធ​ប៊្រីត ជញ្ជាំង​"
+"ភ្លើង ឬ​ការ​កំណត់​ប្រូកស៊ី។"
 
 #: ../glade/langpanel.glade.h:1
 msgid " "
@@ -180,7 +201,9 @@ msgstr "ប្លង់"
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
-msgstr "បាន​បរាជ័យ live-persist ជាមួយ return code %(returncode)s:\n%(stderr)s"
+msgstr ""
+"បាន​បរាជ័យ live-persist ជាមួយ return code %(returncode)s:\n"
+"%(stderr)s"
 
 #: ../tailsgreeter/persistence.py:99
 #, python-format
@@ -188,7 +211,10 @@ msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "បាន​បរាជ័យ cryptsetup ជាមួយ return code %(returncode)s:\n%(stdout)s\n%(stderr)s"
+msgstr ""
+"បាន​បរាជ័យ cryptsetup ជាមួយ return code %(returncode)s:\n"
+"%(stdout)s\n"
+"%(stderr)s"
 
 #: ../tailsgreeter/persistence.py:124
 #, python-format
@@ -196,9 +222,12 @@ msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "បាន​បរាជ័យ live-persist ជាមួយ return code %(returncode)s:\n%(stdout)s\n%(stderr)s"
+msgstr ""
+"បាន​បរាជ័យ live-persist ជាមួយ return code %(returncode)s:\n"
+"%(stdout)s\n"
+"%(stderr)s"
 
-#: ../tailsgreeter/langpanel.py:125 ../tailsgreeter/langpanel.py:152
-#: ../tailsgreeter/langpanel.py:185
+#: ../tailsgreeter/langpanel.py:123 ../tailsgreeter/langpanel.py:150
+#: ../tailsgreeter/langpanel.py:183
 msgid "Other..."
 msgstr "ផ្សេងទៀត..."

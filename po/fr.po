@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-26 15:09+0200\n"
+"POT-Creation-Date: 2014-06-11 16:20+0200\n"
 "PO-Revision-Date: 2014-03-17 13:31+0100\n"
 "Last-Translator: Onizuka\n"
 "Language-Team: French (http://www.transifex.com/projects/p/torproject/"
@@ -112,15 +112,17 @@ msgstr ""
 "\">Documentation</a>"
 
 #: ../glade/optionswindow.glade.h:12
+#, fuzzy
 msgid ""
-"This option makes Tails look more like Microsoft Windows XP. This may be "
+"This option makes Tails look more like Microsoft Windows 8. This may be "
 "useful in public places in order to avoid attracting suspicion."
 msgstr ""
 "Cette option donne à Tails les apparences de Microsoft Windows XP. Cela peut "
 "être utile afin de ne pas attirer l'attention dans un lieu public."
 
 #: ../glade/optionswindow.glade.h:13
-msgid "Activate Microsoft Windows XP Camouflage"
+#, fuzzy
+msgid "Activate Microsoft Windows 8 Camouflage"
 msgstr "Activer le camouflage Microsoft Windows XP"
 
 #: ../glade/optionswindow.glade.h:14
@@ -231,7 +233,7 @@ msgstr ""
 "%(stdout)s\n"
 "%(stderr)s"
 
-#: ../tailsgreeter/langpanel.py:125 ../tailsgreeter/langpanel.py:152
-#: ../tailsgreeter/langpanel.py:185
+#: ../tailsgreeter/langpanel.py:123 ../tailsgreeter/langpanel.py:150
+#: ../tailsgreeter/langpanel.py:183
 msgid "Other..."
 msgstr "Autre..."
