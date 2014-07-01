@@ -1,3 +1,9 @@
+tails-greeter (0.8.1) testing; urgency=medium
+
+  * Import translations from Transifex, update POT and PO files.
+
+ -- Tails developers <tails@boum.org>  Tue, 01 Jul 2014 22:08:20 +0200
+
 tails-greeter (0.8) bugfix-7344-double-click-in-tails-greeter; urgency=medium
 
   * Do not pass media=removable to live-persist: we've been applying this
