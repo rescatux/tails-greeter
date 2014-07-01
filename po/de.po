@@ -1,8 +1,9 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
+# trantor <clucko3@gmail.com>, 2014
 # Ettore Atalan <atalanttore@googlemail.com>, 2014
 # Bobbymoto, 2013
 # mo <moritz@torservers.net>, 2013
@@ -19,15 +20,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-06-11 16:20+0200\n"
-"PO-Revision-Date: 2014-05-17 14:36+0000\n"
-"Last-Translator: to_ba\n"
-"Language-Team: German (http://www.transifex.com/projects/p/torproject/"
-"language/de/)\n"
-"Language: de\n"
+"POT-Creation-Date: 2014-05-28 22:33+0200\n"
+"PO-Revision-Date: 2014-05-29 21:01+0000\n"
+"Last-Translator: trantor <clucko3@gmail.com>\n"
+"Language-Team: German (http://www.transifex.com/projects/p/torproject/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../glade/persistencewindow.glade.h:1
@@ -80,21 +80,15 @@ msgstr "Administrationspasswort"
 
 #: ../glade/optionswindow.glade.h:4
 msgid ""
-"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
-"\">Documentation</a>"
-msgstr ""
-"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
-"\">Dokumentation</a>"
+"<a "
+"href=\"doc/first_steps/startup_options/administration_password.en.html\">Documentation</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/administration_password.en.html\">Dokumentation</a>"
 
 #: ../glade/optionswindow.glade.h:5
 msgid ""
-"Enter an administration password in case you need to perform administration "
-"tasks.\n"
+"Enter an administration password in case you need to perform administration tasks.\n"
 "Otherwise it will be disabled for better security."
-msgstr ""
-"Ein Administrationspasswort eingeben, falls Sie administrative Aufgaben "
-"durchführen wollen.\n"
-"Andernfalls wird diese Funktion zur Erhöhung der Sicherheit deaktiviert."
+msgstr "Ein Administrationspasswort eingeben, falls Sie administrative Aufgaben durchführen wollen.\nAndernfalls wird diese Funktion zur Erhöhung der Sicherheit deaktiviert."
 
 #: ../glade/optionswindow.glade.h:7
 msgid "Password:"
@@ -114,25 +108,19 @@ msgstr "Windows-Tarnmodus"
 
 #: ../glade/optionswindow.glade.h:11
 msgid ""
-"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
-"\">Documentation</a>"
-msgstr ""
-"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
-"\">Dokumentation</a>"
+"<a "
+"href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">Documentation</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">Dokumentation</a>"
 
 #: ../glade/optionswindow.glade.h:12
-#, fuzzy
 msgid ""
 "This option makes Tails look more like Microsoft Windows 8. This may be "
 "useful in public places in order to avoid attracting suspicion."
-msgstr ""
-"Diese Option lässt Tails wie Microsoft Windows XP aussehen. Dies kann in der "
-"Öffentlichkeit hilfreich sein, um keine Aufmerksamkeit zu erregen."
+msgstr "Diese Option lässt Tails mehr wie Microsoft Windows 8 aussehen. Das könnte an öffentlichen Orten hilfreich sein um Verdächtigungen zu vermeiden."
 
 #: ../glade/optionswindow.glade.h:13
-#, fuzzy
 msgid "Activate Microsoft Windows 8 Camouflage"
-msgstr "Microsoft Windows XP Tarnung aktivieren"
+msgstr "Mircosoft Windows 8 Tarnmodus aktivieren"
 
 #: ../glade/optionswindow.glade.h:14
 msgid "MAC address spoofing"
@@ -140,28 +128,21 @@ msgstr "Manipulation der MAC-Adresse"
 
 #: ../glade/optionswindow.glade.h:15
 msgid ""
-"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
-"\">Documentation</a>"
-msgstr ""
-"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
-"\">Dokumentation</a>"
+"<a "
+"href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Documentation</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Dokumentation</a>"
 
 #: ../glade/optionswindow.glade.h:16
 msgid ""
 "Spoofing MAC addresses hides the serial number of your network cards to the "
 "local networks. This can help you hide your geographical location."
-msgstr ""
-"Durch die Manipulation der MAC-Adresse kann die Seriennummer der eigenen "
-"Netzwerkkarte im lokalen Netzwerk verborgen werden, dies kann wiederum "
-"helfen Ihren geografischen Standort geheim zu halten."
+msgstr "Durch die Manipulation der MAC-Adresse kann die Seriennummer der eigenen Netzwerkkarte im lokalen Netzwerk verborgen werden, dies kann wiederum helfen Ihren geografischen Standort geheim zu halten."
 
 #: ../glade/optionswindow.glade.h:17
 msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
 "suspicion or cause network connection problems."
-msgstr ""
-"Es ist im Allgemeinen sicherer, MAC-Adressen zu fälschen, aber es könnte "
-"auch den Verdacht erhöhen oder Netzwerkverbindungsprobleme verursachen."
+msgstr "Es ist im Allgemeinen sicherer, MAC-Adressen zu fälschen, aber es könnte auch den Verdacht erhöhen oder Netzwerkverbindungsprobleme verursachen."
 
 #: ../glade/optionswindow.glade.h:18
 msgid "Spoof all MAC addresses"
@@ -173,28 +154,21 @@ msgstr "Netzwerkonfiguration"
 
 #: ../glade/optionswindow.glade.h:20
 msgid ""
-"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
-"\">Documentation</a>"
-msgstr ""
-"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
-"\">Dokumentation</a>"
+"<a "
+"href=\"doc/first_steps/startup_options/network_configuration.en.html\">Documentation</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/network_configuration.en.html\">Dokumentation</a>"
 
 #: ../glade/optionswindow.glade.h:21
 msgid ""
-"This computer's Internet connection is clear of obstacles. You would like to "
-"connect directly to the Tor network."
-msgstr ""
-"Die Internetverbindung dieses Rechners ist frei von Hindernissen. Sie können "
-"sich direkt mit dem Tor-Netzwerk verbinden."
+"This computer's Internet connection is clear of obstacles. You would like to"
+" connect directly to the Tor network."
+msgstr "Die Internetverbindung dieses Rechners ist frei von Hindernissen. Sie können sich direkt mit dem Tor-Netzwerk verbinden."
 
 #: ../glade/optionswindow.glade.h:22
 msgid ""
 "This computer's Internet connection is censored, filtered, or proxied. You "
 "need to configure bridge, firewall, or proxy settings."
-msgstr ""
-"Die Internetverbindung dieses Rechner ist zensiert, gefilterterd oder "
-"vermittelt. Sie müssen die Brücke, Firewall oder "
-"Vermittlungsservereinstellungen konfigurieren."
+msgstr "Die Internetverbindung dieses Rechner ist zensiert, gefilterterd oder vermittelt. Sie müssen die Brücke, Firewall oder Vermittlungsservereinstellungen konfigurieren."
 
 #: ../glade/langpanel.glade.h:1
 msgid " "
@@ -217,9 +191,7 @@ msgstr "Anordnung"
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
-msgstr ""
-"Live-Persist ist mit folgendem Code fehlgeschlagen %(returncode)s:\n"
-"%(stderr)s"
+msgstr "Live-Persist ist mit folgendem Code fehlgeschlagen %(returncode)s:\n%(stderr)s"
 
 #: ../tailsgreeter/persistence.py:99
 #, python-format
@@ -227,10 +199,7 @@ msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr ""
-"cryptsetup t ist mit folgendem Code fehlgeschlagen %(returncode)s:\n"
-"%(stdout)s\n"
-"%(stderr)s"
+msgstr "cryptsetup t ist mit folgendem Code fehlgeschlagen %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
 #: ../tailsgreeter/persistence.py:124
 #, python-format
@@ -238,12 +207,9 @@ msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr ""
-"Live-Persist ist mit folgendem Code fehlgeschlagen %(returncode)s:\n"
-"%(stdout)s\n"
-"%(stderr)s"
+msgstr "Live-Persist ist mit folgendem Code fehlgeschlagen %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
-#: ../tailsgreeter/langpanel.py:123 ../tailsgreeter/langpanel.py:150
-#: ../tailsgreeter/langpanel.py:183
+#: ../tailsgreeter/langpanel.py:125 ../tailsgreeter/langpanel.py:152
+#: ../tailsgreeter/langpanel.py:185
 msgid "Other..."
 msgstr "Andere …"

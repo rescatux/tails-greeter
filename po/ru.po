@@ -1,25 +1,24 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
-# ddark008 <i@ddark008.ru>, 2012
-# oulgocke <beandonlybe@yandex.ru>, 2014
+# Denis <stereodenis@gmail.com>, 2014
+# Елисеев Дмитрий <i@ddark008.ru>, 2012
+# Oul Gocke <beandonlybe@yandex.ru>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-06-11 16:20+0200\n"
-"PO-Revision-Date: 2014-05-17 14:36+0000\n"
-"Last-Translator: oulgocke <beandonlybe@yandex.ru>\n"
-"Language-Team: Russian (http://www.transifex.com/projects/p/torproject/"
-"language/ru/)\n"
-"Language: ru\n"
+"PO-Revision-Date: 2014-06-18 20:10+0000\n"
+"Last-Translator: Denis <stereodenis@gmail.com>\n"
+"Language-Team: Russian (http://www.transifex.com/projects/p/torproject/language/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: ../glade/persistencewindow.glade.h:1
 msgid "Forward"
@@ -71,20 +70,15 @@ msgstr "Пароль администратора"
 
 #: ../glade/optionswindow.glade.h:4
 msgid ""
-"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
-"\">Documentation</a>"
-msgstr ""
-"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
-"\">Документация</a>"
+"<a "
+"href=\"doc/first_steps/startup_options/administration_password.en.html\">Documentation</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/administration_password.en.html\">Документация</a>"
 
 #: ../glade/optionswindow.glade.h:5
 msgid ""
-"Enter an administration password in case you need to perform administration "
-"tasks.\n"
+"Enter an administration password in case you need to perform administration tasks.\n"
 "Otherwise it will be disabled for better security."
-msgstr ""
-"Введите пароль администратора для выполнения администрирования. \n"
-" В противном случае администрирование будет отключено в целях безопасности."
+msgstr "Введите пароль администратора для выполнения администрирования. \n В противном случае администрирование будет отключено в целях безопасности."
 
 #: ../glade/optionswindow.glade.h:7
 msgid "Password:"
@@ -104,25 +98,19 @@ msgstr "Маскировка под Windows"
 
 #: ../glade/optionswindow.glade.h:11
 msgid ""
-"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
-"\">Documentation</a>"
-msgstr ""
-"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
-"\">Документация</a>"
+"<a "
+"href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">Documentation</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">Документация</a>"
 
 #: ../glade/optionswindow.glade.h:12
-#, fuzzy
 msgid ""
 "This option makes Tails look more like Microsoft Windows 8. This may be "
 "useful in public places in order to avoid attracting suspicion."
-msgstr ""
-"Благодаря этой опции, Tails выглядит похожим на Microsoft Windows XP. Это "
-"может быть полезным при использовании в публичных местах для маскировки."
+msgstr "Эта опция позволяет Tails выглядеть более похожей на Microsoft Windows 8. Это может быть полезным в публичных местах для того, чтобы не привлекать подозрения."
 
 #: ../glade/optionswindow.glade.h:13
-#, fuzzy
 msgid "Activate Microsoft Windows 8 Camouflage"
-msgstr "Активировать маскировку под Microsoft Windows XP"
+msgstr "Активировать Microsoft Windows 8 Camouflage"
 
 #: ../glade/optionswindow.glade.h:14
 msgid "MAC address spoofing"
@@ -130,27 +118,21 @@ msgstr "Спуфинг MAC-адреса"
 
 #: ../glade/optionswindow.glade.h:15
 msgid ""
-"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
-"\">Documentation</a>"
-msgstr ""
-"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
-"\">Документация</a>"
+"<a "
+"href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Documentation</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Документация</a>"
 
 #: ../glade/optionswindow.glade.h:16
 msgid ""
 "Spoofing MAC addresses hides the serial number of your network cards to the "
 "local networks. This can help you hide your geographical location."
-msgstr ""
-"Спуфинг MAC-адреса скрывает серийный номер вашей сетевой карты от локальной "
-"сети. Это может помочь скрыть ваше географическое положение."
+msgstr "Спуфинг MAC-адреса скрывает серийный номер вашей сетевой карты от локальной сети. Это может помочь скрыть ваше географическое положение."
 
 #: ../glade/optionswindow.glade.h:17
 msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
 "suspicion or cause network connection problems."
-msgstr ""
-"Как правило, использовать спуфинг MAC-адресов безопаснее, но это может "
-"вызвать подозрения или проблемы с сетевым подключением."
+msgstr "Как правило, использовать спуфинг MAC-адресов безопаснее, но это может вызвать подозрения или проблемы с сетевым подключением."
 
 #: ../glade/optionswindow.glade.h:18
 msgid "Spoof all MAC addresses"
@@ -162,27 +144,21 @@ msgstr "Настройка сети"
 
 #: ../glade/optionswindow.glade.h:20
 msgid ""
-"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
-"\">Documentation</a>"
-msgstr ""
-"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
-"\">Документация</a>"
+"<a "
+"href=\"doc/first_steps/startup_options/network_configuration.en.html\">Documentation</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/network_configuration.en.html\">Документация</a>"
 
 #: ../glade/optionswindow.glade.h:21
 msgid ""
-"This computer's Internet connection is clear of obstacles. You would like to "
-"connect directly to the Tor network."
-msgstr ""
-"Сетевое подключение этого компьютера свободно от препятствий. Вы можете "
-"подключаться к сети Tor напрямую."
+"This computer's Internet connection is clear of obstacles. You would like to"
+" connect directly to the Tor network."
+msgstr "Сетевое подключение этого компьютера свободно от препятствий. Вы можете подключаться к сети Tor напрямую."
 
 #: ../glade/optionswindow.glade.h:22
 msgid ""
 "This computer's Internet connection is censored, filtered, or proxied. You "
 "need to configure bridge, firewall, or proxy settings."
-msgstr ""
-"Сетевое подключение этого компьютера цензурируется, фильтруется или "
-"проксируется. Вам надо настроить мост, брандмаузер или прокси."
+msgstr "Сетевое подключение этого компьютера цензурируется, фильтруется или проксируется. Вам надо настроить мост, брандмаузер или прокси."
 
 #: ../glade/langpanel.glade.h:1
 msgid " "
@@ -205,9 +181,7 @@ msgstr "Раскладка"
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
-msgstr ""
-"live-persist не сработал, код ошибки %(returncode)s:\n"
-" %(stderr)s"
+msgstr "live-persist не сработал, код ошибки %(returncode)s:\n %(stderr)s"
 
 #: ../tailsgreeter/persistence.py:99
 #, python-format
@@ -215,10 +189,7 @@ msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr ""
-"cryptsetup не сработал, код ошибки %(returncode)s:\n"
-" %(stdout)s\n"
-" %(stderr)s"
+msgstr "cryptsetup не сработал, код ошибки %(returncode)s:\n %(stdout)s\n %(stderr)s"
 
 #: ../tailsgreeter/persistence.py:124
 #, python-format
@@ -226,10 +197,7 @@ msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr ""
-"live-persist не сработал, код ошибки %(returncode)s:\n"
-" %(stdout)s\n"
-" %(stderr)s"
+msgstr "live-persist не сработал, код ошибки %(returncode)s:\n %(stdout)s\n %(stderr)s"
 
 #: ../tailsgreeter/langpanel.py:123 ../tailsgreeter/langpanel.py:150
 #: ../tailsgreeter/langpanel.py:183
