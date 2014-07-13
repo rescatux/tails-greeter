@@ -28,6 +28,5 @@ class LivePersistError(TailsGreeterError):
 class WrongPassphraseError(LivePersistError):
     pass
 
-class GdmServerNotReady(TailsGreeterError):
-    """Called something that needs GDM server to be ready, which is not the case yet."""
+class GdmServerError(TailsGreeterError):
     pass
