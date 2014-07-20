@@ -5,13 +5,15 @@
 # Translators:
 # André Monteiro <andre.monteir@gmail.com>, 2014
 # sierleunam <cfb53275@opayq.com>, 2014
+# testsubject67 <deborinha97@hotmail.com>, 2014
+# Manuela Silva <manuela.silva@sky.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-07-07 19:21+0200\n"
-"PO-Revision-Date: 2014-05-17 14:36+0000\n"
-"Last-Translator: André Monteiro <andre.monteir@gmail.com>\n"
+"POT-Creation-Date: 2014-07-20 18:36+0200\n"
+"PO-Revision-Date: 2014-07-09 16:31+0000\n"
+"Last-Translator: testsubject67 <deborinha97@hotmail.com>\n"
 "Language-Team: Portuguese (http://www.transifex.com/projects/p/torproject/"
 "language/pt/)\n"
 "Language: pt\n"
@@ -26,7 +28,7 @@ msgstr "Avançar"
 
 #: ../glade/persistencewindow.glade.h:2 ../glade/optionswindow.glade.h:1
 msgid "Login"
-msgstr "Autenticação"
+msgstr "Iniciar Sessão"
 
 #: ../glade/persistencewindow.glade.h:3 ../glade/optionswindow.glade.h:2
 msgid "Welcome to Tails"
@@ -62,11 +64,11 @@ msgstr "<i>Palavra-chave errada. Por favor tente novamente.</i>"
 
 #: ../glade/persistencewindow.glade.h:11
 msgid "More options?"
-msgstr "Mais Opções?"
+msgstr "Mais opções?"
 
 #: ../glade/optionswindow.glade.h:3
 msgid "Administration password"
-msgstr "Palavra-passe de administração"
+msgstr "Senha de Administração"
 
 #: ../glade/optionswindow.glade.h:4
 msgid ""
@@ -82,9 +84,9 @@ msgid ""
 "tasks.\n"
 "Otherwise it will be disabled for better security."
 msgstr ""
-"Introduza uma palavra-passe de administração em caso de necessidade de "
-"efetuar tarefas administrativas.\n"
-"Caso contrário será desativado para maior segurança."
+"Insira a sua senha de administração para o caso de precisar de realizar "
+"tarefas administrativas.\n"
+"Caso contrário, esta será desativada para uma melhor segurança."
 
 #: ../glade/optionswindow.glade.h:7
 msgid "Password:"
@@ -92,15 +94,15 @@ msgstr "Senha:"
 
 #: ../glade/optionswindow.glade.h:8
 msgid "Verify Password:"
-msgstr "Verificar Senha:"
+msgstr "Contrassenha:"
 
 #: ../glade/optionswindow.glade.h:9
 msgid "<i>Passwords do not match</i>"
-msgstr "<i>Senhas não coincidem</i>"
+msgstr "<i>As senhas não coincidem</i>"
 
 #: ../glade/optionswindow.glade.h:10
 msgid "Windows camouflage"
-msgstr "Camuflagem Windows"
+msgstr "Camuflagem do Windows"
 
 #: ../glade/optionswindow.glade.h:11
 msgid ""
@@ -111,22 +113,20 @@ msgstr ""
 "\">Documentação</a>"
 
 #: ../glade/optionswindow.glade.h:12
-#, fuzzy
 msgid ""
 "This option makes Tails look more like Microsoft Windows 8. This may be "
 "useful in public places in order to avoid attracting suspicion."
 msgstr ""
-"Esta opção torna o Tails mais parecido com o Microsoft Windows XP. Isto pode "
-"ser útil em espaços públicos de modo a evitar ou atrair atenções."
+"Esta opção faz Tails parecer mais com Microsoft Windows 8. Isto pode ser "
+"útil em lugares públicos para evitar a atrair suspeita."
 
 #: ../glade/optionswindow.glade.h:13
-#, fuzzy
 msgid "Activate Microsoft Windows 8 Camouflage"
-msgstr "Ativar camuflagem Microsoft Windows XP"
+msgstr "Ativar Camuflagem Microsoft Windows 8"
 
 #: ../glade/optionswindow.glade.h:14
 msgid "MAC address spoofing"
-msgstr "Roubo de identidade MAC"
+msgstr "Engano do endereço MAC"
 
 #: ../glade/optionswindow.glade.h:15
 msgid ""
@@ -149,8 +149,8 @@ msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
 "suspicion or cause network connection problems."
 msgstr ""
-"É geralmente seguro personificar endereços MAC, mas pode também levantar "
-"suspeitas ou causar problemas de rede."
+"É geralmente seguro enganar os endereços MAC, mas este também pode  levantar "
+"suspeitas ou causar problemas na rede."
 
 #: ../glade/optionswindow.glade.h:18
 msgid "Spoof all MAC addresses"
@@ -194,7 +194,7 @@ msgstr "Idioma"
 
 #: ../glade/langpanel.glade.h:3
 msgid "Locale"
-msgstr "Localização"
+msgstr "Local"
 
 #: ../glade/langpanel.glade.h:4
 msgid "Layout"
@@ -234,4 +234,4 @@ msgstr ""
 #: ../tailsgreeter/langpanel.py:123 ../tailsgreeter/langpanel.py:150
 #: ../tailsgreeter/langpanel.py:183
 msgid "Other..."
-msgstr "Outro..."
+msgstr "Outro ..."

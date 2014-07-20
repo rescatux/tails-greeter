@@ -5,24 +5,24 @@
 # Translators:
 # trantor <clucko3@gmail.com>, 2014
 # Ettore Atalan <atalanttore@googlemail.com>, 2014
-# Bobbymoto, 2013
+# Michael Maier, 2013
 # mo <moritz@torservers.net>, 2013
-# baumanno <baumanno@cip.ifi.lmu.de>, 2013
-# Cooligan <ppt23@lkj.hopto.org>, 2012
+# Oliver Baumann <baumanno@cip.ifi.lmu.de>, 2013
+# Chris <ppt23@lkj.hopto.org>, 2012
 # Sacro <Scion@T-Online.de>, 2012
-# to_ba, 2013
-# to_ba, 2014
+# Tobias Bannert, 2013
+# Tobias Bannert, 2014
 # tom_fate <tomoffate@gmail.com>, 2014
-# Victor1975 <VKerley75@gmail.com>, 2013
+# Victoria Kerley <VKerley75@gmail.com>, 2013
 # djcrackhome <wallcityserver@gmail.com>, 2012
-# Wasilis <inactive+Wasilis@transifex.com>, 2013
+# Wasilis Mandratzis <inactive+Wasilis@transifex.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-07-07 19:21+0200\n"
-"PO-Revision-Date: 2014-05-29 21:01+0000\n"
-"Last-Translator: trantor <clucko3@gmail.com>\n"
+"POT-Creation-Date: 2014-07-20 18:36+0200\n"
+"PO-Revision-Date: 2014-07-02 14:21+0000\n"
+"Last-Translator: Tobias Bannert\n"
 "Language-Team: German (http://www.transifex.com/projects/p/torproject/"
 "language/de/)\n"
 "Language: de\n"
@@ -131,7 +131,7 @@ msgstr ""
 
 #: ../glade/optionswindow.glade.h:13
 msgid "Activate Microsoft Windows 8 Camouflage"
-msgstr "Mircosoft Windows 8 Tarnmodus aktivieren"
+msgstr "»Mircosoft Windows 8«-Tarnmodus aktivieren"
 
 #: ../glade/optionswindow.glade.h:14
 msgid "MAC address spoofing"

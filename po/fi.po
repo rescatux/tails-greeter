@@ -4,14 +4,14 @@
 #
 # Translators:
 # karvjorm <karvonen.jorma@gmail.com>, 2014
-# mikkoharhanen <gitti@mikkoharhanen.fi>, 2013-2014
+# Mikko Harhanen <gitti@mikkoharhanen.fi>, 2013-2014
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-07-07 19:21+0200\n"
-"PO-Revision-Date: 2014-05-17 14:36+0000\n"
-"Last-Translator: mikkoharhanen <gitti@mikkoharhanen.fi>\n"
+"POT-Creation-Date: 2014-07-20 18:36+0200\n"
+"PO-Revision-Date: 2014-07-04 16:21+0000\n"
+"Last-Translator: karvjorm <karvonen.jorma@gmail.com>\n"
 "Language-Team: Finnish (http://www.transifex.com/projects/p/torproject/"
 "language/fi/)\n"
 "Language: fi\n"
@@ -111,18 +111,17 @@ msgstr ""
 "\">Ohjeet</a>"
 
 #: ../glade/optionswindow.glade.h:12
-#, fuzzy
 msgid ""
 "This option makes Tails look more like Microsoft Windows 8. This may be "
 "useful in public places in order to avoid attracting suspicion."
 msgstr ""
-"Valinta naamioi Tailsin muistuttamaan Microsoft Windows XP:tä. Naamionti voi "
-"olla hyödyllistä julkisissa tiloissa, kun halutaan välttää epäluuloisuutta."
+"Tämä valitsin saa Tails-ohjelman näyttämään enemmän Microsoft Windows 8-"
+"ohjelmalta. Tämä saattaa olla hyödyllistä julkisilla paikoilla huomion "
+"välttämiseksi."
 
 #: ../glade/optionswindow.glade.h:13
-#, fuzzy
 msgid "Activate Microsoft Windows 8 Camouflage"
-msgstr "Ota Microsoft Windows XP -naamiointi käyttöön"
+msgstr "Aktivoi Microsoft Windows 8-naamiointi"
 
 #: ../glade/optionswindow.glade.h:14
 msgid "MAC address spoofing"
@@ -148,8 +147,8 @@ msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
 "suspicion or cause network connection problems."
 msgstr ""
-"MAC-osoitteen väärentäminen on yleensä hyödyllistä, mutta väärennetty osoite "
-"voi herättää huomiota tai aiheuttaa ongelmia verkkoyhteydessä."
+"MAC-osoitteen väärentäminen on yleensä turvallisempaa, mutta väärennetty "
+"osoite voi herättää huomiota tai aiheuttaa ongelmia verkkoyhteydessä."
 
 #: ../glade/optionswindow.glade.h:18
 msgid "Spoof all MAC addresses"
