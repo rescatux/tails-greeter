@@ -4,20 +4,21 @@
 #
 # Translators:
 # kraim <biskraim@gmail.com>, 2013
-# Arwa M, 2014
-# Mohammed hassane GUESSOUS <guessousuni@gmail.com>, 2014
+# Arwa, 2014
+# 0xidz <ghoucine@gmail.com>, 2014
+# guessous.uni <guessousuni@gmail.com>, 2014
 # alshara3 <hsn.ali91@gmail.com>, 2013
 # Mohammed ALDOUB <voulnet@gmail.com>, 2013
 # Sherief Alaa <sheriefalaa.w@gmail.com>, 2013
 # Tails_developers <tails@boum.org>, 2013
-# uzumaki <tx99h4@hotmail.com>, 2014
+# محيي الدين <tx99h4@hotmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-07-07 19:21+0200\n"
-"PO-Revision-Date: 2014-05-17 14:36+0000\n"
-"Last-Translator: uzumaki <tx99h4@hotmail.com>\n"
+"POT-Creation-Date: 2014-07-20 18:36+0200\n"
+"PO-Revision-Date: 2014-07-04 14:31+0000\n"
+"Last-Translator: 0xidz <ghoucine@gmail.com>\n"
 "Language-Team: Arabic (http://www.transifex.com/projects/p/torproject/"
 "language/ar/)\n"
 "Language: ar\n"
@@ -117,18 +118,16 @@ msgstr ""
 "\">الوثائق</a>"
 
 #: ../glade/optionswindow.glade.h:12
-#, fuzzy
 msgid ""
 "This option makes Tails look more like Microsoft Windows 8. This may be "
 "useful in public places in order to avoid attracting suspicion."
 msgstr ""
-"هذا الخيار يجعل تيلز يشبه ويندوز اكس بي. وهذا قد يكون مفيداً في الاماكن "
-"العامه لتقليل الشبهه و جذب الانظار."
+"هذه الخصيصة ستجعل تيلز يبدو مثل ويندوز 8. قد يكون هذا مفيدا في الأماكن "
+"العامة حتى لا يجلب الشبهات."
 
 #: ../glade/optionswindow.glade.h:13
-#, fuzzy
 msgid "Activate Microsoft Windows 8 Camouflage"
-msgstr "تفعيل التمويه كويندوز اكس بي"
+msgstr "تفعيل تمويه مايكروسوفت ويندوز 8 "
 
 #: ../glade/optionswindow.glade.h:14
 msgid "MAC address spoofing"

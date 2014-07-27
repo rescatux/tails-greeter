@@ -3,15 +3,16 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# Svistwarrior273 <romanbeno273@gmail.com>, 2014
-# BudGet <budgeet@gmail.com>, 2013
+# elo, 2014
+# Roman 'Kaktuxista' Benji <romanbeno273@gmail.com>, 2014
+# Roman Krilovský <budgeet@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-07-07 19:21+0200\n"
-"PO-Revision-Date: 2014-05-17 14:36+0000\n"
-"Last-Translator: Svistwarrior273 <romanbeno273@gmail.com>\n"
+"POT-Creation-Date: 2014-07-20 18:36+0200\n"
+"PO-Revision-Date: 2014-07-04 05:30+0000\n"
+"Last-Translator: elo\n"
 "Language-Team: Slovak (http://www.transifex.com/projects/p/torproject/"
 "language/sk/)\n"
 "Language: sk\n"
@@ -110,16 +111,16 @@ msgstr ""
 "\">Dokumentácia</a>"
 
 #: ../glade/optionswindow.glade.h:12
-#, fuzzy
 msgid ""
 "This option makes Tails look more like Microsoft Windows 8. This may be "
 "useful in public places in order to avoid attracting suspicion."
-msgstr "Táto možnosť "
+msgstr ""
+"Táto voľba upraví podobnosť Tails bližšie k Microsoft Windows 8. Toto môže "
+"byž užitočné na verejnych miestach v záujme vyhnúť sa podozreniu."
 
 #: ../glade/optionswindow.glade.h:13
-#, fuzzy
 msgid "Activate Microsoft Windows 8 Camouflage"
-msgstr "Aktivovať Microsoft Windows XP Kamufláž"
+msgstr "Activovať Microsoft Windows 8 kamufláž"
 
 #: ../glade/optionswindow.glade.h:14
 msgid "MAC address spoofing"

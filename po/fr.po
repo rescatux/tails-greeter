@@ -112,18 +112,16 @@ msgstr ""
 "\">Documentation</a>"
 
 #: ../glade/optionswindow.glade.h:12
-#, fuzzy
 msgid ""
 "This option makes Tails look more like Microsoft Windows 8. This may be "
 "useful in public places in order to avoid attracting suspicion."
 msgstr ""
-"Cette option donne à Tails les apparences de Microsoft Windows XP. Cela peut "
+"Cette option donne à Tails les apparences de Microsoft Windows 8. Cela peut "
 "être utile afin de ne pas attirer l'attention dans un lieu public."
 
 #: ../glade/optionswindow.glade.h:13
-#, fuzzy
 msgid "Activate Microsoft Windows 8 Camouflage"
-msgstr "Activer le camouflage Microsoft Windows XP"
+msgstr "Activer le camouflage Microsoft Windows 8"
 
 #: ../glade/optionswindow.glade.h:14
 msgid "MAC address spoofing"
