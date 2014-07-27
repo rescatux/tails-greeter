@@ -1,3 +1,12 @@
+tails-greeter (0.8.2+jessie1) feature-jessie; urgency=medium
+
+  * Port to GDBus greeter interface
+  * Add a gdm-tails session
+  * Add a desktop file
+  * Adjust gbp.conf to ease working on feature/jessie.
+
+ -- Tails developers <tails@boum.org>  Mon, 28 Jul 2014 00:39:35 +0200
+
 tails-greeter (0.8.2) testing; urgency=medium
 
   * Update POT and PO files.
@@ -6,14 +15,6 @@ tails-greeter (0.8.2) testing; urgency=medium
   * Import translations from Transifex, update POT and PO files.
 
  -- Tails developers <tails@boum.org>  Sun, 20 Jul 2014 20:34:59 +0200
-
-tails-greeter (0.8.1+jessie1) feature-jessie; urgency=low
-
-  * Port to GDBus greeter interface
-  * Add a gdm-tails session
-  * Add a desktop file
-
- -- Tails developers <tails@boum.org>  Sun, 20 Jul 2014 15:15:31 +0000
 
 tails-greeter (0.8.1) testing; urgency=medium
 
