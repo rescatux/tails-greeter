@@ -11,8 +11,6 @@ override_dh_auto_install:
 	install -m 0755 $(CURDIR)/PostLogin.default $(DESTDIR)/etc/gdm3/PostLogin/Default
 	install -m 0440 $(CURDIR)/sudoers.d/* $(DESTDIR)/etc/sudoers.d/
 	install -m 0644 $(CURDIR)/org.boum.tails.accounts.pkla $(DESTDIR)/etc/polkit-1/localauthority/10-vendor.d/
-	install -m 0644 $(CURDIR)/gdm-tails.session $(DESTDIR)/usr/share/gnome-session/sessions/
-	install -m 0644 $(CURDIR)/tails-greeter.desktop $(DESTDIR)/usr/share/applications/
 	install -m 0644 $(CURDIR)/default_langcodes \
 		$(DESTDIR)/usr/share/tails-greeter/default_langcodes
 	perl -n -E 'next unless m{_}xms;        \
