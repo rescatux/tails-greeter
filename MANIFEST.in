@@ -1,5 +1,4 @@
 include tails-greeter.py
-include gdm-simple-greeter.desktop
 include gdm-tails.session
 include tails-logging.conf
 include no-password-lecture.txt
