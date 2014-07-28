@@ -1,3 +1,16 @@
+tails-greeter (0.8.2+jessie2) feature-jessie; urgency=medium
+
+  * Drop debian/source/options: it only contains options that are obsolete
+    in Jessie.
+  * Install tails-greeter.desktop and gdm-tails.session in the upstream
+    packaging bits, not in the Debian ones.
+  * Drop everything about gdm-simple-greeter.desktop, which is obsolete
+    on Jessie.
+  * Don't force bzip2 usage when building binary packages:
+    XZ is the default nowadays.
+
+ -- Tails developers <tails@boum.org>  Mon, 28 Jul 2014 12:07:55 +0200
+
 tails-greeter (0.8.2+jessie1) feature-jessie; urgency=medium
 
   * Port to GDBus greeter interface
