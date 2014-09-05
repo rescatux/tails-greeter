@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # christianflintrup <chr@agge.net>, 2014
 # Christian Villum <villum@autofunk.dk>, 2014
@@ -12,15 +12,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-07-20 18:36+0200\n"
+"POT-Creation-Date: 2014-06-11 16:20+0200\n"
 "PO-Revision-Date: 2014-06-23 17:11+0000\n"
 "Last-Translator: christianflintrup <chr@agge.net>\n"
-"Language-Team: Danish (http://www.transifex.com/projects/p/torproject/"
-"language/da/)\n"
-"Language: da\n"
+"Language-Team: Danish (http://www.transifex.com/projects/p/torproject/language/da/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: da\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../glade/persistencewindow.glade.h:1
@@ -73,21 +72,15 @@ msgstr "Administrations kodeord"
 
 #: ../glade/optionswindow.glade.h:4
 msgid ""
-"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
-"\">Documentation</a>"
-msgstr ""
-"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
-"\">Dokumentation</a>"
+"<a "
+"href=\"doc/first_steps/startup_options/administration_password.en.html\">Documentation</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/administration_password.en.html\">Dokumentation</a>"
 
 #: ../glade/optionswindow.glade.h:5
 msgid ""
-"Enter an administration password in case you need to perform administration "
-"tasks.\n"
+"Enter an administration password in case you need to perform administration tasks.\n"
 "Otherwise it will be disabled for better security."
-msgstr ""
-"Indtast et administrations kodeord, hvis De har behov for at udføre "
-"administrative opgaver.\n"
-"Alternativt vil det blive deaktiveret for at optimere sikkerheden."
+msgstr "Indtast et administrations kodeord, hvis De har behov for at udføre administrative opgaver.\nAlternativt vil det blive deaktiveret for at optimere sikkerheden."
 
 #: ../glade/optionswindow.glade.h:7
 msgid "Password:"
@@ -107,19 +100,15 @@ msgstr "Windows camouflage"
 
 #: ../glade/optionswindow.glade.h:11
 msgid ""
-"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
-"\">Documentation</a>"
-msgstr ""
-"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
-"\">Dokumentation</a>"
+"<a "
+"href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">Documentation</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">Dokumentation</a>"
 
 #: ../glade/optionswindow.glade.h:12
 msgid ""
 "This option makes Tails look more like Microsoft Windows 8. This may be "
 "useful in public places in order to avoid attracting suspicion."
-msgstr ""
-"Dette får Tails til at ligne Microsoft Windows 8 mere. Dette kan være "
-"nyttigt på offentlige steder for at undgå at vække mistanke."
+msgstr "Dette får Tails til at ligne Microsoft Windows 8 mere. Dette kan være nyttigt på offentlige steder for at undgå at vække mistanke."
 
 #: ../glade/optionswindow.glade.h:13
 msgid "Activate Microsoft Windows 8 Camouflage"
@@ -131,27 +120,21 @@ msgstr "MAC address spoofing"
 
 #: ../glade/optionswindow.glade.h:15
 msgid ""
-"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
-"\">Documentation</a>"
-msgstr ""
-"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
-"\">Dokumentation</a>"
+"<a "
+"href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Documentation</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Dokumentation</a>"
 
 #: ../glade/optionswindow.glade.h:16
 msgid ""
 "Spoofing MAC addresses hides the serial number of your network cards to the "
 "local networks. This can help you hide your geographical location."
-msgstr ""
-"Ved at ændre MAC addressen skjules netværksenhedens serienummer for det "
-"lokale netværk. Dette kan hjælpe med at skjule din geografiske placering."
+msgstr "Ved at ændre MAC addressen skjules netværksenhedens serienummer for det lokale netværk. Dette kan hjælpe med at skjule din geografiske placering."
 
 #: ../glade/optionswindow.glade.h:17
 msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
 "suspicion or cause network connection problems."
-msgstr ""
-"Det er generelt mere sikkert at ændre MAC addresser, men det kan potentielt "
-"også virke mistænkeligt eller give forblemer med forbindelsen."
+msgstr "Det er generelt mere sikkert at ændre MAC addresser, men det kan potentielt også virke mistænkeligt eller give forblemer med forbindelsen."
 
 #: ../glade/optionswindow.glade.h:18
 msgid "Spoof all MAC addresses"
@@ -163,27 +146,21 @@ msgstr "Netværkskonfiguration"
 
 #: ../glade/optionswindow.glade.h:20
 msgid ""
-"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
-"\">Documentation</a>"
-msgstr ""
-"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
-"\">Dokumentation</a>"
+"<a "
+"href=\"doc/first_steps/startup_options/network_configuration.en.html\">Documentation</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/network_configuration.en.html\">Dokumentation</a>"
 
 #: ../glade/optionswindow.glade.h:21
 msgid ""
-"This computer's Internet connection is clear of obstacles. You would like to "
-"connect directly to the Tor network."
-msgstr ""
-"Denne computers Internetforbindelse er fri for problemer. Du kan forbinde "
-"direkte til Tor netværket."
+"This computer's Internet connection is clear of obstacles. You would like to"
+" connect directly to the Tor network."
+msgstr "Denne computers Internetforbindelse er fri for problemer. Du kan forbinde direkte til Tor netværket."
 
 #: ../glade/optionswindow.glade.h:22
 msgid ""
 "This computer's Internet connection is censored, filtered, or proxied. You "
 "need to configure bridge, firewall, or proxy settings."
-msgstr ""
-"Denne computers Internetforbindelse er censureret, filtreret eller proxiet. "
-"Du skal konfigurere bro, firewall eller proxy indstillinger."
+msgstr "Denne computers Internetforbindelse er censureret, filtreret eller proxiet. Du skal konfigurere bro, firewall eller proxy indstillinger."
 
 #: ../glade/langpanel.glade.h:1
 msgid " "
@@ -206,9 +183,7 @@ msgstr "Layout"
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
-msgstr ""
-"live persist fejlede med return code %(returncode)s:\n"
-"%(stderr)s"
+msgstr "live persist fejlede med return code %(returncode)s:\n%(stderr)s"
 
 #: ../tailsgreeter/persistence.py:99
 #, python-format
@@ -216,10 +191,7 @@ msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr ""
-"cryptsetup fejlede med return code %(returncode)s:\n"
-"%(stdout)s\n"
-"%(stderr)s"
+msgstr "cryptsetup fejlede med return code %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
 #: ../tailsgreeter/persistence.py:124
 #, python-format
@@ -227,10 +199,7 @@ msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr ""
-"live-persist fejlede med return code %(returncode)s:\n"
-"%(stdout)s\n"
-"%(stderr)s"
+msgstr "live-persist fejlede med return code %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
 #: ../tailsgreeter/langpanel.py:123 ../tailsgreeter/langpanel.py:150
 #: ../tailsgreeter/langpanel.py:183
