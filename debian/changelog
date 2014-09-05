@@ -1,3 +1,9 @@
+tails-greeter (0.8.3+jessie1) feature-jessie; urgency=medium
+
+  * Set X-GNOME-provides for .desktop.
+
+ -- Tails developers <tails@boum.org>  Fri, 5 Sep 2014 18:07:55 +0200
+
 tails-greeter (0.8.3) stable; urgency=medium
 
   * Import translations from Transifex, update POT and PO files.
