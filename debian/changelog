@@ -1,3 +1,9 @@
+tails-greeter (0.8.3+jessie2) feature-jessie; urgency=medium
+
+  * The autologin service has a new name.
+
+ -- Tails developers <tails@boum.org>  Mon, 08 Sep 2014 14:10:51 +0200
+
 tails-greeter (0.8.3+jessie1) feature-jessie; urgency=medium
 
   * Set X-GNOME-provides for .desktop.
