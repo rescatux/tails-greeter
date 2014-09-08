@@ -28,7 +28,7 @@ import tailsgreeter.errors
 class GdmClient (object):
     """Greeter client class"""
 
-    AUTOLOGIN_SERVICE_NAME = 'gdm3-autologin'
+    AUTOLOGIN_SERVICE_NAME = 'gdm-autologin'
 
     def __init__(self, session_opened_cb=None):
         self.session_opened_cb = session_opened_cb
