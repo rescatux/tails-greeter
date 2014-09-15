@@ -1,3 +1,11 @@
+tails-greeter (0.8.3+jessie3) feature-jessie; urgency=medium
+
+  * Fix GNOME session localisation
+  * Make sure /etc/sudoers.d/tails-greeter-no-password-lecture
+    is owned by the root group.
+
+ -- Tails developers <tails@boum.org>  Mon, 15 Sep 2014 10:35:52 -0700
+
 tails-greeter (0.8.3+jessie2) feature-jessie; urgency=medium
 
   * The autologin service has a new name.
