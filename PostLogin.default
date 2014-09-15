@@ -170,10 +170,10 @@ rm --interactive=never -f /var/lib/gdm3/tails.password
 if [ -z "${TAILS_USER_PASSWORD}" ] ; then
     rm -f "${POLKIT}" "${SUDOERS}"
     deluser "${LIVE_USERNAME}" sudo
+    install -o root -g root -m 0440 /dev/null "${NO_PASSWORD_LECTURE}"
     echo "Defaults:amnesia lecture=always" > "${NO_PASSWORD_LECTURE}"
     echo "Defaults:amnesia lecture_file=/usr/share/tails-greeter/no-password-lecture.txt" >> "${NO_PASSWORD_LECTURE}"
     echo "Defaults:amnesia badpass_message=\"The administration password is disabled.\"" >> "${NO_PASSWORD_LECTURE}"
-    chmod 0440 "${NO_PASSWORD_LECTURE}"
     log_n_exit "Password variable not found."
 fi
 
