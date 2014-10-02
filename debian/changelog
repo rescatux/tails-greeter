@@ -1,3 +1,9 @@
+tails-greeter (0.8.3+jessie4) feature-jessie; urgency=medium
+
+  * Add gnome-flashback to the list of required components for the GDM session.
+
+ -- Tails developers <tails@boum.org>  Thu, 02 Oct 2014 16:21:12 +0200
+
 tails-greeter (0.8.3+jessie3) feature-jessie; urgency=medium
 
   * Fix GNOME session localisation
