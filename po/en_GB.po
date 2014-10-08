@@ -4,13 +4,13 @@
 # 
 # Translators:
 # Andi Chandler <andi@gowling.com>, 2014
-# richardshaylor <rshaylor@me.com>, 2014
+# Richard Shaylor <rshaylor@me.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-14 13:14+0200\n"
-"PO-Revision-Date: 2014-05-17 14:36+0000\n"
+"POT-Creation-Date: 2014-08-31 10:36+0200\n"
+"PO-Revision-Date: 2014-09-02 09:52+0000\n"
 "Last-Translator: Andi Chandler <andi@gowling.com>\n"
 "Language-Team: English (United Kingdom) (http://www.transifex.com/projects/p/torproject/language/en_GB/)\n"
 "MIME-Version: 1.0\n"
@@ -103,13 +103,13 @@ msgstr "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">D
 
 #: ../glade/optionswindow.glade.h:12
 msgid ""
-"This option makes Tails look more like Microsoft Windows XP. This may be "
+"This option makes Tails look more like Microsoft Windows 8. This may be "
 "useful in public places in order to avoid attracting suspicion."
-msgstr "This option makes Tails look more like Microsoft Windows XP. This may be useful in public places in order to avoid attracting suspicion."
+msgstr "This option makes Tails look more like Microsoft Windows 8. This may be useful in public places in order to avoid attracting suspicion."
 
 #: ../glade/optionswindow.glade.h:13
-msgid "Activate Microsoft Windows XP Camouflage"
-msgstr "Activate Microsoft Windows XP Camouflage"
+msgid "Activate Microsoft Windows 8 Camouflage"
+msgstr "Activate Microsoft Windows 8 Camouflage"
 
 #: ../glade/optionswindow.glade.h:14
 msgid "MAC address spoofing"
@@ -198,7 +198,7 @@ msgid ""
 "%(stderr)s"
 msgstr "live-persist failed with return code %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
-#: ../tailsgreeter/langpanel.py:125 ../tailsgreeter/langpanel.py:152
-#: ../tailsgreeter/langpanel.py:185
+#: ../tailsgreeter/langpanel.py:123 ../tailsgreeter/langpanel.py:150
+#: ../tailsgreeter/langpanel.py:183
 msgid "Other..."
 msgstr "Other..."

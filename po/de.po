@@ -14,6 +14,7 @@
 # Tobias Bannert, 2013
 # Tobias Bannert, 2014
 # tom_fate <tomoffate@gmail.com>, 2014
+# rike, 2014
 # Victoria Kerley <VKerley75@gmail.com>, 2013
 # djcrackhome <wallcityserver@gmail.com>, 2012
 # Wasilis Mandratzis <inactive+Wasilis@transifex.com>, 2013
@@ -21,9 +22,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-07-20 18:36+0200\n"
-"PO-Revision-Date: 2014-07-24 20:20+0000\n"
-"Last-Translator: sycamoreone <sycamoreone@riseup.net>\n"
+"POT-Creation-Date: 2014-08-31 10:36+0200\n"
+"PO-Revision-Date: 2014-10-07 17:34+0000\n"
+"Last-Translator: rike\n"
 "Language-Team: German (http://www.transifex.com/projects/p/torproject/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,7 +34,7 @@ msgstr ""
 
 #: ../glade/persistencewindow.glade.h:1
 msgid "Forward"
-msgstr "Vorwärts"
+msgstr "Weiter"
 
 #: ../glade/persistencewindow.glade.h:2 ../glade/optionswindow.glade.h:1
 msgid "Login"
@@ -45,7 +46,7 @@ msgstr "Willkommen bei Tails"
 
 #: ../glade/persistencewindow.glade.h:4
 msgid "Use persistence?"
-msgstr "Persistenz benutzen?"
+msgstr "Beständige Speicherpartition benutzen?"
 
 #: ../glade/persistencewindow.glade.h:5
 msgid "<a href=\"doc/first_steps/persistence/use.en.html\">Documentation</a>"
@@ -117,7 +118,7 @@ msgstr "<a href=\"doc/first_steps/startup_options/windows_camouflage.de.html\">D
 msgid ""
 "This option makes Tails look more like Microsoft Windows 8. This may be "
 "useful in public places in order to avoid attracting suspicion."
-msgstr "Diese Option lässt Tails mehr wie Microsoft Windows 8 aussehen. Das könnte an öffentlichen Orten hilfreich sein um Verdächtigungen zu vermeiden."
+msgstr "Diese Option lässt Tails mehr wie Microsoft Windows 8 aussehen. Das könnte an öffentlichen Orten hilfreich sein, um weniger Aufsehen zu erregen."
 
 #: ../glade/optionswindow.glade.h:13
 msgid "Activate Microsoft Windows 8 Camouflage"
@@ -137,13 +138,13 @@ msgstr "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Dokumen
 msgid ""
 "Spoofing MAC addresses hides the serial number of your network cards to the "
 "local networks. This can help you hide your geographical location."
-msgstr "Durch die Manipulation der MAC-Adresse kann die Seriennummer der eigenen Netzwerkkarte im lokalen Netzwerk verborgen werden, dies kann wiederum helfen Ihren geografischen Standort geheim zu halten."
+msgstr "Durch die Manipulation der MAC-Adresse kann die Seriennummer der eigenen Netzwerkkarte im lokalen Netzwerk verborgen werden. Dies kann helfen, Ihren geografischen Standort geheim zu halten."
 
 #: ../glade/optionswindow.glade.h:17
 msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
 "suspicion or cause network connection problems."
-msgstr "Es ist im Allgemeinen sicherer, MAC-Adressen zu fälschen, aber es könnte auch den Verdacht erhöhen oder Netzwerkverbindungsprobleme verursachen."
+msgstr "Es ist im allgemeinen sicherer, MAC-Adressen zu fälschen, aber es könnte auch Verdacht erregen oder Netzwerkverbindungsprobleme verursachen."
 
 #: ../glade/optionswindow.glade.h:18
 msgid "Spoof all MAC addresses"
@@ -151,7 +152,7 @@ msgstr "Alle MAC-Adressen manipulieren"
 
 #: ../glade/optionswindow.glade.h:19
 msgid "Network configuration"
-msgstr "Netzwerkonfiguration"
+msgstr "Netzwerkkonfiguration"
 
 #: ../glade/optionswindow.glade.h:20
 msgid ""
@@ -169,7 +170,7 @@ msgstr "Die Internetverbindung dieses Rechners ist frei von Hindernissen. Sie k�
 msgid ""
 "This computer's Internet connection is censored, filtered, or proxied. You "
 "need to configure bridge, firewall, or proxy settings."
-msgstr "Die Internetverbindung dieses Rechner ist zensiert, gefilterterd oder vermittelt. Sie müssen die Brücke, Firewall oder Vermittlungsservereinstellungen konfigurieren."
+msgstr "Die Internetverbindung dieses Rechner ist zensiert, gefiltert oder vermittelt. Sie müssen Brücken-, Firewall- oder Vermittlungsservereinstellungen konfigurieren."
 
 #: ../glade/langpanel.glade.h:1
 msgid " "
@@ -200,7 +201,7 @@ msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "cryptsetup t ist mit folgendem Code fehlgeschlagen %(returncode)s:\n%(stdout)s\n%(stderr)s"
+msgstr "cryptsetup ist mit folgendem Code fehlgeschlagen %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
 #: ../tailsgreeter/persistence.py:124
 #, python-format
