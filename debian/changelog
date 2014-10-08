@@ -1,3 +1,10 @@
+tails-greeter (0.8.4) testing; urgency=medium
+
+  * Apply language settings to the Tor Browser and Launcher.
+  * Import translations from Transifex, update POT and PO files.
+
+ -- Tails developers <tails@boum.org>  Wed, 08 Oct 2014 21:11:45 +0200
+
 tails-greeter (0.8.3) stable; urgency=medium
 
   * Import translations from Transifex, update POT and PO files.
