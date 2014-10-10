@@ -10,6 +10,7 @@
 # ln191810 <ln191810@gmail.com>, 2012
 # xtoaster <zhazhenzhong@gmail.com>, 2012
 # baoliandeng <nkzhangjg@gmail.com>, 2014
+# Xiaolan <xiaolan65535@gmail.com>, 2014
 # YF <yfdyh000@gmail.com>, 2014
 # xtoaster <zhazhenzhong@gmail.com>, 2012
 # 辛海林 <hailin_xin@163.com>, 2014
@@ -17,9 +18,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-28 22:33+0200\n"
-"PO-Revision-Date: 2014-06-10 15:47+0000\n"
-"Last-Translator: 辛海林 <hailin_xin@163.com>\n"
+"POT-Creation-Date: 2014-08-31 10:36+0200\n"
+"PO-Revision-Date: 2014-09-25 21:10+0000\n"
+"Last-Translator: Xiaolan <xiaolan65535@gmail.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/projects/p/torproject/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -79,7 +80,7 @@ msgstr "管理员密码"
 msgid ""
 "<a "
 "href=\"doc/first_steps/startup_options/administration_password.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/administration_password.en.html\">Documentation</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/administration_password.en.html\">文档</a>"
 
 #: ../glade/optionswindow.glade.h:5
 msgid ""
@@ -127,7 +128,7 @@ msgstr "MAC 地址欺骗"
 msgid ""
 "<a "
 "href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Documentation</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">文档</a>"
 
 #: ../glade/optionswindow.glade.h:16
 msgid ""
@@ -153,7 +154,7 @@ msgstr "网络确认"
 msgid ""
 "<a "
 "href=\"doc/first_steps/startup_options/network_configuration.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/network_configuration.en.html\">Documentation</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/network_configuration.en.html\">文档</a>"
 
 #: ../glade/optionswindow.glade.h:21
 msgid ""
@@ -206,7 +207,7 @@ msgid ""
 "%(stderr)s"
 msgstr "负责持久卷设置的 live-persist 执行失败，，返回代码 %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
-#: ../tailsgreeter/langpanel.py:125 ../tailsgreeter/langpanel.py:152
-#: ../tailsgreeter/langpanel.py:185
+#: ../tailsgreeter/langpanel.py:123 ../tailsgreeter/langpanel.py:150
+#: ../tailsgreeter/langpanel.py:183
 msgid "Other..."
 msgstr "其他..."

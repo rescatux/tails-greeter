@@ -3,15 +3,17 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# stevegrey <91.ragi@gmail.com>, 2014
 # ilbe123 <a3057016@drdrb.net>, 2014
+# Jamin <bakzaa@gmail.com>, 2014
 # Dr.what <javrick6@naver.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-14 13:14+0200\n"
-"PO-Revision-Date: 2014-05-17 14:36+0000\n"
-"Last-Translator: ilbe123 <a3057016@drdrb.net>\n"
+"POT-Creation-Date: 2014-08-31 10:36+0200\n"
+"PO-Revision-Date: 2014-10-05 12:00+0000\n"
+"Last-Translator: Jamin <bakzaa@gmail.com>\n"
 "Language-Team: Korean (http://www.transifex.com/projects/p/torproject/language/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -103,13 +105,13 @@ msgstr "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">�
 
 #: ../glade/optionswindow.glade.h:12
 msgid ""
-"This option makes Tails look more like Microsoft Windows XP. This may be "
+"This option makes Tails look more like Microsoft Windows 8. This may be "
 "useful in public places in order to avoid attracting suspicion."
-msgstr "이 옵션은 Tails을 더 Microsoft Windows XP로 보이게합니다. 이것은주의를 끄는 의심을 피하기 위해 공공 장소 같은 곳에서 유용 할 수 있습니다."
+msgstr "본 설정은 Tails가 보다 마이크로소프트 Windows 8처럼 보이게 만들어줄 것입니다. 이 기능은 공공장소에서 의심을 피할때 유용할 것입니다."
 
 #: ../glade/optionswindow.glade.h:13
-msgid "Activate Microsoft Windows XP Camouflage"
-msgstr "Microsoft Windows XP 위장을 활성화"
+msgid "Activate Microsoft Windows 8 Camouflage"
+msgstr "Microsoft Windows 8 카모플라주 활성화"
 
 #: ../glade/optionswindow.glade.h:14
 msgid "MAC address spoofing"
@@ -198,7 +200,7 @@ msgid ""
 "%(stderr)s"
 msgstr "live-persist가 실패했습니다. 반환 코드는 %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
-#: ../tailsgreeter/langpanel.py:125 ../tailsgreeter/langpanel.py:152
-#: ../tailsgreeter/langpanel.py:185
+#: ../tailsgreeter/langpanel.py:123 ../tailsgreeter/langpanel.py:150
+#: ../tailsgreeter/langpanel.py:183
 msgid "Other..."
 msgstr "기타..."
