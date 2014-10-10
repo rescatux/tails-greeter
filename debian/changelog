@@ -1,3 +1,9 @@
+tails-greeter (0.8.4+jessie1) feature-jessie; urgency=medium
+
+  * Rebuild for Debian Jessie.
+
+ -- Tails developers <tails@boum.org>  Fri, 10 Oct 2014 12:27:01 +0200
+
 tails-greeter (0.8.4) testing; urgency=medium
 
   * Apply language settings to the Tor Browser and Launcher.
