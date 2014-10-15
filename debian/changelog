@@ -1,3 +1,11 @@
+tails-greeter (0.8.5) testing; urgency=medium
+
+  * The path where TBB langpacks are stored has changed.
+  * The Browser locale selection code has moved into Tails.
+  * Import PO files from Transifex, update POT and PO files.
+
+ -- Tails developers <tails@boum.org>  Wed, 15 Oct 2014 16:11:20 +0200
+
 tails-greeter (0.8.4) testing; urgency=medium
 
   * Apply language settings to the Tor Browser and Launcher.
