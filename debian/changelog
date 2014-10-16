@@ -1,3 +1,9 @@
+tails-greeter (0.8.5+jessie1) feature-jessie; urgency=medium
+
+  * Rebuild for Debian Jessie.
+
+ -- Tails developers <tails@boum.org>  Thu, 16 Oct 2014 16:52:29 +0200
+
 tails-greeter (0.8.5) testing; urgency=medium
 
   * The path where TBB langpacks are stored has changed.
