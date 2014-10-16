@@ -1,8 +1,10 @@
-tails-greeter (0.8.4+jessie1) feature-jessie; urgency=medium
+tails-greeter (0.8.5) testing; urgency=medium
 
-  * Rebuild for Debian Jessie.
+  * The path where TBB langpacks are stored has changed.
+  * The Browser locale selection code has moved into Tails.
+  * Import PO files from Transifex, update POT and PO files.
 
- -- Tails developers <tails@boum.org>  Fri, 10 Oct 2014 12:27:01 +0200
+ -- Tails developers <tails@boum.org>  Wed, 15 Oct 2014 16:11:20 +0200
 
 tails-greeter (0.8.4) testing; urgency=medium
 
