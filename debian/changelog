@@ -1,3 +1,9 @@
+tails-greeter (0.8.5+jessie2) feature-jessie; urgency=medium
+
+  * Don't display the Greeter in the Applications menu (Closes: #8267).
+
+ -- Tails developers <tails@boum.org>  Mon, 17 Nov 2014 12:36:42 +0100
+
 tails-greeter (0.8.5+jessie1) feature-jessie; urgency=medium
 
   * Rebuild for Debian Jessie.
