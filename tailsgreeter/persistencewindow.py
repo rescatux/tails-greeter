@@ -64,6 +64,7 @@ class PersistenceWindow(TranslatableWindow):
         self.checked_img_moreoptions_no  = builder.get_object("moreoptions_no_checked_img")
         self.checked_img_persistence_yes = builder.get_object("persistence_yes_checked_img")
         self.checked_img_persistence_no  = builder.get_object("persistence_no_checked_img")
+        self.main_label = builder.get_object("main_label")
 
         self.warning_area.hide()
 
@@ -78,6 +79,7 @@ class PersistenceWindow(TranslatableWindow):
         else:
             self.box_persistence.hide()
             self.box_moreoptions.hide()
+            self.main_label.hide()
 
         # FIXME:
         # * support multiple persistent containers:
