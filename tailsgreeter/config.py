@@ -17,11 +17,17 @@
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>
 #
+
+tails_specific = False # TODO: Depend on a runtime check
+
 """Tails-greeter configuration"""
 
 # default Tails credentials
 LPASSWORD = 'live'
-LUSER = 'amnesia'
+if tails_specific:
+    LUSER = 'amnesia'
+else:
+    LUSER = 'user'
 
 # file where supported language codes (such as en_US) are saved at Tails build time
 language_codes_path = '/usr/share/tails-greeter/language_codes'
