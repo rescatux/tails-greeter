@@ -54,6 +54,7 @@ class PersistenceWindow(TranslatableWindow):
         self.btn_login = builder.get_object("login_button")
         self.btn_next = builder.get_object("next_button")
         self.box_persistence = builder.get_object("persistence_box")
+        self.box_moreoptions = builder.get_object("moreoptions_box")
         self.readonly_checkbutton = builder.get_object("readonly_checkbutton")
         self.warning_label = builder.get_object("warning_label")
         self.warning_area = builder.get_object("warning_area")
@@ -76,6 +77,7 @@ class PersistenceWindow(TranslatableWindow):
                     self.box_persistence.hide()
         else:
             self.box_persistence.hide()
+            self.box_moreoptions.hide()
 
         # FIXME:
         # * support multiple persistent containers:
