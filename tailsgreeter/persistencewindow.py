@@ -38,6 +38,8 @@ class PersistenceWindow(TranslatableWindow):
         builder.add_from_file(os.path.join(tailsgreeter.GLADE_DIR, "persistencewindow.glade"))
         builder.connect_signals(self)
 
+        self.tails_specific = False # TODO: Depend on a runtime check
+
         self.moreoptions = False
 
         # Sets self.window
@@ -65,11 +67,14 @@ class PersistenceWindow(TranslatableWindow):
         self.warning_area.hide()
 
         # FIXME: list_containers may raise exceptions. Deal with that.
-        self.containers = [
-            { "path": container, "locked": True }
-            for container in self.greeter.persistence.list_containers()
-            ]
-        if len(self.containers) == 0:
+        if self.tails_specific:
+                self.containers = [
+                { "path": container, "locked": True }
+                for container in self.greeter.persistence.list_containers()
+                ]
+                if len(self.containers) == 0:
+                    self.box_persistence.hide()
+        else:
             self.box_persistence.hide()
 
         # FIXME:
