@@ -20,7 +20,24 @@
 TAILS_SPECIFIC="FALSE" # TODO: Depend on a runtime check
 
 if [ ${TAILS_SPECIFIC} == "FALSE" ] ; then
-  exit 0;
+    # Import locale name
+    . /var/lib/gdm3/tails.locale || log_n_exit "Locale file not found."
+    if [ -z "${TAILS_LOCALE_NAME}" ] ; then
+         log_n_exit "Locale variable not found."
+    fi
+
+    # Localize console
+    grep_n_set "XKBMODEL" ${KBDSET} ${TAILS_XKBMODEL}
+    grep_n_set "XKBLAYOUT" ${KBDSET} ${TAILS_XKBLAYOUT}
+    grep_n_set "XKBVARIANT" ${KBDSET} ${TAILS_XKBVARIANT}
+    grep_n_set "XKBOPTIONS" ${KBDSET} ${TAILS_XKBOPTIONS}
+    force_set "CODESET" ${CONSET} ${CODSET}
+    grep_n_set "LANG"       ${LOCALE_CFG} "${TAILS_LOCALE_NAME}.UTF-8"
+    # Generate locale
+    echo -e -n "\n${TAILS_LOCALE_NAME}.UTF-8 UTF-8\n" >> /etc/locale.gen
+    /usr/sbin/locale-gen
+
+    exit 0;
 fi
 
 export PATH="/usr/sbin:${PATH}"
