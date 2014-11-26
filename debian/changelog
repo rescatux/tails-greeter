@@ -1,3 +1,9 @@
+tails-greeter (0.8.5+jessie3) feature-jessie; urgency=low
+
+  * Delete the Live user's password if no administration password is set (Closes: #5589).
+
+ -- Tails developers <tails@boum.org>  Wed, 26 Nov 2014 14:21:42 +0100
+
 tails-greeter (0.8.5+jessie2) feature-jessie; urgency=medium
 
   * Don't display the Greeter in the Applications menu (Closes: #8267).
