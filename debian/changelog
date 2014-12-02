@@ -1,3 +1,9 @@
+tails-greeter (0.8.6) stable; urgency=low
+
+  * Import PO files from Transifex, update POT and PO files.
+
+ -- Tails developers <tails@boum.org>  Tue, 02 Dec 2014 10:01:35 +0100
+
 tails-greeter (0.8.5) testing; urgency=medium
 
   * The path where TBB langpacks are stored has changed.
