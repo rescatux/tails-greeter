@@ -1,3 +1,9 @@
+tails-greeter (0.8.6+jessie1) feature-jessie; urgency=medium
+
+  * Rebuild for Debian Jessie.
+
+ -- Tails developers <tails@boum.org>  Fri, 05 Dec 2014 12:35:56 +0100
+
 tails-greeter (0.8.6) stable; urgency=low
 
   * Import PO files from Transifex, update POT and PO files.
