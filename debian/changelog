@@ -1,3 +1,9 @@
+tails-greeter (0.8.6) stable; urgency=low
+
+  * Import PO files from Transifex, update POT and PO files.
+
+ -- Tails developers <tails@boum.org>  Tue, 02 Dec 2014 10:01:35 +0100
+
 tails-greeter (0.8.5+jessie3) feature-jessie; urgency=low
 
   * Delete the Live user's password if no administration password is set (Closes: #5589).
