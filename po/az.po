@@ -3,171 +3,162 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# ihints <ihints@gmail.com>, 2014
-# Wu Ming Shi, 2013
-# Wu Ming Shi, 2013
-# ln191810 <ln191810@gmail.com>, 2012
-# ln191810 <ln191810@gmail.com>, 2012
-# xtoaster <zhazhenzhong@gmail.com>, 2012
-# baoliandeng <nkzhangjg@gmail.com>, 2014
-# Sophia Meifang Wang <sophiatiger121@hotmail.com>, 2014
-# Xiaolan <xiaolan65535@gmail.com>, 2014
-# YF <yfdyh000@gmail.com>, 2014
-# xtoaster <zhazhenzhong@gmail.com>, 2012
-# 辛海林 <hailin_xin@163.com>, 2014
+# E <ehuseynzade@gmail.com>, 2014
+# emin25 <emin@mastizada.tk>, 2013
+# Fredi <feridovski@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-10-15 16:05+0200\n"
-"PO-Revision-Date: 2014-12-04 15:01+0000\n"
-"Last-Translator: Sophia Meifang Wang <sophiatiger121@hotmail.com>\n"
-"Language-Team: Chinese (China) (http://www.transifex.com/projects/p/torproject/language/zh_CN/)\n"
+"PO-Revision-Date: 2014-12-30 12:01+0000\n"
+"Last-Translator: E <ehuseynzade@gmail.com>\n"
+"Language-Team: Azerbaijani (http://www.transifex.com/projects/p/torproject/language/az/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_CN\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: az\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../glade/persistencewindow.glade.h:1
 msgid "Forward"
-msgstr "前进"
+msgstr "Yönləndir"
 
 #: ../glade/persistencewindow.glade.h:2 ../glade/optionswindow.glade.h:1
 msgid "Login"
-msgstr "登录"
+msgstr "Daxil Ol"
 
 #: ../glade/persistencewindow.glade.h:3 ../glade/optionswindow.glade.h:2
 msgid "Welcome to Tails"
-msgstr "欢迎进入 Tails"
+msgstr "Tails -ə Xoş Gəldiniz"
 
 #: ../glade/persistencewindow.glade.h:4
 msgid "Use persistence?"
-msgstr "持久保存工作数据？"
+msgstr "Davamlı istifadə?"
 
 #: ../glade/persistencewindow.glade.h:5
 msgid "<a href=\"doc/first_steps/persistence/use.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/persistence/use.en.html\">Documentation</a>"
+msgstr "<a href=\"doc/first_steps/persistence/use.en.html\">Sənədləşmə</a>"
 
 #: ../glade/persistencewindow.glade.h:6
 msgid "Yes"
-msgstr "是"
+msgstr "Bəli"
 
 #: ../glade/persistencewindow.glade.h:7
 msgid "No"
-msgstr "否"
+msgstr "Xeyr"
 
 #: ../glade/persistencewindow.glade.h:8
 msgid "Passphrase:"
-msgstr "密码："
+msgstr "Köməkçi ifadə:"
 
 #: ../glade/persistencewindow.glade.h:9
 msgid "Read-Only?"
-msgstr "只读？"
+msgstr "Yalnız-Oxunulur?"
 
 #: ../glade/persistencewindow.glade.h:10
 msgid "<i>Wrong passphrase. Please try again.</i>"
-msgstr "<i>密码错误，请再次尝试</i>"
+msgstr "<i>Yanlış ifadə. Lütfən, bir daha sına.</i>"
 
 #: ../glade/persistencewindow.glade.h:11
 msgid "More options?"
-msgstr "更多选项？"
+msgstr "Daha çox seçənək?"
 
 #: ../glade/optionswindow.glade.h:3
 msgid "Administration password"
-msgstr "管理员密码"
+msgstr "Administrasiya şifrəsi"
 
 #: ../glade/optionswindow.glade.h:4
 msgid ""
 "<a "
 "href=\"doc/first_steps/startup_options/administration_password.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/administration_password.en.html\">文档</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/administration_password.en.html\">Sənədləşmə</a>"
 
 #: ../glade/optionswindow.glade.h:5
 msgid ""
 "Enter an administration password in case you need to perform administration tasks.\n"
 "Otherwise it will be disabled for better security."
-msgstr "在此输入管理员密码，将使用于管理员任务。否则将因安全保护而禁用。"
+msgstr "Administrator vəzifələrini yerinə yetirməyə ehtiyacın olduqda administratorun şifrəsini daxil et.\nƏks halda daha yaxşı təhlükəsizlik üçün bu deaktivə ediləcək."
 
 #: ../glade/optionswindow.glade.h:7
 msgid "Password:"
-msgstr "密码："
+msgstr "Şifrə:"
 
 #: ../glade/optionswindow.glade.h:8
 msgid "Verify Password:"
-msgstr "确认密码："
+msgstr "Şifrəni Təsdiqləyin:"
 
 #: ../glade/optionswindow.glade.h:9
 msgid "<i>Passwords do not match</i>"
-msgstr "<i>密码不正确</i>"
+msgstr "<i>Şifrələr eyni deyil</i>"
 
 #: ../glade/optionswindow.glade.h:10
 msgid "Windows camouflage"
-msgstr "伪装Windows"
+msgstr "Windows kamuflyaj"
 
 #: ../glade/optionswindow.glade.h:11
 msgid ""
 "<a "
 "href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">文档</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">Sənədləşmə</a>"
 
 #: ../glade/optionswindow.glade.h:12
 msgid ""
 "This option makes Tails look more like Microsoft Windows 8. This may be "
 "useful in public places in order to avoid attracting suspicion."
-msgstr "这个选项使得Tails看起来更像Microsoft Windows 8. 这在公共场所会有用以免引起怀疑。"
+msgstr "Bu seçim Tails-i daha çox Microsoft Windows 8-ə bənzədir. İctimai yerlərdə cəlbedici şübhələrdən qaçınmaq üçün bu yararlı ola bilər."
 
 #: ../glade/optionswindow.glade.h:13
 msgid "Activate Microsoft Windows 8 Camouflage"
-msgstr "激活Microsoft Windows 8伪装。"
+msgstr "Microsoft Windows 8 Kamuflyajını Aktivləşdir"
 
 #: ../glade/optionswindow.glade.h:14
 msgid "MAC address spoofing"
-msgstr "MAC 地址欺骗"
+msgstr "MAC ünvan aldadıcı"
 
 #: ../glade/optionswindow.glade.h:15
 msgid ""
 "<a "
 "href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">文档</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Sənədləşmə</a>"
 
 #: ../glade/optionswindow.glade.h:16
 msgid ""
 "Spoofing MAC addresses hides the serial number of your network cards to the "
 "local networks. This can help you hide your geographical location."
-msgstr "欺骗 MAC 地址，隐匿您的网卡到本地网络的序列号。这可以帮助您隐藏自己的地理位置。"
+msgstr "MAC ünvanların aldadılması yerli şəbəkəyə olan şəbəkə kartlarının seriya nömrəsini gizlədir. Bu sənə coğrafi məkanını gizləməyə şərait yarada bilər."
 
 #: ../glade/optionswindow.glade.h:17
 msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
 "suspicion or cause network connection problems."
-msgstr "欺骗 MAC 地址通常都是安全的，但也存在引发或导致网络连通问题的可能。请参阅文档。"
+msgstr "MAC ünvan aldadıcısını istifadə etmək ümumiyyətlə daha təhlükəsizdir, amma bu əlavə olaraq şübhə yarada və ya şəbəkə əlaqə problemlərinə səbəb ola bilər."
 
 #: ../glade/optionswindow.glade.h:18
 msgid "Spoof all MAC addresses"
-msgstr "欺骗所有 MAC 地址"
+msgstr "Bütün MAC ünvanlarını aldat"
 
 #: ../glade/optionswindow.glade.h:19
 msgid "Network configuration"
-msgstr "网络确认"
+msgstr "Şəbəkə konfiqurasiyası"
 
 #: ../glade/optionswindow.glade.h:20
 msgid ""
 "<a "
 "href=\"doc/first_steps/startup_options/network_configuration.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/network_configuration.en.html\">文档</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/network_configuration.en.html\">Sənədləşmə</a>"
 
 #: ../glade/optionswindow.glade.h:21
 msgid ""
 "This computer's Internet connection is clear of obstacles. You would like to"
 " connect directly to the Tor network."
-msgstr "该电脑的连接故障已排除，您可以直接连接Tor网络。"
+msgstr "Bu kompüterin internet əlaqəsi maneələrdən təmizlənmişdir. Sən bir başa Tor şəbəkəsinə qoşulmaq istəyirsən."
 
 #: ../glade/optionswindow.glade.h:22
 msgid ""
 "This computer's Internet connection is censored, filtered, or proxied. You "
 "need to configure bridge, firewall, or proxy settings."
-msgstr "该电脑的互联网链接被屏蔽。你需要配置网桥、防火墙或者代理设置。"
+msgstr "Bu kompüterin internet əlaqəsi senzuradan keçirilmiş, filterlənmiş və ya proksilənmişdir. Sən körpü, təhlükəsizlik divarı və ya proksi parametrlərini konfiqurasiya etməlisən."
 
 #: ../glade/langpanel.glade.h:1
 msgid " "
@@ -175,22 +166,22 @@ msgstr " "
 
 #: ../glade/langpanel.glade.h:2 ../tailsgreeter/langpanel.py:43
 msgid "Language"
-msgstr "语言"
+msgstr "Dil"
 
 #: ../glade/langpanel.glade.h:3
 msgid "Locale"
-msgstr "地区"
+msgstr "Dil"
 
 #: ../glade/langpanel.glade.h:4
 msgid "Layout"
-msgstr "布局"
+msgstr "Görünüş"
 
 #: ../tailsgreeter/persistence.py:59
 #, python-format
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
-msgstr "负责持久卷设置的 live-persist 执行失败，返回代码 %(returncode)s:\n%(stderr)s"
+msgstr "canlı-davamlılıq %(returncode)s geri şifrə ilə alınmadı:\n%(stderr)s"
 
 #: ../tailsgreeter/persistence.py:99
 #, python-format
@@ -198,7 +189,7 @@ msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "加密设置失败，返回代码 %(returncode)s:\n%(stdout)s\n%(stderr)s"
+msgstr "ölüparametr crypt %(returncode)s geri şifrə ilə alınmadı:\n%(stdout)s\n%(stderr)s"
 
 #: ../tailsgreeter/persistence.py:124
 #, python-format
@@ -206,9 +197,9 @@ msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "负责持久卷设置的 live-persist 执行失败，，返回代码 %(returncode)s:\n%(stdout)s\n%(stderr)s"
+msgstr "canlı-davamlılıq %(returncode)s geri şifrə ilə alınmadı:\n%(stdout)s\n%(stderr)s"
 
 #: ../tailsgreeter/langpanel.py:123 ../tailsgreeter/langpanel.py:150
 #: ../tailsgreeter/langpanel.py:183
 msgid "Other..."
-msgstr "其他..."
+msgstr "Digər..."
