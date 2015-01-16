@@ -115,11 +115,9 @@ if [ -z "${TAILS_LOCALE_NAME}" ] ; then
     log_n_exit "Locale variable not found."
 fi
 
-# Apply keyboard settings to the console
-grep_n_set "XKBMODEL" ${KBDSET} ${TAILS_XKBMODEL}
-grep_n_set "XKBLAYOUT" ${KBDSET} ${TAILS_XKBLAYOUT}
-grep_n_set "XKBVARIANT" ${KBDSET} ${TAILS_XKBVARIANT}
-grep_n_set "XKBOPTIONS" ${KBDSET} ${TAILS_XKBOPTIONS}
+# Set the keyboard mapping for X11 and the console
+localectl set-x11-keymap "$TAILS_XKBLAYOUT" "$TAILS_XKBMODEL" "$TAILS_XKBVARIANT" "$TAILS_XKBOPTIONS"
+
 force_set "CODESET" ${CONSET} ${CODSET}
 
 # Set the system locale
