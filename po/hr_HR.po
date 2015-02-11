@@ -5,14 +5,15 @@
 # Translators:
 # Ana B, 2014
 # cisterna, 2013
-# Neven Lovrić <neven@lovric.net>, 2014
+# skiddiep <lyricaltumor@gmail.com>, 2015
+# Neven Lovrić <neven@lovric.net>, 2014-2015
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-10-08 21:10+0200\n"
-"PO-Revision-Date: 2014-10-14 12:41+0000\n"
-"Last-Translator: Neven Lovrić <neven@lovric.net>\n"
+"POT-Creation-Date: 2014-10-15 16:05+0200\n"
+"PO-Revision-Date: 2015-02-10 08:41+0000\n"
+"Last-Translator: skiddiep <lyricaltumor@gmail.com>\n"
 "Language-Team: Croatian (Croatia) (http://www.transifex.com/projects/p/torproject/language/hr_HR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -54,7 +55,7 @@ msgstr "Lozinka:"
 
 #: ../glade/persistencewindow.glade.h:9
 msgid "Read-Only?"
-msgstr "Isključivo čitljivo?"
+msgstr "Samo čitanje?"
 
 #: ../glade/persistencewindow.glade.h:10
 msgid "<i>Wrong passphrase. Please try again.</i>"
@@ -66,7 +67,7 @@ msgstr "Više mogućnosti?"
 
 #: ../glade/optionswindow.glade.h:3
 msgid "Administration password"
-msgstr "Upraviteljska lozinka"
+msgstr "Administratorska lozinka"
 
 #: ../glade/optionswindow.glade.h:4
 msgid ""
@@ -78,7 +79,7 @@ msgstr "<a href=\"doc/first_steps/startup_options/administration_password.en.htm
 msgid ""
 "Enter an administration password in case you need to perform administration tasks.\n"
 "Otherwise it will be disabled for better security."
-msgstr "Unesite upraviteljsku lozinku za slučaj potrebe izvršavanja upravljačkih zadaći.\nOne će u suprotnome biti onemogućene radi bolje sigurnosti."
+msgstr "Unesite administratorsku lozinku za slučaj da trebate izvoditi administratorske zadaće. One će u suprotnom biti onemogućene radi bolje sigurnosti."
 
 #: ../glade/optionswindow.glade.h:7
 msgid "Password:"
@@ -106,15 +107,15 @@ msgstr "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">D
 msgid ""
 "This option makes Tails look more like Microsoft Windows 8. This may be "
 "useful in public places in order to avoid attracting suspicion."
-msgstr "Ova opcija čini neka Tails izgleda kao Microsoft Windows 8. To može biti korisno na javnim\nmjestima kako bi se izbjegla sumnja."
+msgstr "Ova opcija maskira Tails tako da izgleda kao Microsoft Windows 8. To može biti korisno na javnim mjestima kako bi se izbjegla sumnja."
 
 #: ../glade/optionswindow.glade.h:13
 msgid "Activate Microsoft Windows 8 Camouflage"
-msgstr "Aktiviraj Microsoft Windows 8 Prikrivanje"
+msgstr "Aktiviraj Microsoft Windows 8 prikrivanje"
 
 #: ../glade/optionswindow.glade.h:14
 msgid "MAC address spoofing"
-msgstr "lažiranje MAC adrese"
+msgstr "Maskiranje MAC adrese"
 
 #: ../glade/optionswindow.glade.h:15
 msgid ""
@@ -126,17 +127,17 @@ msgstr "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Dokumen
 msgid ""
 "Spoofing MAC addresses hides the serial number of your network cards to the "
 "local networks. This can help you hide your geographical location."
-msgstr "Lažiranje MAC adresa mjesnim mrežama skriva slijedni broj Vaših mrežnih kartica. Ovo Vam može pomoći sakriti Vaš zemljopisni položaj."
+msgstr "Maskiranje MAC adresa skriva lokalnim mrežama serijski broj Vaših mrežnih kartica. Ovo Vam može pomoći sakriti Vaš zemljopisni položaj."
 
 #: ../glade/optionswindow.glade.h:17
 msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
 "suspicion or cause network connection problems."
-msgstr "Općenito je sigurnije lažirati MAC adrese ali to bi također moglo izazvati sumnju ili prouzročiti probleme mrežne veze."
+msgstr "Općenito je sigurnije maskirati MAC adrese, ali to bi također moglo izazvati sumnju ili prouzročiti probleme mrežne veze."
 
 #: ../glade/optionswindow.glade.h:18
 msgid "Spoof all MAC addresses"
-msgstr "Lažirati sve MAC adrese"
+msgstr "Maskiraj sve MAC adrese"
 
 #: ../glade/optionswindow.glade.h:19
 msgid "Network configuration"
@@ -152,13 +153,13 @@ msgstr "<a href=\"doc/first_steps/startup_options/network_configuration.en.html\
 msgid ""
 "This computer's Internet connection is clear of obstacles. You would like to"
 " connect directly to the Tor network."
-msgstr "Međumrežna veza ovoga računala je bez prepreka. Željeli bi ste se spojiti izravno u Tor mrežu."
+msgstr "Internet veza ovoga računala nema prepreka. Željeli bi ste se spojiti izravno u Tor mrežu."
 
 #: ../glade/optionswindow.glade.h:22
 msgid ""
 "This computer's Internet connection is censored, filtered, or proxied. You "
 "need to configure bridge, firewall, or proxy settings."
-msgstr "Međumrežna veza ovoga računala je cenzurirana, filtrirana ili koristi posrednik. Trebate postaviti mostovne, vatrozididne ili posredničke postavke."
+msgstr "Internet veza ovoga računala je cenzurirana, filtrirana ili koristi proxy. Trebate podesiti mostovne, vatrozidne ili proxy postavke."
 
 #: ../glade/langpanel.glade.h:1
 msgid " "
@@ -181,7 +182,7 @@ msgstr "Raspored"
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
-msgstr "živa ustrajnost nije uspjela s povratnim kôdom %(returncode)s:\n%(stderr)s"
+msgstr "live-persist nije uspio s povratnim kôdom %(returncode)s:\n%(stderr)s"
 
 #: ../tailsgreeter/persistence.py:99
 #, python-format
@@ -197,7 +198,7 @@ msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "živa ustrajnost nije uspjela s povratnim kôdom %(returncode)s:\n%(stdout)s\n%(stderr)s"
+msgstr "live-persist nije uspio s povratnim kôdom %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
 #: ../tailsgreeter/langpanel.py:123 ../tailsgreeter/langpanel.py:150
 #: ../tailsgreeter/langpanel.py:183

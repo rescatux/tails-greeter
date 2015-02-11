@@ -1,0 +1,204 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# git12a <git12@openmailbox.org>, 2015
+# Khaleel Jageer <jskcse4@gmail.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: The Tor Project\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-10-15 16:05+0200\n"
+"PO-Revision-Date: 2015-02-07 12:41+0000\n"
+"Last-Translator: git12a <git12@openmailbox.org>\n"
+"Language-Team: Tamil (http://www.transifex.com/projects/p/torproject/language/ta/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ta\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../glade/persistencewindow.glade.h:1
+msgid "Forward"
+msgstr "ஃபார்வர்டு"
+
+#: ../glade/persistencewindow.glade.h:2 ../glade/optionswindow.glade.h:1
+msgid "Login"
+msgstr "புகுபதிகை"
+
+#: ../glade/persistencewindow.glade.h:3 ../glade/optionswindow.glade.h:2
+msgid "Welcome to Tails"
+msgstr "Tails க்கு வரவேற்கிறோம்"
+
+#: ../glade/persistencewindow.glade.h:4
+msgid "Use persistence?"
+msgstr "நிலைபேறு பயன்படுத்த விருப்பமா?"
+
+#: ../glade/persistencewindow.glade.h:5
+msgid "<a href=\"doc/first_steps/persistence/use.en.html\">Documentation</a>"
+msgstr "<a href=\"doc/first_steps/persistence/use.en.html\">ஆவணங்கள்</a>"
+
+#: ../glade/persistencewindow.glade.h:6
+msgid "Yes"
+msgstr "சரி"
+
+#: ../glade/persistencewindow.glade.h:7
+msgid "No"
+msgstr "இல்லை"
+
+#: ../glade/persistencewindow.glade.h:8
+msgid "Passphrase:"
+msgstr "கடவுச்சொற்றொடர்:"
+
+#: ../glade/persistencewindow.glade.h:9
+msgid "Read-Only?"
+msgstr "படிக்க மட்டும்?"
+
+#: ../glade/persistencewindow.glade.h:10
+msgid "<i>Wrong passphrase. Please try again.</i>"
+msgstr "<i>தவறான கடவுச்சொற்றொடர். மீண்டும் முயற்சிக்கவும்.</i>"
+
+#: ../glade/persistencewindow.glade.h:11
+msgid "More options?"
+msgstr "மேலும் விருப்பங்கள்?"
+
+#: ../glade/optionswindow.glade.h:3
+msgid "Administration password"
+msgstr "நிர்வாகத்தின் கடவுச்சொல்"
+
+#: ../glade/optionswindow.glade.h:4
+msgid ""
+"<a "
+"href=\"doc/first_steps/startup_options/administration_password.en.html\">Documentation</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/administration_password.en.html\">ஆவணங்கள்</a>"
+
+#: ../glade/optionswindow.glade.h:5
+msgid ""
+"Enter an administration password in case you need to perform administration tasks.\n"
+"Otherwise it will be disabled for better security."
+msgstr "நிர்வாக பணிகளை செய்ய வழக்கில் உள்ள ஒரு நிர்வாகத்தின் கடவுச்சொல்லை உள்ளிடவும்.\nஇல்லையெனில் சிறந்த பாதுகாப்பு முடக்கப்படும்."
+
+#: ../glade/optionswindow.glade.h:7
+msgid "Password:"
+msgstr "கடவுச்சொல்:"
+
+#: ../glade/optionswindow.glade.h:8
+msgid "Verify Password:"
+msgstr "கடவுச்சொல்லை சரிபார்க்கவும்:"
+
+#: ../glade/optionswindow.glade.h:9
+msgid "<i>Passwords do not match</i>"
+msgstr "<i>கடவுச்சொற்கள் பொருந்தவில்லை</i>"
+
+#: ../glade/optionswindow.glade.h:10
+msgid "Windows camouflage"
+msgstr "விண்டோஸ் உருமறைப்பு"
+
+#: ../glade/optionswindow.glade.h:11
+msgid ""
+"<a "
+"href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">Documentation</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">ஆவணங்கள்</a>"
+
+#: ../glade/optionswindow.glade.h:12
+msgid ""
+"This option makes Tails look more like Microsoft Windows 8. This may be "
+"useful in public places in order to avoid attracting suspicion."
+msgstr "இந்த தேர்வு Tails-ஐ மைக்ரோசாப்ட் விண்டோஸ் 8 போல காட்டசெய்யும். இது பொது இடங்களில் சந்தேகம் ஏற்படுவதை தவிர்க்க உதவலாம்."
+
+#: ../glade/optionswindow.glade.h:13
+msgid "Activate Microsoft Windows 8 Camouflage"
+msgstr "மைக்ரோசாப்ட் விண்டோஸ் 8 போல உருமாற்றி காட்டு"
+
+#: ../glade/optionswindow.glade.h:14
+msgid "MAC address spoofing"
+msgstr "MAC முகவரியை மாற்று"
+
+#: ../glade/optionswindow.glade.h:15
+msgid ""
+"<a "
+"href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Documentation</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">ஆவணங்கள்</a>"
+
+#: ../glade/optionswindow.glade.h:16
+msgid ""
+"Spoofing MAC addresses hides the serial number of your network cards to the "
+"local networks. This can help you hide your geographical location."
+msgstr "MAC முகவரியை மாற்றுவது நெட்வொர்க் வன்பொருளின் வரிசை எண்ணை அக்கமுள்ள  நெட்வொர்குகலிடமிருந்து மறைக்கும். இது உங்கள் புவியியல் இடத்தை மறைக்க  உதவும்."
+
+#: ../glade/optionswindow.glade.h:17
+msgid ""
+"It is generally safer to spoof MAC addresses, but it might also raise "
+"suspicion or cause network connection problems."
+msgstr "பொதுவாக MAC முகவரிகளை மாற்றுவது பாதுகப்பானதே, ஆனாலிது சந்தேகத்தையோ அல்லது நெட்வொர்க் இணைப்பில் பிரச்சனையையோ  ஏற்படுத்தலாம்."
+
+#: ../glade/optionswindow.glade.h:18
+msgid "Spoof all MAC addresses"
+msgstr "எல்லா MAC முகவரிகளையும் மாற்றுக"
+
+#: ../glade/optionswindow.glade.h:19
+msgid "Network configuration"
+msgstr "நெட்வொர்க் கட்டமைப்பு"
+
+#: ../glade/optionswindow.glade.h:20
+msgid ""
+"<a "
+"href=\"doc/first_steps/startup_options/network_configuration.en.html\">Documentation</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/network_configuration.en.html\">ஆவணங்கள்</a>"
+
+#: ../glade/optionswindow.glade.h:21
+msgid ""
+"This computer's Internet connection is clear of obstacles. You would like to"
+" connect directly to the Tor network."
+msgstr "இந்த கணினியின் இணைய இணைப்பில் தடைகள் இல்லை. நீங்கள் நேரடியாக Tor நெட்வொர்க்குடன் இணையலாம்."
+
+#: ../glade/optionswindow.glade.h:22
+msgid ""
+"This computer's Internet connection is censored, filtered, or proxied. You "
+"need to configure bridge, firewall, or proxy settings."
+msgstr "இந்த கணினியின் இணைய இணைப்பில் தணிக்கை, வடிகட்டிதல் அல்லது Proxy போன்ற தடைகளுள்ளன. நீங்கள் Bridge, Firewall அல்லது Proxy அமைப்புகளை கட்டமைக்கவேண்டும்."
+
+#: ../glade/langpanel.glade.h:1
+msgid " "
+msgstr " "
+
+#: ../glade/langpanel.glade.h:2 ../tailsgreeter/langpanel.py:43
+msgid "Language"
+msgstr "மொழி"
+
+#: ../glade/langpanel.glade.h:3
+msgid "Locale"
+msgstr "காட்சிக்குரிய இடம்"
+
+#: ../glade/langpanel.glade.h:4
+msgid "Layout"
+msgstr "மாதிரி"
+
+#: ../tailsgreeter/persistence.py:59
+#, python-format
+msgid ""
+"live-persist failed with return code %(returncode)s:\n"
+"%(stderr)s"
+msgstr "live-persist return code %(returncode)s:\n%(stderr)s உடன் தோல்வியடைந்தது "
+
+#: ../tailsgreeter/persistence.py:99
+#, python-format
+msgid ""
+"cryptsetup failed with return code %(returncode)s:\n"
+"%(stdout)s\n"
+"%(stderr)s"
+msgstr "cryptsetup return code %(returncode)s:\n%(stdout)s\n%(stderr)s \nஉடன் தோல்வியடைந்தது "
+
+#: ../tailsgreeter/persistence.py:124
+#, python-format
+msgid ""
+"live-persist failed with return code %(returncode)s:\n"
+"%(stdout)s\n"
+"%(stderr)s"
+msgstr "live-persist return code %(returncode)s:\n%(stdout)s\n%(stderr)s\nஉடன் தோல்வியடைந்தது "
+
+#: ../tailsgreeter/langpanel.py:123 ../tailsgreeter/langpanel.py:150
+#: ../tailsgreeter/langpanel.py:183
+msgid "Other..."
+msgstr "மற்றவை..."
