@@ -92,7 +92,7 @@ if [ -r "${PHYSICAL_SECURITY_SETTINGS}" ] ; then
    sync
    . "${PHYSICAL_SECURITY_SETTINGS}"
    if [ "${TAILS_MACSPOOF_ENABLED}" = true ]; then
-      /usr/local/sbin/tails-restricted-network-detector &
+      systemctl start tails-restricted-network-detector.service
    fi
    if [ "${TAILS_NETCONF}" = "obstacle" ]; then
       . /usr/local/lib/tails-shell-library/tor.sh
