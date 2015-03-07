@@ -1,3 +1,12 @@
+tails-greeter (0.8.8+jessie2) feature-jessie; urgency=medium
+
+  * Use localectl to set the system locale and keyboard mapping,
+    both for X11 and the console.
+  * Drop setting Uni1 for the console codeset: we're now doing it
+    at ISO build time.
+
+ -- Tails developers <tails@boum.org>  Sat, 07 Mar 2015 19:21:03 +0100
+
 tails-greeter (0.8.8+jessie1) feature-jessie; urgency=medium
 
   * Rebuild for Debian Jessie.
