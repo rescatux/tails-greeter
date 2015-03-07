@@ -118,8 +118,6 @@ fi
 # Set the keyboard mapping for X11 and the console
 localectl set-x11-keymap "$TAILS_XKBLAYOUT" "$TAILS_XKBMODEL" "$TAILS_XKBVARIANT" "$TAILS_XKBOPTIONS"
 
-force_set "CODESET" ${CONSET} ${CODSET}
-
 # Set the system locale
 localectl set-locale "LANG=${TAILS_LOCALE_NAME}.UTF-8"
 
