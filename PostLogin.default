@@ -99,12 +99,7 @@ if [ -r "${PHYSICAL_SECURITY_SETTINGS}" ] ; then
    fi
 fi
 
-UNBLOCK_NETWORK_LOG="$(/usr/local/sbin/tails-unblock-network 2>&1)"
-UNBLOCK_NETWORK_RET=$?
-if [ "${UNBLOCK_NETWORK_RET}" -ne 0 ]; then
-   log_error "tails-unblock-network exited with status ${UNBLOCK_NETWORK_RET} and said:
-${UNBLOCK_NETWORK_LOG}"
-fi
+systemctl --no-block start tails-unblock-network.service
 
 ### Localization
 
