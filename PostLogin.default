@@ -81,6 +81,8 @@ if [ -r "${CAMOUFLAGE_SETTINGS}" ] ; then
 fi
 
 ### Physical security
+systemctl start tails-restricted-network-detector.service
+
 # It's important we "export" this setting before unblocking the
 # network; doing so will make the user-set MAC spoofing option apply
 # (via the custom udev rule) when loading the modules for the
@@ -91,9 +93,6 @@ if [ -r "${PHYSICAL_SECURITY_SETTINGS}" ] ; then
       "${PHYSICAL_SECURITY_SETTINGS}" /var/lib/live/config/tails.physical_security
    sync
    . "${PHYSICAL_SECURITY_SETTINGS}"
-   if [ "${TAILS_MACSPOOF_ENABLED}" = true ]; then
-      systemctl start tails-restricted-network-detector.service
-   fi
    if [ "${TAILS_NETCONF}" = "obstacle" ]; then
       . /usr/local/lib/tails-shell-library/tor.sh
       tor_set_in_torrc "DisableNetwork" "1"
