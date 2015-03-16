@@ -82,23 +82,6 @@ fi
 
 ### Physical security
 systemctl --no-block start tails-restricted-network-detector.service
-
-# It's important we "export" this setting before unblocking the
-# network; doing so will make the user-set MAC spoofing option apply
-# (via the custom udev rule) when loading the modules for the
-# previously blocked network devices.
-PHYSICAL_SECURITY_SETTINGS="/var/lib/gdm3/tails.physical_security"
-if [ -r "${PHYSICAL_SECURITY_SETTINGS}" ] ; then
-   install -m 0640 -o root -g root \
-      "${PHYSICAL_SECURITY_SETTINGS}" /var/lib/live/config/tails.physical_security
-   sync
-   . "${PHYSICAL_SECURITY_SETTINGS}"
-   if [ "${TAILS_NETCONF}" = "obstacle" ]; then
-      . /usr/local/lib/tails-shell-library/tor.sh
-      tor_set_in_torrc "DisableNetwork" "1"
-   fi
-fi
-
 systemctl --no-block start tails-unblock-network.service
 
 ### Localization
