@@ -81,7 +81,7 @@ if [ -r "${CAMOUFLAGE_SETTINGS}" ] ; then
 fi
 
 ### Physical security
-systemctl start tails-restricted-network-detector.service
+systemctl --no-block start tails-restricted-network-detector.service
 
 # It's important we "export" this setting before unblocking the
 # network; doing so will make the user-set MAC spoofing option apply
