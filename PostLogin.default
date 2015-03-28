@@ -133,7 +133,9 @@ fi
 ### Password
 
 # Import password for superuser access
-. /var/lib/gdm3/tails.password
+if [ -e /var/lib/gdm3/tails.password ] ; then
+    . /var/lib/gdm3/tails.password
+fi
 
 # Remove password file
 rm --interactive=never -f /var/lib/gdm3/tails.password
