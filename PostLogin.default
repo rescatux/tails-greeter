@@ -32,6 +32,7 @@ log() {
 
 log_n_exit() {
     log "$1"
+    log "Leaving PostLogin"
     exit 0
 }
 
@@ -57,6 +58,10 @@ grep_n_set() {
 	fi
     fi
 }
+
+### Let's go
+
+log "Entering PostLogin"
 
 ### Gather general configuration
 
@@ -165,3 +170,5 @@ sudo -u "${LIVE_USERNAME}" sh -c "echo 'SU_TO_ROOT_SU=sudo' >> /home/${LIVE_USER
 
 # Configure gksu to use sudo
 sudo -u "${LIVE_USERNAME}" gconftool-2 -s -t bool /apps/gksu/sudo-mode true
+
+log "Leaving PostLogin"
