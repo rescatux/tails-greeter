@@ -26,12 +26,12 @@ CONSET=/etc/default/console-setup
 LOCALE_CFG=/etc/default/locale
 CODSET="Uni1" # universal codeset to properly display glyphs in localized console
 
-log_error() {
+log() {
     echo "$1" >&2
 }
 
 log_n_exit() {
-    log_error "$1"
+    log "$1"
     exit 0
 }
 
