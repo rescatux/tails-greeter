@@ -1,3 +1,17 @@
+tails-greeter (0.8.8+jessie4) feature-jessie; urgency=medium
+
+  * Do not reload CUPS configuration in PostLogin.default.
+  * Start tails-restricted-network-detector.service a bit earlier.
+  * Start tails-unblock-network via its systemd service.
+  * Start tails-restricted-network-detector.service in a non-blocking way.
+  * Move pre-network-unblock steps to tails-unblock-network.service.
+  * PostLogin: log into the Journal instead of a dedicated log file.
+  * Rename log_error() into log().
+  * Add a bunch of debugging log statements.
+  * Only source /var/lib/gdm3/tails.password if it exists.
+
+ -- Tails developers <tails@boum.org>  Sun, 29 Mar 2015 19:08:57 +0200
+
 tails-greeter (0.8.8+jessie3) feature-jessie; urgency=medium
 
   * Adjust tails-restricted-network-detector startup to match
