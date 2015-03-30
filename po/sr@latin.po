@@ -3,164 +3,163 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# sgtpepper <barlasmirc@gmail.com>, 2013
-# Caner Başaran <basaran.caner@gmail.com>, 2013
-# cmldrs <cmldrs@yandex.com>, 2014
-# tim.tanurhan <timtanurhan@hotmail.com>, 2014
-# Volkan Gezer <volkangezer@gmail.com>, 2014
+# JanaDi <dijana1706@gmail.com>, 2015
+# tentaclewarrior <exterminator996@gmail.com>, 2014
+# Milenko Doder <svrsavamutebe@gmail.com>, 2013
+# macak <nikola.stojakovic@hotmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-10-15 16:05+0200\n"
-"PO-Revision-Date: 2015-02-24 23:27+0000\n"
-"Last-Translator: Volkan Gezer <volkangezer@gmail.com>\n"
-"Language-Team: Turkish (http://www.transifex.com/projects/p/torproject/language/tr/)\n"
+"PO-Revision-Date: 2015-03-29 20:32+0000\n"
+"Last-Translator: JanaDi <dijana1706@gmail.com>\n"
+"Language-Team: Serbian (Latin) (http://www.transifex.com/projects/p/torproject/language/sr@latin/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: tr\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: sr@latin\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: ../glade/persistencewindow.glade.h:1
 msgid "Forward"
-msgstr "İleri"
+msgstr "Napred"
 
 #: ../glade/persistencewindow.glade.h:2 ../glade/optionswindow.glade.h:1
 msgid "Login"
-msgstr "Giriş"
+msgstr "Uloguj se"
 
 #: ../glade/persistencewindow.glade.h:3 ../glade/optionswindow.glade.h:2
 msgid "Welcome to Tails"
-msgstr "Tails'e Hoş Geldiniz"
+msgstr "Dobrodošli u Tails"
 
 #: ../glade/persistencewindow.glade.h:4
 msgid "Use persistence?"
-msgstr "Süreklilik kullan?"
+msgstr "Koristi upornost?"
 
 #: ../glade/persistencewindow.glade.h:5
 msgid "<a href=\"doc/first_steps/persistence/use.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/persistence/use.en.html\">Belgelendirme</a>"
+msgstr "<a href=\"doc/first_steps/persistence/use.en.html\">Dokumentacija</a>"
 
 #: ../glade/persistencewindow.glade.h:6
 msgid "Yes"
-msgstr "Evet"
+msgstr "Da"
 
 #: ../glade/persistencewindow.glade.h:7
 msgid "No"
-msgstr "Hayır"
+msgstr "Ne"
 
 #: ../glade/persistencewindow.glade.h:8
 msgid "Passphrase:"
-msgstr "Parola Cümlesi:"
+msgstr "Lozinka"
 
 #: ../glade/persistencewindow.glade.h:9
 msgid "Read-Only?"
-msgstr "Salt-Okunur?"
+msgstr "Samo-iščitavanje?"
 
 #: ../glade/persistencewindow.glade.h:10
 msgid "<i>Wrong passphrase. Please try again.</i>"
-msgstr "<i>Yanlış parola cümlesi. Tekrar deneyin.</i>"
+msgstr "Pogrešna lozinka. Molimo pokušajte ponovo."
 
 #: ../glade/persistencewindow.glade.h:11
 msgid "More options?"
-msgstr "Diğer seçenekler?"
+msgstr "Još opcija?"
 
 #: ../glade/optionswindow.glade.h:3
 msgid "Administration password"
-msgstr "Yönetim parolası"
+msgstr "Administrativna lozinka"
 
 #: ../glade/optionswindow.glade.h:4
 msgid ""
 "<a "
 "href=\"doc/first_steps/startup_options/administration_password.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/administration_password.tr.html\">Belgelendirme</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/administration_password.en.html\">Dokumentacija</a>"
 
 #: ../glade/optionswindow.glade.h:5
 msgid ""
 "Enter an administration password in case you need to perform administration tasks.\n"
 "Otherwise it will be disabled for better security."
-msgstr "Bilgisayarda üst düzey güvenlik gerektiren yönetim görevlerini gerçekleştirecekseniz, parola girmelisiniz.\nParola girilmediği takdirde güvenlik için devre dışı bırakılacaktır."
+msgstr "Unesite administrativnu lozinku u slučaju da želite vršiti administratorske zadatke.\nInače će oni biti onemogućeni radi bolje sigurnosti."
 
 #: ../glade/optionswindow.glade.h:7
 msgid "Password:"
-msgstr "Parola:"
+msgstr "Lozinka:"
 
 #: ../glade/optionswindow.glade.h:8
 msgid "Verify Password:"
-msgstr "Parola Doğrula:"
+msgstr "Potvrdi lozinku:"
 
 #: ../glade/optionswindow.glade.h:9
 msgid "<i>Passwords do not match</i>"
-msgstr "<i>Parolalar eşleşmiyor</i>"
+msgstr "Lozinke se ne podudaraju"
 
 #: ../glade/optionswindow.glade.h:10
 msgid "Windows camouflage"
-msgstr "Windows kamuflaj"
+msgstr "Kamuflaža prozora"
 
 #: ../glade/optionswindow.glade.h:11
 msgid ""
 "<a "
 "href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/windows_camouflage.tr.html\">Belgelendirme</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">Dokumentacija</a>"
 
 #: ../glade/optionswindow.glade.h:12
 msgid ""
 "This option makes Tails look more like Microsoft Windows 8. This may be "
 "useful in public places in order to avoid attracting suspicion."
-msgstr "Bu seçenek Tails'in daha çok Microsoft Windows 8 gibi görünmesini sağlayacaktır. Bu özellik, ortak yerlerde şüpheli görünmekten kaçınmak için kullanışlı olabilir."
+msgstr "Ova opcija cini da Tails vise lici na Microsoft Windows 8. Ovo se moze koristiti na javnim mestima da bi ste izbegli izazivanje sumnje."
 
 #: ../glade/optionswindow.glade.h:13
 msgid "Activate Microsoft Windows 8 Camouflage"
-msgstr "Microsoft Windows 8 Kamuflajını Etkinleştir"
+msgstr "Aktivirajte Microsoft Windows 8 kamuflazu"
 
 #: ../glade/optionswindow.glade.h:14
 msgid "MAC address spoofing"
-msgstr "MAC adresi yanıltma sinyali"
+msgstr "Prikrivanje MAC adrese"
 
 #: ../glade/optionswindow.glade.h:15
 msgid ""
 "<a "
 "href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/mac_spoofing.tr.html\">Belgelendirme</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Dokumentacija</a>"
 
 #: ../glade/optionswindow.glade.h:16
 msgid ""
 "Spoofing MAC addresses hides the serial number of your network cards to the "
 "local networks. This can help you hide your geographical location."
-msgstr "MAC adreslerini yanıltma yerel ağlar için ağ kartlarınızın seri numarasını gizler. Bu coğrafi konumunuzu gizlemenize yardımcı olabilir."
+msgstr "Prikrivanje MAC adrese je proces pri kom se sakriva serijski broj vaše mrežne kartice u lokalnoj mreži. Ovo vam može pomoći da prikrijete vašu lokaciju."
 
 #: ../glade/optionswindow.glade.h:17
 msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
 "suspicion or cause network connection problems."
-msgstr "Bu MAC adreslerini aldatma genellikle güvenlidir, ama aynı zamanda şüphe uyandırabilmektedir veya ağ bağlantısı sorunlarına neden olabilir."
+msgstr "Generalno je bezbednije prikriti MAC adresu, ali to može izazvati mnoge probleme sa mrežnom konekcijom."
 
 #: ../glade/optionswindow.glade.h:18
 msgid "Spoof all MAC addresses"
-msgstr "Tüm MAC adreslerini yanıltma sinyali"
+msgstr "Prikrij sve MAC adrese"
 
 #: ../glade/optionswindow.glade.h:19
 msgid "Network configuration"
-msgstr "Ağ yapılandırma"
+msgstr "Mrežna konfiguracije"
 
 #: ../glade/optionswindow.glade.h:20
 msgid ""
 "<a "
 "href=\"doc/first_steps/startup_options/network_configuration.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/network_configuration.tr.html\">Belgelendirme</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/network_configuration.en.html\">Dokumentacija</a>"
 
 #: ../glade/optionswindow.glade.h:21
 msgid ""
 "This computer's Internet connection is clear of obstacles. You would like to"
 " connect directly to the Tor network."
-msgstr "Bu bilgisayarın İnternet bağlantısı engellemeye açık. Doğrudan Tor ağına bağlanmak istiyorsunuz."
+msgstr "Internet konekcija ovog kompjutera nema prepreke. Voleli biste da se konektujete direktno kroz Tor mrežu."
 
 #: ../glade/optionswindow.glade.h:22
 msgid ""
 "This computer's Internet connection is censored, filtered, or proxied. You "
 "need to configure bridge, firewall, or proxy settings."
-msgstr "Bu bilgisayarın İnternet bağlantısı sansürlendi, filtrelendi ya da vekil sunucuya bağlı. Köprü, güvenlik duvarı veya vekil sunucu ayarlarını yapılandırmanız gerekir."
+msgstr "Internet konekcija ovog kompjutera je cenzurisana, filtrirana ili je pod proxy-em. Morate konfigurisati most, zaštitni zid ili proxy podešavanja."
 
 #: ../glade/langpanel.glade.h:1
 msgid " "
@@ -168,22 +167,22 @@ msgstr " "
 
 #: ../glade/langpanel.glade.h:2 ../tailsgreeter/langpanel.py:43
 msgid "Language"
-msgstr "Dil"
+msgstr "Jezik"
 
 #: ../glade/langpanel.glade.h:3
 msgid "Locale"
-msgstr "Yerel ayar"
+msgstr "Lokal"
 
 #: ../glade/langpanel.glade.h:4
 msgid "Layout"
-msgstr "Yerleşim"
+msgstr "Postava"
 
 #: ../tailsgreeter/persistence.py:59
 #, python-format
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
-msgstr "Geri dönüş kodu  %(returncode)s: %(stderr)s\nile canlı-ısrar başarısız"
+msgstr "live-persist neuspeo sa povratnim kodom %(returncode)s:⏎\n%(stderr)s"
 
 #: ../tailsgreeter/persistence.py:99
 #, python-format
@@ -191,7 +190,7 @@ msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "geridönüş kodu ile cryptsetup başarısız. %(returncode)s:\n%(stdout)s\n%(stderr)s"
+msgstr "cryptsetup neuspeo sa povratnim kodom %(returncode)s:⏎\n%(stdout)s⏎\n%(stderr)s"
 
 #: ../tailsgreeter/persistence.py:124
 #, python-format
@@ -199,9 +198,9 @@ msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "canlı ısrar şu kodla başarısız: %(returncode)s:\n%(stdout)s\n%(stderr)s"
+msgstr "live-persist neuspeo sa povratnim kodom %(returncode)s:⏎\n%(stdout)s⏎\n%(stderr)s"
 
 #: ../tailsgreeter/langpanel.py:123 ../tailsgreeter/langpanel.py:150
 #: ../tailsgreeter/langpanel.py:183
 msgid "Other..."
-msgstr "Diğer..."
+msgstr "Ostalo..."
