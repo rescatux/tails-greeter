@@ -1,3 +1,10 @@
+tails-greeter (0.8.8+jessie6) feature-jessie; urgency=medium
+
+  * Move udevadm mangling back to a tails-unblock-network script.
+  * Add some logging to ease debugging.
+
+ -- Tails developers <tails@boum.org>  Mon, 30 Mar 2015 13:06:54 +0200
+
 tails-greeter (0.8.8+jessie5) feature-jessie; urgency=medium
 
   * Import udev trigger + settle from tails-unblock-network.service,
