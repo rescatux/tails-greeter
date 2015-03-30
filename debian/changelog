@@ -1,3 +1,10 @@
+tails-greeter (0.8.8+jessie5) feature-jessie; urgency=medium
+
+  * Import udev trigger + settle from tails-unblock-network.service,
+    and start it in a blocking way.
+
+ -- Tails developers <tails@boum.org>  Mon, 30 Mar 2015 10:12:33 +0200
+
 tails-greeter (0.8.8+jessie4) feature-jessie; urgency=medium
 
   * Do not reload CUPS configuration in PostLogin.default.
