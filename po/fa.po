@@ -4,18 +4,19 @@
 # 
 # Translators:
 # signal89 <ali.faraji90@gmail.com>, 2014
+# Ali, 2015
 # Mohammad Hossein <desmati@gmail.com>, 2014
 # Gilberto, 2014
-# zendegi <hamahangi@posteo.eu>, 2013
+# zendegi <inactive+zendegi@transifex.com>, 2013
 # johnholzer <johnholtzer123@gmail.com>, 2014
 # Mohammad Hossein <desmati@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-07-20 18:36+0200\n"
-"PO-Revision-Date: 2014-08-12 11:06+0000\n"
-"Last-Translator: johnholzer <johnholtzer123@gmail.com>\n"
+"POT-Creation-Date: 2014-10-15 16:05+0200\n"
+"PO-Revision-Date: 2015-04-28 15:17+0000\n"
+"Last-Translator: Ali\n"
 "Language-Team: Persian (http://www.transifex.com/projects/p/torproject/language/fa/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -45,7 +46,7 @@ msgstr "<a href=\"doc/first_steps/persistence/use.en.html\">مستندات</a>"
 
 #: ../glade/persistencewindow.glade.h:6
 msgid "Yes"
-msgstr "بلى"
+msgstr "بله"
 
 #: ../glade/persistencewindow.glade.h:7
 msgid "No"
@@ -53,15 +54,15 @@ msgstr "نه"
 
 #: ../glade/persistencewindow.glade.h:8
 msgid "Passphrase:"
-msgstr "عبارت عبور"
+msgstr "رمز"
 
 #: ../glade/persistencewindow.glade.h:9
 msgid "Read-Only?"
-msgstr "فقط خواندنى؟"
+msgstr "فقط خواندن؟"
 
 #: ../glade/persistencewindow.glade.h:10
 msgid "<i>Wrong passphrase. Please try again.</i>"
-msgstr "<i>عبارت عبور درست نیست. لطفاً دوباره سعی‌کنید.</i>"
+msgstr "<i>رمز درست نیست. لطفاً دوباره سعی‌کنید.</i>"
 
 #: ../glade/persistencewindow.glade.h:11
 msgid "More options?"
@@ -69,7 +70,7 @@ msgstr "گزینه‌های بیشتر؟"
 
 #: ../glade/optionswindow.glade.h:3
 msgid "Administration password"
-msgstr "رمز عبور مديريت"
+msgstr "رمز مديريت"
 
 #: ../glade/optionswindow.glade.h:4
 msgid ""
@@ -85,19 +86,19 @@ msgstr "در صورتی که می‌خواهید کارهای مدیریتی ا�
 
 #: ../glade/optionswindow.glade.h:7
 msgid "Password:"
-msgstr "رمز عبور"
+msgstr "رمز"
 
 #: ../glade/optionswindow.glade.h:8
 msgid "Verify Password:"
-msgstr "تاييد  رمز عبور"
+msgstr "تاييد  رمز"
 
 #: ../glade/optionswindow.glade.h:9
 msgid "<i>Passwords do not match</i>"
-msgstr "<i>رمزهاى عبور با هم مطابقت ندارند</i>"
+msgstr "<i>رمزها با هم مطابقت ندارند</i>"
 
 #: ../glade/optionswindow.glade.h:10
 msgid "Windows camouflage"
-msgstr "استتار پنجره"
+msgstr "استتار با ویندوز"
 
 #: ../glade/optionswindow.glade.h:11
 msgid ""
@@ -117,7 +118,7 @@ msgstr "فعال‌كردن استتار مايكروسافت ويندوز 8"
 
 #: ../glade/optionswindow.glade.h:14
 msgid "MAC address spoofing"
-msgstr "جعل آدرس مک"
+msgstr "جعل آدرس MAC"
 
 #: ../glade/optionswindow.glade.h:15
 msgid ""
@@ -139,7 +140,7 @@ msgstr "به‌طور کلی استفاده ازقابلیت MAC Spoofing امن
 
 #: ../glade/optionswindow.glade.h:18
 msgid "Spoof all MAC addresses"
-msgstr "همه آدرس های مک را جعل کن"
+msgstr "همه آدرس‌های MAC را جعل کن"
 
 #: ../glade/optionswindow.glade.h:19
 msgid "Network configuration"
@@ -184,7 +185,7 @@ msgstr "صفحه‌بندى"
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
-msgstr "live-persist ناموفق با كد %(returncode)s:\n%(stderr)s"
+msgstr "live-persist ناموفق بود با کد خطای %(returncode)s:\n%(stderr)s"
 
 #: ../tailsgreeter/persistence.py:99
 #, python-format
@@ -192,7 +193,7 @@ msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "«cryptsetup» ناموفق با كد %(returncode)s:\n%(stdout)s\n%(stderr)s"
+msgstr "cryptsetup ناموفق بود با کد خطای %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
 #: ../tailsgreeter/persistence.py:124
 #, python-format
@@ -200,7 +201,7 @@ msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "«live-persist» ناموفق با كد %(returncode)s:\n%(stdout)s\n%(stderr)s"
+msgstr "live-persist ناموفق بود با کد خطای %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
 #: ../tailsgreeter/langpanel.py:123 ../tailsgreeter/langpanel.py:150
 #: ../tailsgreeter/langpanel.py:183
