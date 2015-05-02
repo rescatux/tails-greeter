@@ -1,3 +1,9 @@
+tails-greeter (0.8.10) testing; urgency=medium
+
+  * Import PO files from Transifex, update POT and PO files.
+
+ -- anonym <anonym@riseup.net>  Sat, 02 May 2015 21:22:43 +0200
+
 tails-greeter (0.8.9) stable; urgency=medium
 
   * Import PO files from Transifex, update POT and PO files.
