@@ -7,7 +7,7 @@
 # Ettore Atalan <atalanttore@googlemail.com>, 2014
 # Michael Maier, 2013
 # mo <moritz@torservers.net>, 2013
-# Oliver Baumann <baumanno@cip.ifi.lmu.de>, 2013
+# Oliver Baumann <inactive+baumanno@transifex.com>, 2013
 # Chris <ppt23@lkj.hopto.org>, 2012
 # Sacro <Scion@T-Online.de>, 2012
 # sycamoreone <sycamoreone@riseup.net>, 2014
@@ -23,7 +23,7 @@ msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-10-15 16:05+0200\n"
-"PO-Revision-Date: 2015-01-19 14:21+0000\n"
+"PO-Revision-Date: 2015-06-16 11:48+0000\n"
 "Last-Translator: rike\n"
 "Language-Team: German (http://www.transifex.com/projects/p/torproject/language/de/)\n"
 "MIME-Version: 1.0\n"

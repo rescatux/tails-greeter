@@ -4,8 +4,8 @@
 # 
 # Translators:
 # ihints <ihints@gmail.com>, 2014
-# Wu Ming Shi, 2013
-# Wu Ming Shi, 2013
+# khi, 2013
+# khi, 2013
 # ln191810 <ln191810@gmail.com>, 2012
 # ln191810 <ln191810@gmail.com>, 2012
 # xtoaster <zhazhenzhong@gmail.com>, 2012
@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-10-15 16:05+0200\n"
-"PO-Revision-Date: 2014-12-04 15:01+0000\n"
+"PO-Revision-Date: 2015-06-18 19:07+0000\n"
 "Last-Translator: Sophia Meifang Wang <sophiatiger121@hotmail.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/projects/p/torproject/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"

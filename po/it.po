@@ -7,16 +7,16 @@
 # Fandor, 2013
 # il_doc <filippo.giomi@gmail.com>, 2014
 # Francesca Ciceri <madamezou@zouish.org>, 2014
-# Tony Goodyear <fswitch20@hotmail.com>, 2012
+# spawned76 <fswitch20@hotmail.com>, 2012
 # il_doc <filippo.giomi@gmail.com>, 2014
 # Random_R, 2014
-# Tony Goodyear <fswitch20@hotmail.com>, 2012
+# spawned76 <fswitch20@hotmail.com>, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-28 22:33+0200\n"
-"PO-Revision-Date: 2014-06-03 14:52+0000\n"
+"POT-Creation-Date: 2014-10-15 16:05+0200\n"
+"PO-Revision-Date: 2015-06-16 18:24+0000\n"
 "Last-Translator: Random_R\n"
 "Language-Team: Italian (http://www.transifex.com/projects/p/torproject/language/it/)\n"
 "MIME-Version: 1.0\n"
@@ -204,7 +204,7 @@ msgid ""
 "%(stderr)s"
 msgstr "live-persist ha fallito con return code %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
-#: ../tailsgreeter/langpanel.py:125 ../tailsgreeter/langpanel.py:152
-#: ../tailsgreeter/langpanel.py:185
+#: ../tailsgreeter/langpanel.py:123 ../tailsgreeter/langpanel.py:150
+#: ../tailsgreeter/langpanel.py:183
 msgid "Other..."
 msgstr "Altro..."

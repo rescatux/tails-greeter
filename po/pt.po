@@ -6,13 +6,13 @@
 # André Monteiro <andre.monteir@gmail.com>, 2014
 # sierleunam <cfb53275@opayq.com>, 2014
 # testsubject67 <deborinha97@hotmail.com>, 2014
-# Manuela Silva <manuela.silva@sky.com>, 2014
+# alfalb_mansil, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-10-15 16:05+0200\n"
-"PO-Revision-Date: 2015-01-10 14:41+0000\n"
+"PO-Revision-Date: 2015-06-18 13:20+0000\n"
 "Last-Translator: testsubject67 <deborinha97@hotmail.com>\n"
 "Language-Team: Portuguese (http://www.transifex.com/projects/p/torproject/language/pt/)\n"
 "MIME-Version: 1.0\n"

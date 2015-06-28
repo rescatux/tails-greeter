@@ -5,14 +5,14 @@
 # Translators:
 # matsa <matsa@riseup.net>, 2013
 # Onizuka, 2013
-# Alain-Olivier  Breysse, 2014
+# Trans-fr, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-28 22:33+0200\n"
-"PO-Revision-Date: 2014-05-29 15:20+0000\n"
-"Last-Translator: Alain-Olivier  Breysse\n"
+"POT-Creation-Date: 2014-10-15 16:05+0200\n"
+"PO-Revision-Date: 2015-06-23 13:50+0000\n"
+"Last-Translator: Trans-fr\n"
 "Language-Team: French (Canada) (http://www.transifex.com/projects/p/torproject/language/fr_CA/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -199,7 +199,7 @@ msgid ""
 "%(stderr)s"
 msgstr "échec de live-persist avec le code de retour %(returncode)s :\n%(stdout)s\n%(stderr)s"
 
-#: ../tailsgreeter/langpanel.py:125 ../tailsgreeter/langpanel.py:152
-#: ../tailsgreeter/langpanel.py:185
+#: ../tailsgreeter/langpanel.py:123 ../tailsgreeter/langpanel.py:150
+#: ../tailsgreeter/langpanel.py:183
 msgid "Other..."
 msgstr "Autre..."

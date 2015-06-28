@@ -3,7 +3,8 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Blackywantscookies <gaborcika111@gmail.com>, 2014
+# Ferenc sati <s.feri33@gmail.com>, 2015
+# Blackywantscookies <gaborcika@citromail.hu>, 2014
 # Lajos Pasztor <mrlajos@gmail.com>, 2014
 # vargaviktor <viktor.varga@gmail.com>, 2013
 # vargaviktor <viktor.varga@gmail.com>, 2012
@@ -11,9 +12,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-06-11 16:20+0200\n"
-"PO-Revision-Date: 2014-06-24 15:14+0000\n"
-"Last-Translator: Blackywantscookies <gaborcika111@gmail.com>\n"
+"POT-Creation-Date: 2014-10-15 16:05+0200\n"
+"PO-Revision-Date: 2015-06-27 09:51+0000\n"
+"Last-Translator: Ferenc sati <s.feri33@gmail.com>\n"
 "Language-Team: Hungarian (http://www.transifex.com/projects/p/torproject/language/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,7 +32,7 @@ msgstr "Belépés"
 
 #: ../glade/persistencewindow.glade.h:3 ../glade/optionswindow.glade.h:2
 msgid "Welcome to Tails"
-msgstr "Köszönjük a Trails-ben"
+msgstr "Köszöntjük a Tails-ben"
 
 #: ../glade/persistencewindow.glade.h:4
 msgid "Use persistence?"
@@ -107,15 +108,15 @@ msgstr "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">D
 msgid ""
 "This option makes Tails look more like Microsoft Windows 8. This may be "
 "useful in public places in order to avoid attracting suspicion."
-msgstr "Ez a beállítás a Tailokat úgy tünteti fel mint ha csak Microsoft Windows 8 lenne. Ez talán hasznos lehet a nyilvános helyeken a gyanú elkerülése miatt."
+msgstr "Ez a beállítás a Tails-et úgy jeleníti meg mintha csak Microsoft Windows 8 lenne. Ez hasznos lehet nyilvános helyeken a feltűnés elkerülése miatt."
 
 #: ../glade/optionswindow.glade.h:13
 msgid "Activate Microsoft Windows 8 Camouflage"
-msgstr "Microsoft Windows 8 álcázás aktiválása."
+msgstr "Microsoft Windows 8-os álcázás aktiválása."
 
 #: ../glade/optionswindow.glade.h:14
 msgid "MAC address spoofing"
-msgstr "MAC cím spoofing"
+msgstr "MAC cím elrejtése"
 
 #: ../glade/optionswindow.glade.h:15
 msgid ""
@@ -171,7 +172,7 @@ msgstr "Nyelv"
 
 #: ../glade/langpanel.glade.h:3
 msgid "Locale"
-msgstr "Lokáció"
+msgstr "Ország"
 
 #: ../glade/langpanel.glade.h:4
 msgid "Layout"
