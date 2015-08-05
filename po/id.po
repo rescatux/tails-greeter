@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-10-15 16:05+0200\n"
-"PO-Revision-Date: 2015-06-22 15:25+0000\n"
+"PO-Revision-Date: 2015-06-29 15:03+0000\n"
 "Last-Translator: Zamani Karmana <zamani.karmana@gmail.com>\n"
 "Language-Team: Indonesian (http://www.transifex.com/projects/p/torproject/language/id/)\n"
 "MIME-Version: 1.0\n"
@@ -108,27 +108,27 @@ msgstr "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">D
 msgid ""
 "This option makes Tails look more like Microsoft Windows 8. This may be "
 "useful in public places in order to avoid attracting suspicion."
-msgstr "Pilihan ini membuat Tail lebih seperti Microsoft Windows 8. fitur ini sangat berguna untuk mencegah kecurigaan publik."
+msgstr "Opsi ini membuat Tails terlihat seperti Microsoft Windows 8. Fitur ini sangat berguna ketika berada di ruang publik untuk menghindari timbulnya rasa curiga."
 
 #: ../glade/optionswindow.glade.h:13
 msgid "Activate Microsoft Windows 8 Camouflage"
-msgstr "aktifkan penyamaran Microsoft Windows 8"
+msgstr "Aktifkan Kamuflase Microsoft Windows 8"
 
 #: ../glade/optionswindow.glade.h:14
 msgid "MAC address spoofing"
-msgstr "spoof alamat MAC"
+msgstr "Pemalsuan alamat MAC"
 
 #: ../glade/optionswindow.glade.h:15
 msgid ""
 "<a "
 "href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Documentasi</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Dokumentasi</a>"
 
 #: ../glade/optionswindow.glade.h:16
 msgid ""
 "Spoofing MAC addresses hides the serial number of your network cards to the "
 "local networks. This can help you hide your geographical location."
-msgstr "men-spoof alamat MAC dapat menyembunyikan nomor seri kartu jaringan ke jaringan lokak. fitur ini dapat membantu anda menyembunyikan lokasi geogafis anda."
+msgstr "Memalsukan alamat MAC menyembunyikan nomor serial kartu jaringan Anda ke jaringan lokal. Ini dapat membantu menyembunyikan lokasi geografis Anda."
 
 #: ../glade/optionswindow.glade.h:17
 msgid ""
