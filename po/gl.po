@@ -1,21 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # mbouzada <mbouzada@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
-"Report-Msgid-Bugs-To: https://trac.torproject.org/projects/tor\n"
-"POT-Creation-Date: 2013-05-12 19:29+0200\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-08-05 18:46+0200\n"
 "PO-Revision-Date: 2013-05-22 12:45+0000\n"
 "Last-Translator: runasand <runa.sandvik@gmail.com>\n"
-"Language-Team: Galician (http://www.transifex.com/projects/p/torproject/language/gl/)\n"
+"Language-Team: Galician (http://www.transifex.com/projects/p/torproject/"
+"language/gl/)\n"
+"Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: gl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../glade/persistencewindow.glade.h:1
@@ -35,26 +36,30 @@ msgid "Use persistence?"
 msgstr "Usar persistencia?"
 
 #: ../glade/persistencewindow.glade.h:5
+msgid "<a href=\"doc/first_steps/persistence/use.en.html\">Documentation</a>"
+msgstr ""
+
+#: ../glade/persistencewindow.glade.h:6
 msgid "Yes"
 msgstr "Si"
 
-#: ../glade/persistencewindow.glade.h:6
+#: ../glade/persistencewindow.glade.h:7
 msgid "No"
 msgstr "Non"
 
-#: ../glade/persistencewindow.glade.h:7
+#: ../glade/persistencewindow.glade.h:8
 msgid "Passphrase:"
 msgstr "Frase de paso:"
 
-#: ../glade/persistencewindow.glade.h:8
+#: ../glade/persistencewindow.glade.h:9
 msgid "Read-Only?"
 msgstr "Só lectura?"
 
-#: ../glade/persistencewindow.glade.h:9
+#: ../glade/persistencewindow.glade.h:10
 msgid "<i>Wrong passphrase. Please try again.</i>"
 msgstr "<i>Contrasinal incorrecto. Tenteo de novo.</i>"
 
-#: ../glade/persistencewindow.glade.h:10
+#: ../glade/persistencewindow.glade.h:11
 msgid "More options?"
 msgstr "Máis opcións?"
 
@@ -64,41 +69,110 @@ msgstr "Contrasinal de administración"
 
 #: ../glade/optionswindow.glade.h:4
 msgid ""
-"Enter an administration password in case you need to perform administration tasks.\n"
-"Otherwise it will be disabled for better security."
-msgstr "Introduza un contrasinal de administración para cando teña que realizar tarefas de administración.\nDe non facelo, para maior seguridade, desactivarase."
+"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
+"\">Documentation</a>"
+msgstr ""
 
-#: ../glade/optionswindow.glade.h:6
+#: ../glade/optionswindow.glade.h:5
+msgid ""
+"Enter an administration password in case you need to perform administration "
+"tasks.\n"
+"Otherwise it will be disabled for better security."
+msgstr ""
+"Introduza un contrasinal de administración para cando teña que realizar "
+"tarefas de administración.\n"
+"De non facelo, para maior seguridade, desactivarase."
+
+#: ../glade/optionswindow.glade.h:7
 msgid "Password:"
 msgstr "Contrasinal:"
 
-#: ../glade/optionswindow.glade.h:7
+#: ../glade/optionswindow.glade.h:8
 msgid "Verify Password:"
 msgstr "Verificar o contrasinal:"
 
-#: ../glade/optionswindow.glade.h:8
+#: ../glade/optionswindow.glade.h:9
 msgid "<i>Passwords do not match</i>"
 msgstr "<i>Os contrasinais non coinciden</i>"
 
-#: ../glade/optionswindow.glade.h:9
-msgid "Windows Camouflage"
+#: ../glade/optionswindow.glade.h:10
+#, fuzzy
+msgid "Windows camouflage"
 msgstr "Camuflaxe de Windows"
 
-#: ../glade/optionswindow.glade.h:10
-msgid ""
-"This option makes Tails look more like Microsoft Windows XP. This may be "
-"useful in public places in order to avoid attracting suspicion."
-msgstr "Esta opción fai que Tails teña aparencia de Microsoft Windows XP. Isto pode ser útil en lugares públicos para evitar atraer suspicacias."
-
 #: ../glade/optionswindow.glade.h:11
-msgid "Activate Microsoft Windows XP Camouflage"
+msgid ""
+"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
+"\">Documentation</a>"
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:12
+#, fuzzy
+msgid ""
+"This option makes Tails look more like Microsoft Windows 8. This may be "
+"useful in public places in order to avoid attracting suspicion."
+msgstr ""
+"Esta opción fai que Tails teña aparencia de Microsoft Windows XP. Isto pode "
+"ser útil en lugares públicos para evitar atraer suspicacias."
+
+#: ../glade/optionswindow.glade.h:13
+#, fuzzy
+msgid "Activate Microsoft Windows 8 Camouflage"
 msgstr "Activar a camuflaxe Microsoft Windows XP"
+
+#: ../glade/optionswindow.glade.h:14
+msgid "MAC address spoofing"
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:15
+msgid ""
+"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
+"\">Documentation</a>"
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:16
+msgid ""
+"Spoofing MAC addresses hides the serial number of your network cards to the "
+"local networks. This can help you hide your geographical location."
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:17
+msgid ""
+"It is generally safer to spoof MAC addresses, but it might also raise "
+"suspicion or cause network connection problems."
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:18
+msgid "Spoof all MAC addresses"
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:19
+msgid "Network configuration"
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:20
+msgid ""
+"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
+"\">Documentation</a>"
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:21
+msgid ""
+"This computer's Internet connection is clear of obstacles. You would like to "
+"connect directly to the Tor network."
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:22
+msgid ""
+"This computer's Internet connection is censored, filtered, or proxied. You "
+"need to configure bridge, firewall, or proxy settings."
+msgstr ""
 
 #: ../glade/langpanel.glade.h:1
 msgid " "
 msgstr " "
 
-#: ../glade/langpanel.glade.h:2 ../GdmGreeter/langpanel.py:42
+#: ../glade/langpanel.glade.h:2 ../tailsgreeter/langpanel.py:43
 msgid "Language"
 msgstr "Idioma"
 
@@ -110,30 +184,41 @@ msgstr "Local"
 msgid "Layout"
 msgstr "Deseño"
 
-#: ../GdmGreeter/persistence.py:59
+#: ../tailsgreeter/persistence.py:59
 #, python-format
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
-msgstr "produciuse un fallo coa persistencia en vivo devolvendo o código %(returncode)s:\n%(stderr)s"
+msgstr ""
+"produciuse un fallo coa persistencia en vivo devolvendo o código "
+"%(returncode)s:\n"
+"%(stderr)s"
 
-#: ../GdmGreeter/persistence.py:99
+#: ../tailsgreeter/persistence.py:99
 #, python-format
 msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "produciuse un fallo na configuración de cifrado (cryptsetup) devolvendo o código %(returncode)s:\n%(stdout)s\n%(stderr)s"
+msgstr ""
+"produciuse un fallo na configuración de cifrado (cryptsetup) devolvendo o "
+"código %(returncode)s:\n"
+"%(stdout)s\n"
+"%(stderr)s"
 
-#: ../GdmGreeter/persistence.py:124
+#: ../tailsgreeter/persistence.py:124
 #, python-format
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "produciuse un fallo coa persistencia en vivo devolvendo o código %(returncode)s:\n%(stdout)s\n%(stderr)s"
+msgstr ""
+"produciuse un fallo coa persistencia en vivo devolvendo o código "
+"%(returncode)s:\n"
+"%(stdout)s\n"
+"%(stderr)s"
 
-#: ../GdmGreeter/langpanel.py:124 ../GdmGreeter/langpanel.py:148
-#: ../GdmGreeter/langpanel.py:181
+#: ../tailsgreeter/langpanel.py:123 ../tailsgreeter/langpanel.py:150
+#: ../tailsgreeter/langpanel.py:183
 msgid "Other..."
 msgstr "Outro..."
