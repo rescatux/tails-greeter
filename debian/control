@@ -1,5 +1,7 @@
 Source: tails-greeter
 Maintainer: Tails developers <tails@boum.org>
+Uploaders: anonym <anonym@riseup.net>,
+           intrigeri <intrigeri@boum.org>
 Section: python
 Priority: optional
 Build-Depends: debhelper (>= 9.20120909~),
