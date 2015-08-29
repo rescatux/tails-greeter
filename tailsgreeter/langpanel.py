@@ -112,18 +112,16 @@ class LangPanel(TranslatableWindow):
         # E.g. the default one could change.
         screen.connect("monitors-changed", self.resize)
 
-        self.set_panel_geometry()
+        self.set_panel_geometry(screen)
 
     def resize(self, screen, data=None):
-        self.set_panel_geometry()
+        self.set_panel_geometry(screen)
 
-    def set_panel_geometry(self):
+    def set_panel_geometry(self, screen):
         """Position panel to bottom and use full screen width"""
         panel = self.window
         panel.set_gravity(Gdk.Gravity.SOUTH_WEST)
         width, height = panel.get_size()
-        # Let's not assume that this window is on Gdk.Screen.
-        screen = self.window.get_screen()
         panel.set_default_size(screen.width(), height)
         panel.move(0, screen.height() - height)
 
