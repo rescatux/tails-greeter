@@ -1,3 +1,12 @@
+tails-greeter (0.8.11+jessie2) feature-jessie; urgency=medium
+
+  * Make the language panel and the options window (a bit more) responsive
+    to screen size changes.
+  * Mark all Glade files as requiring GTK+ 3.12. Jessie ships with 3.14,
+    and we won't be testing with anything older.
+
+ -- intrigeri <intrigeri@boum.org>  Sat, 29 Aug 2015 22:47:16 +0200
+
 tails-greeter (0.8.11+jessie1) feature-jessie; urgency=medium
   
   * Merge from master (Wheezy) branch.
