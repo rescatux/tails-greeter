@@ -62,6 +62,9 @@ class OptionsWindow(TranslatableWindow):
         self.entry_password2.connect("changed", cb_pw_changed)
         cb_pw_changed()
 
+        self.set_geometry()
+
+    def set_geometry(self):
         ignore, langpanel_height = self.greeter.langpanel.window.get_size()
         screen_width = self.dialog.get_screen().get_width()
         screen_height = self.dialog.get_screen().get_height()
