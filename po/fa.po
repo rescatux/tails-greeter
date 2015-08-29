@@ -1,26 +1,28 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # signal89 <ali.faraji90@gmail.com>, 2014
+# Ali, 2015
 # Mohammad Hossein <desmati@gmail.com>, 2014
 # Gilberto, 2014
-# zendegi <hamahangi@posteo.eu>, 2013
+# zendegi <inactive+zendegi@transifex.com>, 2013
 # johnholzer <johnholtzer123@gmail.com>, 2014
 # Mohammad Hossein <desmati@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-07-20 18:36+0200\n"
-"PO-Revision-Date: 2014-08-12 11:06+0000\n"
-"Last-Translator: johnholzer <johnholtzer123@gmail.com>\n"
-"Language-Team: Persian (http://www.transifex.com/projects/p/torproject/language/fa/)\n"
+"POT-Creation-Date: 2015-08-05 18:46+0200\n"
+"PO-Revision-Date: 2015-06-21 08:26+0000\n"
+"Last-Translator: Ali\n"
+"Language-Team: Persian (http://www.transifex.com/projects/p/torproject/"
+"language/fa/)\n"
+"Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: fa\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../glade/persistencewindow.glade.h:1
@@ -45,7 +47,7 @@ msgstr "<a href=\"doc/first_steps/persistence/use.en.html\">مستندات</a>"
 
 #: ../glade/persistencewindow.glade.h:6
 msgid "Yes"
-msgstr "بلى"
+msgstr "بله"
 
 #: ../glade/persistencewindow.glade.h:7
 msgid "No"
@@ -53,15 +55,15 @@ msgstr "نه"
 
 #: ../glade/persistencewindow.glade.h:8
 msgid "Passphrase:"
-msgstr "عبارت عبور"
+msgstr "رمز"
 
 #: ../glade/persistencewindow.glade.h:9
 msgid "Read-Only?"
-msgstr "فقط خواندنى؟"
+msgstr "فقط خواندن؟"
 
 #: ../glade/persistencewindow.glade.h:10
 msgid "<i>Wrong passphrase. Please try again.</i>"
-msgstr "<i>عبارت عبور درست نیست. لطفاً دوباره سعی‌کنید.</i>"
+msgstr "<i>رمز درست نیست. لطفاً دوباره سعی‌کنید.</i>"
 
 #: ../glade/persistencewindow.glade.h:11
 msgid "More options?"
@@ -69,47 +71,57 @@ msgstr "گزینه‌های بیشتر؟"
 
 #: ../glade/optionswindow.glade.h:3
 msgid "Administration password"
-msgstr "رمز عبور مديريت"
+msgstr "رمز مديريت"
 
 #: ../glade/optionswindow.glade.h:4
 msgid ""
-"<a "
-"href=\"doc/first_steps/startup_options/administration_password.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/administration_password.en.html\">مستندات</a>"
+"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
+"\">Documentation</a>"
+msgstr ""
+"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
+"\">مستندات</a>"
 
 #: ../glade/optionswindow.glade.h:5
 msgid ""
-"Enter an administration password in case you need to perform administration tasks.\n"
+"Enter an administration password in case you need to perform administration "
+"tasks.\n"
 "Otherwise it will be disabled for better security."
-msgstr "در صورتی که می‌خواهید کارهای مدیریتی انجام دهید، کلمهٔ عبور مدیریت را وارد نمایید.\nوگرنه، اين گزينه براى امنيت بيشتر غيرفعال مى‌شود."
+msgstr ""
+"در صورتی که می‌خواهید کارهای مدیریتی انجام دهید، کلمهٔ عبور مدیریت را وارد "
+"نمایید.\n"
+"وگرنه، اين گزينه براى امنيت بيشتر غيرفعال مى‌شود."
 
 #: ../glade/optionswindow.glade.h:7
 msgid "Password:"
-msgstr "رمز عبور"
+msgstr "رمز"
 
 #: ../glade/optionswindow.glade.h:8
 msgid "Verify Password:"
-msgstr "تاييد  رمز عبور"
+msgstr "تاييد  رمز"
 
 #: ../glade/optionswindow.glade.h:9
 msgid "<i>Passwords do not match</i>"
-msgstr "<i>رمزهاى عبور با هم مطابقت ندارند</i>"
+msgstr "<i>رمزها با هم مطابقت ندارند</i>"
 
 #: ../glade/optionswindow.glade.h:10
 msgid "Windows camouflage"
-msgstr "استتار پنجره"
+msgstr "استتار با ویندوز"
 
 #: ../glade/optionswindow.glade.h:11
 msgid ""
-"<a "
-"href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">مستندات</a>"
+"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
+"\">Documentation</a>"
+msgstr ""
+"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
+"\">مستندات</a>"
 
 #: ../glade/optionswindow.glade.h:12
 msgid ""
 "This option makes Tails look more like Microsoft Windows 8. This may be "
 "useful in public places in order to avoid attracting suspicion."
-msgstr "این گزینه باعث می شود ظاهر Tails بیشتر شبیه به مایکروسافت ویندوز 8 شود. این ممکن است به منظور اجتناب از توجه و سوء ظن در اماکن عمومی مفید است."
+msgstr ""
+"این گزینه باعث می شود ظاهر Tails بیشتر شبیه به مایکروسافت ویندوز 8 شود. این "
+"ممکن است به منظور اجتناب از توجه و سوء ظن در اماکن عمومی مفید است."
 
 #: ../glade/optionswindow.glade.h:13
 msgid "Activate Microsoft Windows 8 Camouflage"
@@ -117,29 +129,34 @@ msgstr "فعال‌كردن استتار مايكروسافت ويندوز 8"
 
 #: ../glade/optionswindow.glade.h:14
 msgid "MAC address spoofing"
-msgstr "جعل آدرس مک"
+msgstr "جعل آدرس MAC"
 
 #: ../glade/optionswindow.glade.h:15
 msgid ""
-"<a "
-"href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">مستندات</a>"
+"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
+"\">Documentation</a>"
+msgstr ""
+"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">مستندات</a>"
 
 #: ../glade/optionswindow.glade.h:16
 msgid ""
 "Spoofing MAC addresses hides the serial number of your network cards to the "
 "local networks. This can help you hide your geographical location."
-msgstr "جعل کردن آدرس مک، شماره سریال کارت شبکه شما را در شبکه مخفی می کند. به این ترتیب می توانید موقعیت جغرافیایی خود را پنهان کنید."
+msgstr ""
+"جعل کردن آدرس مک، شماره سریال کارت شبکه شما را در شبکه مخفی می کند. به این "
+"ترتیب می توانید موقعیت جغرافیایی خود را پنهان کنید."
 
 #: ../glade/optionswindow.glade.h:17
 msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
 "suspicion or cause network connection problems."
-msgstr "به‌طور کلی استفاده ازقابلیت MAC Spoofing امن‌تر است اما این امکان ممکن است مشکوک تلقی شود و یا باعث ایجاد مشکل در ارتباط گردد."
+msgstr ""
+"به‌طور کلی استفاده ازقابلیت MAC Spoofing امن‌تر است اما این امکان ممکن است "
+"مشکوک تلقی شود و یا باعث ایجاد مشکل در ارتباط گردد."
 
 #: ../glade/optionswindow.glade.h:18
 msgid "Spoof all MAC addresses"
-msgstr "همه آدرس های مک را جعل کن"
+msgstr "همه آدرس‌های MAC را جعل کن"
 
 #: ../glade/optionswindow.glade.h:19
 msgid "Network configuration"
@@ -147,21 +164,27 @@ msgstr "تنظیمات شبکه"
 
 #: ../glade/optionswindow.glade.h:20
 msgid ""
-"<a "
-"href=\"doc/first_steps/startup_options/network_configuration.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/network_configuration.en.html\">مستندات</a>"
+"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
+"\">Documentation</a>"
+msgstr ""
+"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
+"\">مستندات</a>"
 
 #: ../glade/optionswindow.glade.h:21
 msgid ""
-"This computer's Internet connection is clear of obstacles. You would like to"
-" connect directly to the Tor network."
-msgstr "اتصال اینترنت این رایانه بدون مانع است. آیا مایلید مستقیم به شبکه تور متصل شوید؟"
+"This computer's Internet connection is clear of obstacles. You would like to "
+"connect directly to the Tor network."
+msgstr ""
+"اتصال اینترنت این رایانه بدون مانع است. آیا مایلید مستقیم به شبکه تور متصل "
+"شوید؟"
 
 #: ../glade/optionswindow.glade.h:22
 msgid ""
 "This computer's Internet connection is censored, filtered, or proxied. You "
 "need to configure bridge, firewall, or proxy settings."
-msgstr "اتصال اینترنت این رایانه سانسور و یا فیلتر شده است. شما باید تنظیمات پل، فایروال و یا پروکسی را انجام دهید."
+msgstr ""
+"اتصال اینترنت این رایانه سانسور و یا فیلتر شده است. شما باید تنظیمات پل، "
+"فایروال و یا پروکسی را انجام دهید."
 
 #: ../glade/langpanel.glade.h:1
 msgid " "
@@ -184,7 +207,9 @@ msgstr "صفحه‌بندى"
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
-msgstr "live-persist ناموفق با كد %(returncode)s:\n%(stderr)s"
+msgstr ""
+"live-persist ناموفق بود با کد خطای %(returncode)s:\n"
+"%(stderr)s"
 
 #: ../tailsgreeter/persistence.py:99
 #, python-format
@@ -192,7 +217,10 @@ msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "«cryptsetup» ناموفق با كد %(returncode)s:\n%(stdout)s\n%(stderr)s"
+msgstr ""
+"cryptsetup ناموفق بود با کد خطای %(returncode)s:\n"
+"%(stdout)s\n"
+"%(stderr)s"
 
 #: ../tailsgreeter/persistence.py:124
 #, python-format
@@ -200,7 +228,10 @@ msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "«live-persist» ناموفق با كد %(returncode)s:\n%(stdout)s\n%(stderr)s"
+msgstr ""
+"live-persist ناموفق بود با کد خطای %(returncode)s:\n"
+"%(stdout)s\n"
+"%(stderr)s"
 
 #: ../tailsgreeter/langpanel.py:123 ../tailsgreeter/langpanel.py:150
 #: ../tailsgreeter/langpanel.py:183

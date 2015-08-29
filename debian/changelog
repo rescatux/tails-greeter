@@ -1,3 +1,28 @@
+tails-greeter (0.8.11+jessie1) feature-jessie; urgency=medium
+  
+  * Merge from master (Wheezy) branch.
+
+ -- intrigeri <intrigeri@boum.org>  Sat, 29 Aug 2015 18:47:33 +0200
+
+tails-greeter (0.8.11) devel; urgency=medium
+
+  * Update POT, and import PO files from Transifex.
+  * Remove buggy be.po, ru.po and tr.po.
+
+ -- intrigeri <intrigeri@boum.org>  Wed, 05 Aug 2015 18:47:33 +0200
+
+tails-greeter (0.8.10) testing; urgency=medium
+
+  * Import PO files from Transifex, update POT and PO files.
+
+ -- anonym <anonym@riseup.net>  Sat, 02 May 2015 21:22:43 +0200
+
+tails-greeter (0.8.9) stable; urgency=medium
+
+  * Import PO files from Transifex, update POT and PO files.
+
+ -- anonym <anonym@riseup.net>  Mon, 30 Mar 2015 14:57:21 +0200
+
 tails-greeter (0.8.8+jessie6) feature-jessie; urgency=medium
 
   * Move udevadm mangling back to a tails-unblock-network script.

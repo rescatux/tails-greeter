@@ -1,24 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # Ann Boen <ann.boen@gmail.com>, 2014
-# joostrijneveld <joostrijneveld@gmail.com>, 2014
+# Joost Rijneveld <joostrijneveld@gmail.com>, 2014
 # mvdwrd <maarten@vanderwoord.nl>, 2014
 # Richard E. van der Luit <nippur@fedoraproject.org>, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-28 22:33+0200\n"
-"PO-Revision-Date: 2014-06-02 15:22+0000\n"
+"POT-Creation-Date: 2015-08-05 18:46+0200\n"
+"PO-Revision-Date: 2015-06-19 21:25+0000\n"
 "Last-Translator: Ann Boen <ann.boen@gmail.com>\n"
-"Language-Team: Dutch (http://www.transifex.com/projects/p/torproject/language/nl/)\n"
+"Language-Team: Dutch (http://www.transifex.com/projects/p/torproject/"
+"language/nl/)\n"
+"Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../glade/persistencewindow.glade.h:1
@@ -71,15 +72,19 @@ msgstr "Beheerderswachtwoord"
 
 #: ../glade/optionswindow.glade.h:4
 msgid ""
-"<a "
-"href=\"doc/first_steps/startup_options/administration_password.en.html\">Documentation</a>"
+"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
+"\">Documentation</a>"
 msgstr "Documentatie"
 
 #: ../glade/optionswindow.glade.h:5
 msgid ""
-"Enter an administration password in case you need to perform administration tasks.\n"
+"Enter an administration password in case you need to perform administration "
+"tasks.\n"
 "Otherwise it will be disabled for better security."
-msgstr "Voer een beheerderswachtwoord in wanneer je beheerstaken moet kunnen uitvoeren.\nNiets ingevuld zal beheer worden uitgeschakeld voor betere veiligheid."
+msgstr ""
+"Voer een beheerderswachtwoord in wanneer je beheerstaken moet kunnen "
+"uitvoeren.\n"
+"Niets ingevuld zal beheer worden uitgeschakeld voor betere veiligheid."
 
 #: ../glade/optionswindow.glade.h:7
 msgid "Password:"
@@ -99,15 +104,17 @@ msgstr "Windows camouflage"
 
 #: ../glade/optionswindow.glade.h:11
 msgid ""
-"<a "
-"href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">Documentation</a>"
+"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
+"\">Documentation</a>"
 msgstr "Documentatie"
 
 #: ../glade/optionswindow.glade.h:12
 msgid ""
 "This option makes Tails look more like Microsoft Windows 8. This may be "
 "useful in public places in order to avoid attracting suspicion."
-msgstr "Deze optie laat Tails meer op Windows 8 lijken. Zo valt het minder op en zal men minder argwaan krijgen wanneer je in een openbare plaats bent."
+msgstr ""
+"Deze optie laat Tails meer op Windows 8 lijken. Zo valt het minder op en zal "
+"men minder argwaan krijgen wanneer je in een openbare plaats bent."
 
 #: ../glade/optionswindow.glade.h:13
 msgid "Activate Microsoft Windows 8 Camouflage"
@@ -119,21 +126,25 @@ msgstr "MAC adres spoofing"
 
 #: ../glade/optionswindow.glade.h:15
 msgid ""
-"<a "
-"href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Documentation</a>"
+"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
+"\">Documentation</a>"
 msgstr "Documentatie"
 
 #: ../glade/optionswindow.glade.h:16
 msgid ""
 "Spoofing MAC addresses hides the serial number of your network cards to the "
 "local networks. This can help you hide your geographical location."
-msgstr "MAC adres spoofing verbergt het serienummer van je netwerkkaart op lokale netwerken. Dit kan helpen bij het verbergen van je geografische locatie."
+msgstr ""
+"MAC adres spoofing verbergt het serienummer van je netwerkkaart op lokale "
+"netwerken. Dit kan helpen bij het verbergen van je geografische locatie."
 
 #: ../glade/optionswindow.glade.h:17
 msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
 "suspicion or cause network connection problems."
-msgstr "Het is over het algemeen veiliger om MAC adressen te spoofen, het kan echter ook argwaan opwekken of verbindingsproblemen veroorzaken. Zie documentatie."
+msgstr ""
+"Het is over het algemeen veiliger om MAC adressen te spoofen, het kan echter "
+"ook argwaan opwekken of verbindingsproblemen veroorzaken. Zie documentatie."
 
 #: ../glade/optionswindow.glade.h:18
 msgid "Spoof all MAC addresses"
@@ -145,21 +156,26 @@ msgstr "Netwerkconfiguratie"
 
 #: ../glade/optionswindow.glade.h:20
 msgid ""
-"<a "
-"href=\"doc/first_steps/startup_options/network_configuration.en.html\">Documentation</a>"
+"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
+"\">Documentation</a>"
 msgstr "Documentatie"
 
 #: ../glade/optionswindow.glade.h:21
 msgid ""
-"This computer's Internet connection is clear of obstacles. You would like to"
-" connect directly to the Tor network."
-msgstr "De internetverbinding van deze computer is vrij van obstakels. U wilt direct met het Tor netwerk verbinden."
+"This computer's Internet connection is clear of obstacles. You would like to "
+"connect directly to the Tor network."
+msgstr ""
+"De internetverbinding van deze computer is vrij van obstakels. U wilt direct "
+"met het Tor netwerk verbinden."
 
 #: ../glade/optionswindow.glade.h:22
 msgid ""
 "This computer's Internet connection is censored, filtered, or proxied. You "
 "need to configure bridge, firewall, or proxy settings."
-msgstr "De internetverbinding van deze computer is gecensureerd, gefiltered of loopt via een proxy. U dient de bridge, firewall of proxy instellingen te configureren."
+msgstr ""
+"De internetverbinding van deze computer is gecensureerd, gefiltered of loopt "
+"via een proxy. U dient de bridge, firewall of proxy instellingen te "
+"configureren."
 
 #: ../glade/langpanel.glade.h:1
 msgid " "
@@ -182,7 +198,9 @@ msgstr "Layout"
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
-msgstr "live-persist lukte niet, return code %(returncode)s:\n%(stderr)s"
+msgstr ""
+"live-persist lukte niet, return code %(returncode)s:\n"
+"%(stderr)s"
 
 #: ../tailsgreeter/persistence.py:99
 #, python-format
@@ -190,7 +208,10 @@ msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "cryptsetup lukte niet, return code %(returncode)s:\n%(stdout)s\n%(stderr)s"
+msgstr ""
+"cryptsetup lukte niet, return code %(returncode)s:\n"
+"%(stdout)s\n"
+"%(stderr)s"
 
 #: ../tailsgreeter/persistence.py:124
 #, python-format
@@ -198,9 +219,12 @@ msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "live-persist lukte niet, return code %(returncode)s:\n%(stdout)s\n%(stderr)s"
+msgstr ""
+"live-persist lukte niet, return code %(returncode)s:\n"
+"%(stdout)s\n"
+"%(stderr)s"
 
-#: ../tailsgreeter/langpanel.py:125 ../tailsgreeter/langpanel.py:152
-#: ../tailsgreeter/langpanel.py:185
+#: ../tailsgreeter/langpanel.py:123 ../tailsgreeter/langpanel.py:150
+#: ../tailsgreeter/langpanel.py:183
 msgid "Other..."
 msgstr "Anders..."

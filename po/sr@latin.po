@@ -3,78 +3,81 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# タカハシ <gomidori@live.jp>, 2013-2014
-# 藤前　甲 <m1440809437@hiru-dea.com>, 2014
+# JanaDi <dijana1706@gmail.com>, 2015
+# tentaclewarrior <exterminator996@gmail.com>, 2014
+# Milenko Doder <svrsavamutebe@gmail.com>, 2013
+# macak <nikola.stojakovic@hotmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-08-05 18:46+0200\n"
-"PO-Revision-Date: 2014-12-26 04:42+0000\n"
-"Last-Translator: 藤前　甲 <m1440809437@hiru-dea.com>\n"
-"Language-Team: Japanese (http://www.transifex.com/projects/p/torproject/"
-"language/ja/)\n"
-"Language: ja\n"
+"PO-Revision-Date: 2015-03-29 20:32+0000\n"
+"Last-Translator: JanaDi <dijana1706@gmail.com>\n"
+"Language-Team: Serbian (Latin) (http://www.transifex.com/projects/p/"
+"torproject/language/sr@latin/)\n"
+"Language: sr@latin\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: ../glade/persistencewindow.glade.h:1
 msgid "Forward"
-msgstr "進む"
+msgstr "Napred"
 
 #: ../glade/persistencewindow.glade.h:2 ../glade/optionswindow.glade.h:1
 msgid "Login"
-msgstr "ログイン"
+msgstr "Uloguj se"
 
 #: ../glade/persistencewindow.glade.h:3 ../glade/optionswindow.glade.h:2
 msgid "Welcome to Tails"
-msgstr "Tailsへようこそ"
+msgstr "Dobrodošli u Tails"
 
 #: ../glade/persistencewindow.glade.h:4
 msgid "Use persistence?"
-msgstr "永続性を使用しますか？"
+msgstr "Koristi upornost?"
 
 #: ../glade/persistencewindow.glade.h:5
 msgid "<a href=\"doc/first_steps/persistence/use.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/persistence/use.en.html\">ドキュメント</a>"
+msgstr "<a href=\"doc/first_steps/persistence/use.en.html\">Dokumentacija</a>"
 
 #: ../glade/persistencewindow.glade.h:6
 msgid "Yes"
-msgstr "はい"
+msgstr "Da"
 
 #: ../glade/persistencewindow.glade.h:7
 msgid "No"
-msgstr "いいえ"
+msgstr "Ne"
 
 #: ../glade/persistencewindow.glade.h:8
 msgid "Passphrase:"
-msgstr "パスフレーズ:"
+msgstr "Lozinka"
 
 #: ../glade/persistencewindow.glade.h:9
 msgid "Read-Only?"
-msgstr "読み取り専用ですか？"
+msgstr "Samo-iščitavanje?"
 
 #: ../glade/persistencewindow.glade.h:10
 msgid "<i>Wrong passphrase. Please try again.</i>"
-msgstr "<i>パスフレーズが間違っています。やり直してください。</i>"
+msgstr "Pogrešna lozinka. Molimo pokušajte ponovo."
 
 #: ../glade/persistencewindow.glade.h:11
 msgid "More options?"
-msgstr "その他のオプション？"
+msgstr "Još opcija?"
 
 #: ../glade/optionswindow.glade.h:3
 msgid "Administration password"
-msgstr "管理者パスワード"
+msgstr "Administrativna lozinka"
 
 #: ../glade/optionswindow.glade.h:4
 msgid ""
 "<a href=\"doc/first_steps/startup_options/administration_password.en.html"
 "\">Documentation</a>"
 msgstr ""
-"<a href=\"doc/first_steps/startup_options/administration_password.en.html\">"
-"ドキュメント</a>"
+"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
+"\">Dokumentacija</a>"
 
 #: ../glade/optionswindow.glade.h:5
 msgid ""
@@ -82,106 +85,106 @@ msgid ""
 "tasks.\n"
 "Otherwise it will be disabled for better security."
 msgstr ""
-"管理者のタスクを実行する必要がある場合、管理者パスワードを入力してくださ"
-"い。\n"
-"でなければ、セキュリティ向上のために無効になります。"
+"Unesite administrativnu lozinku u slučaju da želite vršiti administratorske "
+"zadatke.\n"
+"Inače će oni biti onemogućeni radi bolje sigurnosti."
 
 #: ../glade/optionswindow.glade.h:7
 msgid "Password:"
-msgstr "パスワード:"
+msgstr "Lozinka:"
 
 #: ../glade/optionswindow.glade.h:8
 msgid "Verify Password:"
-msgstr "パスワード確認:"
+msgstr "Potvrdi lozinku:"
 
 #: ../glade/optionswindow.glade.h:9
 msgid "<i>Passwords do not match</i>"
-msgstr "<i>パスワードが一致しません</i>"
+msgstr "Lozinke se ne podudaraju"
 
 #: ../glade/optionswindow.glade.h:10
 msgid "Windows camouflage"
-msgstr "Windows 風"
+msgstr "Kamuflaža prozora"
 
 #: ../glade/optionswindow.glade.h:11
 msgid ""
 "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
 "\">Documentation</a>"
 msgstr ""
-"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">ドキュ"
-"メント</a>"
+"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
+"\">Dokumentacija</a>"
 
 #: ../glade/optionswindow.glade.h:12
 msgid ""
 "This option makes Tails look more like Microsoft Windows 8. This may be "
 "useful in public places in order to avoid attracting suspicion."
 msgstr ""
-"このオプションを有効にすると、 Tails は Microsoft Windows 8 のような見た目に"
-"なります。公共の場所で、疑いの目が無くなるでしょう。"
+"Ova opcija cini da Tails vise lici na Microsoft Windows 8. Ovo se moze "
+"koristiti na javnim mestima da bi ste izbegli izazivanje sumnje."
 
 #: ../glade/optionswindow.glade.h:13
 msgid "Activate Microsoft Windows 8 Camouflage"
-msgstr "Microsoft Windows 8 風にする"
+msgstr "Aktivirajte Microsoft Windows 8 kamuflazu"
 
 #: ../glade/optionswindow.glade.h:14
 msgid "MAC address spoofing"
-msgstr "MAC アドレススの成りすまし"
+msgstr "Prikrivanje MAC adrese"
 
 #: ../glade/optionswindow.glade.h:15
 msgid ""
 "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
 "\">Documentation</a>"
 msgstr ""
-"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">ドキュメント"
-"</a>"
+"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
+"\">Dokumentacija</a>"
 
 #: ../glade/optionswindow.glade.h:16
 msgid ""
 "Spoofing MAC addresses hides the serial number of your network cards to the "
 "local networks. This can help you hide your geographical location."
 msgstr ""
-"MAC アドレスをスプーフィングすると、ローカルネットワークにネットワークカード"
-"のシリアルナンバーを隠蔽します。これは地理的情報の隠蔽に役立ちます。"
+"Prikrivanje MAC adrese je proces pri kom se sakriva serijski broj vaše "
+"mrežne kartice u lokalnoj mreži. Ovo vam može pomoći da prikrijete vašu "
+"lokaciju."
 
 #: ../glade/optionswindow.glade.h:17
 msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
 "suspicion or cause network connection problems."
 msgstr ""
-"普通は MAC アドレスをスプーフィングするほうが安全ですが、疑いをもたらしたり、"
-"ネットワーク接続の問題を引き起こす場合もあります。"
+"Generalno je bezbednije prikriti MAC adresu, ali to može izazvati mnoge "
+"probleme sa mrežnom konekcijom."
 
 #: ../glade/optionswindow.glade.h:18
 msgid "Spoof all MAC addresses"
-msgstr "すべての MAC アドレスを成りすましする"
+msgstr "Prikrij sve MAC adrese"
 
 #: ../glade/optionswindow.glade.h:19
 msgid "Network configuration"
-msgstr "ネットワーク設定"
+msgstr "Mrežna konfiguracije"
 
 #: ../glade/optionswindow.glade.h:20
 msgid ""
 "<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
 "\">Documentation</a>"
 msgstr ""
-"<a href=\"doc/first_steps/startup_options/network_configuration.en.html\">ド"
-"キュメント</a>"
+"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
+"\">Dokumentacija</a>"
 
 #: ../glade/optionswindow.glade.h:21
 msgid ""
 "This computer's Internet connection is clear of obstacles. You would like to "
 "connect directly to the Tor network."
 msgstr ""
-"このコンピューターのインターネット接続には障害がありません。 Tor ネットワーク"
-"に直接接続します。"
+"Internet konekcija ovog kompjutera nema prepreke. Voleli biste da se "
+"konektujete direktno kroz Tor mrežu."
 
 #: ../glade/optionswindow.glade.h:22
 msgid ""
 "This computer's Internet connection is censored, filtered, or proxied. You "
 "need to configure bridge, firewall, or proxy settings."
 msgstr ""
-"このコンピューターのインターネット接続は検閲されているか、フィルターされてい"
-"るか、プロキシを通します。ブリッジないしファイアーウォール、プロキシ設定を構"
-"成する必要があります。"
+"Internet konekcija ovog kompjutera je cenzurisana, filtrirana ili je pod "
+"proxy-em. Morate konfigurisati most, zaštitni zid ili proxy podešavanja."
 
 #: ../glade/langpanel.glade.h:1
 msgid " "
@@ -189,15 +192,15 @@ msgstr " "
 
 #: ../glade/langpanel.glade.h:2 ../tailsgreeter/langpanel.py:43
 msgid "Language"
-msgstr "言語"
+msgstr "Jezik"
 
 #: ../glade/langpanel.glade.h:3
 msgid "Locale"
-msgstr "地域"
+msgstr "Lokal"
 
 #: ../glade/langpanel.glade.h:4
 msgid "Layout"
-msgstr "レイアウト"
+msgstr "Postava"
 
 #: ../tailsgreeter/persistence.py:59
 #, python-format
@@ -205,7 +208,7 @@ msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
 msgstr ""
-"live-persistが失敗しました。再開コードは %(returncode)s:\n"
+"live-persist neuspeo sa povratnim kodom %(returncode)s:⏎\n"
 "%(stderr)s"
 
 #: ../tailsgreeter/persistence.py:99
@@ -215,8 +218,8 @@ msgid ""
 "%(stdout)s\n"
 "%(stderr)s"
 msgstr ""
-"cryptsetup が失敗しました。再開コードは %(returncode)s:\n"
-"%(stdout)s\n"
+"cryptsetup neuspeo sa povratnim kodom %(returncode)s:⏎\n"
+"%(stdout)s⏎\n"
 "%(stderr)s"
 
 #: ../tailsgreeter/persistence.py:124
@@ -226,11 +229,11 @@ msgid ""
 "%(stdout)s\n"
 "%(stderr)s"
 msgstr ""
-"live-persistが失敗しました。再開コードは %(returncode)s:\n"
-"%(stdout)s\n"
+"live-persist neuspeo sa povratnim kodom %(returncode)s:⏎\n"
+"%(stdout)s⏎\n"
 "%(stderr)s"
 
 #: ../tailsgreeter/langpanel.py:123 ../tailsgreeter/langpanel.py:150
 #: ../tailsgreeter/langpanel.py:183
 msgid "Other..."
-msgstr "その他..."
+msgstr "Ostalo..."
