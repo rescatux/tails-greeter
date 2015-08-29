@@ -62,12 +62,13 @@ class OptionsWindow(TranslatableWindow):
         self.entry_password2.connect("changed", cb_pw_changed)
         cb_pw_changed()
 
-        self.set_geometry()
+        screen = self.dialog.get_screen()
+        self.set_geometry(screen)
 
-    def set_geometry(self):
+    def set_geometry(self, screen):
         ignore, langpanel_height = self.greeter.langpanel.window.get_size()
-        screen_width = self.dialog.get_screen().get_width()
-        screen_height = self.dialog.get_screen().get_height()
+        screen_width = screen.get_width()
+        screen_height = screen.get_height()
         free_height = screen_height - langpanel_height
 
         # These magic values specify a "nice" size for the options
