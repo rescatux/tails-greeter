@@ -63,6 +63,12 @@ class OptionsWindow(TranslatableWindow):
         cb_pw_changed()
 
         screen = self.dialog.get_screen()
+        screen.connect("size-changed",     self.resize)
+        screen.connect("monitors-changed", self.resize)
+
+        self.set_geometry(screen)
+
+    def resize(self, screen, data=None):
         self.set_geometry(screen)
 
     def set_geometry(self, screen):
