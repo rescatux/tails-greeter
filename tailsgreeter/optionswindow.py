@@ -68,6 +68,9 @@ class OptionsWindow(TranslatableWindow):
 
         self.set_geometry(screen)
 
+    # Help callback handler
+    cb_doc_handler = HelpWindow.cb_doc_handler
+
     def resize(self, screen, data=None):
         self.set_geometry(screen)
 
@@ -95,9 +98,6 @@ class OptionsWindow(TranslatableWindow):
             self.dialog.move((screen_width-width_request)/2, 0)
 
         self.dialog.set_size_request(width_request, height_request)
-
-    # Help callback handler
-    cb_doc_handler = HelpWindow.cb_doc_handler
 
     def set_password(self):
         """Set root access password"""
