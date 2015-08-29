@@ -94,8 +94,13 @@ class OptionsWindow(TranslatableWindow):
         # dialog and move it to the top of the screen, so it won't
         # shadow the language panel.
         if screen_height - height_request < 2*langpanel_height:
-            self.dialog.set_position(Gtk.WindowPosition.NONE)
             self.dialog.move((screen_width-width_request)/2, 0)
+        # otherwise, simply center it within the available space.
+        else:
+            self.dialog.move(
+                (screen_width-width_request)/2,
+                (free_height-height_request)/2
+            )
 
         self.dialog.set_size_request(width_request, height_request)
 
