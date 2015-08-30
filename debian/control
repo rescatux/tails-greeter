@@ -10,6 +10,8 @@ Build-Depends: debhelper (>= 9.20120909~),
 Build-Depends-Indep: python-distutils-extra
 Standards-Version: 3.9.3
 X-Python-Version: >= 2.7
+Vcs-Git: https://git-tails.immerda.ch/greeter
+Vcs-Browser: https://git-tails.immerda.ch/greeter
 
 Package: tails-greeter
 Architecture: all
