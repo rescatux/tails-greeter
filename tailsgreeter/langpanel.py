@@ -122,7 +122,9 @@ class LangPanel(TranslatableWindow):
         panel = self.window
         panel.set_gravity(Gdk.Gravity.SOUTH_WEST)
         width, height = panel.get_size()
-        panel.set_default_size(screen.width(), height)
+        ideal_width = screen.width()
+        panel.set_default_size(ideal_width, height)
+        panel.set_size_request(ideal_width, height)
         panel.move(0, screen.height() - height)
 
     # Populate lists
