@@ -1,10 +1,12 @@
-tails-greeter (0.8.12+feature.6811.disable.networking~1.gbpac892d) feature-6811-disable-networking; urgency=medium
+tails-greeter (0.8.12+feature.6811.disable.networking~1.gbp75b940) feature-6811-disable-networking; urgency=medium
 
-  ** SNAPSHOT build @ac892d01a788dfd1ddf37bcae719b754a1d9caf8 **
+  ** SNAPSHOT build @75b9404705bc6677dea52d4657700c56405896a6 **
 
   * Add option for completely disabling networking.
+  * tails-greeter (0.8.12+feature.6811.disable.networking~1.gbpac892d)
+  * Bump the "nice" options window height.
 
- -- anonym <anonym@riseup.net>  Tue, 01 Sep 2015 12:27:09 +0200
+ -- anonym <anonym@riseup.net>  Tue, 01 Sep 2015 19:22:04 +0200
 
 tails-greeter (0.8.11) devel; urgency=medium
 
