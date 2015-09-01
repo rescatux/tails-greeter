@@ -1,3 +1,11 @@
+tails-greeter (0.8.12+feature.6811.disable.networking~1.gbpac892d) feature-6811-disable-networking; urgency=medium
+
+  ** SNAPSHOT build @ac892d01a788dfd1ddf37bcae719b754a1d9caf8 **
+
+  * Add option for completely disabling networking.
+
+ -- anonym <anonym@riseup.net>  Tue, 01 Sep 2015 12:27:09 +0200
+
 tails-greeter (0.8.11) devel; urgency=medium
 
   * Update POT, and import PO files from Transifex.
