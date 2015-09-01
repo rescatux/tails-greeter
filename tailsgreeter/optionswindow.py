@@ -74,7 +74,7 @@ class OptionsWindow(TranslatableWindow):
         # what GTK thinks is necessary for the window to fit
         # everything without showing a scrollbar, if that's possible.
         nice_width = 700
-        nice_height = 740
+        nice_height = 800
 
         width_request = min(nice_width, screen_width)
         height_request = min(nice_height, free_height)
