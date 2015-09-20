@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # stevegrey <91.ragi@gmail.com>, 2014
 # ilbe123 <a3057016@drdrb.net>, 2014
@@ -11,15 +11,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-05 18:46+0200\n"
+"POT-Creation-Date: 2014-08-31 10:36+0200\n"
 "PO-Revision-Date: 2014-10-05 12:00+0000\n"
 "Last-Translator: Jamin <bakzaa@gmail.com>\n"
-"Language-Team: Korean (http://www.transifex.com/projects/p/torproject/"
-"language/ko/)\n"
-"Language: ko\n"
+"Language-Team: Korean (http://www.transifex.com/projects/p/torproject/language/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../glade/persistencewindow.glade.h:1
@@ -72,20 +71,15 @@ msgstr "관리 암호"
 
 #: ../glade/optionswindow.glade.h:4
 msgid ""
-"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
-"\">Documentation</a>"
-msgstr ""
-"<a href=\"doc/first_steps/startup_options/administration_password.en.html\">"
-"문서</a>"
+"<a "
+"href=\"doc/first_steps/startup_options/administration_password.en.html\">Documentation</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/administration_password.en.html\">문서</a>"
 
 #: ../glade/optionswindow.glade.h:5
 msgid ""
-"Enter an administration password in case you need to perform administration "
-"tasks.\n"
+"Enter an administration password in case you need to perform administration tasks.\n"
 "Otherwise it will be disabled for better security."
-msgstr ""
-"관리자 작업을 수행해야하는 경우 관리자 암호를 입력하십시오.\n"
-"아니면 보안 향상을 위해 사용할 수 없습니다."
+msgstr "관리자 작업을 수행해야하는 경우 관리자 암호를 입력하십시오.\n아니면 보안 향상을 위해 사용할 수 없습니다."
 
 #: ../glade/optionswindow.glade.h:7
 msgid "Password:"
@@ -105,19 +99,15 @@ msgstr "Windows 위장"
 
 #: ../glade/optionswindow.glade.h:11
 msgid ""
-"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
-"\">Documentation</a>"
-msgstr ""
-"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">문서</"
-"a>"
+"<a "
+"href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">Documentation</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">문서</a>"
 
 #: ../glade/optionswindow.glade.h:12
 msgid ""
 "This option makes Tails look more like Microsoft Windows 8. This may be "
 "useful in public places in order to avoid attracting suspicion."
-msgstr ""
-"본 설정은 Tails가 보다 마이크로소프트 Windows 8처럼 보이게 만들어줄 것입니"
-"다. 이 기능은 공공장소에서 의심을 피할때 유용할 것입니다."
+msgstr "본 설정은 Tails가 보다 마이크로소프트 Windows 8처럼 보이게 만들어줄 것입니다. 이 기능은 공공장소에서 의심을 피할때 유용할 것입니다."
 
 #: ../glade/optionswindow.glade.h:13
 msgid "Activate Microsoft Windows 8 Camouflage"
@@ -129,26 +119,21 @@ msgstr "MAC 주소 위장"
 
 #: ../glade/optionswindow.glade.h:15
 msgid ""
-"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
-"\">Documentation</a>"
-msgstr ""
-"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">문서</a>"
+"<a "
+"href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Documentation</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">문서</a>"
 
 #: ../glade/optionswindow.glade.h:16
 msgid ""
 "Spoofing MAC addresses hides the serial number of your network cards to the "
 "local networks. This can help you hide your geographical location."
-msgstr ""
-"MAC 주소를 위장하여 로컬 네트워크에 네트워크 카드의 일련 번호를 은폐합니다. "
-"이것은 지리적 정보의 은폐에 도움이 됩니다."
+msgstr "MAC 주소를 위장하여 로컬 네트워크에 네트워크 카드의 일련 번호를 은폐합니다. 이것은 지리적 정보의 은폐에 도움이 됩니다."
 
 #: ../glade/optionswindow.glade.h:17
 msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
 "suspicion or cause network connection problems."
-msgstr ""
-"일반적으로 MAC 주소를 위장하는 것이 안전하지만, 의심을 불러일으키거나 네트워"
-"크 연결 문제를 일으키는 경우도 있습니다."
+msgstr "일반적으로 MAC 주소를 위장하는 것이 안전하지만, 의심을 불러일으키거나 네트워크 연결 문제를 일으키는 경우도 있습니다."
 
 #: ../glade/optionswindow.glade.h:18
 msgid "Spoof all MAC addresses"
@@ -160,26 +145,21 @@ msgstr "네크워크 구성"
 
 #: ../glade/optionswindow.glade.h:20
 msgid ""
-"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
-"\">Documentation</a>"
-msgstr ""
-"<a href=\"doc/first_steps/startup_options/network_configuration.en.html\">문"
-"서</a>"
+"<a "
+"href=\"doc/first_steps/startup_options/network_configuration.en.html\">Documentation</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/network_configuration.en.html\">문서</a>"
 
 #: ../glade/optionswindow.glade.h:21
 msgid ""
-"This computer's Internet connection is clear of obstacles. You would like to "
-"connect directly to the Tor network."
-msgstr ""
-"이 컴퓨터의 인터넷 연결에는 문제가 없습니다. Tor 네트워크에 직접 연결합니다."
+"This computer's Internet connection is clear of obstacles. You would like to"
+" connect directly to the Tor network."
+msgstr "이 컴퓨터의 인터넷 연결에는 문제가 없습니다. Tor 네트워크에 직접 연결합니다."
 
 #: ../glade/optionswindow.glade.h:22
 msgid ""
 "This computer's Internet connection is censored, filtered, or proxied. You "
 "need to configure bridge, firewall, or proxy settings."
-msgstr ""
-"이 컴퓨터의 인터넷 연결은 검열되어 있거나 필터링되어 있는 프록시를 통합니다. "
-"브리지 내지는 방화벽, 프록시 설정을 구성해야합니다."
+msgstr "이 컴퓨터의 인터넷 연결은 검열되어 있거나 필터링되어 있는 프록시를 통합니다. 브리지 내지는 방화벽, 프록시 설정을 구성해야합니다."
 
 #: ../glade/langpanel.glade.h:1
 msgid " "
@@ -202,9 +182,7 @@ msgstr "레이아웃"
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
-msgstr ""
-"live-persist가 실패했습니다. 반환 코드는 %(returncode)s:\n"
-"%(stderr)s"
+msgstr "live-persist가 실패했습니다. 반환 코드는 %(returncode)s:\n%(stderr)s"
 
 #: ../tailsgreeter/persistence.py:99
 #, python-format
@@ -212,10 +190,7 @@ msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr ""
-"cryptsetup이 실패했습니다. 반환 코드는 %(returncode)s:\n"
-"%(stdout)s\n"
-"%(stderr)s"
+msgstr "cryptsetup이 실패했습니다. 반환 코드는 %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
 #: ../tailsgreeter/persistence.py:124
 #, python-format
@@ -223,10 +198,7 @@ msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr ""
-"live-persist가 실패했습니다. 반환 코드는 %(returncode)s:\n"
-"%(stdout)s\n"
-"%(stderr)s"
+msgstr "live-persist가 실패했습니다. 반환 코드는 %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
 #: ../tailsgreeter/langpanel.py:123 ../tailsgreeter/langpanel.py:150
 #: ../tailsgreeter/langpanel.py:183
