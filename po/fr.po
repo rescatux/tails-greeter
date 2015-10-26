@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-06-11 16:20+0200\n"
+"POT-Creation-Date: 2015-10-26 17:51+0100\n"
 "PO-Revision-Date: 2015-10-25 09:29-0000\n"
 "Last-Translator: Onizuka\n"
 "Language-Team: French (http://www.transifex.com/projects/p/torproject/"
@@ -183,6 +183,10 @@ msgid ""
 msgstr ""
 "La connexion Internet de cet ordinateur est censurée, filtrée ou passe par "
 "un proxy. Vous devez configurer un bridge, un pare-feu ou un proxy."
+
+#: ../glade/optionswindow.glade.h:23
+msgid "Disable all networking"
+msgstr ""
 
 #: ../glade/langpanel.glade.h:1
 msgid " "
