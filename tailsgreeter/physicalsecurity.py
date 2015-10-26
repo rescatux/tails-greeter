@@ -31,6 +31,7 @@ class PhysicalSecuritySettings(object):
 
     NETCONF_DIRECT = "direct"
     NETCONF_OBSTACLE = "obstacle"
+    NETCONF_DISABLED = "disabled"
 
     def __init__(self):
         # Whether to run macspoof

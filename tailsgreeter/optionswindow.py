@@ -44,6 +44,8 @@ class OptionsWindow(TranslatableWindow):
         self.macspoof_checkbox = builder.get_object("macspoof_checkbox")
         self.macspoof_checkbox.set_active(True)
         self.netconf_direct = builder.get_object("netconf_direct")
+        self.netconf_obstacle = builder.get_object("netconf_obstacle")
+        self.netconf_disabled = builder.get_object("netconf_disabled")
         self.netconf_direct.set_active(True)
 
         self.dialog = builder.get_object("options_dialog")
@@ -72,7 +74,7 @@ class OptionsWindow(TranslatableWindow):
         # what GTK thinks is necessary for the window to fit
         # everything without showing a scrollbar, if that's possible.
         nice_width = 700
-        nice_height = 740
+        nice_height = 800
 
         width_request = min(nice_width, screen_width)
         height_request = min(nice_height, free_height)
@@ -108,8 +110,10 @@ class OptionsWindow(TranslatableWindow):
         """Set network configuration"""
         if self.netconf_direct.get_active():
             self.greeter.physical_security.netconf = self.greeter.physical_security.NETCONF_DIRECT
-        else:
+        elif self.netconf_obstacle.get_active():
             self.greeter.physical_security.netconf = self.greeter.physical_security.NETCONF_OBSTACLE
+        elif self.netconf_disabled.get_active():
+            self.greeter.physical_security.netconf = self.greeter.physical_security.NETCONF_DISABLED
 
     def validate_options(self):
         """Validate the selected options"""
