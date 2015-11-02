@@ -8,12 +8,13 @@
 # testsubject67 <deborinha97@hotmail.com>, 2014
 # Lídia Martins <lolplayer713@gmail.com>, 2015
 # alfalb_mansil, 2014
+# MMSRS <h_manuela_rodsilva@gmail.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-26 17:51+0100\n"
-"PO-Revision-Date: 2015-09-14 14:09+0000\n"
+"POT-Creation-Date: 2015-11-02 21:29+0100\n"
+"PO-Revision-Date: 2015-11-01 17:52+0000\n"
 "Last-Translator: MMSRS <h_manuela_rodsilva@gmail.com>\n"
 "Language-Team: Portuguese (http://www.transifex.com/otf/torproject/language/"
 "pt/)\n"
@@ -37,7 +38,7 @@ msgstr "Bem-vindo ao Tails"
 
 #: ../glade/persistencewindow.glade.h:4
 msgid "Use persistence?"
-msgstr "Usar Persistência?"
+msgstr "Usar persistência?"
 
 #: ../glade/persistencewindow.glade.h:5
 msgid "<a href=\"doc/first_steps/persistence/use.en.html\">Documentation</a>"
@@ -187,7 +188,7 @@ msgstr ""
 
 #: ../glade/optionswindow.glade.h:23
 msgid "Disable all networking"
-msgstr ""
+msgstr "Desativar toda a rede"
 
 #: ../glade/langpanel.glade.h:1
 msgid " "

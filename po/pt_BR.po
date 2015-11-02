@@ -8,6 +8,7 @@
 # carlo giusepe tadei valente sasaki <carlo.gt.valente@gmail.com>, 2014
 # Eduardo Bonsi, 2013
 # Bruno Geronimo <bruuh@outlook.com>, 2012
+# Gilberto Coutinho <gilberto.jsc@gmail.com>, 2015
 # Isabel Ferreira, 2014
 # Killer <luis_zik13@hotmail.com>, 2012
 # Rafael Martins <rafaelmartinsrm@gmail.com>, 2012
@@ -16,9 +17,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-26 17:51+0100\n"
-"PO-Revision-Date: 2015-09-05 22:08+0000\n"
-"Last-Translator: Communia <ameaneantie@riseup.net>\n"
+"POT-Creation-Date: 2015-11-02 21:29+0100\n"
+"PO-Revision-Date: 2015-10-27 11:30+0000\n"
+"Last-Translator: Gilberto Coutinho <gilberto.jsc@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/otf/torproject/"
 "language/pt_BR/)\n"
 "Language: pt_BR\n"
@@ -193,7 +194,7 @@ msgstr ""
 
 #: ../glade/optionswindow.glade.h:23
 msgid "Disable all networking"
-msgstr ""
+msgstr "Desativar toda rede"
 
 #: ../glade/langpanel.glade.h:1
 msgid " "

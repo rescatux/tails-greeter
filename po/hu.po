@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
+# benewfy <benewfy@gmail.com>, 2015
 # Ferenc sati <s.feri33@gmail.com>, 2015
 # Blackywantscookies <gaborcika@citromail.hu>, 2014
 # Lajos Pasztor <mrlajos@gmail.com>, 2014
@@ -12,11 +13,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-26 17:51+0100\n"
-"PO-Revision-Date: 2015-06-27 09:51+0000\n"
-"Last-Translator: Ferenc sati <s.feri33@gmail.com>\n"
-"Language-Team: Hungarian (http://www.transifex.com/projects/p/torproject/"
-"language/hu/)\n"
+"POT-Creation-Date: 2015-11-02 21:29+0100\n"
+"PO-Revision-Date: 2015-10-30 20:03+0000\n"
+"Last-Translator: benewfy <benewfy@gmail.com>\n"
+"Language-Team: Hungarian (http://www.transifex.com/otf/torproject/language/"
+"hu/)\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -187,7 +188,7 @@ msgstr ""
 
 #: ../glade/optionswindow.glade.h:23
 msgid "Disable all networking"
-msgstr ""
+msgstr "Összes hálózatépítés letiltása"
 
 #: ../glade/langpanel.glade.h:1
 msgid " "

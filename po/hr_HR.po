@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-26 17:51+0100\n"
-"PO-Revision-Date: 2015-08-12 12:32+0000\n"
+"POT-Creation-Date: 2015-11-02 21:29+0100\n"
+"PO-Revision-Date: 2015-11-02 13:10+0000\n"
 "Last-Translator: skiddiep <lyricaltumor@gmail.com>\n"
 "Language-Team: Croatian (Croatia) (http://www.transifex.com/otf/torproject/"
 "language/hr_HR/)\n"
@@ -187,7 +187,7 @@ msgstr ""
 
 #: ../glade/optionswindow.glade.h:23
 msgid "Disable all networking"
-msgstr ""
+msgstr "Onemogući sav mrežni rad"
 
 #: ../glade/langpanel.glade.h:1
 msgid " "

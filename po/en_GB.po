@@ -4,14 +4,15 @@
 #
 # Translators:
 # Andi Chandler <andi@gowling.com>, 2014
+# newharha ehrara <dbybgohg@yomail.info>, 2015
 # Richard Shaylor <rshaylor@me.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-26 17:51+0100\n"
-"PO-Revision-Date: 2015-08-10 21:37+0000\n"
-"Last-Translator: Andi Chandler <andi@gowling.com>\n"
+"POT-Creation-Date: 2015-11-02 21:29+0100\n"
+"PO-Revision-Date: 2015-11-02 00:10+0000\n"
+"Last-Translator: newharha ehrara <dbybgohg@yomail.info>\n"
 "Language-Team: English (United Kingdom) (http://www.transifex.com/otf/"
 "torproject/language/en_GB/)\n"
 "Language: en_GB\n"
@@ -184,7 +185,7 @@ msgstr ""
 
 #: ../glade/optionswindow.glade.h:23
 msgid "Disable all networking"
-msgstr ""
+msgstr "Disable all networking"
 
 #: ../glade/langpanel.glade.h:1
 msgid " "
