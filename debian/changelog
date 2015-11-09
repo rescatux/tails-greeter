@@ -1,3 +1,9 @@
+tails-greeter (0.8.14+jessie1) feature-jessie; urgency=medium
+
+  * Merge from master (Wheezy) branch.
+
+ -- anonym <anonym@riseup.net>  Mon, 09 Nov 2015 15:27:02 +0100
+
 tails-greeter (0.8.14) testing; urgency=medium
 
   * Import PO files from Transifex, update POT and PO files.
