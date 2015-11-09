@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-05 18:46+0200\n"
+"POT-Creation-Date: 2015-11-02 21:29+0100\n"
 "PO-Revision-Date: 2014-06-10 02:50+0000\n"
 "Last-Translator: Sokhem Khoem <sokhem@open.org.kh>\n"
 "Language-Team: Khmer (http://www.transifex.com/projects/p/torproject/"
@@ -177,6 +177,10 @@ msgid ""
 msgstr ""
 "ការ​ភ្ជាប់អ៊ីនធឺណិត​កុំព្យូទ័រ​នេះ​​ត្រូវ​បាន​ពិនិត្យ ច្រោះ ឬ​កំណត់​ប្រូកស៊ី។ អ្នក​ត្រូវ​កំណត់​រចនាសម្ព័ន្ធ​ប៊្រីត ជញ្ជាំង​"
 "ភ្លើង ឬ​ការ​កំណត់​ប្រូកស៊ី។"
+
+#: ../glade/optionswindow.glade.h:23
+msgid "Disable all networking"
+msgstr ""
 
 #: ../glade/langpanel.glade.h:1
 msgid " "

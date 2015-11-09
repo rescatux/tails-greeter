@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-05 18:46+0200\n"
+"POT-Creation-Date: 2015-11-02 21:29+0100\n"
 "PO-Revision-Date: 2014-10-21 09:57+0000\n"
 "Last-Translator: Dušan <dusan.k@zoho.com>\n"
 "Language-Team: Slovenian (Slovenia) (http://www.transifex.com/projects/p/"
@@ -182,6 +182,10 @@ msgstr ""
 "Ta računalniška internetna povezava, je cenzurirana, filtrirana ali "
 "nameščena. Morate konfigurirati nastavitve mostu, požarnega zidu ali "
 "nastavitve proxy."
+
+#: ../glade/optionswindow.glade.h:23
+msgid "Disable all networking"
+msgstr ""
 
 #: ../glade/langpanel.glade.h:1
 msgid " "

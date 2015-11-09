@@ -4,10 +4,11 @@
 #
 # Translators:
 # lucas alkaid vicente <alkaidw@gmail.com>, 2012
-# Communia <ameaneantie@riseup.net>, 2013-2014
+# Communia <ameaneantie@riseup.net>, 2013-2015
 # carlo giusepe tadei valente sasaki <carlo.gt.valente@gmail.com>, 2014
 # Eduardo Bonsi, 2013
 # Bruno Geronimo <bruuh@outlook.com>, 2012
+# Gilberto Coutinho <gilberto.jsc@gmail.com>, 2015
 # Isabel Ferreira, 2014
 # Killer <luis_zik13@hotmail.com>, 2012
 # Rafael Martins <rafaelmartinsrm@gmail.com>, 2012
@@ -16,11 +17,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-05 18:46+0200\n"
-"PO-Revision-Date: 2015-07-05 05:22+0000\n"
-"Last-Translator: Communia <ameaneantie@riseup.net>\n"
-"Language-Team: Portuguese (Brazil) (http://www.transifex.com/projects/p/"
-"torproject/language/pt_BR/)\n"
+"POT-Creation-Date: 2015-11-02 21:29+0100\n"
+"PO-Revision-Date: 2015-10-27 11:30+0000\n"
+"Last-Translator: Gilberto Coutinho <gilberto.jsc@gmail.com>\n"
+"Language-Team: Portuguese (Brazil) (http://www.transifex.com/otf/torproject/"
+"language/pt_BR/)\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -65,7 +66,7 @@ msgstr "Somente leitura?"
 
 #: ../glade/persistencewindow.glade.h:10
 msgid "<i>Wrong passphrase. Please try again.</i>"
-msgstr "<i>Senha incorreta. Por favor,tente novamente.</i>"
+msgstr "<i>Senha incorreta. Por favor, tente novamente.</i>"
 
 #: ../glade/persistencewindow.glade.h:11
 msgid "More options?"
@@ -190,6 +191,10 @@ msgstr ""
 "A conexão a Internet desse computador está censurada, filtrada ou atrás de "
 "um proxy. Você precisa configurar as opções de ponte, de firewall ou de "
 "proxy."
+
+#: ../glade/optionswindow.glade.h:23
+msgid "Disable all networking"
+msgstr "Desativar toda rede"
 
 #: ../glade/langpanel.glade.h:1
 msgid " "

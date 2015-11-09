@@ -3,17 +3,17 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# タカハシ <gomidori@live.jp>, 2013-2014
+# タカハシ <indexial@outlook.jp>, 2013-2014
 # 藤前　甲 <m1440809437@hiru-dea.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-05 18:46+0200\n"
-"PO-Revision-Date: 2014-12-26 04:42+0000\n"
+"POT-Creation-Date: 2015-11-02 21:29+0100\n"
+"PO-Revision-Date: 2015-08-29 06:12+0000\n"
 "Last-Translator: 藤前　甲 <m1440809437@hiru-dea.com>\n"
-"Language-Team: Japanese (http://www.transifex.com/projects/p/torproject/"
-"language/ja/)\n"
+"Language-Team: Japanese (http://www.transifex.com/otf/torproject/language/"
+"ja/)\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -182,6 +182,10 @@ msgstr ""
 "このコンピューターのインターネット接続は検閲されているか、フィルターされてい"
 "るか、プロキシを通します。ブリッジないしファイアーウォール、プロキシ設定を構"
 "成する必要があります。"
+
+#: ../glade/optionswindow.glade.h:23
+msgid "Disable all networking"
+msgstr ""
 
 #: ../glade/langpanel.glade.h:1
 msgid " "

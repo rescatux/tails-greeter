@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tails-greeter\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-06-11 16:20+0200\n"
+"POT-Creation-Date: 2015-10-26 17:51+0100\n"
 "PO-Revision-Date: 2011-04-22 17:42+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: English <en@li.org>\n"
@@ -155,6 +155,10 @@ msgstr ""
 msgid ""
 "This computer's Internet connection is censored, filtered, or proxied. You "
 "need to configure bridge, firewall, or proxy settings."
+msgstr ""
+
+#: ../glade/optionswindow.glade.h:23
+msgid "Disable all networking"
 msgstr ""
 
 #: ../glade/langpanel.glade.h:1

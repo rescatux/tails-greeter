@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-05 18:46+0200\n"
+"POT-Creation-Date: 2015-11-02 21:29+0100\n"
 "PO-Revision-Date: 2015-06-29 15:03+0000\n"
 "Last-Translator: Zamani Karmana <zamani.karmana@gmail.com>\n"
 "Language-Team: Indonesian (http://www.transifex.com/projects/p/torproject/"
@@ -185,6 +185,10 @@ msgid ""
 msgstr ""
 "Koneksi kekomputer ini tersensor, tersaring atau terproxy. anda perlu "
 "mengatur pengaturan bridge, firewall, atau pengaturan proxy"
+
+#: ../glade/optionswindow.glade.h:23
+msgid "Disable all networking"
+msgstr ""
 
 #: ../glade/langpanel.glade.h:1
 msgid " "

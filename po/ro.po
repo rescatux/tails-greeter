@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-05 18:46+0200\n"
+"POT-Creation-Date: 2015-11-02 21:29+0100\n"
 "PO-Revision-Date: 2015-07-03 06:32+0000\n"
 "Last-Translator: Di N.\n"
 "Language-Team: Romanian (http://www.transifex.com/projects/p/torproject/"
@@ -186,6 +186,10 @@ msgstr ""
 "Această conexiune la internet a computerului este cenzurată, filtrată, sau "
 "prin proxy. Trebuie să configurați puntea, firewall-ul, sau configurările "
 "proxy."
+
+#: ../glade/optionswindow.glade.h:23
+msgid "Disable all networking"
+msgstr ""
 
 #: ../glade/langpanel.glade.h:1
 msgid " "

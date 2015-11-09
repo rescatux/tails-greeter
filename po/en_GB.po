@@ -4,15 +4,16 @@
 #
 # Translators:
 # Andi Chandler <andi@gowling.com>, 2014
+# newharha ehrara <dbybgohg@yomail.info>, 2015
 # Richard Shaylor <rshaylor@me.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-05 18:46+0200\n"
-"PO-Revision-Date: 2015-07-07 13:19+0000\n"
-"Last-Translator: Andi Chandler <andi@gowling.com>\n"
-"Language-Team: English (United Kingdom) (http://www.transifex.com/projects/p/"
+"POT-Creation-Date: 2015-11-02 21:29+0100\n"
+"PO-Revision-Date: 2015-11-02 00:10+0000\n"
+"Last-Translator: newharha ehrara <dbybgohg@yomail.info>\n"
+"Language-Team: English (United Kingdom) (http://www.transifex.com/otf/"
 "torproject/language/en_GB/)\n"
 "Language: en_GB\n"
 "MIME-Version: 1.0\n"
@@ -181,6 +182,10 @@ msgid ""
 msgstr ""
 "This computer's Internet connection is censored, filtered, or proxied. You "
 "need to configure bridge, firewall, or proxy settings."
+
+#: ../glade/optionswindow.glade.h:23
+msgid "Disable all networking"
+msgstr "Disable all networking"
 
 #: ../glade/langpanel.glade.h:1
 msgid " "

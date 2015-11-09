@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-05 18:46+0200\n"
+"POT-Creation-Date: 2015-11-02 21:29+0100\n"
 "PO-Revision-Date: 2014-10-18 14:31+0000\n"
 "Last-Translator: Leopoldo Sabbatini <leosabbat@hmamail.com>\n"
 "Language-Team: Esperanto (http://www.transifex.com/projects/p/torproject/"
@@ -180,6 +180,10 @@ msgstr ""
 "Interretkonekto de tiu ĉi komputilo estas cenzurata, filtrata aŭ konektita "
 "per prokurilo. Vi bezonas agordi ponton, fajroŝirmilo aŭ agordoj por la "
 "prokurilo."
+
+#: ../glade/optionswindow.glade.h:23
+msgid "Disable all networking"
+msgstr ""
 
 #: ../glade/langpanel.glade.h:1
 msgid " "

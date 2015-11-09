@@ -3,19 +3,20 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
+# Anders Nilsson <locally@devode.se>, 2015
 # GabSeb, 2014
-# leveebreaks <when.the.levee.breaks.89@gmail.com>, 2014
+# leveebreaks, 2014
 # WinterFairy <winterfairy@riseup.net>, 2013
 # WinterFairy <winterfairy@riseup.net>, 2013-2014
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-05 18:46+0200\n"
-"PO-Revision-Date: 2014-10-11 21:10+0000\n"
-"Last-Translator: leveebreaks <when.the.levee.breaks.89@gmail.com>\n"
-"Language-Team: Swedish (http://www.transifex.com/projects/p/torproject/"
-"language/sv/)\n"
+"POT-Creation-Date: 2015-11-02 21:29+0100\n"
+"PO-Revision-Date: 2015-10-28 11:42+0000\n"
+"Last-Translator: Anders Nilsson <locally@devode.se>\n"
+"Language-Team: Swedish (http://www.transifex.com/otf/torproject/language/"
+"sv/)\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -184,6 +185,10 @@ msgstr ""
 "Den här datorns Internetanslutning är censorerad, filtrerad eller går genom "
 "en proxy. Du behöver konfigurera brygg-, brandväggs- eller "
 "proxyinställningar."
+
+#: ../glade/optionswindow.glade.h:23
+msgid "Disable all networking"
+msgstr "Inaktivera alla nätverk"
 
 #: ../glade/langpanel.glade.h:1
 msgid " "

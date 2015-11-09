@@ -6,17 +6,18 @@
 # her_tor_es_ar <inactive+her_tor_es_ar@transifex.com>, 2014
 # Animalcustomize <inacho24@hotmail.com>, 2014
 # Noel Torres <envite@rolamasao.org>, 2013
+# ROSA CRUELLS <thelmacat65@hotmail.com>, 2015
 # strel, 2013-2014
 # strel, 2012-2013
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-05 18:46+0200\n"
-"PO-Revision-Date: 2015-06-16 12:20+0000\n"
-"Last-Translator: Emma Peel\n"
-"Language-Team: Spanish (http://www.transifex.com/projects/p/torproject/"
-"language/es/)\n"
+"POT-Creation-Date: 2015-11-02 21:29+0100\n"
+"PO-Revision-Date: 2015-10-29 21:10+0000\n"
+"Last-Translator: ROSA CRUELLS <thelmacat65@hotmail.com>\n"
+"Language-Team: Spanish (http://www.transifex.com/otf/torproject/language/"
+"es/)\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,7 +26,7 @@ msgstr ""
 
 #: ../glade/persistencewindow.glade.h:1
 msgid "Forward"
-msgstr "Adelante"
+msgstr "enviar"
 
 #: ../glade/persistencewindow.glade.h:2 ../glade/optionswindow.glade.h:1
 msgid "Login"
@@ -188,6 +189,10 @@ msgstr ""
 "proxyficada. Tendrá que configurar un repetidor puente ('bridge'), un  "
 "cortafuegos ('firewall'), o las configuraciones para proxy."
 
+#: ../glade/optionswindow.glade.h:23
+msgid "Disable all networking"
+msgstr "Desactivar todas las redes"
+
 #: ../glade/langpanel.glade.h:1
 msgid " "
 msgstr " "
@@ -202,7 +207,7 @@ msgstr "Localización"
 
 #: ../glade/langpanel.glade.h:4
 msgid "Layout"
-msgstr "Composición"
+msgstr "Diseño"
 
 #: ../tailsgreeter/persistence.py:59
 #, python-format
@@ -210,7 +215,7 @@ msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
 msgstr ""
-"live-persist falló devolviendo el código %(returncode)s: \n"
+"live-persist falló con el código de retorno %(returncode)s: \n"
 "%(stderr)s"
 
 #: ../tailsgreeter/persistence.py:99
@@ -220,7 +225,7 @@ msgid ""
 "%(stdout)s\n"
 "%(stderr)s"
 msgstr ""
-"cryptsetup falló devolviendo el código %(returncode)s: \n"
+"cryptsetup falló con el código de retorno %(returncode)s: \n"
 "%(stdout)s \n"
 "%(stderr)s"
 
@@ -231,7 +236,7 @@ msgid ""
 "%(stdout)s\n"
 "%(stderr)s"
 msgstr ""
-"live-persist falló devolviendo el código %(returncode)s: \n"
+"live-persist falló con el código de retorno %(returncode)s: \n"
 "%(stdout)s \n"
 "%(stderr)s"
 

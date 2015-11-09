@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-05 18:46+0200\n"
+"POT-Creation-Date: 2015-11-02 21:29+0100\n"
 "PO-Revision-Date: 2015-02-07 12:41+0000\n"
 "Last-Translator: git12a <git12@openmailbox.org>\n"
 "Language-Team: Tamil (http://www.transifex.com/projects/p/torproject/"
@@ -178,6 +178,10 @@ msgid ""
 msgstr ""
 "இந்த கணினியின் இணைய இணைப்பில் தணிக்கை, வடிகட்டிதல் அல்லது Proxy போன்ற தடைகளுள்ளன. நீங்கள் "
 "Bridge, Firewall அல்லது Proxy அமைப்புகளை கட்டமைக்கவேண்டும்."
+
+#: ../glade/optionswindow.glade.h:23
+msgid "Disable all networking"
+msgstr ""
 
 #: ../glade/langpanel.glade.h:1
 msgid " "

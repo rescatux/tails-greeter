@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-05 18:46+0200\n"
+"POT-Creation-Date: 2015-11-02 21:29+0100\n"
 "PO-Revision-Date: 2015-07-20 15:14+0000\n"
 "Last-Translator: Ojārs Balcers <ojars.balcers@gmail.com>\n"
 "Language-Team: Latvian (http://www.transifex.com/projects/p/torproject/"
@@ -183,6 +183,10 @@ msgid ""
 msgstr ""
 "Jūsu datora savienojums ar internetu ir cenzēts, filtrēts vai starpniekots. "
 "Jums jākonfigurē tiltu, ugunsmūru vai starpniekserveru iestatījumi."
+
+#: ../glade/optionswindow.glade.h:23
+msgid "Disable all networking"
+msgstr ""
 
 #: ../glade/langpanel.glade.h:1
 msgid " "

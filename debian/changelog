@@ -1,3 +1,24 @@
+tails-greeter (0.8.14) testing; urgency=medium
+
+  * Import PO files from Transifex, update POT and PO files.
+
+ -- anonym <anonym@riseup.net>  Tue, 03 Nov 2015 00:33:42 +0100
+
+tails-greeter (0.8.13) devel; urgency=medium
+
+  * Add option for completely disabling networking.
+  * Bump the "nice" options window height.
+  * Changing the "login" french translation
+  * Import PO files from Transifex, update POT and PO files.
+
+ -- anonym <anonym@riseup.net>  Mon, 26 Oct 2015 17:51:56 +0100
+
+tails-greeter (0.8.12) stable; urgency=medium
+
+  * Import PO files from Transifex, update POT and PO files.
+
+ -- anonym <anonym@riseup.net>  Sun, 20 Sep 2015 18:36:16 +0200
+
 tails-greeter (0.8.11+jessie3) feature-jessie; urgency=medium
 
   * LangPanel: also issue set_size_request() upon screen size and monitors
