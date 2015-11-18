@@ -22,7 +22,7 @@ GDM greeter for Tails project using gtk
 """
 
 import logging, logging.config
-from gi.repository import Gtk, Gdk
+from gi.repository import Gtk
 import sys, os
 import tailsgreeter.gdmclient
 
@@ -117,9 +117,6 @@ class CommunityGreeterApp():
         logging.debug("login called")
         for view in self._loaded_windows:
             view.window.hide()
-        self._loaded_windows[0].window.get_root_window().set_cursor(
-            Gdk.Cursor.new(Gdk.CursorType.WATCH)
-        )
         self.gdmclient.do_login(tailsgreeter.config.LUSER)
 
     def usermanager_loaded(self):
