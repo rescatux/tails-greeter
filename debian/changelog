@@ -1,3 +1,9 @@
+tails-greeter (0.8.14+jessie4) feature-jessie; urgency=medium
+
+  * Start tails-unblock-network in the background.
+
+ -- intrigeri <intrigeri@boum.org>  Wed, 18 Nov 2015 09:48:01 +0000
+
 tails-greeter (0.8.14+jessie3) feature-jessie; urgency=medium
 
   * Revert "Display hourglass cursor during login, as long
