@@ -1,3 +1,11 @@
+tails-greeter (0.8.14+jessie3) feature-jessie; urgency=medium
+
+  * Revert "Display hourglass cursor during login, as long
+    as the Greeter is up". It has a problematic side effect
+    that I could not easily cancel.
+
+ -- intrigeri <intrigeri@boum.org>  Wed, 18 Nov 2015 08:07:43 +0000
+
 tails-greeter (0.8.14+jessie2) feature-jessie; urgency=medium
 
   * Hide greeter windows before logging in
