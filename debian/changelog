@@ -1,3 +1,11 @@
+tails-greeter (0.8.14+jessie2) feature-jessie; urgency=medium
+
+  * Hide greeter windows before logging in
+  * Don't indent with tabs.
+  * Display hourglass cursor during login, as long as the Greeter is up.
+
+ -- intrigeri <intrigeri@boum.org>  Wed, 18 Nov 2015 07:29:29 +0000
+
 tails-greeter (0.8.14+jessie1) feature-jessie; urgency=medium
 
   * Merge from master (Wheezy) branch.
