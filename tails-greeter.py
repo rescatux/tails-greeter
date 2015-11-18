@@ -115,7 +115,7 @@ class CommunityGreeterApp():
     def login(self):
         """Login GDM to the server"""
         logging.debug("login called")
-        for view in [self.langpanel, self.persistencewindow, self.optionswindow]:
+        for view in self._loaded_windows:
             view.window.hide()
         self.gdmclient.do_login(tailsgreeter.config.LUSER)
 
