@@ -44,7 +44,6 @@ from pipes import quote
 
 import tailsgreeter.config
 import tailsgreeter.rootaccess
-import tailsgreeter.camouflage
 import tailsgreeter.persistence
 import tailsgreeter.physicalsecurity
 
@@ -82,7 +81,6 @@ class CommunityGreeterApp():
             locale_selected_cb = self.locale_selected
         )
         self.rootaccess = tailsgreeter.rootaccess.RootAccessSettings()
-        self.camouflage = tailsgreeter.camouflage.CamouflageSettings()
         self.physical_security = tailsgreeter.physicalsecurity.PhysicalSecuritySettings()
 
         # Load views

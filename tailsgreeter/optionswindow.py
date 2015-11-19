@@ -40,7 +40,6 @@ class OptionsWindow(TranslatableWindow):
         self.entry_password2 = builder.get_object("password_entry2")
         self.warning_label = builder.get_object("warning_label")
         self.warning_area = builder.get_object("warning_area")
-        self.camouflage_checkbox = builder.get_object("camouflage_checkbox")
         self.macspoof_checkbox = builder.get_object("macspoof_checkbox")
         self.macspoof_checkbox.set_active(True)
         self.netconf_direct = builder.get_object("netconf_direct")
@@ -112,11 +111,6 @@ class OptionsWindow(TranslatableWindow):
         if password:
             self.greeter.rootaccess.password = password
 
-    def set_camouflage(self):
-        """Set camouflage theme"""
-        if self.camouflage_checkbox.get_active():
-            self.greeter.camouflage.os = 'win8'
-
     def set_macspoof(self):
         """Set macspoof status"""
         self.greeter.physical_security.macspoof = self.macspoof_checkbox.get_active()
@@ -144,7 +138,6 @@ class OptionsWindow(TranslatableWindow):
         if self.validate_options():
             self.greeter.login()
             self.set_password()
-            self.set_camouflage()
             self.set_macspoof()
             self.set_netconf()
 
