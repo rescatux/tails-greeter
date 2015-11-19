@@ -1,3 +1,9 @@
+tails-greeter (0.8.14+jessie4+nocamouflage) feature-jessie; urgency=medium
+
+  * Remove the Windows camouflage option.
+
+ -- intrigeri <intrigeri@boum.org>  Thu, 19 Nov 2015 11:11:47 +0000
+
 tails-greeter (0.8.14+jessie4) feature-jessie; urgency=medium
 
   * Start tails-unblock-network in the background.
