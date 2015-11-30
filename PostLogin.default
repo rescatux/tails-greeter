@@ -71,8 +71,8 @@ if [ -z "${LIVE_USERNAME}" ] ; then
 fi
 
 ### Physical security
-log "Running /usr/local/sbin/tails-unblock-network..."
-/usr/local/sbin/tails-unblock-network &
+log "Running /usr/local/lib/tails-unblock-network..."
+/usr/local/lib/tails-unblock-network &
 
 ### Localization
 
