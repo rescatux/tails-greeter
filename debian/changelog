@@ -1,3 +1,10 @@
+tails-greeter (0.8.14+jessie4+nocamouflage+10658) feature-10658-clean-up-path; urgency=medium
+
+  * Take into account that tails-unblock-network now lives in /usr/local/lib.
+    (refs: #10658)
+
+ -- intrigeri <intrigeri@boum.org>  Mon, 30 Nov 2015 14:39:48 +0000
+
 tails-greeter (0.8.14+jessie4+nocamouflage) feature-jessie; urgency=medium
 
   * Remove the Windows camouflage option.
