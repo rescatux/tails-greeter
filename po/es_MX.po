@@ -3,196 +3,188 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# lucas alkaid vicente <alkaidw@gmail.com>, 2012
-# Communia <ameaneantie@riseup.net>, 2013-2015
-# carlo giusepe tadei valente sasaki <carlo.gt.valente@gmail.com>, 2014
-# Eduardo Bonsi, 2013
-# Bruno Geronimo <bruuh@outlook.com>, 2012
-# Gilberto Coutinho <gilberto.jsc@gmail.com>, 2015
-# Isabel Ferreira, 2014
-# Killer <luis_zik13@hotmail.com>, 2012
-# Rafael Martins <rafaelmartinsrm@gmail.com>, 2012
-# Samuel Facchinello <samuelfac@gmail.com>, 2013
+# Arturo J. Gueta Lozano <arturo@gueta.net>, 2015
+# Jose Ramon Munguia <ramon.munguia@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-26 17:51+0100\n"
-"PO-Revision-Date: 2015-10-27 11:30+0000\n"
-"Last-Translator: Gilberto Coutinho <gilberto.jsc@gmail.com>\n"
-"Language-Team: Portuguese (Brazil) (http://www.transifex.com/otf/torproject/language/pt_BR/)\n"
+"POT-Creation-Date: 2015-11-02 21:29+0100\n"
+"PO-Revision-Date: 2015-12-07 16:05+0000\n"
+"Last-Translator: Arturo J. Gueta Lozano <arturo@gueta.net>\n"
+"Language-Team: Spanish (Mexico) (http://www.transifex.com/otf/torproject/language/es_MX/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pt_BR\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: es_MX\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../glade/persistencewindow.glade.h:1
 msgid "Forward"
-msgstr "Adiante"
+msgstr "Adelante"
 
 #: ../glade/persistencewindow.glade.h:2 ../glade/optionswindow.glade.h:1
 msgid "Login"
-msgstr "Login"
+msgstr "Iniciar Sesión"
 
 #: ../glade/persistencewindow.glade.h:3 ../glade/optionswindow.glade.h:2
 msgid "Welcome to Tails"
-msgstr "Bem-vindo ao Tails"
+msgstr "Bienvenido a Tails"
 
 #: ../glade/persistencewindow.glade.h:4
 msgid "Use persistence?"
-msgstr "Usar persistência?"
+msgstr "Utilizar Persistencia?"
 
 #: ../glade/persistencewindow.glade.h:5
 msgid "<a href=\"doc/first_steps/persistence/use.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/persistence/use.en.html\">Documentação</a>"
+msgstr "<a href=\"doc/first_steps/persistence/use.en.html\">Documentación</a>"
 
 #: ../glade/persistencewindow.glade.h:6
 msgid "Yes"
-msgstr "Sim"
+msgstr "Si"
 
 #: ../glade/persistencewindow.glade.h:7
 msgid "No"
-msgstr "Não"
+msgstr "No"
 
 #: ../glade/persistencewindow.glade.h:8
 msgid "Passphrase:"
-msgstr "Senha:"
+msgstr "Palabra clave:"
 
 #: ../glade/persistencewindow.glade.h:9
 msgid "Read-Only?"
-msgstr "Somente leitura?"
+msgstr "Solo Lectura?"
 
 #: ../glade/persistencewindow.glade.h:10
 msgid "<i>Wrong passphrase. Please try again.</i>"
-msgstr "<i>Senha incorreta. Por favor, tente novamente.</i>"
+msgstr "<i>Palabra clave incorrecta. Por favor intenta de nuevo.</i>"
 
 #: ../glade/persistencewindow.glade.h:11
 msgid "More options?"
-msgstr "Mais opções?"
+msgstr "¿Mas opciones?"
 
 #: ../glade/optionswindow.glade.h:3
 msgid "Administration password"
-msgstr "Senha do administrador"
+msgstr "Password de Administrador"
 
 #: ../glade/optionswindow.glade.h:4
 msgid ""
 "<a "
 "href=\"doc/first_steps/startup_options/administration_password.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/administration_password.en.html\">Documentação</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/administration_password.en.html\">Documentación</a>"
 
 #: ../glade/optionswindow.glade.h:5
 msgid ""
 "Enter an administration password in case you need to perform administration tasks.\n"
 "Otherwise it will be disabled for better security."
-msgstr "Crie uma senha do administrador caso você precise realizar tarefas administrativas.\nCaso contrário, para maior segurança, essa função será desabilitada ."
+msgstr "Ingrese una contraseña de administrador en caso de que necesites realizar tareas de administrador.\nEn caso contrario será desactivado por motivos de seguridad."
 
 #: ../glade/optionswindow.glade.h:7
 msgid "Password:"
-msgstr "Senha:"
+msgstr "Contraseña:"
 
 #: ../glade/optionswindow.glade.h:8
 msgid "Verify Password:"
-msgstr "Verifique a senha:"
+msgstr "Verificar Contraseña:"
 
 #: ../glade/optionswindow.glade.h:9
 msgid "<i>Passwords do not match</i>"
-msgstr "<i>As senhas não correspondem</i>"
+msgstr "<i>Las contraseñas no coinciden</i>"
 
 #: ../glade/optionswindow.glade.h:10
 msgid "Windows camouflage"
-msgstr "Camuflagem do Windows"
+msgstr "Camuflaje de Windows"
 
 #: ../glade/optionswindow.glade.h:11
 msgid ""
 "<a "
 "href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">Documentação</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">Documentación</a>"
 
 #: ../glade/optionswindow.glade.h:12
 msgid ""
 "This option makes Tails look more like Microsoft Windows 8. This may be "
 "useful in public places in order to avoid attracting suspicion."
-msgstr "Esta opção faz o Tails parecer-se com o Microsoft Windows 8, o que pode set útil para não atrair suspeitas em lugares públicos.  "
+msgstr "Esta opción hace a Tails parecerse mas a Windows 8. Puede ser útil en lugares públicos a fin de evitar levantar sospechas."
 
 #: ../glade/optionswindow.glade.h:13
 msgid "Activate Microsoft Windows 8 Camouflage"
-msgstr "Ativar a camuflagem Microsoft Windows 8."
+msgstr "Activar Camuflaje Microsoft Windows 8"
 
 #: ../glade/optionswindow.glade.h:14
 msgid "MAC address spoofing"
-msgstr "Burlar os endereços MAC"
+msgstr "MAC address spoofing"
 
 #: ../glade/optionswindow.glade.h:15
 msgid ""
 "<a "
 "href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Documentação</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Documentación</a>"
 
 #: ../glade/optionswindow.glade.h:16
 msgid ""
 "Spoofing MAC addresses hides the serial number of your network cards to the "
 "local networks. This can help you hide your geographical location."
-msgstr "Burlar os endereços MAC ocultará da rede local o número de série das suas placas de rede. Isso poderá ajudá-lo a ocultar a sua localização geográfica.  "
+msgstr "Spoofing MAC addresses oculta el numero de serie de tu tarjeta e red dentro de la red local. Esto te ayuda a ocultar tu ubicación geográfica."
 
 #: ../glade/optionswindow.glade.h:17
 msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
 "suspicion or cause network connection problems."
-msgstr "Em geral, burlar endereços MAC é mais seguro, mas também pode aumentar suspeitas ou causar problemas de conexão de rede."
+msgstr "Generalmente es mas seguro el Spoof MAC addresses, pero también podría levantar sospechas o causar problemas de conexión de la red."
 
 #: ../glade/optionswindow.glade.h:18
 msgid "Spoof all MAC addresses"
-msgstr "Burlar todos os endereços MAC"
+msgstr "Husmear en todas las MAC addesses"
 
 #: ../glade/optionswindow.glade.h:19
 msgid "Network configuration"
-msgstr "Configuração de rede"
+msgstr "Configuración de red"
 
 #: ../glade/optionswindow.glade.h:20
 msgid ""
 "<a "
 "href=\"doc/first_steps/startup_options/network_configuration.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/network_configuration.en.html\">Documentação</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/network_configuration.en.html\">Documentación</a>"
 
 #: ../glade/optionswindow.glade.h:21
 msgid ""
 "This computer's Internet connection is clear of obstacles. You would like to"
 " connect directly to the Tor network."
-msgstr "A conexão deste computador a Internet não apresenta obstáculos. Prefira conectar-se diretamente à rede Tor."
+msgstr "La conexión a internet de esta computadora está libre de obstáculos. ¿Deseas conectarte directamente a la red de Tor?"
 
 #: ../glade/optionswindow.glade.h:22
 msgid ""
 "This computer's Internet connection is censored, filtered, or proxied. You "
 "need to configure bridge, firewall, or proxy settings."
-msgstr "A conexão a Internet desse computador está censurada, filtrada ou atrás de um proxy. Você precisa configurar as opções de ponte, de firewall ou de proxy."
+msgstr "La conexión a intetnet de esta computadora está censurada, filtrada o pasa a través de un proxy. Es necesario configurar los ajustes del puente, cortafuegos o proxy."
 
 #: ../glade/optionswindow.glade.h:23
 msgid "Disable all networking"
-msgstr "Desativar toda rede"
+msgstr "Desactivar toda actividad."
 
 #: ../glade/langpanel.glade.h:1
 msgid " "
-msgstr " "
+msgstr "."
 
 #: ../glade/langpanel.glade.h:2 ../tailsgreeter/langpanel.py:43
 msgid "Language"
-msgstr "Idioma"
+msgstr "Lenguaje"
 
 #: ../glade/langpanel.glade.h:3
 msgid "Locale"
-msgstr "Local"
+msgstr "Lugar"
 
 #: ../glade/langpanel.glade.h:4
 msgid "Layout"
-msgstr "Layout"
+msgstr "Diseño"
 
 #: ../tailsgreeter/persistence.py:59
 #, python-format
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
-msgstr "live-persiste falhou com código de retorno %(returncode)s:\n%(stderr)s"
+msgstr "live-persist falló regresando codigo de error %(returncode)s:%(stderr)s"
 
 #: ../tailsgreeter/persistence.py:99
 #, python-format
@@ -200,7 +192,7 @@ msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "cryptsetup não pôde retornar o código %(returncode)s:\n%(stdout)s\n%(stderr)s"
+msgstr "cryptsetup falló regresando codigo de error %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
 #: ../tailsgreeter/persistence.py:124
 #, python-format
@@ -208,9 +200,9 @@ msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "live-persist não pôde retornar o código %(returncode)s:\n%(stdout)s\n%(stderr)s"
+msgstr "live-persist falló regresando codigo de error %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
 #: ../tailsgreeter/langpanel.py:123 ../tailsgreeter/langpanel.py:150
 #: ../tailsgreeter/langpanel.py:183
 msgid "Other..."
-msgstr "Outro..."
+msgstr "Otro..."

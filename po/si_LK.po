@@ -1,22 +1,21 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # ganeshwaki <ganeshwaki@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-02 21:29+0100\n"
+"Report-Msgid-Bugs-To: https://trac.torproject.org/projects/tor\n"
+"POT-Creation-Date: 2013-05-12 19:29+0200\n"
 "PO-Revision-Date: 2013-06-07 09:20+0000\n"
 "Last-Translator: ganeshwaki <ganeshwaki@gmail.com>\n"
-"Language-Team: Sinhala (Sri Lanka) (http://www.transifex.com/projects/p/"
-"torproject/language/si_LK/)\n"
-"Language: si_LK\n"
+"Language-Team: Sinhala (Sri Lanka) (http://www.transifex.com/projects/p/torproject/language/si_LK/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: si_LK\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../glade/persistencewindow.glade.h:1
@@ -36,30 +35,26 @@ msgid "Use persistence?"
 msgstr "ස්ථාවර භාවිතා කරනවාද?"
 
 #: ../glade/persistencewindow.glade.h:5
-msgid "<a href=\"doc/first_steps/persistence/use.en.html\">Documentation</a>"
-msgstr ""
-
-#: ../glade/persistencewindow.glade.h:6
 msgid "Yes"
 msgstr "ඔව්"
 
-#: ../glade/persistencewindow.glade.h:7
+#: ../glade/persistencewindow.glade.h:6
 msgid "No"
 msgstr "නැත"
 
-#: ../glade/persistencewindow.glade.h:8
+#: ../glade/persistencewindow.glade.h:7
 msgid "Passphrase:"
 msgstr "මුරවැකිය:"
 
-#: ../glade/persistencewindow.glade.h:9
+#: ../glade/persistencewindow.glade.h:8
 msgid "Read-Only?"
 msgstr "කියවීමට-පමණද?"
 
-#: ../glade/persistencewindow.glade.h:10
+#: ../glade/persistencewindow.glade.h:9
 msgid "<i>Wrong passphrase. Please try again.</i>"
 msgstr "<i>වැරදි මුරවැකියකි. කරුණාකර නැවත උත්සාහ කරන්න.</i>"
 
-#: ../glade/persistencewindow.glade.h:11
+#: ../glade/persistencewindow.glade.h:10
 msgid "More options?"
 msgstr "තවත් විකල්ප?"
 
@@ -69,113 +64,41 @@ msgstr "පරිපාලක මුරපදය "
 
 #: ../glade/optionswindow.glade.h:4
 msgid ""
-"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
-"\">Documentation</a>"
-msgstr ""
-
-#: ../glade/optionswindow.glade.h:5
-msgid ""
-"Enter an administration password in case you need to perform administration "
-"tasks.\n"
+"Enter an administration password in case you need to perform administration tasks.\n"
 "Otherwise it will be disabled for better security."
-msgstr ""
-"පරිපාලන කාර්යයන් කිරීමට අවශ්‍ය වුවිට පරිපාලක මුරපදය ඇතුළත් කරන්න .\n"
-"එසේ නොමැති වුවහොත් වඩා ආරක්ෂාව සදහා එය දුබල වනු ඇත."
+msgstr "පරිපාලන කාර්යයන් කිරීමට අවශ්‍ය වුවිට පරිපාලක මුරපදය ඇතුළත් කරන්න .\nඑසේ නොමැති වුවහොත් වඩා ආරක්ෂාව සදහා එය දුබල වනු ඇත."
 
-#: ../glade/optionswindow.glade.h:7
+#: ../glade/optionswindow.glade.h:6
 msgid "Password:"
 msgstr "මුරපදය:"
 
-#: ../glade/optionswindow.glade.h:8
+#: ../glade/optionswindow.glade.h:7
 msgid "Verify Password:"
 msgstr "මුරපදය සත්‍යාපනය කරන්න:"
 
-#: ../glade/optionswindow.glade.h:9
+#: ../glade/optionswindow.glade.h:8
 msgid "<i>Passwords do not match</i>"
 msgstr "<i>මුරපද ගැලපෙන්නේ නැත</i>"
 
-#: ../glade/optionswindow.glade.h:10
-#, fuzzy
-msgid "Windows camouflage"
+#: ../glade/optionswindow.glade.h:9
+msgid "Windows Camouflage"
 msgstr "Windows ව්‍යාජ ආවරණයක් යෙදවීම "
 
-#: ../glade/optionswindow.glade.h:11
+#: ../glade/optionswindow.glade.h:10
 msgid ""
-"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
-"\">Documentation</a>"
-msgstr ""
-
-#: ../glade/optionswindow.glade.h:12
-#, fuzzy
-msgid ""
-"This option makes Tails look more like Microsoft Windows 8. This may be "
+"This option makes Tails look more like Microsoft Windows XP. This may be "
 "useful in public places in order to avoid attracting suspicion."
-msgstr ""
-"මෙම විකල්පය මගින් Tails මයික්‍රොසොෆ්ට් Windows XP වලට  බොහෝ සෙයින් සමාන කරවයි. මෙය පොදු "
-"ස්ථානවලදී සැකයට තුඩුදෙන දේ වැලක්වීමට උපකාරී වේ."
+msgstr "මෙම විකල්පය මගින් Tails මයික්‍රොසොෆ්ට් Windows XP වලට  බොහෝ සෙයින් සමාන කරවයි. මෙය පොදු ස්ථානවලදී සැකයට තුඩුදෙන දේ වැලක්වීමට උපකාරී වේ."
 
-#: ../glade/optionswindow.glade.h:13
-#, fuzzy
-msgid "Activate Microsoft Windows 8 Camouflage"
+#: ../glade/optionswindow.glade.h:11
+msgid "Activate Microsoft Windows XP Camouflage"
 msgstr "මයික්‍රොසොෆ්ට් Windows XP ව්‍යාජ ආවරණයක් යෙදවීම සක්‍රීය කරන්න "
-
-#: ../glade/optionswindow.glade.h:14
-msgid "MAC address spoofing"
-msgstr ""
-
-#: ../glade/optionswindow.glade.h:15
-msgid ""
-"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
-"\">Documentation</a>"
-msgstr ""
-
-#: ../glade/optionswindow.glade.h:16
-msgid ""
-"Spoofing MAC addresses hides the serial number of your network cards to the "
-"local networks. This can help you hide your geographical location."
-msgstr ""
-
-#: ../glade/optionswindow.glade.h:17
-msgid ""
-"It is generally safer to spoof MAC addresses, but it might also raise "
-"suspicion or cause network connection problems."
-msgstr ""
-
-#: ../glade/optionswindow.glade.h:18
-msgid "Spoof all MAC addresses"
-msgstr ""
-
-#: ../glade/optionswindow.glade.h:19
-msgid "Network configuration"
-msgstr ""
-
-#: ../glade/optionswindow.glade.h:20
-msgid ""
-"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
-"\">Documentation</a>"
-msgstr ""
-
-#: ../glade/optionswindow.glade.h:21
-msgid ""
-"This computer's Internet connection is clear of obstacles. You would like to "
-"connect directly to the Tor network."
-msgstr ""
-
-#: ../glade/optionswindow.glade.h:22
-msgid ""
-"This computer's Internet connection is censored, filtered, or proxied. You "
-"need to configure bridge, firewall, or proxy settings."
-msgstr ""
-
-#: ../glade/optionswindow.glade.h:23
-msgid "Disable all networking"
-msgstr ""
 
 #: ../glade/langpanel.glade.h:1
 msgid " "
 msgstr "                                                                   "
 
-#: ../glade/langpanel.glade.h:2 ../tailsgreeter/langpanel.py:43
+#: ../glade/langpanel.glade.h:2 ../GdmGreeter/langpanel.py:42
 msgid "Language"
 msgstr "භාෂාව"
 
@@ -187,38 +110,30 @@ msgstr "පෙදෙසිය"
 msgid "Layout"
 msgstr "පිරිසැලසුම"
 
-#: ../tailsgreeter/persistence.py:59
+#: ../GdmGreeter/persistence.py:59
 #, python-format
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
-msgstr ""
-"පිලිසංකේතයක් සහිතව සජීවී-ස්ථාවර %(returncode)s:\n"
-"%(stderr)s"
+msgstr "පිලිසංකේතයක් සහිතව සජීවී-ස්ථාවර %(returncode)s:\n%(stderr)s"
 
-#: ../tailsgreeter/persistence.py:99
+#: ../GdmGreeter/persistence.py:99
 #, python-format
 msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr ""
-"පිලිකේතයක් සහිතව cryptsetup බිදවැටුණි %(returncode)s:\n"
-"%(stdout)s\n"
-"%(stderr)s"
+msgstr "පිලිකේතයක් සහිතව cryptsetup බිදවැටුණි %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
-#: ../tailsgreeter/persistence.py:124
+#: ../GdmGreeter/persistence.py:124
 #, python-format
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr ""
-"පිලිකේතයක් සහිතවසජීවී-ස්ථාවර බිදවැටුණි %(returncode)s:\n"
-"%(stdout)s\n"
-"%(stderr)s"
+msgstr "පිලිකේතයක් සහිතවසජීවී-ස්ථාවර බිදවැටුණි %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
-#: ../tailsgreeter/langpanel.py:123 ../tailsgreeter/langpanel.py:150
-#: ../tailsgreeter/langpanel.py:183
+#: ../GdmGreeter/langpanel.py:124 ../GdmGreeter/langpanel.py:148
+#: ../GdmGreeter/langpanel.py:181
 msgid "Other..."
 msgstr "වෙනත්..."
