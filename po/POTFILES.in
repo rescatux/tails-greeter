@@ -5,7 +5,6 @@ glade/langpanel.glade
 tailsgreeter/__init__.py
 tailsgreeter/optionswindow.py
 tailsgreeter/rootaccess.py
-tailsgreeter/camouflage.py
 tailsgreeter/gdmclient.py
 tailsgreeter/persistence.py
 tailsgreeter/persistencewindow.py

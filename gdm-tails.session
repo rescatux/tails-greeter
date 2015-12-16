@@ -1,0 +1,5 @@
+[GNOME Session]
+Name=Display Manager
+RequiredComponents=gnome-flashback;tails-greeter;gnome-settings-daemon;metacity;
+RequiredProviders=windowmanager;
+DefaultProvider-windowmanager=metacity;

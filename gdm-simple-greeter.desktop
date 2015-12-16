@@ -1,9 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=GDM Tails Greeter
-Exec=/usr/bin/tails-greeter
-OnlyShowIn=GNOME;
-X-GNOME-Autostart-Phase=Application
-X-GNOME-Autostart-Notify=true
-X-GNOME-AutoRestart=true
-X-Ubuntu-Gettext-Domain=gdm

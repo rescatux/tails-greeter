@@ -4,6 +4,40 @@ tails-greeter (0.8.15) stable; urgency=medium
 
  -- anonym <anonym@riseup.net>  Mon, 14 Dec 2015 17:12:26 +0100
 
+tails-greeter (0.8.14+jessie4+nocamouflage) feature-jessie; urgency=medium
+
+  * Remove the Windows camouflage option.
+
+ -- intrigeri <intrigeri@boum.org>  Thu, 19 Nov 2015 11:11:47 +0000
+
+tails-greeter (0.8.14+jessie4) feature-jessie; urgency=medium
+
+  * Start tails-unblock-network in the background.
+
+ -- intrigeri <intrigeri@boum.org>  Wed, 18 Nov 2015 09:48:01 +0000
+
+tails-greeter (0.8.14+jessie3) feature-jessie; urgency=medium
+
+  * Revert "Display hourglass cursor during login, as long
+    as the Greeter is up". It has a problematic side effect
+    that I could not easily cancel.
+
+ -- intrigeri <intrigeri@boum.org>  Wed, 18 Nov 2015 08:07:43 +0000
+
+tails-greeter (0.8.14+jessie2) feature-jessie; urgency=medium
+
+  * Hide greeter windows before logging in
+  * Don't indent with tabs.
+  * Display hourglass cursor during login, as long as the Greeter is up.
+
+ -- intrigeri <intrigeri@boum.org>  Wed, 18 Nov 2015 07:29:29 +0000
+
+tails-greeter (0.8.14+jessie1) feature-jessie; urgency=medium
+
+  * Merge from master (Wheezy) branch.
+
+ -- anonym <anonym@riseup.net>  Mon, 09 Nov 2015 15:27:02 +0100
+
 tails-greeter (0.8.14) testing; urgency=medium
 
   * Import PO files from Transifex, update POT and PO files.
@@ -25,6 +59,33 @@ tails-greeter (0.8.12) stable; urgency=medium
 
  -- anonym <anonym@riseup.net>  Sun, 20 Sep 2015 18:36:16 +0200
 
+tails-greeter (0.8.11+jessie3) feature-jessie; urgency=medium
+
+  * LangPanel: also issue set_size_request() upon screen size and monitors
+    configuration changes. This makes the panel grow to fit the screen when
+    it gets wider; the widgets inside are re-positioned accordingly.
+    We still don't behave nicely when the screen gets narrower, though.
+  * debian/control:
+    - Add Vcs-* control fields.
+    - Declare compliance with Standards-Version 3.9.6 (no change required).
+
+ -- intrigeri <intrigeri@boum.org>  Sun, 30 Aug 2015 10:51:50 +0200
+
+tails-greeter (0.8.11+jessie2) feature-jessie; urgency=medium
+
+  * Make the language panel and the options window (a bit more) responsive
+    to screen size changes.
+  * Mark all Glade files as requiring GTK+ 3.12. Jessie ships with 3.14,
+    and we won't be testing with anything older.
+
+ -- intrigeri <intrigeri@boum.org>  Sat, 29 Aug 2015 22:47:16 +0200
+
+tails-greeter (0.8.11+jessie1) feature-jessie; urgency=medium
+  
+  * Merge from master (Wheezy) branch.
+
+ -- intrigeri <intrigeri@boum.org>  Sat, 29 Aug 2015 18:47:33 +0200
+
 tails-greeter (0.8.11) devel; urgency=medium
 
   * Update POT, and import PO files from Transifex.
@@ -44,11 +105,67 @@ tails-greeter (0.8.9) stable; urgency=medium
 
  -- anonym <anonym@riseup.net>  Mon, 30 Mar 2015 14:57:21 +0200
 
+tails-greeter (0.8.8+jessie6) feature-jessie; urgency=medium
+
+  * Move udevadm mangling back to a tails-unblock-network script.
+  * Add some logging to ease debugging.
+
+ -- Tails developers <tails@boum.org>  Mon, 30 Mar 2015 13:06:54 +0200
+
+tails-greeter (0.8.8+jessie5) feature-jessie; urgency=medium
+
+  * Import udev trigger + settle from tails-unblock-network.service,
+    and start it in a blocking way.
+
+ -- Tails developers <tails@boum.org>  Mon, 30 Mar 2015 10:12:33 +0200
+
+tails-greeter (0.8.8+jessie4) feature-jessie; urgency=medium
+
+  * Do not reload CUPS configuration in PostLogin.default.
+  * Start tails-restricted-network-detector.service a bit earlier.
+  * Start tails-unblock-network via its systemd service.
+  * Start tails-restricted-network-detector.service in a non-blocking way.
+  * Move pre-network-unblock steps to tails-unblock-network.service.
+  * PostLogin: log into the Journal instead of a dedicated log file.
+  * Rename log_error() into log().
+  * Add a bunch of debugging log statements.
+  * Only source /var/lib/gdm3/tails.password if it exists.
+
+ -- Tails developers <tails@boum.org>  Sun, 29 Mar 2015 19:08:57 +0200
+
+tails-greeter (0.8.8+jessie3) feature-jessie; urgency=medium
+
+  * Adjust tails-restricted-network-detector startup to match
+    changes in the main Tails Git repo.
+
+ -- Tails developers <tails@boum.org>  Sat, 07 Mar 2015 22:20:15 +0100
+
+tails-greeter (0.8.8+jessie2) feature-jessie; urgency=medium
+
+  * Use localectl to set the system locale and keyboard mapping,
+    both for X11 and the console.
+  * Drop setting Uni1 for the console codeset: we're now doing it
+    at ISO build time.
+
+ -- Tails developers <tails@boum.org>  Sat, 07 Mar 2015 19:21:03 +0100
+
+tails-greeter (0.8.8+jessie1) feature-jessie; urgency=medium
+
+  * Rebuild for Debian Jessie.
+
+ -- intrigeri <intrigeri@debian.org>  Thu, 26 Feb 2015 10:32:48 +0100
+
 tails-greeter (0.8.8) testing; urgency=medium
 
   * Import PO files from Transifex, update POT and PO files.
 
  -- Tails developers <tails@boum.org>  Wed, 11 Feb 2015 19:31:38 +0100
+
+tails-greeter (0.8.7+jessie1) feature-jessie; urgency=medium
+
+  * Rebuild for Debian Jessie.
+
+ -- intrigeri <intrigeri@debian.org>  Thu, 15 Jan 2015 04:47:59 +0100
 
 tails-greeter (0.8.7) stable; urgency=medium
 
@@ -56,11 +173,35 @@ tails-greeter (0.8.7) stable; urgency=medium
 
  -- Tails developers <tails@boum.org>  Wed, 14 Jan 2015 15:05:57 +0100
 
+tails-greeter (0.8.6+jessie1) feature-jessie; urgency=medium
+
+  * Rebuild for Debian Jessie.
+
+ -- Tails developers <tails@boum.org>  Fri, 05 Dec 2014 12:35:56 +0100
+
 tails-greeter (0.8.6) stable; urgency=low
 
   * Import PO files from Transifex, update POT and PO files.
 
  -- Tails developers <tails@boum.org>  Tue, 02 Dec 2014 10:01:35 +0100
+
+tails-greeter (0.8.5+jessie3) feature-jessie; urgency=low
+
+  * Delete the Live user's password if no administration password is set (Closes: #5589).
+
+ -- Tails developers <tails@boum.org>  Wed, 26 Nov 2014 14:21:42 +0100
+
+tails-greeter (0.8.5+jessie2) feature-jessie; urgency=medium
+
+  * Don't display the Greeter in the Applications menu (Closes: #8267).
+
+ -- Tails developers <tails@boum.org>  Mon, 17 Nov 2014 12:36:42 +0100
+
+tails-greeter (0.8.5+jessie1) feature-jessie; urgency=medium
+
+  * Rebuild for Debian Jessie.
+
+ -- Tails developers <tails@boum.org>  Thu, 16 Oct 2014 16:52:29 +0200
 
 tails-greeter (0.8.5) testing; urgency=medium
 
@@ -77,11 +218,59 @@ tails-greeter (0.8.4) testing; urgency=medium
 
  -- Tails developers <tails@boum.org>  Wed, 08 Oct 2014 21:11:45 +0200
 
+tails-greeter (0.8.3+jessie4) feature-jessie; urgency=medium
+
+  * Add gnome-flashback to the list of required components for the GDM session.
+
+ -- Tails developers <tails@boum.org>  Thu, 02 Oct 2014 16:21:12 +0200
+
+tails-greeter (0.8.3+jessie3) feature-jessie; urgency=medium
+
+  * Fix GNOME session localisation
+  * Make sure /etc/sudoers.d/tails-greeter-no-password-lecture
+    is owned by the root group.
+
+ -- Tails developers <tails@boum.org>  Mon, 15 Sep 2014 10:35:52 -0700
+
+tails-greeter (0.8.3+jessie2) feature-jessie; urgency=medium
+
+  * The autologin service has a new name.
+
+ -- Tails developers <tails@boum.org>  Mon, 08 Sep 2014 14:10:51 +0200
+
+tails-greeter (0.8.3+jessie1) feature-jessie; urgency=medium
+
+  * Set X-GNOME-provides for .desktop.
+
+ -- Tails developers <tails@boum.org>  Fri, 5 Sep 2014 18:07:55 +0200
+
 tails-greeter (0.8.3) stable; urgency=medium
 
   * Import translations from Transifex, update POT and PO files.
 
  -- Tails developers <tails@boum.org>  Sun, 31 Aug 2014 10:37:43 +0200
+
+tails-greeter (0.8.2+jessie2) feature-jessie; urgency=medium
+
+  * Drop debian/source/options: it only contains options that are obsolete
+    in Jessie.
+  * Install tails-greeter.desktop and gdm-tails.session in the upstream
+    packaging bits, not in the Debian ones.
+  * Drop everything about gdm-simple-greeter.desktop, which is obsolete
+    on Jessie.
+  * Don't force bzip2 usage when building binary packages:
+    XZ is the default nowadays.
+
+ -- Tails developers <tails@boum.org>  Mon, 28 Jul 2014 12:07:55 +0200
+
+tails-greeter (0.8.2+jessie1) feature-jessie; urgency=medium
+
+  * Port to GDBus greeter interface
+  * Add a gdm-tails session
+  * Add a desktop file
+  * Adjust gbp.conf to ease working on feature/jessie.
+
+ -- Tails developers <tails@boum.org>  Mon, 28 Jul 2014 00:39:35 +0200
 
 tails-greeter (0.8.2) testing; urgency=medium
 

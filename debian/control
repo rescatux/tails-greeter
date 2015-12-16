@@ -8,8 +8,10 @@ Build-Depends: debhelper (>= 9.20120909~),
                python,
                locales
 Build-Depends-Indep: python-distutils-extra
-Standards-Version: 3.9.3
+Standards-Version: 3.9.6
 X-Python-Version: >= 2.7
+Vcs-Git: https://git-tails.immerda.ch/greeter
+Vcs-Browser: https://git-tails.immerda.ch/greeter
 
 Package: tails-greeter
 Architecture: all
@@ -23,6 +25,7 @@ Depends: python2.7, python (<< 2.8),
          gir1.2-gtk-3.0,
          gir1.2-xkl-1.0,
          gir1.2-webkit-3.0,
+         gnome-flashback,
          live-config,
          python-dbus,
          python-gobject,
@@ -31,6 +34,7 @@ Depends: python2.7, python (<< 2.8),
          python-pyicu,
          sudo,
          ttf-unifont
+Recommends: locales-all
 Conflicts: gdm-community-greeter
 Description: GDM greeter for Tails
  Tails Greeter allows users to choose their preferred language, locale

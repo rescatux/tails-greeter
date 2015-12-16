@@ -11,7 +11,6 @@
 #   $TAILS_XKBLAYOUT, $TAILS_XKBVARIANT, $TAILS_XKBOPTIONS, $CODESET
 # * /var/lib/gdm3/tails.password : $TAILS_USER_PASSWORD
 # * /var/lib/gdm3/tails.persistence : $TAILS_PERSISTENCE_ENABLED
-# * /var/lib/gdm3/tails.camouflage : $TAILS_CAMOUFLAGE_OS
 # * /var/lib/gdm3/tails.physical_security : $TAILS_MACSPOOF_ENABLED
 
 # For whatever reason, /usr/sbin (needed by at least chpasswd)
@@ -26,12 +25,13 @@ CONSET=/etc/default/console-setup
 LOCALE_CFG=/etc/default/locale
 CODSET="Uni1" # universal codeset to properly display glyphs in localized console
 
-log_error() {
-    echo "`date "+day %j of %Y [%T]"` $1" >> /var/log/gdm3/tails-greeter.errors
+log() {
+    echo "$1" >&2
 }
 
 log_n_exit() {
-    log_error "$1"
+    log "$1"
+    log "Leaving PostLogin"
     exit 0
 }
 
@@ -58,6 +58,10 @@ grep_n_set() {
     fi
 }
 
+### Let's go
+
+log "Entering PostLogin"
+
 ### Gather general configuration
 
 # Import the name of the live user
@@ -66,47 +70,9 @@ if [ -z "${LIVE_USERNAME}" ] ; then
     log_n_exit "Username variable not found."
 fi
 
-### Camouflage
-
-CAMOUFLAGE_SETTINGS="/var/lib/gdm3/tails.camouflage"
-if [ -r "${CAMOUFLAGE_SETTINGS}" ] ; then
-    . "${CAMOUFLAGE_SETTINGS}"
-    case "${TAILS_CAMOUFLAGE_OS}" in
-	win8)
-	    install -m 0644 \
-	        /usr/share/applications/tails-activate-win8-theme.desktop \
-	        /etc/xdg/autostart/
-	    ;;
-    esac
-fi
-
 ### Physical security
-# It's important we "export" this setting before unblocking the
-# network; doing so will make the user-set MAC spoofing option apply
-# (via the custom udev rule) when loading the modules for the
-# previously blocked network devices.
-PHYSICAL_SECURITY_SETTINGS="/var/lib/gdm3/tails.physical_security"
-if [ -r "${PHYSICAL_SECURITY_SETTINGS}" ] ; then
-   install -m 0640 -o root -g root \
-      "${PHYSICAL_SECURITY_SETTINGS}" /var/lib/live/config/tails.physical_security
-   sync
-   . "${PHYSICAL_SECURITY_SETTINGS}"
-   if [ "${TAILS_MACSPOOF_ENABLED}" = true ]; then
-      /usr/local/sbin/tails-restricted-network-detector &
-   fi
-   if [ "${TAILS_NETCONF}" = "obstacle" ]; then
-      . /usr/local/lib/tails-shell-library/tor.sh
-      tor_set_in_torrc "DisableNetwork" "1"
-   fi
-   if [ "${TAILS_NETCONF}" != "disabled" ]; then
-       UNBLOCK_NETWORK_LOG="$(/usr/local/sbin/tails-unblock-network 2>&1)"
-       UNBLOCK_NETWORK_RET=$?
-       if [ "${UNBLOCK_NETWORK_RET}" -ne 0 ]; then
-           log_error "tails-unblock-network exited with status ${UNBLOCK_NETWORK_RET} and said:
-${UNBLOCK_NETWORK_LOG}"
-       fi
-   fi
-fi
+log "Running /usr/local/sbin/tails-unblock-network..."
+/usr/local/sbin/tails-unblock-network &
 
 ### Localization
 
@@ -116,13 +82,11 @@ if [ -z "${TAILS_LOCALE_NAME}" ] ; then
     log_n_exit "Locale variable not found."
 fi
 
-# Localize console
-grep_n_set "XKBMODEL" ${KBDSET} ${TAILS_XKBMODEL}
-grep_n_set "XKBLAYOUT" ${KBDSET} ${TAILS_XKBLAYOUT}
-grep_n_set "XKBVARIANT" ${KBDSET} ${TAILS_XKBVARIANT}
-grep_n_set "XKBOPTIONS" ${KBDSET} ${TAILS_XKBOPTIONS}
-force_set "CODESET" ${CONSET} ${CODSET}
-grep_n_set "LANG"       ${LOCALE_CFG} "${TAILS_LOCALE_NAME}.UTF-8"
+# Set the keyboard mapping for X11 and the console
+localectl set-x11-keymap "$TAILS_XKBLAYOUT" "$TAILS_XKBMODEL" "$TAILS_XKBVARIANT" "$TAILS_XKBOPTIONS"
+
+# Set the system locale
+localectl set-locale "LANG=${TAILS_LOCALE_NAME}.UTF-8"
 
 # Save keyboard settings so that tails-configure-keyboard can set it
 # in the GNOME session.
@@ -151,15 +115,12 @@ else
    log_n_exit "'/usr/local/sbin/tails-additional-software' does not exist or is not executable."
 fi
 
-# Reload CUPS configuration to take persistent printers into account if necessary
-if grep -qs '^/etc/cups\s\+' /live/persistence/*_unlocked/persistence.conf ; then
-    service cups force-reload
-fi
-
 ### Password
 
 # Import password for superuser access
-. /var/lib/gdm3/tails.password
+if [ -e /var/lib/gdm3/tails.password ] ; then
+    . /var/lib/gdm3/tails.password
+fi
 
 # Remove password file
 rm --interactive=never -f /var/lib/gdm3/tails.password
@@ -168,10 +129,11 @@ rm --interactive=never -f /var/lib/gdm3/tails.password
 if [ -z "${TAILS_USER_PASSWORD}" ] ; then
     rm -f "${POLKIT}" "${SUDOERS}"
     deluser "${LIVE_USERNAME}" sudo
+    passwd -d "${LIVE_USERNAME}"
+    install -o root -g root -m 0440 /dev/null "${NO_PASSWORD_LECTURE}"
     echo "Defaults:amnesia lecture=always" > "${NO_PASSWORD_LECTURE}"
     echo "Defaults:amnesia lecture_file=/usr/share/tails-greeter/no-password-lecture.txt" >> "${NO_PASSWORD_LECTURE}"
     echo "Defaults:amnesia badpass_message=\"The administration password is disabled.\"" >> "${NO_PASSWORD_LECTURE}"
-    chmod 0440 "${NO_PASSWORD_LECTURE}"
     log_n_exit "Password variable not found."
 fi
 
@@ -195,3 +157,5 @@ sudo -u "${LIVE_USERNAME}" sh -c "echo 'SU_TO_ROOT_SU=sudo' >> /home/${LIVE_USER
 
 # Configure gksu to use sudo
 sudo -u "${LIVE_USERNAME}" gconftool-2 -s -t bool /apps/gksu/sudo-mode true
+
+log "Leaving PostLogin"

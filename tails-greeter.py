@@ -44,7 +44,6 @@ from pipes import quote
 
 import tailsgreeter.config
 import tailsgreeter.rootaccess
-import tailsgreeter.camouflage
 import tailsgreeter.persistence
 import tailsgreeter.physicalsecurity
 
@@ -68,15 +67,12 @@ class CommunityGreeterApp():
         self.forced = False
         self.postponed = False
         self.postponed_text = None
-        self._usermanager_ready = False
-        self._gdmserver_ready = False
         self.ready = False
         self.translated = False
         self._loaded_windows = []
         
         # Load models
         self.gdmclient = tailsgreeter.gdmclient.GdmClient(
-            server_ready_cb=self.server_ready,
             session_opened_cb = self.close_app
         )
         self.persistence = tailsgreeter.persistence.PersistenceSettings()
@@ -85,7 +81,6 @@ class CommunityGreeterApp():
             locale_selected_cb = self.locale_selected
         )
         self.rootaccess = tailsgreeter.rootaccess.RootAccessSettings()
-        self.camouflage = tailsgreeter.camouflage.CamouflageSettings()
         self.physical_security = tailsgreeter.physicalsecurity.PhysicalSecuritySettings()
 
         # Load views
@@ -117,35 +112,22 @@ class CommunityGreeterApp():
 
     def login(self):
         """Login GDM to the server"""
+        logging.debug("login called")
+        for view in self._loaded_windows:
+            view.window.hide()
         self.gdmclient.do_login(tailsgreeter.config.LUSER)
-
-    def server_ready(self):
-        """Server is ready"""
-        logging.debug("Entering server_ready")
-        self._gdmserver_ready = True
-        self.localisationsettings.set_layout('us')
-        self.maybe_show_ui()
 
     def usermanager_loaded(self):
         """UserManager is ready"""
         logging.debug("Entering usermanager_loaded")
-        self._usermanager_ready = True
+        self.ready = True
         self.localisationsettings.set_locale('en_US')
-        self.maybe_show_ui()
+        logging.info("tails-greeter is ready.")
+        self.langpanel.window.show()
+        self.persistencewindow.window.show()
 
     def locale_selected(self, locale):
         self.translate_to(locale)
-
-    def maybe_show_ui(self):
-        """Show UI if server and usermanager are both ready"""
-        logging.debug("Entering maybe_show_ui")
-        if self._gdmserver_ready and self._usermanager_ready:
-            self.ready = True
-            logging.info("tails-greeter is ready.")
-            self.langpanel.window.show()
-            self.persistencewindow.window.show()
-        else:
-            logging.debug("Something is not ready; not showing UI yet")
 
     def close_app(self):
         """We're done, quit gtk app"""

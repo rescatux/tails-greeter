@@ -100,15 +100,32 @@ class LangPanel(TranslatableWindow):
 
         self.populate_languages()
         self.cb_languages.set_active(self.default_position)
-        self.set_panel_geometry()
 
-    def set_panel_geometry(self):
+        # Move/resize the panel whenever the screen size changes. This sometimes
+        # happens with Spice without any user action, due to a race condition
+        # between the initialization of the Greeter and the startup of
+        # spice-vdagent; but it can also happen without any race condition,
+        # if the user manually resizes the VM window.
+        screen = self.window.get_screen()
+        screen.connect("size-changed",     self.resize)
+        # While we're at it, also react when monitors are added/removed.
+        # E.g. the default one could change.
+        screen.connect("monitors-changed", self.resize)
+
+        self.set_panel_geometry(screen)
+
+    def resize(self, screen, data=None):
+        self.set_panel_geometry(screen)
+
+    def set_panel_geometry(self, screen):
         """Position panel to bottom and use full screen width"""
         panel = self.window
         panel.set_gravity(Gdk.Gravity.SOUTH_WEST)
         width, height = panel.get_size()
-        panel.set_default_size(Gdk.Screen.width(), height)
-        panel.move(0, Gdk.Screen.height() - height)
+        ideal_width = screen.width()
+        panel.set_default_size(ideal_width, height)
+        panel.set_size_request(ideal_width, height)
+        panel.move(0, screen.height() - height)
 
     # Populate lists
 

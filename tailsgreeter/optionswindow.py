@@ -40,7 +40,6 @@ class OptionsWindow(TranslatableWindow):
         self.entry_password2 = builder.get_object("password_entry2")
         self.warning_label = builder.get_object("warning_label")
         self.warning_area = builder.get_object("warning_area")
-        self.camouflage_checkbox = builder.get_object("camouflage_checkbox")
         self.macspoof_checkbox = builder.get_object("macspoof_checkbox")
         self.macspoof_checkbox.set_active(True)
         self.netconf_direct = builder.get_object("netconf_direct")
@@ -64,9 +63,22 @@ class OptionsWindow(TranslatableWindow):
         self.entry_password2.connect("changed", cb_pw_changed)
         cb_pw_changed()
 
+        screen = self.dialog.get_screen()
+        screen.connect("size-changed",     self.resize)
+        screen.connect("monitors-changed", self.resize)
+
+        self.set_geometry(screen)
+
+    # Help callback handler
+    cb_doc_handler = HelpWindow.cb_doc_handler
+
+    def resize(self, screen, data=None):
+        self.set_geometry(screen)
+
+    def set_geometry(self, screen):
         ignore, langpanel_height = self.greeter.langpanel.window.get_size()
-        screen_width = self.dialog.get_screen().get_width()
-        screen_height = self.dialog.get_screen().get_height()
+        screen_width = screen.get_width()
+        screen_height = screen.get_height()
         free_height = screen_height - langpanel_height
 
         # These magic values specify a "nice" size for the options
@@ -83,24 +95,21 @@ class OptionsWindow(TranslatableWindow):
         # dialog and move it to the top of the screen, so it won't
         # shadow the language panel.
         if screen_height - height_request < 2*langpanel_height:
-            self.dialog.set_position(Gtk.WindowPosition.NONE)
             self.dialog.move((screen_width-width_request)/2, 0)
+        # otherwise, simply center it within the available space.
+        else:
+            self.dialog.move(
+                (screen_width-width_request)/2,
+                (free_height-height_request)/2
+            )
 
         self.dialog.set_size_request(width_request, height_request)
-
-    # Help callback handler
-    cb_doc_handler = HelpWindow.cb_doc_handler
 
     def set_password(self):
         """Set root access password"""
         password = self.entry_password.get_text()
         if password:
             self.greeter.rootaccess.password = password
-
-    def set_camouflage(self):
-        """Set camouflage theme"""
-        if self.camouflage_checkbox.get_active():
-            self.greeter.camouflage.os = 'win8'
 
     def set_macspoof(self):
         """Set macspoof status"""
@@ -129,7 +138,6 @@ class OptionsWindow(TranslatableWindow):
         if self.validate_options():
             self.greeter.login()
             self.set_password()
-            self.set_camouflage()
             self.set_macspoof()
             self.set_netconf()
 

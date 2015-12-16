@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Tails Greeter
+Exec=tails-greeter
+X-GNOME-Provides=tails-greeter
+NoDisplay=true
