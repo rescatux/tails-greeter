@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # E <ehuseynzade@gmail.com>, 2014
 # emin25 <emin@mastizada.tk>, 2013
@@ -10,14 +10,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-10-15 16:05+0200\n"
+"POT-Creation-Date: 2015-12-16 18:12+0100\n"
 "PO-Revision-Date: 2014-12-30 12:01+0000\n"
 "Last-Translator: E <ehuseynzade@gmail.com>\n"
-"Language-Team: Azerbaijani (http://www.transifex.com/projects/p/torproject/language/az/)\n"
+"Language-Team: Azerbaijani (http://www.transifex.com/projects/p/torproject/"
+"language/az/)\n"
+"Language: az\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: az\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../glade/persistencewindow.glade.h:1
@@ -70,15 +71,21 @@ msgstr "Administrasiya şifrəsi"
 
 #: ../glade/optionswindow.glade.h:4
 msgid ""
-"<a "
-"href=\"doc/first_steps/startup_options/administration_password.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/administration_password.en.html\">Sənədləşmə</a>"
+"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
+"\">Documentation</a>"
+msgstr ""
+"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
+"\">Sənədləşmə</a>"
 
 #: ../glade/optionswindow.glade.h:5
 msgid ""
-"Enter an administration password in case you need to perform administration tasks.\n"
+"Enter an administration password in case you need to perform administration "
+"tasks.\n"
 "Otherwise it will be disabled for better security."
-msgstr "Administrator vəzifələrini yerinə yetirməyə ehtiyacın olduqda administratorun şifrəsini daxil et.\nƏks halda daha yaxşı təhlükəsizlik üçün bu deaktivə ediləcək."
+msgstr ""
+"Administrator vəzifələrini yerinə yetirməyə ehtiyacın olduqda "
+"administratorun şifrəsini daxil et.\n"
+"Əks halda daha yaxşı təhlükəsizlik üçün bu deaktivə ediləcək."
 
 #: ../glade/optionswindow.glade.h:7
 msgid "Password:"
@@ -93,72 +100,70 @@ msgid "<i>Passwords do not match</i>"
 msgstr "<i>Şifrələr eyni deyil</i>"
 
 #: ../glade/optionswindow.glade.h:10
-msgid "Windows camouflage"
-msgstr "Windows kamuflyaj"
-
-#: ../glade/optionswindow.glade.h:11
-msgid ""
-"<a "
-"href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">Sənədləşmə</a>"
-
-#: ../glade/optionswindow.glade.h:12
-msgid ""
-"This option makes Tails look more like Microsoft Windows 8. This may be "
-"useful in public places in order to avoid attracting suspicion."
-msgstr "Bu seçim Tails-i daha çox Microsoft Windows 8-ə bənzədir. İctimai yerlərdə cəlbedici şübhələrdən qaçınmaq üçün bu yararlı ola bilər."
-
-#: ../glade/optionswindow.glade.h:13
-msgid "Activate Microsoft Windows 8 Camouflage"
-msgstr "Microsoft Windows 8 Kamuflyajını Aktivləşdir"
-
-#: ../glade/optionswindow.glade.h:14
 msgid "MAC address spoofing"
 msgstr "MAC ünvan aldadıcı"
 
-#: ../glade/optionswindow.glade.h:15
+#: ../glade/optionswindow.glade.h:11
 msgid ""
-"<a "
-"href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Sənədləşmə</a>"
+"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
+"\">Documentation</a>"
+msgstr ""
+"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Sənədləşmə</"
+"a>"
 
-#: ../glade/optionswindow.glade.h:16
+#: ../glade/optionswindow.glade.h:12
 msgid ""
 "Spoofing MAC addresses hides the serial number of your network cards to the "
 "local networks. This can help you hide your geographical location."
-msgstr "MAC ünvanların aldadılması yerli şəbəkəyə olan şəbəkə kartlarının seriya nömrəsini gizlədir. Bu sənə coğrafi məkanını gizləməyə şərait yarada bilər."
+msgstr ""
+"MAC ünvanların aldadılması yerli şəbəkəyə olan şəbəkə kartlarının seriya "
+"nömrəsini gizlədir. Bu sənə coğrafi məkanını gizləməyə şərait yarada bilər."
 
-#: ../glade/optionswindow.glade.h:17
+#: ../glade/optionswindow.glade.h:13
 msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
 "suspicion or cause network connection problems."
-msgstr "MAC ünvan aldadıcısını istifadə etmək ümumiyyətlə daha təhlükəsizdir, amma bu əlavə olaraq şübhə yarada və ya şəbəkə əlaqə problemlərinə səbəb ola bilər."
+msgstr ""
+"MAC ünvan aldadıcısını istifadə etmək ümumiyyətlə daha təhlükəsizdir, amma "
+"bu əlavə olaraq şübhə yarada və ya şəbəkə əlaqə problemlərinə səbəb ola "
+"bilər."
 
-#: ../glade/optionswindow.glade.h:18
+#: ../glade/optionswindow.glade.h:14
 msgid "Spoof all MAC addresses"
 msgstr "Bütün MAC ünvanlarını aldat"
 
-#: ../glade/optionswindow.glade.h:19
+#: ../glade/optionswindow.glade.h:15
 msgid "Network configuration"
 msgstr "Şəbəkə konfiqurasiyası"
 
-#: ../glade/optionswindow.glade.h:20
+#: ../glade/optionswindow.glade.h:16
 msgid ""
-"<a "
-"href=\"doc/first_steps/startup_options/network_configuration.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/network_configuration.en.html\">Sənədləşmə</a>"
+"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
+"\">Documentation</a>"
+msgstr ""
+"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
+"\">Sənədləşmə</a>"
 
-#: ../glade/optionswindow.glade.h:21
+#: ../glade/optionswindow.glade.h:17
 msgid ""
-"This computer's Internet connection is clear of obstacles. You would like to"
-" connect directly to the Tor network."
-msgstr "Bu kompüterin internet əlaqəsi maneələrdən təmizlənmişdir. Sən bir başa Tor şəbəkəsinə qoşulmaq istəyirsən."
+"This computer's Internet connection is clear of obstacles. You would like to "
+"connect directly to the Tor network."
+msgstr ""
+"Bu kompüterin internet əlaqəsi maneələrdən təmizlənmişdir. Sən bir başa Tor "
+"şəbəkəsinə qoşulmaq istəyirsən."
 
-#: ../glade/optionswindow.glade.h:22
+#: ../glade/optionswindow.glade.h:18
 msgid ""
 "This computer's Internet connection is censored, filtered, or proxied. You "
 "need to configure bridge, firewall, or proxy settings."
-msgstr "Bu kompüterin internet əlaqəsi senzuradan keçirilmiş, filterlənmiş və ya proksilənmişdir. Sən körpü, təhlükəsizlik divarı və ya proksi parametrlərini konfiqurasiya etməlisən."
+msgstr ""
+"Bu kompüterin internet əlaqəsi senzuradan keçirilmiş, filterlənmiş və ya "
+"proksilənmişdir. Sən körpü, təhlükəsizlik divarı və ya proksi parametrlərini "
+"konfiqurasiya etməlisən."
+
+#: ../glade/optionswindow.glade.h:19
+msgid "Disable all networking"
+msgstr ""
 
 #: ../glade/langpanel.glade.h:1
 msgid " "
@@ -181,7 +186,9 @@ msgstr "Görünüş"
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
-msgstr "canlı-davamlılıq %(returncode)s geri şifrə ilə alınmadı:\n%(stderr)s"
+msgstr ""
+"canlı-davamlılıq %(returncode)s geri şifrə ilə alınmadı:\n"
+"%(stderr)s"
 
 #: ../tailsgreeter/persistence.py:99
 #, python-format
@@ -189,7 +196,10 @@ msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "ölüparametr crypt %(returncode)s geri şifrə ilə alınmadı:\n%(stdout)s\n%(stderr)s"
+msgstr ""
+"ölüparametr crypt %(returncode)s geri şifrə ilə alınmadı:\n"
+"%(stdout)s\n"
+"%(stderr)s"
 
 #: ../tailsgreeter/persistence.py:124
 #, python-format
@@ -197,9 +207,32 @@ msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "canlı-davamlılıq %(returncode)s geri şifrə ilə alınmadı:\n%(stdout)s\n%(stderr)s"
+msgstr ""
+"canlı-davamlılıq %(returncode)s geri şifrə ilə alınmadı:\n"
+"%(stdout)s\n"
+"%(stderr)s"
 
-#: ../tailsgreeter/langpanel.py:123 ../tailsgreeter/langpanel.py:150
-#: ../tailsgreeter/langpanel.py:183
+#: ../tailsgreeter/langpanel.py:140 ../tailsgreeter/langpanel.py:167
+#: ../tailsgreeter/langpanel.py:200
 msgid "Other..."
 msgstr "Digər..."
+
+#~ msgid "Windows camouflage"
+#~ msgstr "Windows kamuflyaj"
+
+#~ msgid ""
+#~ "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
+#~ "\">Documentation</a>"
+#~ msgstr ""
+#~ "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
+#~ "\">Sənədləşmə</a>"
+
+#~ msgid ""
+#~ "This option makes Tails look more like Microsoft Windows 8. This may be "
+#~ "useful in public places in order to avoid attracting suspicion."
+#~ msgstr ""
+#~ "Bu seçim Tails-i daha çox Microsoft Windows 8-ə bənzədir. İctimai "
+#~ "yerlərdə cəlbedici şübhələrdən qaçınmaq üçün bu yararlı ola bilər."
+
+#~ msgid "Activate Microsoft Windows 8 Camouflage"
+#~ msgstr "Microsoft Windows 8 Kamuflyajını Aktivləşdir"

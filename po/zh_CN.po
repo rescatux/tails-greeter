@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # ihints <ihints@gmail.com>, 2014
 # khi, 2013
@@ -19,14 +19,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-26 17:51+0100\n"
+"POT-Creation-Date: 2015-12-16 18:12+0100\n"
 "PO-Revision-Date: 2015-10-28 02:39+0000\n"
 "Last-Translator: YF <yfdyh000@gmail.com>\n"
-"Language-Team: Chinese (China) (http://www.transifex.com/otf/torproject/language/zh_CN/)\n"
+"Language-Team: Chinese (China) (http://www.transifex.com/otf/torproject/"
+"language/zh_CN/)\n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../glade/persistencewindow.glade.h:1
@@ -79,13 +80,16 @@ msgstr "管理员密码"
 
 #: ../glade/optionswindow.glade.h:4
 msgid ""
-"<a "
-"href=\"doc/first_steps/startup_options/administration_password.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/administration_password.en.html\">文档</a>"
+"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
+"\">Documentation</a>"
+msgstr ""
+"<a href=\"doc/first_steps/startup_options/administration_password.en.html\">"
+"文档</a>"
 
 #: ../glade/optionswindow.glade.h:5
 msgid ""
-"Enter an administration password in case you need to perform administration tasks.\n"
+"Enter an administration password in case you need to perform administration "
+"tasks.\n"
 "Otherwise it will be disabled for better security."
 msgstr "在此输入管理员密码，将使用于管理员任务。否则将因安全保护而禁用。"
 
@@ -102,74 +106,61 @@ msgid "<i>Passwords do not match</i>"
 msgstr "<i>密码不正确</i>"
 
 #: ../glade/optionswindow.glade.h:10
-msgid "Windows camouflage"
-msgstr "伪装Windows"
-
-#: ../glade/optionswindow.glade.h:11
-msgid ""
-"<a "
-"href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">文档</a>"
-
-#: ../glade/optionswindow.glade.h:12
-msgid ""
-"This option makes Tails look more like Microsoft Windows 8. This may be "
-"useful in public places in order to avoid attracting suspicion."
-msgstr "这个选项使得Tails看起来更像Microsoft Windows 8. 这在公共场所会有用以免引起怀疑。"
-
-#: ../glade/optionswindow.glade.h:13
-msgid "Activate Microsoft Windows 8 Camouflage"
-msgstr "激活Microsoft Windows 8伪装。"
-
-#: ../glade/optionswindow.glade.h:14
 msgid "MAC address spoofing"
 msgstr "MAC 地址欺骗"
 
-#: ../glade/optionswindow.glade.h:15
+#: ../glade/optionswindow.glade.h:11
 msgid ""
-"<a "
-"href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">文档</a>"
+"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
+"\">Documentation</a>"
+msgstr ""
+"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">文档</a>"
 
-#: ../glade/optionswindow.glade.h:16
+#: ../glade/optionswindow.glade.h:12
 msgid ""
 "Spoofing MAC addresses hides the serial number of your network cards to the "
 "local networks. This can help you hide your geographical location."
-msgstr "欺骗 MAC 地址，隐匿您的网卡到本地网络的序列号。这可以帮助您隐藏自己的地理位置。"
+msgstr ""
+"欺骗 MAC 地址，隐匿您的网卡到本地网络的序列号。这可以帮助您隐藏自己的地理位"
+"置。"
 
-#: ../glade/optionswindow.glade.h:17
+#: ../glade/optionswindow.glade.h:13
 msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
 "suspicion or cause network connection problems."
-msgstr "欺骗 MAC 地址通常都是安全的，但也存在引发或导致网络连通问题的可能。请参阅文档。"
+msgstr ""
+"欺骗 MAC 地址通常都是安全的，但也存在引发或导致网络连通问题的可能。请参阅文"
+"档。"
 
-#: ../glade/optionswindow.glade.h:18
+#: ../glade/optionswindow.glade.h:14
 msgid "Spoof all MAC addresses"
 msgstr "欺骗所有 MAC 地址"
 
-#: ../glade/optionswindow.glade.h:19
+#: ../glade/optionswindow.glade.h:15
 msgid "Network configuration"
 msgstr "网络确认"
 
-#: ../glade/optionswindow.glade.h:20
+#: ../glade/optionswindow.glade.h:16
 msgid ""
-"<a "
-"href=\"doc/first_steps/startup_options/network_configuration.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/network_configuration.en.html\">文档</a>"
+"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
+"\">Documentation</a>"
+msgstr ""
+"<a href=\"doc/first_steps/startup_options/network_configuration.en.html\">文"
+"档</a>"
 
-#: ../glade/optionswindow.glade.h:21
+#: ../glade/optionswindow.glade.h:17
 msgid ""
-"This computer's Internet connection is clear of obstacles. You would like to"
-" connect directly to the Tor network."
+"This computer's Internet connection is clear of obstacles. You would like to "
+"connect directly to the Tor network."
 msgstr "该电脑的连接故障已排除，您可以直接连接Tor网络。"
 
-#: ../glade/optionswindow.glade.h:22
+#: ../glade/optionswindow.glade.h:18
 msgid ""
 "This computer's Internet connection is censored, filtered, or proxied. You "
 "need to configure bridge, firewall, or proxy settings."
 msgstr "该电脑的互联网链接被屏蔽。你需要配置网桥、防火墙或者代理设置。"
 
-#: ../glade/optionswindow.glade.h:23
+#: ../glade/optionswindow.glade.h:19
 msgid "Disable all networking"
 msgstr "禁用所有网络"
 
@@ -194,7 +185,9 @@ msgstr "布局"
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
-msgstr "负责持久卷设置的 live-persist 执行失败，返回代码 %(returncode)s:\n%(stderr)s"
+msgstr ""
+"负责持久卷设置的 live-persist 执行失败，返回代码 %(returncode)s:\n"
+"%(stderr)s"
 
 #: ../tailsgreeter/persistence.py:99
 #, python-format
@@ -202,7 +195,10 @@ msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "加密设置失败，返回代码 %(returncode)s:\n%(stdout)s\n%(stderr)s"
+msgstr ""
+"加密设置失败，返回代码 %(returncode)s:\n"
+"%(stdout)s\n"
+"%(stderr)s"
 
 #: ../tailsgreeter/persistence.py:124
 #, python-format
@@ -210,9 +206,32 @@ msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "负责持久卷设置的 live-persist 执行失败，，返回代码 %(returncode)s:\n%(stdout)s\n%(stderr)s"
+msgstr ""
+"负责持久卷设置的 live-persist 执行失败，，返回代码 %(returncode)s:\n"
+"%(stdout)s\n"
+"%(stderr)s"
 
-#: ../tailsgreeter/langpanel.py:123 ../tailsgreeter/langpanel.py:150
-#: ../tailsgreeter/langpanel.py:183
+#: ../tailsgreeter/langpanel.py:140 ../tailsgreeter/langpanel.py:167
+#: ../tailsgreeter/langpanel.py:200
 msgid "Other..."
 msgstr "其他..."
+
+#~ msgid "Windows camouflage"
+#~ msgstr "伪装Windows"
+
+#~ msgid ""
+#~ "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
+#~ "\">Documentation</a>"
+#~ msgstr ""
+#~ "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">文"
+#~ "档</a>"
+
+#~ msgid ""
+#~ "This option makes Tails look more like Microsoft Windows 8. This may be "
+#~ "useful in public places in order to avoid attracting suspicion."
+#~ msgstr ""
+#~ "这个选项使得Tails看起来更像Microsoft Windows 8. 这在公共场所会有用以免引起"
+#~ "怀疑。"
+
+#~ msgid "Activate Microsoft Windows 8 Camouflage"
+#~ msgstr "激活Microsoft Windows 8伪装。"

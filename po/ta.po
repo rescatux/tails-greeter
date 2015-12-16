@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # Arun M S <arunistheking@gmail.com>, 2015
 # git12a <git12@openmailbox.org>, 2015
@@ -10,14 +10,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-02 21:29+0100\n"
+"POT-Creation-Date: 2015-12-16 18:12+0100\n"
 "PO-Revision-Date: 2015-12-07 17:51+0000\n"
 "Last-Translator: Arun M S <arunistheking@gmail.com>\n"
 "Language-Team: Tamil (http://www.transifex.com/otf/torproject/language/ta/)\n"
+"Language: ta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ta\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../glade/persistencewindow.glade.h:1
@@ -70,15 +70,20 @@ msgstr "நிர்வாகத்தின் கடவுச்சொல�
 
 #: ../glade/optionswindow.glade.h:4
 msgid ""
-"<a "
-"href=\"doc/first_steps/startup_options/administration_password.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/administration_password.en.html\">ஆவணங்கள்</a>"
+"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
+"\">Documentation</a>"
+msgstr ""
+"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
+"\">ஆவணங்கள்</a>"
 
 #: ../glade/optionswindow.glade.h:5
 msgid ""
-"Enter an administration password in case you need to perform administration tasks.\n"
+"Enter an administration password in case you need to perform administration "
+"tasks.\n"
 "Otherwise it will be disabled for better security."
-msgstr "நிர்வாக பணிகளை செய்ய வழக்கில் உள்ள ஒரு நிர்வாகத்தின் கடவுச்சொல்லை உள்ளிடவும்.\nஇல்லையெனில் சிறந்த பாதுகாப்பு முடக்கப்படும்."
+msgstr ""
+"நிர்வாக பணிகளை செய்ய வழக்கில் உள்ள ஒரு நிர்வாகத்தின் கடவுச்சொல்லை உள்ளிடவும்.\n"
+"இல்லையெனில் சிறந்த பாதுகாப்பு முடக்கப்படும்."
 
 #: ../glade/optionswindow.glade.h:7
 msgid "Password:"
@@ -93,74 +98,64 @@ msgid "<i>Passwords do not match</i>"
 msgstr "<i>கடவுச்சொற்கள் பொருந்தவில்லை</i>"
 
 #: ../glade/optionswindow.glade.h:10
-msgid "Windows camouflage"
-msgstr "விண்டோஸ் உருமறைப்பு"
-
-#: ../glade/optionswindow.glade.h:11
-msgid ""
-"<a "
-"href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">ஆவணங்கள்</a>"
-
-#: ../glade/optionswindow.glade.h:12
-msgid ""
-"This option makes Tails look more like Microsoft Windows 8. This may be "
-"useful in public places in order to avoid attracting suspicion."
-msgstr "இந்த தேர்வு Tails-ஐ மைக்ரோசாப்ட் விண்டோஸ் 8 போல காட்டசெய்யும். இது பொது இடங்களில் சந்தேகம் ஏற்படுவதை தவிர்க்க உதவலாம்."
-
-#: ../glade/optionswindow.glade.h:13
-msgid "Activate Microsoft Windows 8 Camouflage"
-msgstr "மைக்ரோசாப்ட் விண்டோஸ் 8 போல உருமாற்றி காட்டு"
-
-#: ../glade/optionswindow.glade.h:14
 msgid "MAC address spoofing"
 msgstr "MAC முகவரியை மாற்று"
 
-#: ../glade/optionswindow.glade.h:15
+#: ../glade/optionswindow.glade.h:11
 msgid ""
-"<a "
-"href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">ஆவணங்கள்</a>"
+"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
+"\">Documentation</a>"
+msgstr ""
+"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">ஆவணங்கள்</a>"
 
-#: ../glade/optionswindow.glade.h:16
+#: ../glade/optionswindow.glade.h:12
 msgid ""
 "Spoofing MAC addresses hides the serial number of your network cards to the "
 "local networks. This can help you hide your geographical location."
-msgstr "MAC முகவரியை மாற்றுவது நெட்வொர்க் வன்பொருளின் வரிசை எண்ணை அக்கமுள்ள  நெட்வொர்குகலிடமிருந்து மறைக்கும். இது உங்கள் புவியியல் இடத்தை மறைக்க  உதவும்."
+msgstr ""
+"MAC முகவரியை மாற்றுவது நெட்வொர்க் வன்பொருளின் வரிசை எண்ணை அக்கமுள்ள  "
+"நெட்வொர்குகலிடமிருந்து மறைக்கும். இது உங்கள் புவியியல் இடத்தை மறைக்க  உதவும்."
 
-#: ../glade/optionswindow.glade.h:17
+#: ../glade/optionswindow.glade.h:13
 msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
 "suspicion or cause network connection problems."
-msgstr "பொதுவாக MAC முகவரிகளை மாற்றுவது பாதுகப்பானதே, ஆனாலிது சந்தேகத்தையோ அல்லது நெட்வொர்க் இணைப்பில் பிரச்சனையையோ  ஏற்படுத்தலாம்."
+msgstr ""
+"பொதுவாக MAC முகவரிகளை மாற்றுவது பாதுகப்பானதே, ஆனாலிது சந்தேகத்தையோ அல்லது நெட்வொர்க் "
+"இணைப்பில் பிரச்சனையையோ  ஏற்படுத்தலாம்."
 
-#: ../glade/optionswindow.glade.h:18
+#: ../glade/optionswindow.glade.h:14
 msgid "Spoof all MAC addresses"
 msgstr "எல்லா MAC முகவரிகளையும் மாற்றுக"
 
-#: ../glade/optionswindow.glade.h:19
+#: ../glade/optionswindow.glade.h:15
 msgid "Network configuration"
 msgstr "நெட்வொர்க் கட்டமைப்பு"
 
-#: ../glade/optionswindow.glade.h:20
+#: ../glade/optionswindow.glade.h:16
 msgid ""
-"<a "
-"href=\"doc/first_steps/startup_options/network_configuration.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/network_configuration.en.html\">ஆவணங்கள்</a>"
+"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
+"\">Documentation</a>"
+msgstr ""
+"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
+"\">ஆவணங்கள்</a>"
 
-#: ../glade/optionswindow.glade.h:21
+#: ../glade/optionswindow.glade.h:17
 msgid ""
-"This computer's Internet connection is clear of obstacles. You would like to"
-" connect directly to the Tor network."
-msgstr "இந்த கணினியின் இணைய இணைப்பில் தடைகள் இல்லை. நீங்கள் நேரடியாக Tor நெட்வொர்க்குடன் இணையலாம்."
+"This computer's Internet connection is clear of obstacles. You would like to "
+"connect directly to the Tor network."
+msgstr ""
+"இந்த கணினியின் இணைய இணைப்பில் தடைகள் இல்லை. நீங்கள் நேரடியாக Tor நெட்வொர்க்குடன் இணையலாம்."
 
-#: ../glade/optionswindow.glade.h:22
+#: ../glade/optionswindow.glade.h:18
 msgid ""
 "This computer's Internet connection is censored, filtered, or proxied. You "
 "need to configure bridge, firewall, or proxy settings."
-msgstr "இந்த கணினியின் இணைய இணைப்பில் தணிக்கை, வடிகட்டிதல் அல்லது Proxy போன்ற தடைகளுள்ளன. நீங்கள் Bridge, Firewall அல்லது Proxy அமைப்புகளை கட்டமைக்கவேண்டும்."
+msgstr ""
+"இந்த கணினியின் இணைய இணைப்பில் தணிக்கை, வடிகட்டிதல் அல்லது Proxy போன்ற தடைகளுள்ளன. நீங்கள் "
+"Bridge, Firewall அல்லது Proxy அமைப்புகளை கட்டமைக்கவேண்டும்."
 
-#: ../glade/optionswindow.glade.h:23
+#: ../glade/optionswindow.glade.h:19
 msgid "Disable all networking"
 msgstr "அனைத்து நெட்வொர்க்கிங்கை முடக்கு"
 
@@ -185,7 +180,9 @@ msgstr "மாதிரி"
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
-msgstr "live-persist return code %(returncode)s:\n%(stderr)s உடன் தோல்வியடைந்தது "
+msgstr ""
+"live-persist return code %(returncode)s:\n"
+"%(stderr)s உடன் தோல்வியடைந்தது "
 
 #: ../tailsgreeter/persistence.py:99
 #, python-format
@@ -193,7 +190,11 @@ msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "cryptsetup return code %(returncode)s:\n%(stdout)s\n%(stderr)s \nஉடன் தோல்வியடைந்தது "
+msgstr ""
+"cryptsetup return code %(returncode)s:\n"
+"%(stdout)s\n"
+"%(stderr)s \n"
+"உடன் தோல்வியடைந்தது "
 
 #: ../tailsgreeter/persistence.py:124
 #, python-format
@@ -201,9 +202,33 @@ msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "live-persist return code %(returncode)s:\n%(stdout)s\n%(stderr)s\nஉடன் தோல்வியடைந்தது "
+msgstr ""
+"live-persist return code %(returncode)s:\n"
+"%(stdout)s\n"
+"%(stderr)s\n"
+"உடன் தோல்வியடைந்தது "
 
-#: ../tailsgreeter/langpanel.py:123 ../tailsgreeter/langpanel.py:150
-#: ../tailsgreeter/langpanel.py:183
+#: ../tailsgreeter/langpanel.py:140 ../tailsgreeter/langpanel.py:167
+#: ../tailsgreeter/langpanel.py:200
 msgid "Other..."
 msgstr "மற்றவை..."
+
+#~ msgid "Windows camouflage"
+#~ msgstr "விண்டோஸ் உருமறைப்பு"
+
+#~ msgid ""
+#~ "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
+#~ "\">Documentation</a>"
+#~ msgstr ""
+#~ "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
+#~ "\">ஆவணங்கள்</a>"
+
+#~ msgid ""
+#~ "This option makes Tails look more like Microsoft Windows 8. This may be "
+#~ "useful in public places in order to avoid attracting suspicion."
+#~ msgstr ""
+#~ "இந்த தேர்வு Tails-ஐ மைக்ரோசாப்ட் விண்டோஸ் 8 போல காட்டசெய்யும். இது பொது இடங்களில் "
+#~ "சந்தேகம் ஏற்படுவதை தவிர்க்க உதவலாம்."
+
+#~ msgid "Activate Microsoft Windows 8 Camouflage"
+#~ msgstr "மைக்ரோசாப்ட் விண்டோஸ் 8 போல உருமாற்றி காட்டு"
