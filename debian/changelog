@@ -1,3 +1,11 @@
+tails-greeter (0.8.16+feature10658.1) feature-10658-clean-up-path; urgency=medium
+
+  ** SNAPSHOT build @15215dcadd9d810d88b56a38661afe435f0fcd98 **
+
+  * Take into account that tails-unblock-network now lives in /usr/local/lib.
+
+ -- anonym <anonym@riseup.net>  Sun, 03 Jan 2016 16:19:32 +0100
+
 tails-greeter (0.8.16) devel; urgency=medium
 
   * Adapt Tails Greeter for Tails/Jessie:
