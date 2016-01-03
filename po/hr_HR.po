@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-02 21:29+0100\n"
+"POT-Creation-Date: 2015-12-16 18:12+0100\n"
 "PO-Revision-Date: 2015-11-02 13:10+0000\n"
 "Last-Translator: skiddiep <lyricaltumor@gmail.com>\n"
 "Language-Team: Croatian (Croatia) (http://www.transifex.com/otf/torproject/"
@@ -102,34 +102,10 @@ msgid "<i>Passwords do not match</i>"
 msgstr "<i>Lozinke se ne podudaraju</i>"
 
 #: ../glade/optionswindow.glade.h:10
-msgid "Windows camouflage"
-msgstr "Windows prikrivanje"
-
-#: ../glade/optionswindow.glade.h:11
-msgid ""
-"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
-"\">Documentation</a>"
-msgstr ""
-"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
-"\">Dokumentacija</a>"
-
-#: ../glade/optionswindow.glade.h:12
-msgid ""
-"This option makes Tails look more like Microsoft Windows 8. This may be "
-"useful in public places in order to avoid attracting suspicion."
-msgstr ""
-"Ova opcija maskira Tails tako da izgleda kao Microsoft Windows 8. To može "
-"biti korisno na javnim mjestima kako bi se izbjegla sumnja."
-
-#: ../glade/optionswindow.glade.h:13
-msgid "Activate Microsoft Windows 8 Camouflage"
-msgstr "Aktiviraj Microsoft Windows 8 prikrivanje"
-
-#: ../glade/optionswindow.glade.h:14
 msgid "MAC address spoofing"
 msgstr "Maskiranje MAC adrese"
 
-#: ../glade/optionswindow.glade.h:15
+#: ../glade/optionswindow.glade.h:11
 msgid ""
 "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
 "\">Documentation</a>"
@@ -137,7 +113,7 @@ msgstr ""
 "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
 "\">Dokumentacija</a>"
 
-#: ../glade/optionswindow.glade.h:16
+#: ../glade/optionswindow.glade.h:12
 msgid ""
 "Spoofing MAC addresses hides the serial number of your network cards to the "
 "local networks. This can help you hide your geographical location."
@@ -145,7 +121,7 @@ msgstr ""
 "Maskiranje MAC adresa skriva lokalnim mrežama serijski broj Vaših mrežnih "
 "kartica. Ovo Vam može pomoći sakriti Vaš zemljopisni položaj."
 
-#: ../glade/optionswindow.glade.h:17
+#: ../glade/optionswindow.glade.h:13
 msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
 "suspicion or cause network connection problems."
@@ -153,15 +129,15 @@ msgstr ""
 "Općenito je sigurnije maskirati MAC adrese, ali to bi također moglo izazvati "
 "sumnju ili prouzročiti probleme mrežne veze."
 
-#: ../glade/optionswindow.glade.h:18
+#: ../glade/optionswindow.glade.h:14
 msgid "Spoof all MAC addresses"
 msgstr "Maskiraj sve MAC adrese"
 
-#: ../glade/optionswindow.glade.h:19
+#: ../glade/optionswindow.glade.h:15
 msgid "Network configuration"
 msgstr "Postavljanje mreže"
 
-#: ../glade/optionswindow.glade.h:20
+#: ../glade/optionswindow.glade.h:16
 msgid ""
 "<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
 "\">Documentation</a>"
@@ -169,7 +145,7 @@ msgstr ""
 "<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
 "\">Dokumentacija</a>"
 
-#: ../glade/optionswindow.glade.h:21
+#: ../glade/optionswindow.glade.h:17
 msgid ""
 "This computer's Internet connection is clear of obstacles. You would like to "
 "connect directly to the Tor network."
@@ -177,7 +153,7 @@ msgstr ""
 "Internet veza ovoga računala nema prepreka. Željeli bi ste se spojiti "
 "izravno u Tor mrežu."
 
-#: ../glade/optionswindow.glade.h:22
+#: ../glade/optionswindow.glade.h:18
 msgid ""
 "This computer's Internet connection is censored, filtered, or proxied. You "
 "need to configure bridge, firewall, or proxy settings."
@@ -185,7 +161,7 @@ msgstr ""
 "Internet veza ovoga računala je cenzurirana, filtrirana ili koristi proxy. "
 "Trebate podesiti mostovne, vatrozidne ili proxy postavke."
 
-#: ../glade/optionswindow.glade.h:23
+#: ../glade/optionswindow.glade.h:19
 msgid "Disable all networking"
 msgstr "Onemogući sav mrežni rad"
 
@@ -236,7 +212,27 @@ msgstr ""
 "%(stdout)s\n"
 "%(stderr)s"
 
-#: ../tailsgreeter/langpanel.py:123 ../tailsgreeter/langpanel.py:150
-#: ../tailsgreeter/langpanel.py:183
+#: ../tailsgreeter/langpanel.py:140 ../tailsgreeter/langpanel.py:167
+#: ../tailsgreeter/langpanel.py:200
 msgid "Other..."
 msgstr "Ostalo…"
+
+#~ msgid "Windows camouflage"
+#~ msgstr "Windows prikrivanje"
+
+#~ msgid ""
+#~ "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
+#~ "\">Documentation</a>"
+#~ msgstr ""
+#~ "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
+#~ "\">Dokumentacija</a>"
+
+#~ msgid ""
+#~ "This option makes Tails look more like Microsoft Windows 8. This may be "
+#~ "useful in public places in order to avoid attracting suspicion."
+#~ msgstr ""
+#~ "Ova opcija maskira Tails tako da izgleda kao Microsoft Windows 8. To može "
+#~ "biti korisno na javnim mjestima kako bi se izbjegla sumnja."
+
+#~ msgid "Activate Microsoft Windows 8 Camouflage"
+#~ msgstr "Aktiviraj Microsoft Windows 8 prikrivanje"

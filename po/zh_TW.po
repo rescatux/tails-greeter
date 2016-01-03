@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-02 21:29+0100\n"
+"POT-Creation-Date: 2015-12-16 18:12+0100\n"
 "PO-Revision-Date: 2014-07-05 18:43+0000\n"
 "Last-Translator: danfong <danfong.hsieh@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/"
@@ -101,63 +101,39 @@ msgid "<i>Passwords do not match</i>"
 msgstr "<i>密碼不符</i>"
 
 #: ../glade/optionswindow.glade.h:10
-msgid "Windows camouflage"
-msgstr "Windows 偽裝"
-
-#: ../glade/optionswindow.glade.h:11
-msgid ""
-"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
-"\">Documentation</a>"
-msgstr ""
-"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">文件</"
-"a>"
-
-#: ../glade/optionswindow.glade.h:12
-msgid ""
-"This option makes Tails look more like Microsoft Windows 8. This may be "
-"useful in public places in order to avoid attracting suspicion."
-msgstr ""
-"此選項讓 Tails 看起來更像是 Microsoft Windows 8。為了避免在公共場所引起懷疑，"
-"這可能會很有用。"
-
-#: ../glade/optionswindow.glade.h:13
-msgid "Activate Microsoft Windows 8 Camouflage"
-msgstr "啟用 Microsoft Windows 8 偽裝"
-
-#: ../glade/optionswindow.glade.h:14
 msgid "MAC address spoofing"
 msgstr "MAC 位址詐騙"
 
-#: ../glade/optionswindow.glade.h:15
+#: ../glade/optionswindow.glade.h:11
 msgid ""
 "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
 "\">Documentation</a>"
 msgstr ""
 "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">文件</a>"
 
-#: ../glade/optionswindow.glade.h:16
+#: ../glade/optionswindow.glade.h:12
 msgid ""
 "Spoofing MAC addresses hides the serial number of your network cards to the "
 "local networks. This can help you hide your geographical location."
 msgstr ""
 "MAC 位址詐騙可以在區域網路中隱藏您的網路卡序號。這可以幫您隱藏地理位置。"
 
-#: ../glade/optionswindow.glade.h:17
+#: ../glade/optionswindow.glade.h:13
 msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
 "suspicion or cause network connection problems."
 msgstr ""
 "一般來說 MAC 位址詐騙是安全的，但它也可能會引起懷疑或導致網路連線問題。"
 
-#: ../glade/optionswindow.glade.h:18
+#: ../glade/optionswindow.glade.h:14
 msgid "Spoof all MAC addresses"
 msgstr "詐騙所有的 MAC 地址"
 
-#: ../glade/optionswindow.glade.h:19
+#: ../glade/optionswindow.glade.h:15
 msgid "Network configuration"
 msgstr "網路設定"
 
-#: ../glade/optionswindow.glade.h:20
+#: ../glade/optionswindow.glade.h:16
 msgid ""
 "<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
 "\">Documentation</a>"
@@ -165,13 +141,13 @@ msgstr ""
 "<a href=\"doc/first_steps/startup_options/network_configuration.en.html\">文"
 "件</a>"
 
-#: ../glade/optionswindow.glade.h:21
+#: ../glade/optionswindow.glade.h:17
 msgid ""
 "This computer's Internet connection is clear of obstacles. You would like to "
 "connect directly to the Tor network."
 msgstr "這部電腦的網路連線是暢通的。您可能想直接連線到 Tor 網路。"
 
-#: ../glade/optionswindow.glade.h:22
+#: ../glade/optionswindow.glade.h:18
 msgid ""
 "This computer's Internet connection is censored, filtered, or proxied. You "
 "need to configure bridge, firewall, or proxy settings."
@@ -179,7 +155,7 @@ msgstr ""
 "這部電腦的網路連線被審查、過濾、或代理。您需要設定網橋、防火牆、或代理伺服器"
 "設定。"
 
-#: ../glade/optionswindow.glade.h:23
+#: ../glade/optionswindow.glade.h:19
 msgid "Disable all networking"
 msgstr ""
 
@@ -230,7 +206,27 @@ msgstr ""
 "%(stdout)s⏎\n"
 "%(stderr)s"
 
-#: ../tailsgreeter/langpanel.py:123 ../tailsgreeter/langpanel.py:150
-#: ../tailsgreeter/langpanel.py:183
+#: ../tailsgreeter/langpanel.py:140 ../tailsgreeter/langpanel.py:167
+#: ../tailsgreeter/langpanel.py:200
 msgid "Other..."
 msgstr "其他..."
+
+#~ msgid "Windows camouflage"
+#~ msgstr "Windows 偽裝"
+
+#~ msgid ""
+#~ "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
+#~ "\">Documentation</a>"
+#~ msgstr ""
+#~ "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">文"
+#~ "件</a>"
+
+#~ msgid ""
+#~ "This option makes Tails look more like Microsoft Windows 8. This may be "
+#~ "useful in public places in order to avoid attracting suspicion."
+#~ msgstr ""
+#~ "此選項讓 Tails 看起來更像是 Microsoft Windows 8。為了避免在公共場所引起懷"
+#~ "疑，這可能會很有用。"
+
+#~ msgid "Activate Microsoft Windows 8 Camouflage"
+#~ msgstr "啟用 Microsoft Windows 8 偽裝"

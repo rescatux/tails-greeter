@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-02 21:29+0100\n"
+"POT-Creation-Date: 2015-12-16 18:12+0100\n"
 "PO-Revision-Date: 2015-09-12 16:07+0000\n"
 "Last-Translator: Assumpta Anglada <assumptaanglada@gmail.com>\n"
 "Language-Team: Catalan (http://www.transifex.com/otf/torproject/language/"
@@ -101,34 +101,10 @@ msgid "<i>Passwords do not match</i>"
 msgstr "<i>La contrasenya no concorda</i>"
 
 #: ../glade/optionswindow.glade.h:10
-msgid "Windows camouflage"
-msgstr "camuflatge de Windows"
-
-#: ../glade/optionswindow.glade.h:11
-msgid ""
-"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
-"\">Documentation</a>"
-msgstr ""
-"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
-"\">Documentació</a>"
-
-#: ../glade/optionswindow.glade.h:12
-msgid ""
-"This option makes Tails look more like Microsoft Windows 8. This may be "
-"useful in public places in order to avoid attracting suspicion."
-msgstr ""
-"Aquesta opció fa que Tails s'assembli més a Microsoft Windows 8. Pot ser "
-"útil en llocs públics per no aixecar sospites."
-
-#: ../glade/optionswindow.glade.h:13
-msgid "Activate Microsoft Windows 8 Camouflage"
-msgstr "Activa el camuflatge de Microsoft Windows 8"
-
-#: ../glade/optionswindow.glade.h:14
 msgid "MAC address spoofing"
 msgstr "Falsificació d'adreça MAC"
 
-#: ../glade/optionswindow.glade.h:15
+#: ../glade/optionswindow.glade.h:11
 msgid ""
 "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
 "\">Documentation</a>"
@@ -136,7 +112,7 @@ msgstr ""
 "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
 "\">Documentació</a>"
 
-#: ../glade/optionswindow.glade.h:16
+#: ../glade/optionswindow.glade.h:12
 msgid ""
 "Spoofing MAC addresses hides the serial number of your network cards to the "
 "local networks. This can help you hide your geographical location."
@@ -145,7 +121,7 @@ msgstr ""
 "xarxa per a les xarxes locals. Això pot ajudar a ocultar la seva ubicació "
 "geogràfica."
 
-#: ../glade/optionswindow.glade.h:17
+#: ../glade/optionswindow.glade.h:13
 msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
 "suspicion or cause network connection problems."
@@ -153,15 +129,15 @@ msgstr ""
 "En general, és més segur que simuli les adreces MAC, però també podria "
 "aixecar sospites o provocar problemes de connexió de xarxa."
 
-#: ../glade/optionswindow.glade.h:18
+#: ../glade/optionswindow.glade.h:14
 msgid "Spoof all MAC addresses"
 msgstr "Falsifica totes les adreces MAC"
 
-#: ../glade/optionswindow.glade.h:19
+#: ../glade/optionswindow.glade.h:15
 msgid "Network configuration"
 msgstr "Configuració de xarxa"
 
-#: ../glade/optionswindow.glade.h:20
+#: ../glade/optionswindow.glade.h:16
 msgid ""
 "<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
 "\">Documentation</a>"
@@ -169,7 +145,7 @@ msgstr ""
 "<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
 "\">Documentació</a>"
 
-#: ../glade/optionswindow.glade.h:21
+#: ../glade/optionswindow.glade.h:17
 msgid ""
 "This computer's Internet connection is clear of obstacles. You would like to "
 "connect directly to the Tor network."
@@ -177,7 +153,7 @@ msgstr ""
 "La connexió a Internet d'aquest equip està lliure d'obstacles. Li agradaria "
 "connectar directament a la xarxa Tor."
 
-#: ../glade/optionswindow.glade.h:22
+#: ../glade/optionswindow.glade.h:18
 msgid ""
 "This computer's Internet connection is censored, filtered, or proxied. You "
 "need to configure bridge, firewall, or proxy settings."
@@ -186,7 +162,7 @@ msgstr ""
 "intermediaris. Cal configurar el pont, el tallafocs o la configuració del "
 "servidor intermediari."
 
-#: ../glade/optionswindow.glade.h:23
+#: ../glade/optionswindow.glade.h:19
 msgid "Disable all networking"
 msgstr ""
 
@@ -237,7 +213,27 @@ msgstr ""
 "%(stdout)s⏎\n"
 "%(stderr)s"
 
-#: ../tailsgreeter/langpanel.py:123 ../tailsgreeter/langpanel.py:150
-#: ../tailsgreeter/langpanel.py:183
+#: ../tailsgreeter/langpanel.py:140 ../tailsgreeter/langpanel.py:167
+#: ../tailsgreeter/langpanel.py:200
 msgid "Other..."
 msgstr "Altre..."
+
+#~ msgid "Windows camouflage"
+#~ msgstr "camuflatge de Windows"
+
+#~ msgid ""
+#~ "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
+#~ "\">Documentation</a>"
+#~ msgstr ""
+#~ "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
+#~ "\">Documentació</a>"
+
+#~ msgid ""
+#~ "This option makes Tails look more like Microsoft Windows 8. This may be "
+#~ "useful in public places in order to avoid attracting suspicion."
+#~ msgstr ""
+#~ "Aquesta opció fa que Tails s'assembli més a Microsoft Windows 8. Pot ser "
+#~ "útil en llocs públics per no aixecar sospites."
+
+#~ msgid "Activate Microsoft Windows 8 Camouflage"
+#~ msgstr "Activa el camuflatge de Microsoft Windows 8"

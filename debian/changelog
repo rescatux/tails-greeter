@@ -1,3 +1,69 @@
+tails-greeter (0.8.16) devel; urgency=medium
+
+  * Adapt Tails Greeter for Tails/Jessie:
+    -  Add a gdm-tails session
+    -  Adapt to GDBus greeter API
+    -  Add a desktop file
+    -  Release a testing jessie version
+    -  Adjust gbp.conf to ease working on feature/jessie.
+    -  Drop debian/source/options: it only contains options that are obsolete in Jessie.
+    -  Install tails-greeter.desktop and gdm-tails.session in the upstream packaging bits, not in the Debian ones.
+    -  Drop everything about gdm-simple-greeter.desktop, which is obsolete on Jessie.
+    -  Don't force bzip2 usage when building binary packages: XZ is the default nowadays.
+    -  Set X-GNOME-provides for .desktop.
+    -  The autologin service has a new name.
+    -  Fix GNOME session localisation
+    -  Make sure /etc/sudoers.d/tails-greeter-no-password-lecture is owned by the root group.
+    -  Add gnome-flashback to the list of required components for the GDM session.
+    -  Don't display the Greeter in the Applications menu (Closes: #8267).
+    -  Delete the Live user's password if no administration password is set (Closes: #5589).
+    -  Use localectl to set the system locale.
+    -  Use localectl to set the keyboard mapping for X11 and the console.
+    -  Drop setting Uni1 for the console codeset.
+    -  Adjust tails-restricted-network-detector startup to match changes in the main Tails Git repo.
+    -  Do not reload CUPS configuration in PostLogin.default.
+    -  Start tails-restricted-network-detector.service a bit earlier.
+    -  Start tails-unblock-network via its systemd service.
+    -  Start tails-restricted-network-detector.service in a non-blocking way.
+    -  Move pre-network-unblock steps to tails-unblock-network.service.
+    -  PostLogin: log into the Journal instead of a dedicated log file.
+    -  Rename log_error() into log().
+    -  Add a bunch of debugging log statements.
+    -  Only source /var/lib/gdm3/tails.password if it exists.
+    -  Import udev trigger + settle from tails-unblock-network.service, and start it in a blocking way.
+    -  Move udevadm mangling back to a tails-unblock-network script.
+    -  Add some logging to ease debugging.
+    -  Add a "Recommends: locales-all".
+    -  Move/resize the language panel whenever the screen size changes, and when monitors are added/removed.
+    -  Don't assume that the language panel window is on Gdk.Screen. Instead, explicitly use gtk_window_get_screen().
+    -  Mark all Glade files as requiring GTK+ 3.12. Jessie ships with 3.14, and we won't be testing with anything older.
+    -  OptionsWindow: extract geometry setting code from the constructor into a dedicated method.
+    -  OptionsWindow.set_geometry: get a screen as argument.
+    -  OptionsWindow: resize/move when screen size or monitors setup changes.
+    -  LangPanel.set_panel_geometry(): receive a GdkScreen as argument.
+    -  OptionsWindow: move cb_doc_handler declaration back to be between the constructor and the first non-constructor method.
+    -  OptionsWindow: always center the dialog ourselves.
+    -  LangPanel: also issue set_size_request() upon screen size and monitors configuration changes.
+    -  debian/control: add Vcs-* control fields.
+    -  debian/control: declare compliance with Standards-Version 3.9.6 (no change required).
+    -  Hide greeter windows before logging in
+    -  Don't indent with tabs.
+    -  Use existing dynamically updated list of windows, instead of hard-coding a copy of it.
+    -  Display hourglass cursor during login, as long as the Greeter is up.
+    -  Revert "Display hourglass cursor during login, as long as the Greeter is up."
+    -  Start tails-unblock-network in the background.
+    -  Remove the Windows camouflage option.
+  * Update POT and PO files.
+  * Readjusting gbp.conf now that feature/jessie has been merged.
+
+ -- anonym <anonym@riseup.net>  Wed, 16 Dec 2015 18:17:08 +0100
+
+tails-greeter (0.8.15) stable; urgency=medium
+
+  * Import PO files from Transifex, update POT and PO files.
+
+ -- anonym <anonym@riseup.net>  Mon, 14 Dec 2015 17:12:26 +0100
+
 tails-greeter (0.8.14+jessie4+nocamouflage+10658) feature-10658-clean-up-path; urgency=medium
 
   * Take into account that tails-unblock-network now lives in /usr/local/lib.

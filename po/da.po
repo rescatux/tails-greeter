@@ -7,14 +7,15 @@
 # Christian Villum <villum@autofunk.dk>, 2014
 # mort3n <nalholm@yahoo.dk>, 2013
 # cookiefox <neoleo@gmail.com>, 2014
+# Tommy Gade, 2015
 # Tore Bjørnson <tore.bjornson@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-02 21:29+0100\n"
-"PO-Revision-Date: 2015-08-04 10:05+0000\n"
-"Last-Translator: christianflintrup <chr@agge.net>\n"
+"POT-Creation-Date: 2015-12-16 18:12+0100\n"
+"PO-Revision-Date: 2015-12-08 12:47+0000\n"
+"Last-Translator: Tommy Gade\n"
 "Language-Team: Danish (http://www.transifex.com/otf/torproject/language/"
 "da/)\n"
 "Language: da\n"
@@ -102,34 +103,10 @@ msgid "<i>Passwords do not match</i>"
 msgstr "<i>Kodeord passer ikke</i>"
 
 #: ../glade/optionswindow.glade.h:10
-msgid "Windows camouflage"
-msgstr "Windows camouflage"
-
-#: ../glade/optionswindow.glade.h:11
-msgid ""
-"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
-"\">Documentation</a>"
-msgstr ""
-"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
-"\">Dokumentation</a>"
-
-#: ../glade/optionswindow.glade.h:12
-msgid ""
-"This option makes Tails look more like Microsoft Windows 8. This may be "
-"useful in public places in order to avoid attracting suspicion."
-msgstr ""
-"Dette får Tails til at ligne Microsoft Windows 8 mere. Dette kan være "
-"nyttigt på offentlige steder for at undgå at vække mistanke."
-
-#: ../glade/optionswindow.glade.h:13
-msgid "Activate Microsoft Windows 8 Camouflage"
-msgstr "Aktiver “Microsoft Windows 8”-camouflage"
-
-#: ../glade/optionswindow.glade.h:14
 msgid "MAC address spoofing"
 msgstr "MAC address spoofing"
 
-#: ../glade/optionswindow.glade.h:15
+#: ../glade/optionswindow.glade.h:11
 msgid ""
 "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
 "\">Documentation</a>"
@@ -137,7 +114,7 @@ msgstr ""
 "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
 "\">Dokumentation</a>"
 
-#: ../glade/optionswindow.glade.h:16
+#: ../glade/optionswindow.glade.h:12
 msgid ""
 "Spoofing MAC addresses hides the serial number of your network cards to the "
 "local networks. This can help you hide your geographical location."
@@ -145,7 +122,7 @@ msgstr ""
 "Ved at ændre MAC addressen skjules netværksenhedens serienummer for det "
 "lokale netværk. Dette kan hjælpe med at skjule din geografiske placering."
 
-#: ../glade/optionswindow.glade.h:17
+#: ../glade/optionswindow.glade.h:13
 msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
 "suspicion or cause network connection problems."
@@ -153,15 +130,15 @@ msgstr ""
 "Det er generelt mere sikkert at ændre MAC addresser, men det kan potentielt "
 "også virke mistænkeligt eller give forblemer med forbindelsen."
 
-#: ../glade/optionswindow.glade.h:18
+#: ../glade/optionswindow.glade.h:14
 msgid "Spoof all MAC addresses"
 msgstr "Ændre alle MAC adresser"
 
-#: ../glade/optionswindow.glade.h:19
+#: ../glade/optionswindow.glade.h:15
 msgid "Network configuration"
 msgstr "Netværkskonfiguration"
 
-#: ../glade/optionswindow.glade.h:20
+#: ../glade/optionswindow.glade.h:16
 msgid ""
 "<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
 "\">Documentation</a>"
@@ -169,7 +146,7 @@ msgstr ""
 "<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
 "\">Dokumentation</a>"
 
-#: ../glade/optionswindow.glade.h:21
+#: ../glade/optionswindow.glade.h:17
 msgid ""
 "This computer's Internet connection is clear of obstacles. You would like to "
 "connect directly to the Tor network."
@@ -177,7 +154,7 @@ msgstr ""
 "Denne computers Internetforbindelse er fri for problemer. Du kan forbinde "
 "direkte til Tor netværket."
 
-#: ../glade/optionswindow.glade.h:22
+#: ../glade/optionswindow.glade.h:18
 msgid ""
 "This computer's Internet connection is censored, filtered, or proxied. You "
 "need to configure bridge, firewall, or proxy settings."
@@ -185,9 +162,9 @@ msgstr ""
 "Denne computers Internetforbindelse er censureret, filtreret eller proxiet. "
 "Du skal konfigurere bro, firewall eller proxy indstillinger."
 
-#: ../glade/optionswindow.glade.h:23
+#: ../glade/optionswindow.glade.h:19
 msgid "Disable all networking"
-msgstr ""
+msgstr "Deaktivér alt netværkskommunikation"
 
 #: ../glade/langpanel.glade.h:1
 msgid " "
@@ -236,7 +213,27 @@ msgstr ""
 "%(stdout)s\n"
 "%(stderr)s"
 
-#: ../tailsgreeter/langpanel.py:123 ../tailsgreeter/langpanel.py:150
-#: ../tailsgreeter/langpanel.py:183
+#: ../tailsgreeter/langpanel.py:140 ../tailsgreeter/langpanel.py:167
+#: ../tailsgreeter/langpanel.py:200
 msgid "Other..."
 msgstr "Anden..."
+
+#~ msgid "Windows camouflage"
+#~ msgstr "Windows camouflage"
+
+#~ msgid ""
+#~ "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
+#~ "\">Documentation</a>"
+#~ msgstr ""
+#~ "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
+#~ "\">Dokumentation</a>"
+
+#~ msgid ""
+#~ "This option makes Tails look more like Microsoft Windows 8. This may be "
+#~ "useful in public places in order to avoid attracting suspicion."
+#~ msgstr ""
+#~ "Dette får Tails til at ligne Microsoft Windows 8 mere. Dette kan være "
+#~ "nyttigt på offentlige steder for at undgå at vække mistanke."
+
+#~ msgid "Activate Microsoft Windows 8 Camouflage"
+#~ msgstr "Aktiver “Microsoft Windows 8”-camouflage"

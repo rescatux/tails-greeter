@@ -13,9 +13,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-02 21:29+0100\n"
-"PO-Revision-Date: 2015-09-19 21:20+0000\n"
-"Last-Translator: Tautvydas Zukauskas <lordmu@linuxmail.org>\n"
+"POT-Creation-Date: 2015-12-16 18:12+0100\n"
+"PO-Revision-Date: 2015-11-05 21:41+0000\n"
+"Last-Translator: Moo\n"
 "Language-Team: Lithuanian (http://www.transifex.com/otf/torproject/language/"
 "lt/)\n"
 "Language: lt\n"
@@ -88,7 +88,7 @@ msgid ""
 "Otherwise it will be disabled for better security."
 msgstr ""
 "Jeigu norėsite atlikti administravimo užduotis, įveskite administravimo "
-"slapažodį.\n"
+"slaptažodį.\n"
 "Priešingu atveju, saugumo sumetimais jis bus išjungtas. "
 
 #: ../glade/optionswindow.glade.h:7
@@ -104,34 +104,10 @@ msgid "<i>Passwords do not match</i>"
 msgstr "<i>Slaptažodžiai nesutampa</i>"
 
 #: ../glade/optionswindow.glade.h:10
-msgid "Windows camouflage"
-msgstr "Windows maskuotė"
-
-#: ../glade/optionswindow.glade.h:11
-msgid ""
-"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
-"\">Documentation</a>"
-msgstr ""
-"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
-"\">Dokumentacija</a>"
-
-#: ../glade/optionswindow.glade.h:12
-msgid ""
-"This option makes Tails look more like Microsoft Windows 8. This may be "
-"useful in public places in order to avoid attracting suspicion."
-msgstr ""
-"Ši parinktis padarys taip, kad Tails atrodytų panašiai kaip Microsoft "
-"Windows 8. Tai gali praversti viešose vietose, norint išvengti įtarimų."
-
-#: ../glade/optionswindow.glade.h:13
-msgid "Activate Microsoft Windows 8 Camouflage"
-msgstr "Aktyvuoti Microsoft Windows 8 maskuotę"
-
-#: ../glade/optionswindow.glade.h:14
 msgid "MAC address spoofing"
 msgstr "MAC adresų klastojimas"
 
-#: ../glade/optionswindow.glade.h:15
+#: ../glade/optionswindow.glade.h:11
 msgid ""
 "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
 "\">Documentation</a>"
@@ -139,7 +115,7 @@ msgstr ""
 "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
 "\">Dokumentacija</a>"
 
-#: ../glade/optionswindow.glade.h:16
+#: ../glade/optionswindow.glade.h:12
 msgid ""
 "Spoofing MAC addresses hides the serial number of your network cards to the "
 "local networks. This can help you hide your geographical location."
@@ -147,7 +123,7 @@ msgstr ""
 "MAC adresų klastojimas nuslepia jūsų tinklo plokštės serijos numerį "
 "vietiniuose tinkluose. Tai padeda nuslėpti jūsų geografinę padėtį. "
 
-#: ../glade/optionswindow.glade.h:17
+#: ../glade/optionswindow.glade.h:13
 msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
 "suspicion or cause network connection problems."
@@ -155,15 +131,15 @@ msgstr ""
 "Paprastai yra saugiau klastoti MAC adresus, tačiau tai gali taip pat sukelti "
 "įtarimą arba susijungimo su tinklu problemas."
 
-#: ../glade/optionswindow.glade.h:18
+#: ../glade/optionswindow.glade.h:14
 msgid "Spoof all MAC addresses"
 msgstr "Klastoti visus MAC adresus"
 
-#: ../glade/optionswindow.glade.h:19
+#: ../glade/optionswindow.glade.h:15
 msgid "Network configuration"
 msgstr "Tinklo konfigūravimas"
 
-#: ../glade/optionswindow.glade.h:20
+#: ../glade/optionswindow.glade.h:16
 msgid ""
 "<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
 "\">Documentation</a>"
@@ -171,7 +147,7 @@ msgstr ""
 "<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
 "\">Dokumentacija</a>"
 
-#: ../glade/optionswindow.glade.h:21
+#: ../glade/optionswindow.glade.h:17
 msgid ""
 "This computer's Internet connection is clear of obstacles. You would like to "
 "connect directly to the Tor network."
@@ -179,7 +155,7 @@ msgstr ""
 "Šio kompiuterio interneto ryšys yra be kliūčių. Jūs norėtumėte prisijungti "
 "tiesiogiai prie Tor tinklo."
 
-#: ../glade/optionswindow.glade.h:22
+#: ../glade/optionswindow.glade.h:18
 msgid ""
 "This computer's Internet connection is censored, filtered, or proxied. You "
 "need to configure bridge, firewall, or proxy settings."
@@ -188,9 +164,9 @@ msgstr ""
 "jungiamas per įgaliotąjį serverį. Jums reikia sukonfigūruoti tinklų tiltą, "
 "užkardą ar įgaliotojo serverio nustatymus."
 
-#: ../glade/optionswindow.glade.h:23
+#: ../glade/optionswindow.glade.h:19
 msgid "Disable all networking"
-msgstr ""
+msgstr "Išjungti visą darbą tinkle"
 
 #: ../glade/langpanel.glade.h:1
 msgid " "
@@ -239,7 +215,27 @@ msgstr ""
 "%(stdout)s\n"
 "%(stderr)s"
 
-#: ../tailsgreeter/langpanel.py:123 ../tailsgreeter/langpanel.py:150
-#: ../tailsgreeter/langpanel.py:183
+#: ../tailsgreeter/langpanel.py:140 ../tailsgreeter/langpanel.py:167
+#: ../tailsgreeter/langpanel.py:200
 msgid "Other..."
 msgstr "Kita..."
+
+#~ msgid "Windows camouflage"
+#~ msgstr "Windows maskuotė"
+
+#~ msgid ""
+#~ "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
+#~ "\">Documentation</a>"
+#~ msgstr ""
+#~ "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
+#~ "\">Dokumentacija</a>"
+
+#~ msgid ""
+#~ "This option makes Tails look more like Microsoft Windows 8. This may be "
+#~ "useful in public places in order to avoid attracting suspicion."
+#~ msgstr ""
+#~ "Ši parinktis padarys taip, kad Tails atrodytų panašiai kaip Microsoft "
+#~ "Windows 8. Tai gali praversti viešose vietose, norint išvengti įtarimų."
+
+#~ msgid "Activate Microsoft Windows 8 Camouflage"
+#~ msgstr "Aktyvuoti Microsoft Windows 8 maskuotę"

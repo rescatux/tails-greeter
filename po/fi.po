@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-02 21:29+0100\n"
+"POT-Creation-Date: 2015-12-16 18:12+0100\n"
 "PO-Revision-Date: 2015-07-25 07:53+0000\n"
 "Last-Translator: Jorma Karvonen <karvonen.jorma@gmail.com>\n"
 "Language-Team: Finnish (http://www.transifex.com/projects/p/torproject/"
@@ -99,42 +99,17 @@ msgid "<i>Passwords do not match</i>"
 msgstr "<i>Salasanat eivät täsmää</i>"
 
 #: ../glade/optionswindow.glade.h:10
-msgid "Windows camouflage"
-msgstr "Windows-naamiointi"
-
-#: ../glade/optionswindow.glade.h:11
-msgid ""
-"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
-"\">Documentation</a>"
-msgstr ""
-"<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
-"\">Ohjeet</a>"
-
-#: ../glade/optionswindow.glade.h:12
-msgid ""
-"This option makes Tails look more like Microsoft Windows 8. This may be "
-"useful in public places in order to avoid attracting suspicion."
-msgstr ""
-"Tämä valitsin saa Tails-ohjelman näyttämään enemmän Microsoft Windows 8-"
-"ohjelmalta. Tämä saattaa olla hyödyllistä julkisilla paikoilla huomion "
-"välttämiseksi."
-
-#: ../glade/optionswindow.glade.h:13
-msgid "Activate Microsoft Windows 8 Camouflage"
-msgstr "Aktivoi Microsoft Windows 8-naamiointi"
-
-#: ../glade/optionswindow.glade.h:14
 msgid "MAC address spoofing"
 msgstr "MAC-osoitteen väärentäminen"
 
-#: ../glade/optionswindow.glade.h:15
+#: ../glade/optionswindow.glade.h:11
 msgid ""
 "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
 "\">Documentation</a>"
 msgstr ""
 "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Ohjeet</a>"
 
-#: ../glade/optionswindow.glade.h:16
+#: ../glade/optionswindow.glade.h:12
 msgid ""
 "Spoofing MAC addresses hides the serial number of your network cards to the "
 "local networks. This can help you hide your geographical location."
@@ -142,7 +117,7 @@ msgstr ""
 "Väärennetty MAC-osoite piilottaa verkkokorttisi sarjanumeron. Väärentäminen "
 "helpottaa maantieteellisen sijainnin piilottamista."
 
-#: ../glade/optionswindow.glade.h:17
+#: ../glade/optionswindow.glade.h:13
 msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
 "suspicion or cause network connection problems."
@@ -150,15 +125,15 @@ msgstr ""
 "MAC-osoitteen väärentäminen on yleensä turvallisempaa, mutta väärennetty "
 "osoite voi herättää huomiota tai aiheuttaa ongelmia verkkoyhteydessä."
 
-#: ../glade/optionswindow.glade.h:18
+#: ../glade/optionswindow.glade.h:14
 msgid "Spoof all MAC addresses"
 msgstr "Väärennä kaikki MAC-osoitteet"
 
-#: ../glade/optionswindow.glade.h:19
+#: ../glade/optionswindow.glade.h:15
 msgid "Network configuration"
 msgstr "Verkon asetukset"
 
-#: ../glade/optionswindow.glade.h:20
+#: ../glade/optionswindow.glade.h:16
 msgid ""
 "<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
 "\">Documentation</a>"
@@ -166,7 +141,7 @@ msgstr ""
 "<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
 "\">Ohjeet</a>"
 
-#: ../glade/optionswindow.glade.h:21
+#: ../glade/optionswindow.glade.h:17
 msgid ""
 "This computer's Internet connection is clear of obstacles. You would like to "
 "connect directly to the Tor network."
@@ -174,7 +149,7 @@ msgstr ""
 "Tietokoneen Internet-yhteydessä ei ole esteitä. Voit yhdistää suoraan Tor-"
 "verkkoon."
 
-#: ../glade/optionswindow.glade.h:22
+#: ../glade/optionswindow.glade.h:18
 msgid ""
 "This computer's Internet connection is censored, filtered, or proxied. You "
 "need to configure bridge, firewall, or proxy settings."
@@ -183,7 +158,7 @@ msgstr ""
 "välityspalvelimen kautta. Sinun täytyy määrittää silta-, palomuuri- ja "
 "välityspalvelinasetukset."
 
-#: ../glade/optionswindow.glade.h:23
+#: ../glade/optionswindow.glade.h:19
 msgid "Disable all networking"
 msgstr ""
 
@@ -234,7 +209,28 @@ msgstr ""
 "%(stdout)s\n"
 "%(stderr)s"
 
-#: ../tailsgreeter/langpanel.py:123 ../tailsgreeter/langpanel.py:150
-#: ../tailsgreeter/langpanel.py:183
+#: ../tailsgreeter/langpanel.py:140 ../tailsgreeter/langpanel.py:167
+#: ../tailsgreeter/langpanel.py:200
 msgid "Other..."
 msgstr "Muu..."
+
+#~ msgid "Windows camouflage"
+#~ msgstr "Windows-naamiointi"
+
+#~ msgid ""
+#~ "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
+#~ "\">Documentation</a>"
+#~ msgstr ""
+#~ "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
+#~ "\">Ohjeet</a>"
+
+#~ msgid ""
+#~ "This option makes Tails look more like Microsoft Windows 8. This may be "
+#~ "useful in public places in order to avoid attracting suspicion."
+#~ msgstr ""
+#~ "Tämä valitsin saa Tails-ohjelman näyttämään enemmän Microsoft Windows 8-"
+#~ "ohjelmalta. Tämä saattaa olla hyödyllistä julkisilla paikoilla huomion "
+#~ "välttämiseksi."
+
+#~ msgid "Activate Microsoft Windows 8 Camouflage"
+#~ msgstr "Aktivoi Microsoft Windows 8-naamiointi"

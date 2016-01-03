@@ -3,17 +3,18 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# Bujar Tafili, 2015
+# Arturo J. Gueta Lozano <arturo@gueta.net>, 2015
+# Jose Ramon Munguia <ramon.munguia@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-12-16 18:12+0100\n"
-"PO-Revision-Date: 2015-09-24 19:34+0000\n"
-"Last-Translator: Bujar Tafili\n"
-"Language-Team: Albanian (http://www.transifex.com/otf/torproject/language/"
-"sq/)\n"
-"Language: sq\n"
+"PO-Revision-Date: 2015-12-07 16:05+0000\n"
+"Last-Translator: Arturo J. Gueta Lozano <arturo@gueta.net>\n"
+"Language-Team: Spanish (Mexico) (http://www.transifex.com/otf/torproject/"
+"language/es_MX/)\n"
+"Language: es_MX\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -21,51 +22,51 @@ msgstr ""
 
 #: ../glade/persistencewindow.glade.h:1
 msgid "Forward"
-msgstr "Përpara"
+msgstr "Adelante"
 
 #: ../glade/persistencewindow.glade.h:2 ../glade/optionswindow.glade.h:1
 msgid "Login"
-msgstr "Hyni"
+msgstr "Iniciar Sesión"
 
 #: ../glade/persistencewindow.glade.h:3 ../glade/optionswindow.glade.h:2
 msgid "Welcome to Tails"
-msgstr "Mirë se vini tek Tails"
+msgstr "Bienvenido a Tails"
 
 #: ../glade/persistencewindow.glade.h:4
 msgid "Use persistence?"
-msgstr "Do ta përdorni vazhdueshmërinë?"
+msgstr "Utilizar Persistencia?"
 
 #: ../glade/persistencewindow.glade.h:5
 msgid "<a href=\"doc/first_steps/persistence/use.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/persistence/use.en.html\">Dokumentacion</a>"
+msgstr "<a href=\"doc/first_steps/persistence/use.en.html\">Documentación</a>"
 
 #: ../glade/persistencewindow.glade.h:6
 msgid "Yes"
-msgstr "Po"
+msgstr "Si"
 
 #: ../glade/persistencewindow.glade.h:7
 msgid "No"
-msgstr "Jo"
+msgstr "No"
 
 #: ../glade/persistencewindow.glade.h:8
 msgid "Passphrase:"
-msgstr "Parullë:"
+msgstr "Palabra clave:"
 
 #: ../glade/persistencewindow.glade.h:9
 msgid "Read-Only?"
-msgstr "Vetëm për Lexim?"
+msgstr "Solo Lectura?"
 
 #: ../glade/persistencewindow.glade.h:10
 msgid "<i>Wrong passphrase. Please try again.</i>"
-msgstr "<i>Parullë e gabuar. Ju lutemi përpiquni sërish.</i>"
+msgstr "<i>Palabra clave incorrecta. Por favor intenta de nuevo.</i>"
 
 #: ../glade/persistencewindow.glade.h:11
 msgid "More options?"
-msgstr "Më shumë mundësi?"
+msgstr "¿Mas opciones?"
 
 #: ../glade/optionswindow.glade.h:3
 msgid "Administration password"
-msgstr "Fjalëkalimi i administrimit"
+msgstr "Password de Administrador"
 
 #: ../glade/optionswindow.glade.h:4
 msgid ""
@@ -73,7 +74,7 @@ msgid ""
 "\">Documentation</a>"
 msgstr ""
 "<a href=\"doc/first_steps/startup_options/administration_password.en.html"
-"\">Dokumentacion</a>"
+"\">Documentación</a>"
 
 #: ../glade/optionswindow.glade.h:5
 msgid ""
@@ -81,25 +82,25 @@ msgid ""
 "tasks.\n"
 "Otherwise it will be disabled for better security."
 msgstr ""
-"Futni një fjalëkalimin administrimi, në rasatin kur ju nevojitet të zbatoni "
-"detyrat e administrimit.\n"
-"Përkundër, ajo do të paaftësohet për një siguri më të mirë."
+"Ingrese una contraseña de administrador en caso de que necesites realizar "
+"tareas de administrador.\n"
+"En caso contrario será desactivado por motivos de seguridad."
 
 #: ../glade/optionswindow.glade.h:7
 msgid "Password:"
-msgstr "Fjalëkalim:"
+msgstr "Contraseña:"
 
 #: ../glade/optionswindow.glade.h:8
 msgid "Verify Password:"
-msgstr "Verifikoni Fjalëkalimin:"
+msgstr "Verificar Contraseña:"
 
 #: ../glade/optionswindow.glade.h:9
 msgid "<i>Passwords do not match</i>"
-msgstr "<i>Fjalëkalimet nuk përputhen</i>"
+msgstr "<i>Las contraseñas no coinciden</i>"
 
 #: ../glade/optionswindow.glade.h:10
 msgid "MAC address spoofing"
-msgstr "rreng me adresën MAC"
+msgstr "MAC address spoofing"
 
 #: ../glade/optionswindow.glade.h:11
 msgid ""
@@ -107,32 +108,31 @@ msgid ""
 "\">Documentation</a>"
 msgstr ""
 "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
-"\">Dokumentacion</a>"
+"\">Documentación</a>"
 
 #: ../glade/optionswindow.glade.h:12
 msgid ""
 "Spoofing MAC addresses hides the serial number of your network cards to the "
 "local networks. This can help you hide your geographical location."
 msgstr ""
-"Rrengu me adresat MAC e fsheh numrin serial të kartave tuaja të rrjetit, tek "
-"rrjetet lokalë. Kjo mund t'ju ndihmojë të fshihni vendndodhjen gjeografike."
+"Spoofing MAC addresses oculta el numero de serie de tu tarjeta e red dentro "
+"de la red local. Esto te ayuda a ocultar tu ubicación geográfica."
 
 #: ../glade/optionswindow.glade.h:13
 msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
 "suspicion or cause network connection problems."
 msgstr ""
-"Përgjithësisht është më e sigurt t'u bësh rreng adresave MAC, por kjo "
-"gjithashtu mund të ngrejë dyshime, ose të shkaktojë probleme të lidhjes së "
-"rrjetit."
+"Generalmente es mas seguro el Spoof MAC addresses, pero también podría "
+"levantar sospechas o causar problemas de conexión de la red."
 
 #: ../glade/optionswindow.glade.h:14
 msgid "Spoof all MAC addresses"
-msgstr "Bëni rreng me të gjitha adresat MAC"
+msgstr "Husmear en todas las MAC addesses"
 
 #: ../glade/optionswindow.glade.h:15
 msgid "Network configuration"
-msgstr "Konfigurimi i rrjetit"
+msgstr "Configuración de red"
 
 #: ../glade/optionswindow.glade.h:16
 msgid ""
@@ -140,43 +140,44 @@ msgid ""
 "\">Documentation</a>"
 msgstr ""
 "<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
-"\">Dokumentacion</a>"
+"\">Documentación</a>"
 
 #: ../glade/optionswindow.glade.h:17
 msgid ""
 "This computer's Internet connection is clear of obstacles. You would like to "
 "connect directly to the Tor network."
 msgstr ""
-"Lidhja Internet e këtij kompjuteri është e pastruar nga pengesat. Ju do të "
-"donit të lidheshit drejtpërdrejt në rrjetin Tor."
+"La conexión a internet de esta computadora está libre de obstáculos. ¿Deseas "
+"conectarte directamente a la red de Tor?"
 
 #: ../glade/optionswindow.glade.h:18
 msgid ""
 "This computer's Internet connection is censored, filtered, or proxied. You "
 "need to configure bridge, firewall, or proxy settings."
 msgstr ""
-"Lidhja e Internetit të këtij kompjuteri është e censuruar, e filtruar ose me "
-"proxy. Duhet të konfiguroni urën, murin e zjarrtë, ose proxy-n."
+"La conexión a intetnet de esta computadora está censurada, filtrada o pasa a "
+"través de un proxy. Es necesario configurar los ajustes del puente, "
+"cortafuegos o proxy."
 
 #: ../glade/optionswindow.glade.h:19
 msgid "Disable all networking"
-msgstr ""
+msgstr "Desactivar toda actividad."
 
 #: ../glade/langpanel.glade.h:1
 msgid " "
-msgstr " "
+msgstr "."
 
 #: ../glade/langpanel.glade.h:2 ../tailsgreeter/langpanel.py:43
 msgid "Language"
-msgstr "Gjuha"
+msgstr "Lenguaje"
 
 #: ../glade/langpanel.glade.h:3
 msgid "Locale"
-msgstr "Vendndodhje"
+msgstr "Lugar"
 
 #: ../glade/langpanel.glade.h:4
 msgid "Layout"
-msgstr "Paraqitje"
+msgstr "Diseño"
 
 #: ../tailsgreeter/persistence.py:59
 #, python-format
@@ -184,8 +185,7 @@ msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
 msgstr ""
-"rikthimi i të dhënave dështoi me kodin e kthimit %(returncode)s:\n"
-"%(stderr)s"
+"live-persist falló regresando codigo de error %(returncode)s:%(stderr)s"
 
 #: ../tailsgreeter/persistence.py:99
 #, python-format
@@ -194,7 +194,7 @@ msgid ""
 "%(stdout)s\n"
 "%(stderr)s"
 msgstr ""
-"konfigurimi i shifrimit dështoi me kodin e kthimit %(returncode)s:\n"
+"cryptsetup falló regresando codigo de error %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
 
@@ -205,32 +205,31 @@ msgid ""
 "%(stdout)s\n"
 "%(stderr)s"
 msgstr ""
-"rikthimi i të dhënave dështoi me kodin e kthimit %(returncode)s:\n"
+"live-persist falló regresando codigo de error %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
 
 #: ../tailsgreeter/langpanel.py:140 ../tailsgreeter/langpanel.py:167
 #: ../tailsgreeter/langpanel.py:200
 msgid "Other..."
-msgstr "Tjetër..."
+msgstr "Otro..."
 
 #~ msgid "Windows camouflage"
-#~ msgstr "maskim Windows"
+#~ msgstr "Camuflaje de Windows"
 
 #~ msgid ""
 #~ "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
 #~ "\">Documentation</a>"
 #~ msgstr ""
 #~ "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
-#~ "\">Dokumentacion</a>"
+#~ "\">Documentación</a>"
 
 #~ msgid ""
 #~ "This option makes Tails look more like Microsoft Windows 8. This may be "
 #~ "useful in public places in order to avoid attracting suspicion."
 #~ msgstr ""
-#~ "Kjo mundësi bën që Tails të duket më shumë si Microsoft Windows 8. Kjo "
-#~ "mund të jetë me vlerë në vendet publike, me qëllim që të shmangni "
-#~ "dyshimet."
+#~ "Esta opción hace a Tails parecerse mas a Windows 8. Puede ser útil en "
+#~ "lugares públicos a fin de evitar levantar sospechas."
 
 #~ msgid "Activate Microsoft Windows 8 Camouflage"
-#~ msgstr "Aktivizoni Maskimin Microsoft Windows 8"
+#~ msgstr "Activar Camuflaje Microsoft Windows 8"
