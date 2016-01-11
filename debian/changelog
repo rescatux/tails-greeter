@@ -1,10 +1,9 @@
-tails-greeter (0.8.16+feature10658.1) feature-10658-clean-up-path; urgency=medium
-
-  ** SNAPSHOT build @15215dcadd9d810d88b56a38661afe435f0fcd98 **
+tails-greeter (0.8.17) devel; urgency=medium
 
   * Take into account that tails-unblock-network now lives in /usr/local/lib.
+  * Import PO files from Transifex, update POT and PO files.
 
- -- anonym <anonym@riseup.net>  Sun, 03 Jan 2016 16:19:32 +0100
+ -- anonym <anonym@riseup.net>  Mon, 11 Jan 2016 15:08:22 +0100
 
 tails-greeter (0.8.16) devel; urgency=medium
 
