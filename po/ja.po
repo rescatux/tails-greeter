@@ -4,14 +4,15 @@
 #
 # Translators:
 # タカハシ <indexial@outlook.jp>, 2013-2014
+# Tokumei Nanashi, 2015
 # 藤前　甲 <m1440809437@hiru-dea.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-16 18:12+0100\n"
-"PO-Revision-Date: 2015-08-29 06:12+0000\n"
-"Last-Translator: 藤前　甲 <m1440809437@hiru-dea.com>\n"
+"POT-Creation-Date: 2016-01-11 15:05+0100\n"
+"PO-Revision-Date: 2015-12-21 09:22+0000\n"
+"Last-Translator: carolyn <carolyn@anhalt.org>\n"
 "Language-Team: Japanese (http://www.transifex.com/otf/torproject/language/"
 "ja/)\n"
 "Language: ja\n"
@@ -161,7 +162,7 @@ msgstr ""
 
 #: ../glade/optionswindow.glade.h:19
 msgid "Disable all networking"
-msgstr ""
+msgstr "ネットワーク能力を全て無効化"
 
 #: ../glade/langpanel.glade.h:1
 msgid " "
@@ -214,23 +215,3 @@ msgstr ""
 #: ../tailsgreeter/langpanel.py:200
 msgid "Other..."
 msgstr "その他..."
-
-#~ msgid "Windows camouflage"
-#~ msgstr "Windows 風"
-
-#~ msgid ""
-#~ "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
-#~ "\">Documentation</a>"
-#~ msgstr ""
-#~ "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">ド"
-#~ "キュメント</a>"
-
-#~ msgid ""
-#~ "This option makes Tails look more like Microsoft Windows 8. This may be "
-#~ "useful in public places in order to avoid attracting suspicion."
-#~ msgstr ""
-#~ "このオプションを有効にすると、 Tails は Microsoft Windows 8 のような見た目"
-#~ "になります。公共の場所で、疑いの目が無くなるでしょう。"
-
-#~ msgid "Activate Microsoft Windows 8 Camouflage"
-#~ msgstr "Microsoft Windows 8 風にする"

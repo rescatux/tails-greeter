@@ -4,7 +4,7 @@
 #
 # Translators:
 # Anders Nilsson <locally@devode.se>, 2015
-# GabSeb, 2014
+# Gabor Sebastiani, 2014
 # leveebreaks, 2014
 # WinterFairy <winterfairy@riseup.net>, 2013
 # WinterFairy <winterfairy@riseup.net>, 2013-2014
@@ -12,9 +12,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-16 18:12+0100\n"
-"PO-Revision-Date: 2015-10-28 11:42+0000\n"
-"Last-Translator: Anders Nilsson <locally@devode.se>\n"
+"POT-Creation-Date: 2016-01-11 15:05+0100\n"
+"PO-Revision-Date: 2015-12-21 09:22+0000\n"
+"Last-Translator: carolyn <carolyn@anhalt.org>\n"
 "Language-Team: Swedish (http://www.transifex.com/otf/torproject/language/"
 "sv/)\n"
 "Language: sv\n"
@@ -217,24 +217,3 @@ msgstr ""
 #: ../tailsgreeter/langpanel.py:200
 msgid "Other..."
 msgstr "Annat..."
-
-#~ msgid "Windows camouflage"
-#~ msgstr "Windows kamouflage"
-
-#~ msgid ""
-#~ "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
-#~ "\">Documentation</a>"
-#~ msgstr ""
-#~ "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
-#~ "\">Dokumentation</a>"
-
-#~ msgid ""
-#~ "This option makes Tails look more like Microsoft Windows 8. This may be "
-#~ "useful in public places in order to avoid attracting suspicion."
-#~ msgstr ""
-#~ "Detta alternativ får Tails att likna Microsoft Windows 8. Det kan komma "
-#~ "till nytta på allmänna platser för att undvika att dra till sig "
-#~ "misstankar."
-
-#~ msgid "Activate Microsoft Windows 8 Camouflage"
-#~ msgstr "Aktivera Microsoft Windows 8-kamoflage"

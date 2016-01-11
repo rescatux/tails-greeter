@@ -6,14 +6,15 @@
 # Albert <provisionalib@hotmail.com>, 2013
 # Assumpta Anglada <assumptaanglada@gmail.com>, 2014
 # David Anglada <codiobert@codiobert.es>, 2014
+# laia_, 2015
 # Norike Abe <norikeave@hotmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-16 18:12+0100\n"
-"PO-Revision-Date: 2015-09-12 16:07+0000\n"
-"Last-Translator: Assumpta Anglada <assumptaanglada@gmail.com>\n"
+"POT-Creation-Date: 2016-01-11 15:05+0100\n"
+"PO-Revision-Date: 2015-12-29 17:55+0000\n"
+"Last-Translator: laia_\n"
 "Language-Team: Catalan (http://www.transifex.com/otf/torproject/language/"
 "ca/)\n"
 "Language: ca\n"
@@ -32,7 +33,7 @@ msgstr "Entra"
 
 #: ../glade/persistencewindow.glade.h:3 ../glade/optionswindow.glade.h:2
 msgid "Welcome to Tails"
-msgstr "Benvingut a Tails"
+msgstr "Benvingut al Tails"
 
 #: ../glade/persistencewindow.glade.h:4
 msgid "Use persistence?"
@@ -56,11 +57,11 @@ msgstr "Frase de contrasenya:"
 
 #: ../glade/persistencewindow.glade.h:9
 msgid "Read-Only?"
-msgstr "Només-Escriptura?"
+msgstr "Només Escriptura?"
 
 #: ../glade/persistencewindow.glade.h:10
 msgid "<i>Wrong passphrase. Please try again.</i>"
-msgstr "<i>Frase de contrasenya incorrecte. Si us plau, torna-ho a provar.</i>"
+msgstr "<i>La frase de contrasenya és incorrecta. Torna-ho a provar.</i>"
 
 #: ../glade/persistencewindow.glade.h:11
 msgid "More options?"
@@ -84,7 +85,7 @@ msgid ""
 "tasks.\n"
 "Otherwise it will be disabled for better security."
 msgstr ""
-"Entri una contrasenya d'administració si ha de realitzar tasques "
+"Entreu una contrasenya d'administració si heu de realitzar tasques "
 "d'administració.\n"
 "En cas contrari, es deshabilitarà per a una major seguretat."
 
@@ -118,16 +119,15 @@ msgid ""
 "local networks. This can help you hide your geographical location."
 msgstr ""
 "La falsificació d'adreces MAC oculta el número de sèrie de la targeta de "
-"xarxa per a les xarxes locals. Això pot ajudar a ocultar la seva ubicació "
-"geogràfica."
+"xarxa a les xarxes locals. Això pot ajudar a ocultar la ubicació geogràfica."
 
 #: ../glade/optionswindow.glade.h:13
 msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
 "suspicion or cause network connection problems."
 msgstr ""
-"En general, és més segur que simuli les adreces MAC, però també podria "
-"aixecar sospites o provocar problemes de connexió de xarxa."
+"En general, és més segur simular les adreces MAC, però també podria aixecar "
+"sospites o provocar problemes de connexió de xarxa."
 
 #: ../glade/optionswindow.glade.h:14
 msgid "Spoof all MAC addresses"
@@ -150,8 +150,8 @@ msgid ""
 "This computer's Internet connection is clear of obstacles. You would like to "
 "connect directly to the Tor network."
 msgstr ""
-"La connexió a Internet d'aquest equip està lliure d'obstacles. Li agradaria "
-"connectar directament a la xarxa Tor."
+"La connexió a Internet d'aquest equip està lliure d'obstacles. Podeu "
+"connectar-vos directament a la xarxa Tor."
 
 #: ../glade/optionswindow.glade.h:18
 msgid ""
@@ -164,7 +164,7 @@ msgstr ""
 
 #: ../glade/optionswindow.glade.h:19
 msgid "Disable all networking"
-msgstr ""
+msgstr "Desactiva tota la xarxa"
 
 #: ../glade/langpanel.glade.h:1
 msgid " "
@@ -176,7 +176,7 @@ msgstr "Llengua"
 
 #: ../glade/langpanel.glade.h:3
 msgid "Locale"
-msgstr "Lloc"
+msgstr "Configuració local"
 
 #: ../glade/langpanel.glade.h:4
 msgid "Layout"
@@ -216,24 +216,4 @@ msgstr ""
 #: ../tailsgreeter/langpanel.py:140 ../tailsgreeter/langpanel.py:167
 #: ../tailsgreeter/langpanel.py:200
 msgid "Other..."
-msgstr "Altre..."
-
-#~ msgid "Windows camouflage"
-#~ msgstr "camuflatge de Windows"
-
-#~ msgid ""
-#~ "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
-#~ "\">Documentation</a>"
-#~ msgstr ""
-#~ "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
-#~ "\">Documentació</a>"
-
-#~ msgid ""
-#~ "This option makes Tails look more like Microsoft Windows 8. This may be "
-#~ "useful in public places in order to avoid attracting suspicion."
-#~ msgstr ""
-#~ "Aquesta opció fa que Tails s'assembli més a Microsoft Windows 8. Pot ser "
-#~ "útil en llocs públics per no aixecar sospites."
-
-#~ msgid "Activate Microsoft Windows 8 Camouflage"
-#~ msgstr "Activa el camuflatge de Microsoft Windows 8"
+msgstr "Altres..."

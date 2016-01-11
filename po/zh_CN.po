@@ -11,7 +11,7 @@
 # xtoaster <zhazhenzhong@gmail.com>, 2012
 # baoliandeng <nkzhangjg@gmail.com>, 2014
 # Sophia Meifang Wang <sophiatiger121@hotmail.com>, 2014
-# Xiaolan <xiaolan65535@gmail.com>, 2014
+# Xiaolan <xiaolan@protonmail.ch>, 2014
 # YF <yfdyh000@gmail.com>, 2014-2015
 # xtoaster <zhazhenzhong@gmail.com>, 2012
 # 辛海林 <hailin_xin@163.com>, 2014
@@ -19,9 +19,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-16 18:12+0100\n"
-"PO-Revision-Date: 2015-10-28 02:39+0000\n"
-"Last-Translator: YF <yfdyh000@gmail.com>\n"
+"POT-Creation-Date: 2016-01-11 15:05+0100\n"
+"PO-Revision-Date: 2015-12-21 09:22+0000\n"
+"Last-Translator: carolyn <carolyn@anhalt.org>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/otf/torproject/"
 "language/zh_CN/)\n"
 "Language: zh_CN\n"
@@ -215,23 +215,3 @@ msgstr ""
 #: ../tailsgreeter/langpanel.py:200
 msgid "Other..."
 msgstr "其他..."
-
-#~ msgid "Windows camouflage"
-#~ msgstr "伪装Windows"
-
-#~ msgid ""
-#~ "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
-#~ "\">Documentation</a>"
-#~ msgstr ""
-#~ "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html\">文"
-#~ "档</a>"
-
-#~ msgid ""
-#~ "This option makes Tails look more like Microsoft Windows 8. This may be "
-#~ "useful in public places in order to avoid attracting suspicion."
-#~ msgstr ""
-#~ "这个选项使得Tails看起来更像Microsoft Windows 8. 这在公共场所会有用以免引起"
-#~ "怀疑。"
-
-#~ msgid "Activate Microsoft Windows 8 Camouflage"
-#~ msgstr "激活Microsoft Windows 8伪装。"

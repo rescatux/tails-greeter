@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# Tyler Durden <virii@enn.lu>, 2015
+# Tyler Durden <virii@enn.lu>, 2015-2016
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-16 18:12+0100\n"
-"PO-Revision-Date: 2015-09-22 18:09+0000\n"
+"POT-Creation-Date: 2016-01-11 15:05+0100\n"
+"PO-Revision-Date: 2016-01-06 22:13+0000\n"
 "Last-Translator: Tyler Durden <virii@enn.lu>\n"
 "Language-Team: Luxembourgish (http://www.transifex.com/otf/torproject/"
 "language/lb/)\n"
@@ -161,7 +161,7 @@ msgstr ""
 
 #: ../glade/optionswindow.glade.h:19
 msgid "Disable all networking"
-msgstr ""
+msgstr "All Netzwierkfunktiounen desaktivéieren"
 
 #: ../glade/langpanel.glade.h:1
 msgid " "
@@ -214,23 +214,3 @@ msgstr ""
 #: ../tailsgreeter/langpanel.py:200
 msgid "Other..."
 msgstr "Anerer"
-
-#~ msgid "Windows camouflage"
-#~ msgstr "Als Windows tarnen"
-
-#~ msgid ""
-#~ "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
-#~ "\">Documentation</a>"
-#~ msgstr ""
-#~ "<a href=\"doc/first_steps/startup_options/windows_camouflage.en.html"
-#~ "\">Dokumentatioun</a>"
-
-#~ msgid ""
-#~ "This option makes Tails look more like Microsoft Windows 8. This may be "
-#~ "useful in public places in order to avoid attracting suspicion."
-#~ msgstr ""
-#~ "Des Optioun léist Tails wei Microsoft Windows 8 ausgesinn. Des Funktioun "
-#~ "ass am Public wäertvoll fir manner opzefalen."
-
-#~ msgid "Activate Microsoft Windows 8 Camouflage"
-#~ msgstr "Microsoft Windows 8 Tarnung aktivéieren"
