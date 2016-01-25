@@ -1,3 +1,9 @@
+tails-greeter (0.8.18) testing; urgency=medium
+
+  * Import PO files from Transifex, update POT and PO files.
+
+ -- anonym <anonym@riseup.net>  Mon, 25 Jan 2016 15:58:45 +0100
+
 tails-greeter (0.8.17) devel; urgency=medium
 
   * Take into account that tails-unblock-network now lives in /usr/local/lib.
