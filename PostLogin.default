@@ -134,7 +134,7 @@ if [ -z "${TAILS_USER_PASSWORD}" ] ; then
     echo "Defaults:amnesia lecture=always" > "${NO_PASSWORD_LECTURE}"
     echo "Defaults:amnesia lecture_file=/usr/share/tails-greeter/no-password-lecture.txt" >> "${NO_PASSWORD_LECTURE}"
     echo "Defaults:amnesia badpass_message=\"The administration password is disabled.\"" >> "${NO_PASSWORD_LECTURE}"
-    echo "Hidden=true" | tee -a /usr/share/applications/{gksu,synaptic}.desktop > /dev/null
+    echo "Hidden=true" | tee -a /usr/share/applications/{gksu,synaptic,laptop-mode-tools}.desktop > /dev/null
     log_n_exit "Password variable not found."
 fi
 
