@@ -1,3 +1,15 @@
+tails-greeter (0.8.19) devel; urgency=medium
+
+  [ Muri Nicanor ]
+  * added a line that disables gksu and synaptic from applications menu if no password is set
+  * added laptop-mode-tools to hidden apps when not root
+  * simplify by removing the desktop files needing admin privileges
+
+  [ anonym ]
+  * Import PO files from Transifex, update POT and PO files.
+
+ -- anonym <anonym@riseup.net>  Wed, 24 Feb 2016 18:32:30 +0100
+
 tails-greeter (0.8.18) testing; urgency=medium
 
   * Import PO files from Transifex, update POT and PO files.
