@@ -1,22 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
-# mbouzada <mbouzada@gmail.com>, 2013
+# Miguel Anxo Bouzada <mbouzada@gmail.com>, 2013
+# Xan VFR, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-01-25 15:44+0100\n"
-"PO-Revision-Date: 2013-05-22 12:45+0000\n"
-"Last-Translator: runasand <runa.sandvik@gmail.com>\n"
-"Language-Team: Galician (http://www.transifex.com/projects/p/torproject/"
-"language/gl/)\n"
-"Language: gl\n"
+"PO-Revision-Date: 2016-01-30 22:11+0000\n"
+"Last-Translator: Xan VFR\n"
+"Language-Team: Galician (http://www.transifex.com/otf/torproject/language/gl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: gl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../glade/persistencewindow.glade.h:1
@@ -37,7 +37,7 @@ msgstr "Usar persistencia?"
 
 #: ../glade/persistencewindow.glade.h:5
 msgid "<a href=\"doc/first_steps/persistence/use.en.html\">Documentation</a>"
-msgstr ""
+msgstr "<a href=\"doc/first_steps/persistence/use.en.html\">Documentación</a>"
 
 #: ../glade/persistencewindow.glade.h:6
 msgid "Yes"
@@ -69,19 +69,15 @@ msgstr "Contrasinal de administración"
 
 #: ../glade/optionswindow.glade.h:4
 msgid ""
-"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
-"\">Documentation</a>"
-msgstr ""
+"<a "
+"href=\"doc/first_steps/startup_options/administration_password.en.html\">Documentation</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/administration_password.en.html\">Documentación</a>"
 
 #: ../glade/optionswindow.glade.h:5
 msgid ""
-"Enter an administration password in case you need to perform administration "
-"tasks.\n"
+"Enter an administration password in case you need to perform administration tasks.\n"
 "Otherwise it will be disabled for better security."
-msgstr ""
-"Introduza un contrasinal de administración para cando teña que realizar "
-"tarefas de administración.\n"
-"De non facelo, para maior seguridade, desactivarase."
+msgstr "Introduza un contrasinal de administración para cando teña que realizar tarefas de administración.\nDe non facelo, para maior seguridade, desactivarase."
 
 #: ../glade/optionswindow.glade.h:7
 msgid "Password:"
@@ -97,55 +93,55 @@ msgstr "<i>Os contrasinais non coinciden</i>"
 
 #: ../glade/optionswindow.glade.h:10
 msgid "MAC address spoofing"
-msgstr ""
+msgstr "Spoofing de dirección MAC"
 
 #: ../glade/optionswindow.glade.h:11
 msgid ""
-"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
-"\">Documentation</a>"
-msgstr ""
+"<a "
+"href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Documentation</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Documentación</a>"
 
 #: ../glade/optionswindow.glade.h:12
 msgid ""
 "Spoofing MAC addresses hides the serial number of your network cards to the "
 "local networks. This can help you hide your geographical location."
-msgstr ""
+msgstr "Facendo spoofing da dirección MAC oculta o número de serie das súas tarxetas de rede ás redes locales. Isto pode axudar a ocultar a súa localización xeográfica."
 
 #: ../glade/optionswindow.glade.h:13
 msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
 "suspicion or cause network connection problems."
-msgstr ""
+msgstr "Xeralmente é máis seguro facer spoofing das direccións MAC, pero tamén pode levantar sospeitas ou causar problemas de conexión á rede."
 
 #: ../glade/optionswindow.glade.h:14
 msgid "Spoof all MAC addresses"
-msgstr ""
+msgstr "Facer spoofing de tódalas direccións MAC"
 
 #: ../glade/optionswindow.glade.h:15
 msgid "Network configuration"
-msgstr ""
+msgstr "Configuración de rede"
 
 #: ../glade/optionswindow.glade.h:16
 msgid ""
-"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
-"\">Documentation</a>"
-msgstr ""
+"<a "
+"href=\"doc/first_steps/startup_options/network_configuration.en.html\">Documentation</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/network_configuration.en.html\">Documentación</a>"
 
 #: ../glade/optionswindow.glade.h:17
 msgid ""
-"This computer's Internet connection is clear of obstacles. You would like to "
-"connect directly to the Tor network."
-msgstr ""
+"This computer's Internet connection is clear of obstacles. You would like to"
+" connect directly to the Tor network."
+msgstr "A conexión á Internet deste computador está libre de obstáculos. Prestaríalle conectarse directamente á rede Tor."
 
 #: ../glade/optionswindow.glade.h:18
 msgid ""
 "This computer's Internet connection is censored, filtered, or proxied. You "
 "need to configure bridge, firewall, or proxy settings."
-msgstr ""
+msgstr "A conexión á Internet deste computador está censurada, filtrada ou pasa por un proxy. Necesita configurar os axustes de ponte, cortalumes ou proxy."
 
 #: ../glade/optionswindow.glade.h:19
 msgid "Disable all networking"
-msgstr ""
+msgstr "Deshabilitar toda conexión á rede"
 
 #: ../glade/langpanel.glade.h:1
 msgid " "
@@ -168,10 +164,7 @@ msgstr "Deseño"
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
-msgstr ""
-"produciuse un fallo coa persistencia en vivo devolvendo o código "
-"%(returncode)s:\n"
-"%(stderr)s"
+msgstr "produciuse un fallo coa persistencia en vivo devolvendo o código %(returncode)s:\n%(stderr)s"
 
 #: ../tailsgreeter/persistence.py:99
 #, python-format
@@ -179,11 +172,7 @@ msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr ""
-"produciuse un fallo na configuración de cifrado (cryptsetup) devolvendo o "
-"código %(returncode)s:\n"
-"%(stdout)s\n"
-"%(stderr)s"
+msgstr "produciuse un fallo na configuración de cifrado (cryptsetup) devolvendo o código %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
 #: ../tailsgreeter/persistence.py:124
 #, python-format
@@ -191,26 +180,9 @@ msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr ""
-"produciuse un fallo coa persistencia en vivo devolvendo o código "
-"%(returncode)s:\n"
-"%(stdout)s\n"
-"%(stderr)s"
+msgstr "produciuse un fallo coa persistencia en vivo devolvendo o código %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
 #: ../tailsgreeter/langpanel.py:140 ../tailsgreeter/langpanel.py:167
 #: ../tailsgreeter/langpanel.py:200
 msgid "Other..."
 msgstr "Outro..."
-
-#~ msgid "Windows Camouflage"
-#~ msgstr "Camuflaxe de Windows"
-
-#~ msgid ""
-#~ "This option makes Tails look more like Microsoft Windows XP. This may be "
-#~ "useful in public places in order to avoid attracting suspicion."
-#~ msgstr ""
-#~ "Esta opción fai que Tails teña aparencia de Microsoft Windows XP. Isto "
-#~ "pode ser útil en lugares públicos para evitar atraer suspicacias."
-
-#~ msgid "Activate Microsoft Windows XP Camouflage"
-#~ msgstr "Activar a camuflaxe Microsoft Windows XP"
