@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # ezemelano <melanoeze@gmail.com>, 2014
 # Pablo Di Noto <pdinoto@gmail.com>, 2016
@@ -10,19 +10,18 @@ msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-01-25 15:44+0100\n"
-"PO-Revision-Date: 2016-01-22 21:29+0000\n"
+"PO-Revision-Date: 2016-02-13 02:43+0000\n"
 "Last-Translator: Pablo Di Noto <pdinoto@gmail.com>\n"
-"Language-Team: Spanish (Argentina) (http://www.transifex.com/otf/torproject/"
-"language/es_AR/)\n"
-"Language: es_AR\n"
+"Language-Team: Spanish (Argentina) (http://www.transifex.com/otf/torproject/language/es_AR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: es_AR\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../glade/persistencewindow.glade.h:1
 msgid "Forward"
-msgstr "Reeviar"
+msgstr "Reenviar"
 
 #: ../glade/persistencewindow.glade.h:2 ../glade/optionswindow.glade.h:1
 msgid "Login"
@@ -70,22 +69,15 @@ msgstr "Contraseña de administración"
 
 #: ../glade/optionswindow.glade.h:4
 msgid ""
-"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
-"\">Documentation</a>"
-msgstr ""
-"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
-"\">Documentación</a>"
+"<a "
+"href=\"doc/first_steps/startup_options/administration_password.en.html\">Documentation</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/administration_password.en.html\">Documentación</a>"
 
 #: ../glade/optionswindow.glade.h:5
 msgid ""
-"Enter an administration password in case you need to perform administration "
-"tasks.\n"
+"Enter an administration password in case you need to perform administration tasks.\n"
 "Otherwise it will be disabled for better security."
-msgstr ""
-"Introduzca una contraseña de administración por si acaso necesita realizar "
-"alguna tarea administrativa.\n"
-"Si no lo hace, el usuario administrador será deshabilitado para mayor "
-"seguridad."
+msgstr "Introduzca una contraseña de administración por si acaso necesita realizar alguna tarea administrativa.\nSi no lo hace, el usuario administrador será deshabilitado para mayor seguridad."
 
 #: ../glade/optionswindow.glade.h:7
 msgid "Password:"
@@ -105,28 +97,21 @@ msgstr "Ocultar la dirección MAC"
 
 #: ../glade/optionswindow.glade.h:11
 msgid ""
-"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
-"\">Documentation</a>"
-msgstr ""
-"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
-"\">Documentación</a>"
+"<a "
+"href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Documentation</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Documentación</a>"
 
 #: ../glade/optionswindow.glade.h:12
 msgid ""
 "Spoofing MAC addresses hides the serial number of your network cards to the "
 "local networks. This can help you hide your geographical location."
-msgstr ""
-"La opción de ocultar la dirección MAC utiliza una dirección alternativa para "
-"no revelar la dirección de fábrica de sus adaptadores de red. Esto puede "
-"evitar revelar su ubicación geográfica."
+msgstr "La opción de ocultar la dirección MAC utiliza una dirección alternativa para no revelar la dirección de fábrica de sus adaptadores de red. Esto puede evitar revelar su ubicación geográfica."
 
 #: ../glade/optionswindow.glade.h:13
 msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
 "suspicion or cause network connection problems."
-msgstr ""
-"En general, es más seguro ocultar sus direcciones MAC, pero es posible que "
-"despierte sospechas o cause problemas de conexión en la red."
+msgstr "En general, es más seguro ocultar sus direcciones MAC, pero es posible que despierte sospechas o cause problemas de conexión en la red."
 
 #: ../glade/optionswindow.glade.h:14
 msgid "Spoof all MAC addresses"
@@ -138,28 +123,21 @@ msgstr "Configuración de red"
 
 #: ../glade/optionswindow.glade.h:16
 msgid ""
-"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
-"\">Documentation</a>"
-msgstr ""
-"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
-"\">Documentación</a>"
+"<a "
+"href=\"doc/first_steps/startup_options/network_configuration.en.html\">Documentation</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/network_configuration.en.html\">Documentación</a>"
 
 #: ../glade/optionswindow.glade.h:17
 msgid ""
-"This computer's Internet connection is clear of obstacles. You would like to "
-"connect directly to the Tor network."
-msgstr ""
-"Este computador esta conectado a Internet sin obstáculos Quizás quiera "
-"directamente a la red Tor."
+"This computer's Internet connection is clear of obstacles. You would like to"
+" connect directly to the Tor network."
+msgstr "Este computador esta conectado a Internet sin obstáculos Quizás quiera directamente a la red Tor."
 
 #: ../glade/optionswindow.glade.h:18
 msgid ""
 "This computer's Internet connection is censored, filtered, or proxied. You "
 "need to configure bridge, firewall, or proxy settings."
-msgstr ""
-"Este computador esta conectado a Internet utilizando un servicio que esta "
-"censurado, tiene filtros o un servidor proxy. Debe configurar un bridge, "
-"cortafuegos o proxy."
+msgstr "Este computador esta conectado a Internet utilizando un servicio que esta censurado, tiene filtros o un servidor proxy. Debe configurar un bridge, cortafuegos o proxy."
 
 #: ../glade/optionswindow.glade.h:19
 msgid "Disable all networking"
@@ -186,9 +164,7 @@ msgstr "Distribución"
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
-msgstr ""
-"live-persist ha fallado con código de error %(returncode)s:\n"
-"%(stderr)s"
+msgstr "live-persist ha fallado con código de error %(returncode)s:\n%(stderr)s"
 
 #: ../tailsgreeter/persistence.py:99
 #, python-format
@@ -196,10 +172,7 @@ msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr ""
-"cryptsetup ha fallado con código de error %(returncode)s:\n"
-"%(stdout)s\n"
-"%(stderr)s"
+msgstr "cryptsetup ha fallado con código de error %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
 #: ../tailsgreeter/persistence.py:124
 #, python-format
@@ -207,10 +180,7 @@ msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr ""
-"live-persist ha fallado con código de error %(returncode)s:\n"
-"%(stdout)s\n"
-"%(stderr)s"
+msgstr "live-persist ha fallado con código de error %(returncode)s:\n%(stdout)s\n%(stderr)s"
 
 #: ../tailsgreeter/langpanel.py:140 ../tailsgreeter/langpanel.py:167
 #: ../tailsgreeter/langpanel.py:200
