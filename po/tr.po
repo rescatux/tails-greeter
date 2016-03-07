@@ -1,0 +1,197 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# sgtpepper <barlasmirc@gmail.com>, 2013
+# Bullgeschichte <bullgeschichte@riseup.net>, 2015
+# Caner Başaran <basaran.caner@gmail.com>, 2013
+# cmldrs, 2014
+# cmldrs, 2014
+# Kaya Zeren <kayazeren@gmail.com>, 2015
+# Ozancan Karataş <ozancankaratas96@outlook.com>, 2015
+# sgtpepper <barlasmirc@gmail.com>, 2013
+# tim.tanurhan <timtanurhan@hotmail.com>, 2014
+# tim.tanurhan <timtanurhan@hotmail.com>, 2014
+# Volkan Gezer <volkangezer@gmail.com>, 2014,2016
+msgid ""
+msgstr ""
+"Project-Id-Version: The Tor Project\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-12-16 18:12+0100\n"
+"PO-Revision-Date: 2016-01-07 20:01+0000\n"
+"Last-Translator: Volkan Gezer <volkangezer@gmail.com>\n"
+"Language-Team: Turkish (http://www.transifex.com/otf/torproject/language/tr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: tr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../glade/persistencewindow.glade.h:1
+msgid "Forward"
+msgstr "İleri"
+
+#: ../glade/persistencewindow.glade.h:2 ../glade/optionswindow.glade.h:1
+msgid "Login"
+msgstr "Oturum aç"
+
+#: ../glade/persistencewindow.glade.h:3 ../glade/optionswindow.glade.h:2
+msgid "Welcome to Tails"
+msgstr "Tails'e Hoş Geldiniz"
+
+#: ../glade/persistencewindow.glade.h:4
+msgid "Use persistence?"
+msgstr "Kalıcılık kullanılsın mı?"
+
+#: ../glade/persistencewindow.glade.h:5
+msgid "<a href=\"doc/first_steps/persistence/use.en.html\">Documentation</a>"
+msgstr "<a href=\"doc/first_steps/persistence/use.en.html\">Belgeler</a>"
+
+#: ../glade/persistencewindow.glade.h:6
+msgid "Yes"
+msgstr "Evet"
+
+#: ../glade/persistencewindow.glade.h:7
+msgid "No"
+msgstr "Hayır"
+
+#: ../glade/persistencewindow.glade.h:8
+msgid "Passphrase:"
+msgstr "Parola ifadesi:"
+
+#: ../glade/persistencewindow.glade.h:9
+msgid "Read-Only?"
+msgstr "Salt okunur mu?"
+
+#: ../glade/persistencewindow.glade.h:10
+msgid "<i>Wrong passphrase. Please try again.</i>"
+msgstr "<i>Parola ifadesi hatalı. Lütfen yeniden deneyin.</i>"
+
+#: ../glade/persistencewindow.glade.h:11
+msgid "More options?"
+msgstr "Diğer seçenekler?"
+
+#: ../glade/optionswindow.glade.h:3
+msgid "Administration password"
+msgstr "Yönetim parolası"
+
+#: ../glade/optionswindow.glade.h:4
+msgid ""
+"<a "
+"href=\"doc/first_steps/startup_options/administration_password.en.html\">Documentation</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/administration_password.tr.html\">Belgeler</a>"
+
+#: ../glade/optionswindow.glade.h:5
+msgid ""
+"Enter an administration password in case you need to perform administration tasks.\n"
+"Otherwise it will be disabled for better security."
+msgstr "Bilgisayarda yönetim görevleri gerçekleştirecekseniz, bir yönetim parolası yazın. Yoksa güvenlik için devre dışı bırakılır."
+
+#: ../glade/optionswindow.glade.h:7
+msgid "Password:"
+msgstr "Parola:"
+
+#: ../glade/optionswindow.glade.h:8
+msgid "Verify Password:"
+msgstr "Parola Onayı:"
+
+#: ../glade/optionswindow.glade.h:9
+msgid "<i>Passwords do not match</i>"
+msgstr "<i>Parola ile onayı eşleşmiyor</i>"
+
+#: ../glade/optionswindow.glade.h:10
+msgid "MAC address spoofing"
+msgstr "MAC adresi yanıltma"
+
+#: ../glade/optionswindow.glade.h:11
+msgid ""
+"<a "
+"href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Documentation</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/mac_spoofing.tr.html\">Belgeler</a>"
+
+#: ../glade/optionswindow.glade.h:12
+msgid ""
+"Spoofing MAC addresses hides the serial number of your network cards to the "
+"local networks. This can help you hide your geographical location."
+msgstr "MAC adreslerini yanıltmak ağ kartlarınızın seri numarasını yerel ağlardan gizler. Bu özellik coğrafi konumunuzu gizlemenize yardımcı olabilir."
+
+#: ../glade/optionswindow.glade.h:13
+msgid ""
+"It is generally safer to spoof MAC addresses, but it might also raise "
+"suspicion or cause network connection problems."
+msgstr "MAC adreslerini yanıltmak genellikle güvenlidir, ama şüphe uyandırabilir ya da ağ bağlantısı sorunlarına neden olabilir."
+
+#: ../glade/optionswindow.glade.h:14
+msgid "Spoof all MAC addresses"
+msgstr "Tüm MAC adreslerini yanıltma"
+
+#: ../glade/optionswindow.glade.h:15
+msgid "Network configuration"
+msgstr "Ağ ayarları"
+
+#: ../glade/optionswindow.glade.h:16
+msgid ""
+"<a "
+"href=\"doc/first_steps/startup_options/network_configuration.en.html\">Documentation</a>"
+msgstr "<a href=\"doc/first_steps/startup_options/network_configuration.tr.html\">Belgeler</a>"
+
+#: ../glade/optionswindow.glade.h:17
+msgid ""
+"This computer's Internet connection is clear of obstacles. You would like to"
+" connect directly to the Tor network."
+msgstr "Bu bilgisayarın İnternet bağlantısında herhangi bir engelleme yok. Doğrudan Tor ağına bağlanmak istiyorsunuz."
+
+#: ../glade/optionswindow.glade.h:18
+msgid ""
+"This computer's Internet connection is censored, filtered, or proxied. You "
+"need to configure bridge, firewall, or proxy settings."
+msgstr "Bu bilgisayarın İnternet bağlantısı sansürleniyor, süzülüyor ya da vekil sunucuya bağlı. Köprü, güvenlik duvarı ya da vekil sunucu ayarlarını yapmanız gerekir."
+
+#: ../glade/optionswindow.glade.h:19
+msgid "Disable all networking"
+msgstr "Tüm ağı devre dışı bırak"
+
+#: ../glade/langpanel.glade.h:1
+msgid " "
+msgstr " "
+
+#: ../glade/langpanel.glade.h:2 ../tailsgreeter/langpanel.py:43
+msgid "Language"
+msgstr "Dil"
+
+#: ../glade/langpanel.glade.h:3
+msgid "Locale"
+msgstr "Yerel ayar"
+
+#: ../glade/langpanel.glade.h:4
+msgid "Layout"
+msgstr "Düzen"
+
+#: ../tailsgreeter/persistence.py:59
+#, python-format
+msgid ""
+"live-persist failed with return code %(returncode)s:\n"
+"%(stderr)s"
+msgstr "Canlı tut işlemi şu kod ile tamamlanamadı %(returncode)s:\n%(stderr)s"
+
+#: ../tailsgreeter/persistence.py:99
+#, python-format
+msgid ""
+"cryptsetup failed with return code %(returncode)s:\n"
+"%(stdout)s\n"
+"%(stderr)s"
+msgstr "cryptsetup işlemi şu kod ile tamamlanamadı %(returncode)s:\n%(stdout)s\n%(stderr)s"
+
+#: ../tailsgreeter/persistence.py:124
+#, python-format
+msgid ""
+"live-persist failed with return code %(returncode)s:\n"
+"%(stdout)s\n"
+"%(stderr)s"
+msgstr "canlı tut şu kodla tamamlanamadı: %(returncode)s:\n%(stdout)s\n%(stderr)s"
+
+#: ../tailsgreeter/langpanel.py:140 ../tailsgreeter/langpanel.py:167
+#: ../tailsgreeter/langpanel.py:200
+msgid "Other..."
+msgstr "Diğer..."
