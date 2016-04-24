@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# ihints <ihints@gmail.com>, 2014
+# ihints <inactive+ihints@transifex.com>, 2014
 # khi, 2013
 # khi, 2013
 # ln191810 <ln191810@gmail.com>, 2012
@@ -19,8 +19,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-16 18:12+0100\n"
-"PO-Revision-Date: 2015-12-21 09:22+0000\n"
+"POT-Creation-Date: 2016-02-29 14:32+0100\n"
+"PO-Revision-Date: 2016-03-21 16:27+0000\n"
 "Last-Translator: carolyn <carolyn@anhalt.org>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/otf/torproject/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"

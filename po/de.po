@@ -11,7 +11,7 @@
 # Oliver Baumann <inactive+baumanno@transifex.com>, 2013
 # Chris <ppt23@lkj.hopto.org>, 2012
 # Sacro <Scion@T-Online.de>, 2012
-# spriver <tor@dominik-pilatzki.de>, 2015
+# spriver <spriver@autistici.org>, 2015
 # sycamoreone <sycamoreone@riseup.net>, 2014
 # Tobias Bannert <tobannert@gmail.com>, 2013
 # Tobias Bannert <tobannert@gmail.com>, 2014
@@ -24,8 +24,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-16 18:12+0100\n"
-"PO-Revision-Date: 2015-12-21 09:22+0000\n"
+"POT-Creation-Date: 2016-02-29 14:32+0100\n"
+"PO-Revision-Date: 2016-03-21 16:27+0000\n"
 "Last-Translator: carolyn <carolyn@anhalt.org>\n"
 "Language-Team: German (http://www.transifex.com/otf/torproject/language/de/)\n"
 "MIME-Version: 1.0\n"

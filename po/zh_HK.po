@@ -3,17 +3,22 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# brendanyan <yan.brendan@gmail.com>, 2014
+# CasperLi_HK <casper.hk@hotmail.com>, 2013
 # Christian Chung <alphachungys@gmail.com>, 2016
+# 洋蔥圈, 2016
 # CasperLi_HK <casper.hk@hotmail.com>, 2013
 # ronnietse <tseronnie@ymail.com>, 2014
+# ronnietse <tseronnie@ymail.com>, 2014
 # brendanyan <yan.brendan@gmail.com>, 2014
+# 洋蔥圈, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-25 15:44+0100\n"
-"PO-Revision-Date: 2016-02-03 07:37+0000\n"
-"Last-Translator: Christian Chung <alphachungys@gmail.com>\n"
+"POT-Creation-Date: 2016-02-29 14:32+0100\n"
+"PO-Revision-Date: 2016-04-15 03:23+0000\n"
+"Last-Translator: 洋蔥圈\n"
 "Language-Team: Chinese (Hong Kong) (http://www.transifex.com/otf/torproject/language/zh_HK/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,11 +36,11 @@ msgstr "登入"
 
 #: ../glade/persistencewindow.glade.h:3 ../glade/optionswindow.glade.h:2
 msgid "Welcome to Tails"
-msgstr "歡迎來到Tails"
+msgstr "歡迎嚟到Tails"
 
 #: ../glade/persistencewindow.glade.h:4
 msgid "Use persistence?"
-msgstr "使用持久性？"
+msgstr "使用持續性？"
 
 #: ../glade/persistencewindow.glade.h:5
 msgid "<a href=\"doc/first_steps/persistence/use.en.html\">Documentation</a>"
@@ -51,7 +56,7 @@ msgstr "否"
 
 #: ../glade/persistencewindow.glade.h:8
 msgid "Passphrase:"
-msgstr "通關密語 : "
+msgstr "通關句語："
 
 #: ../glade/persistencewindow.glade.h:9
 msgid "Read-Only?"
@@ -79,23 +84,23 @@ msgstr "<a href=\"doc/first_steps/startup_options/administration_password.en.htm
 msgid ""
 "Enter an administration password in case you need to perform administration tasks.\n"
 "Otherwise it will be disabled for better security."
-msgstr "如果你需要執行管理任務就輸入管理員密碼。\n否則，在日常情況下最好禁用管理員權限，以獲取更好的安全性。"
+msgstr "需要執行管理任務，請輸入管理員密碼。\n日常情況下最好停用管理員權限，以取得更佳嘅安全度。"
 
 #: ../glade/optionswindow.glade.h:7
 msgid "Password:"
-msgstr "密碼:"
+msgstr "密碼："
 
 #: ../glade/optionswindow.glade.h:8
 msgid "Verify Password:"
-msgstr "確認密碼:"
+msgstr "確認密碼："
 
 #: ../glade/optionswindow.glade.h:9
 msgid "<i>Passwords do not match</i>"
-msgstr "<i>密碼不相符</i>"
+msgstr "<i>密碼唔相符</i>"
 
 #: ../glade/optionswindow.glade.h:10
 msgid "MAC address spoofing"
-msgstr "MAC 位址偽裝"
+msgstr "MAC位址偽裝"
 
 #: ../glade/optionswindow.glade.h:11
 msgid ""
@@ -107,17 +112,17 @@ msgstr "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">文件<
 msgid ""
 "Spoofing MAC addresses hides the serial number of your network cards to the "
 "local networks. This can help you hide your geographical location."
-msgstr "MAC 位址偽裝可以在區域網路中隱藏您的網路卡序號，以協助您隱藏地理位置。"
+msgstr "MAC位址偽裝可以於區域網絡中隱藏你嘅網絡咭序號，以助你隱藏地理位置。"
 
 #: ../glade/optionswindow.glade.h:13
 msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
 "suspicion or cause network connection problems."
-msgstr "一般來說 MAC 位址偽裝是安全的，但它也可能會引起懷疑或導致網路連線問題。"
+msgstr "一般嚟講MAC位址偽裝係安全嘅，但佢也可能會引起懷疑或導致網絡連線問題。"
 
 #: ../glade/optionswindow.glade.h:14
 msgid "Spoof all MAC addresses"
-msgstr "偽裝所有的 MAC 地址"
+msgstr "偽裝全部MAC位址"
 
 #: ../glade/optionswindow.glade.h:15
 msgid "Network configuration"
@@ -133,17 +138,17 @@ msgstr "<a href=\"doc/first_steps/startup_options/network_configuration.en.html\
 msgid ""
 "This computer's Internet connection is clear of obstacles. You would like to"
 " connect directly to the Tor network."
-msgstr "這部電腦的網絡連接沒有任何障礙。你會想直接連接Tor網絡。"
+msgstr "呢部電腦嘅網絡連接沒有任何障礙。你會想直接連接Tor洋蔥路由網絡。"
 
 #: ../glade/optionswindow.glade.h:18
 msgid ""
 "This computer's Internet connection is censored, filtered, or proxied. You "
 "need to configure bridge, firewall, or proxy settings."
-msgstr "這部電腦的網路連線被審查、過濾、或代理。您需要設定網橋、防火牆、或代理伺服器設定。"
+msgstr "呢部電腦嘅網絡連線被審查、被過濾或被代理。你須設定橋接器、防火牆或代理伺服器。"
 
 #: ../glade/optionswindow.glade.h:19
 msgid "Disable all networking"
-msgstr "停用所有網路"
+msgstr "停用全部網絡"
 
 #: ../glade/langpanel.glade.h:1
 msgid " "
@@ -155,18 +160,18 @@ msgstr "語言"
 
 #: ../glade/langpanel.glade.h:3
 msgid "Locale"
-msgstr "地方"
+msgstr "地區設定"
 
 #: ../glade/langpanel.glade.h:4
 msgid "Layout"
-msgstr "佈局"
+msgstr "版面佈置"
 
 #: ../tailsgreeter/persistence.py:59
 #, python-format
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
-msgstr "live-persist 失敗並傳回錯誤代碼 %(returncode)s:\n%(stderr)s"
+msgstr "live-persist失敗，傳回錯誤代碼%(returncode)s：\n%(stderr)s"
 
 #: ../tailsgreeter/persistence.py:99
 #, python-format
@@ -174,7 +179,7 @@ msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "設定密碼失敗，傳回代碼 %(returncode)s:\n%(stdout)s\n%(stderr)s"
+msgstr "設定密碼失敗，傳回代碼%(returncode)s：\n%(stdout)s\n%(stderr)s"
 
 #: ../tailsgreeter/persistence.py:124
 #, python-format
@@ -182,9 +187,9 @@ msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "live-persist 失敗並傳回錯誤代碼 %(returncode)s:\n%(stdout)s\n%(stderr)s"
+msgstr "live-persist失敗，傳回錯誤代碼%(returncode)s：\n%(stdout)s\n%(stderr)s"
 
 #: ../tailsgreeter/langpanel.py:140 ../tailsgreeter/langpanel.py:167
 #: ../tailsgreeter/langpanel.py:200
 msgid "Other..."
-msgstr "其它..."
+msgstr "其他…"
