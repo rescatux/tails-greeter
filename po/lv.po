@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # Ojārs Balcers <ojars.balcers@gmail.com>, 2012
 # Ojārs Balcers <ojars.balcers@gmail.com>, 2013-2015
@@ -9,15 +9,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-29 14:32+0100\n"
+"POT-Creation-Date: 2016-06-05 19:35+0200\n"
 "PO-Revision-Date: 2016-03-21 16:27+0000\n"
 "Last-Translator: carolyn <carolyn@anhalt.org>\n"
-"Language-Team: Latvian (http://www.transifex.com/otf/torproject/language/lv/)\n"
+"Language-Team: Latvian (http://www.transifex.com/otf/torproject/language/"
+"lv/)\n"
+"Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: lv\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2);\n"
 
 #: ../glade/persistencewindow.glade.h:1
 msgid "Forward"
@@ -69,15 +71,21 @@ msgstr "Administrēšanas parole"
 
 #: ../glade/optionswindow.glade.h:4
 msgid ""
-"<a "
-"href=\"doc/first_steps/startup_options/administration_password.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/administration_password.en.html\">Dokumentācija</a>"
+"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
+"\">Documentation</a>"
+msgstr ""
+"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
+"\">Dokumentācija</a>"
 
 #: ../glade/optionswindow.glade.h:5
 msgid ""
-"Enter an administration password in case you need to perform administration tasks.\n"
+"Enter an administration password in case you need to perform administration "
+"tasks.\n"
 "Otherwise it will be disabled for better security."
-msgstr "Ja Jūsu pienākumos ietilpst veikt administrēšanas pienākumus, ievadiet administrēšanas paroli.\nParoli neievadot, lielākas drošības dēļ, to atspējos."
+msgstr ""
+"Ja Jūsu pienākumos ietilpst veikt administrēšanas pienākumus, ievadiet "
+"administrēšanas paroli.\n"
+"Paroli neievadot, lielākas drošības dēļ, to atspējos."
 
 #: ../glade/optionswindow.glade.h:7
 msgid "Password:"
@@ -97,21 +105,28 @@ msgstr "MAC adreses maldinoša maiņa"
 
 #: ../glade/optionswindow.glade.h:11
 msgid ""
-"<a "
-"href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Dokumentācija</a>"
+"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
+"\">Documentation</a>"
+msgstr ""
+"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
+"\">Dokumentācija</a>"
 
 #: ../glade/optionswindow.glade.h:12
 msgid ""
 "Spoofing MAC addresses hides the serial number of your network cards to the "
 "local networks. This can help you hide your geographical location."
-msgstr "MAC adreses maldinoša maiņa jeb spūfings slēpj vietējiem tīkliem Jūsu tīkla kartes seriālo numuru. Tas ir noderīgi, lai slēptu Jūsu ģeogrāfiskās atrašanās vietu."
+msgstr ""
+"MAC adreses maldinoša maiņa jeb spūfings slēpj vietējiem tīkliem Jūsu tīkla "
+"kartes seriālo numuru. Tas ir noderīgi, lai slēptu Jūsu ģeogrāfiskās "
+"atrašanās vietu."
 
 #: ../glade/optionswindow.glade.h:13
 msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
 "suspicion or cause network connection problems."
-msgstr "Vispārīgā gadījumā ir drošāk maldinoši norādīt MAC adreses, bet tas var radīt aizdomas vai izraisīt tīkla savienojuma problēmas."
+msgstr ""
+"Vispārīgā gadījumā ir drošāk maldinoši norādīt MAC adreses, bet tas var "
+"radīt aizdomas vai izraisīt tīkla savienojuma problēmas."
 
 #: ../glade/optionswindow.glade.h:14
 msgid "Spoof all MAC addresses"
@@ -123,21 +138,27 @@ msgstr "Tīkla konfigurēšana"
 
 #: ../glade/optionswindow.glade.h:16
 msgid ""
-"<a "
-"href=\"doc/first_steps/startup_options/network_configuration.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/network_configuration.en.html\">Dokumentācija</a>"
+"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
+"\">Documentation</a>"
+msgstr ""
+"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
+"\">Dokumentācija</a>"
 
 #: ../glade/optionswindow.glade.h:17
 msgid ""
-"This computer's Internet connection is clear of obstacles. You would like to"
-" connect directly to the Tor network."
-msgstr "Šī datora interneta savienojumam nav šķēršļu. Vēlaties veidot tiešu savienojumu ar tīklu Tor."
+"This computer's Internet connection is clear of obstacles. You would like to "
+"connect directly to the Tor network."
+msgstr ""
+"Šī datora interneta savienojumam nav šķēršļu. Vēlaties veidot tiešu "
+"savienojumu ar tīklu Tor."
 
 #: ../glade/optionswindow.glade.h:18
 msgid ""
 "This computer's Internet connection is censored, filtered, or proxied. You "
 "need to configure bridge, firewall, or proxy settings."
-msgstr "Jūsu datora savienojums ar internetu ir cenzēts, filtrēts vai starpniekots. Jums jākonfigurē tiltu, ugunsmūru vai starpniekserveru iestatījumi."
+msgstr ""
+"Jūsu datora savienojums ar internetu ir cenzēts, filtrēts vai starpniekots. "
+"Jums jākonfigurē tiltu, ugunsmūru vai starpniekserveru iestatījumi."
 
 #: ../glade/optionswindow.glade.h:19
 msgid "Disable all networking"
@@ -164,7 +185,9 @@ msgstr "Izkārtojums"
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
-msgstr "live-persist nesekmīgs, norādītais kods %(returncode)s:\n%(stderr)s"
+msgstr ""
+"live-persist nesekmīgs, norādītais kods %(returncode)s:\n"
+"%(stderr)s"
 
 #: ../tailsgreeter/persistence.py:99
 #, python-format
@@ -172,7 +195,10 @@ msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "cryptsetup nesekmīgs, norādītais kods %(returncode)s:\n%(stdout)s\n%(stderr)s"
+msgstr ""
+"cryptsetup nesekmīgs, norādītais kods %(returncode)s:\n"
+"%(stdout)s\n"
+"%(stderr)s"
 
 #: ../tailsgreeter/persistence.py:124
 #, python-format
@@ -180,7 +206,10 @@ msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "live-persist nesekmīgs, norādītais kods %(returncode)s:\n%(stdout)s\n%(stderr)s"
+msgstr ""
+"live-persist nesekmīgs, norādītais kods %(returncode)s:\n"
+"%(stdout)s\n"
+"%(stderr)s"
 
 #: ../tailsgreeter/langpanel.py:140 ../tailsgreeter/langpanel.py:167
 #: ../tailsgreeter/langpanel.py:200

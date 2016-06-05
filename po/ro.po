@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # Di N., 2015
 # icet208 <icet208@yahoo.com>, 2014
@@ -14,15 +14,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-29 14:32+0100\n"
+"POT-Creation-Date: 2016-06-05 19:35+0200\n"
 "PO-Revision-Date: 2016-03-21 16:27+0000\n"
 "Last-Translator: kyx <mihaidiaconu@gmail.com>\n"
-"Language-Team: Romanian (http://www.transifex.com/otf/torproject/language/ro/)\n"
+"Language-Team: Romanian (http://www.transifex.com/otf/torproject/language/"
+"ro/)\n"
+"Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ro\n"
-"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?"
+"2:1));\n"
 
 #: ../glade/persistencewindow.glade.h:1
 msgid "Forward"
@@ -74,15 +76,20 @@ msgstr "Parola administratorului"
 
 #: ../glade/optionswindow.glade.h:4
 msgid ""
-"<a "
-"href=\"doc/first_steps/startup_options/administration_password.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/administration_password.en.html\">Documentatie</a>"
+"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
+"\">Documentation</a>"
+msgstr ""
+"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
+"\">Documentatie</a>"
 
 #: ../glade/optionswindow.glade.h:5
 msgid ""
-"Enter an administration password in case you need to perform administration tasks.\n"
+"Enter an administration password in case you need to perform administration "
+"tasks.\n"
 "Otherwise it will be disabled for better security."
-msgstr "Introdu o parola de administrare in cazul in care esti nevoit sa efectuezi sarcini de administrare. Altfel va fi dezactivat pentru o securitate sporita."
+msgstr ""
+"Introdu o parola de administrare in cazul in care esti nevoit sa efectuezi "
+"sarcini de administrare. Altfel va fi dezactivat pentru o securitate sporita."
 
 #: ../glade/optionswindow.glade.h:7
 msgid "Password:"
@@ -102,21 +109,27 @@ msgstr "Adresă MAC falsificată"
 
 #: ../glade/optionswindow.glade.h:11
 msgid ""
-"<a "
-"href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Documentație</a>"
+"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
+"\">Documentation</a>"
+msgstr ""
+"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
+"\">Documentație</a>"
 
 #: ../glade/optionswindow.glade.h:12
 msgid ""
 "Spoofing MAC addresses hides the serial number of your network cards to the "
 "local networks. This can help you hide your geographical location."
-msgstr "Falsificarea adresei MAC ascunde seria plăcii de rețea în rețeaua locală. Aceasta vă poate ajuta să ascundeți poziția geografică unde vă aflați."
+msgstr ""
+"Falsificarea adresei MAC ascunde seria plăcii de rețea în rețeaua locală. "
+"Aceasta vă poate ajuta să ascundeți poziția geografică unde vă aflați."
 
 #: ../glade/optionswindow.glade.h:13
 msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
 "suspicion or cause network connection problems."
-msgstr "În general este mai sigur să falsificați adresele MAC, dar poate crește suspiciunea sau poate cauza probleme de conectare la rețea."
+msgstr ""
+"În general este mai sigur să falsificați adresele MAC, dar poate crește "
+"suspiciunea sau poate cauza probleme de conectare la rețea."
 
 #: ../glade/optionswindow.glade.h:14
 msgid "Spoof all MAC addresses"
@@ -128,21 +141,28 @@ msgstr "Configurare retea"
 
 #: ../glade/optionswindow.glade.h:16
 msgid ""
-"<a "
-"href=\"doc/first_steps/startup_options/network_configuration.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/network_configuration.en.html\">Documentație</a>"
+"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
+"\">Documentation</a>"
+msgstr ""
+"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
+"\">Documentație</a>"
 
 #: ../glade/optionswindow.glade.h:17
 msgid ""
-"This computer's Internet connection is clear of obstacles. You would like to"
-" connect directly to the Tor network."
-msgstr "Această conexiune la internet a computerului este fără nici un obstacol. V-ar plăcea să vă conectați direct la rețeaua Tor."
+"This computer's Internet connection is clear of obstacles. You would like to "
+"connect directly to the Tor network."
+msgstr ""
+"Această conexiune la internet a computerului este fără nici un obstacol. V-"
+"ar plăcea să vă conectați direct la rețeaua Tor."
 
 #: ../glade/optionswindow.glade.h:18
 msgid ""
 "This computer's Internet connection is censored, filtered, or proxied. You "
 "need to configure bridge, firewall, or proxy settings."
-msgstr "Această conexiune la internet a computerului este cenzurată, filtrată, sau prin proxy. Trebuie să configurați puntea, firewall-ul, sau configurările proxy."
+msgstr ""
+"Această conexiune la internet a computerului este cenzurată, filtrată, sau "
+"prin proxy. Trebuie să configurați puntea, firewall-ul, sau configurările "
+"proxy."
 
 #: ../glade/optionswindow.glade.h:19
 msgid "Disable all networking"
@@ -169,7 +189,9 @@ msgstr "Aspect"
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
-msgstr "live-persist eșuat cu cod returnat %(returncode)s: \n%(stderr)s"
+msgstr ""
+"live-persist eșuat cu cod returnat %(returncode)s: \n"
+"%(stderr)s"
 
 #: ../tailsgreeter/persistence.py:99
 #, python-format
@@ -177,7 +199,10 @@ msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "cryptsetup eșuat cu cod returnat %(returncode)s:\n%(stdout)s\n%(stderr)s"
+msgstr ""
+"cryptsetup eșuat cu cod returnat %(returncode)s:\n"
+"%(stdout)s\n"
+"%(stderr)s"
 
 #: ../tailsgreeter/persistence.py:124
 #, python-format
@@ -185,7 +210,10 @@ msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "live-persist eșuat cu cod returnat %(returncode)s:\n%(stdout)s\n%(stderr)s"
+msgstr ""
+"live-persist eșuat cu cod returnat %(returncode)s:\n"
+"%(stdout)s\n"
+"%(stderr)s"
 
 #: ../tailsgreeter/langpanel.py:140 ../tailsgreeter/langpanel.py:167
 #: ../tailsgreeter/langpanel.py:200

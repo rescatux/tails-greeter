@@ -1,26 +1,30 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # Adriano <morros@ro.ru>, 2014
-# Antony A. Tolmachev <a.tolmachev@richart-consalt.ru>, 2015
-# Evgrafov Denis <stereodenis@gmail.com>, 2014
+# Антон Толмачев <a.tolmachev@richart-consalt.ru>, 2015
+# Denis Denis <stereodenis@gmail.com>, 2014
 # Елисеев Дмитрий <inactive+ddark008@transifex.com>, 2012
 # Oul Gocke <beandonlybe@yandex.ru>, 2014
+# Андрей Костриков <yavinav@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-29 14:32+0100\n"
-"PO-Revision-Date: 2016-03-21 16:27+0000\n"
-"Last-Translator: carolyn <carolyn@anhalt.org>\n"
-"Language-Team: Russian (http://www.transifex.com/otf/torproject/language/ru/)\n"
+"POT-Creation-Date: 2016-06-05 19:35+0200\n"
+"PO-Revision-Date: 2016-05-02 02:51+0000\n"
+"Last-Translator: Андрей Костриков <yavinav@gmail.com>\n"
+"Language-Team: Russian (http://www.transifex.com/otf/torproject/language/"
+"ru/)\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ru\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
 
 #: ../glade/persistencewindow.glade.h:1
 msgid "Forward"
@@ -72,15 +76,21 @@ msgstr "Пароль администратора"
 
 #: ../glade/optionswindow.glade.h:4
 msgid ""
-"<a "
-"href=\"doc/first_steps/startup_options/administration_password.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/administration_password.en.html\">Документация</a>"
+"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
+"\">Documentation</a>"
+msgstr ""
+"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
+"\">Документация</a>"
 
 #: ../glade/optionswindow.glade.h:5
 msgid ""
-"Enter an administration password in case you need to perform administration tasks.\n"
+"Enter an administration password in case you need to perform administration "
+"tasks.\n"
 "Otherwise it will be disabled for better security."
-msgstr "Введите пароль администратора для выполнения администрирования. \n В противном случае администрирование будет отключено в целях безопасности."
+msgstr ""
+"Введите пароль администратора для выполнения задач администрирования. В "
+"противном случае возможности администрирования будут отключены в целях "
+"безопасности."
 
 #: ../glade/optionswindow.glade.h:7
 msgid "Password:"
@@ -100,21 +110,27 @@ msgstr "Подмена MAC-адреса"
 
 #: ../glade/optionswindow.glade.h:11
 msgid ""
-"<a "
-"href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Документация</a>"
+"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
+"\">Documentation</a>"
+msgstr ""
+"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
+"\">Документация</a>"
 
 #: ../glade/optionswindow.glade.h:12
 msgid ""
 "Spoofing MAC addresses hides the serial number of your network cards to the "
 "local networks. This can help you hide your geographical location."
-msgstr "Подмена MAC-адреса скрывает серийный номер вашей сетевой карты от локальной сети. Это может помочь скрыть ваше географическое положение."
+msgstr ""
+"Подмена MAC-адреса скрывает серийный номер вашей сетевой карты от локальной "
+"сети. Это может помочь скрыть ваше географическое положение."
 
 #: ../glade/optionswindow.glade.h:13
 msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
 "suspicion or cause network connection problems."
-msgstr "В целом, подмена MAC-адресов безопаснее, но это может навлечь подозрения или вызвать проблему с сетевым подключением."
+msgstr ""
+"В целом, подмена MAC-адресов безопаснее, но это может навлечь подозрения или "
+"вызвать проблему с сетевым подключением."
 
 #: ../glade/optionswindow.glade.h:14
 msgid "Spoof all MAC addresses"
@@ -126,21 +142,27 @@ msgstr "Настройка сети"
 
 #: ../glade/optionswindow.glade.h:16
 msgid ""
-"<a "
-"href=\"doc/first_steps/startup_options/network_configuration.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/network_configuration.en.html\">Документация</a>"
+"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
+"\">Documentation</a>"
+msgstr ""
+"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
+"\">Документация</a>"
 
 #: ../glade/optionswindow.glade.h:17
 msgid ""
-"This computer's Internet connection is clear of obstacles. You would like to"
-" connect directly to the Tor network."
-msgstr "Сетевое подключение этого компьютера свободно от препятствий. Вы можете подключаться к сети Tor напрямую."
+"This computer's Internet connection is clear of obstacles. You would like to "
+"connect directly to the Tor network."
+msgstr ""
+"Сетевое подключение этого компьютера свободно от препятствий. Вы можете "
+"подключаться к сети Tor напрямую."
 
 #: ../glade/optionswindow.glade.h:18
 msgid ""
 "This computer's Internet connection is censored, filtered, or proxied. You "
 "need to configure bridge, firewall, or proxy settings."
-msgstr "Сетевое подключение этого компьютера цензурируется, фильтруется или идёт через прокси-сервер. Вам надо настроить мост, брандмаузер или прокси."
+msgstr ""
+"Сетевое подключение этого компьютера цензурируется, фильтруется или идёт "
+"через прокси-сервер. Вам надо настроить мост, брандмаузер или прокси."
 
 #: ../glade/optionswindow.glade.h:19
 msgid "Disable all networking"
@@ -167,7 +189,9 @@ msgstr "Раскладка"
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
-msgstr "live-persist не сработал, код ошибки %(returncode)s:\n %(stderr)s"
+msgstr ""
+"live-persist не сработал, код ошибки %(returncode)s:\n"
+" %(stderr)s"
 
 #: ../tailsgreeter/persistence.py:99
 #, python-format
@@ -175,7 +199,10 @@ msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "cryptsetup не сработал, код ошибки %(returncode)s:\n %(stdout)s\n %(stderr)s"
+msgstr ""
+"cryptsetup не сработал, код ошибки %(returncode)s:\n"
+" %(stdout)s\n"
+" %(stderr)s"
 
 #: ../tailsgreeter/persistence.py:124
 #, python-format
@@ -183,7 +210,10 @@ msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "live-persist не сработал, код ошибки %(returncode)s:\n %(stdout)s\n %(stderr)s"
+msgstr ""
+"live-persist не сработал, код ошибки %(returncode)s:\n"
+" %(stdout)s\n"
+" %(stderr)s"
 
 #: ../tailsgreeter/langpanel.py:140 ../tailsgreeter/langpanel.py:167
 #: ../tailsgreeter/langpanel.py:200

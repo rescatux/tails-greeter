@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # adhisuryo <adhisuryo@gmail.com>, 2015
 # Iwan Setiawan <stwn@duniasemu.org>, 2013
@@ -13,14 +13,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The Tor Project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-29 14:32+0100\n"
+"POT-Creation-Date: 2016-06-05 19:35+0200\n"
 "PO-Revision-Date: 2016-03-21 16:27+0000\n"
 "Last-Translator: carolyn <carolyn@anhalt.org>\n"
-"Language-Team: Indonesian (http://www.transifex.com/otf/torproject/language/id/)\n"
+"Language-Team: Indonesian (http://www.transifex.com/otf/torproject/language/"
+"id/)\n"
+"Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: id\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../glade/persistencewindow.glade.h:1
@@ -73,15 +74,21 @@ msgstr "Sandi administrasi"
 
 #: ../glade/optionswindow.glade.h:4
 msgid ""
-"<a "
-"href=\"doc/first_steps/startup_options/administration_password.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/administration_password.en.html\">Dokumentasi</a>"
+"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
+"\">Documentation</a>"
+msgstr ""
+"<a href=\"doc/first_steps/startup_options/administration_password.en.html"
+"\">Dokumentasi</a>"
 
 #: ../glade/optionswindow.glade.h:5
 msgid ""
-"Enter an administration password in case you need to perform administration tasks.\n"
+"Enter an administration password in case you need to perform administration "
+"tasks.\n"
 "Otherwise it will be disabled for better security."
-msgstr "Masukkan sandi administrasi Anda jika Anda perlu menjalankan tugas administrasi.\nSelain itu akan dinonfungsikan untuk keamanan yang lebih baik."
+msgstr ""
+"Masukkan sandi administrasi Anda jika Anda perlu menjalankan tugas "
+"administrasi.\n"
+"Selain itu akan dinonfungsikan untuk keamanan yang lebih baik."
 
 #: ../glade/optionswindow.glade.h:7
 msgid "Password:"
@@ -101,21 +108,27 @@ msgstr "Pemalsuan alamat MAC"
 
 #: ../glade/optionswindow.glade.h:11
 msgid ""
-"<a "
-"href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html\">Dokumentasi</a>"
+"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
+"\">Documentation</a>"
+msgstr ""
+"<a href=\"doc/first_steps/startup_options/mac_spoofing.en.html"
+"\">Dokumentasi</a>"
 
 #: ../glade/optionswindow.glade.h:12
 msgid ""
 "Spoofing MAC addresses hides the serial number of your network cards to the "
 "local networks. This can help you hide your geographical location."
-msgstr "Memalsukan alamat MAC menyembunyikan nomor serial kartu jaringan Anda ke jaringan lokal. Ini dapat membantu menyembunyikan lokasi geografis Anda."
+msgstr ""
+"Memalsukan alamat MAC menyembunyikan nomor serial kartu jaringan Anda ke "
+"jaringan lokal. Ini dapat membantu menyembunyikan lokasi geografis Anda."
 
 #: ../glade/optionswindow.glade.h:13
 msgid ""
 "It is generally safer to spoof MAC addresses, but it might also raise "
 "suspicion or cause network connection problems."
-msgstr "Akan lebih aman untuk men-spoof alamat MAC, tapi hal ini dapat meningkatkan kecurigaan atau akan menjadi masalah pada sambungan jaringan."
+msgstr ""
+"Akan lebih aman untuk men-spoof alamat MAC, tapi hal ini dapat meningkatkan "
+"kecurigaan atau akan menjadi masalah pada sambungan jaringan."
 
 #: ../glade/optionswindow.glade.h:14
 msgid "Spoof all MAC addresses"
@@ -127,21 +140,27 @@ msgstr "Konfigurasi jaringan"
 
 #: ../glade/optionswindow.glade.h:16
 msgid ""
-"<a "
-"href=\"doc/first_steps/startup_options/network_configuration.en.html\">Documentation</a>"
-msgstr "<a href=\"doc/first_steps/startup_options/network_configuration.en.html\">Documentasi</a>"
+"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
+"\">Documentation</a>"
+msgstr ""
+"<a href=\"doc/first_steps/startup_options/network_configuration.en.html"
+"\">Documentasi</a>"
 
 #: ../glade/optionswindow.glade.h:17
 msgid ""
-"This computer's Internet connection is clear of obstacles. You would like to"
-" connect directly to the Tor network."
-msgstr "Hubungan internet komputer ini bebas halangan.  Anda dapat langsung berhubungan dengan jaringan Tor."
+"This computer's Internet connection is clear of obstacles. You would like to "
+"connect directly to the Tor network."
+msgstr ""
+"Hubungan internet komputer ini bebas halangan.  Anda dapat langsung "
+"berhubungan dengan jaringan Tor."
 
 #: ../glade/optionswindow.glade.h:18
 msgid ""
 "This computer's Internet connection is censored, filtered, or proxied. You "
 "need to configure bridge, firewall, or proxy settings."
-msgstr "Koneksi kekomputer ini tersensor, tersaring atau terproxy. anda perlu mengatur pengaturan bridge, firewall, atau pengaturan proxy"
+msgstr ""
+"Koneksi kekomputer ini tersensor, tersaring atau terproxy. anda perlu "
+"mengatur pengaturan bridge, firewall, atau pengaturan proxy"
 
 #: ../glade/optionswindow.glade.h:19
 msgid "Disable all networking"
@@ -168,7 +187,9 @@ msgstr "Tata Letak"
 msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stderr)s"
-msgstr "live-persist gagal dengan kode sebagai berikut %(returncode)s:\n%(stderr)s"
+msgstr ""
+"live-persist gagal dengan kode sebagai berikut %(returncode)s:\n"
+"%(stderr)s"
 
 #: ../tailsgreeter/persistence.py:99
 #, python-format
@@ -176,7 +197,10 @@ msgid ""
 "cryptsetup failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "Konfigrasi Crypt gagal dengan kode sebagai berikut %(returncode)s:\n%(stdout)s\n%(stderr)s"
+msgstr ""
+"Konfigrasi Crypt gagal dengan kode sebagai berikut %(returncode)s:\n"
+"%(stdout)s\n"
+"%(stderr)s"
 
 #: ../tailsgreeter/persistence.py:124
 #, python-format
@@ -184,7 +208,10 @@ msgid ""
 "live-persist failed with return code %(returncode)s:\n"
 "%(stdout)s\n"
 "%(stderr)s"
-msgstr "live-persist gagal dengan kode sebagai berikut %(returncode)s:\n%(stdout)s\n%(stderr)s"
+msgstr ""
+"live-persist gagal dengan kode sebagai berikut %(returncode)s:\n"
+"%(stdout)s\n"
+"%(stderr)s"
 
 #: ../tailsgreeter/langpanel.py:140 ../tailsgreeter/langpanel.py:167
 #: ../tailsgreeter/langpanel.py:200
