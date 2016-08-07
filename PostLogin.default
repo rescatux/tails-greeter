@@ -59,38 +59,38 @@ grep_n_set() {
 }
 
 gather_general_configuration() {
-### Gather general configuration
+    ### Gather general configuration
 
-# Import the name of the live user
-. /etc/live/config.d/username.conf || log_n_exit "Username file not found."
-if [ -z "${LIVE_USERNAME}" ] ; then
-    log_n_exit "Username variable not found."
-fi
+    # Import the name of the live user
+    . /etc/live/config.d/username.conf || log_n_exit "Username file not found."
+    if [ -z "${LIVE_USERNAME}" ] ; then
+	log_n_exit "Username variable not found."
+    fi
 }
 
 physical_security() {
-log "Running /usr/local/lib/tails-unblock-network..."
-/usr/local/lib/tails-unblock-network &
+    log "Running /usr/local/lib/tails-unblock-network..."
+    /usr/local/lib/tails-unblock-network &
 }
 
 localization() {
-### Localization
+    ### Localization
 
-# Import locale name
-. /var/lib/gdm3/tails.locale || log_n_exit "Locale file not found."
-if [ -z "${TAILS_LOCALE_NAME}" ] ; then
-    log_n_exit "Locale variable not found."
-fi
+    # Import locale name
+    . /var/lib/gdm3/tails.locale || log_n_exit "Locale file not found."
+    if [ -z "${TAILS_LOCALE_NAME}" ] ; then
+	log_n_exit "Locale variable not found."
+    fi
 
-# Set the keyboard mapping for X11 and the console
-localectl set-x11-keymap "$TAILS_XKBLAYOUT" "$TAILS_XKBMODEL" "$TAILS_XKBVARIANT" "$TAILS_XKBOPTIONS"
+    # Set the keyboard mapping for X11 and the console
+    localectl set-x11-keymap "$TAILS_XKBLAYOUT" "$TAILS_XKBMODEL" "$TAILS_XKBVARIANT" "$TAILS_XKBOPTIONS"
 
-# Set the system locale
-localectl set-locale "LANG=${TAILS_LOCALE_NAME}.UTF-8"
+    # Set the system locale
+    localectl set-locale "LANG=${TAILS_LOCALE_NAME}.UTF-8"
 
-# Save keyboard settings so that tails-configure-keyboard can set it
-# in the GNOME session.
-cat > /var/lib/tails-user-session/keyboard <<EOF
+    # Save keyboard settings so that tails-configure-keyboard can set it
+    # in the GNOME session.
+    cat > /var/lib/tails-user-session/keyboard <<EOF
 XKBMODEL="$TAILS_XKBMODEL"
 XKBLAYOUT="$TAILS_XKBLAYOUT"
 XKBVARIANT="$TAILS_XKBVARIANT"
@@ -99,69 +99,69 @@ EOF
 }
 
 persistence() {
-### Persistence
+    ### Persistence
 
-# Copy persistence configuration to a root-writable, world-readable place,
-# so that software running as LIVE_USERNAME or tails-persistence-setup can
-# get it.
+    # Copy persistence configuration to a root-writable, world-readable place,
+    # so that software running as LIVE_USERNAME or tails-persistence-setup can
+    # get it.
 
-if [ -r /var/lib/gdm3/tails.persistence ] ; then
-   install -m 0644 -o root -g root \
-      /var/lib/gdm3/tails.persistence /var/lib/live/config/tails.persistence
-fi
+    if [ -r /var/lib/gdm3/tails.persistence ] ; then
+      install -m 0644 -o root -g root \
+	  /var/lib/gdm3/tails.persistence /var/lib/live/config/tails.persistence
+    fi
 
-# Install persistent packages
-if [ -x /usr/local/sbin/tails-additional-software ] ; then
-    /usr/local/sbin/tails-additional-software install
-else
-   log_n_exit "'/usr/local/sbin/tails-additional-software' does not exist or is not executable."
-fi
+    # Install persistent packages
+    if [ -x /usr/local/sbin/tails-additional-software ] ; then
+	/usr/local/sbin/tails-additional-software install
+    else
+      log_n_exit "'/usr/local/sbin/tails-additional-software' does not exist or is not executable."
+    fi
 }
 
 password() {
-### Password
+    ### Password
 
-# Import password for superuser access
-if [ -e /var/lib/gdm3/tails.password ] ; then
-    . /var/lib/gdm3/tails.password
-fi
+    # Import password for superuser access
+    if [ -e /var/lib/gdm3/tails.password ] ; then
+	. /var/lib/gdm3/tails.password
+    fi
 
-# Remove password file
-rm --interactive=never -f /var/lib/gdm3/tails.password
+    # Remove password file
+    rm --interactive=never -f /var/lib/gdm3/tails.password
 
-# Check if password is actually set
-if [ -z "${TAILS_USER_PASSWORD}" ] ; then
-    rm -f "${POLKIT}" "${SUDOERS}"
-    deluser "${LIVE_USERNAME}" sudo
-    passwd -d "${LIVE_USERNAME}"
-    install -o root -g root -m 0440 /dev/null "${NO_PASSWORD_LECTURE}"
-    echo "Defaults:amnesia lecture=always" > "${NO_PASSWORD_LECTURE}"
-    echo "Defaults:amnesia lecture_file=/usr/share/tails-greeter/no-password-lecture.txt" >> "${NO_PASSWORD_LECTURE}"
-    echo "Defaults:amnesia badpass_message=\"The administration password is disabled.\"" >> "${NO_PASSWORD_LECTURE}"
-    rm --interactive=never -f /usr/share/applications/{gksu,synaptic,laptop-mode-tools}.desktop
-    log_n_exit "Password variable not found."
-fi
+    # Check if password is actually set
+    if [ -z "${TAILS_USER_PASSWORD}" ] ; then
+	rm -f "${POLKIT}" "${SUDOERS}"
+	deluser "${LIVE_USERNAME}" sudo
+	passwd -d "${LIVE_USERNAME}"
+	install -o root -g root -m 0440 /dev/null "${NO_PASSWORD_LECTURE}"
+	echo "Defaults:amnesia lecture=always" > "${NO_PASSWORD_LECTURE}"
+	echo "Defaults:amnesia lecture_file=/usr/share/tails-greeter/no-password-lecture.txt" >> "${NO_PASSWORD_LECTURE}"
+	echo "Defaults:amnesia badpass_message=\"The administration password is disabled.\"" >> "${NO_PASSWORD_LECTURE}"
+	rm --interactive=never -f /usr/share/applications/{gksu,synaptic,laptop-mode-tools}.desktop
+	log_n_exit "Password variable not found."
+    fi
 
-# Sets the password
-echo "${LIVE_USERNAME}:${TAILS_USER_PASSWORD}" | chpasswd
+    # Sets the password
+    echo "${LIVE_USERNAME}:${TAILS_USER_PASSWORD}" | chpasswd
 
-# Reset the password for default value on logout
-echo "echo \"${LIVE_USERNAME}:${LIVE_PASSWORD}\" | /usr/sbin/chpasswd" > /etc/gdm3/PostSession/${DISPLAY}
-chmod +x /etc/gdm3/PostSession/${DISPLAY}
+    # Reset the password for default value on logout
+    echo "echo \"${LIVE_USERNAME}:${LIVE_PASSWORD}\" | /usr/sbin/chpasswd" > /etc/gdm3/PostSession/${DISPLAY}
+    chmod +x /etc/gdm3/PostSession/${DISPLAY}
 
-# Add sudoers entry
-echo "${LIVE_USERNAME} ALL = (ALL) ALL" >> "${SUDOERS}"
-chmod 0440 "${SUDOERS}"
+    # Add sudoers entry
+    echo "${LIVE_USERNAME} ALL = (ALL) ALL" >> "${SUDOERS}"
+    chmod 0440 "${SUDOERS}"
 
-# Add PolKit config
-echo "[Configuration]" > "${POLKIT}"
-echo "AdminIdentities=unix-user:${LIVE_USERNAME}" >> "${POLKIT}"
+    # Add PolKit config
+    echo "[Configuration]" > "${POLKIT}"
+    echo "AdminIdentities=unix-user:${LIVE_USERNAME}" >> "${POLKIT}"
 
-# Configure su-to-root to use sudo
-sudo -u "${LIVE_USERNAME}" sh -c "echo 'SU_TO_ROOT_SU=sudo' >> /home/${LIVE_USERNAME}/.su-to-rootrc"
+    # Configure su-to-root to use sudo
+    sudo -u "${LIVE_USERNAME}" sh -c "echo 'SU_TO_ROOT_SU=sudo' >> /home/${LIVE_USERNAME}/.su-to-rootrc"
 
-# Configure gksu to use sudo
-sudo -u "${LIVE_USERNAME}" gconftool-2 -s -t bool /apps/gksu/sudo-mode true
+    # Configure gksu to use sudo
+    sudo -u "${LIVE_USERNAME}" gconftool-2 -s -t bool /apps/gksu/sudo-mode true
 }
 
 ### Let's go
