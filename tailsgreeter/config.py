@@ -47,3 +47,14 @@ persistence_state_file = '/var/lib/gdm3/tails.persistence'
 
 # Stores settings related to physical security
 physical_security_settings = '/var/lib/gdm3/tails.physical_security'
+
+# Enable specific Tails persistence support
+# Default (for Non Tails): False
+# Default (for Tails): True
+tails_persistence_support = False
+
+# Enable specific Tails tails-greeter welcome message
+# Default (for Non Tails): False
+# Default (for Tails): True
+tails_show_welcome_message = False
+

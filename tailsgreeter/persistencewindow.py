@@ -24,6 +24,7 @@
 from gi.repository import Gdk, Gtk
 import logging, os
 import tailsgreeter
+import tailsgreeter.config
 from tailsgreeter.language import TranslatableWindow
 from tailsgreeter.helpwindow import HelpWindow
 
@@ -61,16 +62,30 @@ class PersistenceWindow(TranslatableWindow):
         self.checked_img_moreoptions_no  = builder.get_object("moreoptions_no_checked_img")
         self.checked_img_persistence_yes = builder.get_object("persistence_yes_checked_img")
         self.checked_img_persistence_no  = builder.get_object("persistence_no_checked_img")
+        self.lbl_moreoptions = builder.get_object("moreoptions_label")
+        self.lbl_main = builder.get_object("main_label")
 
         self.warning_area.hide()
 
         # FIXME: list_containers may raise exceptions. Deal with that.
-        self.containers = [
-            { "path": container, "locked": True }
-            for container in self.greeter.persistence.list_containers()
-            ]
+        self.containers = []
+        if tailsgreeter.config.tails_persistence_support:
+                self.containers = [
+                { "path": container, "locked": True }
+                for container in self.greeter.persistence.list_containers()
+                ]
+
         if len(self.containers) == 0:
             self.box_persistence.hide()
+
+        if not tailsgreeter.config.tails_persistence_support:
+                self.btn_moreoptions_yes.hide()
+                self.btn_moreoptions_no.hide()
+                self.checked_img_persistence_yes.hide()
+                self.checked_img_moreoptions_no.hide()
+                self.lbl_moreoptions.hide()
+        if not tailsgreeter.config.tails_show_welcome_message:
+                self.lbl_main.hide()
 
         # FIXME:
         # * support multiple persistent containers:
