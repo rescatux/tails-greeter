@@ -58,10 +58,7 @@ grep_n_set() {
     fi
 }
 
-### Let's go
-
-log "Entering PostLogin"
-
+gather_general_configuration() {
 ### Gather general configuration
 
 # Import the name of the live user
@@ -69,11 +66,14 @@ log "Entering PostLogin"
 if [ -z "${LIVE_USERNAME}" ] ; then
     log_n_exit "Username variable not found."
 fi
+}
 
-### Physical security
+physical_security() {
 log "Running /usr/local/lib/tails-unblock-network..."
 /usr/local/lib/tails-unblock-network &
+}
 
+localization() {
 ### Localization
 
 # Import locale name
@@ -96,7 +96,9 @@ XKBLAYOUT="$TAILS_XKBLAYOUT"
 XKBVARIANT="$TAILS_XKBVARIANT"
 XKBOPTIONS="$TAILS_XKBOPTIONS"
 EOF
+}
 
+persistence() {
 ### Persistence
 
 # Copy persistence configuration to a root-writable, world-readable place,
@@ -114,7 +116,9 @@ if [ -x /usr/local/sbin/tails-additional-software ] ; then
 else
    log_n_exit "'/usr/local/sbin/tails-additional-software' does not exist or is not executable."
 fi
+}
 
+password() {
 ### Password
 
 # Import password for superuser access
@@ -158,5 +162,16 @@ sudo -u "${LIVE_USERNAME}" sh -c "echo 'SU_TO_ROOT_SU=sudo' >> /home/${LIVE_USER
 
 # Configure gksu to use sudo
 sudo -u "${LIVE_USERNAME}" gconftool-2 -s -t bool /apps/gksu/sudo-mode true
+}
+
+### Let's go
+
+log "Entering PostLogin"
+
+gather_general_configuration
+physical_security
+localization
+persistence
+password
 
 log "Leaving PostLogin"
