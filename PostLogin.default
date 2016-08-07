@@ -13,6 +13,12 @@
 # * /var/lib/gdm3/tails.persistence : $TAILS_PERSISTENCE_ENABLED
 # * /var/lib/gdm3/tails.physical_security : $TAILS_MACSPOOF_ENABLED
 
+GATHER_GENERAL_CONFIGURATION_ENABLED="YES"
+PHYSICAL_SECURITY_ENABLED="YES"
+LOCALIZATION_ENABLED="YES"
+PERSISTENCE_ENABLED="YES"
+PASSWORD_ENABLED="YES"
+
 # For whatever reason, /usr/sbin (needed by at least chpasswd)
 # is not in our PATH
 export PATH="/usr/sbin:${PATH}"
@@ -168,10 +174,24 @@ password() {
 
 log "Entering PostLogin"
 
-gather_general_configuration
-physical_security
-localization
-persistence
-password
+if [ "${GATHER_GENERAL_CONFIGURATION_ENABLED}" = "YES" ] ; then
+    gather_general_configuration
+fi
+
+if [ "${PHYSICAL_SECURITY_ENABLED}" = "YES" ] ; then
+    physical_security
+fi
+
+if [ "${LOCALIZATION_ENABLED}" = "YES" ] ; then
+    localization
+fi
+
+if [ "${PERSISTENCE_ENABLED}" = "YES" ] ; then
+    persistence
+fi
+
+if [ "${PASSWORD_ENABLED}" = "YES" ] ; then
+    password
+fi
 
 log "Leaving PostLogin"
