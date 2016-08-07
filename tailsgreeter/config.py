@@ -21,7 +21,7 @@
 
 # default Tails credentials
 LPASSWORD = 'live'
-LUSER = 'amnesia'
+LUSER = 'user'
 
 # file where supported language codes (such as en_US) are saved at Tails build time
 language_codes_path = '/usr/share/tails-greeter/language_codes'
